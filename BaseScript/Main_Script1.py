@@ -8,6 +8,9 @@
 #The Finger Starter is considered here to be right index, 
 #so make sure your servo is connected to pin3 of you Arduino
 
+# read personnal parameters
+execfile(u'Config/BAsicConfig.py')
+
 # Start the webgui service without starting the browser
 webgui = Runtime.create("WebGui","WebGui")
 webgui.autoStartBrowser(False)
