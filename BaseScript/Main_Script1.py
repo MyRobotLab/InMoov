@@ -8,8 +8,7 @@
 #The Finger Starter is considered here to be right index, 
 #so make sure your servo is connected to pin3 of you Arduino
 
-# read personnal parameters
-execfile(u'Config/BAsicConfig.py')
+
 
 # Start the webgui service without starting the browser
 webgui = Runtime.create("WebGui","WebGui")
@@ -21,18 +20,13 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 # As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
 # webgui = Runtime.createAndStart("webgui","WebGui")
 
-# Change to the port that you use
-rightPort = "COM7"
-
-#to tweak the default voice
-Voice="cmu-slt-hsmm" # Default female for MarySpeech 
-#Voice="cmu-bdl" #Male US voice.You need to add the necessary file.jar to myrobotlab.1.0.XXXX/library/jar
-#https://github.com/MyRobotLab/pyrobotlab/blob/ff6e2cef4d0642e47ee15e353ef934ac6701e713/home/hairygael/voice-cmu-bdl-5.2.jar
-voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
-mouth.setVoice(voiceType)
+
+
 ##############
 # starting parts
+# read personnal parameters
+execfile('Config/BasicConfig.py')
 i01 = Runtime.createAndStart("i01", "InMoov")
 i01.startEar()
 i01.startMouth()
@@ -57,16 +51,19 @@ ear.addComfirmations("yes","correct","yeah","ya")
 ear.addNegations("no","wrong","nope","nah")
 
 ear.startListening()
-i01.startRightHand(rightPort)
+
+#Arduino is ok ? lets go
+if RightPortIsConencted:
+	i01.startRightHand(MyRightPort)
 
 def fingeropen():
   i01.moveHand("right",0,0,0,0,0)
-  i01.mouth.speak("ok I open my finger")
+  i01.mouth.speak(u"ok I open my finger")
 
 def fingerclose():
   i01.moveHand("right",180,180,180,180,180)
-  i01.mouth.speak("my finger is closed")
+  i01.mouth.speak(u"my finger is closed")
 
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
-  i01.mouth.speak("ok you have my attention")
+  i01.mouth.speak(u"ok you have my attention")
