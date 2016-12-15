@@ -1,4 +1,7 @@
-#file : InMoov3.minimalFingerStarter.py
+# ##############################################################################
+# 								INMOOV SCRIPT
+# This is fingerstarter script file
+# ##############################################################################
 
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
@@ -22,18 +25,20 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
 
-
 ##############
 # starting parts
-# read personnal parameters
-execfile('Config/BasicConfig.py')
+
 i01 = Runtime.createAndStart("i01", "InMoov")
 i01.startEar()
-i01.startMouth()
-##############
-
-# verbal commands
 ear = i01.ear
+# read personnal parameters
+execfile('Config/BasicConfig.py')
+i01.startMouth()
+
+
+
+##############
+# verbal commands
 
 ear.addCommand("attach your finger", "i01.rightHand.index", "attach")
 ear.addCommand("disconnect your finger", "i01.rightHand.index", "detach")
@@ -52,10 +57,12 @@ ear.addNegations("no","wrong","nope","nah")
 
 ear.startListening()
 
-#Arduino is ok ? lets go
-if RightPortIsConencted:
+#Arduino is ok ? lets go !
+if RightPortIsConnected:
 	i01.startRightHand(MyRightPort)
 
+
+#The "u" is usefull to read UTF8 in other languages
 def fingeropen():
   i01.moveHand("right",0,0,0,0,0)
   i01.mouth.speak(u"ok I open my finger")

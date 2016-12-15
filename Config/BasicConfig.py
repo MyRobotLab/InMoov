@@ -6,7 +6,6 @@
 
 # ##############################################################################
 # 							BASIC CONFIGURATION
-# 
 # ##############################################################################
 
 
@@ -18,8 +17,14 @@ ScriptType="FingerStarter"
 #to tweak the default voice
 #Voice="cmu-bdl" #Male US voice.You need to add the necessary file.jar to myrobotlab.1.0.XXXX/library/jar
 #https://github.com/MyRobotLab/pyrobotlab/blob/ff6e2cef4d0642e47ee15e353ef934ac6701e713/home/hairygael/voice-cmu-bdl-5.2.jar
-voiceType="cmu-bdl-hsmm" # cmu-slt-hsmm as female 
-MyLanguage="EN" # LANGUAGE ( EN / FR / todo... )
+
+# ##############################################################################
+# 							LIST OF VOICES AND LANGUAGES
+#	MaryTTS : http://myrobotlab.org/content/marytts-multi-language-support
+# ##############################################################################
+
+voiceType="cmu-slt-hsmm"
+MyLanguage="en"
 MyRightPort="COM7" # Your Arduino ComPort : UPLOAD MRLCOMM INSIDE \resource\Arduino\MRLComm\MRLComm.ino !!!
 
 
