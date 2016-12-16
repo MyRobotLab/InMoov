@@ -8,7 +8,7 @@
 # 							BASIC CONFIGURATION
 # ##############################################################################
 
-
+	
 ScriptType="FingerStarter" 
 # FingerStarter: connect one arduino and play with servo
 # NoArduino: Chatbot Only
@@ -30,13 +30,5 @@ MyRightPort="COM7" # Your Arduino ComPort : UPLOAD MRLCOMM INSIDE \resource\Ardu
 
 
 
-
-
-
-
-
-
-
-
-#go for the launch!
-execfile('Config/ExtraConfig/InitCheckup.py')
+#this is usefull about vocal startup commands diagnostic "starting mouth etc..."
+mouth.setVoice("cmu-slt-hsmm")

@@ -23,19 +23,26 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 # As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
 # webgui = Runtime.createAndStart("webgui","WebGui")
 
-mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
+
+
 
 ##############
-# starting parts
-
+# basic services declaration
 i01 = Runtime.createAndStart("i01", "InMoov")
+mouth = Runtime.createAndStart("i01.mouth", "MarySpeech") #mouth = Runtime.createAndStart("i01.mouth", "NaturalReaderSpeach")
+
+##############
+# config files
+execfile('Config/BasicConfig.py') #TODO > import ConfigParser
+
+##############
+#starting parts
 i01.startEar()
-ear = i01.ear
-# read personnal parameters
-execfile('Config/BasicConfig.py')
 i01.startMouth()
 
-
+##############
+# robot checkup
+execfile('Config/ExtraConfig/InitCheckup.py')
 
 ##############
 # verbal commands
@@ -74,3 +81,7 @@ def fingerclose():
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
   i01.mouth.speak(u"ok you have my attention")
+  
+print mouth.getMetaData()
+  
+  

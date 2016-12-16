@@ -4,37 +4,29 @@
 # ERRORS FILE
 # ##############################################################################
 
-# FingerStarter doesnt use Chatbot, so we hardcode language for few error functions
+# FingerStarter doesnt use Chatbot, so we hardcode language to english for few error functions
 # THIS FILE NEED TO BE UTF8 IF YOU GRAB IT FROM GITHUB
 # BECAUSE THERE IS ACCENT INSIDE IT
-def defaultSystemVoiceAndLanguage():
-	voiceType="cmu-slt-hsmm"
-	mouth.setVoice(voiceType)
+
 
 def errorSpokenFunc(errorType):
 	
+	
+	subconsciousMouth.speakBlocking("Alert! Alert! Alert! This is my subconscious speaking, can I have your attention please ! ")
+	
 	if errorType=="RightPortIsConnected":
-		errorSpoken="There is a connection problem ! with your communication port, "+MyRightPort+" , check your arduino"
-		
-		if MyLanguage.lower()=="fr":
-			errorSpoken="Impossible de se connecter au port, "+MyRightPort+" de l'arduino"
-			
-		if MyLanguage.lower()=="es":	
-			errorSpoken="Imposible de conectar al puerto, "+MyRightPort
-		
-		if MyLanguage.lower()=="de":	
-			errorSpoken="Kommunikationsproblem mit dem Hafen, "+MyRightPort
+		errorSpoken="There is a problem ! with my communication port, "+MyRightPort+" , check your arduino"
+	
 			
 		
 	if errorType=="voiceType":
-		defaultSystemVoiceAndLanguage()
 		errorSpoken="There is a problem with the voice you have choosen !"
 
 		
 	if errorType=="MyLanguage":
-		defaultSystemVoiceAndLanguage()
 		errorSpoken="There is a problem with the language you have choosen !"
 	
-	talkBlocking(errorSpoken)
+	subconsciousMouth.speakBlocking(errorSpoken)
+	subconsciousMouth.speakBlocking("My system run degraded now, please fix me as soon as possible ! ")
 	print errorSpoken
 		
