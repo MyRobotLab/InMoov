@@ -1,12 +1,8 @@
-# -- coding: utf-8 --
-
 # ##############################################################################
 # ERRORS FILE
 # ##############################################################################
 
 # FingerStarter doesnt use Chatbot, so we hardcode language to english for few error functions
-# THIS FILE NEED TO BE UTF8 IF YOU GRAB IT FROM GITHUB
-# BECAUSE THERE IS ACCENT INSIDE IT
 
 
 def errorSpokenFunc(errorType):

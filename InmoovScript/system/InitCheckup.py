@@ -7,24 +7,16 @@ subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
 
 #we import libraries
-execfile('Config/ExtraConfig/Import_Libraries.py')
+execfile('InmoovScript/system/Import_Libraries.py')
 #we include some error control
-execfile(u'Config/ExtraConfig/Errors.py')
+execfile('InmoovScript/system/Errors.py')
 #this is functions that tweak the mouth
-execfile(u'Config/ExtraConfig/MouthFunctions.py')
+execfile(u'InmoovScript/services/Mouth.py')
 
 
 
 MyLanguage=MyLanguage.lower()
 ear = i01.ear
-
-
-
-
-
-
-
-
 	
 if MyLanguage!="en":
 	try:
@@ -34,8 +26,6 @@ if MyLanguage!="en":
 	except:
 		errorSpokenFunc('MyLanguage')
 		pass
-
-
 
 try:
 	mouth.setVoice(voiceType)

@@ -1,15 +1,14 @@
 # ##############################################################################
 # 								INMOOV SCRIPT
-# This is fingerstarter script file
-# ##############################################################################
-
+# This is base Inmoov script file ( fingerstarter )
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
 # although this script is very short you can still
 # do voice control of a finger starter
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
-#The Finger Starter is considered here to be right index, 
-#so make sure your servo is connected to pin3 of you Arduino
+# The Finger Starter is considered here to be right index, 
+# so make sure your servo is connected to pin3 of you Arduino
+# ##############################################################################
 
 
 
@@ -24,8 +23,6 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 # webgui = Runtime.createAndStart("webgui","WebGui")
 
 
-
-
 ##############
 # basic services declaration
 i01 = Runtime.createAndStart("i01", "InMoov")
@@ -33,7 +30,9 @@ mouth = Runtime.createAndStart("i01.mouth", "MarySpeech") #mouth = Runtime.creat
 
 ##############
 # config files
-execfile('Config/BasicConfig.py') #TODO > import ConfigParser
+#this is usefull about vocal startup commands diagnostic "starting mouth etc..."
+mouth.setVoice("cmu-slt-hsmm") # TODO > remove and use default mouth
+execfile('InmoovScript/Inmoov_Starter.ini') #TODO > import ConfigParser
 
 ##############
 #starting parts
@@ -42,7 +41,7 @@ i01.startMouth()
 
 ##############
 # robot checkup
-execfile('Config/ExtraConfig/InitCheckup.py')
+execfile('InmoovScript/system/InitCheckup.py')
 
 ##############
 # verbal commands
@@ -81,7 +80,5 @@ def fingerclose():
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
   i01.mouth.speak(u"ok you have my attention")
-  
-print mouth.getMetaData()
-  
+
   
