@@ -14,7 +14,10 @@ def errorSpokenFunc(errorType):
 		errorSpoken="There is a problem ! with my communication port, "+MyRightPort+" , check your arduino"
 	
 			
-		
+			
+	if errorType=="VoiceDownloaded":
+		errorSpoken="I have downloaded a new voice, I will stop the system, please restart me. please do it"
+	
 	if errorType=="voiceType":
 		errorSpoken="There is a problem with the voice you have choosen !"
 
@@ -23,6 +26,6 @@ def errorSpokenFunc(errorType):
 		errorSpoken="There is a problem with the language you have choosen !"
 	
 	subconsciousMouth.speakBlocking(errorSpoken)
-	subconsciousMouth.speakBlocking("My system run degraded now, please fix me as soon as possible ! ")
+	
 	print errorSpoken
 		

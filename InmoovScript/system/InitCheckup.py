@@ -2,31 +2,41 @@
 # 								INITIAL CHECKUP
 # ##############################################################################
 
-#subconsciousMouth is an always worky english voice used to diagnostic
-subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("cmu-slt-hsmm")
-
 #we import libraries
-execfile('InmoovScript/system/Import_Libraries.py')
+execfile(RuningFolder+'system/Import_Libraries.py')
+
+#we load services python side from services folder
+#I have some strange no blocking event with LoadGesture so use classic execfile
+for filename in os.listdir(RuningFolder+'services'):
+     execfile(RuningFolder+'services/'+filename)
+
 #we include some error control
-execfile('InmoovScript/system/Errors.py')
-#this is functions that tweak the mouth
-execfile(u'InmoovScript/services/Mouth.py')
+execfile(RuningFolder+'system/Errors.py')
 
-
-
-MyLanguage=MyLanguage.lower()
+i01.startMouth()
+i01.startEar()
 ear = i01.ear
-	
+mouth=i01.mouth
+
+#set language	
 if MyLanguage!="en":
 	try:
 		mouth.setLanguage(MyLanguage)
 		
-		ear.setLanguage(MyLanguage)
+		i01.ear.setLanguage(MyLanguage)
 	except:
 		errorSpokenFunc('MyLanguage')
 		pass
 
+
+#check and update marytts voices	
+if MyvoiceTTS=="MarySpeech":
+	if not CheckMaryTTSVoice(voiceType):
+		mouth.installComponentsAcceptLicense(voiceType)
+		errorSpokenFunc('VoiceDownloaded')
+		sleep(3)
+		runtime.exit()
+	
 try:
 	mouth.setVoice(voiceType)
 except:
@@ -42,3 +52,7 @@ if ScriptType=="FingerStarter":
 		
 	if not RightPortIsConnected:
 		errorSpokenFunc('RightPortIsConnected')
+		
+print right.getBoardInfo()
+
+

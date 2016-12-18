@@ -1,5 +1,6 @@
-# ##############################################################################
+###############################################################################
 # 								INMOOV SCRIPT
+version='0.0.1'
 # This is base Inmoov script file ( fingerstarter )
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
@@ -8,7 +9,7 @@
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
-# ##############################################################################
+###############################################################################
 
 
 
@@ -25,24 +26,21 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 
 ##############
 # basic services declaration
+
+#we check the running folder
+import os
+RuningFolder=os.getcwd().replace("\\", "/")+"/InmoovScript/"
 i01 = Runtime.createAndStart("i01", "InMoov")
-mouth = Runtime.createAndStart("i01.mouth", "MarySpeech") #mouth = Runtime.createAndStart("i01.mouth", "NaturalReaderSpeach")
 
 ##############
 # config files
 #this is usefull about vocal startup commands diagnostic "starting mouth etc..."
-mouth.setVoice("cmu-slt-hsmm") # TODO > remove and use default mouth
-execfile('InmoovScript/Inmoov_Starter.ini') #TODO > import ConfigParser
+execfile(RuningFolder+'Inmoov_Starter.ini') #TODO > import ConfigParser
+
 
 ##############
-#starting parts
-i01.startEar()
-i01.startMouth()
-
-##############
-# robot checkup
-execfile('InmoovScript/system/InitCheckup.py')
-
+# robot start & checkup
+execfile(RuningFolder+'system/InitCheckup.py')
 ##############
 # verbal commands
 
@@ -68,17 +66,17 @@ if RightPortIsConnected:
 	i01.startRightHand(MyRightPort)
 
 
-#The "u" is usefull to read UTF8 in other languages
+
 def fingeropen():
   i01.moveHand("right",0,0,0,0,0)
-  i01.mouth.speak(u"ok I open my finger")
+  talkBlocking("ok I open my finger")
 
 def fingerclose():
   i01.moveHand("right",180,180,180,180,180)
-  i01.mouth.speak(u"my finger is closed")
+  talkBlocking("my finger is closed")
 
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
-  i01.mouth.speak(u"ok you have my attention")
+  talkBlocking("ok you have my attention")
 
-  
+talkBlocking("ok you have my attention")
