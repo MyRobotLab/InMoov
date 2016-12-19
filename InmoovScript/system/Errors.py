@@ -18,7 +18,7 @@ def errorSpokenFunc(errorType):
 	if errorType=="VoiceDownloaded":
 		errorSpoken="I have downloaded a new voice, I will stop the system, please restart me. please do it"
 	
-	if errorType=="voiceType":
+	if errorType=="MyvoiceType":
 		errorSpoken="There is a problem with the voice you have choosen !"
 
 		

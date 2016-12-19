@@ -1,25 +1,43 @@
 # ##############################################################################
-# MOUTH TWEAKS FILE
+# 								MOUTH SERVICE FILE
 # ##############################################################################
+
+
+# ##############################################################################
+# MRL SERVICE CALL
+# ##############################################################################
+
+#read config
+MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
+MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
+MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
 
 #subconsciousMouth is an always worky english voice used to diagnostic
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
 
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
+mouth=i01.mouth
 
+# ##############################################################################
+# MRL SERVICE TWEAKS
+# ##############################################################################
 
 #function to call about robot speak
 def talk(data):
 	if data:
-		i01.mouth.speak(unicode(data,'utf-8'))
+		mouth.speak(unicode(data,'utf-8'))
 		
 def talkBlocking(data):
 	if data:
-		i01.mouth.speakBlocking(unicode(data,'utf-8'))
+		mouth.speakBlocking(unicode(data,'utf-8'))
 		
 MyLanguage=MyLanguage.lower()
 
+
+# ##############################################################################
+# MOUTH RELATED FUNCTIONS
+# ##############################################################################
 
 #to know what is marytts version
 def getMaryttsVersion():
@@ -33,3 +51,28 @@ def getMaryttsVersion():
 #to check if marytts voice exist
 def CheckMaryTTSVoice(voiceCheck):
 	return os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+voiceCheck+'-'+getMaryttsVersion()+'.jar', os.R_OK)
+
+#mouth functions
+def setRobotLanguage():	
+	if MyLanguage!="en":
+		try:
+			mouth.setLanguage(MyLanguage)
+			i01.ear.setLanguage(MyLanguage)
+		except:
+			errorSpokenFunc('MyLanguage')
+			pass
+			
+def checkAndDownloadVoice():				
+	if MyvoiceTTS=="MarySpeech":
+		if not CheckMaryTTSVoice(MyvoiceType):
+			mouth.installComponentsAcceptLicense(MyvoiceType)
+			errorSpokenFunc('VoiceDownloaded')
+			sleep(3)
+			runtime.exit()
+		
+def setCustomVoice():		
+	try:
+		mouth.setVoice(MyvoiceType)
+	except:
+		errorSpokenFunc('MyvoiceType')
+		pass

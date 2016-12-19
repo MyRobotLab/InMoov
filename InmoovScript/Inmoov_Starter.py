@@ -1,6 +1,7 @@
 ###############################################################################
 # 								INMOOV SCRIPT
 version='0.0.1'
+RuningFolder="InmoovScript"
 # This is base Inmoov script file ( fingerstarter )
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
@@ -9,6 +10,7 @@ version='0.0.1'
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
+# check your configuration inside BasicConfig.ini
 ###############################################################################
 
 
@@ -19,31 +21,20 @@ webgui.autoStartBrowser(False)
 webgui.startService()
 # Then start the browsers and show the WebkitSpeechRecognition service named i01.ear
 webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
-
 # As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
 # webgui = Runtime.createAndStart("webgui","WebGui")
 
 
 ##############
-# basic services declaration
-
-#we check the running folder
-import os
-RuningFolder=os.getcwd().replace("\\", "/")+"/InmoovScript/"
+# inmoov service declaration
 i01 = Runtime.createAndStart("i01", "InMoov")
 
 ##############
-# config files
-#this is usefull about vocal startup commands diagnostic "starting mouth etc..."
-execfile(RuningFolder+'Inmoov_Starter.ini') #TODO > import ConfigParser
-
-
-##############
 # robot start & checkup
-execfile(RuningFolder+'system/InitCheckup.py')
+execfile(RuningFolder+'/system/InitCheckup.py')
+
 ##############
 # verbal commands
-
 ear.addCommand("attach your finger", "i01.rightHand.index", "attach")
 ear.addCommand("disconnect your finger", "i01.rightHand.index", "detach")
 ear.addCommand("rest", i01.getName(), "rest")
@@ -61,10 +52,10 @@ ear.addNegations("no","wrong","nope","nah")
 
 ear.startListening()
 
+
 #Arduino is ok ? lets go !
 if RightPortIsConnected:
 	i01.startRightHand(MyRightPort)
-
 
 
 def fingeropen():

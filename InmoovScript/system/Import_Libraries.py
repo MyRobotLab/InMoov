@@ -19,3 +19,4 @@ import hashlib
 import subprocess
 import csv
 import glob
+import ConfigParser
