@@ -24,6 +24,9 @@ def errorSpokenFunc(errorType):
 		
 	if errorType=="MyLanguage":
 		errorSpoken="There is a problem with the language you have choosen !"
+		
+	if errorType=="MrlNeedUpdate":
+		errorSpoken="You My Robotlab version is too old, please update it"
 	
 	subconsciousMouth.speakBlocking(errorSpoken)
 	

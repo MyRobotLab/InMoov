@@ -1,7 +1,5 @@
 ###############################################################################
 # 								INMOOV SCRIPT
-version='0.0.1'
-RuningFolder="InmoovScript"
 # This is base Inmoov script file ( fingerstarter )
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
@@ -11,6 +9,9 @@ RuningFolder="InmoovScript"
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
 # check your configuration inside BasicConfig.ini
+version='0.0.1'
+mrlCompatible='1851'
+RuningFolder="InmoovScript"
 ###############################################################################
 
 
@@ -45,14 +46,9 @@ ear.addCommand("capture gesture", ear.getName(), "captureGesture")
 ear.addCommand("manual", ear.getName(), "lockOutAllGrammarExcept", "voice control")
 ear.addCommand("voice control", ear.getName(), "clearLock")
 
-# Confirmations and Negations are not supported yet in WebkitSpeechRecognition
-# So commands will execute immediatley 
-ear.addComfirmations("yes","correct","yeah","ya") 
-ear.addNegations("no","wrong","nope","nah")
-
 ear.startListening()
 
-
+##############
 #Arduino is ok ? lets go !
 if RightPortIsConnected:
 	i01.startRightHand(MyRightPort)

@@ -17,6 +17,10 @@ for filename in os.listdir(RuningFolder+'services'):
 #we include some error control
 execfile(RuningFolder+'system/Errors.py')
 
+#mrl version check
+if int(runtime.getVersion()[-4:])<int(mrlCompatible):
+	errorSpokenFunc('MrlNeedUpdate')
+
 #we start raw Inmoov ear and mouth service
 i01.startMouth()
 i01.startEar()
