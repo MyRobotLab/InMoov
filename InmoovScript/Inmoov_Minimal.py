@@ -1,6 +1,6 @@
 ###############################################################################
 # 								INMOOV SCRIPT
-# This is base Inmoov script file ( minimal )
+# This is a basic Inmoov script file ( minimal )
 # this will run with versions of MRL above 1850
 # a very minimal script for InMoov
 # although this script is very short you can still
