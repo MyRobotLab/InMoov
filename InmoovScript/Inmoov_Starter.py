@@ -1,6 +1,6 @@
 ###############################################################################
 # 								INMOOV SCRIPT
-# This is base Inmoov script file ( fingerstarter )
+# This is a basic Inmoov script file ( fingerstarter )
 # this will run with versions of MRL above 1695
 # a very minimal script for InMoov
 # although this script is very short you can still
