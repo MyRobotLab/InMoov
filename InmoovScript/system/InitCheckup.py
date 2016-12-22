@@ -11,15 +11,17 @@ execfile(RuningFolder+'/system/ConfigParser.py')
 
 #we load services python side from services folder
 #I have some strange no blocking event with LoadGesture so use classic execfile
-for filename in os.listdir(RuningFolder+'services'):
-     execfile(RuningFolder+'services/'+filename)
+for filename in os.listdir(RuningFolder+'services'):		
+	print os.path.splitext(filename)[1]
+	if os.path.splitext(filename)[1] == ".py":
+		execfile(RuningFolder+'services/'+filename)
 
 #we include some error control
 execfile(RuningFolder+'system/Errors.py')
 
 #mrl version check
 if int(runtime.getVersion()[-4:])<int(mrlCompatible):
-	errorSpokenFunc('MrlNeedUpdate')
+	errorSpokenFunc('MrlNeedUpdate',0)
 
 #we start raw Inmoov ear and mouth service
 i01.startMouth()
@@ -36,10 +38,19 @@ checkAndDownloadVoice()
 setCustomVoice()
 	
 # We do a checkup of arduinos and mrlcomm
-CheckArduinos()
+if 'right' in globals():
+	RightPortIsConnected=CheckArduinos(right,MyRightPort)
 	
+if 'left' in globals():
+	LeftPortIsConnected=CheckArduinos(left,MyLeftPort)	
 
-#todo check mrlcomm version		
-print right.getBoardInfo()
+
+#we launch Inmoov Skeleton
+
+for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
+	print os.path.splitext(filename)[1]
+	if os.path.splitext(filename)[1] == ".py":
+		execfile(RuningFolder+'inmoovSkeleton/'+filename)
 
 
+ear.startListening()

@@ -1,7 +1,8 @@
 ###############################################################################
 # 								INMOOV SCRIPT
-# This is a basic Inmoov script file ( fingerstarter )
-# this will run with versions of MRL above 1695
+# This is a basic Inmoov script file ( based on fingerstarter )
+# If you setup configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
+# this will run with versions of MRL above 1834
 # a very minimal script for InMoov
 # although this script is very short you can still
 # do voice control of a finger starter
@@ -9,8 +10,8 @@
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
 # check your configuration inside BasicConfig.ini
-version='0.0.1'
-mrlCompatible='1851'
+version='0.0.3'
+mrlCompatible='1834'
 RuningFolder="InmoovScript"
 ###############################################################################
 
@@ -31,11 +32,13 @@ webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 i01 = Runtime.createAndStart("i01", "InMoov")
 
 ##############
-# robot start & checkup
+# health checkup & startup functions
 execfile(RuningFolder+'/system/InitCheckup.py')
 
+
 ##############
-# verbal commands
+# sample commands used by fingerstarter
+
 ear.addCommand("attach your finger", "i01.rightHand.index", "attach")
 ear.addCommand("disconnect your finger", "i01.rightHand.index", "detach")
 ear.addCommand("rest", i01.getName(), "rest")
@@ -45,13 +48,6 @@ ear.addCommand("finger to the middle", "python", "fingermiddle")
 ear.addCommand("capture gesture", ear.getName(), "captureGesture")
 ear.addCommand("manual", ear.getName(), "lockOutAllGrammarExcept", "voice control")
 ear.addCommand("voice control", ear.getName(), "clearLock")
-
-ear.startListening()
-
-##############
-#Arduino is ok ? lets go !
-if RightPortIsConnected:
-	i01.startRightHand(MyRightPort)
 
 
 def fingeropen():
@@ -67,3 +63,4 @@ def fingermiddle():
   talkBlocking("ok you have my attention")
 
 talkBlocking("ok you have my attention")
+

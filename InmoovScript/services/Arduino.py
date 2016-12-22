@@ -7,17 +7,20 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-right = Runtime.createAndStart("i01.right", "Arduino")
+if ScriptType=="RightSide" or ScriptType=="Full":
+	right = Runtime.createAndStart("i01.right", "Arduino")
+if ScriptType=="LeftSide" or ScriptType=="Full":
+	left = Runtime.createAndStart("i01.left", "Arduino")
 
 # ##############################################################################
 # ARDUINO RELATED FUNCTIONS
 # ##############################################################################
 
 
-RightPortIsConnected=0
-def CheckArduinos():
-	if ScriptType=="FingerStarter":
-		RightPortIsConnected=right.connect(MyRightPort)
-		RightPortIsConnected=right.isConnected()
-		if not RightPortIsConnected:
-			errorSpokenFunc('RightPortIsConnected')
+def CheckArduinos(Card,Port):
+	
+	Card.connect(Port)
+	if not Card.isConnected():
+		errorSpokenFunc('ArduinoNotConnected',Port)
+	return Card.isConnected()
+	
