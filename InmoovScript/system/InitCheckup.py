@@ -2,6 +2,14 @@
 # 								INITIAL CHECKUP
 # ##############################################################################
 
+
+GUIService.dockPanel("python")
+python.attachPythonConsole()
+
+print "MRL version : ",runtime.getVersion()[-4:]
+print "Inmoov version : ",version
+print "Starting..."
+
 #we import libraries
 execfile(RuningFolder+'/system/Import_Libraries.py')
 RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
@@ -9,10 +17,13 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 #we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 
+
+
+
+
 #we load services python side from services folder
 #I have some strange no blocking event with LoadGesture so use classic execfile
 for filename in os.listdir(RuningFolder+'services'):		
-	print os.path.splitext(filename)[1]
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'services/'+filename)
 
@@ -48,9 +59,10 @@ if 'left' in globals():
 #we launch Inmoov Skeleton
 
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
-	print os.path.splitext(filename)[1]
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovSkeleton/'+filename)
 
 
 ear.startListening()
+
+#debug

@@ -13,6 +13,9 @@ def errorSpokenFunc(errorType,param):
 	if errorType=="ArduinoNotConnected":
 		errorSpoken="There is a problem ! with my communication port, "+param+" , check your arduino"
 
+	if errorType=="BadMrlcommVersion":
+		errorSpoken="Bad M R L com version inside arduino "+param+" , please update it"
+		
 	if errorType=="VoiceDownloaded":
 		errorSpoken="I have downloaded a new voice, I will stop the system, please restart me. please do it"
 	

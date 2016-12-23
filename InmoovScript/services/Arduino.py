@@ -18,9 +18,13 @@ if ScriptType=="LeftSide" or ScriptType=="Full":
 
 
 def CheckArduinos(Card,Port):
-	
 	Card.connect(Port)
 	if not Card.isConnected():
 		errorSpokenFunc('ArduinoNotConnected',Port)
+	else:
+		if Card.getBoardInfo().version!=MRLCOMM_VERSION:
+			errorSpokenFunc('BadMrlcommVersion',Port)
+		else:
+			print "Arduino ",Port," OK"
 	return Card.isConnected()
 	
