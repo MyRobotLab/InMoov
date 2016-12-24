@@ -7,16 +7,19 @@
 # 								EAR COMMANDS
 # ##############################################################################
 
+ear.addCommand("open your right hand", "python", "handopen")
+ear.addCommand("close your right hand", "python", "handclose")
 ear.addCommand("open your hand", "python", "handopen")
 ear.addCommand("close your hand", "python", "handclose")
 
 def handopen():
-  i01.moveHand("left",0,0,0,0,0)
-  i01.moveHand("right",0,0,0,0,0)
+	attachDetachThread(rightHand,2)
+	i01.moveHand("right",0,0,0,0,0)
+
 
 def handclose():
-  i01.moveHand("left",180,180,180,180,180)
-  i01.moveHand("right",180,180,180,180,180)
+	attachDetachThread(rightHand,2)
+	i01.moveHand("right",180,180,180,180,180)
   
 # end ear commands
   

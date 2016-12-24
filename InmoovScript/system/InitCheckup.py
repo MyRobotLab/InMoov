@@ -5,13 +5,17 @@
 
 GUIService.dockPanel("python")
 python.attachPythonConsole()
-
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."
-
+DEBUG=0
 #we import libraries
 execfile(RuningFolder+'/system/Import_Libraries.py')
+
+#we import global vars
+execfile(RuningFolder+'/system/Import_Vars.py')
+
+
 RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 
 #we load personal parameters
@@ -36,8 +40,6 @@ if int(runtime.getVersion()[-4:])<int(mrlCompatible):
 
 #we start raw Inmoov ear and mouth service
 i01.startMouth()
-i01.startEar()
-ear = i01.ear
 
 #set user language
 setRobotLanguage()
@@ -57,12 +59,16 @@ if 'left' in globals():
 
 
 #we launch Inmoov Skeleton
-
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovSkeleton/'+filename)
 
 
 ear.startListening()
+#we detach whole i01 servos after 2 seconds
+attachDetachThread(i01,2)
+
+#we start some timers
+WebkitSpeachReconitionFix.startClock()
 
 #debug

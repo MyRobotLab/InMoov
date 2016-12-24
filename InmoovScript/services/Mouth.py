@@ -19,11 +19,14 @@ subconsciousMouth.setVoice("cmu-slt-hsmm")
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 mouth=i01.mouth
 
+python.subscribe(mouth.getName(),"publishStartSpeaking")
+python.subscribe(mouth.getName(),"publishEndSpeaking")
+
 # ##############################################################################
 # MRL SERVICE TWEAKS
 # ##############################################################################
 
-#function to call about robot speak
+#functions to call about robot speak
 def talk(data):
 	if data:
 		mouth.speak(unicode(data,'utf-8'))
@@ -31,6 +34,18 @@ def talk(data):
 def talkBlocking(data):
 	if data:
 		mouth.speakBlocking(unicode(data,'utf-8'))
+
+#stop autolisten
+def onEndSpeaking(text):
+	global RobotIsActualySpeaking
+	RobotIsActualySpeaking=0
+	ear.resumeListening()
+		
+	
+def onStartSpeaking(text):
+	global RobotIsActualySpeaking
+	RobotIsActualySpeaking=1
+	ear.pauseListening()
 		
 MyLanguage=MyLanguage.lower()
 

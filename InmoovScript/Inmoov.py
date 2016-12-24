@@ -1,5 +1,14 @@
 ###############################################################################
-# 								INMOOV SCRIPT
+#  ___  ________   _____ ______   ________  ________  ___      ___ 
+# |\  \|\   ___  \|\   _ \  _   \|\   __  \|\   __  \|\  \    /  /|
+# \ \  \ \  \\ \  \ \  \\\__\ \  \ \  \|\  \ \  \|\  \ \  \  /  / /
+#  \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
+#   \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
+#    \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
+#     \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
+version='0.0.4'
+mrlCompatible='1834'
+RuningFolder="InmoovScript"
 # This is a basic Inmoov script file ( based on fingerstarter )
 # If you setup configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
 # this will run with versions of MRL above 1834
@@ -10,9 +19,7 @@
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
 # check your configuration inside BasicConfig.ini
-version='0.0.3'
-mrlCompatible='1834'
-RuningFolder="InmoovScript"
+
 ###############################################################################
 
 
@@ -51,14 +58,17 @@ ear.addCommand("voice control", ear.getName(), "clearLock")
 
 
 def fingeropen():
+  attachDetachThread(rightHand,2)
   i01.moveHand("right",0,0,0,0,0)
   talkBlocking("ok I open my finger")
 
 def fingerclose():
+  attachDetachThread(rightHand,2)
   i01.moveHand("right",180,180,180,180,180)
   talkBlocking("my finger is closed")
 
 def fingermiddle():
+  attachDetachThread(rightHand,2)
   i01.moveHand("right",90,90,90,90,90)
   talkBlocking("ok you have my attention")
 
