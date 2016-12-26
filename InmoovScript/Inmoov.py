@@ -1,14 +1,7 @@
-###############################################################################
-#  ___  ________   _____ ______   ________  ________  ___      ___ 
-# |\  \|\   ___  \|\   _ \  _   \|\   __  \|\   __  \|\  \    /  /|
-# \ \  \ \  \\ \  \ \  \\\__\ \  \ \  \|\  \ \  \|\  \ \  \  /  / /
-#  \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
-#   \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
-#    \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
-#     \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
 version='0.0.4'
 mrlCompatible='1834'
 RuningFolder="InmoovScript"
+
 # This is a basic Inmoov script file ( based on fingerstarter )
 # If you setup configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
 # this will run with versions of MRL above 1834
@@ -20,7 +13,7 @@ RuningFolder="InmoovScript"
 # so make sure your servo is connected to pin3 of you Arduino
 # check your configuration inside BasicConfig.ini
 
-###############################################################################
+# ##############################################################################
 
 
 

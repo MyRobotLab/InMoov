@@ -29,15 +29,6 @@ def CheckArduinos(Card,Port):
 			print "Arduino ",Port," OK"
 	return Card.isConnected()
 
-#we detach servo is a separated thread because the sleep
-def attachDetachThread(element,delayToDetach):
-	processThread = threading.Thread(target=delayDetach, args=(element,delayToDetach,))
-	processThread.start()
-	
-def delayDetach(element,delayToDetach):
-	element.attach()
-	sleep(delayToDetach)
-	element.detach()
-	print "detached"
+
     
 

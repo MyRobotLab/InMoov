@@ -65,8 +65,6 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 
 
 ear.startListening()
-#we detach whole i01 servos after 2 seconds
-attachDetachThread(i01,2)
 
 #we start some timers
 WebkitSpeachReconitionFix.startClock()
