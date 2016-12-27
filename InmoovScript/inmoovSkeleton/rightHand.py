@@ -13,11 +13,11 @@ ear.addCommand("open your hand", "python", "handopen")
 ear.addCommand("close your hand", "python", "handclose")
 
 def handopen():
-	moveHand(rightHand,0,0,0,0,0)
+	i01.moveHand("right",0,0,0,0,0)
 
 
 def handclose():
-	moveHand(rightHand,180,180,180,180,180)
+	i01.moveHand("right",180,180,180,180,180)
   
 # end ear commands
   
@@ -50,7 +50,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 	if RightPortIsConnected==True:
 		i01.startRightHand(MyRightPort)
 		rightHand=i01.rightHand
-		attachDetachThread(rightHand,1)
+		
 		
 		rightHand.thumb.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'thumb')) 
 		rightHand.index.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'index')) 

@@ -58,17 +58,14 @@ ear.addCommand("voice control", ear.getName(), "clearLock")
 
 
 def fingeropen():
-  attachDetachThread(rightHand,2)
   i01.moveHand("right",0,0,0,0,0)
   talkBlocking("ok I open my finger")
 
 def fingerclose():
-  attachDetachThread(rightHand,2)
   i01.moveHand("right",180,180,180,180,180)
   talkBlocking("my finger is closed")
 
 def fingermiddle():
-  attachDetachThread(rightHand,2)
   i01.moveHand("right",90,90,90,90,90)
   talkBlocking("ok you have my attention")
 
