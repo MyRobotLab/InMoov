@@ -5,7 +5,7 @@
 # FingerStarter doesnt use Chatbot, so we hardcode language to english for few error functions
 
 
-def errorSpokenFunc(errorType,param):
+def errorSpokenFunc(errorType,param="0"):
 	
 	
 	subconsciousMouth.speakBlocking("Alert! Alert! Alert! This is my subconscious speaking, can I have your attention please ! ")
@@ -28,6 +28,9 @@ def errorSpokenFunc(errorType,param):
 		
 	if errorType=="MrlNeedUpdate":
 		errorSpoken="You My Robotlab version is too old, please update it"
+		
+	if errorType=="BAdrduinoChoosen":
+		errorSpoken="The Arduino choosen about "+param+" does not exist, plese check your configuration"
 	
 	subconsciousMouth.speakBlocking(errorSpoken)
 	

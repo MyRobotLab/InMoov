@@ -5,13 +5,13 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='0.0.4'
-mrlCompatible='1834'
+version='0.0.5'
+mrlCompatible='1859'
 RuningFolder="InmoovScript"
 
 # This is a basic Inmoov script file ( based on fingerstarter )
 # If you setup configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
-# this will run with versions of MRL above 1834
+# this will run with versions of MRL above 1859
 # a very minimal script for InMoov
 # although this script is very short you can still
 # do voice control of a finger starter

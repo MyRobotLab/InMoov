@@ -1,11 +1,12 @@
 ;----------------------------- NEOPIXEL RX/TX CONFIG ----------------------------------------
+;TODO COM ONLY
 [MAIN]
 isNeopixelActivated=0
-NeopixelMaster=right
-NeopixelMasterPort=Serial2
+NeopixelMaster=left
+NeopixelMasterPort=Serial1
 ;NeopixelMaster=right / left / other previously declared in arduino.py service
 [NEOPIXEL]
-pin=13
+pin=2
 numberOfPixel=16
 ;----------------------------------- END --------------------------------------------------
 
