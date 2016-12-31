@@ -10,4 +10,5 @@
 
 global RobotIsActualySpeaking
 RobotIsActualySpeaking=0
-
+global RobotIsErrorMode
+RobotIsErrorMode=0

@@ -4,7 +4,6 @@
 
 
 GUIService.dockPanel("python")
-python.attachPythonConsole()
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."
@@ -29,15 +28,17 @@ execfile(RuningFolder+'/system/Errors.py')
 for filename in os.listdir(RuningFolder+'services'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'services/'+filename)
-		sleep(1)
+
+		
+if boot_green:		
+	PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
 
 
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovSkeleton/'+filename)
-		sleep(1)
-
+		
 
 
 				
@@ -58,16 +59,17 @@ checkAndDownloadVoice()
 setCustomVoice()
 	
 
-
-
-
+#we launch Inmoov Skeleton
+for filename in os.listdir(RuningFolder+'inmoovLife'):		
+	if os.path.splitext(filename)[1] == ".py":
+		execfile(RuningFolder+'inmoovLife/'+filename)
+		
 ear.startListening()
 
-#we start some timers
-WebkitSpeachReconitionFix.startClock()
+#create the custom script, only if not exist
+if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
+		shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
 
-StopNeopixelAnimation()
 
-#rightHand.detach()
 
-#debug
+

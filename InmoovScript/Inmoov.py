@@ -69,5 +69,6 @@ def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
   talkBlocking("ok you have my attention")
 
-talkBlocking("ok you have my attention")
+#Go further and load some custom commands in a separated file
+execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
 

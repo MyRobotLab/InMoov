@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								TIMERS ACTION
+# 								TIMER ACTION
 # ##############################################################################
 
 ###############################################################################
@@ -15,6 +15,8 @@ def WebkitSpeachReconitionON(timedata):
 		ear.resumeListening()
 	
 
-WebkitSpeachReconitionFix.addListener("pulse", python.name, "WebkitSpeachReconitionON")		
+WebkitSpeachReconitionFix.addListener("pulse", python.name, "WebkitSpeachReconitionON")
+
+WebkitSpeachReconitionFix.startClock()
 
 

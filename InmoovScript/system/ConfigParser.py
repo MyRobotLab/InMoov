@@ -3,13 +3,13 @@
 # ##############################################################################
 
 #shared parse function
-def CheckConfigFileExist(File):
+def CheckFileExist(File):
 	if not os.path.isfile(File+'.config'):
 		shutil.move(File+'.config.default',File+'.config')
 		print "config file created : ",File+'.config'
 
 	
-CheckConfigFileExist(RuningFolder + 'Inmoov')
+CheckFileExist(RuningFolder + 'Inmoov')
 	
 #basic config parse
 BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)

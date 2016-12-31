@@ -17,7 +17,7 @@
 	#speed: 1-65535   1=full speed, 2=2x slower than 1, 10=10x slower than 1
 	#starting a animation :
 ##	neopixel.setAnimation("Animation Name", red, green, blue, speed)
-##	optional : PlayNeopixelAnimation("Animation Name", red, green, blue, speed, duration) > thread animation timeout
+##	optional : PlayNeopixelAnimation("Animation Name", red, green, blue, speed, duration) > animation timeout, if neopixel exist
 
 # ##############################################################################
 # 							PERSONNAL PARAMETERS
@@ -25,14 +25,26 @@
   
 #read current service part config based on file name
 ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
-CheckConfigFileExist(ThisServicePart)
+CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 isNeopixelActivated=0
 isNeopixelActivated=ThisServicePartConfig.getboolean('MAIN', 'isNeopixelActivated') 
 
+
+masterArduinoPort=ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort')
 pin=ThisServicePartConfig.getint('NEOPIXEL', 'pin') 
 numberOfPixel=ThisServicePartConfig.getint('NEOPIXEL', 'numberOfPixel')
+
+#neopixel can have basic pre programmed reactions:
+#TODO choose witch animation
+
+#light green while robot booting
+boot_green=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'boot_green')
+#blue while download something
+downloadSomething_blue=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'downloadSomething_blue')
+
+error_red=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'error_red')
   
 # ##############################################################################
 # 								SERVICE START
@@ -41,7 +53,8 @@ numberOfPixel=ThisServicePartConfig.getint('NEOPIXEL', 'numberOfPixel')
 if isNeopixelActivated==1:
 	neopixelArduino = Runtime.createAndStart("arduino2","Arduino")
 	try:
-		neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort'),eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster')))
+		masterArduino=eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster'))
+		neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)
 	except:
 		errorSpokenFunc('BAdrduinoChoosen','Neo pixel')
 		isNeopixelActivated=0
@@ -58,24 +71,26 @@ if isNeopixelActivated==1:
 	else:
 		isNeopixelActivated=0
 
+# ##############################################################################
+# 								SERVICE TWEAK
+# ##############################################################################
 
-	
+#function to call to clean poweroff neopixel	
 def StopNeopixelAnimation():
 	if isNeopixelActivated==1:
 		neopixel.animationStop()
-		neopixel.turnOff
+		
 
-def PlayNeopixelAnimation_Thread(Animation_Name,red=255,green=255,blue=255,speed=1,duration=0):
-	processThread = threading.Thread(target=PlayNeopixelAnimation_NoThread, args=(Animation_Name,red,green,blue,speed,duration,))
-	processThread.start()
-	
-def PlayNeopixelAnimation_NoThread(Animation_Name,red=255,green=255,blue=255,speed=1,duration=0):			
+
+#function to call to play neopixel in blocking action	
+def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,duration=0):			
 	if isNeopixelActivated==1:
-		StopNeopixelAnimation()
-		neopixel.turnOn
+		neopixel.animationStop()
+		sleep(0.2)
 		neopixel.setAnimation(Animation_Name, red, green, blue, speed)
 		if duration!=0:
 			sleep(duration)
-			StopNeopixelAnimation() 
+			neopixel.animationStop()
 			
-PlayNeopixelAnimation_NoThread("Theater Chase", 0, 255, 0, 1) #running Theater Chase with color red at full speed
+
+

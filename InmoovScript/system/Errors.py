@@ -6,9 +6,9 @@
 
 
 def errorSpokenFunc(errorType,param="0"):
-	
-	
-	subconsciousMouth.speakBlocking("Alert! Alert! Alert! This is my subconscious speaking, can I have your attention please ! ")
+	global RobotIsErrorMode
+	RobotIsErrorMode=1
+	subconsciousMouth.speakBlocking("Alert! can I have your attention please ! ")
 	
 	if errorType=="ArduinoNotConnected":
 		errorSpoken="There is a problem ! with my communication port, "+param+" , check your arduino"

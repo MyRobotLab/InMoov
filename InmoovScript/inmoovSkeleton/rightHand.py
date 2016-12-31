@@ -33,7 +33,7 @@ def handclose():
   
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
-CheckConfigFileExist(ThisSkeletonPart)
+CheckFileExist(ThisSkeletonPart)
 ThisSkeletonPartConfig = ConfigParser.ConfigParser()
 ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
