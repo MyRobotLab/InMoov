@@ -48,10 +48,9 @@ isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActiv
 
 if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 	if RightPortIsConnected==True:
-		i01.startRightHand(MyRightPort)
-		rightHand=i01.rightHand
 		
-		
+		rightHand = Runtime.create("i01.rightHand", "InMoovHand")
+				
 		rightHand.thumb.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'thumb')) 
 		rightHand.index.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'index')) 
 		rightHand.majeure.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'majeure')) 
@@ -66,6 +65,15 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.pinky.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'pinky'))
 		rightHand.wrist.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'wrist'))
 		
+		i01.startRightHand(MyRightPort)
+		rightHand.detach()
+		
+		rightHand.thumb.enableAutoAttach(1)
+		rightHand.index.enableAutoAttach(1)
+		rightHand.majeure.enableAutoAttach(1)
+		rightHand.ringFinger.enableAutoAttach(1)
+		rightHand.pinky.enableAutoAttach(1)
+		rightHand.wrist.enableAutoAttach(1)
 		
 	else:
 		#we force parameter if arduino is off
