@@ -9,14 +9,13 @@
 
 ear.addCommand("open your right hand", "python", "handopen")
 ear.addCommand("close your right hand", "python", "handclose")
-ear.addCommand("open your hand", "python", "handopen")
-ear.addCommand("close your hand", "python", "handclose")
 
-def handopen():
+
+def righthandopen():
 	i01.moveHand("right",0,0,0,0,0)
 
 
-def handclose():
+def righthandclose():
 	i01.moveHand("right",180,180,180,180,180)
   
 # end ear commands
@@ -38,7 +37,8 @@ ThisSkeletonPartConfig = ConfigParser.ConfigParser()
 ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
 isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
-  
+autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach') 
+    
   
   
   
@@ -47,7 +47,7 @@ isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActiv
 # ##############################################################################
 
 if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
-	if RightPortIsConnected==True:
+	if RightPortIsConnected:
 		
 		rightHand = Runtime.create("i01.rightHand", "InMoovHand")
 				
@@ -65,15 +65,27 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.pinky.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'pinky'))
 		rightHand.wrist.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'wrist'))
 		
+		rightHand.thumb.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'thumb'))
+		rightHand.index.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'index'))
+		rightHand.majeure.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'majeure'))
+		rightHand.ringFinger.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'ringFinger'))
+		rightHand.pinky.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'pinky'))
+		rightHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'))
+		
 		i01.startRightHand(MyRightPort)
 		rightHand.detach()
+			
+		if autoDetach:
+			rightHand.thumb.enableAutoAttach(1)
+			rightHand.index.enableAutoAttach(1)
+			rightHand.majeure.enableAutoAttach(1)
+			rightHand.ringFinger.enableAutoAttach(1)
+			rightHand.pinky.enableAutoAttach(1)
+			rightHand.wrist.enableAutoAttach(1)
 		
-		rightHand.thumb.enableAutoAttach(1)
-		rightHand.index.enableAutoAttach(1)
-		rightHand.majeure.enableAutoAttach(1)
-		rightHand.ringFinger.enableAutoAttach(1)
-		rightHand.pinky.enableAutoAttach(1)
-		rightHand.wrist.enableAutoAttach(1)
+		rightHand.rest()
+		sleep(1)
+		rightHand.detach()
 		
 	else:
 		#we force parameter if arduino is off

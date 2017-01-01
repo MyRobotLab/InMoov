@@ -51,7 +51,7 @@ error_red=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'error_red')
 # ##############################################################################
 
 if isNeopixelActivated==1:
-	neopixelArduino = Runtime.createAndStart("arduino2","Arduino")
+	neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
 	try:
 		masterArduino=eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster'))
 		neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)

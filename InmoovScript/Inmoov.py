@@ -4,14 +4,14 @@
 ##						   \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
-##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='0.0.5'
-mrlCompatible='1859'
+##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    script - [wip]
+version='0.0.6'
+mrlCompatible='1861'
 RuningFolder="InmoovScript"
 
-# This is a basic Inmoov script file ( based on fingerstarter )
+# This is the basic Inmoov script file ( also called fingerstarter )
 # If you setup configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
-# this will run with versions of MRL above 1859
+# this will run with versions of MRL above 1861
 # a very minimal script for InMoov
 # although this script is very short you can still
 # do voice control of a finger starter
@@ -68,7 +68,14 @@ def fingerclose():
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
   talkBlocking("ok you have my attention")
+  
+  
+  
+  
+  
 
+#inmoov minimal if you use left+right
+execfile(RuningFolder+'inmoovMinimal/Inmoov_minimal.py')  
 #Go further and load some custom commands in a separated file
 execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
 

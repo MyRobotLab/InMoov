@@ -38,7 +38,7 @@ ThisSkeletonPartConfig = ConfigParser.ConfigParser()
 ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
 isLeftHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftHandActivated') 
-  
+autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')   
   
   
   
@@ -47,7 +47,7 @@ isLeftHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftHandActivat
 # ##############################################################################
 
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
-	if LeftPortIsConnected==True:
+	if LeftPortIsConnected:
 	
 		leftHand = Runtime.create("i01.leftHand", "InMoovHand")
 				
@@ -65,16 +65,26 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		leftHand.pinky.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'pinky'))
 		leftHand.wrist.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'wrist'))
 		
+		leftHand.thumb.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'thumb'))
+		leftHand.index.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'index'))
+		leftHand.majeure.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'majeure'))
+		leftHand.ringFinger.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'ringFinger'))
+		leftHand.pinky.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'pinky'))
+		leftHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'))
+		
 		i01.startLeftHand(MyLeftPort)
+		
+		if autoDetach:
+			leftHand.thumb.enableAutoAttach(1)
+			leftHand.index.enableAutoAttach(1)
+			leftHand.majeure.enableAutoAttach(1)
+			leftHand.ringFinger.enableAutoAttach(1)
+			leftHand.pinky.enableAutoAttach(1)
+			leftHand.wrist.enableAutoAttach(1)
+		
+		leftHand.rest()
+		sleep(1)
 		leftHand.detach()
-		
-		leftHand.thumb.enableAutoAttach(1)
-		leftHand.index.enableAutoAttach(1)
-		leftHand.majeure.enableAutoAttach(1)
-		leftHand.ringFinger.enableAutoAttach(1)
-		leftHand.pinky.enableAutoAttach(1)
-		leftHand.wrist.enableAutoAttach(1)
-		
 	else:
 		#we force parameter if arduino is off
 		isleftHandActivated=0
