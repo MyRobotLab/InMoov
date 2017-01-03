@@ -9,6 +9,8 @@
 
 ear.addCommand("open your right hand", "python", "handopen")
 ear.addCommand("close your right hand", "python", "handclose")
+ear.addCommand("open your hand", "python", "handopen")
+ear.addCommand("close your hand", "python", "handclose")
 
 
 def righthandopen():
@@ -73,7 +75,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'))
 		
 		i01.startRightHand(MyRightPort)
-		rightHand.detach()
+		
 			
 		if autoDetach:
 			rightHand.thumb.enableAutoAttach(1)
