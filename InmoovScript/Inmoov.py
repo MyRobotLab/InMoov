@@ -18,7 +18,7 @@ RuningFolder="InmoovScript"
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
 # The Finger Starter is considered here to be right index, 
 # so make sure your servo is connected to pin3 of you Arduino
-# check your configuration inside BasicConfig.ini
+# check your configuration inside Inmoov.config
 
 # ##############################################################################
 
