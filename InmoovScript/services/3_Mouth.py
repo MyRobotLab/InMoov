@@ -7,15 +7,21 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-#read config
-MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
-MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
-MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
 
 #subconsciousMouth is an always worky english voice used to diagnostic
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
 
+#read personnal config
+try:
+	MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
+	MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
+	MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
+except:
+	errorSpokenFunc('ConfigParserProblem','Inmoov.config about voices parameters')
+	pass
+
+#inmoov mouth service
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 mouth=i01.mouth
 

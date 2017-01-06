@@ -16,12 +16,16 @@
   
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
-CheckFileExist(ThisSkeletonPart)
-ThisSkeletonPartConfig = ConfigParser.ConfigParser()
-ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+try:
+	CheckFileExist(ThisSkeletonPart)
+	ThisSkeletonPartConfig = ConfigParser.ConfigParser()
+	ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
-autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach') 
+	isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
+	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
+except:
+	errorSpokenFunc('ConfigParserProblem','leftarm.config')
+	pass
     
   
   

@@ -31,6 +31,9 @@ def errorSpokenFunc(errorType,param="0"):
 		
 	if errorType=="BAdrduinoChoosen":
 		errorSpoken="The Arduino choosen about "+param+" does not exist, plese check your configuration"
+		
+	if errorType=="ConfigParserProblem":
+		errorSpoken="There is a problem in your config file "+param
 	
 	subconsciousMouth.speakBlocking(errorSpoken)
 	

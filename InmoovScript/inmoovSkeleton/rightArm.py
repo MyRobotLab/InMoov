@@ -11,14 +11,18 @@
 # ##############################################################################  
   
 #read current skeleton part config
-ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
-CheckFileExist(ThisSkeletonPart)
-ThisSkeletonPartConfig = ConfigParser.ConfigParser()
-ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
-isRightArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightArmActivated') 
-autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach') 
-  
+ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+try:
+	CheckFileExist(ThisSkeletonPart)
+	ThisSkeletonPartConfig = ConfigParser.ConfigParser()
+	ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+
+	isRightArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightArmActivated') 
+	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach') 
+except:
+	errorSpokenFunc('ConfigParserProblem','rightarm.config')
+	pass  
 # ##############################################################################
 # 								SERVO FUNCTIONS
 # ##############################################################################

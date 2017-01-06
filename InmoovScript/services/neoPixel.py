@@ -12,7 +12,7 @@
 	#"Rainbow"
 	#"Rainbow Cycle"
 	#"Flash Random"
-	#"Ironman"
+	#"Ironman" > bug ?
 
 	#speed: 1-65535   1=full speed, 2=2x slower than 1, 10=10x slower than 1
 	#starting a animation :
@@ -25,26 +25,29 @@
   
 #read current service part config based on file name
 ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 isNeopixelActivated=0
-isNeopixelActivated=ThisServicePartConfig.getboolean('MAIN', 'isNeopixelActivated') 
+try:
+	isNeopixelActivated=ThisServicePartConfig.getboolean('MAIN', 'isNeopixelActivated') 
+	masterArduinoPort=ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort')
+	pin=ThisServicePartConfig.getint('NEOPIXEL', 'pin') 
+	numberOfPixel=ThisServicePartConfig.getint('NEOPIXEL', 'numberOfPixel')
 
+	#neopixel can have basic pre programmed reactions:
+	#TODO choose witch animation
 
-masterArduinoPort=ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort')
-pin=ThisServicePartConfig.getint('NEOPIXEL', 'pin') 
-numberOfPixel=ThisServicePartConfig.getint('NEOPIXEL', 'numberOfPixel')
+	#light green while robot booting
+	boot_green=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'boot_green')
+	#blue while download something
+	downloadSomething_blue=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'downloadSomething_blue')
 
-#neopixel can have basic pre programmed reactions:
-#TODO choose witch animation
-
-#light green while robot booting
-boot_green=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'boot_green')
-#blue while download something
-downloadSomething_blue=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'downloadSomething_blue')
-
-error_red=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'error_red')
+	error_red=ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'error_red')
+except:
+	errorSpokenFunc('ConfigParserProblem','Neopixel.config')
+	pass
   
 # ##############################################################################
 # 								SERVICE START
