@@ -1,26 +1,6 @@
 # ##############################################################################
-#						*** RIGHT HAND PROGRAM ***
+#						*** RIGHT ARM ***
 # ##############################################################################
-
-
-# ##############################################################################
-# 								BASIC EAR COMMANDS
-# ##############################################################################
-
-ear.addCommand("raise your right biceps", "python", "rightbicepsraise")
-ear.addCommand("lower the right biceps", "python", "rightbicepslower")
-
-
-def rightbicepsraise():
-	i01.moveArm("left",0,0,0,0,0)
-
-def rightbicepslower():
-	i01.moveArm("left",180,180,180,180,180)
-  
-# end ear commands
-  
-
-
 
 
 

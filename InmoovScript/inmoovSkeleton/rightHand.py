@@ -1,32 +1,14 @@
 # ##############################################################################
-#						*** RIGHT HAND PROGRAM ***
+#						*** RIGHT HAND ***
 # ##############################################################################
 
-
-# ##############################################################################
-# 								EAR COMMANDS
-# ##############################################################################
-
-ear.addCommand("open your right hand", "python", "handopen")
-ear.addCommand("close your right hand", "python", "handclose")
-ear.addCommand("open your hand", "python", "handopen")
-ear.addCommand("close your hand", "python", "handclose")
-
-
-def righthandopen():
-	i01.moveHand("right",0,0,0,0,0)
-
-
-def righthandclose():
-	i01.moveHand("right",180,180,180,180,180)
-  
-# end ear commands
-  
-
-
-
-
-  
+# Thumb------pin 2
+# Index------pin 3
+# Majeure----pin 4
+# RingFinger-pin 5
+# Pinky------pin 6
+# wrist------pin 7
+ 
   
 # ##############################################################################
 # 							PERSONNAL PARAMETERS

@@ -58,8 +58,19 @@ checkAndDownloadVoice()
 #set CustomVoice
 setCustomVoice()
 	
-
-#we launch Inmoov Skeleton
+#we launch Inmoov Gestures
+for filename in os.listdir(RuningFolder+'inmoovGestures'):		
+	if os.path.splitext(filename)[1] == ".py":
+		execfile(RuningFolder+'inmoovGestures/'+filename)
+		print filename
+		
+#we launch Inmoov inmoovVocal commands
+for filename in os.listdir(RuningFolder+'inmoovVocal/ear.addCommand'):		
+	if os.path.splitext(filename)[1] == ".py":
+		execfile(RuningFolder+'inmoovVocal/ear.addCommand/'+filename)
+		print filename
+		
+#we launch Inmoov life
 for filename in os.listdir(RuningFolder+'inmoovLife'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovLife/'+filename)

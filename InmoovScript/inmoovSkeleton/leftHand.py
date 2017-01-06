@@ -1,31 +1,13 @@
 # ##############################################################################
-#						*** LEFT HAND PROGRAM ***
+#						*** LEFT HAND ***
 # ##############################################################################
 
-
-# ##############################################################################
-# 								EAR COMMANDS
-# ##############################################################################
-
-ear.addCommand("open your left hand", "python", "lefthandopen")
-ear.addCommand("close your left hand", "python", "lefthandclose")
-
-
-def lefthandopen():
-	i01.moveHand("left",0,0,0,0,0)
-
-
-def lefthandclose():
-	i01.moveHand("left",180,180,180,180,180)
-  
-# end ear commands
-  
-
-
-
-
-
-  
+# Thumb------pin 2
+# Index------pin 3
+# Majeure----pin 4
+# RingFinger-pin 5
+# Pinky------pin 6
+# wrist------pin 7  
   
 # ##############################################################################
 # 							PERSONNAL PARAMETERS

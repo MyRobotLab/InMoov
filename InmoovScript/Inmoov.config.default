@@ -1,28 +1,37 @@
 ;----------------------------- BASIC CONFIGURATION ----------------------------------------
+
 [MAIN]
 ScriptType=RightSide
-; RightSide: Also called FINGERSTARTER : connect one arduino ( called right ) to use FingerStarter / head / inmoov right side
+; RightSide: Also called FINGERSTARTER : connect one arduino ( called right ) to use FingerStarter + inmoov right side
 ; LeftSide: connect one arduino ( called left) to use head / inmoov left side
-; NoArduino: Chatbot Only / not implemented yet
-; Full: Inmoov is Alive ! / not fully implemented yet
+; NoArduino: vocal Only / not implemented yet
+; Full: Both side arduinos connected
+
 [TTS]
 MyvoiceTTS=MarySpeech
 ; you can use MarySpeech or NaturalReaderSpeech
+
 MyvoiceType=cmu-slt-hsmm
 ; Voices are automatic donwloaded
 ; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
 ; NaturalReaderSpeech voices : https://www.naturalreaders.com/voicelist.html
+
 MyLanguage=en
 ; en,fr,es,it ...
+
 [ARDUINO]
-;FingerStarter use MyRightPort
 MyRightPort=COM4
+;FingerStarter use MyRightPort only
+
 ;----------------------------------- END --------------------------------------------------
 
 
-
-
-
-;----------------------------- ADVANCED CONFIGURATION -------------------------------------
+;----------------------------- ADVANCED & OPTIONAL CONFIGURATION -------------------------------------
 MyLeftPort=COM3
+
+[VOCAL]
+EarInterpretEngine=earAddCommand 
+;ear.addCommand : it's is hardcoded text, very simple to use and script
+;chatbot : Very powefull AIML engine
+
 ;----------------------------------- END --------------------------------------------------
