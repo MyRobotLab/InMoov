@@ -17,6 +17,6 @@ def WebkitSpeechRecognitionON(timedata):
 
 WebkitSpeechRecognitionFix.addListener("pulse", python.name, "WebkitSpeechRecognitionON")
 
-WebkitSpeechRecognitionFix.startClock()
+
 
 

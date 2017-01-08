@@ -7,6 +7,8 @@ ScriptType=RightSide
 ; NoArduino: vocal Only / not implemented yet
 ; Full: Both side arduinos connected
 
+debug=0
+
 [TTS]
 MyvoiceTTS=MarySpeech
 ; you can use MarySpeech or NaturalReaderSpeech
@@ -33,5 +35,8 @@ MyLeftPort=COM3
 EarInterpretEngine=earAddCommand 
 ;ear.addCommand : it's is hardcoded text, very simple to use and script
 ;chatbot : Very powefull AIML engine
+
+IsMute=0
+;talk about starting actions
 
 ;----------------------------------- END --------------------------------------------------

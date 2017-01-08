@@ -9,6 +9,7 @@
 
 i01.startEar()
 ear = i01.ear
+ear.pauseListening()
 python.subscribe(ear.getName(),"recognized")
 
 # ##############################################################################

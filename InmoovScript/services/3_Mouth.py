@@ -12,14 +12,8 @@
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
 
-#read personnal config
-try:
-	MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
-	MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
-	MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
-except:
-	errorSpokenFunc('ConfigParserProblem','Inmoov.config about voices parameters')
-	pass
+
+
 
 #inmoov mouth service
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
@@ -40,6 +34,10 @@ def talk(data):
 def talkBlocking(data):
 	if data:
 		mouth.speakBlocking(unicode(data,'utf-8'))
+		
+def talkEvent(data):
+	if IsMute==0:
+		subconsciousMouth.speakBlocking(unicode(data,'utf-8'))
 
 #stop autolisten
 def onEndSpeaking(text):
@@ -53,7 +51,7 @@ def onStartSpeaking(text):
 	RobotIsActualySpeaking=1
 	ear.pauseListening()
 		
-MyLanguage=MyLanguage.lower()
+
 
 
 # ##############################################################################
@@ -74,13 +72,17 @@ def CheckMaryTTSVoice(voiceCheck):
 	return os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+voiceCheck+'-'+getMaryttsVersion()+'.jar', os.R_OK)
 
 #mouth functions
-def setRobotLanguage():	
+def setRobotLanguage():
+	global LanguageError
+	LanguageError=0
 	if MyLanguage!="en":
 		try:
 			mouth.setLanguage(MyLanguage)
 			i01.ear.setLanguage(MyLanguage)
+			i01.ear.pauseListening()
 		except:
 			errorSpokenFunc('MyLanguage')
+			LanguageError=1
 			pass
 			
 def checkAndDownloadVoice():				
@@ -98,9 +100,12 @@ def checkAndDownloadVoice():
 				errorSpokenFunc('MyvoiceType')
 				
 		
-def setCustomVoice():		
+def setCustomVoice():	
+	global VoiceError
+	VoiceError=0
 	try:
 		mouth.setVoice(MyvoiceType)
 	except:
 		errorSpokenFunc('MyvoiceType')
+		VoiceError=1
 		pass

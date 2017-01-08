@@ -35,7 +35,7 @@ except:
 
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
-	
+		talkEvent(lang_startingLeftHand)
 		leftHand = Runtime.create("i01.leftHand", "InMoovHand")
 				
 		leftHand.thumb.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'thumb')) 

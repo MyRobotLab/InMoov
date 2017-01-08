@@ -7,7 +7,10 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-#Inmoov Left / right
+#vocal startup globalized so :
+i01.setMute(1)
+
+#Inmoov Left / right arduino connect
 if ScriptType=="RightSide" or ScriptType=="Full":
 	right = Runtime.createAndStart("i01.right", "Arduino")
 	RightPortIsConnected=CheckArduinos(right,MyRightPort)

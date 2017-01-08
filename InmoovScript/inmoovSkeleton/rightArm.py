@@ -29,7 +29,7 @@ except:
 
 if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 	if RightPortIsConnected:
-	
+		talkEvent(lang_startingRightArm)
 		rightArm = Runtime.create("i01.rightArm", "InMoovArm")
 				
 		rightArm.bicep.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'bicep')) 

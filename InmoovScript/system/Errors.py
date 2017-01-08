@@ -2,38 +2,40 @@
 # ERRORS FILE
 # ##############################################################################
 
-# FingerStarter doesnt use Chatbot, so we hardcode language to english for few error functions
 
 
 def errorSpokenFunc(errorType,param="0"):
 	global RobotIsErrorMode
-	RobotIsErrorMode=1
-	subconsciousMouth.speakBlocking("Alert! can I have your attention please ! ")
+	if errorType!="BadLanguagePack":
+		RobotIsErrorMode=1
+	subconsciousMouth.speakBlocking(lang_alert)
 	
 	if errorType=="ArduinoNotConnected":
-		errorSpoken="There is a problem ! with my communication port, "+param+" , check your arduino"
+		errorSpoken=lang_ArduinoNotConnected+param
 
 	if errorType=="BadMrlcommVersion":
-		errorSpoken="Bad M R L com version inside arduino "+param+" , please update it"
+		errorSpoken=lang_BadMrlcommVersion+param
 		
 	if errorType=="VoiceDownloaded":
-		errorSpoken="I have downloaded a new voice, I will stop the system, please restart me. please do it"
+		errorSpoken=lang_VoiceDownloaded
 	
 	if errorType=="MyvoiceType":
-		errorSpoken="There is a problem with the voice you have choosen !"
+		errorSpoken=lang_MyvoiceType
 
-		
 	if errorType=="MyLanguage":
-		errorSpoken="There is a problem with the language you have choosen !"
+		errorSpoken=lang_MyLanguage
 		
 	if errorType=="MrlNeedUpdate":
-		errorSpoken="You My Robotlab version is too old, please update it"
+		errorSpoken=lang_MrlNeedUpdate
 		
 	if errorType=="BAdrduinoChoosen":
-		errorSpoken="The Arduino choosen about "+param+" does not exist, plese check your configuration"
+		errorSpoken=lang_BAdrduinoChoosen+param
 		
 	if errorType=="ConfigParserProblem":
-		errorSpoken="There is a problem in your config file "+param
+		errorSpoken=lang_ConfigParserProblem+param
+		
+	if errorType=="BadLanguagePack":
+		errorSpoken=lang_BadLanguagePack
 	
 	subconsciousMouth.speakBlocking(errorSpoken)
 	

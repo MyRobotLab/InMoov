@@ -8,6 +8,8 @@
 ear.addCommand("attach everything", "i01", "attach")
 ear.addCommand("disconnect everything", "i01", "detach")
 ear.addCommand("rest", "python", "rest")
+ear.addCommand("list", "python", "rest")
+ear.addCommand("first", "python", "rest")
 
 # ARM((S) - inmoovGestures\_minimalArm.py
 ear.addCommand("attach left arm", "i01.leftArm", "attach") #to remove soon
@@ -18,6 +20,7 @@ ear.addCommand("raise your left biceps", "python", "leftbicepsraise")
 ear.addCommand("lower the left biceps", "python", "lefttbicepslower")
 ear.addCommand("arms front", i01.getName(), "armsFront")
 ear.addCommand("da vinci", i01.getName(), "daVinci")
+ear.addCommand("omoplate", "python", "omoplate")
 
 # HAND(S) - inmoovGestures\_minimalHand.py
 ear.addCommand("open your hands", "python", "handsopen")

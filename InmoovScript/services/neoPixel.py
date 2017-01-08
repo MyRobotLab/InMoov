@@ -71,6 +71,7 @@ if isNeopixelActivated==1:
 	if neopixelArduinoIsConnected==True:
 		#Starting NeoPixel Service
 		neopixel.attach(neopixelArduino, pin, numberOfPixel)
+		talkEvent(lang_startingNeoPixel)
 	else:
 		isNeopixelActivated=0
 

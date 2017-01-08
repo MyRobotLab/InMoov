@@ -32,7 +32,7 @@ except:
 
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
-		
+		talkEvent(lang_startingHead)
 		head = Runtime.create("i01.head","InMoovHead")
 				
 		head.jaw.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw')) 
@@ -73,6 +73,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.rest()
 		sleep(1)
 		head.detach()
+		
 		
 	else:
 		#we force parameter if arduino is off

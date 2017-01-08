@@ -28,7 +28,7 @@ except:
 
 if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected==True:
-	
+		talkEvent(lang_startingLeftArm)
 		
 		leftArm = Runtime.create("i01.leftArm", "InMoovArm")
 		
