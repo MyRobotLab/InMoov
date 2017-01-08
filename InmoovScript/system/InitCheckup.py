@@ -39,7 +39,7 @@ for filename in os.listdir(RuningFolder+'languagePack/en'):
 		if os.path.splitext(filename)[1] == ".lang":
 			execfile(RuningFolder+'languagePack/en/'+filename)
 
-# we try to load user language pack		
+# we try to load user system language pack		
 try:
 	
 	for filename in os.listdir(RuningFolder+'languagePack/'+languagePack):		
@@ -116,12 +116,7 @@ for filename in os.listdir(RuningFolder+'inmoovGestures'):
 		execfile(RuningFolder+'inmoovGestures/'+filename)
 		print filename
 		
-#we launch Inmoov inmoovVocal commands
-for filename in os.listdir(RuningFolder+'inmoovVocal/ear.addCommand'):		
-	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovVocal/ear.addCommand/'+filename.encode('utf8'))
-		print filename
-		
+
 #we launch Inmoov life
 for filename in os.listdir(RuningFolder+'inmoovLife'):		
 	if os.path.splitext(filename)[1] == ".py":
@@ -133,9 +128,12 @@ for filename in os.listdir(RuningFolder+'inmoovLife'):
 if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
 		shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
 print " INIT.6 ...all is ok !"	
+
+# here we go !
 talkEvent(lang_startingEar)
 talkEvent(lang_ready)
 WebkitSpeechRecognitionFix.startClock()
+RobotIsStarted=1
 
 
 

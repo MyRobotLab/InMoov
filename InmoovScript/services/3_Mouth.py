@@ -43,7 +43,8 @@ def talkEvent(data):
 def onEndSpeaking(text):
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=0
-	ear.resumeListening()
+	if RobotIsStarted==1:
+		ear.resumeListening()
 		
 	
 def onStartSpeaking(text):
@@ -79,11 +80,21 @@ def setRobotLanguage():
 		try:
 			mouth.setLanguage(MyLanguage)
 			i01.ear.setLanguage(MyLanguage)
-			i01.ear.pauseListening()
 		except:
 			errorSpokenFunc('MyLanguage')
 			LanguageError=1
 			pass
+		# we try to load user ear.addcommand language pack		
+	try:
+		
+		for filename in os.listdir(RuningFolder+'languagePack/'+languagePack+'/ear.addCommand'):		
+			if os.path.splitext(filename)[1] == ".lang":
+				execfile(RuningFolder+'languagePack/'+languagePack+'/ear.addCommand/'+filename)
+				if DEBUG==1:
+					print "debug languagePack : ",filename
+	except:
+		print "No ear.addcommand globalized"
+		pass	
 			
 def checkAndDownloadVoice():				
 	if MyvoiceTTS=="MarySpeech":
