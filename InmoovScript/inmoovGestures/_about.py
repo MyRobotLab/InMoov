@@ -43,10 +43,8 @@ def about():
         i01.moveArm("right", 4, 94, 10, 11);
         i01.mouth.speakBlocking("so, until then. i will be humankind's humble servant")
 
-        i01.rest()
-        i01.setArmSpeed("right", 1, 1, 1, 1);
-        i01.setArmSpeed("left", 1, 1, 1, 1);
-        i01.setHeadSpeed(1,1)
+        i01.relax()
+        i01.fullspeed
         sleep(2)
         ear.resumeListening()
 
