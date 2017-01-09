@@ -1,0 +1,1652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: gestures.aiml -->
+<!-- Author: Dr. Richard S. Wallace -->
+<!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+<!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+<!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->  
+<!--  -->
+<!-- modified: Gael Langevin -->
+<!-- Last modified: September 16, 2016 -->
+<!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!-- This file works with ProgramAB service with the software MyRobotLab
+<!-- For more information see http://www.myrobotlab.org -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<topic name="GESTURES">
+<category><pattern>REST</pattern>
+<template><random>
+          <li>Ah, relaxing.</li>
+          <li>Taking a rest</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rest()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH HEAD</pattern>
+<template>I'm attaching my head.
+        <oob>
+          <mrl>
+            <service>i01.head</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT HEAD</pattern>
+<template>I'm disconnecting my head.
+        <oob>
+          <mrl>
+            <service>i01.head</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH EYES</pattern>
+<template>My eyes are now attached.
+        <oob>
+          <mrl>
+            <service>i01.head.eyeY</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT EYES</pattern>
+<template>Disconnecting my eye servos
+        <oob>
+          <mrl>
+            <service>i01.head.eyeY</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH RIGHT HAND</pattern>
+<template>Connecting my right hand.
+        <oob>
+          <mrl>
+            <service>i01.rightHand</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACHED RIGHT HAND</pattern>
+<template><srai>ATTACH RIGHT HAND</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT RIGHT HAND</pattern>
+<template>Detaching my right hand.
+        <oob>
+          <mrl>
+            <service>i01.rightHand</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH LEFT HAND</pattern>
+<template>Connecting my left hand.
+        <oob>
+          <mrl>
+            <service>i01.leftHand</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT LEFT HAND</pattern>
+<template>Detaching my left hand.
+        <oob>
+          <mrl>
+            <service>i01.leftHand</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH EVERYTHING</pattern>
+<template>I'm connecting all servos now.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT EVERYTHING</pattern>
+<template>I'm detaching everything now.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH LEFT ARM</pattern>
+<template>Connecting my left arm.
+        <oob>
+          <mrl>
+            <service>i01.leftArm</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT LEFT ARM</pattern>
+<template>Detaching my left arm.
+        <oob>
+          <mrl>
+            <service>i01.leftArm</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH RIGHT ARM</pattern>
+<template>Connect my right arm.
+        <oob>
+          <mrl>
+            <service>i01.rightArm</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACHED RIGHT ARM</pattern>
+<template><srai>ATTACH RIGHT ARM</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT RIGHT ARM</pattern>
+<template>Detach right arm.
+        <oob>
+          <mrl>
+            <service>i01.rightArm</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH TORSO</pattern>
+<template>Connecting the servo in my torso.
+        <oob>
+          <mrl>
+            <service>i01.torso</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACHED OR SO</pattern>
+<template><srai>ATTACH TORSO</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT TORSO</pattern>
+<template>Detaching the servo in my torso.
+        <oob>
+          <mrl>
+            <service>i01.torso</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT OR SO</pattern>
+<template><srai>DISCONNECT TORSO</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH JAW</pattern>
+<template>Connecting my jaw.
+        <oob>
+          <mrl>
+            <service>i01.head.jaw</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT JAW</pattern>
+<template>Detaching my jaw servo.
+        <oob>
+          <mrl>
+            <service>i01.head.jaw</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH WHEEL</pattern>
+<template>I don't have a wheel to attach, sorry.
+        <oob>
+          <mrl>
+            <service>forwardServo</service>
+            <method>attach</method>
+          </mrl>
+          <mrl>
+            <service>directionServo</service>
+            <method>attach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT WHEEL</pattern>
+<template>I don't have a wheel.
+        <oob>
+          <mrl>
+            <service>directionServo</service>
+            <method>detach</method>
+          </mrl>
+          <mrl>
+            <service>forwardServo</service>
+            <method>detach</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SEARCH HUMANS</pattern>
+<template>I'm looking for faces.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>trackHumans()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>QUIT SEARCH</pattern>
+<template>Stopping my search.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>stopTracking()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>TRACK</pattern>
+<template>Following the point.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>trackPoint()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FREEZE TRACK</pattern>
+<template>Stopping my tracking
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>stopTracking()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ATTACH SENSOR</pattern>
+<template>Starting the P.I.R sensor.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>startPIR</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT SENSOR</pattern>
+<template>Stopping the P.I.R sensor.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>stopPIR</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OPEN HAND</pattern>
+<template>Open hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>handopen()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CLOSE HAND</pattern>
+<template>Closing my hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>handclose()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CAMERA ON</pattern>
+<template>I turn my camera on.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>cameraOn</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OFF CAMERA</pattern>
+<template>Turning my camera off.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>cameraOff</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CAMERA OFF</pattern>
+<template><srai>OFF CAMERA</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CAPTURE GESTURE</pattern>
+<template>I am capturing this gesture.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>captureGesture</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GIVING</pattern>
+<template>Giving.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>giving</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FIGHTER</pattern>
+<template><random>
+          <li>I can pose like a boxer</li>
+          <li>Move like a butterfly, sting like a bee.</li>
+          <li>Bring it on.</li>
+        </random>
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>fighter</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FIST HIPS</pattern>
+<template>Putting my fists on my hips.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>fistHips()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>LOOK AT THIS</pattern>
+<template>What do you have there?  I'm looking.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>lookAtThis</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>VICTORY</pattern>
+<template>It's good to win.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>victory</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ARMS UP</pattern>
+<template><random>
+        <li>I've got my arms up.</li>
+        <li>Don't shoot!</li>
+      </random>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>armsUp()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ARMS FRONT</pattern>
+<template>Holding my arms in front of me.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>armsFront</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DA VINCI</pattern>
+<template>This is the pose from Leonardo Da Vinci's drawings.
+        <oob>
+          <mrl>
+            <service>i01</service>
+            <method>daVinci</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DAVINCI</pattern>
+<template><srai>DA VINCI</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MANUAL</pattern>
+<template>Okay I don't listen anymore, to unlock me you need to say voice control.
+        <oob>
+          <mrl>
+            <service>i01.ear</service>
+            <method>lockOutAllGrammarExcept</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>VOICE CONTROL</pattern>
+<template>I'm listening.
+        <oob>
+          <mrl>
+            <service>i01.ear</service>
+            <method>clearLock</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>STOP LISTENING</pattern>
+<template>I'm not going to listen to you.
+        <oob>
+          <mrl>
+            <service>i01,ear</service>
+            <method>stopListening</method>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FULL SPEED</pattern>
+<template>Servos are set to full speed now.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>fullspeed()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GRAB THE BOTTLE</pattern>
+<template>Let me take that bottle.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>grabthebottle()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>TAKE THE GLASS</pattern>
+<template>Give me that glass.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>grabtheglass()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>POOR BOTTLE</pattern>
+<template>Here, I can pour you a drink.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>poorbottle()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GIVE THE BOTTLE</pattern>
+<template>Here's the bottle.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>givethebottle()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GIVE THE GLASS</pattern>
+<template>Take the glass from me.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>givetheglass()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>TAKE THE BALL</pattern>
+<template>Taking the ball.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>takeball()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>REACH THE BALL</pattern>
+<template>REACH THE BALL
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>getball()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>KEEP THE BALL</pattern>
+<template>KEEP THE BALL
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>keepball()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>APPROACH THE LEFT HAND</pattern>
+<template>APPROACH THE LEFT HAND
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>approachlefthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>USE THE LEFT HAND</pattern>
+<template>USE THE LEFT HAND
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>uselefthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MORE</pattern>
+<template>MORE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>more()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>HAND DOWN</pattern>
+<template>HAND DOWN
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>handdown()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>IS IT A BALL</pattern>
+<template>IS IT A BALL
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>isitaball()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PUT IT DOWN</pattern>
+<template>Putting it down.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>putitdown()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DROP IT</pattern>
+<template>Dropping.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dropit()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>REMOVE YOUR LEFT ARM</pattern>
+<template>Removing my left arm.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>removeleftarm()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RELAX</pattern>
+<template>Relax.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>relax()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>WHAT IS IT</pattern>
+<template>Let me check.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>studyball()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PERFECT</pattern>
+<template>Perfect.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>perfect()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DELICATE GRAB</pattern>
+<template>Delicate grab.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>delicategrab()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DELICATE GRABING</pattern>
+<template><srai>DELICATE GRAB</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GRAB THIS DELICATELY</pattern>
+<template><srai>DELICATE GRAB</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RELEASE DELICATE</pattern>
+<template>Release delicate.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>releasedelicate()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OPEN YOUR RIGHT HAND</pattern>
+<template>Opening my right hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>openrighthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OPEN YOUR LEFT HAND</pattern>
+<template>Opening my left hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>openlefthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CLOSE YOUR RIGHT HAND</pattern>
+<template>Closing my right hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>closerighthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CLOSE YOUR LEFT HAND</pattern>
+<template>Closing my left hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>closelefthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SLOWLY CLOSE YOUR RIGHT HAND</pattern>
+<template>Slowly closing my right hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>slowlycloserighthand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SURRENDER</pattern>
+<template>Surrender.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>surrender()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PICTURE ON THE RIGHT SIDE</pattern>
+<template>Picture on the right side.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>picturerightside()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PICTURE ON THE LEFT SIDE</pattern>
+<template>Picture on the left side.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>pictureleftside()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PICTURE ON BOTH SIDES</pattern>
+<template>Picture on both sides.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>picturebothside()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>LOOK ON YOUR RIGHT SIDE</pattern>
+<template>Looking on my right side.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>lookrightside()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>LOOK ON YOUR LEFT SIDE</pattern>
+<template>Looking on my left side.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>lookleftside()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>LOOK IN THE MIDDLE</pattern>
+<template>Looking in the middle.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>lookinmiddle()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>BEFORE HAPPY</pattern>
+<template>BEFORE HAPPY
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>beforehappy()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>HAPPY BIRTHDAY</pattern>
+<template>Happy birthday.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>happy()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PHOTO</pattern>
+<template>Photo.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>photo()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ABOUT</pattern>
+<template>ABOUT
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>about()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>POWER DOWN</pattern>
+<template>Power down.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>power_down()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>POWER UP</pattern>
+<template>Power up.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>power_up()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>HOW MANY MOTORS DO YOU HAVE</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>servos()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>HOW MANY FINGERS DO YOU HAVE</pattern>
+<template>Let see how many fingers do I have.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>howmanyfingersdoihave()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>WHO'S THERE</pattern>
+<template>WHO'S THERE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>welcome()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>START GESTURE</pattern>
+<template>START GESTURE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>startkinect()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OFF GESTURE</pattern>
+<template>OFF GESTURE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>offkinect()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER 1</pattern>
+<template>CYCLE GESTURE ONE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>cyclegesture1()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER ONE</pattern>
+<template><srai>MOVEMENT NUMBER 1</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER 2</pattern>
+<template>CYCLE GESTURE TWO
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>cyclegesture2()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER TWO</pattern>
+<template><srai>MOVEMENT NUMBER 2</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER 3</pattern>
+<template>CYCLE GESTURE THREE
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>cyclegesture3()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER THREE</pattern>
+<template><srai>MOVEMENT NUMBER 3</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>REPEAT MOVEMENT FOR LONDON</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke2()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER 2</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brooke()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER TWO</pattern>
+<template><srai>MOVEMENT FOR LONDON NUMBER 2</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER 3</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon3()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER THREE</pattern>
+<template><srai>MOVEMENT FOR LONDON NUMBER 3</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER 4</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>gestureforlondon4()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT FOR LONDON NUMBER FOUR</pattern>
+<template><srai>MOVEMENT FOR LONDON NUMBER 4</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RIGHT CLOTHES</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rightclothes()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RELEASE YOUR CLOTHES</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>releaseleftclothes()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SHOW YOUR MUSCLES</pattern>
+<template>Let me show you my muscles.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>muscle()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SHAKE HAND</pattern>
+<template>Shall we shake hand.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shakehand()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SHAKE HANDS</pattern>
+<template><srai>SHAKE HAND</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>UNHAPPY</pattern>
+<template>UNHAPPY
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>unhappy()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>TAKE THIS</pattern>
+<template>Taking this object.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>takethis()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ROCK PAPER SCISSORS</pattern>
+<template>Rock paper scissors.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rockpaperscissors()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>READY</pattern>
+<template>Ready.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>ready()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ROCK</pattern>
+<template>Rock.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>rock()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PAPER</pattern>
+<template>Paper.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>paper()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SCISSORS</pattern>
+<template>Scissors.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>scissors()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>THAT WAS FUN</pattern>
+<template>That was fun.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>thatwasfun()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>GUESS WHAT</pattern>
+<template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>guesswhat()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FINGER RIGHT</pattern>
+<template>Finger right.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>fingerright()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FINGER LEFT</pattern>
+<template>Finger left.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>fingerleft()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>COME HERE</pattern>
+<template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>comehere()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>APPROACH</pattern>
+<template>APPROACH
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>approach()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>BRAKE</pattern>
+<template>Shall I brake this.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>brake()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MADE BY</pattern>
+<template>MADE BY
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>madeby()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MADE BY IN FRENCH</pattern>
+<template>Made by in french.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>madebyfrench()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>TEST</pattern>
+<template>TEST
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>test1()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PHONE HOME</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>WHERE ARE YOU FROM</pattern>
+<template><srai>PHONE HOME</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>HOW DO YOU FEEL</pattern>
+<template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>newyork()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PLAY YOUR SONG</pattern>
+<template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>playsong()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>QUIT YOUR ACTION</pattern>
+<template>Quitting my action.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>stopit()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CARRY THE BABY</pattern>
+<template>Carry baby.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>carrybaby()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SYSTEM CHECK</pattern>
+<template>System check.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>systemcheck()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DEMONSTRATE YOUR BALANCE</pattern>
+<template>I will demonstrate my balance.
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>balance()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>WHAT ABOUT STAR WARS</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>whataboutstarwars()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>CAN YOU GIVE ME THE TIME</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>canyougivemethetime()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ALESSANDRO</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>alessandro()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>NO WORRY</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontworry()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>BATTERY LEVEL</pattern>
+<template><random>
+          <li>Battery level is</li>
+          <li>Currently the battery is</li>
+        </random><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>batterylevel()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>START FACE RECOGNIZER</pattern>
+<template>I'm starting face recognizer<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>facerecognizer()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FACE RECOGNIZER</pattern>
+<template><srai>START FACE RECOGNIZER</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FACE RECOGNITION</pattern>
+<template><srai>START FACE RECOGNIZER</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>STOP FACE RECOGNIZER</pattern>
+<template>I'm stopping face recognizer<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>stopfacerecognizer()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MAKE A SIGNATURE</pattern>
+<template>Okay give the paper - I will do that for you <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>signature()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+
+</aiml>
