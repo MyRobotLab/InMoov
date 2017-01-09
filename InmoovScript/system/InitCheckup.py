@@ -39,6 +39,7 @@ for filename in os.listdir(RuningFolder+'languagePack/en'):
 		if os.path.splitext(filename)[1] == ".lang":
 			execfile(RuningFolder+'languagePack/en/'+filename)
 
+			
 # we try to load user system language pack		
 try:
 	
@@ -105,7 +106,6 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 
 
 
-
 ################################
 # INIT.6 - inmoov loading
 ################################
@@ -114,20 +114,26 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 for filename in os.listdir(RuningFolder+'inmoovGestures'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovGestures/'+filename)
-		print filename
 		
-
 #we launch Inmoov life
 for filename in os.listdir(RuningFolder+'inmoovLife'):		
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovLife/'+filename)
-		
-
 
 #create the custom script, only if not exist
 if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
 		shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
-print " INIT.6 ...all is ok !"	
+
+
+################################
+# INIT.7 - inmoov APPS
+################################
+
+#we launch Inmoov APPS - GAMES
+walk_dir = RuningFolder+'inmoovAPPS'
+
+for root, subdirs, files in os.walk(walk_dir):
+    print files
 
 # here we go !
 talkEvent(lang_startingEar)

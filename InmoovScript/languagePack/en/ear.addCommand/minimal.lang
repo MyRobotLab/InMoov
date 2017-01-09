@@ -1,6 +1,6 @@
 # ##############################################################################
 #						*** INMOOV MINIMAL ***
-# 			Those actions are inside inmoovGestures
+# 			  Those actions are inside inmoovGestures
 # ##############################################################################
 
 
@@ -31,4 +31,14 @@ ear.addCommand("open your hand", "python", "handopen")
 ear.addCommand("close your hand", "python", "handclose")
 ear.addCommand("open your left hand", "python", "lefthandopen")
 ear.addCommand("close your left hand", "python", "lefthandclose")
+
+# HEAD - inmoovGestures\_minimalHead.py
+ear.addCommand("attach head", "i01.head", "attach")
+ear.addCommand("disconnect head", "i01.head", "detach")
+ear.addCommand("attach eyes", "i01.head.eyeY", "attach")
+ear.addCommand("disconnect eyes", "i01.head.eyeY", "detach")
+ear.addCommand("look on your right side", "python", "lookrightside")
+ear.addCommand("look on your left side", "python", "lookleftside")
+ear.addCommand("look in the middle", "python", "lookinmiddle")
+
 
