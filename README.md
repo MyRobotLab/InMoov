@@ -20,7 +20,7 @@ Inmoov can listen with the help of service ear "webkitspeechrecognition"
 To interpret the recognized text you have the choice of 2 engines :
 ear.addCommand > it's is hardcoded text, very EASY to use ear.commands and script actions
 chatbot > Very powefull AIML engine ( not yet implemented ) . This is the engine of "Full Inmoov"
-So, every ear.commands from Gael minimal script will be inside inmoovVocal\ear.addCommand
+So, every ear.commands from Gael minimal script will be inside languagePack\ear.addCommand
 It is very easy to translate minimal scripts, all is in one place
 TODO : need to carefully work about chatbot/ear.commands conflicts
 
