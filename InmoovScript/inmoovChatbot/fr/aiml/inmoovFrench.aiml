@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>TRADUCTION</pattern>
+<template>Démarrage du topic traduction.
+      <think>
+        <set name="topic">TRADUCTION</set>
+      </think></template>
+</category>
+<category><pattern>GESTURES</pattern>
+<template>Démarrage du topic gestuelle.
+      <think>
+        <set name="topic">GESTURES</set>
+      </think></template>
+</category>
+<category><pattern>GESTUELLE *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTUELLE</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTUELLE *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>TOPIC GESTUELLE</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>DEMARRE GESTUELLE</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>ENTRE EN MODE GESTUELLES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>COMMENCE * GESTUELLES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+
+</aiml>
