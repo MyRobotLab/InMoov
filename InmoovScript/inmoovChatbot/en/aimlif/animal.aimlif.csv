@@ -1,0 +1,17 @@
+0,SINGULAR <SET>ANIMALS</SET>,*,*,<uniq><subj>?singular</subj><pred>hasPlural</pred><obj><star/></obj></uniq>,animal.aiml
+0,PLURAL <SET>ANIMAL</SET>,*,*,<uniq><subj><star/></subj><pred>hasPlural</pred><obj>?plural</obj></uniq>,animal.aiml
+0,<SET>ANIMALS</SET>,*,*,<star/> is the plural of <uniq><subj>?subj</subj><pred>hasPlural</pred><obj><star/></obj></uniq>.,animal.aiml
+0,SOUND <SET>ANIMAL</SET>,*,*,<star/> says <uniq><subj><star/></subj><pred>sound</pred><obj>?sound</obj></uniq>.,animal.aiml
+0,COLLECTIVE <SET>ANIMAL</SET>,*,*,A group of <star/> is called <uniq><subj><star/></subj><pred>collective</pred><obj>?collective</obj></uniq>.,animal.aiml
+0,LEGS <SET>ANIMAL</SET>,*,*,A <star/> has <uniq><subj><star/></subj><pred>legs</pred><obj>?sound</obj></uniq> legs.,animal.aiml
+0,WHAT DOES A <SET>ANIMAL</SET> SAY ^,*,*,<srai>SOUND <star/></srai>,animal.aiml
+0,WHAT DO <SET>ANIMALS</SET> SAY ^,*,*,<srai>SOUND <srai>SINGULAR <star/></srai></srai>,animal.aiml
+0,WHAT SOUND DOES # <SET>ANIMAL</SET> ^,*,*,<srai>SOUND <star index="2"/></srai>,animal.aiml
+0,WHAT SOUND DO # <SET>ANIMAL</SET> ^,*,*,<srai>SOUND <srai>SINGULAR <star index="2"/></srai></srai>,animal.aiml
+0,HOW DOES # <SET>ANIMAL</SET> ^,*,*,<srai>SOUND <star index="2"/></srai>,animal.aiml
+0,HOW MANY LEGS ^ <SET>ANIMAL</SET> #,*,*,<srai>LEGS <star index="2"/></srai>,animal.aiml
+0,HOW MANY LEGS ^ <SET>ANIMALS</SET> #,*,*,<srai>LEGS <srai>SINGULAR <star index="2"/></srai></srai>,animal.aiml
+0,HOW MANY LEGS # <SET>NUMBER</SET> <SET>ANIMALS</SET> # <SET>NUMBER</SET> <SET>ANIMALS</SET> ^,*,*,<think>#Newline<set var="number1"><star index="2"/></set>#Newline<set var="animal1"><srai>SINGULAR <star index="3"/></srai></set>#Newline<set var="legs1"><uniq><subj><get var="animal1"/></subj><pred>legs</pred><obj>?legs1</obj></uniq></set>#Newline<set var="number2"><star index="5"/></set>#Newline<set var="animal2"><srai>SINGULAR <star index="6"/></srai></set>#Newline<set var="legs2"><uniq><subj><get var="animal2"/></subj><pred>legs</pred><obj>?legs2</obj></uniq></set>#Newline<set var="formula"><get var="number1"/>*<get var="legs1"/>+<get var="number2"/>*<get var="legs2"/></set>#Newline</think>#Newline<srai>ROUND <srai>WHAT IS <get var="formula"/></srai></srai> legs.,animal.aiml
+0,HOW MANY LEGS # <SET>NUMBER</SET> <SET>ANIMALS</SET> ^,*,*,<think>#Newline<set var="number1"><star index="2"/></set>#Newline<set var="animal1"><srai>SINGULAR <star index="3"/></srai></set>#Newline<set var="legs1"><uniq><subj><get var="animal1"/></subj><pred>legs</pred><obj>?legs1</obj></uniq></set>#Newline<set var="formula"><get var="number1"/>*<get var="legs1"/></set>#Newline</think>#Newline<srai>ROUND <srai>WHAT IS <get var="formula"/></srai></srai> legs.,animal.aiml
+0,_ 1 <SET>ANIMAL</SET> *,*,*,<srai><star/> 1 <srai>PLURAL <star index="2"/></srai> <star index="3"/></srai>,animal.aiml
+0,_ 1 <SET>ANIMAL</SET>,*,*,<srai><star/> 1 <srai>PLURAL <star index="2"/></srai></srai>,animal.aiml
