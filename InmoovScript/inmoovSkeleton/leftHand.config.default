@@ -1,7 +1,7 @@
 ;----------------------------- LEFT HAND CONFIGURATION ----------------------------------------
 [MAIN]
-isLeftHandActivated=0
-autoDetach=1
+isLeftHandActivated=False
+autoDetach=True
 
 [SERVO_MINIMUM]
 thumb=0
@@ -20,12 +20,28 @@ pinky=180
 wrist=180
 
 [SERVO_INVERTED]
+thumb=False
+index=False
+majeure=False
+ringFinger=False
+pinky=False
+wrist=False
+
+[MINIMUM_MAP]
 thumb=0
 index=0
 majeure=0
 ringFinger=0
 pinky=0
 wrist=0
+
+[MAXIMUM_MAP]
+thumb=180
+index=180
+majeure=180
+ringFinger=180
+pinky=180
+wrist=180
 
 [SERVO_MAP_REST]
 thumb=0

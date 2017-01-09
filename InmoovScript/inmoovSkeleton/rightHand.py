@@ -39,12 +39,12 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		talkEvent(lang_startingRightHand)
 		rightHand = Runtime.create("i01.rightHand", "InMoovHand")
 				
-		rightHand.thumb.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'thumb')) 
-		rightHand.index.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'index')) 
-		rightHand.majeure.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'majeure')) 
-		rightHand.ringFinger.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'ringFinger')) 
-		rightHand.pinky.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'pinky'))
-		rightHand.wrist.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'wrist'))
+		rightHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'thumb')) 
+		rightHand.index.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'index'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'index'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'index')) 
+		rightHand.majeure.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'majeure'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'majeure')) 
+		rightHand.ringFinger.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'ringFinger'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'ringFinger')) 
+		rightHand.pinky.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'pinky'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'pinky'))
+		rightHand.wrist.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'wrist'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'wrist'))
 		
 		rightHand.thumb.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'thumb'))
 		rightHand.index.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'index'))
@@ -59,6 +59,19 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.ringFinger.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'ringFinger'))
 		rightHand.pinky.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'pinky'))
 		rightHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'))
+		
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'thumb'):
+			rightHand.thumb.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'index'):
+			rightHand.index.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'majeure'):
+			rightHand.majeure.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'ringFinger'):
+			rightHand.ringFinger.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'):
+			rightHand.pinky.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'):
+			rightHand.wrist.setInverted(True)
 		
 		i01.startRightHand(MyRightPort)
 		

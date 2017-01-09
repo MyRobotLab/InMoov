@@ -35,11 +35,11 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		talkEvent(lang_startingHead)
 		head = Runtime.create("i01.head","InMoovHead")
 				
-		head.jaw.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw')) 
-		head.eyeX.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeX')) 
-		head.eyeY.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeY')) 
-		head.neck.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'neck')) 
-		head.rothead.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'rothead'))
+		head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw')) 
+		head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeX')) 
+		head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeY')) 
+		head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'neck')) 
+		head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'rothead'))
 		
 		
 		head.jaw.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'jaw'))
@@ -55,6 +55,17 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'))
 		head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'))
 	
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):
+			head.jaw.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):
+			head.eyeX.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):
+			head.eyeY.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):
+			head.neck.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):
+			head.rothead.setInverted(True)
+
 		
 		i01.startHead(MyLeftPort)
 		if MouthControlActivated:

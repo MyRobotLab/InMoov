@@ -1,8 +1,8 @@
 ;----------------------------- HEAD CONFIGURATION ----------------------------------------
 [MAIN]
-isHeadActivated=0
-MouthControlActivated=1
-autoDetach=1
+isHeadActivated=False
+MouthControlActivated=True
+autoDetach=True
 
 [SERVO_MINIMUM]
 jaw=81
@@ -18,6 +18,30 @@ eyeX=160
 eyeY=160
 neck=160
 rothead=160
+
+
+[MINIMUM_MAP]
+jaw=0
+eyeX=0
+eyeY=0
+neck=0
+rothead=0
+
+
+[MAXIMUM_MAP]
+jaw=180
+eyeX=180
+eyeY=180
+neck=180
+rothead=180
+
+
+[SERVO_INVERTED]
+jaw=False
+eyeX=False
+eyeY=False
+neck=False
+rothead=False
 
 
 [SERVO_MAP_REST]
