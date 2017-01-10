@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 # ##############################################################################
 # ERRORS FILE
 # ##############################################################################
@@ -8,7 +9,7 @@ def errorSpokenFunc(errorType,param="0"):
 	global RobotIsErrorMode
 	if errorType!="BadLanguagePack":
 		RobotIsErrorMode=1
-	subconsciousMouth.speakBlocking(lang_alert)
+	subconsciousMouth.speakBlocking(unicode(lang_alert,'utf-8'))
 	
 	if errorType=="ArduinoNotConnected":
 		errorSpoken=lang_ArduinoNotConnected+param
@@ -37,7 +38,7 @@ def errorSpokenFunc(errorType,param="0"):
 	if errorType=="BadLanguagePack":
 		errorSpoken=lang_BadLanguagePack
 	
-	subconsciousMouth.speakBlocking(errorSpoken)
+	subconsciousMouth.speakBlocking(unicode(errorSpoken,'utf-8'))
 	
 	print errorSpoken
 		

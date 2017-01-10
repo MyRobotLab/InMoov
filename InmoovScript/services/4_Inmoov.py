@@ -7,8 +7,7 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-#vocal startup globalized so :
-i01.setMute(1)
+
 
 #Inmoov Left / right arduino connect
 if ScriptType=="RightSide" or ScriptType=="Full":

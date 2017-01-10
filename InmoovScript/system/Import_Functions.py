@@ -1,4 +1,4 @@
-def inmoovNeeds(Needs):
+def CheckIfRobotCanLaunchAPPS(Needs):
 	for modules in Needs:
 		if not modules:
 			return 0

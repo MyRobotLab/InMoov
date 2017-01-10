@@ -18,6 +18,8 @@ subconsciousMouth.setVoice("cmu-slt-hsmm")
 #inmoov mouth service
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 mouth=i01.mouth
+#vocal startup globalized so :
+i01.setMute(1)
 
 python.subscribe(mouth.getName(),"publishStartSpeaking")
 python.subscribe(mouth.getName(),"publishEndSpeaking")
@@ -84,17 +86,7 @@ def setRobotLanguage():
 			errorSpokenFunc('MyLanguage')
 			LanguageError=1
 			pass
-		# we try to load user ear.addcommand language pack		
-	try:
-		
-		for filename in os.listdir(RuningFolder+'languagePack/'+languagePack+'/ear.addCommand'):		
-			if os.path.splitext(filename)[1] == ".lang":
-				execfile(RuningFolder+'languagePack/'+languagePack+'/ear.addCommand/'+filename)
-				if DEBUG==1:
-					print "debug languagePack : ",filename
-	except:
-		print "No ear.addcommand globalized"
-		pass	
+	
 			
 def checkAndDownloadVoice():				
 	if MyvoiceTTS=="MarySpeech":
@@ -120,3 +112,20 @@ def setCustomVoice():
 		errorSpokenFunc('MyvoiceType')
 		VoiceError=1
 		pass
+		
+#we start raw Inmoov ear and mouth service
+i01.startMouth()
+#set user language
+setRobotLanguage()
+
+#check and update marytts voices	
+checkAndDownloadVoice()
+#set CustomVoice
+setCustomVoice()
+#set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
+
+
+if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
+	subconsciousMouth=mouth
+if languagePackLoaded==0:
+	errorSpokenFunc('BadLanguagePack')

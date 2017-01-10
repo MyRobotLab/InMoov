@@ -14,6 +14,8 @@ DEBUG=0
 
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')
+# common functions
+execfile(RuningFolder+'/system/Import_Functions.py')
 
 
 RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
@@ -35,25 +37,36 @@ languagePack=MyLanguage
 languagePackLoaded=1
 
 # we load default english language pack
-for filename in os.listdir(RuningFolder+'languagePack/en'):		
-		if os.path.splitext(filename)[1] == ".lang":
-			execfile(RuningFolder+'languagePack/en/'+filename)
 
+i01.startEar()
+ear = i01.ear
+ear.pauseListening()
+
+for root, subdirs, files in os.walk(RuningFolder+'languagePack/en'):
+	for name in files:
+		if name.split(".")[-1] == "lang":
+			execfile(os.path.join(root, name).encode('utf8'))
+			if DEBUG==1:
+				print "debug languagePack inmoovAPPS : ",os.path.join(root, name)
 			
 # we try to load user system language pack		
 try:
 	
-	for filename in os.listdir(RuningFolder+'languagePack/'+languagePack):		
-		if os.path.splitext(filename)[1] == ".lang":
-			execfile(RuningFolder+'languagePack/'+languagePack+'/'+filename)
-	languagePackLoaded=1
+
+	for root, subdirs, files in os.walk(RuningFolder+'languagePack/'+languagePack):
+			for name in files:
+				if name.split(".")[-1] == "lang":
+					execfile(os.path.join(root, name).encode('utf8'))
+					if DEBUG==1:
+						print "debug languagePack inmoovAPPS : ",os.path.join(root, name)
+	
 except:
 	languagePackLoaded=0
 	pass		
 
 
 # vocal errors
-execfile(RuningFolder+'/system/Errors.py')
+execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
 
 
@@ -62,9 +75,10 @@ execfile(RuningFolder+'/system/Errors.py')
 ################################
 #we load services python side from services folder
 #I have some strange no blocking event with LoadGesture so use classic execfile
-for filename in os.listdir(RuningFolder+'services'):		
+for filename in sorted(os.listdir(RuningFolder+'services')):		
 	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'services/'+filename)
+		execfile(RuningFolder+'services/'+filename.encode('utf8'))
+		print filename
 if boot_green:		
 	PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
 
@@ -75,22 +89,7 @@ if boot_green:
 #mrl version check
 if int(runtime.getVersion()[-4:])<int(mrlCompatible):
 	errorSpokenFunc('MrlNeedUpdate')
-#we start raw Inmoov ear and mouth service
-i01.startMouth()
-#set user language
-setRobotLanguage()
 
-#check and update marytts voices	
-checkAndDownloadVoice()
-#set CustomVoice
-setCustomVoice()
-#set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
-
-
-if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
-	subconsciousMouth=mouth
-if languagePackLoaded==0:
-	errorSpokenFunc('BadLanguagePack')
 	
 #init confirmation	
 talkEvent(lang_startingMouth)
@@ -102,7 +101,7 @@ talkEvent(lang_whatIsThisLanguage)
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
 	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovSkeleton/'+filename)
+		execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
 
 
 
@@ -113,12 +112,12 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 #we launch Inmoov Gestures
 for filename in os.listdir(RuningFolder+'inmoovGestures'):		
 	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovGestures/'+filename)
+		execfile(RuningFolder+'inmoovGestures/'+filename.encode('utf8'))
 		
 #we launch Inmoov life
 for filename in os.listdir(RuningFolder+'inmoovLife'):		
 	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovLife/'+filename)
+		execfile(RuningFolder+'inmoovLife/'+filename.encode('utf8'))
 
 #create the custom script, only if not exist
 if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
@@ -130,10 +129,13 @@ if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
 ################################
 
 #we launch Inmoov APPS - GAMES
-walk_dir = RuningFolder+'inmoovAPPS'
-
-for root, subdirs, files in os.walk(walk_dir):
-    print files
+for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
+	print files
+	for name in files:
+		if name.split(".")[-1] == "py":
+			execfile(os.path.join(root, name))
+			if DEBUG==1:
+				print "debug inmoovAPPS : ",os.path.join(root, name)
 
 # here we go !
 talkEvent(lang_startingEar)
