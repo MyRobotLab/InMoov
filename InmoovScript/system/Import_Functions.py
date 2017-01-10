@@ -1,6 +1,6 @@
-def CheckIfRobotCanLaunchAPPS(SkeletonNeeds):
-	for SkeletonPart in SkeletonNeeds:
-		if not SkeletonPart:
+def inmoovNeeds(Needs):
+	for modules in Needs:
+		if not modules:
 			return 0
 			break
 	return 1
