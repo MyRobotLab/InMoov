@@ -91,16 +91,13 @@ def setRobotLanguage():
 def checkAndDownloadVoice():				
 	if MyvoiceTTS=="MarySpeech":
 		if not CheckMaryTTSVoice(MyvoiceType):
-			if downloadSomething_blue:
-				PlayNeopixelAnimation("Flash Random", 0, 0, 255, 1)
 			mouth.installComponentsAcceptLicense(MyvoiceType)
 			if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
 				errorSpokenFunc('VoiceDownloaded')
-				StopNeopixelAnimation()
 				sleep(4)
 				runtime.exit()
 			else:
-				errorSpokenFunc('MyvoiceType')
+				errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
 				
 		
 def setCustomVoice():	
@@ -129,3 +126,6 @@ if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
 	subconsciousMouth=mouth
 if languagePackLoaded==0:
 	errorSpokenFunc('BadLanguagePack')
+	
+talkEvent(lang_startingMouth)
+talkEvent(lang_whatIsThisLanguage)

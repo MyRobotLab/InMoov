@@ -5,11 +5,7 @@
 # ##############################################################################
 
 # This inmoovAPPS need :
-inmoovNeeds=[isRightArmActivated,isRightHandActivated,isHeadActivated]
-
-# ear.addCommand
-# SAY "play rock paper scissors" to play
-ear.addCommand(lang_earCommand_rockpaperscissors_start, "python", "play_rockpaperscissors")
+inmoovNeeds=[isRightArmActivated,isRightHandActivated,isHeadActivated,EarInterpretEngine=="ear.AddCommand"]
 
 def play_rockpaperscissors():
 

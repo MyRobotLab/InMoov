@@ -31,42 +31,17 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 
-# language pack
-
-languagePack=MyLanguage
-languagePackLoaded=1
-
-# we load default english language pack
-
 i01.startEar()
 ear = i01.ear
 ear.pauseListening()
 
-for root, subdirs, files in os.walk(RuningFolder+'languagePack/en'):
-	for name in files:
-		if name.split(".")[-1] == "lang":
-			execfile(os.path.join(root, name).encode('utf8'))
-			if DEBUG==1:
-				print "debug languagePack inmoovAPPS : ",os.path.join(root, name)
-			
-# we try to load user system language pack		
-try:
-	
-
-	for root, subdirs, files in os.walk(RuningFolder+'languagePack/'+languagePack):
-			for name in files:
-				if name.split(".")[-1] == "lang":
-					execfile(os.path.join(root, name).encode('utf8'))
-					if DEBUG==1:
-						print "debug languagePack inmoovAPPS : ",os.path.join(root, name)
-	
-except:
-	languagePackLoaded=0
-	pass		
-
-
 # vocal errors
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
+
+# language pack
+execfile(RuningFolder+'/system/languagePack.py')
+
+
 
 
 
@@ -90,10 +65,6 @@ if boot_green:
 if int(runtime.getVersion()[-4:])<int(mrlCompatible):
 	errorSpokenFunc('MrlNeedUpdate')
 
-	
-#init confirmation	
-talkEvent(lang_startingMouth)
-talkEvent(lang_whatIsThisLanguage)
 	
 ################################
 # INIT.5 - skeleton loading

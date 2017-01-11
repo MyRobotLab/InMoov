@@ -7,38 +7,47 @@
 
 def errorSpokenFunc(errorType,param="0"):
 	global RobotIsErrorMode
-	if errorType!="BadLanguagePack":
-		RobotIsErrorMode=1
+	
 	subconsciousMouth.speakBlocking(unicode(lang_alert,'utf-8'))
+	RobotIsErrorMode=1
+	
+	if errorType=="BadLanguagePack":
+		RobotIsErrorMode=0
+		errorSpokenAlert=lang_BadLanguagePack
 	
 	if errorType=="ArduinoNotConnected":
-		errorSpoken=lang_ArduinoNotConnected+param
+		errorSpokenAlert=lang_ArduinoNotConnected+param
 
 	if errorType=="BadMrlcommVersion":
-		errorSpoken=lang_BadMrlcommVersion+param
+		errorSpokenAlert=lang_BadMrlcommVersion+param
 		
 	if errorType=="VoiceDownloaded":
-		errorSpoken=lang_VoiceDownloaded
+		errorSpokenAlert=lang_VoiceDownloaded
 	
 	if errorType=="MyvoiceType":
-		errorSpoken=lang_MyvoiceType
+		errorSpokenAlert=lang_MyvoiceType
 
 	if errorType=="MyLanguage":
-		errorSpoken=lang_MyLanguage
+		errorSpokenAlert=lang_MyLanguage
 		
 	if errorType=="MrlNeedUpdate":
-		errorSpoken=lang_MrlNeedUpdate
+		errorSpokenAlert=lang_MrlNeedUpdate
 		
 	if errorType=="BAdrduinoChoosen":
-		errorSpoken=lang_BAdrduinoChoosen+param
+		errorSpokenAlert=lang_BAdrduinoChoosen+param
 		
 	if errorType=="ConfigParserProblem":
-		errorSpoken=lang_ConfigParserProblem+param
+		errorSpokenAlert=lang_ConfigParserProblem+param
 		
-	if errorType=="BadLanguagePack":
-		errorSpoken=lang_BadLanguagePack
+	if errorType=="I_cannot_download_this_mary_T_T_S_voice":
+		errorSpokenAlert=lang_I_cannot_download_this_mary_T_T_S_voice
 	
-	subconsciousMouth.speakBlocking(unicode(errorSpoken,'utf-8'))
+	if errorType=="ChatbotError":
+		errorSpokenAlert=lang_ChatbotError	
 	
-	print errorSpoken
+		
+	print errorSpokenAlert
+	subconsciousMouth.speakBlocking(unicode(errorSpokenAlert,'utf-8'))
+	
+	
 		
