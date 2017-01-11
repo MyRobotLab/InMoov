@@ -36,6 +36,7 @@ try:
 	
 	DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 	IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
+	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
 
 
 except:

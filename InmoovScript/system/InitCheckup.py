@@ -139,8 +139,11 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 
 # here we go !
 talkEvent(lang_startingEar)
+#ImageDisplay.exitFS()
+#ImageDisplay.closeAll()
 talkEvent(lang_ready)
 WebkitSpeechRecognitionFix.startClock()
+
 RobotIsStarted=1
 
 

@@ -82,7 +82,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			
 		
 		head.rest()
-		sleep(1)
+		sleep(2)
 		head.detach()
 		
 		

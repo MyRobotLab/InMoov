@@ -1,0 +1,47 @@
+;----------------------------- TORSO CONFIGURATION ----------------------------------------
+[MAIN]
+isTorsoActivated=False
+TorsoConnectedToArduino=left
+;left or right
+
+autoAttach=True
+autoDetach=True
+
+
+[SERVO_MINIMUM]
+topStom=60
+midStom=60
+
+[SERVO_MAXIMUM]
+topStom=60
+midStom=60
+
+[SERVO_INVERTED]
+topStom=False
+midStom=False
+
+[SERVO_MAP_REST]
+topStom=120
+midStom=120
+
+[DEF_SPEED]
+topStom=100
+midStom=100
+
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+;todo : pin change
+;topStom=27
+;midStom=28
+
+[MINIMUM_MAP]
+topStom=0
+midStom=0
+
+[MAXIMUM_MAP]
+topStom=180
+midStom=180
+
+;----------------------------------- END --------------------------------------------------
+
+

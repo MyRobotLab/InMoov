@@ -69,7 +69,7 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			leftArm.omoplate.enableAutoAttach(1)
 
 		leftArm.rest()
-		sleep(1)
+		sleep(3)
 		leftArm.detach()
 	else:
 		#we force parameter if arduino is off
