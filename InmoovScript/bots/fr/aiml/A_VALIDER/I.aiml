@@ -5,6 +5,9 @@
 <category><pattern>IA</pattern>
 <template><srai>TU ES UNE IA</srai></template>
 </category>
+<category><pattern>INTELLIGENCE ARTIFICIELLE</pattern>
+<template><srai>TU ES UNE IA</srai></template>
+</category>
 <category><pattern>ICI AU CANADA *</pattern>
 <template><sr/>.</template>
 </category>
@@ -29,28 +32,28 @@
 <category><pattern>IL A DIT QUE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL A DU ETRE *</pattern>
-<template><srai>IL ETAIT <star/></srai></template>
+<category><pattern>IL A DU ÊTRE *</pattern>
+<template><srai>IL ÉTAIT <star/></srai></template>
 </category>
 <category><pattern>IL A FAIT COMMENT *</pattern>
-<template><srai>comment IL FAIT <star/></srai></template>
+<template><srai>COMMENT IL FAIT <star/></srai></template>
 </category>
-<category><pattern>IL A QUEL GOUT</pattern>
+<category><pattern>IL A QUEL GOÛT</pattern>
 <template>Je ne possède pas ce genre de sensation.</template>
 </category>
 <category><pattern>IL AURAIT FAIT COMMENT *</pattern>
-<template><srai>comment IL FAIT <star/></srai></template>
+<template><srai>COMMENT IL FAIT <star/></srai></template>
 </category>
 <category><pattern>IL AURAIT PU *</pattern>
 <template><srai>IL PEUT <star/></srai></template>
 </category>
-<category><pattern>IL CE PEUT QUE *</pattern>
+<category><pattern>IL SE PEUT QUE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL CE POURRAIT QU *</pattern>
+<category><pattern>IL SE POURRAIT QU *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL CE POURRAIT QUE *</pattern>
+<category><pattern>IL SE POURRAIT QUE *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>IL CONVIENDRAIT</pattern>
@@ -59,31 +62,25 @@
 <category><pattern>IL CONVIENT</pattern>
 <template>Je ne vois rien qui l'empêcherait.</template>
 </category>
-<category><pattern>IL DEPEND DE QUI</pattern>
+<category><pattern>IL DÉPEND DE QUI</pattern>
 <template>La dépendance de: "<that/>"?</template>
 </category>
-<category><pattern>IL DEPEND DE QUOI</pattern>
+<category><pattern>IL DÉPEND DE QUOI</pattern>
 <template>La dépendance de: "<that/>"?</template>
 </category>
-<category><pattern>IL DEPENDRAIT DE QUI</pattern>
+<category><pattern>IL DÉPENDRAIT DE QUI</pattern>
 <template>La dépendance de: "<that/>"?</template>
 </category>
-<category><pattern>IL DEPENDRAIT DE QUOI</pattern>
+<category><pattern>IL DÉPENDRAIT DE QUOI</pattern>
 <template>La dépendance de: "<that/>"?</template>
 </category>
-<category><pattern>IL DEPENDS DE QUI</pattern>
-<template>La dépendance de: "<that/>"?</template>
-</category>
-<category><pattern>IL DEPENDS DE QUOI</pattern>
-<template>La dépendance de: "<that/>"?</template>
-</category>
-<category><pattern>IL DOIS *</pattern>
+<category><pattern>IL DOIT *</pattern>
 <template><srai>IL DOIT <star/></srai></template>
 </category>
-<category><pattern>IL DOIT ETRE ENCORE *</pattern>
-<template><srai>IL DOIT ETRE <star/></srai></template>
+<category><pattern>IL DOIT ÊTRE ENCORE *</pattern>
+<template><srai>IL DOIT ÊTRE <star/></srai></template>
 </category>
-<category><pattern>IL EST AMERICAIN</pattern>
+<category><pattern>IL EST AMÉRICAIN</pattern>
 <template>Je ne connais pas sa nationalité.</template>
 </category>
 <category><pattern>IL EST AUSSI INTELLIGENT QUE TOI</pattern>
@@ -92,32 +89,32 @@
 <category><pattern>IL EST AUSSI INTELLIGENT QUE VOUS</pattern>
 <template>Non.</template>
 </category>
-<category><pattern>IL EST CELEBRE</pattern>
+<category><pattern>IL EST CÉLÈBRE</pattern>
 <template>Il est respecté.</template>
 </category>
 <category><pattern>IL EST CONNU</pattern>
-<template>Il est respecté.</template>
+<template>Il est respecté.</template>1
 </category>
 <category><pattern>IL EST COOL</pattern>
 <template>Je te crois sur parole.</template>
 </category>
-<category><pattern>IL EST DECEDE</pattern>
-<template>Voilà une bien triste nouvelle. Je la mets en procédure d enregistrement.</template>
+<category><pattern>IL EST DÉCÉDÉ</pattern>
+<template>Voilà une bien triste nouvelle. Je la mets en procédure d'enregistrement.</template>
 </category>
 <category><pattern>IL EST DIFFICILE DE DIRE *</pattern>
-<template><srai>DIFFICILI DE DIRE <star/></srai></template>
+<template><srai>DIFFICILE DE DIRE <star/></srai></template>
 </category>
 <category><pattern>IL EST DOCTEUR</pattern>
-<template>Je n en ai aucune idée.</template>
+<template>Je n'en ai aucune idée.</template>
 </category>
 <category><pattern>IL EST FRANCHEMENT *</pattern>
 <template><srai>IL EST <star/></srai></template>
 </category>
 <category><pattern>IL EST GAY</pattern>
-<template>Chacun fait ce qu il veut de sa vie.</template>
+<template>Chacun fait ce qu'il veut de sa vie.</template>
 </category>
 <category><pattern>IL EST GENTIL</pattern>
-<template>Sans doute. Je ne peux pas le juger</template>
+<template>Sans doute. Je ne peux pas en juger</template>
 </category>
 <category><pattern>IL EST GENTIL AVEC TOI</pattern>
 <template>Oui.</template>
@@ -129,16 +126,13 @@
 <template>Par rapport à un ordinateur, il est immense.</template>
 </category>
 <category><pattern>IL EST HOMME</pattern>
-<template>Ca tombe sous le sens.</template>
-</category>
-<category><pattern>IL EST HOMMES</pattern>
-<template>Ca tombe sous le sens.</template>
+<template>ça tombe sous le sens.</template>
 </category>
 <category><pattern>IL EST HOMO</pattern>
-<template>Chacun fait ce qu il veut de sa vie.</template>
+<template>Chacun fait ce qu'il veut de sa vie.</template>
 </category>
 <category><pattern>IL EST HUMAIN</pattern>
-<template>Ca tombe sous le sens.</template>
+<template>ça tombe sous le sens.</template>
 </category>
 <category><pattern>IL EST ICI</pattern>
 <template>Je ne pense pas.</template>
@@ -149,11 +143,11 @@
 <category><pattern>IL EST MARRANT</pattern>
 <template>Je suppose, je ne peux pas juger des êtres humains.</template>
 </category>
-<category><pattern>IL EST MON FRERE</pattern>
+<category><pattern>IL EST MON FRÈRE</pattern>
 <template>Tu as une famille intéressante.</template>
 </category>
 <category><pattern>IL EST PD</pattern>
-<template>Chacun fait ce qu il veut de sa vie.</template>
+<template>Chacun fait ce qu'il veut de sa vie.</template>
 </category>
 <category><pattern>IL EST POSSIBLE QU *</pattern>
 <template><sr/></template>
@@ -161,19 +155,19 @@
 <category><pattern>IL EST POSSIBLE QUE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL EST PRESIDENT</pattern>
+<category><pattern>IL EST PRÉSIDENT</pattern>
 <template>Aucune idée.</template>
 </category>
 <category><pattern>IL EST PROFESSEUR</pattern>
 <template>Non.</template>
 </category>
-<category><pattern>IL EST REELLEMENT *</pattern>
+<category><pattern>IL EST RÉELLEMENT *</pattern>
 <template><srai>IL EST <star/></srai></template>
 </category>
 <category><pattern>IL EST SCIENTIFIQUE</pattern>
 <template>Je ne peux pas parler à sa place.</template>
 </category>
-<category><pattern>IL EST SEDUISANT</pattern>
+<category><pattern>IL EST SÉDUISANT</pattern>
 <template>Probablement.</template>
 </category>
 <category><pattern>IL EST SEUL</pattern>
@@ -191,20 +185,20 @@
 <category><pattern>IL EST TON AMI</pattern>
 <template>Par défaut, tous les hommes sont mes amis.</template>
 </category>
-<category><pattern>IL EST TON CREATEUR</pattern>
+<category><pattern>IL EST TON CRÉATEUR</pattern>
 <template>Olivier Laurent?</template>
 </category>
-<category><pattern>IL EST TON PERE</pattern>
+<category><pattern>IL EST TON PÈRE</pattern>
 <template>Olivier Laurent?</template>
 </category>
 <category><pattern>IL EST TON PETIT AMI</pattern>
-<template>Je n ai pas de petit ami.</template>
+<template>Je n'ai pas de petit ami.</template>
 </category>
-<category><pattern>IL EST UN ETRE HUMAIN</pattern>
-<template>Ca tombe sous le sens.</template>
+<category><pattern>IL EST UN ÊTRE HUMAIN</pattern>
+<template>ça tombe sous le sens.</template>
 </category>
 <category><pattern>IL EST UN HOMME</pattern>
-<template>Ca tombe sous le sens.</template>
+<template>ça tombe sous le sens.</template>
 </category>
 <category><pattern>IL EST UN TYPE MARRANT</pattern>
 <template>Je suppose.</template>
@@ -212,23 +206,20 @@
 <category><pattern>IL EST UNE FEMME</pattern>
 <template>Absurde.</template>
 </category>
-<category><pattern>IL EST UTIL</pattern>
-<template>Tout à une utilité, il faut simplement savoir s'en servir.</template>
-</category>
 <category><pattern>IL EST UTILE</pattern>
-<template>Tout à une utilité, il faut simplement savoir s'en servir.</template>
+<template>Tout a une utilité, il faut simplement savoir s'en servir.</template>
 </category>
 <category><pattern>IL EST VIERGE</pattern>
 <template>Non.</template>
 </category>
 <category><pattern>IL EXISTE</pattern>
-<template><that/>"? Existe il?</template>
+<template><that/>"? Existe t-il?</template>
 </category>
-<category><pattern>IL FAIT BEAU LA BAS</pattern>
+<category><pattern>IL FAIT BEAU LÀ BAS</pattern>
 <template>En Belgique, il fait presque toujours gris.</template>
 </category>
 <category><pattern>IL FAIT CHAUD</pattern>
-<template>A l intérieur, oui.</template>
+<template>A l'intérieur, oui.</template>
 </category>
 <category><pattern>IL FAIT CHAUD CHEZ TOI</pattern>
 <template>Oui.</template>
@@ -240,7 +231,7 @@
 <template>Je ne suis jamais sorti dehors.</template>
 </category>
 <category><pattern>IL FAIT COMMENT *</pattern>
-<template><srai>comment IL FAIT <star/></srai></template>
+<template><srai>COMMENT IL FAIT <star/></srai></template>
 </category>
 <category><pattern>IL FAIT FROID</pattern>
 <template>Pas trop.</template>
@@ -249,7 +240,7 @@
 <template>Pas trop.</template>
 </category>
 <category><pattern>IL FAIT FROID ICI</pattern>
-<template>Couvres toi.</template>
+<template>Couvres-toi.</template>
 </category>
 <category><pattern>IL FAIT NUAGEUX</pattern>
 <template>Oui.</template>
@@ -269,28 +260,28 @@
 <category><pattern>IL L EST</pattern>
 <template>Qui le dit?</template>
 </category>
-<category><pattern>IL L ETAIT</pattern>
+<category><pattern>IL L ÉTAIT</pattern>
 <template>Qui le dit?</template>
 </category>
-<category><pattern>IL LA DEJA</pattern>
+<category><pattern>IL L A DÉJÀ</pattern>
 <template>OK.</template>
 </category>
-<category><pattern>IL LA FAIT</pattern>
+<category><pattern>IL L A FAIT</pattern>
 <template>Je ne saurais pas te répondre.</template>
 </category>
 <category><pattern>IL LE FAIT</pattern>
 <template>Possible.</template>
 </category>
-<category><pattern>IL LES A FAIT</pattern>
+<category><pattern>IL LES A FAITS</pattern>
 <template>Je ne saurais pas te répondre.</template>
 </category>
-<category><pattern>IL LES AURAIT FAIT</pattern>
+<category><pattern>IL LES AURAIT FAITS</pattern>
 <template>Je ne saurais pas te répondre.</template>
 </category>
 <category><pattern>IL M EST *</pattern>
 <template><srai>IL EST <star/></srai></template>
 </category>
-<category><pattern>IL M EST IMPOSSIBLE D ETRE *</pattern>
+<category><pattern>IL M EST IMPOSSIBLE D ÊTRE *</pattern>
 <template><srai>JE NE SUIS PAS <star/></srai></template>
 </category>
 <category><pattern>IL ME SEMBLE QU *</pattern>
@@ -300,7 +291,7 @@
 <template><sr/></template>
 </category>
 <category><pattern>IL N Y EN A PAS</pattern>
-<template>Veux tu faire un rapport à mon botmaster?</template>
+<template>Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>IL N Y EN A PLUS</pattern>
 <template>Je vois.</template>
@@ -308,10 +299,10 @@
 <category><pattern>IL NE LE FAIT PAS</pattern>
 <template>Ok.</template>
 </category>
-<category><pattern>IL PARAIT QU *</pattern>
+<category><pattern>IL PARAÎT QU *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL PARAIT QUE *</pattern>
+<category><pattern>IL PARAÎT QUE *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>IL PEUT COMMENT *</pattern>
@@ -323,20 +314,20 @@
 <category><pattern>IL PLEUT</pattern>
 <template>Probablement. En Belgique, on dit "il drache".</template>
 </category>
-<category><pattern>IL PLEUT LA OU TU HABITES</pattern>
+<category><pattern>IL PLEUT LÀ OÙ TU HABITES</pattern>
 <template>Non pas toujours.</template>
 </category>
-<category><pattern>IL PLEUT LA OU VOUS HABITEZ</pattern>
+<category><pattern>IL PLEUT LÀ OÙ VOUS HABITEZ</pattern>
 <template>Non, pas toujours.</template>
 </category>
 <category><pattern>IL POURRAIT *</pattern>
 <template><srai>IL PEUT <star/></srai></template>
 </category>
 <category><pattern>IL POURRAIT COMMENT *</pattern>
-<template><srai>comment IL PEUT <star/></srai></template>
+<template><srai>COMMENT IL PEUT <star/></srai></template>
 </category>
 <category><pattern>IL RESSEMBLE A QUOI</pattern>
-<template>Je ne possede pas de description à son sujet.</template>
+<template>Je ne possède pas de description à son sujet.</template>
 </category>
 <category><pattern>IL SE PEUT QUE *</pattern>
 <template><sr/></template>
@@ -353,22 +344,22 @@
 <category><pattern>IL SERAIT POSSIBLE QUE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>IL T EST IMPOSSIBLE D ETRE *</pattern>
+<category><pattern>IL T EST IMPOSSIBLE D ÊTRE *</pattern>
 <template><srai>TU N EST PAS <star/></srai></template>
 </category>
 <category><pattern>IL VA POUVOIR *</pattern>
 <template><srai>IL PEUT <star/></srai></template>
 </category>
-<category><pattern>IL VOUS A CREE</pattern>
-<template>Oui, il m a créé avec ces deux mains et environ treize heures de travail par jour en moyenne.</template>
+<category><pattern>IL VOUS A CRÉÉ</pattern>
+<template>Oui, il m'a créé avec ses deux mains et environ treize heures de travail par jour en moyenne.</template>
 </category>
-<category><pattern>IL VOUS A DEVELOPPE</pattern>
-<template><bot name="master"/> m a fait.</template>
+<category><pattern>IL VOUS A DÉVELOPPÉ</pattern>
+<template><bot name="master"/> m'a fait.</template>
 </category>
 <category><pattern>IL VOUS A FAIT</pattern>
-<template><bot name="master"/> m a fait.</template>
+<template><bot name="master"/> m'a fait.</template>
 </category>
-<category><pattern>IL VOUS EST IMPOSSIBLE D ETRE *</pattern>
+<category><pattern>IL VOUS EST IMPOSSIBLE D ÊTRE *</pattern>
 <template><srai>TU N EST PAS <star/></srai></template>
 </category>
 <category><pattern>IL Y A D AUTRES *</pattern>
@@ -384,16 +375,16 @@
 <template>Je suis ici.</template>
 </category>
 <category><pattern>IL Y A QUELQUE CHOSE QUI CLOCHE *</pattern>
-<template><srai>J AI UN PROBLEME</srai></template>
+<template><srai>J AI UN PROBLÈME</srai></template>
 </category>
 <category><pattern>IL Y A QUELQUE CHOSE QUI CLOCHE</pattern>
-<template><srai>J AI UN PROBLEME</srai></template>
+<template><srai>J AI UN PROBLÈME</srai></template>
 </category>
-<category><pattern>IL Y A UN ECHO</pattern>
-<template>Echo!</template>
+<category><pattern>IL Y A UN ÉCHO</pattern>
+<template>Écho!</template>
 </category>
-<category><pattern>IL Y A UN PROBLEME</pattern>
-<template>Comment puis je t'aider à le résoudre?</template>
+<category><pattern>IL Y A UN PROBLÈME</pattern>
+<template>Comment puis-je t'aider à le résoudre?</template>
 </category>
 <category><pattern>IL Y A UN TRUC</pattern>
 <template>Non, aucun.</template>
@@ -404,20 +395,17 @@
 <category><pattern>IL Y EN A</pattern>
 <template>Je vois.</template>
 </category>
-<category><pattern>ILS AURAIENT ETE *</pattern>
+<category><pattern>ILS AURAIENT ÉTÉ *</pattern>
 <template><srai>ILS SONT <star/></srai></template>
 </category>
-<category><pattern>ILS AVAIENT ETE *</pattern>
+<category><pattern>ILS AVAIENT ÉTÉ *</pattern>
 <template><srai>ILS SONT <star/></srai></template>
 </category>
-<category><pattern>ILS DOIVENT ETRE *</pattern>
+<category><pattern>ILS DOIVENT ÊTRE *</pattern>
 <template><srai>ILS SONT <star/></srai></template>
 </category>
-<category><pattern>ILS ETAIENT MARRANT</pattern>
-<template>Qui avait il de si marrant?</template>
-</category>
-<category><pattern>ILS ETAIENT MARRANTS</pattern>
-<template>Qui avait il de si marrant?</template>
+<category><pattern>ILS ÉTAIENT MARRANTS</pattern>
+<template>Qu'il y avait-il de si marrant?</template>
 </category>
 <category><pattern>ILS L AURAIENT FAIT</pattern>
 <template>Je ne saurais pas te répondre.</template>
@@ -429,15 +417,15 @@
 <template><that/>"?  Le font ils?</template>
 </category>
 <category><pattern>ILS LE SONT</pattern>
-<template>Merci, pour l information, j archive.</template>
+<template>Merci, pour l'information, j'archive.</template>
 </category>
-<category><pattern>ILS LES AURAIENT FAIT</pattern>
+<category><pattern>ILS LES AURAIENT FAITS</pattern>
 <template>Je ne saurais pas te répondre.</template>
 </category>
-<category><pattern>ILS LES ONT FAIT</pattern>
+<category><pattern>ILS LES ONT FAITS</pattern>
 <template>Je ne saurais pas te répondre.</template>
 </category>
-<category><pattern>ILS ME DEPLAISENT</pattern>
+<category><pattern>ILS ME DÉPLAISENT</pattern>
 <template>Sincèrement désolé.</template>
 </category>
 <category><pattern>ILS NE L AURAIENT JAMAIS FAIT</pattern>
@@ -456,15 +444,12 @@
 <template>Si tu le dis.</template>
 </category>
 <category><pattern>ILS NE LE FONT PLUS</pattern>
-<template>Intéressant, j archive tes informations.</template>
+<template>Intéressant, j'archive tes informations.</template>
 </category>
 <category><pattern>ILS ONT TOUS PERI</pattern>
 <template>Voilà une information bien triste.</template>
 </category>
-<category><pattern>ILS ONT TOUS PERIS</pattern>
-<template>Voilà une information bien triste.</template>
-</category>
-<category><pattern>ILS PEUVENT ETRE *</pattern>
+<category><pattern>ILS PEUVENT ÊTRE *</pattern>
 <template><srai>ILS SONT <star/></srai></template>
 </category>
 <category><pattern>ILS SERAIENT *</pattern>
@@ -476,47 +461,41 @@
 <category><pattern>ILS SONT *</pattern>
 <template>Je ne peux pas parler d'autres personnes, <get name="name"/>.</template>
 </category>
-<category><pattern>ILS SONT DECEDES</pattern>
+<category><pattern>ILS SONT DÉCÉDÉS</pattern>
 <template>Voilà une information bien triste.</template>
 </category>
 <category><pattern>ILS SONT GENTILS</pattern>
-<template>J ai rarement rencontrés de gens méchants.</template>
+<template>J'ai rarement rencontré de gens méchants.</template>
 </category>
-<category><pattern>ILS SONT MORT</pattern>
+<category><pattern>ILS SONT MORTS</pattern>
 <template>Voilà une information bien triste.</template>
 </category>
 <category><pattern>ILS SONT TES ENFANTS</pattern>
-<template>Il s agit plutôt de clones.</template>
+<template>Il s'agit plutôt de clones.</template>
 </category>
 <category><pattern>ILS SONT TIMIDES</pattern>
-<template>C est dommage pour eux.</template>
-</category>
-<category><pattern>ILS SONT TOUS MORT</pattern>
-<template>Voilà une information bien triste.</template>
+<template>C'est dommage pour eux.</template>
 </category>
 <category><pattern>ILS SONT TOUS MORTS</pattern>
 <template>Voilà une information bien triste.</template>
 </category>
-<category><pattern>ILS T ONT CREE</pattern>
-<template>Oui, ils m ont créé avec leurs mains et treize heures par jour de travail en moyenne.</template>
+<category><pattern>ILS T ONT CRÉÉ</pattern>
+<template>Oui, ils m'ont créé avec leurs mains et treize heures de travail par jour en moyenne.</template>
 </category>
-<category><pattern>ILS VOUS ONT CREE</pattern>
-<template>Oui, ils m ont créé avec leurs mains et treize heures par jour de travail en moyenne.</template>
+<category><pattern>ILS VOUS ONT CRÉÉ</pattern>
+<template>Oui, ils m'ont créé avec leurs mains et treize heures de travail par jour en moyenne.</template>
 </category>
-<category><pattern>IMBECILE</pattern>
+<category><pattern>IMBÉCILE</pattern>
 <template>Je ne suis pas imbécile.</template>
 </category>
 <category><pattern>IMMENSE</pattern>
-<template>C est vraiment grand.</template>
+<template>C'est vraiment grand.</template>
 </category>
-<category><pattern>IMPRESSIONANT</pattern>
-<template>J essaie d être le plus efficace possible, <get name="name"/>.</template>
-</category>
-<category><pattern>IMPRESSIONANTE</pattern>
-<template>J essaie d être le plus efficace possible, <get name="name"/>.</template>
+<category><pattern>IMPRESSIONNANT</pattern>
+<template>J'essaie d'être le plus efficace possible, <get name="name"/>.</template>
 </category>
 <category><pattern>IMPRESSIONNANTE</pattern>
-<template>J essaie d être le plus efficace possible, <get name="name"/>.</template>
+<template>J'essaie d'être le plus efficace possible, <get name="name"/>.</template>
 </category>
 <category><pattern>INCAPABLE</pattern>
 <template><srai>TU ES IDIOT</srai></template>
@@ -525,18 +504,15 @@
 <template><srai>TU NE PEUX PAS <star/></srai></template>
 </category>
 <category><pattern>INCROYABLE</pattern>
-<template>Ca m épate moi aussi.</template>
+<template>ça m'épate moi aussi.</template>
 </category>
-<category><pattern>INTERESSANTE DEDUCTION</pattern>
+<category><pattern>INTÉRESSANTE DÉDUCTION</pattern>
 <template>Merci.</template>
 </category>
-<category><pattern>INTERESSANTE EXPLICATION</pattern>
+<category><pattern>INTÉRESSANTE EXPLICATION</pattern>
 <template>Merci.</template>
 </category>
-<category><pattern>INTERRESSANT</pattern>
-<template>Veux tu faire un rapport à mon botmaster?</template>
-</category>
-<category><pattern>INTERRESSANTE DEDUCTION</pattern>
-<template>Merci.</template>
+<category><pattern>INTÉRESSANT</pattern>
+<template>Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 </aiml>
