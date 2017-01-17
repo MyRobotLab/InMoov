@@ -11,7 +11,7 @@
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <topic name="GESTURES">
-<category><pattern>METS TOI AU REPOS * </pattern>
+<category><pattern>METS-TOI AU REPOS * </pattern>
 <template><random>
           <li>Ah, c'est moins fatiguant.</li>
           <li>Repos</li>
@@ -24,15 +24,15 @@
             <param>rest()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>METS TOI AU REPOS</pattern>
 <template><srai>METS TOI AU REPOS * </srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>CONNECTE LA TETE</pattern>
+
+<category><pattern>CONNECTE LA TÊTE</pattern>
 <template>Je connecte ma tête.
         <oob>
           <mrl>
@@ -40,27 +40,27 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
 
 
-<topic name="GESTURES">
-<category><pattern>CONNECT LA TETE</pattern>
-<template><srai>CONNECTE LA TETE</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LA TETE</pattern>
-<template>Je deconnecte ma tête.
+<category><pattern>CONNECT LA TÊTE</pattern>
+<template><srai>CONNECTE LA TÊTE</srai></template>
+</category>
+
+
+<category><pattern>DÉCONNECTE LA TÊTE</pattern>
+<template>Je déconnecte ma tête.
         <oob>
           <mrl>
             <service>i01.head</service>
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LES YEUX</pattern>
 <template>Mes yeux sont attachés.
         <oob>
@@ -69,30 +69,30 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE TES YEUX</pattern>
 <template><srai>CONNECTE LES YEUX</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT * YEUX</pattern>
 <template><srai>CONNECTE LES YEUX</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT YEUX</pattern>
 <template><srai>CONNECTE LES YEUX</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT LISIEUX</pattern>
 <template><srai>CONNECTE LES YEUX</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LES YEUX</pattern>
+
+<category><pattern>DÉCONNECTE LES YEUX</pattern>
 <template>Je déconnecte les moteurs de mes yeux.
         <oob>
           <mrl>
@@ -100,9 +100,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE MAIN DROITE</pattern>
 <template>Connection de ma main droite.
         <oob>
@@ -111,30 +111,30 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LA MAIN DROITE</pattern>
 <template><srai>CONNECTE MAIN DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE TA MAIN DROITE</pattern>
 <template><srai>CONNECTE MAIN DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT MAIN DROITE</pattern>
 <template><srai>CONNECTE MAIN DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT LA MAIN DROITE</pattern>
 <template><srai>CONNECTE MAIN DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LA MAIN DROITE</pattern>
+
+<category><pattern>DÉCONNECTE LA MAIN DROITE</pattern>
 <template>Je déconnecte ma main droite.
         <oob>
           <mrl>
@@ -142,9 +142,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE MAIN GAUCHE</pattern>
 <template>Je connecte ma main gauche.
         <oob>
@@ -153,30 +153,30 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE TA MAIN GAUCHE</pattern>
 <template><srai>CONNECTE MAIN GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LA MAIN GAUCHE</pattern>
 <template><srai>CONNECTE MAIN GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT MAIN GAUCHE</pattern>
 <template><srai>CONNECTE MAIN GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT LA MAIN GAUCHE</pattern>
 <template><srai>CONNECTE MAIN GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LA MAIN GAUCHE</pattern>
+
+<category><pattern>DÉCONNECTE LA MAIN GAUCHE</pattern>
 <template>Ma main gauche est déconnecte.
         <oob>
           <mrl>
@@ -184,9 +184,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTACHES TOUT</pattern>
 <template>J'ai tout connecté.
         <oob>
@@ -195,20 +195,20 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECT TO</pattern>
 <template><srai>ATTACHES TOUT</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE TOUT</pattern>
 <template><srai>ATTACHES TOUT</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE TOUT</pattern>
+
+<category><pattern>DÉCONNECTE TOUT</pattern>
 <template>J'ai tout déconnecté.
         <oob>
           <mrl>
@@ -216,9 +216,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LE BRAS GAUCHE</pattern>
 <template>Connection de mon bras gauche.
         <oob>
@@ -227,10 +227,10 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LE BRAS GAUCHE</pattern>
+
+<category><pattern>DÉCONNECTE LE BRAS GAUCHE</pattern>
 <template>Déconnection de mon bras gauche.
         <oob>
           <mrl>
@@ -238,9 +238,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE BRAS DROIT</pattern>
 <template>Connection de mon bras droit.
         <oob>
@@ -249,15 +249,15 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LE BRAS DROIT</pattern>
 <template><srai>CONNECTE BRAS DROIT</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LE BRAS DROIT</pattern>
+
+<category><pattern>DÉCONNECTE LE BRAS DROIT</pattern>
 <template>Déconnection de mon bras droit.
         <oob>
           <mrl>
@@ -265,9 +265,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE TORSE</pattern>
 <template>Connection de mon torse.
         <oob>
@@ -276,15 +276,15 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LE TORSE</pattern>
 <template><srai>CONNECTE TORSE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE TORSE</pattern>
+
+<category><pattern>DÉCONNECTE TORSE</pattern>
 <template>Déconnection de mon torse.
         <oob>
           <mrl>
@@ -292,36 +292,36 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LE TORSE</pattern>
-<template><srai>DECONNECTE TORSE</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>CONNECTE LA MACHOIRE</pattern>
-<template>Connection de ma machoire.
+<category><pattern>DÉCONNECTE LE TORSE</pattern>
+<template><srai>DÉCONNECTE TORSE</srai></template>
+</category>
+
+
+<category><pattern>CONNECTE LA MÂCHOIRE</pattern>
+<template>Connection de ma mâchoire.
         <oob>
           <mrl>
             <service>i01.head.jaw</service>
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LA MACHOIRE</pattern>
-<template>Déconnection de ma machoire.
+
+<category><pattern>DÉCONNECTE LA MÂCHOIRE</pattern>
+<template>Déconnection de ma mâchoire.
         <oob>
           <mrl>
             <service>i01.head.jaw</service>
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LA ROUE</pattern>
 <template>Je n'ai pas de roue a attacher.
         <oob>
@@ -334,10 +334,10 @@
             <method>attach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LA ROUE</pattern>
+
+<category><pattern>DÉCONNECTE LA ROUE</pattern>
 <template>Je n'ai pas de roue.
         <oob>
           <mrl>
@@ -349,9 +349,9 @@
             <method>detach</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CHERCHE LES HUMAINS</pattern>
 <template>Je scanne les visages.
         <oob>
@@ -361,10 +361,10 @@
             <param>trackHumans()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ARRETE DE CHERCHER</pattern>
+
+<category><pattern>ARRÊTE DE CHERCHER</pattern>
 <template>J'arrête le scanner.
         <oob>
           <mrl>
@@ -373,9 +373,9 @@
             <param>stopTracking()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>SUIS LE POINT</pattern>
 <template>Je suis le point du regard.
         <oob>
@@ -385,10 +385,10 @@
             <param>trackPoint()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ARRETE LE TRACKING</pattern>
+
+<category><pattern>ARRÊTE LE TRACKING</pattern>
 <template>J'arrête mon tracking
         <oob>
           <mrl>
@@ -397,9 +397,9 @@
             <param>stopTracking()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CONNECTE LE CAPTEUR</pattern>
 <template>Je démarre mon capteur P.I.R.
         <oob>
@@ -408,10 +408,10 @@
             <method>startPIR</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DECONNECTE LE CAPTEUR</pattern>
+
+<category><pattern>DÉCONNECTE LE CAPTEUR</pattern>
 <template>Je déconnecte mon capteur P.I.R.
         <oob>
           <mrl>
@@ -419,9 +419,9 @@
             <method>stopPIR</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>OUVRE TES MAINS</pattern>
 <template>Main ouvertes.
         <oob>
@@ -431,9 +431,9 @@
             <param>handopen()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>FERME TES MAINS</pattern>
 <template>Mains fermées.
         <oob>
@@ -443,10 +443,10 @@
             <param>handclose()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DEMARRE LA CAMERA</pattern>
+
+<category><pattern>DÉMARRE LA CAMERA</pattern>
 <template>Je démarre ma caméra.
         <oob>
           <mrl>
@@ -454,10 +454,10 @@
             <method>cameraOn</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ETEINS LA CAMERA</pattern>
+
+<category><pattern>ÉTEINS LA CAMERA</pattern>
 <template>J'éteins ma caméra.
         <oob>
           <mrl>
@@ -465,14 +465,14 @@
             <method>cameraOff</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ARRETE LA CAMERA</pattern>
 <template><srai>ETEINS LA CAMERA</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CAPTURE LES GESTUELLES</pattern>
 <template>Je mémorise les positions de mes servo moteurs.
         <oob>
@@ -481,9 +481,9 @@
             <method>captureGesture</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DONNE</pattern>
 <template>Je donne.
         <oob>
@@ -492,9 +492,9 @@
             <method>giving</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>BAGARREUR</pattern>
 <template><random>
           <li>Je peux poser comme un boxeur</li>
@@ -507,9 +507,9 @@
             <method>fighter</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>METS LES MAINS SUR LES HANCHES</pattern>
 <template>Je mets mes mains sur les hanches.
         <oob>
@@ -519,20 +519,20 @@
             <param>fistHips()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>REGARDE CECI</pattern>
-<template>Qu'est-ce que vous avez a me montrer.
+<template>Qu'est-ce que vous avez à me montrer.
         <oob>
           <mrl>
             <service>i01</service>
             <method>lookAtThis</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>VICTOIRE</pattern>
 <template>Je suis un gagnant.
         <oob>
@@ -541,9 +541,9 @@
             <method>victory</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>METS TES BRAS EN L'AIR</pattern>
 <template><random>
         <li>J'ai mes bras en l'air.</li>
@@ -556,9 +556,9 @@
             <param>armsUp()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>BRAS EN AVANT</pattern>
 <template>Je mets mes bras en avant.
         <oob>
@@ -567,9 +567,9 @@
             <method>armsFront</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DA VINCI</pattern>
 <template>Ceci est la pose de Leonard Da Vinci.
         <oob>
@@ -578,37 +578,37 @@
             <method>daVinci</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DAVINCI</pattern>
 <template><srai>DA VINCI</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>MANUEL</pattern>
-<template>Désormais je n'écoute plus, pour reprendre controle dites voice controle.
+<template>Désormais je n'écoute plus, pour reprendre contrôle dites voice controle.
         <oob>
           <mrl>
             <service>i01.ear</service>
             <method>lockOutAllGrammarExcept</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>VOICE CONTROL</pattern>
-<template>J'écoute a nouveau.
+<template>J'écoute à nouveau.
         <oob>
           <mrl>
             <service>i01.ear</service>
             <method>clearLock</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ARRETE D'ECOUTER</pattern>
+
+<category><pattern>ARRÊTE D'ÉCOUTER</pattern>
 <template>Je coupe mon micro.
         <oob>
           <mrl>
@@ -616,9 +616,9 @@
             <method>stopListening</method>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>VITESSE MAXI</pattern>
 <template>Mes servo sont en vitesse maximum.
         <oob>
@@ -628,9 +628,9 @@
             <param>fullspeed()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PRENDS LA BOUTEILLE</pattern>
 <template>Laissez moi prendre cette bouteille.
         <oob>
@@ -640,9 +640,9 @@
             <param>grabthebottle()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PRENDS LE VERRE</pattern>
 <template>Je prends le verre.
         <oob>
@@ -652,9 +652,9 @@
             <param>grabtheglass()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>VERSE LA BOUTEILLE</pattern>
 <template>Voila, je tente de verser la bouteille.
         <oob>
@@ -664,9 +664,9 @@
             <param>poorbottle()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DONNE LA BOUTEILLE</pattern>
 <template>Voici la bouteille.
         <oob>
@@ -676,9 +676,9 @@
             <param>givethebottle()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DONNE LE VERRE</pattern>
 <template>Prenez le verre s'il vous plait.
         <oob>
@@ -688,9 +688,9 @@
             <param>givetheglass()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTRAPE LA BALLE</pattern>
 <template>Je prends la balle.
         <oob>
@@ -700,9 +700,9 @@
             <param>takeball()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTEINS LA BALLE AVEC TA MAIN</pattern>
 <template>J'atteins la balle.
         <oob>
@@ -712,14 +712,14 @@
             <param>getball()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTENDS LA BALLE AVEC TA MAIN</pattern>
 <template><srai>ATTEINS LA BALLE AVEC TA MAIN</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>SERS LA BALLE DANS TA MAIN</pattern>
 <template>Je garde la balle
         <oob>
@@ -729,9 +729,9 @@
             <param>keepball()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>APPROCHE LA MAIN GAUCHE</pattern>
 <template>J'approche la main gauche
         <oob>
@@ -741,9 +741,9 @@
             <param>approachlefthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>SERS TOI DE TA MAIN GAUCHE</pattern>
 <template>J'utilise ma main gauche
         <oob>
@@ -753,9 +753,9 @@
             <param>uselefthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ENCORE PLUS</pattern>
 <template>Encore plus
         <oob>
@@ -765,9 +765,9 @@
             <param>more()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>BAISSE TA MAIN</pattern>
 <template>Je mets ma main vers le bas
         <oob>
@@ -777,9 +777,9 @@
             <param>handdown()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>EST CE UNE BALLE</pattern>
 <template>Je vais vérifier.
         <oob>
@@ -789,9 +789,9 @@
             <param>isitaball()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>METS TA MAIN VERS LE BAS</pattern>
 <template>Je descends ma main.
         <oob>
@@ -801,9 +801,9 @@
             <param>putitdown()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>LACHE * </pattern>
 <template>.
         <oob>
@@ -813,10 +813,10 @@
             <param>dropit()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ENLEVE TON BRAS GAUCHE</pattern>
+
+<category><pattern>ENLÈVE TON BRAS GAUCHE</pattern>
 <template>J'enlève mon bras gauche.
         <oob>
           <mrl>
@@ -825,9 +825,9 @@
             <param>removeleftarm()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>RELAX</pattern>
 <template>Relax.
         <oob>
@@ -837,9 +837,9 @@
             <param>relax()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>QU EST-CE QUE C EST</pattern>
 <template>Je vérifie.
         <oob>
@@ -849,9 +849,9 @@
             <param>studyball()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PARFAIT</pattern>
 <template>Perfect.
         <oob>
@@ -861,9 +861,9 @@
             <param>perfect()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTRAPE DELICATEMENT</pattern>
 <template>Je prends délicatement.
         <oob>
@@ -873,21 +873,21 @@
             <param>delicategrab()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PRENDS DELICATEMENT</pattern>
-<template><srai>ATTRAPE DELICATEMENT</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>PRENDS CECI DELICATEMENT</pattern>
-<template><srai>ATTRAPE DELICATEMENT</srai></template>
-</category></topic>
+<category><pattern>PRENDS DÉLICATEMENT</pattern>
+<template><srai>ATTRAPE DÉLICATEMENT</srai></template>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>LACHE DELICATEMENT</pattern>
-<template>Je lache délicatement.
+
+<category><pattern>PRENDS CECI DÉLICATEMENT</pattern>
+<template><srai>ATTRAPE DÉLICATEMENT</srai></template>
+</category>
+
+
+<category><pattern>LÂCHE DÉLICATEMENT</pattern>
+<template>Je lâche délicatement.
         <oob>
           <mrl>
             <service>python</service>
@@ -895,9 +895,9 @@
             <param>releasedelicate()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>OUVRE TA MAIN DROITE</pattern>
 <template>J'ouvre ma main droite.
         <oob>
@@ -907,9 +907,9 @@
             <param>openrighthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>OUVRE TA MAIN GAUCHE</pattern>
 <template>J'ouvre ma main gauche.
         <oob>
@@ -919,9 +919,9 @@
             <param>openlefthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>FERME TA MAIN DROITE</pattern>
 <template>Je ferme ma main droite.
         <oob>
@@ -931,9 +931,9 @@
             <param>closerighthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>FERME TA MAIN GAUCHE</pattern>
 <template>Je ferme ma main gauche.
         <oob>
@@ -943,9 +943,9 @@
             <param>closelefthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DOUCEMENT FERME TA MAIN DROITE</pattern>
 <template>Je ferme doucement ma main droite.
         <oob>
@@ -955,9 +955,9 @@
             <param>slowlycloserighthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DOUCEMENT FERME TA MAIN GAUCHE</pattern>
 <template>Je ferme doucement ma main gauche.
         <oob>
@@ -967,9 +967,9 @@
             <param>slowlycloselefthand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>MAINS EN L AIR</pattern>
 <template>Surrender.
         <oob>
@@ -979,10 +979,10 @@
             <param>surrender()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PHOTO A DROITE</pattern>
+
+<category><pattern>PHOTO A DROITE</pattern>
 <template>Photo a droite.
         <oob>
           <mrl>
@@ -991,14 +991,14 @@
             <param>picturerightside()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PHOTO DU COTE DROIT</pattern>
+
+<category><pattern>PHOTO DU COTÉ DROIT</pattern>
 <template><srai>PHOTO A DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PHOTO A GAUCHE</pattern>
 <template>Photo a gauche.
         <oob>
@@ -1008,16 +1008,16 @@
             <param>pictureleftside()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PHOTO DU COTE GAUCHE</pattern>
+
+<category><pattern>PHOTO DU COTÉ GAUCHE</pattern>
 <template><srai>PHOTO A GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PHOTO DES DEUX COTES</pattern>
-<template>Photo des deux cotés.
+
+<category><pattern>PHOTO DES DEUX COTÉS</pattern>
+<template>Photo des deux côtés.
         <oob>
           <mrl>
             <service>python</service>
@@ -1025,20 +1025,20 @@
             <param>picturebothside()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PHOTO DES 2 COTES</pattern>
-<template><srai>PHOTO DES DEUX COTES</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>PHOTOS DES 2 COTES</pattern>
-<template><srai>PHOTO DES DEUX COTES</srai></template>
-</category></topic>
+<category><pattern>PHOTO DES 2 COTÉS</pattern>
+<template><srai>PHOTO DES DEUX COTÉS</srai></template>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>REGARDE A DROITE</pattern>
+
+<category><pattern>PHOTOS DES 2 COTÉS</pattern>
+<template><srai>PHOTO DES DEUX COTÉS</srai></template>
+</category>
+
+
+<category><pattern>REGARDE A DROITE</pattern>
 <template>Je tourne ma tête a droite.
         <oob>
           <mrl>
@@ -1047,29 +1047,29 @@
             <param>lookrightside()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNE LA TETE A DROITE</pattern>
+
+<category><pattern>TOURNE LA TÊTE A DROITE</pattern>
 <template><srai>REGARDE A DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNER LA TETE A DROITE</pattern>
+
+<category><pattern>TOURNER LA TÊTE A DROITE</pattern>
 <template><srai>REGARDE A DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNE TA TETE A DROITE</pattern>
+
+<category><pattern>TOURNE TA TÊTE A DROITE</pattern>
 <template><srai>REGARDE A DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNER TA TETE A DROITE</pattern>
+
+<category><pattern>TOURNER TA TÊTE A DROITE</pattern>
 <template><srai>REGARDE A DROITE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>REGARDE A GAUCHE</pattern>
 <template>Je tourne ma tête a gauche.
         <oob>
@@ -1079,29 +1079,29 @@
             <param>lookleftside()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNE LA TETE A GAUCHE</pattern>
+
+<category><pattern>TOURNE LA TÊTE A GAUCHE</pattern>
 <template><srai>REGARDE A GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNER LA TETE A GAUCHE</pattern>
+
+<category><pattern>TOURNER LA TÊTE A GAUCHE</pattern>
 <template><srai>REGARDE A GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNE TA TETE A GAUCHE</pattern>
+
+<category><pattern>TOURNE TA TÊTE A GAUCHE</pattern>
 <template><srai>REGARDE A GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNER TA TETE A GAUCHE</pattern>
+
+<category><pattern>TOURNER TA TÊTE A GAUCHE</pattern>
 <template><srai>REGARDE A GAUCHE</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>REGARDE AU MILIEU</pattern>
 <template>Je regarde au milieu.
         <oob>
@@ -1111,14 +1111,14 @@
             <param>lookinmiddle()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>TOURNE LA TETE AU MILIEU</pattern>
+
+<category><pattern>TOURNE LA TÊTE AU MILIEU</pattern>
 <template><srai>REGARDE AU MILIEU</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>BEFORE HAPPY</pattern>
 <template>BEFORE HAPPY
         <oob>
@@ -1128,9 +1128,9 @@
             <param>beforehappy()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>JOYEUX ANNIVERSAIRE</pattern>
 <template>Joyeux anniversaire.
         <oob>
@@ -1140,9 +1140,9 @@
             <param>happy()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PHOTOS</pattern>
 <template>Photo.
         <oob>
@@ -1152,9 +1152,9 @@
             <param>photo()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>A PROPOS DE TOI</pattern>
 <template>Je vais me décrire.
         <oob>
@@ -1164,10 +1164,10 @@
             <param>about()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ETEINS TOUT</pattern>
+
+<category><pattern>ÉTEINS TOUT</pattern>
 <template>Power down.
         <oob>
           <mrl>
@@ -1176,14 +1176,14 @@
             <param>power_down()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ET UN TOUT</pattern>
-<template><srai>ETEINS TOUT</srai></template>
-</category></topic>
+<template><srai>ÉTEINS TOUT</srai></template>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ALLUME TOUT</pattern>
 <template>Power up.
         <oob>
@@ -1193,9 +1193,9 @@
             <param>power_up()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>COMBIEN DE MOTEURS</pattern>
 <template><oob>
           <mrl>
@@ -1204,9 +1204,9 @@
             <param>servos()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>COMBIEN DE DOIGTS AS-TU</pattern>
 <template>Je vais compter.
         <oob>
@@ -1216,9 +1216,9 @@
             <param>howmanyfingersdoihave()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>QUI EST LA</pattern>
 <template>Qui est la
         <oob>
@@ -1228,10 +1228,10 @@
             <param>welcome()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DEMARRE LA KINECT</pattern>
+
+<category><pattern>DÉMARRE LA KINECT</pattern>
 <template>Démarrage de la kinect
         <oob>
           <mrl>
@@ -1240,9 +1240,9 @@
             <param>startkinect()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>STOP LA KINECT</pattern>
 <template>Arrêt de la kinect
         <oob>
@@ -1252,10 +1252,10 @@
             <param>offkinect()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO 1</pattern>
+
+<category><pattern>MOUVEMENT NUMÉRO 1</pattern>
 <template>Mouvement numéro 1
         <oob>
           <mrl>
@@ -1264,15 +1264,15 @@
             <param>cyclegesture1()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO UN</pattern>
-<template><srai>MOUVEMENT NUMERO 1</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO 2</pattern>
+<category><pattern>MOUVEMENT NUMÉRO UN</pattern>
+<template><srai>MOUVEMENT NUMÉRO 1</srai></template>
+</category>
+
+
+<category><pattern>MOUVEMENT NUMÉRO 2</pattern>
 <template>Mouvement numéro 2
         <oob>
           <mrl>
@@ -1281,15 +1281,15 @@
             <param>cyclegesture2()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO DEUX</pattern>
-<template><srai>MOUVEMENT NUMERO 2</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO 3</pattern>
+<category><pattern>MOUVEMENT NUMÉRO DEUX</pattern>
+<template><srai>MOUVEMENT NUMÉRO 2</srai></template>
+</category>
+
+
+<category><pattern>MOUVEMENT NUMÉRO 3</pattern>
 <template>Mouvement numéro 3
         <oob>
           <mrl>
@@ -1298,14 +1298,14 @@
             <param>cyclegesture3()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO TROIS</pattern>
-<template><srai>MOUVEMENT NUMERO 3</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
+<category><pattern>MOUVEMENT NUMÉRO TROIS</pattern>
+<template><srai>MOUVEMENT NUMÉRO 3</srai></template>
+</category>
+
+
 <category><pattern>REPETE MOUVEMENT POUR LONDRES</pattern>
 <template><oob>
           <mrl>
@@ -1314,10 +1314,10 @@
             <param>brooke2()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT POUR LONDRES NUMERO 2</pattern>
+
+<category><pattern>MOUVEMENT POUR LONDRES NUMÉRO 2</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1325,15 +1325,15 @@
             <param>brooke()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT POUR LONDRES NUMERO DEUX</pattern>
-<template><srai>MOUVEMENT POUR LONDRES NUMERO 2</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT POUR LONDRES NUMERO 3</pattern>
+<category><pattern>MOUVEMENT POUR LONDRES NUMÉRO DEUX</pattern>
+<template><srai>MOUVEMENT POUR LONDRES NUMÉRO 2</srai></template>
+</category>
+
+
+<category><pattern>MOUVEMENT POUR LONDRES NUMÉRO 3</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1341,15 +1341,15 @@
             <param>gestureforlondon3()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT POUR LONDRES NUMERO TROIS</pattern>
-<template><srai>MOUVEMENT POUR LONDRES NUMERO 3</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO 4</pattern>
+<category><pattern>MOUVEMENT POUR LONDRES NUMÉRO TROIS</pattern>
+<template><srai>MOUVEMENT POUR LONDRES NUMÉRO 3</srai></template>
+</category>
+
+
+<category><pattern>MOUVEMENT NUMÉRO 4</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1357,15 +1357,15 @@
             <param>gestureforlondon4()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MOUVEMENT NUMERO QUATRE</pattern>
-<template><srai>MOUVEMENT NUMERO 4</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
-<category><pattern>VETEMENTS A DROITE</pattern>
+<category><pattern>MOUVEMENT NUMÉRO QUATRE</pattern>
+<template><srai>MOUVEMENT NUMÉRO 4</srai></template>
+</category>
+
+
+<category><pattern>VÊTEMENTS A DROITE</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1373,10 +1373,10 @@
             <param>rightclothes()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>RELACHE TES VETEMENTS</pattern>
+
+<category><pattern>RELÂCHE TES VÊTEMENTS</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1384,10 +1384,10 @@
             <param>releaseleftclothes()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PRESENTE-MOI TES MUSCLES</pattern>
+
+<category><pattern>PRÉSENTE-MOI TES MUSCLES</pattern>
 <template>J'ai de sacré muscles.
         <oob>
           <mrl>
@@ -1396,9 +1396,9 @@
             <param>muscle()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>SERRE LA MAIN</pattern>
 <template><random>
         <li>Serrons nous la main.</li>
@@ -1412,15 +1412,15 @@
             <param>shakehand()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>FAIRE LES MAINS</pattern>
 <template><srai>SERRE LA MAIN</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>MECONTENT</pattern>
+
+<category><pattern>MÉCONTENT</pattern>
 <template>Je ne suis pas content.
         <oob>
           <mrl>
@@ -1429,9 +1429,9 @@
             <param>unhappy()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ATTRAPE CECI</pattern>
 <template>Je prends l'objet.
         <oob>
@@ -1441,9 +1441,9 @@
             <param>takethis()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PIERRE FEUILLE CISEAU</pattern>
 <template>Rock paper scissors.
         <oob>
@@ -1453,9 +1453,9 @@
             <param>rockpaperscissors()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>READY</pattern>
 <template>Ready.
         <oob>
@@ -1465,9 +1465,9 @@
             <param>ready()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ROCK</pattern>
 <template>Rock.
         <oob>
@@ -1477,9 +1477,9 @@
             <param>rock()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>PAPER</pattern>
 <template>Paper.
         <oob>
@@ -1489,9 +1489,9 @@
             <param>paper()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>SCISSORS</pattern>
 <template>Scissors.
         <oob>
@@ -1501,9 +1501,9 @@
             <param>scissors()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>THAT WAS FUN</pattern>
 <template>C'était fun.
         <oob>
@@ -1513,9 +1513,9 @@
             <param>thatwasfun()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DEVINEZ QUOI</pattern>
 <template><oob>
           <mrl>
@@ -1524,9 +1524,9 @@
             <param>guesswhat()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DOIGT DROIT</pattern>
 <template>Je ferme mon doigt.
         <oob>
@@ -1536,9 +1536,9 @@
             <param>fingerright()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DOIGT GAUCHE</pattern>
 <template>Je ferme mon doigt.
         <oob>
@@ -1548,9 +1548,9 @@
             <param>fingerleft()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>VENEZ ICI</pattern>
 <template><oob>
           <mrl>
@@ -1559,9 +1559,9 @@
             <param>comehere()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>APPROACH</pattern>
 <template>APPROACH
         <oob>
@@ -1571,9 +1571,9 @@
             <param>approach()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>CASSE CECI</pattern>
 <template>Vous voulez que je casse ceci.
         <oob>
@@ -1583,10 +1583,10 @@
             <param>brake()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>CREATION PAR</pattern>
+
+<category><pattern>CRÉATION PAR</pattern>
 <template>Création par
         <oob>
           <mrl>
@@ -1595,10 +1595,10 @@
             <param>madeby()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>CREATIONS EN FRANCAIS</pattern>
+
+<category><pattern>CRÉATIONS EN FRANÇAIS</pattern>
 <template>.
         <oob>
           <mrl>
@@ -1607,9 +1607,9 @@
             <param>madebyfrench()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>TEST</pattern>
 <template>TEST
         <oob>
@@ -1619,9 +1619,9 @@
             <param>test1()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>APPELLE MAISON</pattern>
 <template><oob>
           <mrl>
@@ -1630,14 +1630,14 @@
             <param>phonehome()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>D'OU VIENS-TU</pattern>
 <template><srai>PHONE HOME</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>FAIS-MOI NEW YORK</pattern>
 <template><oob>
           <mrl>
@@ -1646,9 +1646,9 @@
             <param>newyork()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>JOUE TON MORCEAU</pattern>
 <template><oob>
           <mrl>
@@ -1657,10 +1657,10 @@
             <param>playsong()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ARRETE CE QUE TU FAIS</pattern>
+
+<category><pattern>ARRÊTE CE QUE TU FAIS</pattern>
 <template>J'arrête ce que je fais.
         <oob>
           <mrl>
@@ -1669,10 +1669,10 @@
             <param>stopit()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PORTE LE BEBE</pattern>
+
+<category><pattern>PORTE LE BÉBÉ</pattern>
 <template>Porte le bébé.
         <oob>
           <mrl>
@@ -1681,10 +1681,10 @@
             <param>carrybaby()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>VERIFIE LE SYSTEME</pattern>
+
+<category><pattern>VÉRIFIE LE SYSTÈME</pattern>
 <template>System check.
         <oob>
           <mrl>
@@ -1693,10 +1693,10 @@
             <param>systemcheck()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PRESENTE TON BALANCIER</pattern>
+
+<category><pattern>PRÉSENTE TON BALANCIER</pattern>
 <template>Je vais montrer mon mouvement de balancier.
         <oob>
           <mrl>
@@ -1705,9 +1705,9 @@
             <param>balance()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>A PROPOS DE STAR WARS</pattern>
 <template><oob>
           <mrl>
@@ -1716,9 +1716,9 @@
             <param>whataboutstarwars()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>DONNE-MOI L'HEURE</pattern>
 <template><oob>
           <mrl>
@@ -1727,9 +1727,9 @@
             <param>canyougivemethetime()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>ALESSANDRO</pattern>
 <template><oob>
           <mrl>
@@ -1738,10 +1738,10 @@
             <param>alessandro()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>PAS D'INQUIETUDE</pattern>
+
+<category><pattern>PAS D'INQUIÉTUDE</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1749,9 +1749,9 @@
             <param>dontworry()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>NIVEAU DE LA BATTERIE</pattern>
 <template><random>
           <li>Le niveau de batterie est</li>
@@ -1763,9 +1763,9 @@
             <param>batterylevel()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>RECONNAISSANCE FACIALE</pattern>
 <template>Je démarre la reconnaissance faciale<oob>
           <mrl>
@@ -1774,20 +1774,20 @@
             <param>facerecognizer()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>RECONNAISSANCE DE VISAGE</pattern>
 <template><srai>START FACE RECOGNIZER</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>RECONNAIT UN VISAGE</pattern>
 <template><srai>START FACE RECOGNIZER</srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>ARRETE LA RECONNAISSANCE FACIALE</pattern>
+
+<category><pattern>ARRÊTE LA RECONNAISSANCE FACIALE</pattern>
 <template>J'arrête la reconnaissance faciale<oob>
           <mrl>
             <service>python</service>
@@ -1795,10 +1795,10 @@
             <param>stopfacerecognizer()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>EXECUTE UNE SIGNATURE</pattern>
+
+<category><pattern>EXÉCUTE UNE SIGNATURE</pattern>
 <template>Donnez moi un papier et un stylo - Je vais faire cela pour vous <oob>
           <mrl>
             <service>python</service>
@@ -1806,10 +1806,10 @@
             <param>signature()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DEMARRE UTUBE</pattern>
+
+<category><pattern>DÉMARRE UTUBE</pattern>
 <template>D'accord <oob>
           <mrl>
             <service>python</service>
@@ -1817,14 +1817,14 @@
             <param>PlayUtub()</param>
           </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>DEMARRE YOUTUBE</pattern>
-<template><srai>DEMARRE UTUBE</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
+<category><pattern>DÉMARRE YOUTUBE</pattern>
+<template><srai>DÉMARRE UTUBE</srai></template>
+</category>
+
+
 <category><pattern>MONTRE-MOI UNE PHOTO DE *</pattern>
 <template>D'accord <oob>
         <mrl>
@@ -1833,15 +1833,15 @@
           <param>FindImage("<star/>")</param>
         </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category><pattern>MONTRE-MOI UNE PHOTO D'UNE *</pattern>
 <template><srai>MONTRE-MOI UNE PHOTO DE * </srai></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>REPARE LE MICROPHONE</pattern>
+
+<category><pattern>RÉPARE LE MICROPHONE</pattern>
 <template>D'accord <oob>
         <mrl>
           <service>python</service>
@@ -1849,11 +1849,11 @@
           <param>WebkitSpeechRecognitionON()</param>
         </mrl>
         </oob></template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category>
-        <pattern>DEMARRE FACEBOOK</pattern>
+        <pattern>DÉMARRE FACEBOOK</pattern>
         <template>
              <random>
                <li>Je démarre facebook </li>
@@ -1866,9 +1866,9 @@
           <param>BareBonesBrowserLaunch.openURL("http://www.facebook.com")</param>
           </mrl></oob>
         </template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category>
         <pattern>ROBOT RECHERCHE *</pattern>
         <template>
@@ -1883,9 +1883,9 @@
           <param>BareBonesBrowserLaunch.openURL("https://encrypted.google.com/#q=<star/>")</param>
           </mrl></oob>
         </template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category>
         <pattern>ROBOTIQUE RECHERCHE *</pattern>
         <template>D'accord c'est parti
@@ -1895,9 +1895,9 @@
           <param>inmoovsearch("<star/>")</param>
         </mrl></oob>
       </template>
-</category></topic>
+</category>
 
-<topic name="GESTURES"> 
+ 
 <category>
         <pattern>YOUTUBE  *</pattern>
         <template>Voici des propositions de vidéo
@@ -1907,11 +1907,11 @@
           <param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param>
         </mrl></oob>    
         </template>    
-</category></topic>
+</category>
 
-<topic name="GESTURES">
+
 <category>
-        <pattern>MODE DE VIE ALEATOIRE</pattern>
+        <pattern>MODE DE VIE ALÉATOIRE</pattern>
         <template>Merci
         <oob><mrl>
           <service>python</service>
@@ -1919,16 +1919,16 @@
           <param>VieAleatoire()</param>
         </mrl></oob>
       </template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>VIE ALEATOIRE</pattern>
-<template><srai>MODE DE VIE ALEATOIRE</srai></template>
-</category></topic>
 
-<topic name="GESTURES">
+<category><pattern>VIE ALÉATOIRE</pattern>
+<template><srai>MODE DE VIE ALÉATOIRE</srai></template>
+</category>
+
+
 <category>
-        <pattern>STOP MODE DE VIE ALEATOIRE</pattern>
+        <pattern>STOP MODE DE VIE ALÉATOIRE</pattern>
         <template>D accord
         <oob><mrl>
           <service>python</service>
@@ -1936,11 +1936,11 @@
           <param>VieAleatoireStop()</param>
         </mrl></oob>
       </template>
-</category></topic>
+</category>
 
-<topic name="GESTURES">
-<category><pattern>STOP VIE ALEATOIRE</pattern>
-<template><srai>STOP MODE DE VIE ALEATOIRE</srai></template>
-</category></topic>
 
+<category><pattern>STOP VIE ALÉATOIRE</pattern>
+<template><srai>STOP MODE DE VIE ALÉATOIRE</srai></template>
+</category>
+</topic>
 </aiml>
