@@ -15,7 +15,7 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 isNervoboardRelayActivated=0
 
 isNervoboardRelayActivated=ThisServicePartConfig.getboolean('MAIN', 'isNervoboardRelayActivated') 
-NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
+
 
 PinLeftNervoPower1=0
 PinLeftNervoPower2=0
@@ -42,16 +42,22 @@ def relayAction(ard,pin,value):
 	ard.digitalWrite(pin,value)
 
 if isNervoboardRelayActivated==1:
-	talkEvent(lang_startingNervoPower)
-	if PinLeftNervoPower1>0:
-		relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower1,0)
-	if PinLeftNervoPower2>0:
-		relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower2,0)
-	if PinLeftNervoPower3>0:
-		relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower3,0)
-	if PinRightNervoPower1>0:
-		relayAction(NervoboardRelayControlerArduino,PinRightNervoPower1,0)
-	if PinRightNervoPower2>0:
-		relayAction(NervoboardRelayControlerArduino,PinRightNervoPower2,0)
-	if PinRightNervoPower3>0:
-		relayAction(NervoboardRelayControlerArduino,PinRightNervoPower3,0)
+	try:
+		NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
+		talkEvent(lang_startingNervoPower)
+		if PinLeftNervoPower1>0:
+			relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower1,0)
+		if PinLeftNervoPower2>0:
+			relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower2,0)
+		if PinLeftNervoPower3>0:
+			relayAction(NervoboardRelayControlerArduino,PinLeftNervoPower3,0)
+		if PinRightNervoPower1>0:
+			relayAction(NervoboardRelayControlerArduino,PinRightNervoPower1,0)
+		if PinRightNervoPower2>0:
+			relayAction(NervoboardRelayControlerArduino,PinRightNervoPower2,0)
+		if PinRightNervoPower3>0:
+			relayAction(NervoboardRelayControlerArduino,PinRightNervoPower3,0)
+	except:
+		errorSpokenFunc('BAdrduinoChoosen','nervo board relay')
+		isNervoboardRelayActivated=0
+		pass

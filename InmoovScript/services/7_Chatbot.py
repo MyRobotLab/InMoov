@@ -6,8 +6,8 @@
 # ##############################################################################
 # MRL SERVICE CALL
 # ##############################################################################
-Runtime.start("htmlFilter", "HtmlFilter")
-chatBot=Runtime.createAndStart("chatBot", "ProgramAB")
+Runtime.createAndStart("htmlFilter", "HtmlFilter")
+chatBot=Runtime.start("chatBot", "ProgramAB")
 if EarInterpretEngine=="chatbot":
 	if (os.path.isdir(RuningFolder+'bots/'+MyLanguage+'/aiml')):
 		try:
