@@ -8,7 +8,7 @@
 # ##############################################################################
 
 python.subscribe(ear.getName(),"recognized")
-
+chatBot=Runtime.create("chatBot", "ProgramAB")
 # ##############################################################################
 # MRL SERVICE TWEAKS
 # ##############################################################################
@@ -17,6 +17,7 @@ python.subscribe(ear.getName(),"recognized")
 def onRecognized(text):
 	if DEBUG==1:
 		print "onRecognized : ",text
+	chatBot.getResponse(text.replace("'", " "))
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS

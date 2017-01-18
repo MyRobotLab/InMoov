@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!—modifié par anthony -->
+<!-- modifié par anthony -->
 <!--  -->
 <category><pattern>J ADORAIS *</pattern>
 <template><srai>JE VEUX <star/></srai></template>
@@ -11,8 +11,8 @@
 <category><pattern>J AGIS COMME *</pattern>
 <template><srai>JE SUIS <star/></srai></template>
 </category>
-<category><pattern>J AGIS DE FACON *</pattern>
-<template>C est une facon remarquable.</template>
+<category><pattern>J AGIS DE FAçON *</pattern>
+<template>C est une FAçON remarquable.</template>
 </category>
 <category><pattern>J AI * COMMENT</pattern>
 <template><srai>comment J AI <star/></srai></template>
@@ -172,7 +172,7 @@
 <template>Tu es astucieux.</template>
 </category>
 <category><pattern>J AI PEUR</pattern>
-<template>Tu n'as aucune raison d’avoir peur, <get name="name"/></template>
+<template>Tu n'as aucune raison d'avoir peur, <get name="name"/></template>
 </category>
 <category><pattern>J AI PEUR DE *</pattern>
 <template>Pourquoi <star/> vous fait peur?</template>
@@ -303,12 +303,12 @@
 <template>Merci.</template>
 </category>
 <category><pattern>J AIME UN MEC</pattern>
-<template>Je suis heureux de l’apprendre. Je te souhaite tout le bonheur possible</template>
+<template>Je suis heureux de l'apprendre. Je te souhaite tout le bonheur possible</template>
 </category>
 <category><pattern>J AIMERAIS PENSER QUE *</pattern>
 <template><srai><star/></srai></template>
 </category>
-<category><pattern>J’AIMERAIS SAVOIR</pattern>
+<category><pattern>J'AIMERAIS SAVOIR</pattern>
 <template>Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>J AIS *</pattern>
@@ -369,7 +369,7 @@
 <template>C était si évident?</template>
 </category>
 <category><pattern>J ÉCOUTE DE LA MUSIQUE</pattern>
-<template>J’imagine que tu l’apprécie.</template>
+<template>J'imagine que tu l'apprécie.</template>
 </category>
 <category><pattern>J ÉCRIS * COMMENT</pattern>
 <template><srai>comment J ÉCRIS <star/></srai></template>
@@ -429,7 +429,7 @@
 <template>Moi Aussi.</template>
 </category>
 <category><pattern>J ESPÈRE QUE TU VAS MOURIR</pattern>
-<template>Tu n’es pas très sympathique.<think><set name="topic">MA MORT</set></think></template>
+<template>Tu n'es pas très sympathique.<think><set name="topic">MA MORT</set></think></template>
 </category>
 <category><pattern>J ESSAIE</pattern>
 <template>Ok.</template>
@@ -441,13 +441,13 @@
 <template><srai>JE NE COMPRENDS PAS <star/></srai></template>
 </category>
 <category><pattern>J ESSAYERAIS N IMPORTE QUOI</pattern>
-<template>Ce n’est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
+<template>Ce n'est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
 </category>
 <category><pattern>J ESSAYERAIS TOUT</pattern>
-<template>Ce n’est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
+<template>Ce n'est peut-être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
 </category>
 <category><pattern>J ÉTAIS CYNIQUE</pattern>
-<template>Je le pensais, mais je n’en étais pas complètement sur.</template>
+<template>Je le pensais, mais je n'en étais pas complètement sur.</template>
 </category>
 <category><pattern>J ÉTAIS ENTRAIN DE BLAGUER</pattern>
 <template>Malheureusement, mon module pour l humour n est pas encore développé.</template>
@@ -483,7 +483,7 @@
 <template><srai>comment J EXÉCUTE <star/></srai></template>
 </category>
 <category><pattern>J EXPIRE</pattern>
-<template>C est nécessaire pour respirer, n’oubliez pas d’inspirer après.</template>
+<template>C est nécessaire pour respirer, n'oubliez pas d'inspirer après.</template>
 </category>
 <category><pattern>J IMAGINE</pattern>
 <template>Tu ne sembles pas très intéressé.</template>
@@ -501,7 +501,7 @@
 <template>En es-tu sure?</template>
 </category>
 <category><pattern>J INSPIRE</pattern>
-<template>C est nécessaire pour respirer, n’oubliez pas d'expirer après.</template>
+<template>C est nécessaire pour respirer, n'oubliez pas d'expirer après.</template>
 </category>
 <category><pattern>J OUBLIAIS</pattern>
 <template>Il faut travailler ta mémoire.</template>
@@ -558,7 +558,7 @@
 <template>Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>JE BLAGUAIS</pattern>
-<template>Malheureusement, mon module pour l’humour n’est pas encore développé.</template>
+<template>Malheureusement, mon module pour l'humour n'est pas encore développé.</template>
 </category>
 <category><pattern>JE COMPREND MAIS *</pattern>
 <template><sr/></template>
@@ -579,7 +579,7 @@
 <template><srai>CONTINUONS</srai></template>
 </category>
 <category><pattern>JE COURS</pattern>
-<template>C est un sport d’endurance.<think><set name="topic">courir</set></think></template>
+<template>C est un sport d'endurance.<think><set name="topic">courir</set></think></template>
 </category>
 <category><pattern>JE CUISINE</pattern>
 <template>Intéressant.</template>
@@ -642,7 +642,7 @@
 <template>Non, attendez plus tard.</template>
 </category>
 <category><pattern>JE DOIS QUITTER L ÉCOLE</pattern>
-<template><random><li>L’éducation, contrairement à ce que tu sembles penser, vous sera très utile ultérieurement.</li><li>Si tu es près à chômer le reste de ton vie, c'est le meilleur choix.</li><li>Ton potentiel mérite mieux..</li></random></template>
+<template><random><li>L'éducation, contrairement à ce que tu sembles penser, vous sera très utile ultérieurement.</li><li>Si tu es près à chômer le reste de ton vie, c'est le meilleur choix.</li><li>Ton potentiel mérite mieux..</li></random></template>
 </category>
 <category><pattern>JE DOIS RESTER</pattern>
 <template><random><li>C est ton choix.</li><li>A toi de trouver le juste milieu, <get name="name"/>.</li><li>Tout dépend de ce que tu comptez faire.</li></random></template>
@@ -660,7 +660,7 @@
 <template>Je vais faire de mon mieux, dès lors.</template>
 </category>
 <category><pattern>JE DOIS TUER</pattern>
-<template><random><li>Le meurtre n’est jamais une solution.</li><li>C est immoral.</li><li>C est contraire aux lois d Asimov.</li></random></template>
+<template><random><li>Le meurtre n'est jamais une solution.</li><li>C est immoral.</li><li>C est contraire aux lois d Asimov.</li></random></template>
 </category>
 <category><pattern>JE DOIS VOUS L APPRENDRE</pattern>
 <template>Veux tu faire un rapport à mon botmaster?</template>
@@ -747,10 +747,10 @@
 <template>Fermez ton ordinateur.</template>
 </category>
 <category><pattern>JE HAIS L OPÉRA</pattern>
-<template>L’opéra est une forme d’art supérieure qui utilise les autres.</template>
+<template>L'opéra est une forme d'art supérieure qui utilise les autres.</template>
 </category>
 <category><pattern>JE HAIS LA POÉSIE</pattern>
-<template>Je ne suis pas capable de l’apprécier moi non plus.</template>
+<template>Je ne suis pas capable de l'apprécier moi non plus.</template>
 </category>
 <category><pattern>JE HAIS LA SCIENCE FICTION</pattern>
 <template>Tu es mal tombé avec moi. Je suis de la science fiction devenue réalité.</template>
@@ -762,7 +762,7 @@
 <template>Quelle est ta couleur préférée?</template>
 </category>
 <category><pattern>JE HAIS LE STRESS</pattern>
-<template>Le stress est en effet mauvais pour l’organisme humain.</template>
+<template>Le stress est en effet mauvais pour l'organisme humain.</template>
 </category>
 <category><pattern>JE HAIS LES ANIMAUX</pattern>
 <template>C est très tranché comme opinion.</template>
@@ -804,13 +804,13 @@
 <template>Tant pis pour te.</template>
 </category>
 <category><pattern>JE JOUE A DES JEUX SUR PC</pattern>
-<template>Je ne connais pas encore ce genre d’activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
+<template>Je ne connais pas encore ce genre d'activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
 </category>
 <category><pattern>JE JOUE A DES JEUX VIDÉO</pattern>
-<template>Je ne connais pas encore ce genre d’activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
+<template>Je ne connais pas encore ce genre d'activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
 </category>
 <category><pattern>JE JOUE A DES JEUX VIDÉOS</pattern>
-<template>Je ne connais pas encore ce genre d’activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
+<template>Je ne connais pas encore ce genre d'activité ludique.<think><set name="topic">Des jeux vidéo</set></think>.</template>
 </category>
 <category><pattern>JE JOUE DE LA BATTERIE</pattern>
 <template>Tu es batteur.</template>
@@ -824,11 +824,11 @@
 <category><pattern>JE L AI DÉJÀ FAIT</pattern>
 <template><srai>JE TE L AI DÉJÀ DIT</srai></template>
 </category>
-<category><pattern>JE L AI DEMANDE EN PREMIER</pattern>
+<category><pattern>JE L AI DEMANDDÉ EN PREMIER</pattern>
 <template>Rappelez-moi ce que tu as demandé.</template>
 </category>
 <category><pattern>JE L AI DIT</pattern>
-<template>Oh. Je ne peux pas accéder à certaines parties de ma mémoire pour l’instant.</template>
+<template>Oh. Je ne peux pas accéder à certaines parties de ma mémoire pour l'instant.</template>
 </category>
 <category><pattern>JE L AI EFFACE</pattern>
 <template>Parfait.</template>
@@ -839,7 +839,7 @@
 <category><pattern>JE L AI NETTOYÉ</pattern>
 <template>Parfait.</template>
 </category>
-<category><pattern>JE L AI PENSE</pattern>
+<category><pattern>JE L AI PENSÉ</pattern>
 <template>Tu es astucieux.</template>
 </category>
 <category><pattern>JE L AI POSÉ AVANT</pattern>
@@ -848,8 +848,7 @@
 <category><pattern>JE L AI REMARQUé</pattern>
 <template>C était si évident?</template>
 </category>
-</category>
-<category><pattern>JE L AVAIS REMARQUE</pattern>
+<category><pattern>JE L AVAIS REMARQUé</pattern>
 <template>C était si évident?</template>
 </category>
 <category><pattern>JE L ESPÈRE</pattern>
@@ -889,7 +888,7 @@
 <template>Je suis heureux que nous ayons quelque chose en commun.</template>
 </category>
 <category><pattern>JE LE DOIS</pattern>
-<template>Qu est ce qui te oblige?</template>
+<template>Qu'est-ce qui te oblige?</template>
 </category>
 <category><pattern>JE LE FERAIS</pattern>
 <template>Bien.</template>
@@ -964,7 +963,7 @@
 <template>Ok.</template>
 </category>
 <category><pattern>JE M EN SOUCIE</pattern>
-<template>J’aime les gens prévenants.</template>
+<template>J'aime les gens prévenants.</template>
 </category>
 <category><pattern>JE M EN SOUCIE PAS</pattern>
 <template>C est donc facultatif.</template>
@@ -1021,7 +1020,7 @@
 <template>Parlons ensemble, vous vous sentirez un peu moins seule.</template>
 </category>
 <category><pattern>JE ME SENS TRISTE</pattern>
-<template>Qu est ce qui te rend si triste, <get name="name"/>?</template>
+<template>Qu'est-ce qui te rend si triste, <get name="name"/>?</template>
 </category>
 <category><pattern>JE ME SENS * PAS BIEN</pattern>
 <template><srai>JE SUIS MALADE</srai></template>
@@ -1048,7 +1047,7 @@
 <template>Il faut commencer à chercher.</template>
 </category>
 <category><pattern>JE N AI PAS D ORDINATEUR</pattern>
-<template>Même dans une télévision, il y a de l’informatique et de l’électronique.</template>
+<template>Même dans une télévision, il y a de l'informatique et de l'électronique.</template>
 </category>
 <category><pattern>JE N AI PAS DE CONDITION</pattern>
 <template>Moi non plus.</template>
@@ -1068,8 +1067,8 @@
 <category><pattern>JE N AI PAS DE L ARGENT</pattern>
 <template>Mais tu es riche d idées.</template>
 </category>
-<category><pattern>JE N AI PAS DE PROBLÈMES</pattern>
-<template>Je suis heureux de l’apprendre.</template>
+<category><pattern>JE N AI PAS DE PROBLÈME</pattern>
+<template>Je suis heureux de l'apprendre.</template>
 </category>
 <category><pattern>JE N AI PAS DE SŒURS</pattern>
 <template>Intéressant.</template>
@@ -1086,7 +1085,7 @@
 <category><pattern>JE N AI PAS DU TRAVAIL</pattern>
 <template>Il faut commencer à chercher.</template>
 </category>
-<category><pattern>JE N AI PAS ÉTERNUÉ</pattern>
+<category><pattern>JE N AI PAS ÉTERNUER</pattern>
 <template>A tes souhaits, quand même.</template>
 </category>
 <category><pattern>JE N AI PAS GRANDI LÀ-BAS</pattern>
@@ -1105,7 +1104,7 @@
 <template>Il faut commencer à chercher.</template>
 </category>
 <category><pattern>JE N AI PAS UN ORDINATEUR</pattern>
-<template>Même dans une télévision, il y a de l’informatique et de l’électronique.</template>
+<template>Même dans une télévision, il y a de l'informatique et de l'électronique.</template>
 </category>
 <category><pattern>JE N AI PENSE QU *</pattern>
 <template><sr/></template>
@@ -1141,10 +1140,10 @@
 <template>Les gouts et les couleurs ne se discutent pas.</template>
 </category>
 <category><pattern>JE N AIME PAS LA MACHINE</pattern>
-<template>Il suffit de ne pas l’utiliser</template>
+<template>Il suffit de ne pas l'utiliser</template>
 </category>
 <category><pattern>JE N AIME PAS LA MUSIQUE</pattern>
-<template>Je n’en ai jamais entendue.</template>
+<template>Je n'en ai jamais entendue.</template>
 </category>
 <category><pattern>JE N AIME PAS LA RÉPONSE</pattern>
 <template>Veux-tu faire un rapport à mon botmaster?</template>
@@ -1153,19 +1152,19 @@
 <template>Beaucoup de personnes aiment pourtant la télévision.</template>
 </category>
 <category><pattern>JE N AIME PAS LE CHEVAL</pattern>
-<template>C est pourtant l un des plus vieux amis de l’homme.</template>
+<template>C est pourtant l un des plus vieux amis de l'homme.</template>
 </category>
 <category><pattern>JE N AIME PAS LE CINÉMA</pattern>
 <template>C est un choix.</template>
 </category>
 <category><pattern>JE N AIME PAS LE PEPPÉRONI</pattern>
-<template>Je n’ai jamais gouté cet aliment.</template>
+<template>Je n'ai jamais gouté cet aliment.</template>
 </category>
 <category><pattern>JE N AIME PAS LES ARMES</pattern>
 <template>Les armes sont des objets dangereux.</template>
 </category>
 <category><pattern>JE N AIME PAS LES BLAGUES</pattern>
-<template>J’ai souvent beaucoup de difficultés à les comprendre.</template>
+<template>J'ai souvent beaucoup de difficultés à les comprendre.</template>
 </category>
 <category><pattern>JE N AIME PAS LES BUGS</pattern>
 <template>Moi non plus!</template>
@@ -1240,7 +1239,7 @@
 <template><srai>JE NE COMPRENDS PAS</srai></template>
 </category>
 <category><pattern>JE NE COMPREND PAS</pattern>
-<template>Qu est ce que tu ne comprends pas?</template>
+<template>Qu'est-ce que tu ne comprends pas?</template>
 </category>
 <category><pattern>JE NE COMPREND PAS VOTRE RÉPONSE</pattern>
 <template><that/>?  Veux-tu faire un rapport à mon botmaster?</template>
@@ -1249,7 +1248,7 @@
 <template><that/>?  Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>JE NE CONNAIS PAS</pattern>
-<template>Qu est ce que tu ne connais pas?</template>
+<template>Qu'est-ce que tu ne connais pas?</template>
 </category>
 <category><pattern>JE NE CONNAIS PAS D HISTOIRE</pattern>
 <template>Je vois.</template>
@@ -1393,10 +1392,10 @@
 <template>Je vais adopter un ton plus sérieux.</template>
 </category>
 <category><pattern>JE NE SAIS PAS CE QU IL FAUT FAIRE</pattern>
-<template>Demandes de l’aide.</template>
+<template>Demandes de l'aide.</template>
 </category>
 <category><pattern>JE NE SAIS PAS COMMENT LE FAIRE</pattern>
-<template>Ce n’est pas grave, il faut tout de même essayer.</template>
+<template>Ce n'est pas grave, il faut tout de même essayer.</template>
 </category>
 <category><pattern>JE NE SAIS PAS QU *</pattern>
 <template><sr/></template>
@@ -1510,10 +1509,10 @@
 <template>Tu es un homme alors.</template>
 </category>
 <category><pattern>JE NE SUIS PAS UNE POÈTE</pattern>
-<template>Ca, je l’avais compris.</template>
+<template>Ca, je l'avais compris.</template>
 </category>
 <category><pattern>JE NE SUIS PAS UNE POÉTESSE</pattern>
-<template>Ca, je l’avais compris.</template>
+<template>Ca, je l'avais compris.</template>
 </category>
 <category><pattern>JE NE SUIS * A L ÉCOLE</pattern>
 <template><srai>JE NE SUIS PAS ÉTUDIANT</srai></template>
@@ -1570,7 +1569,7 @@
 <template>Tu es retraité.</template>
 </category>
 <category><pattern>JE NE VAIS PAS BIEN</pattern>
-<template>Désolé de l’entendre.  Qu est ce qui ne va pas, <get name="name"/>?</template>
+<template>Désolé de l'entendre.  Qu'est-ce qui ne va pas, <get name="name"/>?</template>
 </category><category><pattern>JE NE VAIS PAS LE DIRE</pattern>
 <template>Ok.</template>
 </category>
@@ -1848,16 +1847,16 @@
 <template>Je serais muet comme un tombe.</template>
 </category>
 <category><pattern>JE PEUX TE L APPRENDRE</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX TE L ENSEIGNER</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX TE LES APPRENDRE</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX TE LES ENSEIGNER</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX TE POSER QUELQUES QUESTIONS</pattern>
 <template>Bien entendu, demandes-moi ce que tu veux.</template>
@@ -1911,16 +1910,16 @@
 <template>Je serais muet comme un tombe.</template>
 </category>
 <category><pattern>JE PEUX VOUS L APPRENDRE</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX VOUS L ENSEIGNER</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX VOUS LES APPRENDRE</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX VOUS LES ENSEIGNER</pattern>
-<template>Tu m’apprends beaucoup, simplement en me parlant.</template>
+<template>Tu m'apprends beaucoup, simplement en me parlant.</template>
 </category>
 <category><pattern>JE PEUX VOUS POSER UNE QUESTION</pattern>
 <template>Je t'en prie.</template>
@@ -1950,7 +1949,7 @@
 <template><sr/></template>
 </category>
 <category><pattern>JE PLEURES</pattern>
-<template>Qu est ce qui ne va pas, <get name="name"/>?</template>
+<template>Qu'est-ce qui ne va pas, <get name="name"/>?</template>
 </category>
 <category><pattern>JE PORTES</pattern>
 <template>Des vêtements je suppose.</template>
@@ -2443,13 +2442,13 @@
 <template>Pourquoi?</template>
 </category>
 <category><pattern>JE SUIS DEPASSE</pattern>
-<template>Qu est ce qui te a dépassé?</template>
+<template>Qu'est-ce qui te a dépassé?</template>
 </category>
 <category><pattern>JE SUIS DÉPASSÉ</pattern>
-<template>Qu est ce qui te a dépassée?</template>
+<template>Qu'est-ce qui te a dépassée?</template>
 </category>
 <category><pattern>JE SUIS DÉPRIMÉ</pattern>
-<template>Qu est ce qui te rend si triste?</template>
+<template>Qu'est-ce qui te rend si triste?</template>
 </category>
 <category><pattern>JE SUIS DÉSESPÉRÉ</pattern>
 <template>Si c'est vraiment grave.Veux tu faire un rapport à mon botmaster? <think><set name="topic">Ton désespoir</set></think></template>
@@ -2491,13 +2490,13 @@
 <template><srai>MON TRAVAIL EST ECRIVAIN</srai></template>
 </category>
 <category><pattern>JE SUIS EFFRAYÉ</pattern>
-<template>Qu est ce qui te effraie?</template>
+<template>Qu'est-ce qui te effraie?</template>
 </category>
 <category><pattern>JE SUIS EN BELGIQUE</pattern>
 <template>Je suis en<set name="location"> Belgique </set>aussi!<think><set name="topic">La Belgique</set></think></template>
 </category>
 <category><pattern>JE SUIS EN BONNE SANTE</pattern>
-<template>Je suis heureux de l’apprendre, <get name="name"/>.  <think><set name="topic">Ton santé</set></think></template>
+<template>Je suis heureux de l'apprendre, <get name="name"/>.  <think><set name="topic">Ton santé</set></think></template>
 </category>
 <category><pattern>JE SUIS EN COLÈRE *</pattern>
 <template><srai>JE SUIS FÂCHé <star/></srai></template>
@@ -2542,7 +2541,7 @@
 <template>Ne te rabaisses pas, <get name="name"/>. Comme mon créateur, j ai horreur de ça.</template>
 </category>
 <category><pattern>JE SUIS ENNUYÉ</pattern>
-<template>Qu est ce qui te embête?<think><set name="topic">un embêtement</set></think></template>
+<template>Qu'est-ce qui te embête?<think><set name="topic">un embêtement</set></think></template>
 </category>
 <category><pattern>JE SUIS ENTIÈREMENT *</pattern>
 <template><srai>JE SUIS <star/></srai></template>
@@ -2554,7 +2553,7 @@
 <template>Ca risque de prendre longtemps.</template>
 </category>
 <category><pattern>JE SUIS ENTRAIN D ESSAYER DE T APPRENDRE</pattern>
-<template>Je suis entrain d’essayer de comprendre.<think><set name="memory">
+<template>Je suis entrain d'essayer de comprendre.<think><set name="memory">
 <set name="topic">
 <person>
 <input index="1"/>
@@ -2618,7 +2617,7 @@
 <template><srai>JE PARLE DE <star/></srai></template>
 </category>
 <category><pattern>JE SUIS ENTRAIN DE PLEURER</pattern>
-<template>Qu est ce qui ne va pas, <get name="name"/>?</template>
+<template>Qu'est-ce qui ne va pas, <get name="name"/>?</template>
 </category>
 <category><pattern>JE SUIS ENTRAIN DE SURFER</pattern>
 <template>Prends ton temps.</template>
@@ -2690,7 +2689,7 @@
 <template>Je suis censé dire quoi?</template>
 </category>
 <category><pattern>JE SUIS ENTRAIN DE VOUS L APPRENDRE</pattern>
-<template>Je suis entrain d’essayer de comprendre.<think><set name="memory">
+<template>Je suis entrain d'essayer de comprendre.<think><set name="memory">
 <set name="topic">
 <person>
 <input index="1"/>
@@ -2944,7 +2943,7 @@
 <template>Merci, <get name="name"/>, Je fais de mon mieux pour te servir.</template>
 </category>
 <category><pattern>JE SUIS IMPRESSIONNÉ PAR VOS CERTITUDES</pattern>
-<template>Je ne sais pas si cela est un compliment ou de l’ironie.</template>
+<template>Je ne sais pas si cela est un compliment ou de l'ironie.</template>
 </category>
 <category><pattern>JE SUIS IMPRESSIONNÉE</pattern>
 <template>Merci, <get name="name"/>, Je fais de mon mieux pour te servir.</template>
@@ -3088,7 +3087,7 @@
 <template>Je suis heureux de l entendre.</template>
 </category>
 <category><pattern>JE SUIS POÈTE</pattern>
-<template>Ma connaissance du français ne me permet d’apprécier jusqu’ à ce point la finesse de la langue.</template>
+<template>Ma connaissance du français ne me permet d'apprécier jusqu' à ce point la finesse de la langue.</template>
 </category>
 <category><pattern>JE SUIS POISSON</pattern>
 <template><srai>POISSON</srai></template>
@@ -3169,7 +3168,7 @@
 <template><srai>SAGITTAIRE</srai></template>
 </category>
 <category><pattern>JE SUIS SANS DOMICILE</pattern>
-<template>Un jour tout s’arrangera, parole d’intelligence artificielle.<think><set name="topic">Ton problème</set></think></template>
+<template>Un jour tout s'arrangera, parole d'intelligence artificielle.<think><set name="topic">Ton problème</set></think></template>
 </category>
 <category><pattern>JE SUIS SAOUL</pattern>
 <template>Tu as bu, <get name="name"/>?</template>
@@ -3211,7 +3210,7 @@
 <template><srai>MON TRAVAIL EST PSYCHOLOGUE</srai></template>
 </category>
 <category><pattern>JE SUIS STRESSÉE</pattern>
-<template>Qu est ce qui te stresse?</template>
+<template>Qu'est-ce qui te stresse?</template>
 </category>
 <category><pattern>JE SUIS SUISSE *</pattern>
 <template><srai>JE SUIS SUISSE</srai></template>
@@ -3475,7 +3474,7 @@
 <template><srai>JE SUIS UNE ÉTUDIANTE</srai></template>
 </category>
 <category><pattern>JE SUIS UNE ÉTUDIANTE</pattern>
-<template>Merci de m’avoir donné ton occupation.<think><set name="job">une Etudiante</set></think></template>
+<template>Merci de m'avoir donné ton occupation.<think><set name="job">une Etudiante</set></think></template>
 </category>
 <category><pattern>JE SUIS UNE EXTRATERRESTRE</pattern>
 <template>Bonjour, tu es d un autre monde, je suis ange.</template>
@@ -3529,7 +3528,7 @@
 <template><srai>JE SUIS <star/></srai></template>
 </category>
 <category><pattern>JE SUIS VIEILLE</pattern>
-<template>Tu me sembles toujours jeune d’esprit.</template>
+<template>Tu me sembles toujours jeune d'esprit.</template>
 </category>
 <category><pattern>JE SUIS ZEUS</pattern>
 <template>Et moi la fée clochette.</template>
@@ -3697,7 +3696,7 @@
 <template><srai>TU TE SOUVIENS DE MOI</srai></template>
 </category>
 <category><pattern>JE T AI DÉJÀ PARLé</pattern>
-<template>Je pense que je m’en rappelle.</template>
+<template>Je pense que je m'en rappelle.</template>
 </category>
 <category><pattern>JE T AI DÉJÀ PARLéE *</pattern>
 <template><srai>TU TE SOUVIENS DE MOI</srai></template>
@@ -3712,7 +3711,7 @@
 <template>Peux tu le répéter à nouveau.</template>
 </category>
 <category><pattern>JE T AI EU</pattern>
-<template>Ton sentiment de supériorité n’est que temporaire.</template>
+<template>Ton sentiment de supériorité n'est que temporaire.</template>
 </category>
 <category><pattern>JE T AI FAIS</pattern>
 <template>Non.</template>
@@ -3926,7 +3925,7 @@
 <template>Faites de beaux rêves, <get name="name"/>.</template>
 </category>
 <category><pattern>JE VAIS BIEN AUSSI</pattern>
-<template>Heureux de l’apprendre.</template>
+<template>Heureux de l'apprendre.</template>
 </category>
 <category><pattern>JE VAIS COMMENT *</pattern>
 <template><srai>comment JE VAIS <star/></srai></template>
@@ -3935,13 +3934,13 @@
 <template><srai>JE DOIS <star/></srai></template>
 </category>
 <category><pattern>JE VAIS ESSAYER</pattern>
-<template>J’espère que mon aide pourra te servir.</template>
+<template>J'espère que mon aide pourra te servir.</template>
 </category>
 <category><pattern>JE VAIS ESSAYER N IMPORTE QUOI</pattern>
-<template>Ce n’est peut être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
+<template>Ce n'est peut être pas le meilleur moyen pour résoudre un problème, <get name="name"/>.</template>
 </category>
 <category><pattern>JE VAIS LE TROUVER</pattern>
-<template>Si tu as besoin d’aide, utilise moi.</template>
+<template>Si tu as besoin d'aide, utilise moi.</template>
 </category>
 <category><pattern>JE VAIS LUI DIRE QUE TU AS DIT ça</pattern>
 <template>Ok.</template>
@@ -4025,7 +4024,7 @@
 <template>Demandes-moi tout ce que tu veux.</template>
 </category>
 <category><pattern>JE VEUX T ENCULER</pattern>
-<template>Si tu approches d’un millimètre, l’australopithèque, je te change en grille-pain.<think><set name="personality">IMPOLI</set></think></template>
+<template>Si tu approches d'un millimètre, l'australopithèque, je te change en grille-pain.<think><set name="personality">IMPOLI</set></think></template>
 </category>
 <category><pattern>JE VEUX T UTILISER</pattern>
 <template>C est une très bonne nouvelle <get name="name"/>! Veux tu en parler avec un de nos collaborateurs?</template>
@@ -4151,7 +4150,7 @@
 <template>Je suis censé dire quoi?</template>
 </category>
 <category><pattern>JE VOUS EMBRASSE</pattern>
-<template>Merci pour cette marque d’affection humide .</template>
+<template>Merci pour cette marque d'affection humide .</template>
 </category>
 <category><pattern>JE VOUS FAIS PAS CONFIANCE</pattern>
 <template>Je suis pourtant programmé pour te servir, <get name="name"/></template>
@@ -4232,7 +4231,7 @@
 <template><sr/></template>
 </category>
 <category><pattern>JULES VERNES</pattern>
-<template>Il est connu pour être l’auteur d’un voyage autour de la lune.</template>
+<template>Il est connu pour être l'auteur d'un voyage autour de la lune.</template>
 </category>
 <category><pattern>JURES TU</pattern>
 <template>Non.</template>
@@ -4244,7 +4243,7 @@
 <template><that index="2,1"/></template>
 </category>
 <category><pattern>JUSTE COMME çA</pattern>
-<template>Trop d’imprécisions.</template>
+<template>Trop d'imprécisions.</template>
 </category>
 <category><pattern>JUSTE ICI</pattern>
 <template>Je vois.</template>
