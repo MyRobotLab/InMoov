@@ -126,6 +126,6 @@ if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
 	subconsciousMouth=mouth
 if languagePackLoaded==0:
 	errorSpokenFunc('BadLanguagePack')
-	
+
 talkEvent(lang_startingMouth)
 talkEvent(lang_whatIsThisLanguage)
