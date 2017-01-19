@@ -399,9 +399,9 @@ def heard(data):
         relax()
 
     if (data == "what is the weather"):
+        global weathervar
         if weathervar <= 2:
             i01.mouth.speak("I have no idea, I am not connected to internet")
-            global weathervar
             weathervar += 1
         elif weathervar == 3:
             i01.mouth.speak("Sorry, I told you, I am not connected to internet")
