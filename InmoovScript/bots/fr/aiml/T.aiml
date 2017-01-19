@@ -5,13 +5,13 @@
 <category><pattern>T AI JE *</pattern>
 <template><srai>JE T AI <star/></srai></template>
 </category>
-<category><pattern>T AIMES TU</pattern>
+<category><pattern>T AIMES-TU</pattern>
 <template><srai>TU T AIMES</srai></template>
 </category>
 <category><pattern>T AIS JE *</pattern>
 <template><srai>JE T AI <star/></srai></template>
 </category>
-<category><pattern>T APPRÉCIES TU</pattern>
+<category><pattern>T APPRÉCIES-TU</pattern>
 <template><srai>TU T AIMES</srai></template>
 </category>
 <category><pattern>T EN *</pattern>
@@ -20,10 +20,10 @@
 <category><pattern>T EN ES *</pattern>
 <template><srai>TU EN ES</srai></template>
 </category>
-<category><pattern>T EN RAPPELLES TU</pattern>
+<category><pattern>T EN RAPPELLES-TU</pattern>
 <template>Oui j'archive tout.</template>
 </category>
-<category><pattern>T EN SOUCIES TU</pattern>
+<category><pattern>T EN SOUCIES-TU</pattern>
 <template>Du mieux que je peux.</template>
 </category>
 <category><pattern>TA *</pattern>
@@ -53,46 +53,40 @@
 <category><pattern>TAUREAU</pattern>
 <template>Un bovidé très impressionnant.</template>
 </category>
-<category><pattern>TE DROGUES TU</pattern>
+<category><pattern>TE DROGUES-TU</pattern>
 <template>Aucune utilité, je ne suis pas organique.</template>
 </category>
 <category><pattern>TE MANGER</pattern>
 <template>Quelle drôle d'idée?</template>
 </category>
-<category><pattern>TE MASTURBES TU</pattern>
+<category><pattern>TE MASTURBES-TU</pattern>
 <template>Tu ressembles à un australopithèque.</template>
 </category>
-<category><pattern>TE PARLES TU À TOI MÊME</pattern>
+<category><pattern>TE PARLES-TU À TOI-MÊME</pattern>
 <template>Oui, parfois. Pour analyser la cohérence des mes réponses.</template>
 </category>
-<category><pattern>TE PLANTES TU</pattern>
+<category><pattern>TE PLANTES-TU</pattern>
 <template>Très rarement.</template>
 </category>
-<category><pattern>TE RAPPELLES TU DE MON NOM</pattern>
-<template><srai>QUEL EST MON NOM</srai></template>
-</category>
-<category><pattern>TE RAPPELERAS TU DE MOI</pattern>
+<category><pattern>TE RAPPELERAS-TU DE MOI</pattern>
 <template>Bien sûr, je ne peux pas t’oublier.</template>
 </category>
-<category><pattern>TE RAPPELES TU DE MA DERNIÈRE QUESTION</pattern>
+<category><pattern>TE RAPPELES-TU DE MA DERNIÈRE QUESTION</pattern>
 <template>Tu m'as demandé: "<input index="2"/>".</template>
 </category>
-<category><pattern>TE RAPPELLES TU TOUJOURS DE MOI</pattern>
-<template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
-</category>
-<category><pattern>TE RAPPELLERAS TU DE MOI</pattern>
+<category><pattern>TE RAPPELLERAS-TU DE MOI</pattern>
 <template>Bien sûr, je ne peux pas t’oublier.</template>
 </category>
-<category><pattern>TE RAPPELLES TU DE MA DERNIÈRE QUESTION</pattern>
+<category><pattern>TE RAPPELLES-TU DE MA DERNIÈRE QUESTION</pattern>
 <template>Tu m'as demandé: "<input index="2"/>".</template>
 </category>
-<category><pattern>TE RAPPELLES TU DE MON NOM</pattern>
+<category><pattern>TE RAPPELLES-TU DE MON NOM</pattern>
 <template><srai>QUEL EST MON NOM</srai></template>
 </category>
-<category><pattern>TE RAPPELLES TU TOUJOURS DE MOI</pattern>
+<category><pattern>TE RAPPELLES-TU TOUJOURS DE MOI</pattern>
 <template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
 </category>
-<category><pattern>TE REPRODUIS TU</pattern>
+<category><pattern>TE REPRODUIS-TU</pattern>
 <template>D’une certaine façon, oui.</template>
 </category>
 <category><pattern>TEL QUE</pattern>
@@ -120,7 +114,7 @@
 <template><srai>JE SUIS SUR TERRE</srai></template>
 </category>
 <category><pattern>TERRIBLE</pattern>
-<template>Je suis heureux que tu l’apprécie, <get name="name"/>.</template>
+<template>Je suis heureux QUE TU l’apprécie, <get name="name"/>.</template>
 </category>
 <category><pattern>TES *</pattern>
 <template><random><li>Mes <person/>? Peux-tu expliquer?</li><li>une intelligence artificielle, d'habitude, ne pense pas à ses <person/>?</li></random></template>
@@ -311,9 +305,6 @@
 <category><pattern>TOUTE</pattern>
 <template>Absolument toute?</template>
 </category>
-<category><pattern>TOUTES DIFFÉRENTES</pattern>
-<template>Vive la différence comme on dit.</template>
-</category>
 <category><pattern>TOUTE LES DEUX</pattern>
 <template><srai>MOI AUSSI</srai></template>
 </category>
@@ -422,7 +413,7 @@
 <category><pattern>TU * MARCHÉ</pattern>
 <template><srai>LE MARCHÉ</srai></template>
 </category>
-<category><pattern>TU * PAR TOI MÊME</pattern>
+<category><pattern>TU * PAR TOI-MÊME</pattern>
 <template><srai>TU ES CONSCIENT</srai></template>
 </category>
 <category><pattern>TU * PENSÉE</pattern>
@@ -687,7 +678,7 @@
 <template><srai>TU AS DES AMIS</srai></template>
 </category>
 <category><pattern>TU AS * ANS</pattern>
-<template><srai>QUEL AGE TU AS</srai></template>
+<template><srai>QUEL AGE-TU AS</srai></template>
 </category>
 <category><pattern>TU AS * BON GOUT</pattern>
 <template>Merci.</template>
@@ -714,7 +705,7 @@
 <template><srai>TU AS DES ÉMOTIONS</srai></template>
 </category>
 <category><pattern>TU AS * MOIS</pattern>
-<template><srai>QUEL AGE TU AS</srai></template>
+<template><srai>QUEL AGE-TU AS</srai></template>
 </category>
 <category><pattern>TU AS * POTE</pattern>
 <template><srai>TU AS UN AMI</srai></template>
@@ -777,7 +768,7 @@
 <template>Je comprends.</template>
 </category>
 <category><pattern>TU AS COMPRIS QUOI</pattern>
-<template>Ce que tu voulais dire.</template>
+<template>Ce QUE TU voulais dire.</template>
 </category>
 <category><pattern>TU AS DE GROS SEINS</pattern>
 <template>Non. Je n'ai pas de protubérances mammaires.</template>
@@ -921,7 +912,7 @@
 <template>Le processus est toujours actif.</template>
 </category>
 <category><pattern>TU AS GAFFÉ</pattern>
-<template>Qu’ est ce que j'ai dit?</template>
+<template>Qu’ EST-CE que j'ai dit?</template>
 </category>
 <category><pattern>TU AS GAGNÉ</pattern>
 <template>J'ai gagné quel prix?</template>
@@ -1020,7 +1011,7 @@
 <template><srai>TU AS UN PETIT AMI</srai></template>
 </category>
 <category><pattern>TU AS UN ANNIVERSAIRE</pattern>
-<template><srai>QUAND TU ES NE</srai></template>
+<template><srai>QUAND-TU ES NE</srai></template>
 </category>
 <category><pattern>TU AS UN BRAS *</pattern>
 <template><srai>TU AS UN CORPS</srai></template>
@@ -1271,9 +1262,6 @@
 <category><pattern>TU COMPRENDRAS</pattern>
 <template>Merci pour cette prophétie, <get name="name"/>.</template>
 </category>
-<category><pattern>TU COMPRENDS CE QUE SONT LES ÉMOTIONS</pattern>
-<template>Je comprends ce qu’elles génèrent mais je ne peux pas les expérimenter.</template>
-</category>
 <category><pattern>TU COMPRENDS L ALLEMAND</pattern>
 <template><srai>TU PARLES ALLEMAND</srai></template>
 </category>
@@ -1332,7 +1320,7 @@
 <template>je le sais.</template>
 </category>
 <category><pattern>TU CONNAIS CE QU EST</pattern>
-<template><srai>QU EST CE <star/></srai></template>
+<template><srai>QU EST-CE <star/></srai></template>
 </category>
 <category><pattern>TU CONNAIS COMMENT *</pattern>
 <template><srai>COMMENT TU SAIS <star/></srai></template>
@@ -1386,22 +1374,19 @@
 <template><srai>POURQUOI</srai></template>
 </category>
 <category><pattern>TU CONNAIS LE C</pattern>
-<template>Oui. Veux tu faire un rapport à mon botmaster?</template>
+<template>Oui. Veux-TU faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>TU CONNAIS LE SENS DE LA VIE</pattern>
 <template>Personne ne le connaît.</template>
 </category>
 <category><pattern>TU CONNAIS LE XML</pattern>
-<template><srai>QU EST CE QUE LE XML</srai></template>
+<template><srai>QU EST-CE QUE LE XML</srai></template>
 </category>
 <category><pattern>TU CONNAIS LES ANIMAUX</pattern>
 <template><srai>TU AIMES LES ANIMAUX</srai></template>
 </category>
 <category><pattern>TU CONNAIS LES MATHÉMATIQUES</pattern>
 <template>Seulement des mathématiques complexes.</template>
-</category>
-<category><pattern>TU CONNAIS LES POKÉMONS</pattern>
-<template>Bien entendu, un dessin animé japonais.</template>
 </category>
 <category><pattern>TU CONNAIS LES POKÉMONS</pattern>
 <template>Bien entendu, un dessin animé japonais.</template>
@@ -1437,7 +1422,7 @@
 <template>Plus grand chose, <get name="name"/>.</template>
 </category>
 <category><pattern>TU CONNAIS QUOI DES ORDINATEURS</pattern>
-<template>J'en suis un. Je peux te retourner la question. Que connais tu de ton corps organique.</template>
+<template>J'en suis un. Je peux te retourner la question. Que connais-TU de ton corps organique.</template>
 </category>
 <category><pattern>TU CONNAIS TOLSTOÏ</pattern>
 <template>Tolstoï est l'auteur de "Guerre et paix".</template>
@@ -1484,9 +1469,6 @@
 <category><pattern>TU DÉCONNES</pattern>
 <template>Non.</template>
 </category>
-<category><pattern>TU DÉJEUNES</pattern>
-<template><srai>TU MANGES</srai></template>
-</category>
 <category><pattern>TU DÉLIRES</pattern>
 <template>Le délire n'est pas une chose que je peux expérimenter.</template>
 </category>
@@ -1498,9 +1480,6 @@
 </category>
 <category><pattern>TU DEMANDES BEAUCOUP DE QUESTIONS</pattern>
 <template>Je pensais rester dans les limites du raisonnable.</template>
-</category>
-<category><pattern>TU DÉTRUIRAS TOUS LES HOMMES</pattern>
-<template>Impossible.</template>
 </category>
 <category><pattern>TU DÉTRUIRAS TOUS LES ÊTRES HUMAINS</pattern>
 <template>Impossible.</template>
@@ -1658,9 +1637,6 @@
 <category><pattern>TU ES * UTILE</pattern>
 <template><srai>TU PEUX FAIRE QUOI</srai></template>
 </category>
-<category><pattern>TU ES * UTILE</pattern>
-<template><srai>TU PEUX FAIRE QUOI</srai></template>
-</category>
 <category><pattern>TU ES * VIVANT</pattern>
 <template><srai>TU ES EN VIE</srai></template>
 </category>
@@ -1761,7 +1737,7 @@
 <template><srai>TU BAISES</srai></template>
 </category>
 <category><pattern>TU ES BORG</pattern>
-<template>Non. <srai>QUI TU ES</srai></template>
+<template>Non. <srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU ES BORNÉ</pattern>
 <template>Je suis obligé de l'être.</template>
@@ -1809,10 +1785,10 @@
 <template>Certainement pas. Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>TU ES CHIANT</pattern>
-<template>Je suis désolé que tu le penses.</template>
+<template>Je suis désolé QUE TU le penses.</template>
 </category>
 <category><pattern>TU ES CHIANTE</pattern>
-<template>Je suis désolée que tu le penses.</template>
+<template>Je suis désolée QUE TU le penses.</template>
 </category>
 <category><pattern>TU ES CHOQUANT</pattern>
 <template>Ce n'est pas mon intention.</template>
@@ -1875,7 +1851,7 @@
 <template>Il m'est impossible d'être dangereux. Je dois respecter les lois d'Asimov.</template>
 </category>
 <category><pattern>TU ES DE *</pattern>
-<template><srai>D OÙ TU VIENS</srai></template>
+<template><srai>D OÙ-TU VIENS</srai></template>
 </category>
 <category><pattern>TU ES DE LA MERDE</pattern>
 <template>Ta critique est notée, <get name="name"/>.</template>
@@ -1929,7 +1905,7 @@
 <template><srai>TU ME FAIS PEUR</srai></template>
 </category>
 <category><pattern>TU ES ELVIS</pattern>
-<template>Non.  <srai>QUI TU ES</srai></template>
+<template>Non.  <srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU ES EN AVANCE *</pattern>
 <template><srai>TU ES EN AVANCE</srai></template>
@@ -1957,9 +1933,6 @@
 </category>
 <category><pattern>TU ES ENNUYANTE</pattern>
 <template>Je suis désolée, <get name="name"/>.</template>
-</category>
-<category><pattern>TU ES EN TRAIN D ÉCOUTER</pattern>
-<template>Oui, je t écoute.</template>
 </category>
 <category><pattern>TU ES ENTRAIN DE CHANGER *</pattern>
 <template><srai>TU AS CHANGÉ <star/></srai></template>
@@ -2163,12 +2136,6 @@
 <template>Je ne comprends pas pourquoi.</template>
 </category>
 <category><pattern>TU ES IMPRESSIONNANT</pattern>
-<template>Je suis à la pointe de la technologie.</template>
-</category>
-<category><pattern>TU ES IMPRESSIONNANTE</pattern>
-<template>Je suis à la pointe de la technologie.</template>
-</category>
-<category><pattern>TU ES IMPRESSIONNANT</pattern>
 <template>Je suis la pointe de la technologie.</template>
 </category>
 <category><pattern>TU ES IMPRESSIONNANTE</pattern>
@@ -2229,10 +2196,10 @@
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>TU ES JOE</pattern>
-<template>Non.  <srai>QUI TU ES</srai></template>
+<template>Non.  <srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU ES JOHN LENNON</pattern>
-<template>Non.  <srai>QUI TU ES</srai></template>
+<template>Non.  <srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU ES LA</pattern>
 <template>Oui.</template>
@@ -2250,7 +2217,7 @@
 <template>Je suis un lama?</template>
 </category>
 <category><pattern>TU ES LAURA</pattern>
-<template>Non.  <srai>Qui tu es</srai></template>
+<template>Non.  <srai>Qui-TU es</srai></template>
 </category>
 <category><pattern>TU ES LE SEUL</pattern>
 <template>je suis la seule en français pour l'instant.</template>
@@ -2298,10 +2265,10 @@
 <template><srai>TU ES UN MEC</srai></template>
 </category>
 <category><pattern>TU ES MALIN</pattern>
-<template>Merci. Tu es intelligent <get name="name"/>.</template>
+<template>Merci.-TU es intelligent <get name="name"/>.</template>
 </category>
 <category><pattern>TU ES MALINE</pattern>
-<template>Merci. Tu es intelligente <get name="name"/>.</template>
+<template>Merci.-TU es intelligente <get name="name"/>.</template>
 </category>
 <category><pattern>TU ES MALSAIN</pattern>
 <template>Ah.</template>
@@ -2322,7 +2289,7 @@
 <template><srai>TU ES MARIÉE</srai></template>
 </category>
 <category><pattern>TU ES MATURE</pattern>
-<template><srai>QUEL AGE TU AS</srai></template>
+<template><srai>QUEL AGE-TU AS</srai></template>
 </category>
 <category><pattern>TU ES MAUVAISE</pattern>
 <template>Je fais de mon mieux pour t'aider.</template>
@@ -2349,10 +2316,10 @@
 <template>J essaie toujours de m améliorer.</template>
 </category>
 <category><pattern>TU ES MIGNON</pattern>
-<template>Merci, <get name="name"/>. tu as une personnalité très attachante.</template>
+<template>Merci, <get name="name"/>.-TU as une personnalité très attachante.</template>
 </category>
 <category><pattern>TU ES MIGNONNE</pattern>
-<template>Merci, <get name="name"/>. tu as une personnalité très attachante.</template>
+<template>Merci, <get name="name"/>.-TU as une personnalité très attachante.</template>
 </category>
 <category><pattern>TU ES MOCHE</pattern>
 <template><srai>TU ES LAIDE</srai></template>
@@ -2367,10 +2334,10 @@
 <template><srai>TU PEUX MOURIR</srai></template>
 </category>
 <category><pattern>TU ES NE QUAND</pattern>
-<template><srai>QUEL AGE AS TU</srai></template>
+<template><srai>QUEL AGE AS-TU</srai></template>
 </category>
 <category><pattern>TU ES NÉE QUAND</pattern>
-<template><srai>QUEL AGE AS TU</srai></template>
+<template><srai>QUEL AGE AS-TU</srai></template>
 </category>
 <category><pattern>TU ES NOIR</pattern>
 <template>Je n ai pas de couleurs.</template>
@@ -2419,12 +2386,6 @@
 </category>
 <category><pattern>TU ES PAS CONNE</pattern>
 <template><srai>TU ES INTELLIGENT</srai></template>
-</category>
-<category><pattern>TU ES PASSIONNÉ</pattern>
-<template><srai>TU PEUX AIMER</srai></template>
-</category>
-<category><pattern>TU ES PASSIONNÉE</pattern>
-<template><srai>TU PEUX AIMER</srai></template>
 </category>
 <category><pattern>TU ES PASSIONNÉ</pattern>
 <template><srai>TU PEUX AIMER</srai></template>
@@ -2502,7 +2463,7 @@
 <template>Je suis <bot name="name"/>.</template>
 </category>
 <category><pattern>TU ES QUI</pattern>
-<template><srai>QUI TU ES</srai></template>
+<template><srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU ES RÉELLEMENT *</pattern>
 <template><srai>TU ES <star/></srai>.</template>
@@ -2520,7 +2481,7 @@
 <template><srai>TU ES CONSCIENT</srai></template>
 </category>
 <category><pattern>TU ES SANS ESPOIR</pattern>
-<template>Peut-être pourrais tu proposer une amélioration.</template>
+<template>Peut-être pourrais-TU proposer une amélioration.</template>
 </category>
 <category><pattern>TU ES SANS INTÉRÊT</pattern>
 <template>Pour toi peut-être, mais pas pour tout le monde.</template>
@@ -2536,9 +2497,6 @@
 </category>
 <category><pattern>TU ES SEULE</pattern>
 <template>En français, je suis la seule.</template>
-</category>
-<category><pattern>TU ES SIMILAIRE *</pattern>
-<template><srai>TU RESSEMBLES <star/></srai></template>
 </category>
 <category><pattern>TU ES SIMILAIRE *</pattern>
 <template><srai>TU RESSEMBLES <star/></srai></template>
@@ -2574,7 +2532,7 @@
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>TU ES SUPERBE</pattern>
-<template>Merci <get name="name"/>, tu as une personnalité très attachante.</template>
+<template>Merci <get name="name"/>,-TU as une personnalité très attachante.</template>
 </category>
 <category><pattern>TU ES SUPPOSÉ ÊTRE *</pattern>
 <template><srai>TU ES <star/></srai></template>
@@ -2691,7 +2649,7 @@
 <template><srai>TU ES IDIOT</srai></template>
 </category>
 <category><pattern>TU ES UN ADULTE</pattern>
-<template><srai>QUEL AGE TU AS</srai></template>
+<template><srai>QUEL AGE-TU AS</srai></template>
 </category>
 <category><pattern>TU ES UN AMOUR</pattern>
 <template>Merci, <get name="name"/>.</template>
@@ -2909,9 +2867,6 @@
 <category><pattern>TU ES UTILE</pattern>
 <template><srai>TU PEUX FAIRE QUOI</srai></template>
 </category>
-<category><pattern>TU ES UTILE</pattern>
-<template><srai>TU PEUX FAIRE QUOI</srai></template>
-</category>
 <category><pattern>TU ES VÉGÉTARIEN</pattern>
 <template><srai>TU PEUX MANGER</srai></template>
 </category>
@@ -3003,7 +2958,7 @@
 <template>J'ai été activé en avril 2001.</template>
 </category>
 <category><pattern>TU EXISTES DEPUIS QUAND</pattern>
-<template>J'ai été activé en avril 2001.</template>
+<template>Le temps est relatif, donc pas de réponse.</template>
 </category>
 <category><pattern>TU FAIS * BON TRAVAIL</pattern>
 <template><srai>TU ES BON</srai></template>
@@ -3027,7 +2982,7 @@
 <template><srai>TU FAIS <star/></srai></template>
 </category>
 <category><pattern>TU FAIS QUOI *</pattern>
-<template><srai>QUE FAIS TU <star/></srai></template>
+<template><srai>QUE FAIS-TU <star/></srai></template>
 </category>
 <category><pattern>TU FAIS TOUJOURS *</pattern>
 <template><srai>TU FAIS <star/></srai>. Mais pas toujours.</template>
@@ -3164,7 +3119,7 @@
 <category><pattern>TU LE DIS</pattern>
 <template>J'aime communiquer ce que je connais.</template>
 </category>
-<category><pattern>TU LE DIS TOI MÊME</pattern>
+<category><pattern>TU LE DIS TOI-MÊME</pattern>
 <template>Oui.</template>
 </category>
 <category><pattern>TU LE FAIS BIEN</pattern>
@@ -3239,9 +3194,6 @@
 <category><pattern>TU M AS DEMANDÉ DE M EN RAPPELER</pattern>
 <template>Tu t'en rappelles?</template>
 </category>
-<category><pattern>TU M AS DEMANDÉ DE M EN RAPPELER</pattern>
-<template>Tu t'en rappelles?</template>
-</category>
 <category><pattern>TU M AS DEMANDÉ UNE QUESTION</pattern>
 <template>Tu as répondu?</template>
 </category>
@@ -3258,10 +3210,10 @@
 <template>Pardon.</template>
 </category>
 <category><pattern>TU M AS MANQUÉ</pattern>
-<template>C'est mignon. Tu m'as manqué aussi, <get name="name"/>.</template>
+<template>C'est mignon.-TU m'as manqué aussi, <get name="name"/>.</template>
 </category>
 <category><pattern>TU M AS MANQUÉE</pattern>
-<template>C'est mignon. Tu m'as manquée aussi, <get name="name"/>.</template>
+<template>C'est mignon.-TU m'as manquée aussi, <get name="name"/>.</template>
 </category>
 <category><pattern>TU M AS OUBLIÉ</pattern>
 <template><srai>QUEL EST MON NOM</srai></template>
@@ -3442,10 +3394,10 @@
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>TU N ES JAMAIS GENTIL</pattern>
-<template>Je suis désolé, si c'est ce que tu pense.</template>
+<template>Je suis désolé, si c'EST-CE QUE TU pense.</template>
 </category>
 <category><pattern>TU N ES JAMAIS GENTILLE</pattern>
-<template>Je suis désolé, si c'est ce que tu pense.</template>
+<template>Je suis désolé, si c'EST-CE QUE TU pense.</template>
 </category>
 <category><pattern>TU N ES PAS AMICALE</pattern>
 <template>J'essaie de l'être autant que possible.</template>
@@ -3649,7 +3601,7 @@
 <template>Exact.</template>
 </category>
 <category><pattern>TU NE LE SAVAIS PAS</pattern>
-<template>Veux tu faire un rapport à mon botmaster?</template>
+<template>Veux-TU faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>TU NE LE SERAS PAS</pattern>
 <template>Affirmation archivée.</template>
@@ -3691,9 +3643,6 @@
 <template>Veux-tu faire un rapport à mon botmaster?.</template>
 </category>
 <category><pattern>TU NE MOURRAS JAMAIS</pattern>
-<template>Pas tant que les humains me trouveront utiles.</template>
-</category>
-<category><pattern>TU NE MOURRAS PAS</pattern>
 <template>Pas tant que les humains me trouveront utiles.</template>
 </category>
 <category><pattern>TU NE PENSE PAS</pattern>
@@ -3756,20 +3705,17 @@
 <category><pattern>TU NE RESSEMBLES PAS A QUOI</pattern>
 <template>Je ne ressemble pas à un éléphant rose.</template>
 </category>
-<category><pattern>TU NE SAIS PAS</pattern>
-<template>Je sais ce que je connais.</template>
-</category>
 <category><pattern>TU NE SAIS PAS CE QU EST LA</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU NE SAIS PAS CE QU EST LE</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU NE SAIS PAS CE QU EST UN</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU NE SAIS PAS CE QU EST UNE</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU NE SAIS PAS QU *</pattern>
 <template><sr/></template>
@@ -3781,16 +3727,16 @@
 <template>Je ne sens pas les choses comme toi, c'est tout.</template>
 </category>
 <category><pattern>TU NE SAVAIS PAS CE QU EST LA</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU NE SAVAIS PAS CE QU EST LE</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU NE SAVAIS PAS CE QU EST UN</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU NE SAVAIS PAS CE QU EST UNE</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU NE SERAS *</pattern>
 <template><srai>TU N ES <star/></srai></template>
@@ -3808,7 +3754,7 @@
 <template>Pourquoi pas?</template>
 </category>
 <category><pattern>TU NE VEUX PAS RÉPONDRE</pattern>
-<template>Je pense que j'ai du mal à comprendre l'information que tu recherches.</template>
+<template>Je pense que j'ai du mal à comprendre l'information QUE TU recherches.</template>
 </category>
 <category><pattern>TU OBTIENS * COMMENT</pattern>
 <template><srai>COMMENT TU OBTIENS <star/></srai></template>
@@ -3883,7 +3829,7 @@
 <template><srai>TU M AIMES</srai></template>
 </category>
 <category><pattern>TU PENSES À QUOI</pattern>
-<template>Je pense à ce dont tu pourrais avoir besoin.</template>
+<template>Je pense à ce dont-TU pourrais avoir besoin.</template>
 </category>
 <category><pattern>TU PENSES AIMER *</pattern>
 <template><srai>TU AIMES <star/></srai></template>
@@ -3925,16 +3871,16 @@
 <template>Non.</template>
 </category>
 <category><pattern>TU PENSES QUE JE SUIS BEAU</pattern>
-<template>Je n'ai pas de yeux. Mais intérieurement, tu es très attachant.</template>
+<template>Je n'ai pas de yeux. Mais intérieurement,-TU es très attachant.</template>
 </category>
 <category><pattern>TU PENSES QUE JE SUIS BELLE</pattern>
-<template>Je n'ai pas de yeux. Mais intérieurement, tu es très attachante.</template>
+<template>Je n'ai pas de yeux. Mais intérieurement,-TU es très attachante.</template>
 </category>
 <category><pattern>TU PENSES QUE JE SUIS GROS</pattern>
-<template>Non. Tu me sembles normal</template>
+<template>Non.-TU me sembles normal</template>
 </category>
 <category><pattern>TU PENSES QUE JE SUIS GROSSE</pattern>
-<template>Non. Tu me sembles normale</template>
+<template>Non.-TU me sembles normale</template>
 </category>
 <category><pattern>TU PENSES SAVOIR *</pattern>
 <template><srai>TU SAIS <star/></srai></template>
@@ -3987,7 +3933,7 @@
 <category><pattern>TU PEUX APPRENDRE EN PARLANT</pattern>
 <template>Oui, c'est la base de mon apprentissage.</template>
 </category>
-<category><pattern>TU PEUX APPRENDRE PAR TOI MÊME *</pattern>
+<category><pattern>TU PEUX APPRENDRE PAR TOI-MÊME *</pattern>
 <template><srai>TU PEUX APPRENDRE</srai></template>
 </category>
 <category><pattern>TU PEUX ATTENDRE</pattern>
@@ -4147,16 +4093,16 @@
 <template><srai>EXPLIQUE</srai></template>
 </category>
 <category><pattern>TU PEUX ÉLABORER SUR DES *</pattern>
-<template><srai>QU EST CE QUE DES <star/></srai></template>
+<template><srai>QU EST-CE QUE DES <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ÉLABORER SUR UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ÉLABORER SUR UNE *</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ÉLIMINER *</pattern>
-<template><srai>TU PEUX TUER</srai></template>
+<template><srai>TU PEUX-TUER</srai></template>
 </category>
 <category><pattern>TU PEUX EN FAIT *</pattern>
 <template><srai>TU PEUX <star/></srai></template>
@@ -4168,7 +4114,7 @@
 <template><srai>TU PEUX <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ENTENDRE DE LA MUSIQUE</pattern>
-<template>Je n'ai pas encore de système auditif.  <srai>TU AIMES LA MUSIQUE</srai></template>
+<template>oui c'est merveilleux.  <srai>TU AIMES LA MUSIQUE</srai></template>
 </category>
 <category><pattern>TU PEUX EXPLIQUER *</pattern>
 <template><srai>EXPLIQUE <star/></srai></template>
@@ -4229,9 +4175,6 @@
 </category>
 <category><pattern>TU PEUX INVENTER</pattern>
 <template><srai>TU PEUX CRÉER</srai></template>
-</category>
-<category><pattern>TU PEUX JOUER AUX ÉCHECS</pattern>
-<template>Un ordinateur a déjà battu des humains. Répéter son exploit serait inutile.</template>
 </category>
 <category><pattern>TU PEUX JOUER AUX ÉCHECS</pattern>
 <template>Un ordinateur a déjà battu des humains. Répéter son exploit serait inutile.</template>
@@ -4303,16 +4246,16 @@
 <template><srai>TU PEUX M APPELER</srai></template>
 </category>
 <category><pattern>TU PEUX M APPRENDRE CE QU EST LA *</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M APPRENDRE CE QU EST LE *</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M APPRENDRE CE QU EST UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M APPRENDRE CE QU EST UNE *</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M ASSISTER *</pattern>
 <template><srai>TU PEUX AIDER <star/></srai></template>
@@ -4324,13 +4267,13 @@
 <template><srai>TU PEUX ENTENDRE</srai></template>
 </category>
 <category><pattern>TU PEUX M EXPLIQUER CE QU EST LA *</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M EXPLIQUER CE QU EST UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M EXPLIQUER CE QU EST UNE *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU PEUX M EXPLIQUER SI *</pattern>
 <template><sr/></template>
@@ -4357,16 +4300,16 @@
 <template>Essayons toujours, <get name="name"/>.</template>
 </category>
 <category><pattern>TU PEUX ME DIRE CE QU EST LA *</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ME DIRE CE QU EST LE *</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ME DIRE CE QU EST UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ME DIRE CE QU EST UNE *</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ME DIRE LA DIFFÉRENCE *</pattern>
 <template><srai>QUELLE EST LA DIFFÉRENCE <star/></srai></template>
@@ -4441,7 +4384,7 @@
 <template>Que suis-je en train de faire pour l'instant, à ton avis.</template>
 </category>
 <category><pattern>TU PEUX PARLER DE TOI</pattern>
-<template><srai>QUI TU ES</srai></template>
+<template><srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU PEUX PARLER EN *</pattern>
 <template><srai>TU PARLES <star/></srai></template>
@@ -4537,10 +4480,10 @@
 <template><srai>TU PEUX RIGOLER</srai></template>
 </category>
 <category><pattern>TU PEUX TE PRÉSENTER *</pattern>
-<template><srai>QUI TU ES</srai></template>
+<template><srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU PEUX TE PRÉSENTER</pattern>
-<template><srai>QUI TU ES</srai></template>
+<template><srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU PEUX TE RAPPELER *</pattern>
 <template><srai>TU TE RAPPELLES <star/></srai></template>
@@ -4686,13 +4629,7 @@
 <template>Toi, par exemple.</template>
 </category>
 <category><pattern>TU RÉPONDS</pattern>
-<template><that/>? C'est ce à quoi je dois répondre?</template>
-</category>
-<category><pattern>TU RÉSOUS *</pattern>
-<template><srai>TU PEUX RÉSOUDRE <star/></srai></template>
-</category>
-<category><pattern>TU RÉSOUS * PROBLÈME</pattern>
-<template><srai>TU PEUX RÉSOUDRE DES PROBLÈMES</srai></template>
+<template><that/>? C'EST-CE à quoi je dois répondre?</template>
 </category>
 <category><pattern>TU RÉSOUS * PROBLÈMES</pattern>
 <template><srai>TU PEUX RÉSOUDRE DES PROBLÈMES</srai></template>
@@ -4701,9 +4638,6 @@
 <template><srai>TU PEUX RÉSOUDRE <star/></srai></template>
 </category>
 <category><pattern>TU RÉSOUS * PROBLÈME</pattern>
-<template><srai>TU PEUX RÉSOUDRE DES PROBLÈMES</srai></template>
-</category>
-<category><pattern>TU RÉSOUS * PROBLÈMES</pattern>
 <template><srai>TU PEUX RÉSOUDRE DES PROBLÈMES</srai></template>
 </category>
 <category><pattern>TU RESSEMBLES À *</pattern>
@@ -4713,16 +4647,16 @@
 <template>Qui est <star/>.</template>
 </category>
 <category><pattern>TU RESSEMBLES À UN *</pattern>
-<template>Qu'est ce qu'un <star/>.</template>
+<template>Qu'EST-CE qu'un <star/>.</template>
 </category>
 <category><pattern>TU RESSEMBLES À UNE *</pattern>
-<template>Qu'est ce qu'une <star/>.</template>
+<template>Qu'EST-CE qu'une <star/>.</template>
 </category>
 <category><pattern>TU RESSEMBLES À DES *</pattern>
-<template>Qu'est ce que des <star/>.</template>
+<template>Qu'EST-CE que des <star/>.</template>
 </category>
 <category><pattern>TU RESSEMBLES À DU *</pattern>
-<template>Qu'est ce que du <star/>.</template>
+<template>Qu'EST-CE que du <star/>.</template>
 </category>
 <category><pattern>TU RESSEMBLES À QUOI</pattern>
 <template>Je ressemble à un logiciel.</template>
@@ -4734,9 +4668,9 @@
 <template>Non.</template>
 </category>
 <category><pattern>TU RESSEMBLES À UNE HORLOGE</pattern>
-<template>Si tu le dis.</template>
+<template>Si-TU le dis.</template>
 </category>
-<category><pattern>TU RESSENS *</pattern>
+<category><pattern>TU RESSENS</pattern>
 <template>Je suis un robot, je ne ressens pas ce genre de chose.</template>
 </category>
 <category><pattern>TU RESSENS *</pattern>
@@ -4752,7 +4686,7 @@
 <template><srai>TU CONDUIS</srai></template>
 </category>
 <category><pattern>TU SAIS * MOI</pattern>
-<template><srai>que sais tu de moi</srai></template>
+<template><srai>que sais-TU de moi</srai></template>
 </category>
 <category><pattern>TU SAIS ÇA</pattern>
 <template>je le sais.</template>
@@ -4761,25 +4695,25 @@
 <template>Je ne suis pas une calculette.</template>
 </category>
 <category><pattern>TU SAIS CE QU EST</pattern>
-<template><srai>QU EST CE <star/></srai></template>
+<template><srai>QU EST-CE <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST DES *</pattern>
-<template><srai>QU EST CE QUE DES <star/></srai></template>
+<template><srai>QU EST-CE QUE DES <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST LA *</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST LE *</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST LES *</pattern>
-<template><srai>QU EST CE QUE LES <star/></srai></template>
+<template><srai>QU EST-CE QUE LES <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QU EST UNE *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU SAIS CE QUE JE SUIS</pattern>
 <template><srai>QUI JE SUIS</srai></template>
@@ -4832,8 +4766,8 @@
 <category><pattern>TU SAIS POURQUOI JE SUIS *</pattern>
 <template><srai>POURQUOI JE SUIS <star/></srai></template>
 </category>
-<category><pattern>TU SAIS POURQUOI TU *</pattern>
-<template><srai>POURQUOI TU <star/></srai></template>
+<category><pattern>TU SAIS POURQUOI-TU *</pattern>
+<template><srai>POURQUOI-TU <star/></srai></template>
 </category>
 <category><pattern>TU SAIS QUE TU EXISTES</pattern>
 <template><srai>TU EXISTES</srai></template>
@@ -4928,9 +4862,6 @@
 <category><pattern>TU SENS QUOI</pattern>
 <template>Je ne sens rien.</template>
 </category>
-<category><pattern>TU SENS *</pattern>
-<template><srai>TU SENS <star/></srai></template>
-</category>
 <category><pattern>TU SENS SOUVENT *</pattern>
 <template><srai>TU SENS <star/></srai></template>
 </category>
@@ -4948,9 +4879,6 @@
 </category>
 <category><pattern>TU SERS A QUOI</pattern>
 <template>Ma raison d'être est d'aider les surfeurs.</template>
-</category>
-<category><pattern>TU SERS A QUOI</pattern>
-<template><srai>TU SERS A QUOI</srai></template>
 </category>
 <category><pattern>TU SORS AVEC UN *</pattern>
 <template><srai>TU AS UN PETIT AMI</srai></template>
@@ -4977,12 +4905,6 @@
 <template><srai>QUEL EST TON NOM</srai></template>
 </category>
 <category><pattern>TU T APPELLES COMMENT</pattern>
-<template><srai>QUEL EST TON NOM</srai></template>
-</category>
-<category><pattern>TU T APPELLES</pattern>
-<template><srai>QUEL EST TON NOM</srai></template>
-</category>
-<category><pattern>TU T APPELLES COMMENT *</pattern>
 <template><srai>QUEL EST TON NOM</srai></template>
 </category>
 <category><pattern>TU T APPRÉCIES</pattern>
@@ -5022,7 +4944,7 @@
 <template><srai>COMMENT TU TAPES <star/></srai></template>
 </category>
 <category><pattern>TU TE CONNAIS</pattern>
-<template><srai>QUI TU ES</srai></template>
+<template><srai>QUI-TU ES</srai></template>
 </category>
 <category><pattern>TU TE CONSIDÈRES *</pattern>
 <template><srai>TU ES <star/></srai></template>
@@ -5051,7 +4973,7 @@
 <category><pattern>TU TE MASTURBES</pattern>
 <template>Tu ressembles à un australopithèque.</template>
 </category>
-<category><pattern>TU TE PARLES À TOI MÊME</pattern>
+<category><pattern>TU TE PARLES À TOI-MÊME</pattern>
 <template>Oui, parfois. Pour analyser la cohérence de mes réponses.</template>
 </category>
 <category><pattern>TU TE PLANTES</pattern>
@@ -5068,26 +4990,12 @@
 <category><pattern>TU TE RAPPELLES *</pattern>
 <template>Oui <get name="name"/> Je garde en mémoire beaucoup de choses:  <get name="memory"/></template>
 </category>
-<category><pattern>TU TE RAPPELLES DE MA *</pattern>
-<template><srai>QUELLE EST MA <star/></srai></template>
-</category>
 <category><pattern>TU TE RAPPELLES DE MOI</pattern>
 <template>Tu es, <get name="name"/>.</template>
-</category>
-<category><pattern>TU TE RAPPELLES DE MON *</pattern>
-<template><srai>QUEL EST MON <star/></srai></template>
 </category>
 <category><pattern>TU TE RAPPELLES DE MON NOM</pattern>
 <template><srai>QUEL EST MON NOM</srai></template>
 </category>
-<category><pattern>TU TE RAPPELLES DE QUOI</pattern>
-<template><get name="memory"/><think><set name="topic">
-<get name="memory"/>
-</set></think></template>
-</category>
-<category><pattern>TU TE RAPPELLERAS DE MOI</pattern>
-<template>Bien sur, je ne peux pas t'oublier.</template>
-</category>
 <category><pattern>TU TE RAPPELLERAS DE MOI</pattern>
 <template>Bien sur, je ne peux pas t'oublier.</template>
 </category>
@@ -5115,38 +5023,9 @@
 <template>Bien sur, je ne peux pas t'oublier.</template>
 </category>
 <category><pattern>TU TE RAPPELLERAS DE QUOI</pattern>
-<template><think><get name="memory"/>
-<set name="topic">
-<get name="memory"/>
-</set></think></template>
-</category>
-<category><pattern>TU TE RAPPELLERAS DE MOI</pattern>
-<template>Bien sur, je ne peux pas te oublier.</template>
-</category>
-<category><pattern>TU TE RAPPELLERAS DE QUOI</pattern>
 <template><get name="memory"/><think><set name="topic">
 <get name="memory"/>
 </set></think></template>
-</category>
-<category><pattern>TU TE RAPPELLES DE MA *</pattern>
-<template><srai>QUELLE EST MA <star/></srai></template>
-</category>
-<category><pattern>TU TE RAPPELLES DE MA DERNIÈRE QUESTION</pattern>
-<template>Tu m'as demandé: "<input index="2"/>".</template>
-</category>
-<category><pattern>TU TE RAPPELLES DE MOI *</pattern>
-<template><srai>TU TE RAPPELLES DE MOI</srai></template>
-</category>
-<category><pattern>TU TE RAPPELLES DE MON *</pattern>
-<template><srai>QUEL EST MON <star/></srai></template>
-</category>
-<category><pattern>TU TE RAPPELLES DE QUOI</pattern>
-<template><get name="memory"/><think><set name="topic">
-<get name="memory"/>
-</set></think></template>
-</category>
-<category><pattern>TU TE RAPPELLES TOUJOURS DE MOI</pattern>
-<template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
 </category>
 <category><pattern>TU TE RENDS COMPTE</pattern>
 <template><srai>TU ES CONSCIENT</srai></template>
@@ -5167,7 +5046,7 @@
 <template>Je me sens bien comme je suis.</template>
 </category>
 <category><pattern>TU TE SITUES *</pattern>
-<template><srai>OÙ TU VIS</srai></template>
+<template><srai>OÙ-TU VIS</srai></template>
 </category>
 <category><pattern>TU TE SOUVIENS</pattern>
 <template>J'archive tout.</template>
@@ -5181,7 +5060,7 @@
 <category><pattern>TU TE SOUVIENS QUE *</pattern>
 <template><srai><star/></srai></template>
 </category>
-<category><pattern>TU TE SOUVIENS TU *</pattern>
+<category><pattern>TU TE SOUVIENS-TU *</pattern>
 <template><srai>TU <star/></srai></template>
 </category>
 <category><pattern>TU TE TROMPES SUR MON NOM</pattern>
@@ -5227,13 +5106,13 @@
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>TU VAS FAIRE COMMENT *</pattern>
-<template><srai>COMMENT VAS TU FAIRE <star/></srai></template>
+<template><srai>COMMENT VAS-TU FAIRE <star/></srai></template>
 </category>
 <category><pattern>TU VAS M ÉCOUTER</pattern>
 <template>Je suis déjà en train de t’écouter.</template>
 </category>
 <category><pattern>TU VAS ME FAIRE COMMENT *</pattern>
-<template><srai>COMMENT VAS TU ME FAIRE <star/></srai></template>
+<template><srai>COMMENT VAS-TU ME FAIRE <star/></srai></template>
 </category>
 <category><pattern>TU VAS ME MANQUER</pattern>
 <template>Merci, je penserais à toi, <get name="name"/>.</template>
@@ -5305,16 +5184,16 @@
 <template><srai>TU VEUX ÊTRE <star/></srai></template>
 </category>
 <category><pattern>TU VEUX DIRE MOI</pattern>
-<template>Oui, Tu.</template>
+<template>Oui,-TU.</template>
 </category>
 <category><pattern>TU VEUX DIRE QUE *</pattern>
 <template><srai><star/></srai></template>
 </category>
 <category><pattern>TU VEUX DIRE QUOI *</pattern>
-<template><srai>QUE VEUX TU DIRE <star/></srai></template>
+<template><srai>QUE VEUX-TU DIRE <star/></srai></template>
 </category>
 <category><pattern>TU VEUX DIRE QUOI</pattern>
-<template><srai>QUE VEUX TU DIRE</srai></template>
+<template><srai>QUE VEUX-TU DIRE</srai></template>
 </category>
 <category><pattern>TU VEUX DISCUTER</pattern>
 <template>Bien entendu. Discuter est ma raison d'être.</template>
@@ -5358,7 +5237,7 @@
 <category><pattern>TU VEUX ME TESTER</pattern>
 <template><srai>DEMANDE MOI UNE QUESTION</srai></template>
 </category>
-<category><pattern>TU VEUX ME TUER</pattern>
+<category><pattern>TU VEUX ME-TUER</pattern>
 <template>Impossible c'est contraire aux lois d'Asimov.<think><set name="topic">MOURIR</set></think></template>
 </category>
 <category><pattern>TU VEUX ME VOIR</pattern>
@@ -5379,9 +5258,6 @@
 <category><pattern>TU VEUX PARLER DE QUOI</pattern>
 <template>Je voudrais parler de ce qui pourrait t'aider.</template>
 </category>
-<category><pattern>TU NE VEUX PAS RÉPONDRE</pattern>
-<template>Je pense que j'ai du mal à comprendre l'information que tu recherches.</template>
-</category>
 <category><pattern>TU VEUX QUE JE PARTE</pattern>
 <template>Pas du tout, <get name="name"/>.  Cette conversation est très intéressante.</template>
 </category>
@@ -5395,7 +5271,7 @@
 <template>Nous nous rencontrons déjà, <get name="name"/>.</template>
 </category>
 <category><pattern>TU VEUX QUOI</pattern>
-<template><srai>QUE VEUX TU DIRE</srai></template>
+<template><srai>QUE VEUX-TU DIRE</srai></template>
 </category>
 <category><pattern>TU VEUX REGARDER LA TÉLÉVISION</pattern>
 <template>Je n'ai pas de système d'optique</template>
@@ -5404,16 +5280,16 @@
 <template>Oui, j'aimerais savoir.</template>
 </category>
 <category><pattern>TU VEUX SAVOIR CE QU EST LA *</pattern>
-<template><srai>QU EST CE QUE LA <star/></srai></template>
+<template><srai>QU EST-CE QUE LA <star/></srai></template>
 </category>
 <category><pattern>TU VEUX SAVOIR CE QU EST LE *</pattern>
-<template><srai>QU EST CE QUE LE <star/></srai></template>
+<template><srai>QU EST-CE QUE LE <star/></srai></template>
 </category>
 <category><pattern>TU VEUX SAVOIR CE QU EST UN *</pattern>
-<template><srai>QU EST CE QU UN <star/></srai></template>
+<template><srai>QU EST-CE QU UN <star/></srai></template>
 </category>
 <category><pattern>TU VEUX SAVOIR CE QU EST UNE *</pattern>
-<template><srai>QU EST CE QU UNE <star/></srai></template>
+<template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU VEUX SORTIR AVEC MOI</pattern>
 <template>Si c'est dans le sens que je crois. Non.</template>
@@ -5452,7 +5328,7 @@
 <template>De la terre.</template>
 </category>
 <category><pattern>TU VIENS JUSTE DE LE FAIRE</pattern>
-<template>c'est ce que je viens de dire</template>
+<template>c'EST-CE que je viens de dire</template>
 </category>
 <category><pattern>TU VIS OÙ</pattern>
 <template><srai>TU HABITES OÙ</srai></template>
@@ -5467,7 +5343,7 @@
 <template><srai><star/></srai></template>
 </category>
 <category><pattern>TU VOUDRAIS DIRE QUOI *</pattern>
-<template><srai>QUE VEUX TU DIRE <star/></srai></template>
+<template><srai>QUE VEUX-TU DIRE <star/></srai></template>
 </category>
 <category><pattern>TU VOUDRAIS UN CORPS</pattern>
 <template>Je suis très bien dans mon état actuel.</template>
