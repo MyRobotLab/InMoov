@@ -1,4 +1,6 @@
 def stoprockpaperscissors():
+    global inmoov
+    global human
     rest()
     sleep(5)
     if inmoov < human:
@@ -11,9 +13,7 @@ def stoprockpaperscissors():
         i01.mouth.speak("i've got " + str(inmoov) + "points and you got" + str(human) + "points")
     elif inmoov == human:                                                                                                          # changed from if to  elif
         i01.mouth.speak("none of us won we both got" + str(inmoov) + "points")
-    global inmoov
     inmoov = 0
-    global human
     human = 0
     i01.mouth.speak("that was fun")
     sleep(2)
