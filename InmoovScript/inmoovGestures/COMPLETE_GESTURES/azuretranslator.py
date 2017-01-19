@@ -67,7 +67,7 @@ male_languages = {
     'ar' : 'Nizar',
     'da' : 'Rasmus',
     'nl' : 'Jeroen',
-    'en' :  Voice,
+    'en' : 'Ryan',
     'fr' : 'Bruno',
     'de' : 'Klaus',
     'el' : 'Dimitris',
