@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ <!-- File: inmoovEnglish.aiml -->
+<!-- Author: Gael Langevin -->
+<!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+<!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+<!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->  
+<!--  -->
+<!-- modified: Gael Langevin -->
+<!-- Last modified: September 16, 2016 -->
+<!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!-- This file works with ProgramAB service with the software MyRobotLab
+<!-- For more information see http://www.myrobotlab.org -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<category><pattern>WHAT IS THE TOPIC</pattern>
+<template>The topic is
+      <get name="topic"/></template>
+</category>
+<category><pattern>BOOT UP MODE</pattern>
+<template>Entering into the boot up topic.
+      <think>
+        <set name="topic">BOOTUP</set>
+      </think></template>
+</category>
+<category><pattern>GESTURES</pattern>
+<template>Entering into the gestures topic.
+      <think>
+        <set name="topic">GESTURES</set>
+      </think></template>
+</category>
+<category><pattern>GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>DETACH ALL</pattern>
+<template>Detach All
+      <oob>
+        <mrl>
+          <service>i01</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DETACH EVERYTHING</pattern>
+<template><srai>DETACH ALL</srai></template>
+</category>
+<category><pattern>ATTACH ALL</pattern>
+<template>Attaching all
+      <oob>
+        <mrl>
+          <service>i01</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH EVERYTHING</pattern>
+<template><srai>ATTACH ALL</srai></template>
+</category>
+<category><pattern>ATTACH RIGHT HAND</pattern>
+<template>Attaching my right hand
+      <oob>
+        <mrl>
+          <service>i01.rightHand</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT HAND</pattern>
+<template><srai>ATTACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>DETACH RIGHT HAND</pattern>
+<template>Detaching my right hand
+      <oob>
+        <mrl>
+          <service>i01.rightHand</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR RIGHT HAND</pattern>
+<template><srai>DETACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>ATTACH LEFT HAND</pattern>
+<template>Attaching my left hand
+      <oob>
+        <mrl>
+          <service>i01.leftHand</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT HAND</pattern>
+<template><srai>ATTACH LEFT HAND</srai></template>
+</category>
+<category><pattern>DETACH LEFT HAND</pattern>
+<template>Detaching my left hand
+      <oob>
+        <mrl>
+          <service>i01.leftHand</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR LEFT HAND</pattern>
+<template><srai>DETACH LEFT HAND</srai></template>
+</category>
+<category><pattern>ATTACH HEAD</pattern>
+<template>Attaching my head
+      <oob>
+        <mrl>
+          <service>i01.head</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR HEAD</pattern>
+<template><srai>ATTACH HEAD</srai></template>
+</category>
+<category><pattern>DETACH HEAD</pattern>
+<template>Detaching my head
+      <oob>
+        <mrl>
+          <service>i01.head</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT HEAD</pattern>
+<template><srai>DETACH HEAD</srai></template>
+</category>
+<category><pattern>ATTACH RIGHT ARM</pattern>
+<template>Attaching my right arm
+      <oob>
+        <mrl>
+          <service>i01.rightArm</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT ARM</pattern>
+<template><srai>ATTACH RIGHT ARM</srai></template>
+</category>
+<category><pattern>DETACH RIGHT ARM</pattern>
+<template>Detaching my right arm
+      <oob>
+        <mrl>
+          <service>i01.rightArm</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT RIGHT ARM</pattern>
+<template><srai>DETACH RIGHT ARM</srai></template>
+</category>
+<category><pattern>ATTACH LEFT ARM</pattern>
+<template>Attaching my left arm
+      <oob>
+        <mrl>
+          <service>i01.leftArm</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT ARM</pattern>
+<template><srai>ATTACH LEFT ARM</srai></template>
+</category>
+<category><pattern>DETACH LEFT ARM</pattern>
+<template>Detaching my left arm
+      <oob>
+        <mrl>
+          <service>i01.leftArm</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT LEFT ARM</pattern>
+<template><srai>DETACH LEFT ARM</srai></template>
+</category>
+<category><pattern>ATTACH TORSO</pattern>
+<template>Attaching my torso
+      <oob>
+        <mrl>
+          <service>i01.torso</service>
+          <method>attach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>ATTACH YOUR TORSO</pattern>
+<template><srai>ATTACH TORSO</srai></template>
+</category>
+<category><pattern>DETACH TORSO</pattern>
+<template>Detaching my torso
+      <oob>
+        <mrl>
+          <service>i01.torso</service>
+          <method>detach</method>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>DISCONNECT TORSO</pattern>
+<template><srai>DETACH TORSO</srai></template>
+</category>
+</aiml>

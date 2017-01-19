@@ -168,6 +168,16 @@
 </category></topic>
 
 <topic name="GESTURES">
+<category><pattern>DISCONNECT YOUR LEFT ARM</pattern>
+<template><srai>DISCONNECT LEFT ARM</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DETACH YOUR LEFT ARM</pattern>
+<template><srai>DISCONNECT LEFT ARM</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
 <category><pattern>ATTACH RIGHT ARM</pattern>
 <template>Connect my right arm.
         <oob>
@@ -192,6 +202,16 @@
             <method>detach</method>
           </mrl>
         </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DISCONNECT YOUR RIGHT ARM</pattern>
+<template><srai>DISCONNECT RIGHT ARM</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>DETACH YOUR RIGHT ARM</pattern>
+<template><srai>DISCONNECT RIGHT ARM</srai></template>
 </category></topic>
 
 <topic name="GESTURES">
@@ -324,6 +344,11 @@
             <param>stopTracking()</param>
           </mrl>
         </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>STOP YOUR TRACKING</pattern>
+<template><srai>FREEZE TRACK</srai></template>
 </category></topic>
 
 <topic name="GESTURES">
@@ -1189,7 +1214,7 @@
 </category></topic>
 
 <topic name="GESTURES">
-<category><pattern>MOVEMENT FOR LONDON NUMBER 4</pattern>
+<category><pattern>MOVEMENT NUMBER 4</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
@@ -1200,8 +1225,13 @@
 </category></topic>
 
 <topic name="GESTURES">
-<category><pattern>MOVEMENT FOR LONDON NUMBER FOUR</pattern>
-<template><srai>MOVEMENT FOR LONDON NUMBER 4</srai></template>
+<category><pattern>MOVEMENT NUMBER FOUR</pattern>
+<template><srai>MOVEMENT NUMBER 4</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>MOVEMENT NUMBER FOR</pattern>
+<template><srai>MOVEMENT NUMBER 4</srai></template>
 </category></topic>
 
 <topic name="GESTURES">
@@ -1353,8 +1383,7 @@
 
 <topic name="GESTURES">
 <category><pattern>GUESS WHAT</pattern>
-<template>
-        <oob>
+<template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
@@ -1389,8 +1418,7 @@
 
 <topic name="GESTURES">
 <category><pattern>COME HERE</pattern>
-<template>
-        <oob>
+<template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
@@ -1477,8 +1505,7 @@
 
 <topic name="GESTURES">
 <category><pattern>HOW DO YOU FEEL</pattern>
-<template>
-        <oob>
+<template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
@@ -1489,8 +1516,7 @@
 
 <topic name="GESTURES">
 <category><pattern>PLAY YOUR SONG</pattern>
-<template>
-        <oob>
+<template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
@@ -1648,5 +1674,136 @@
         </oob></template>
 </category></topic>
 
+<topic name="GESTURES">
+<category><pattern>PLAY UTUBE</pattern>
+<template>Okay <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayUtub()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PLAY UTUB</pattern>
+<template>Okay <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayUtub()</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>PLAY YOU TUBE</pattern>
+<template><srai>PLAY UTUB</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SHOW ME A PICTURE OF A *</pattern>
+<template>Okay <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>FindImage("<star/>")</param>
+        </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>SHOW ME A PICTURE OF THE *</pattern>
+<template><srai>SHOW ME A PICTURE OF A * </srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>FIX THE MICROPHONE</pattern>
+<template>Okay <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>WebkitSpeechRecognitionON()</param>
+        </mrl>
+        </oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>OPEN FACEBOOK</pattern>
+<template><random>
+               <li>Launching facebook </li>
+               <li>Getting facebook started </li>
+               <li>Right away, sir! </li>
+            </random><oob>
+            <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>BareBonesBrowserLaunch.openURL("http://www.facebook.com")</param>
+          </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ROBOT RESEARCH *</pattern>
+<template><random>
+               <li>Launching browser </li>
+               <li>Searching for you! </li>
+               <li>Looking on the net! </li>
+            </random><oob>
+            <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>BareBonesBrowserLaunch.openURL("https://encrypted.google.com/#q=<star/>")</param>
+          </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>ROBOTIC RESEARCH *</pattern>
+<template>I will do that
+        <oob><mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>inmoovsearch("<star/>")</param>
+        </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>YOUTUBE *</pattern>
+<template>Lets play
+        <oob><mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star/>")</param>
+        </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RANDOM PAUSE</pattern>
+<template>Thanks
+        <oob><mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>VieAleatoire()</param>
+        </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>RANDOM LIFE</pattern>
+<template><srai>RANDOM PAUSE</srai></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>STOP RANDOM PAUSE</pattern>
+<template>Okay
+        <oob><mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>VieAleatoireStop()</param>
+        </mrl></oob></template>
+</category></topic>
+
+<topic name="GESTURES">
+<category><pattern>STOP RANDOM LIFE</pattern>
+<template><srai>STOP RANDOM PAUSE</srai></template>
+</category></topic>
 
 </aiml>
