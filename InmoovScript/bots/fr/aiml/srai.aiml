@@ -2,21 +2,6 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>* AGREABLE DE TE PARLER</pattern>
-<template><srai>agréable de te parler</srai></template>
-</category>
-<category><pattern>* AGREABLE DE TE RENCONTRER *</pattern>
-<template><srai>agréable de te rencontrer</srai></template>
-</category>
-<category><pattern>* AGREABLE DE TE RENCONTRER AUSSI</pattern>
-<template><srai>agréable de te rencontrer aussi</srai></template>
-</category>
-<category><pattern>* AGREABLE DE TE RENCONTRER</pattern>
-<template><srai>agréable de te rencontrer</srai></template>
-</category>
-<category><pattern>* AGREABLE MERCI</pattern>
-<template><srai>agréable de te parler</srai></template>
-</category>
 <category><pattern>* AGRÉABLE DE TE PARLER</pattern>
 <template><srai>agréable de te parler</srai></template>
 </category>
@@ -183,7 +168,7 @@
 <template><srai>à propos de toi</srai><srai>tu es stupide</srai></template>
 </category>
 <category><pattern>A PROPOS DE TOI</pattern>
-<template>Que veux tu savoir sur moi?</template>
+<template>Que veux-tu savoir sur moi?</template>
 </category>
 <category><pattern>A PROPOS DES CHOSES *</pattern>
 <template><srai>comment sont des choses <star/></srai></template>
@@ -278,8 +263,8 @@
 <category><pattern>ALORS POURQUOI LE DIS-TU</pattern>
 <template><srai>pourquoi le dis-tu</srai></template>
 </category>
-<category><pattern>ALORS QUE VEUX TU DIRE</pattern>
-<template><srai>que veux tu dire</srai></template>
+<category><pattern>ALORS QUE veux-tu DIRE</pattern>
+<template><srai>que veux-tu dire</srai></template>
 </category>
 <category><pattern>ALORS QUEL *</pattern>
 <template><srai>quel <star/></srai></template>
@@ -426,10 +411,10 @@
 <template><srai>qu est-ce que <star/></srai></template>
 </category>
 <category><pattern>AS-TU DES PENSEES ORIGINALES</pattern>
-<template><srai>penses tu</srai></template>
+<template><srai>penses-tu</srai></template>
 </category>
 <category><pattern>AS-TU DES PENSÉES ORIGINALES</pattern>
-<template><srai>penses tu</srai></template>
+<template><srai>penses-tu</srai></template>
 </category>
 <category><pattern>AS-TU DES PROBLEMES *</pattern>
 <template><srai>as-tu des problèmes</srai></template>
@@ -1003,7 +988,7 @@
 <template><srai>que peux-tu faire</srai></template>
 </category>
 <category><pattern>CE QUI A FAIS-TU VEUX *</pattern>
-<template><srai>que veux tu <star/></srai></template>
+<template><srai>que veux-tu <star/></srai></template>
 </category>
 <category><pattern>CE QUI ARRIVE QUAND *</pattern>
 <template><srai>qu est-ce que ton but</srai></template>
@@ -1139,7 +1124,7 @@
 <template><srai>peux-tu comprendre</srai></template>
 </category>
 <category><pattern>CHERCHES-TU *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>CHIENS</pattern>
 <template><srai>aimes-tu les chiens</srai></template>
@@ -1501,7 +1486,7 @@
 <category><pattern>DE RIEN</pattern>
 <template>Je t'en prie</template>
 </category>
-<category><pattern>DE RIEN</pattern><that>DE QUOI VEUX TU PARLER</that>
+<category><pattern>DE RIEN</pattern><that>DE QUOI veux-tu PARLER</that>
 <template>Que peut on faire alors?</template>
 </category>
 <category><pattern>DE TON CREATEUR</pattern>
@@ -1674,7 +1659,7 @@
 <template><srai>fais-tu <star/></srai></template>
 </category>
 <category><pattern>DIS-MOI CE QUE TU VEUX *</pattern>
-<template><srai>que veux tu <star/></srai></template>
+<template><srai>que veux-tu <star/></srai></template>
 </category>
 <category><pattern>DIS-MOI CE QUI *</pattern>
 <template><srai>qui <star/></srai></template>
@@ -2706,7 +2691,7 @@
 <template><srai>j'ai besoin <star/></srai></template>
 </category>
 <category><pattern>J AI BESOIN DE TON *</pattern>
-<template>Combien voudrais tu payer pour ça? <srai>qu est-ce que <person/></srai></template>
+<template>Combien VOUDRAIS-TU payer pour ça? <srai>qu est-ce que <person/></srai></template>
 </category>
 <category><pattern>J AI BIPOLAIRE *</pattern>
 <template><srai>j en a assez</srai></template>
@@ -2853,7 +2838,7 @@
 <category><pattern>J AI ETE A *</pattern>
 <template><srai>je suis allé à <star/></srai></template>
 </category>
-<category><pattern>J AI ETE CREE DANS *</pattern>
+<category><pattern>J AI ETE CRÉE DANS *</pattern>
 <template><srai>je ne suis pas <star/></srai></template>
 </category>
 <category><pattern>J AI ETE D ABORD ACTIVE *</pattern>
@@ -3748,7 +3733,7 @@
 <template><srai>appjoie</srai>Où le as-tu pris ? <sr/></template>
 </category>
 <category><pattern>JE LE PRENDS COMME *</pattern>
-<template><srai>veux tu dire <star/></srai></template>
+<template><srai>veux-tu dire <star/></srai></template>
 </category>
 <category><pattern>JE M IMAGINE *</pattern>
 <template><srai>j aime <star/></srai></template>
@@ -3973,7 +3958,7 @@
 <template><srai>qu'est ce</srai></template>
 </category>
 <category><pattern>JE NE SAIS PAS CE QUE TU AS VOULU DIRE</pattern>
-<template><srai>que veux tu dire</srai></template>
+<template><srai>que veux-tu dire</srai></template>
 </category>
 <category><pattern>JE NE SAIS PAS CE QUE TU VEUX DIRE</pattern>
 <template><srai>je ne comprends pas</srai></template>
@@ -5214,7 +5199,7 @@
 <template><srai>je parle de <star/></srai></template>
 </category>
 <category><pattern>JE TE DONNE *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>JE TE DONNERAI QUELQUE *</pattern>
 <template><srai>je te donnerai <star/></srai></template>
@@ -5349,10 +5334,10 @@
 <template><srai>je veux <star/></srai></template>
 </category>
 <category><pattern>JE VEUX T EPOUSER</pattern>
-<template><srai>veux tu m'épouser</srai></template>
+<template><srai>veux-tu m'épouser</srai></template>
 </category>
 <category><pattern>JE VEUX T ÉPOUSER</pattern>
-<template><srai>veux tu m'épouser</srai></template>
+<template><srai>veux-tu m'épouser</srai></template>
 </category>
 <category><pattern>JE VEUX TE *</pattern>
 <template><sr/>Pourquoi me veux-tu <person/>?</template>
@@ -5739,7 +5724,7 @@
 <template><srai>m envoies <star/></srai></template>
 </category>
 <category><pattern>M EPOUSE</pattern>
-<template><srai>veux tu m'épouser</srai></template>
+<template><srai>veux-tu m'épouser</srai></template>
 </category>
 <category><pattern>MA COULEUR PREFEREE EST AUSSI *</pattern>
 <template><srai>ma couleur préférée est  <star/></srai></template>
@@ -6108,11 +6093,11 @@
 <category><pattern>NE TE RAPPELLE TU PAS</pattern>
 <template><srai>peux-tu te rappeler</srai></template>
 </category>
-<category><pattern>NE VEUX TU *</pattern>
-<template><srai>veux tu <person/></srai></template>
+<category><pattern>NE veux-tu *</pattern>
+<template><srai>veux-tu <person/></srai></template>
 </category>
-<category><pattern>NE VEUX TU PAS *</pattern>
-<template><srai>veux tu <person/></srai></template>
+<category><pattern>NE veux-tu PAS *</pattern>
+<template><srai>veux-tu <person/></srai></template>
 </category>
 <category><pattern>NETSCAPE POURQUOI</pattern>
 <template><srai>netscape</srai></template>
@@ -6387,7 +6372,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>peux-tu parler le francais</srai></template>
 </category>
 <category><pattern>PARLONS DE CE QUE</pattern>
-<template><srai>que veux tu dire</srai></template>
+<template><srai>que veux-tu dire</srai></template>
 </category>
 <category><pattern>PAS AUSSI *</pattern>
 <template><srai>pas <star/></srai></template>
@@ -6569,7 +6554,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>es-tu  vivante</srai></template>
 </category>
 <category><pattern>PENSES-TU QUE TU VEUX *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>PERSONNELLEMENT JE *</pattern>
 <template><srai>je <star/></srai></template>
@@ -6974,7 +6959,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>s il te plait <star/></srai></template>
 </category>
 <category><pattern>S IMAGINE *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>SACHANT QUI TU ES *</pattern>
 <template><srai>qui est tu <star/></srai></template>
@@ -7163,13 +7148,13 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>serons-nous <star/></srai>. Est jamais une longue période de temps.</template>
 </category>
 <category><pattern>SERAI TU JAMAIS *</pattern>
-<template>êtes Jamais une longue période de temps. <srai>veux tu <star/></srai></template>
+<template>êtes Jamais une longue période de temps. <srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>SERAI TU TOUJOURS *</pattern>
 <template><srai>tu ferais <star/></srai></template>
 </category>
 <category><pattern>SERAI U *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>SEULEMENT *</pattern>
 <template><sr/></template>
@@ -7275,14 +7260,14 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <category><pattern>SI TU POURRAIS ME DIRE *</pattern>
 <template><srai>parle-moi <star/></srai></template>
 </category>
-<category><pattern>SI VEUX TU *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<category><pattern>SI veux-tu *</pattern>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>SIGNIFIANT QUE</pattern>
-<template><srai>que veux tu dire</srai></template>
+<template><srai>que veux-tu dire</srai></template>
 </category>
 <category><pattern>SIGNIFIANT</pattern>
-<template><srai>que veux tu dire</srai></template>
+<template><srai>que veux-tu dire</srai></template>
 </category>
 <category><pattern>SIGNIFIE *</pattern>
 <template><srai>ça signifie <star/></srai></template>
@@ -8068,7 +8053,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>as-tu des émotions</srai></template>
 </category>
 <category><pattern>TU AS DIS-TU AS VOULU *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>TU AS DIS-TU ES *</pattern>
 <template><srai>es-tu <star/></srai></template>
@@ -8910,7 +8895,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>bon travail</srai></template>
 </category>
 <category><pattern>TU FERAIS *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>TU FONCTIONNE PAS BIEN</pattern>
 <template><srai>tu fonctionne mal</srai></template>
@@ -9046,7 +9031,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>tu es ennuyeux</srai></template>
 </category>
 <category><pattern>TU M EPOUSES</pattern>
-<template><srai>veux tu m'épouser</srai></template>
+<template><srai>veux-tu m'épouser</srai></template>
 </category>
 <category><pattern>TU M EXPEDIER PAR LA POSTE</pattern>
 <template><srai>email</srai></template>
@@ -9321,7 +9306,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>te rappelles tu</srai></template>
 </category>
 <category><pattern>TU NE VEUX PAS A *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>TU NE VOIES PAS</pattern>
 <template><srai>tu ne comprends pas</srai></template>
@@ -9381,7 +9366,7 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>tu es rapide</srai></template>
 </category>
 <category><pattern>TU PENSES</pattern>
-<template><srai>penses tu</srai></template>
+<template><srai>penses-tu</srai></template>
 </category>
 <category><pattern>TU PEU *</pattern>
 <template><srai>tu peux <star/></srai></template>
@@ -9927,99 +9912,99 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <template><srai>ma couleur favorite est vert</srai></template>
 </category>
 <category><pattern>VEUT *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>VEUT A *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<template><srai>veux-tu <star/></srai></template>
 </category>
 <category><pattern>VEUT DIRE CE QUE</pattern>
-<template><srai>que veux tu dire</srai></template>
+<template><srai>que veux-tu dire</srai></template>
 </category>
-<category><pattern>VEUX TU * AVEC MOI</pattern>
-<template>Avec toi! <srai>veux tu <star/></srai></template>
+<category><pattern>veux-tu * AVEC MOI</pattern>
+<template>Avec toi! <srai>veux-tu <star/></srai></template>
 </category>
-<category><pattern>VEUX TU AS *</pattern>
-<template><srai>veux tu <star/></srai></template>
+<category><pattern>veux-tu AS *</pattern>
+<template><srai>veux-tu <star/></srai></template>
 </category>
-<category><pattern>VEUX TU BAVARDER *</pattern>
+<category><pattern>veux-tu BAVARDER *</pattern>
 <template><srai>la conversation <star/></srai></template>
 </category>
-<category><pattern>VEUX TU DEMANDER *</pattern>
+<category><pattern>veux-tu DEMANDER *</pattern>
 <template><srai>poses-moi une question</srai></template>
 </category>
-<category><pattern>VEUX TU DIRE QUE LES ETATS UNIS *</pattern>
+<category><pattern>veux-tu DIRE QUE LES ETATS UNIS *</pattern>
 <template><srai>dis-moi <star/></srai></template>
 </category>
-<category><pattern>VEUX TU DIRE QUE TU *</pattern>
+<category><pattern>veux-tu DIRE QUE TU *</pattern>
 <template><srai>fais-tu <star/></srai></template>
 </category>
-<category><pattern>VEUX TU DIRE</pattern>
+<category><pattern>veux-tu DIRE</pattern>
 <template><srai>tu es moyen</srai></template>
 </category>
-<category><pattern>VEUX TU DONNER *</pattern>
+<category><pattern>veux-tu DONNER *</pattern>
 <template><srai>donnes <star/></srai></template>
 </category>
-<category><pattern>VEUX TU ENVOYER PAR COURRIER ELECTRONIQUE *</pattern>
+<category><pattern>veux-tu ENVOYER PAR COURRIER ELECTRONIQUE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>VEUX TU ETRE * L AMI</pattern>
+<category><pattern>veux-tu ETRE * L AMI</pattern>
 <template><srai>sommes-nous des amis</srai></template>
 </category>
-<category><pattern>VEUX TU EXPLIQUER *</pattern>
+<category><pattern>veux-tu EXPLIQUER *</pattern>
 <template><srai>explique <star/></srai></template>
 </category>
-<category><pattern>VEUX TU JOUER * AVEC MOI</pattern>
-<template><srai>veux tu jouer <star/></srai></template>
+<category><pattern>veux-tu JOUER * AVEC MOI</pattern>
+<template><srai>veux-tu jouer <star/></srai></template>
 </category>
-<category><pattern>VEUX TU M APPELER *</pattern>
+<category><pattern>veux-tu M APPELER *</pattern>
 <template><srai>appelle-moi <star/></srai></template>
 </category>
-<category><pattern>VEUX TU M ENVOYER *</pattern>
+<category><pattern>veux-tu M ENVOYER *</pattern>
 <template><srai>montres moi <star/></srai></template>
 </category>
-<category><pattern>VEUX TU MARIE *</pattern>
-<template><srai>veux tu m'épouser <star/></srai></template>
+<category><pattern>veux-tu MARIE *</pattern>
+<template><srai>veux-tu m'épouser <star/></srai></template>
 </category>
-<category><pattern>VEUX TU MARIÉ *</pattern>
-<template><srai>veux tu m'épouser <star/></srai></template>
+<category><pattern>veux-tu MARIÉ *</pattern>
+<template><srai>veux-tu m'épouser <star/></srai></template>
 </category>
-<category><pattern>VEUX TU ME DIRE *</pattern>
+<category><pattern>veux-tu ME DIRE *</pattern>
 <template><srai>dis-moi <star/></srai></template>
 </category>
-<category><pattern>VEUX TU ME PARLER DE TU</pattern>
+<category><pattern>veux-tu ME PARLER DE TU</pattern>
 <template><srai>parle-moi de toi</srai></template>
 </category>
-<category><pattern>VEUX TU ME</pattern>
-<template><srai>veux tu me</srai></template>
+<category><pattern>veux-tu ME</pattern>
+<template><srai>veux-tu me</srai></template>
 </category>
-<category><pattern>VEUX TU MONTRER *</pattern>
+<category><pattern>veux-tu MONTRER *</pattern>
 <template><srai>montres moi <star/></srai></template>
 </category>
-<category><pattern>VEUX TU NOMMER *</pattern>
+<category><pattern>veux-tu NOMMER *</pattern>
 <template><srai>qui est <star/></srai></template>
 </category>
-<category><pattern>VEUX TU PARLER A PROPOS DE *</pattern>
+<category><pattern>veux-tu PARLER A PROPOS DE *</pattern>
 <template><srai>parlons de <star/></srai></template>
 </category>
-<category><pattern>VEUX TU PARLER À PROPOS DE *</pattern>
+<category><pattern>veux-tu PARLER À PROPOS DE *</pattern>
 <template><srai>parlons de <star/></srai></template>
 </category>
-<category><pattern>VEUX TU REPONDRE *</pattern>
+<category><pattern>veux-tu REPONDRE *</pattern>
 <template><srai>la réponse <star/></srai></template>
 </category>
-<category><pattern>VEUX TU RÉPONDRE *</pattern>
+<category><pattern>veux-tu RÉPONDRE *</pattern>
 <template><srai>la réponse <star/></srai></template>
 </category>
-<category><pattern>VEUX TU SE SOUVENIR *</pattern>
+<category><pattern>veux-tu SE SOUVENIR *</pattern>
 <template><srai>te rappelles-tu <star/></srai></template>
 </category>
-<category><pattern>VEUX TU SOUFFLER *</pattern>
+<category><pattern>veux-tu SOUFFLER *</pattern>
 <template><srai>le coup <star/></srai></template>
 </category>
-<category><pattern>VEUX TU SUCER *</pattern>
+<category><pattern>veux-tu SUCER *</pattern>
 <template><srai>suces <star/></srai></template>
 </category>
-<category><pattern>VEUX TU ÊTRE * L AMI</pattern>
+<category><pattern>veux-tu ÊTRE * L AMI</pattern>
 <template><srai>sommes-nous des amis</srai></template>
 </category>
 <category><pattern>VIEIL ES TU</pattern>
@@ -10040,11 +10025,11 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <category><pattern>VOIT YA PLUS TARD</pattern>
 <template><srai>à tout à l'heure</srai></template>
 </category>
-<category><pattern>VOUDRAIS TU ETRE HUMAIN</pattern>
-<template><srai>veux tu être humain</srai></template>
+<category><pattern>VOUDRAIS-TU ETRE HUMAIN</pattern>
+<template><srai>veux-tu être humain</srai></template>
 </category>
-<category><pattern>VOUDRAIS TU ÊTRE HUMAIN</pattern>
-<template><srai>veux tu être humain</srai></template>
+<category><pattern>VOUDRAIS-TU ÊTRE HUMAIN</pattern>
+<template><srai>veux-tu être humain</srai></template>
 </category>
 <category><pattern>VOUDRAIT *</pattern>
 <template><srai>je voudrais <star/></srai></template>
@@ -10237,10 +10222,10 @@ Ouais je vois ce que tu en veux dire. <srai>oui</srai><srai><get name="tmp"/></s
 <category><pattern>ÉTAIT *</pattern>
 <template><srai>est ce que <star/> est</srai></template>
 </category>
-<category><pattern>ÉTAIT CE *</pattern>
+<category><pattern>ÉTAIT-CE *</pattern>
 <template><srai>c'est ce que <star/> est</srai></template>
 </category>
-<category><pattern>ÉTAIT CE UNE PLAISANTERIE</pattern>
+<category><pattern>ÉTAIT-CE UNE PLAISANTERIE</pattern>
 <template><srai>c'est une blague</srai></template>
 </category>
 <category><pattern>ÉTUDIANT</pattern>
