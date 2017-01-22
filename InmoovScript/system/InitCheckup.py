@@ -81,9 +81,13 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 ################################
 	
 #we launch Inmoov Gestures
-for filename in os.listdir(RuningFolder+'inmoovGestures'):		
-	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovGestures/'+filename.encode('utf8'))
+for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
+	print files
+	for name in files:
+		if name.split(".")[-1] == "py":
+			execfile(os.path.join(root, name))
+			if DEBUG==1:
+				print "debug inmoovAPPS : ",os.path.join(root, name)
 		
 #we launch Inmoov life
 for filename in os.listdir(RuningFolder+'inmoovLife'):		
