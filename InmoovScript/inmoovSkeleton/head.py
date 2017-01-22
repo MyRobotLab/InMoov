@@ -72,7 +72,8 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			i01.startMouthControl(MyLeftPort)
 			i01.mouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw'))
 		
-		head.jaw.enableAutoAttach(1)	
+		head.jaw.enableAutoAttach(1)
+		head.jaw.autoDetach()
 		if autoDetach:
 			
 			head.eyeX.enableAutoAttach(1)

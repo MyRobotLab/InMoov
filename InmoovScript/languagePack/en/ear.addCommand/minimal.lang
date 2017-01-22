@@ -10,6 +10,7 @@ ear.addCommand("disconnect everything", "i01", "detach")
 ear.addCommand("rest", "python", "rest")
 ear.addCommand("list", "python", "rest")
 ear.addCommand("first", "python", "rest")
+ear.addCommand("disable nervo board", "python", "DisableNervoPower")
 
 # ARM((S) - inmoovGestures\_minimalArm.py
 ear.addCommand("attach left arm", "i01.leftArm", "attach") #to remove soon

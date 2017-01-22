@@ -17,7 +17,8 @@ chatBot=Runtime.create("chatBot", "ProgramAB")
 def onRecognized(text):
 	if DEBUG==1:
 		print "onRecognized : ",text
-	chatBot.getResponse(text.replace("'", " "))
+	if EarInterpretEngine=="chatbot":
+		chatBot.getResponse(text.replace("'", " "))
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS
