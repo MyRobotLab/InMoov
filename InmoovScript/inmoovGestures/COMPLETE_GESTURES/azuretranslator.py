@@ -5,7 +5,7 @@ AzureTranslator=Runtime.createAndStart("AzureTranslator", "AzureTranslator")
 sleep(0.1)
 #initiate azure
 #AzureTranslator.setCredentials(Azure_client_id,Azure_client_secret)
-AzureTranslator.setCredentials("90a98ba0-a028-4b61-9e7a-10a22b186944","SZDqSTcKxwUMiPEievXKWleXAYMWuD1Tm1D2igskvus") # KEY and SECRET azure credentials
+AzureTranslator.setCredentials("xxxxxxxx","xxxxxxxx") # KEY and SECRET azure credentials
 
 
 #Origin language 
@@ -67,7 +67,7 @@ male_languages = {
     'ar' : 'Nizar',
     'da' : 'Rasmus',
     'nl' : 'Jeroen',
-    'en' :  Voice,
+    'en' : 'Ryan',
     'fr' : 'Bruno',
     'de' : 'Klaus',
     'el' : 'Dimitris',
@@ -123,13 +123,13 @@ def translateText(text,language):
 	try:
 		RealLang=en_languages[language]
 	except: 
-		inmoovSuper.getResponse("AZURE_ERROR_2 "+language)
+		chatBot.getResponse("AZURE_ERROR_2 "+language)
 	print RealLang
 	
 	try:
 		AzureTranslator.detectLanguage(text)
 	except:
-		inmoovSuper.getResponse("AZURE_ERROR_1")
+		chatBot.getResponse("AZURE_ERROR_1")
 		RealLang="0"
 	
 	if RealLang!="0":
@@ -148,12 +148,12 @@ def translateText(text,language):
 		
 		
 		if 'Cannot find an active Azure Market Place' in t_text:
-			inmoovSuper.getResponse("AZURE_ERROR_3")
+			chatBot.getResponse("AZURE_ERROR_3")
 		else:
 			mouth.setVoice(male_languages[RealLang])  
 			print t_text
 			talk(t_text)
-			mouth.setVoice(Voice)
+			mouth.setVoice(MyvoiceType)
 
 			
 			
