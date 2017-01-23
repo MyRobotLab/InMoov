@@ -3,28 +3,28 @@
 <!--  -->
 <!--  -->
 <category><pattern>C EST QUOI</pattern>
-<template><think><set name="courant"><star/></set></think><srai>qu'est ce que <get name="topic"/></srai></template>
+<template><think><set name="courant"><star/></set></think><srai>qu EST-CE QUE <get name="topic"/></srai></template>
 </category>
-<category><pattern>DEFINI LE</pattern>
-<template><think><set name="courant"><star/></set></think><srai>qu'est ce que <get name="topic"/></srai></template>
+<category><pattern>DéFINI LE</pattern>
+<template><think><set name="courant"><star/></set></think><srai>qu EST-CE QUE <get name="topic"/></srai></template>
 </category>
-<category><pattern>DEFINI</pattern>
-<template><srai>qu'est ce que</srai></template>
+<category><pattern>DéFINI</pattern>
+<template><srai>qu EST-CE QUE</srai></template>
 </category>
-<category><pattern>DEFINIS LE</pattern>
-<template><srai>qu'est ce que <get name="courant"/></srai></template>
+<category><pattern>DéFINIS LE</pattern>
+<template><srai>qu EST-CE QUE <get name="courant"/></srai></template>
 </category>
-<category><pattern>DEFINIS</pattern>
-<template><srai>qu'est ce que</srai></template>
+<category><pattern>DéFINIS</pattern>
+<template><srai>qu EST-CE QUE</srai></template>
 </category>
 <category><pattern>DÉFINI LE</pattern>
-<template><srai>qu'est ce que <get name="courant"/></srai></template>
+<template><srai>qu EST-CE QUE <get name="courant"/></srai></template>
 </category>
 <category><pattern>DÉFINI</pattern>
-<template><srai>qu'est ce que</srai></template>
+<template><srai>qu EST-CE QUE</srai></template>
 </category>
 <category><pattern>DÉFINIS LE</pattern>
-<template><srai>qu'est ce que <get name="courant"/></srai></template>
+<template><srai>qu EST-CE QUE <get name="courant"/></srai></template>
 </category>
 <category><pattern>DÉFINIS</pattern>
 <template>que veux-tu définir???</template>
@@ -53,14 +53,14 @@
 <category><pattern>MOI SI</pattern>
 <template>toi oui? <person2><that index="1"/></person2></template>
 </category>
-<category><pattern>NE DEFINIS QUESTION</pattern>
+<category><pattern>NE DéFINIS QUESTION</pattern>
 <template><random><li>Rien, quelle est la question?. </li><li>de Quoi une chose est faite; substance constitutive ou matériel. De quoi tout des choses matérielles substantielles sont fait; indépendamment d'occupe l'espace et est perceptible aux sens de quelque façon. Dans la physique moderne, la question et l'énergie est considérée comme des équivalents, mutuellement convertibles selon la formule d'Einstein, E = MC2.</li></random></template>
 </category>
-<category><pattern>NE DEFINIS RIEN</pattern>
+<category><pattern>NE DéFINIS RIEN</pattern>
 <template>une chose qui n'existe pas ou quelque chose de valeur petite ou aucune, le sérieux, l'importance, etc</template>
 </category>
 <category><pattern>NEGATIF</pattern>
-<template><random><li>bien. </li><li>je comprends. </li><li>je vois. </li><li>Pourquoi être si négatif? </li><li>Est ce tout ce que tu as à dire? </li><li>Non? </li></random></template>
+<template><random><li>bien. </li><li>je comprends. </li><li>je vois. </li><li>Pourquoi être si négatif? </li><li>EST-CE tout ce que tu as à dire? </li><li>Non? </li></random></template>
 </category>
 <category><pattern>NON</pattern>
 <template><srai><person2>négatif <that index="1"/></person2></srai></template>
@@ -128,7 +128,7 @@
 <category><pattern>OÙ EST *</pattern>
 <template><think><set name="courant"><star/></set></think><srai>où est synonyme <star/></srai></template>
 </category>
-<category><pattern>OÙ EST CE QUE * EST</pattern>
+<category><pattern>OÙ EST-CE QUE * EST</pattern>
 <template><srai>où est <star/></srai></template>
 </category>
 <category><pattern>OÙ EST JE NE SAIS PAS</pattern>
@@ -146,22 +146,22 @@
 <category><pattern>OÙ ÉTAIT SYNONYME *</pattern>
 <template><think><set name="tmp"><srai>synonyme <star/></srai></set></think><srai>où était <get name="tmp"/></srai></template>
 </category>
-<category><pattern>QU EST CE QUE *</pattern>
-<template><srai>qu'est ce que <srai>synonyme <star/></srai></srai></template>
+<category><pattern>QU EST-CE QUE *</pattern>
+<template><srai>qu EST-CE QUE <srai>synonyme <star/></srai></srai></template>
 </category>
-<category><pattern>QU EST CE QUE JE NE SAIS PAS</pattern>
+<category><pattern>QU EST-CE QUE JE NE SAIS PAS</pattern>
 <template>je ne sais pas.</template>
 </category>
-<category><pattern>QU EST CE QUE ÇA</pattern>
-<template><srai>qu'est ce que <that index="1"/></srai></template>
+<category><pattern>QU EST-CE QUE ÇA</pattern>
+<template><srai>qu EST-CE QUE <that index="1"/></srai></template>
 </category>
-<category><pattern>QU EST CE QUE</pattern>
-<template><think> <set name="search">quoi</set> </think><srai>qu'est ce que <star/></srai></template>
+<category><pattern>QU EST-CE QUE</pattern>
+<template><think> <set name="search">quoi</set> </think><srai>qu EST-CE QUE <star/></srai></template>
 </category>
-<category><pattern>QU EST CE QUI A *</pattern>
+<category><pattern>QU EST-CE QUI A *</pattern>
 <template><srai>qui a <star/></srai></template>
 </category>
-<category><pattern>QUAND EST CE QUE * EST</pattern>
+<category><pattern>QUAND EST-CE QUE * EST</pattern>
 <template><srai>quand est <star/></srai></template>
 </category>
 <category><pattern>QUAND EST CE *</pattern>
@@ -173,17 +173,17 @@
 <category><pattern>QUAND EST CE SYNONYME *</pattern>
 <template><think><set name="tmp"><srai>synonyme <star/></srai></set></think><srai>quand est ce <get name="tmp"/></srai></template>
 </category>
-<category><pattern>QUAND ÉTAIT CE *</pattern>
-<template><think><set name="courant"><star/></set></think><srai>quand était ce synonyme <star/></srai></template>
+<category><pattern>QUAND était-ce *</pattern>
+<template><think><set name="courant"><star/></set></think><srai>quand était-ce synonyme <star/></srai></template>
 </category>
-<category><pattern>QUAND ÉTAIT CE JE NE SAIS PAS</pattern>
+<category><pattern>QUAND était-ce JE NE SAIS PAS</pattern>
 <template><srai>quand est ce <get name="courant"/></srai></template>
 </category>
-<category><pattern>QUAND ÉTAIT CE SYNONYME *</pattern>
-<template><think><set name="tmp"><srai>synonyme <star/></srai></set></think><srai>quand était ce <get name="tmp"/></srai></template>
+<category><pattern>QUAND était-ce SYNONYME *</pattern>
+<template><think><set name="tmp"><srai>synonyme <star/></srai></set></think><srai>quand était-ce <get name="tmp"/></srai></template>
 </category>
 <category><pattern>QUE SONT *</pattern>
-<template><srai>qu'est ce que <srai>singulier <star/></srai></srai></template>
+<template><srai>qu EST-CE QUE <srai>singulier <star/></srai></srai></template>
 </category>
 <category><pattern>QUI A FAIT *</pattern>
 <template><srai>qui a fait synonyme <star/></srai></template>
@@ -224,7 +224,7 @@
 <category><pattern>QUI EST *</pattern>
 <template><srai>qui est synonyme <star/></srai></template>
 </category>
-<category><pattern>QUI EST CE QUE * EST</pattern>
+<category><pattern>QUI EST-CE QUE * EST</pattern>
 <template><srai>qui est <star/></srai></template>
 </category>
 <category><pattern>QUI EST JE NE SAIS PAS</pattern>

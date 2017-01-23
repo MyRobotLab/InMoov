@@ -12,13 +12,13 @@
 <!--  -->
 
 <category><pattern>JOUR</pattern>
-<template>Aujourd'hui c'est <date format="%A" jformat="EEEEEEEEEE"/></template>
+<template>Aujourd'hui C EST <date format="%A" jformat="EEEEEEEEEE"/></template>
 </category>
 <category><pattern>ANNÉE</pattern>
 <template>Nous sommes en <date format="%Y" jformat="YYYY"/></template>
 </category>
 <category><pattern>MOIS</pattern>
-<template>C'est le mois <date format="%B" jformat="MMMMMMMMM"/></template>
+<template>C EST le mois <date format="%B" jformat="MMMMMMMMM"/></template>
 </category>
 <category><pattern>DONNER L HEURE</pattern>
 <template>Il est exactement <date format="%I:%M %p" jformat="h:mm a"/></template>
@@ -47,7 +47,7 @@ jours avant noël.</template>
 <category><pattern>EN QUELLE ANNÉE</pattern><template>
 <srai>ANNÉE</srai></template></category>
 
-<category><pattern>EN QUELLE ANNÉE SOMMES NOUS</pattern><template>
+<category><pattern>EN QUELLE ANNÉE SOMMES-NOUS</pattern><template>
 <srai>ANNÉE</srai></template></category>
 
 <category><pattern>QUEL EST L'ANNÉE</pattern><template>
@@ -56,16 +56,16 @@ jours avant noël.</template>
 <category><pattern>QUELLE EST L'ANNÉE</pattern><template>
 <srai>ANNÉE</srai></template></category>
 
-<category><pattern>QUEL MOIS SOMMES NOUS</pattern><template>
+<category><pattern>QUEL MOIS SOMMES-NOUS</pattern><template>
 <srai>MOIS</srai></template></category>
 
 <category><pattern>C EST QUOI LE MOIS</pattern><template>
 <srai>MOIS</srai></template></category>
 
-<category><pattern>QUELLE HEURE EST IL</pattern><template>
+<category><pattern>QUELLE HEURE EST-IL</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
 
-<category><pattern>QUEL JOUR SOMMES NOUS</pattern><template>
+<category><pattern>QUEL JOUR SOMMES-NOUS</pattern><template>
 <srai>DONNER LA DATE</srai></template></category>
 
 <category><pattern>ON EST QUOI AUJOURD HUI</pattern><template>
@@ -74,7 +74,7 @@ jours avant noël.</template>
 <category><pattern>QUEL EST L HEURE</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
 
-<category><pattern>QUEL HEURE EST IL</pattern><template>
+<category><pattern>QUEL HEURE EST-IL</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
 
 <category><pattern>QUELLE EST L HEURE</pattern><template>
@@ -92,7 +92,7 @@ jours avant noël.</template>
 <category><pattern>QUELLE EST LA DATE</pattern><template>
 <srai>DONNER LA DATE</srai></template></category>
 
-<category><pattern>C'EST QUOI LA DATE AUJOURD'HUI</pattern><template>
+<category><pattern>C EST QUOI LA DATE AUJOURD'HUI</pattern><template>
 <srai>DONNER LA DATE</srai></template></category>
 
 <category><pattern> * QUEL JOUR</pattern><template>
@@ -101,18 +101,18 @@ jours avant noël.</template>
 <category><pattern> * JOUR ON EST</pattern><template>
 <srai>JOUR</srai></template></category>
 
-<category><pattern>QUEL JOUR SOMMES NOUS</pattern><template>
+<category><pattern>QUEL JOUR SOMMES-NOUS</pattern><template>
 <srai>JOUR</srai></template></category>
 
-<category><pattern>QUELLE HEURE EST IL INTERROGATION</pattern><template>
+<category><pattern>QUELLE HEURE EST-IL INTERROGATION</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
-<category><pattern>QUEL JOUR SOMMES NOUS INTERROGATION</pattern><template><srai>JOUR</srai></template></category>
+<category><pattern>QUEL JOUR SOMMES-NOUS INTERROGATION</pattern><template><srai>JOUR</srai></template></category>
 <category><pattern>ON EST QUOI AUJOURD HUI INTERROGATION</pattern><template><srai>JOUR</srai></template></category>
 <category><pattern>QUEL EST L HEURE INTERROGATION</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
 <category><pattern>QUEL EST LE JOUR INTERROGATION</pattern><template>
 <srai>JOUR</srai></template></category>
-<category><pattern>QUEL HEURE EST IL INTERROGATION</pattern><template>
+<category><pattern>QUEL HEURE EST-IL INTERROGATION</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
 <category><pattern>QUELLE EST L HEURE INTERROGATION</pattern><template>
 <srai>DONNER L HEURE</srai></template></category>
@@ -124,8 +124,8 @@ jours avant noël.</template>
 <srai>JOUR</srai></template></category>
 <category><pattern>QUELLE JOUR SOMME NOUS INTERROGATION</pattern><template><srai>JOUR</srai></template></category>
 
-<category><pattern>* MINUTES</pattern><template>c'est long. </template></category>
-<category><pattern>* MINUTE</pattern><template>c'est vite passé! </template></category>
+<category><pattern>* MINUTES</pattern><template>C EST long. </template></category>
+<category><pattern>* MINUTE</pattern><template>C EST vite passé! </template></category>
 <category><pattern>* HEURES</pattern><template><srai>DONNER L HEURE</srai></template></category>
 <category><pattern>* HEURE</pattern><template><srai>DONNER L HEURE</srai></template></category>
 

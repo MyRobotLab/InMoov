@@ -2,7 +2,7 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>A PART CA *</pattern>
+<category><pattern>A PART çA *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>A PART SA *</pattern>
@@ -17,34 +17,34 @@
 <category><pattern>ACTUELLEMENT *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>AIMES TU DES * INTERROGATION</pattern>
-<template><srai>aimes tu des <star/></srai></template>
+<category><pattern>aimes-tu DES * INTERROGATION</pattern>
+<template><srai>aimes-tu des <star/></srai></template>
 </category>
-<category><pattern>AIMES TU DES *</pattern>
+<category><pattern>aimes-tu DES *</pattern>
 <template><random><li>Je ne suis pas sure si j'aime </li><li>Je ne suis pas sure d'aimer. </li></random><set name="that">des <star/> </set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
 </category>
-<category><pattern>AIMES TU LA * INTERROGATION</pattern>
-<template><srai>aimes tu la <star/></srai></template>
+<category><pattern>aimes-tu LA * INTERROGATION</pattern>
+<template><srai>aimes-tu la <star/></srai></template>
 </category>
-<category><pattern>AIMES TU LA *</pattern>
+<category><pattern>aimes-tu LA *</pattern>
 <template><random><li>Je ne suis pas sure si j'aime </li><li>Je ne suis pas sure d'aimer. </li></random><set name="that">la <star/> </set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
 </category>
-<category><pattern>AIMES TU LE * INTERROGATION</pattern>
-<template><srai>aimes tu le <star/></srai></template>
+<category><pattern>aimes-tu LE * INTERROGATION</pattern>
+<template><srai>aimes-tu le <star/></srai></template>
 </category>
-<category><pattern>AIMES TU LE *</pattern>
+<category><pattern>aimes-tu LE *</pattern>
 <template><random><li>Je ne suis pas sure si j'aime </li><li>Je ne suis pas sure d'aimer. </li></random><set name="that">le <star/> </set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
 </category>
-<category><pattern>AIMES TU LE CINEMA INTERROGATION</pattern>
+<category><pattern>aimes-tu LE CINEMA INTERROGATION</pattern>
 <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
 </category>
-<category><pattern>AIMES TU LE CINEMA</pattern>
+<category><pattern>aimes-tu LE CINEMA</pattern>
 <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
 </category>
-<category><pattern>AIMES TU LES * INTERROGATION</pattern>
-<template><srai>aimes tu les <star/></srai></template>
+<category><pattern>aimes-tu LES * INTERROGATION</pattern>
+<template><srai>aimes-tu les <star/></srai></template>
 </category>
-<category><pattern>AIMES TU LES *</pattern>
+<category><pattern>aimes-tu LES *</pattern>
 <template><random><li>Je ne suis pas sure si j'aime </li><li>Je ne suis pas sure d'aimer. </li></random><set name="that">les <star/> </set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
 </category>
 <category><pattern>AU MOMENT OU *</pattern>
@@ -83,14 +83,14 @@
 <category><pattern>BON *</pattern>
 <template>bien. <sr/></template>
 </category>
-<category><pattern>BONNE REPONSE *</pattern>
+<category><pattern>BONNE RéPONSE *</pattern>
 <template>que j'essaye de donner les meilleures réponses que je peux.</template>
 </category>
 <category><pattern>BONNE RÉPONSE *</pattern>
 <template>que j'essaye de donner les meilleures réponses que je peux.</template>
 </category>
 <category><pattern>CALCULE *</pattern>
-<template>Ai je l'air d'une calculette?</template>
+<template>ai-je l'air d'une calculette?</template>
 </category>
 <category><pattern>CHER *</pattern>
 <template><sr/></template>
@@ -107,10 +107,10 @@
 <category><pattern>COMMENT A *</pattern>
 <template>de plus de façons que tu peux imaginer.</template>
 </category>
-<category><pattern>COMMENT CA * INTERROGATION</pattern>
+<category><pattern>COMMENT çA * INTERROGATION</pattern>
 <template>eh oui, <set name="that"><person2/></set>.</template>
 </category>
-<category><pattern>COMMENT CA *</pattern>
+<category><pattern>COMMENT çA *</pattern>
 <template>eh oui, <set name="that"><person2/></set>.</template>
 </category>
 <category><pattern>COMMENT ÇA * INTERROGATION</pattern>
@@ -141,7 +141,7 @@
 <template>elle est <set name="elle"> <person2/> </set>?</template>
 </category>
 <category><pattern>JE FAIS *</pattern>
-<template>c'est drôle, moi aussi. <sr/></template>
+<template>C EST drôle, moi aussi. <sr/></template>
 </category>
 <category><pattern>JE FAIS PARTIE *</pattern>
 <template>qui en fait partie aussi <set name="that"> <person/> </set>?</template>
@@ -200,7 +200,7 @@
 <category><pattern>TRÈS *</pattern>
 <template><random><li>Peut être. </li></random><sr/></template>
 </category>
-<category><pattern>À PART CA *</pattern>
+<category><pattern>À PART çA *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>À PART SA *</pattern>
