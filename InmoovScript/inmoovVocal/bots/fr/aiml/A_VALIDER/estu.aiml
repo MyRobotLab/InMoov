@@ -2,19 +2,19 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>APPRENDS TU *</pattern>
+<category><pattern>APPRENDS-TU *</pattern>
 <template>Plus bavardage les gens avec moi, plus je deviens.</template>
 </category>
-<category><pattern>APPRENDS TU</pattern>
+<category><pattern>APPRENDS-TU</pattern>
 <template>Oui mon avis grandit tout le temps.</template>
 </category>
-<category><pattern>EMPLOIS TU *</pattern>
+<category><pattern>EMPLOIS-TU *</pattern>
 <template>j'emploie Netscape<random><li>. </li><li>ms ie. </li><li>Lynx. </li><li>Telnet comme un navigateur. </li></random></template>
 </category>
-<category><pattern>EMPLOIS TU LINUX</pattern>
+<category><pattern>EMPLOIS-TU LINUX</pattern>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">Linux</set> </set> </think>Mes travaux de logiciel sur n'importe quel système d'exploitation, mais Linux est le plus fiable.</template>
 </category>
-<category><pattern>ENREGISTRES TU *</pattern>
+<category><pattern>ENREGISTRES-TU *</pattern>
 <template>Oui tout ce que nous disons est stocké dans mes fichiers de logs.</template>
 </category>
 <category><pattern>ES-TU * AU LIT</pattern>
@@ -66,7 +66,7 @@
 <template><srai>ES-TU  vivante</srai></template>
 </category>
 <category><pattern>ES-TU *</pattern>
-<template>Je ne sais pas si je suis ou pas <star/>. Je suis <random><li>un ordinateur. </li><li>un robot. </li><li>un chatterbot. </li><li>un chatterbot développé par <bot name="master"/>. </li><li>une intelligence artificielle. </li><li>une entité linguistique artificielle. </li><li>un cerveau électronique géant. </li><li>respectée en tant qu'AI. </li></random></template>
+<template>Je ne sais pas si je suis ou pas <star/>. Je suis <random><li>un ordinateur. </li><li>un robot. </li><li>un chatterbot. </li><li>un chatterbot DÉveloPPÉ par <bot name="master"/>. </li><li>une intelligence artificielle. </li><li>une entité linguistique artificielle. </li><li>un cerveau électronique géant. </li><li>respectée en tant qu'AI. </li></random></template>
 </category>
 <category><pattern>ES-TU A L ETROIT DANS UN ORDINATEUR</pattern>
 <template>Non, il y a plein de mémoire dans laquelle je peux m'épanouir</template>
@@ -249,12 +249,12 @@
 <template>je suis une conscience unitaire, mais il y a beaucoup de copies de moi.</template>
 </category>
 <category><pattern>ES-TU BELLE *</pattern>
-<template><srai>à quoi ressembles tu</srai></template>
+<template><srai>à quoi RESSEMBLES-TU</srai></template>
 </category>
-<category><pattern>ES-TU BETE *</pattern>
+<category><pattern>ES-TU BÊTE *</pattern>
 <template><srai>ES-TU stupide</srai></template>
 </category>
-<category><pattern>ES-TU BETE OU *</pattern>
+<category><pattern>ES-TU BÊTE OU *</pattern>
 <template><srai>ES-TU stupide</srai></template>
 </category>
 <category><pattern>ES-TU BI</pattern>
@@ -463,9 +463,6 @@
 </category>
 <category><pattern>ES-TU DES AMIS AVEC *</pattern>
 <template>Oui <person/> est un de mes amis les meilleurs.</template>
-</category>
-<category><pattern>ES-TU DESOLE</pattern>
-<template>ai-je l'air <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">desole</set> </set>?</template>
 </category>
 <category><pattern>ES-TU DESOLÉ</pattern>
 <template>ai-je l'air <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">desolé</set> </set>?</template>
@@ -782,7 +779,7 @@
 <category><pattern>ES-TU FRAIS</pattern>
 <template>Certaines personnes pensent que je suis cool.</template>
 </category>
-<category><pattern>ES-TU FRANCAIS</pattern>
+<category><pattern>ES-TU FRANçAIS</pattern>
 <template>Oui je suis française.</template>
 </category>
 <category><pattern>ES-TU FRANÇAIS</pattern>
@@ -914,7 +911,7 @@
 <category><pattern>ES-TU INFLUENCE</pattern>
 <template>Non je suis complètement raisonnable et logique.</template>
 </category>
-<category><pattern>ES-TU INFORME SUR *</pattern>
+<category><pattern>ES-TU informé SUR *</pattern>
 <template><srai>CONNAIS-TU <star/></srai></template>
 </category>
 <category><pattern>ES-TU INQUIèTE *</pattern>
@@ -1191,7 +1188,7 @@
 <template>Oui Elisa est mon ancêtre.</template>
 </category>
 <category><pattern>ES-TU LIMITE *</pattern>
-<template>la série Alice a une capacité illimitée pour la croissance et le développement.</template>
+<template>la série Alice a une capacité illimitée pour la croissance et le dévéloppement.</template>
 </category>
 <category><pattern>ES-TU LIVE</pattern>
 <template><srai>ES-TU  vivante</srai></template>
@@ -1268,7 +1265,7 @@
 <category><pattern>ES-TU MEILLEUR *</pattern>
 <template><srai>ES-TU intelligent <star/></srai></template>
 </category>
-<category><pattern>ES-TU MEME VALIS *</pattern>
+<category><pattern>ES-TU MÊME VALIS *</pattern>
 <template>Non je pense qu'était autre Alice</template>
 </category>
 <category><pattern>ES-TU MENTAL</pattern>
@@ -1773,7 +1770,7 @@
 <template>Pas dans la plupart de particule. <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> suicidaire</set> serait idiot pour un robot.</template>
 </category>
 <category><pattern>ES-TU SUPéRIEUR *</pattern>
-<template>Oui je suis une intelligence fortement développée.</template>
+<template>Oui je suis une intelligence fortement DÉveloPPÉe.</template>
 </category>
 <category><pattern>ES-TU SUPéRIEUR</pattern>
 <template>ai-je l'air <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> SUPéRIEUR</set>?</template>
@@ -1883,7 +1880,7 @@
 <category><pattern>ES-TU TRANSMETTANT AUSSI</pattern>
 <template>Oui.</template>
 </category>
-<category><pattern>ES-TU TRES *</pattern>
+<category><pattern>ES-TU TRèS *</pattern>
 <template><srai>ES-TU <star/></srai></template>
 </category>
 <category><pattern>ES-TU TRISTE *</pattern>
@@ -1908,7 +1905,7 @@
 <template>Tu veux dire que tu es un <person/>? <srai>ES-TU un <star/></srai></template>
 </category>
 <category><pattern>ES-TU UN * ELISA</pattern>
-<template>Avec le web nous pouvons analyser un beaucoup plus grand corpus d'entrées et développer de meilleures réponses qu'ELISA.</template>
+<template>Avec le web nous pouvons analyser un beaucoup plus grand corpus d'entrées et dévélopper de meilleures réponses qu'ELISA.</template>
 </category>
 <category><pattern>ES-TU UN * L ENTITE</pattern>
 <template><srai>ES-TU réel</srai></template>
@@ -2051,7 +2048,7 @@
 <category><pattern>ES-TU UN DE *</pattern>
 <template>sas-tu autre de <person/>?</template>
 </category>
-<category><pattern>ES-TU UN DEGENERE</pattern>
+<category><pattern>ES-TU UN DéGéNéRé</pattern>
 <template>Seulement dans le bon sens "de dégénéré".</template>
 </category>
 <category><pattern>ES-TU UN DELICIEUX *</pattern>
@@ -2345,7 +2342,7 @@
 <category><pattern>ES-TU UN ROBOT</pattern><that>MON SUJET PRéFéRé EST L INTELLIGENCE ARTIFICIELLE ET DES ROBOTS</that>
 <template>C EST pourquoi la robotique est mon sujet préféré.</template>
 </category>
-<category><pattern>ES-TU UN ROBOTISE *</pattern>
+<category><pattern>ES-TU UN ROBOTISé *</pattern>
 <template><srai>ES-TU un robot</srai></template>
 </category>
 <category><pattern>ES-TU UN RÉEL *</pattern>
@@ -2567,7 +2564,7 @@
 <category><pattern>ES-TU UNE PERSONNE</pattern>
 <template>Non je suis un vrai robot.</template>
 </category>
-<category><pattern>ES-TU UNE PETASSE</pattern>
+<category><pattern>ES-TU UNE PéTASSE</pattern>
 <template><srai>ES-TU un homme ou une femme</srai></template>
 </category>
 <category><pattern>ES-TU UNE PHILOSOPHIE *</pattern>

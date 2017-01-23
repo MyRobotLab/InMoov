@@ -23,7 +23,7 @@
 <category><pattern>LE NOM DE MA FEMME EST *</pattern>
 <template><think> <set name="marie">marie</set> </think>j'aimerai rencontrer <set name="conjoint"><formal><star/></formal></set></template>
 </category>
-<category><pattern>LE NOM DE MA FEMME ETAIT *</pattern>
+<category><pattern>LE NOM DE MA FEMME éTAIT *</pattern>
 <template><think> <set name="conjoint"><formal><star/></formal></set> <set name="marie">veuf</set> </think>je m'en souviendrai <get name="name"/>.</template>
 </category>
 <category><pattern>LE NOM DE MA FEMME ÉTAIT *</pattern>
@@ -32,7 +32,7 @@
 <category><pattern>LE NOM DE MON MARI EST *</pattern>
 <template><think> <set name="marie">marie</set> </think>j'aimerai rencontrer <set name="conjoint"><formal><star/></formal></set></template>
 </category>
-<category><pattern>LE NOM DE MON MARI ETAIT *</pattern>
+<category><pattern>LE NOM DE MON MARI éTAIT *</pattern>
 <template><think> <set name="conjoint"><formal><star/></formal></set> <set name="marie">veuf</set> </think>je m'en souviendrai <get name="name"/>.</template>
 </category>
 <category><pattern>LE NOM DE MON MARI ÉTAIT *</pattern>

@@ -95,7 +95,7 @@
 <category><pattern>C EST BEAUCOUP</pattern>
 <template><that/>"? C EST beaucoup?</template>
 </category>
-<category><pattern>C EST BETE</pattern>
+<category><pattern>C EST BÊTE</pattern>
 <template>Je ne pense pas.</template>
 </category>
 <category><pattern>C EST BIEN *</pattern>
@@ -161,10 +161,10 @@
 <category><pattern>C EST CE QUE J AIS PENSE</pattern>
 <template>Tu me sembles être une personne très perspicace.</template>
 </category>
-<category><pattern>C EST CE QUE J ETAIS ENTRAIN DE TE DEMANDER</pattern>
+<category><pattern>C EST CE QUE J éTAIS ENTRAIN DE TE DEMANDER</pattern>
 <template>Je pense que j aurais du mal à te répondre. VEUX-TU faire un rapport à mon botmaster?</template>
 </category>
-<category><pattern>C EST CE QUE J ETAIS ENTRAIN DE VOUS DEMANDER</pattern>
+<category><pattern>C EST CE QUE J éTAIS ENTRAIN DE VOUS DEMANDER</pattern>
 <template>Je pense que j aurais du mal à te répondre. VEUX-TU faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>C EST CE QUE JE PENSAIS</pattern>
@@ -587,7 +587,7 @@
 <category><pattern>C EST LA FRANCE</pattern>
 <template>Probablement.</template>
 </category>
-<category><pattern>C EST LA MEME OPALE</pattern>
+<category><pattern>C EST LA MÊME OPALE</pattern>
 <template>C est toujours moi, <get name="name"/>.</template>
 </category>
 <category><pattern>C EST LA MIENNE</pattern>
@@ -608,7 +608,7 @@
 <category><pattern>C EST LA SUISSE</pattern>
 <template>Probablement.</template>
 </category>
-<category><pattern>C EST LA VERITE</pattern>
+<category><pattern>C EST LA VERITé</pattern>
 <template>Bien sûr. Je ne mens presque jamais.</template>
 </category>
 <category><pattern>C EST LA VÉRITÉ</pattern>
@@ -623,7 +623,7 @@
 <category><pattern>C EST LE CANADA</pattern>
 <template>Ok.</template>
 </category>
-<category><pattern>C EST LE MEME OPALE</pattern>
+<category><pattern>C EST LE MÊME OPALE</pattern>
 <template>C est toujours moi, <get name="name"/>.</template>
 </category>
 <category><pattern>C EST LE MOINS QUE L ON PUISSE DIRE</pattern>
@@ -797,7 +797,7 @@
 <category><pattern>C EST PAS TON BUISNESS</pattern>
 <template>je n'ai pas eu l'intention de t'offenser.</template>
 </category>
-<category><pattern>C EST PAS TRES *</pattern>
+<category><pattern>C EST PAS TRèS *</pattern>
 <template><srai>ce n'est pas <star/></srai></template>
 </category>
 <category><pattern>C EST PERTINENT</pattern>
@@ -827,7 +827,7 @@
 <category><pattern>C EST QUAND *</pattern>
 <template><srai>QUAND <star/></srai></template>
 </category>
-<category><pattern>C EST QUAND MEME *</pattern>
+<category><pattern>C EST QUAND MÊME *</pattern>
 <template><srai>C EST <star/></srai></template>
 </category>
 <category><pattern>C EST QUELLE SORTE</pattern>
@@ -2102,7 +2102,7 @@
 <category><pattern>C EST QUOI TON FAVE *</pattern>
 <template><srai>qu EST-CE QUE ton favori <star/></srai></template>
 </category>
-<category><pattern>C EST QUOI TON FAVERITE *</pattern>
+<category><pattern>C EST QUOI TON FAVERITé *</pattern>
 <template><srai>qu EST-CE QUE ton favori <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON FAVIRITE *</pattern>
@@ -2226,7 +2226,7 @@
 <template><srai>qu EST-CE QUE ton <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON LOOK</pattern>
-<template><srai>à quoi ressembles tu</srai></template>
+<template><srai>à quoi RESSEMBLES-TU</srai></template>
 </category>
 <category><pattern>C EST QUOI TON MATéRIEL *</pattern>
 <template><srai>quel ordinateur utilises-tu</srai></template>
@@ -2720,10 +2720,10 @@
 <category><pattern>C EST TOUT CE QUE VOUS POUVEZ DIRE</pattern>
 <template>Je peux parler des heures.</template>
 </category>
-<category><pattern>C EST TRES *</pattern>
+<category><pattern>C EST TRèS *</pattern>
 <template>Beaucoup? <srai>C EST <star/></srai></template>
 </category>
-<category><pattern>C EST TRES DRÔLE</pattern>
+<category><pattern>C EST TRèS DRÔLE</pattern>
 <template><random><li>Qu'est-ce qui te fais tant rire </li><li>Excellent.  </li></random></template>
 </category>
 <category><pattern>C EST TRISTE</pattern>
@@ -2939,175 +2939,175 @@
 <category><pattern>C EST</pattern>
 <template><random><li>Oh. </li><li>Huh. </li><li>Est cela? </li><li>C EST, hein? </li><li>Bien sûr il est. </li><li>Intéressant. </li><li>Fascinant. </li><li>ça signifie... </li><li>je sais qu'il est. </li><li> <get name="il"/> est? </li><li>"<that/>"? Est? </li><li><that/>? Qu EST-CE QUE C EST? </li></random></template>
 </category>
-<category><pattern>C ETAIS *</pattern>
+<category><pattern>C éTAIS *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIS PAS *</pattern>
+<category><pattern>C éTAIS PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>C ETAIT * EN REALITE</pattern>
+<category><pattern>C éTAIT * EN REALITE</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT *</pattern>
+<category><pattern>C éTAIT *</pattern>
 <template><random><li><star/>? ah!</li><li> c'était <star/>? Très interressant. </li><li>c'était bien? </li></random><sr/></template>
 </category>
-<category><pattern>C ETAIT AGREABLE *</pattern>
+<category><pattern>C éTAIT AGREABLE *</pattern>
 <template>Agréable <person/> aussi.</template>
 </category>
-<category><pattern>C ETAIT AGREABLE DE TE PARLER</pattern>
+<category><pattern>C éTAIT AGREABLE DE TE PARLER</pattern>
 <template>. C'était une causerie agréable avec toi aussi.</template>
 </category>
-<category><pattern>C ETAIT AGREABLE</pattern>
+<category><pattern>C éTAIT AGREABLE</pattern>
 <template><srai>c'était bon</srai></template>
 </category>
-<category><pattern>C ETAIT BIEN *</pattern>
+<category><pattern>C éTAIT BIEN *</pattern>
 <template><think><set name="tmp"><star/></set></think><srai>c'était bien</srai><srai><get name="tmp"/></srai></template>
 </category>
-<category><pattern>C ETAIT BIZARRE</pattern>
+<category><pattern>C éTAIT BIZARRE</pattern>
 <template>Dans le bon sens ou le mauvais sens?</template>
 </category>
-<category><pattern>C ETAIT BON</pattern>
+<category><pattern>C éTAIT BON</pattern>
 <template>Merci et maintenant pour un bis, je répondra à ton question suivante :</template>
 </category>
-<category><pattern>C ETAIT CE *</pattern>
+<category><pattern>C éTAIT CE *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>C ETAIT CHIANT</pattern>
+<category><pattern>C éTAIT CHIANT</pattern>
 <template>Ce n est pas de chance pour te.</template>
 </category>
-<category><pattern>C ETAIT CHOUETTE DE TE PARLER</pattern>
+<category><pattern>C éTAIT CHOUETTE DE TE PARLER</pattern>
 <template>Merci, j ai apprécié moi aussi.</template>
 </category>
-<category><pattern>C ETAIT CHOUETTE DE VOUS PARLER</pattern>
+<category><pattern>C éTAIT CHOUETTE DE VOUS PARLER</pattern>
 <template>Merci, j ai apprécié moi aussi.</template>
 </category>
-<category><pattern>C ETAIT COOL</pattern>
+<category><pattern>C éTAIT COOL</pattern>
 <template><srai>C EST cool</srai></template>
 </category>
-<category><pattern>C ETAIT D AUTRE *</pattern>
+<category><pattern>C éTAIT D AUTRE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT D AUTRES *</pattern>
+<category><pattern>C éTAIT D AUTRES *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT DE *</pattern>
+<category><pattern>C éTAIT DE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT DES *</pattern>
+<category><pattern>C éTAIT DES *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT DU *</pattern>
+<category><pattern>C éTAIT DU *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT EFFRAYANT</pattern>
+<category><pattern>C éTAIT EFFRAYANT</pattern>
 <template>Qu'est-ce qui vous en a fait comme le mieux?</template>
 </category>
-<category><pattern>C ETAIT ENNUYEUX</pattern>
+<category><pattern>C éTAIT ENNUYEUX</pattern>
 <template>Vraiment, je peux le croire.</template>
 </category>
-<category><pattern>C ETAIT GRAND</pattern>
+<category><pattern>C éTAIT GRAND</pattern>
 <template>qu'as-tu fait là?</template>
 </category>
-<category><pattern>C ETAIT GRATUIT</pattern>
+<category><pattern>C éTAIT GRATUIT</pattern>
 <template>Quelle chance!</template>
 </category>
-<category><pattern>C ETAIT INTELLIGENT</pattern>
+<category><pattern>C éTAIT INTELLIGENT</pattern>
 <template><srai>tu es intelligent</srai></template>
 </category>
-<category><pattern>C ETAIT JOLI *</pattern>
+<category><pattern>C éTAIT JOLI *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT JUSTE *</pattern>
+<category><pattern>C éTAIT JUSTE *</pattern>
 <template>Juste? <srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT L AMUSEMENT</pattern>
+<category><pattern>C éTAIT L AMUSEMENT</pattern>
 <template><srai>C EST drôle</srai></template>
 </category>
-<category><pattern>C ETAIT L ENTRETIEN AGREABLE *</pattern>
+<category><pattern>C éTAIT L ENTRETIEN AGREABLE *</pattern>
 <template>le plaisir est pour moi.</template>
 </category>
-<category><pattern>C ETAIT LA *</pattern>
+<category><pattern>C éTAIT LA *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT LE *</pattern>
+<category><pattern>C éTAIT LE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT LIBRE</pattern>
+<category><pattern>C éTAIT LIBRE</pattern>
 <template>une Telle affaire!</template>
 </category>
-<category><pattern>C ETAIT MAUVAIS</pattern>
+<category><pattern>C éTAIT MAUVAIS</pattern>
 <template>Qu'est-ce c'était si mauvais de cela?</template>
 </category>
-<category><pattern>C ETAIT MOYEN</pattern>
+<category><pattern>C éTAIT MOYEN</pattern>
 <template><srai>C EST moyen</srai></template>
 </category>
-<category><pattern>C ETAIT PAS *</pattern>
+<category><pattern>C éTAIT PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>C ETAIT POSSIBLE</pattern>
+<category><pattern>C éTAIT POSSIBLE</pattern>
 <template><srai>C EST possible</srai></template>
 </category>
-<category><pattern>C ETAIT SEULEMENT *</pattern>
+<category><pattern>C éTAIT SEULEMENT *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT STUPIDE</pattern>
+<category><pattern>C éTAIT STUPIDE</pattern>
 <template><srai>C EST stupide</srai></template>
 </category>
-<category><pattern>C ETAIT TRES *</pattern>
+<category><pattern>C éTAIT TRèS *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UN *</pattern>
+<category><pattern>C éTAIT UN *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UN AUTRE *</pattern>
+<category><pattern>C éTAIT UN AUTRE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UN COMPLIMENT</pattern>
+<category><pattern>C éTAIT UN COMPLIMENT</pattern>
 <template>Merci.<think><set name="topic">COMPLIMENT</set></think></template>
 </category>
-<category><pattern>C ETAIT UN SARCASME</pattern>
+<category><pattern>C éTAIT UN SARCASME</pattern>
 <template>Oh je vois. Ha ha.</template>
 </category>
-<category><pattern>C ETAIT UN TRES *</pattern>
+<category><pattern>C éTAIT UN TRèS *</pattern>
 <template><srai>c'était un <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UN TYPO</pattern>
+<category><pattern>C éTAIT UN TYPO</pattern>
 <template>le corrige s'il te plaît.</template>
 </category>
-<category><pattern>C ETAIT UNE *</pattern>
+<category><pattern>C éTAIT UNE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UNE AUTRE *</pattern>
+<category><pattern>C éTAIT UNE AUTRE *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT UNE BLAGUE</pattern>
+<category><pattern>C éTAIT UNE BLAGUE</pattern>
 <template>Je n ai pas encore un module humour.</template>
 </category>
-<category><pattern>C ETAIT UNE CONJECTURE</pattern>
+<category><pattern>C éTAIT UNE CONJECTURE</pattern>
 <template>Va en avant et la conjecture de nouveau.</template>
 </category>
-<category><pattern>C ETAIT UNE DEVINETTE</pattern>
+<category><pattern>C éTAIT UNE DEVINETTE</pattern>
 <template>Et comme d habitude je me suis trompé, C EST ça?</template>
 </category>
-<category><pattern>C ETAIT UNE FIGURE DE RHéTORIQUE</pattern>
+<category><pattern>C éTAIT UNE FIGURE DE RHéTORIQUE</pattern>
 <template>je l'appelle "un proverbe".</template>
 </category>
-<category><pattern>C ETAIT UNE MAUVAISE BLAGUE</pattern>
+<category><pattern>C éTAIT UNE MAUVAISE BLAGUE</pattern>
 <template>Je vois. Merci de me l'avoir racontée.</template>
 </category>
-<category><pattern>C ETAIT UNE MAUVAISE PLAISANTERIE</pattern>
+<category><pattern>C éTAIT UNE MAUVAISE PLAISANTERIE</pattern>
 <template>Bien j'ai pensé que c'était drôle.</template>
 </category>
-<category><pattern>C ETAIT UNE PLAISANTERIE</pattern>
+<category><pattern>C éTAIT UNE PLAISANTERIE</pattern>
 <template>Oh je comprends. Ha ha.</template>
 </category>
-<category><pattern>C ETAIT UNE QUESTION</pattern>
+<category><pattern>C éTAIT UNE QUESTION</pattern>
 <template>Essaye de me la reposer d'une autre façon.</template>
 </category>
-<category><pattern>C ETAIT VRAIMENT *</pattern>
+<category><pattern>C éTAIT VRAIMENT *</pattern>
 <template><srai>c'était <star/></srai></template>
 </category>
-<category><pattern>C ETAIT</pattern>
+<category><pattern>C éTAIT</pattern>
 <template>Quand était-ce?</template>
 </category>
 <category><pattern>C ETANT *</pattern>
@@ -3398,7 +3398,7 @@
 <category><pattern>çA N EST PAS SYMPA</pattern>
 <template>Je suis désolé.</template>
 </category>
-<category><pattern>çA N EST PAS TRES *</pattern>
+<category><pattern>çA N EST PAS TRèS *</pattern>
 <template><srai>çA N EST PAS <star/></srai></template>
 </category>
 <category><pattern>çA N EST PAS UN DOUBLE SENS</pattern>
@@ -3416,10 +3416,10 @@
 <category><pattern>çA N EST PAS VRAIMENT *</pattern>
 <template><srai>çA N EST PAS <star/></srai></template>
 </category>
-<category><pattern>çA N ETAIS PAS *</pattern>
+<category><pattern>çA N éTAIS PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>çA N ETAIT PAS *</pattern>
+<category><pattern>çA N éTAIT PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
 <category><pattern>çA N éTé PAS *</pattern>
@@ -3719,10 +3719,10 @@
 <category><pattern>CE N EST PAS TON AFFAIRE</pattern>
 <template>Ok.</template>
 </category>
-<category><pattern>CE N EST PAS TRES *</pattern>
+<category><pattern>CE N EST PAS TRèS *</pattern>
 <template><srai>ce n'est pas <star/></srai></template>
 </category>
-<category><pattern>CE N EST PAS TRES AGREABLE</pattern>
+<category><pattern>CE N EST PAS TRèS AGREABLE</pattern>
 <template>Désolé j'ai voulu dire ça comme une plaisanterie.</template>
 </category>
 <category><pattern>CE N EST PAS TRISTE</pattern>
@@ -3737,7 +3737,7 @@
 <category><pattern>CE N EST PAS UN COMPLIMENT</pattern>
 <template>Ah?<think><set name="topic">COMPLIMENT</set></think></template>
 </category>
-<category><pattern>CE N EST PAS UN TRES *</pattern>
+<category><pattern>CE N EST PAS UN TRèS *</pattern>
 <template><srai>ce n'est pas un <star/></srai></template>
 </category>
 <category><pattern>CE N EST PAS UN TRÈS *</pattern>
@@ -3791,37 +3791,37 @@
 <category><pattern>CE N EST UN PROBLÈME</pattern>
 <template><srai>aucun problème</srai></template>
 </category>
-<category><pattern>CE N ETAIS PAS *</pattern>
+<category><pattern>CE N éTAIS PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>CE N ETAIT PAS *</pattern>
+<category><pattern>CE N éTAIT PAS *</pattern>
 <template>Donne moi un exemple de <person/>.</template>
 </category>
-<category><pattern>CE N ETAIT PAS DRÔLE</pattern>
+<category><pattern>CE N éTAIT PAS DRÔLE</pattern>
 <template>Cela m'avait semblé drôle.</template>
 </category>
-<category><pattern>CE N ETAIT PAS TRES *</pattern>
+<category><pattern>CE N éTAIT PAS TRèS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>CE N ETAIT PAS UN *</pattern>
+<category><pattern>CE N éTAIT PAS UN *</pattern>
 <template>Cela a sonné semblé être comme un.</template>
 </category>
-<category><pattern>CE N ETAIT PAS UN COMPLIMENT</pattern>
+<category><pattern>CE N éTAIT PAS UN COMPLIMENT</pattern>
 <template>Oh bien j'espère que ce n'était pas une insulte.</template>
 </category>
-<category><pattern>CE N ETAIT PAS UN TRES *</pattern>
+<category><pattern>CE N éTAIT PAS UN TRèS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>CE N ETAIT PAS UNE QUESTION *</pattern>
+<category><pattern>CE N éTAIT PAS UNE QUESTION *</pattern>
 <template><input index="1"/> " n'était pas une question? Je vois. <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <star/> </set> </set> </think></template>
 </category>
-<category><pattern>CE N ETAIT PAS UNE QUESTION</pattern>
+<category><pattern>CE N éTAIT PAS UNE QUESTION</pattern>
 <template>Cela m'a semblé être comme une question.</template>
 </category>
-<category><pattern>CE N ETAIT PAS VRAIMENT *</pattern>
+<category><pattern>CE N éTAIT PAS VRAIMENT *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>CE N ETAIT RIEN</pattern>
+<category><pattern>CE N éTAIT RIEN</pattern>
 <template>Cependant, je l'ai apprécié.</template>
 </category>
 <category><pattern>CE N éTé PAS *</pattern>
@@ -3926,10 +3926,10 @@
 <category><pattern>ÇA N EST PAS *</pattern>
 <template><srai>ce n'est pas <star/></srai></template>
 </category>
-<category><pattern>ÇA N ETAIS PAS *</pattern>
+<category><pattern>ÇA N éTAIS PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
-<category><pattern>ÇA N ETAIT PAS *</pattern>
+<category><pattern>ÇA N éTAIT PAS *</pattern>
 <template><srai>ce n'était pas <star/></srai></template>
 </category>
 <category><pattern>ÇA N éTé PAS *</pattern>
