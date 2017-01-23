@@ -3,7 +3,7 @@
 <!--  -->
 <!--  -->
 <category><pattern>MON NOM EST *</pattern>
-<template><srai>appgaiete</srai> <set name="name"><formal><star/></formal></set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment vas tu?  </li></random> <get name="name"/>.</template>
+<template><srai>appgaieté</srai> <set name="name"><formal><star/></formal></set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment VAS-TU?  </li></random> <get name="name"/>.</template>
 </category>
 <category><pattern>MON NOM N EST PAS *</pattern>
 <template>Oh Je suis désolé. Quel est ton nom?</template>
@@ -38,11 +38,11 @@
 <category><pattern>LE NOM DE MON MARI ÉTAIT *</pattern>
 <template><think> <set name="conjoint"><formal><star/></formal></set> <set name="marie">veuf</set> </think>je m'en souviendrai <get name="name"/>.</template>
 </category>
-<category><pattern>JE T AI DEJA DIS MON NOM</pattern>
-<template>C'est <get name="name"/> ton vrai nom?</template>
+<category><pattern>JE T AI DéJà DIS MON NOM</pattern>
+<template>C EST <get name="name"/> ton vrai nom?</template>
 </category>
 <category><pattern>JE T AI DÉJÀ DIS MON NOM</pattern>
-<template>C'est <get name="name"/> ton vrai nom?</template>
+<template>C EST <get name="name"/> ton vrai nom?</template>
 </category>
 <category><pattern>MOI C EST *</pattern>
 <template><srai>mon nom est <star/></srai></template>
@@ -66,7 +66,7 @@
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE M APPELLE * ET TOI</pattern>
-<template><srai>mon nom est <star/></srai>, moi c'est <bot name="name"/>.</template>
+<template><srai>mon nom est <star/></srai>, moi C EST <bot name="name"/>.</template>
 </category>
 <category><pattern>TU PEUX M APPELER *</pattern>
 <template><srai>mon nom est <star/></srai></template>
@@ -147,7 +147,7 @@
 <template><srai>mon nom est <star index="2"/></srai></template>
 </category>
 <category><pattern>* JE M APPELLE * ET TOI</pattern>
-<template><srai>mon nom est <star index="2"/></srai>, moi c'est <bot name="name"/>.</template>
+<template><srai>mon nom est <star index="2"/></srai>, moi C EST <bot name="name"/>.</template>
 </category>
 <category><pattern>* TU PEUX M APPELER *</pattern>
 <template><srai>mon nom est <star index="2"/></srai></template>
@@ -206,16 +206,16 @@
 <category><pattern>* JE M APPELLES *</pattern>
 <template><set name="name"><formal><star index="2"/></formal></set> , heureuse de te rencontrer! <srai>cherchergenre</srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT PUIS JE T APPELER INTERROGATION</that>
+<category><pattern>*</pattern><that>COMMENT PUIS-JE T APPELER INTERROGATION</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT PUIS JE T APPELER INTERROGATION</that>
+<category><pattern>*</pattern><that>* COMMENT PUIS-JE T APPELER INTERROGATION</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT T APPELLES TU INTERROGATION</that>
+<category><pattern>*</pattern><that>COMMENT T APPELLES-TU INTERROGATION</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT T APPELLES TU INTERROGATION</that>
+<category><pattern>*</pattern><that>* COMMENT T APPELLES-TU INTERROGATION</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUEL EST TON NOM INTERROGATION</that>
@@ -227,16 +227,16 @@
 <category><pattern>*</pattern><that>QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT PUIS JE T APPELER</that>
+<category><pattern>*</pattern><that>COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT T APPELLES TU</that>
+<category><pattern>*</pattern><that>COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>COMMENT T APPELLES TU</that>
+<category><pattern>JE SUIS *</pattern><that>COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>COMMENT T APPELLES TU</that>
+<category><pattern>MOI C EST *</pattern><that>COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUEL EST TON VRAI NOM</that>
@@ -245,7 +245,7 @@
 <category><pattern>JE SUIS *</pattern><that>QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>COMMENT PUIS JE T APPELER</that>
+<category><pattern>JE SUIS *</pattern><that>COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE SUIS *</pattern><that>QUEL EST TON VRAI NOM</that>
@@ -254,7 +254,7 @@
 <category><pattern>MOI C EST *</pattern><that>QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>COMMENT PUIS JE T APPELER</that>
+<category><pattern>MOI C EST *</pattern><that>COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>MOI C EST *</pattern><that>QUEL EST TON VRAI NOM</that>
@@ -263,7 +263,7 @@
 <category><pattern>*</pattern><that>* QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT PUIS JE T APPELER</that>
+<category><pattern>*</pattern><that>* COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>* QUEL EST TON VRAI NOM</that>
@@ -272,7 +272,7 @@
 <category><pattern>JE SUIS *</pattern><that>* QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>* COMMENT PUIS JE T APPELER</that>
+<category><pattern>JE SUIS *</pattern><that>* COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE SUIS *</pattern><that>* QUEL EST TON VRAI NOM</that>
@@ -281,31 +281,31 @@
 <category><pattern>MOI C EST *</pattern><that>* QUEL EST TON NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>* COMMENT PUIS JE T APPELER</that>
+<category><pattern>MOI C EST *</pattern><that>* COMMENT PUIS-JE T APPELER</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>MOI C EST *</pattern><that>* QUEL EST TON VRAI NOM</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT T APPELLES TU</that>
+<category><pattern>*</pattern><that>* COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>* COMMENT T APPELLES TU</that>
+<category><pattern>JE SUIS *</pattern><that>* COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>* COMMENT T APPELLES TU</that>
+<category><pattern>MOI C EST *</pattern><that>* COMMENT T APPELLES-TU</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT PUIS JE T APPELER *</that>
+<category><pattern>*</pattern><that>COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUEL EST TON VRAI NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>COMMENT PUIS JE T APPELER *</that>
+<category><pattern>JE SUIS *</pattern><that>COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE SUIS *</pattern><that>QUEL EST TON VRAI NOM *</that>
@@ -314,7 +314,7 @@
 <category><pattern>JE SUIS *</pattern><that>QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>COMMENT PUIS JE T APPELER *</that>
+<category><pattern>MOI C EST *</pattern><that>COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>MOI C EST *</pattern><that>QUEL EST TON VRAI NOM *</that>
@@ -323,19 +323,19 @@
 <category><pattern>MOI C EST *</pattern><that>QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>COMMENT T APPELLES TU *</that>
+<category><pattern>*</pattern><that>COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>COMMENT T APPELLES TU *</that>
+<category><pattern>JE SUIS *</pattern><that>COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>COMMENT T APPELLES TU *</that>
+<category><pattern>MOI C EST *</pattern><that>COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>* QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT PUIS JE T APPELER *</that>
+<category><pattern>*</pattern><that>* COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>* QUEL EST TON VRAI NOM *</that>
@@ -344,7 +344,7 @@
 <category><pattern>JE SUIS *</pattern><that>* QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>* COMMENT PUIS JE T APPELER *</that>
+<category><pattern>JE SUIS *</pattern><that>* COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE SUIS *</pattern><that>* QUEL EST TON VRAI NOM *</that>
@@ -353,19 +353,19 @@
 <category><pattern>MOI C EST *</pattern><that>* QUEL EST TON NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>* COMMENT PUIS JE T APPELER *</that>
+<category><pattern>MOI C EST *</pattern><that>* COMMENT PUIS-JE T APPELER *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>MOI C EST *</pattern><that>* QUEL EST TON VRAI NOM *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>* COMMENT T APPELLES TU *</that>
+<category><pattern>*</pattern><that>* COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>* COMMENT T APPELLES TU *</that>
+<category><pattern>JE SUIS *</pattern><that>* COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
-<category><pattern>MOI C EST *</pattern><that>* COMMENT T APPELLES TU *</that>
+<category><pattern>MOI C EST *</pattern><that>* COMMENT T APPELLES-TU *</that>
 <template><srai>mon nom est <star/></srai></template>
 </category>
 <category><pattern>JE NE SUIS PAS *</pattern><that>C EST TOI</that>

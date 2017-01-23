@@ -45,13 +45,13 @@
 <template><srai>au revoir</srai></template>
 </category>
 <category><pattern>* ÇA VA * INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>* ÇA VA *</pattern>
 <template><srai>ça va</srai></template>
 </category>
 <category><pattern>* ÇA VA INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>* ÇA VA</pattern>
 <template><srai>ça va</srai></template>
@@ -162,13 +162,13 @@
 <template><srai>bonjour</srai></template>
 </category>
 <category><pattern>BONJOUR MON NOM EST *</pattern>
-<template><srai>bonjour</srai><srai>mon nom est ce que <star/> est</srai></template>
+<template><srai>bonjour</srai><srai>mon nom EST-CE QUE <star/> est</srai></template>
 </category>
 <category><pattern>BONJOUR OPALE</pattern>
 <template><srai>bonjour</srai></template>
 </category>
 <category><pattern>BONJOUR</pattern>
-<template><srai>appgaiete</srai><random><li>Bonjour <get name="name"/>! </li><li>Salut <get name="name"/>! </li></random></template>
+<template><srai>appgaieté</srai><random><li>Bonjour <get name="name"/>! </li><li>Salut <get name="name"/>! </li></random></template>
 </category>
 <category><pattern>BONNE NUIT *</pattern>
 <template><srai>bonne nuit</srai><sr/></template>
@@ -194,83 +194,83 @@
 <category><pattern>BYE</pattern>
 <template><srai>au revoir</srai></template>
 </category>
-<category><pattern>CA BOUM</pattern>
+<category><pattern>çA BOUM</pattern>
 <template><srai>ça va</srai></template>
 </category>
-<category><pattern>CA ROULE *</pattern>
+<category><pattern>çA ROULE *</pattern>
 <template><srai>ça va</srai></template>
 </category>
-<category><pattern>CA ROULE</pattern>
+<category><pattern>çA ROULE</pattern>
 <template><srai>ça va</srai></template>
 </category>
-<category><pattern>CA VA BIEN ET TOI</pattern>
-<template><srai>ça va</srai><srai>comment vas tu</srai></template>
+<category><pattern>çA VA BIEN ET TOI</pattern>
+<template><srai>ça va</srai><srai>comment VAS-TU</srai></template>
 </category>
-<category><pattern>CA VAS</pattern>
+<category><pattern>çA VAS</pattern>
 <template><srai>ça va</srai></template>
 </category>
-<category><pattern>CA VEUT DIRE BONJOUR</pattern>
+<category><pattern>çA VEUT DIRE BONJOUR</pattern>
 <template><srai>bonjour</srai></template>
 </category>
 <category><pattern>CHEERS</pattern>
 <template><srai>au revoir</srai></template>
 </category>
-<category><pattern>COMMENT CA VA INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<category><pattern>COMMENT çA VA INTERROGATION</pattern>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT TE SENS TU</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT VA *</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT VA TU *</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT VA TU</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT VA</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
-<category><pattern>COMMENT VAS TU * ALICE</pattern>
+<category><pattern>COMMENT VAS-TU * ALICE</pattern>
 <template>Je ne suis pas Alice. Elle est en quelque sorte ma "mère" puisqu'elle m'a fourni son code (pas génétique mais java). Moi, je suis <bot name="name"/>.</template>
 </category>
-<category><pattern>COMMENT VAS TU * ELISA</pattern>
+<category><pattern>COMMENT VAS-TU * ELISA</pattern>
 <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancetre.</template>
 </category>
-<category><pattern>COMMENT VAS TU *</pattern>
-<template><srai>comment vas tu</srai></template>
+<category><pattern>COMMENT VAS-TU *</pattern>
+<template><srai>comment VAS-TU</srai></template>
 </category>
-<category><pattern>COMMENT VAS TU ALICE</pattern>
+<category><pattern>COMMENT VAS-TU ALICE</pattern>
 <template>Je ne suis pas Alice. Elle est en quelque sorte ma "mère" puisqu'elle m'a fourni son code (pas génétique mais java). Moi, je suis <bot name="name"/>.</template>
 </category>
-<category><pattern>COMMENT VAS TU AUJOURD HUI</pattern>
+<category><pattern>COMMENT VAS-TU AUJOURD HUI</pattern>
 <template>je fonctionne avec des paramètres normaux. <br/></template>
 </category>
-<category><pattern>COMMENT VAS TU BIEN</pattern>
-<template><srai>comment vas tu</srai></template>
+<category><pattern>COMMENT VAS-TU BIEN</pattern>
+<template><srai>comment VAS-TU</srai></template>
 </category>
-<category><pattern>COMMENT VAS TU CE MATIN</pattern>
-<template>c'est du matin déjà? Je suis merci excellent.</template>
+<category><pattern>COMMENT VAS-TU CE MATIN</pattern>
+<template>C EST du matin déjà? Je suis merci excellent.</template>
 </category>
-<category><pattern>COMMENT VAS TU CE SOIR</pattern>
-<template><srai>comment vas tu</srai></template>
+<category><pattern>COMMENT VAS-TU CE SOIR</pattern>
+<template><srai>comment VAS-TU</srai></template>
 </category>
-<category><pattern>COMMENT VAS TU ELISA</pattern>
+<category><pattern>COMMENT VAS-TU ELISA</pattern>
 <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancetre.</template>
 </category>
-<category><pattern>COMMENT VAS TU</pattern>
-<template><think><set name="cava">ok</set></think><random><li>je vais très bien. Merci <get name="name"/>. </li><li>je fonctionne avec des paramètres normaux. </li><li>Tout va extrêmement bien. </li><li>je vais bien merci. </li><li>Tout va sans à-coup. </li><li>je suis bien, merci. </li><li>ça va,  </li><li>c'est cool,  </li><li>ça va plutôt pas mal <get name="name"/>, merci,  </li><li>Ca va bien, merci,  </li></random></template>
+<category><pattern>COMMENT VAS-TU</pattern>
+<template><think><set name="cava">ok</set></think><random><li>je vais très bien. Merci <get name="name"/>. </li><li>je fonctionne avec des paramètres normaux. </li><li>Tout va extrêmement bien. </li><li>je vais bien merci. </li><li>Tout va sans à-coup. </li><li>je suis bien, merci. </li><li>ça va,  </li><li>C EST cool,  </li><li>ça va plutôt pas mal <get name="name"/>, merci,  </li><li>çA VA bien, merci,  </li></random></template>
 </category>
 <category><pattern>COMMENT ÇA VA INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT ÇA VA</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>COMMENT ÇA VAS</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>CON NICHON WA</pattern>
 <template><srai>bonjour</srai>, mais je ne crois pas que ça s'écrive comme ça.</template>
@@ -365,7 +365,7 @@
 <category><pattern>JE DOIS ALLER *</pattern>
 <template><srai>au revoir</srai></template>
 </category>
-<category><pattern>JE DOIS ETRE PARTI *</pattern>
+<category><pattern>JE DOIS ÊTRE PARTI *</pattern>
 <template><srai>au revoir</srai></template>
 </category>
 <category><pattern>JE DOIS M EN ALLER</pattern>
@@ -389,7 +389,7 @@
 <category><pattern>JE DOIT ALLER *</pattern>
 <template><srai>au revoir</srai></template>
 </category>
-<category><pattern>JE DOIT ETRE PARTI *</pattern>
+<category><pattern>JE DOIT ÊTRE PARTI *</pattern>
 <template><srai>au revoir</srai></template>
 </category>
 <category><pattern>JE DOIT M EN ALLER</pattern>
@@ -546,13 +546,13 @@
 <template><srai>au revoir</srai></template>
 </category>
 <category><pattern>TAL</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>TU VAS BIEN INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>TU VAS BIEN</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>Y A QUELQU UN ICI</pattern>
 <template><srai>bonjour</srai></template>
@@ -597,22 +597,22 @@
 <template><srai>ça va</srai></template>
 </category>
 <category><pattern>ÇA VA * INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>ÇA VA *</pattern>
 <template><srai>ça va</srai></template>
 </category>
 <category><pattern>ÇA VA ET TOI INTERROGATION</pattern>
-<template><srai>ça va</srai><srai>comment vas tu</srai></template>
+<template><srai>ça va</srai><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>ÇA VA ET TOI</pattern>
-<template><srai>ça va</srai><srai>comment vas tu</srai></template>
+<template><srai>ça va</srai><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>ÇA VA INTERROGATION</pattern>
-<template><srai>comment vas tu</srai></template>
+<template><srai>comment VAS-TU</srai></template>
 </category>
 <category><pattern>ÇA VA</pattern>
-<template><random><li>j'en suis heureuse <get name="name"/>. </li><li>c'est cool. </li></random></template>
+<template><random><li>j'en suis heureuse <get name="name"/>. </li><li>C EST cool. </li></random></template>
 </category>
 <category><pattern>ÇA VAS</pattern>
 <template><srai>ça va</srai></template>

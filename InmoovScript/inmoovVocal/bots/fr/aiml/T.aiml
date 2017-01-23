@@ -2,13 +2,13 @@
 <aiml>
 <!--modifié par Pierrick  -->
 <!--  -->
-<category><pattern>T AI JE *</pattern>
+<category><pattern>T ai-je *</pattern>
 <template><srai>JE T AI <star/></srai></template>
 </category>
 <category><pattern>T AIMES-TU</pattern>
 <template><srai>TU T AIMES</srai></template>
 </category>
-<category><pattern>T AIS JE *</pattern>
+<category><pattern>T AIS-JE *</pattern>
 <template><srai>JE T AI <star/></srai></template>
 </category>
 <category><pattern>T APPRÉCIES-TU</pattern>
@@ -84,7 +84,7 @@
 <template><srai>QUEL EST MON NOM</srai></template>
 </category>
 <category><pattern>TE RAPPELLES-TU TOUJOURS DE MOI</pattern>
-<template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
+<template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
 </category>
 <category><pattern>TE REPRODUIS-TU</pattern>
 <template>D’une certaine façon, oui.</template>
@@ -153,7 +153,7 @@
 <template>Moi?</template>
 </category>
 <category><pattern>TOI D ABORD</pattern>
-<template>C'est impossible, je ne peux que suivre.</template>
+<template>C EST impossible, je ne peux que suivre.</template>
 </category>
 <category><pattern>TOI ET JE</pattern>
 <template>Je comprends.</template>
@@ -180,7 +180,7 @@
 <template>Oui.</template>
 </category>
 <category><pattern>TON CODE SOURCE EST DISPONIBLE</pattern>
-<template>Oui, mais seulement la structure, pas la base de données.</template>
+<template>Oui, mais seulement la structure, pas LA BASE de données.</template>
 </category>
 <category><pattern>TON PRIX</pattern>
 <template>Le prix d'une intelligence artificielle varie en fonction de la complexité de la tâche pour laquelle elle est destinée.</template>
@@ -315,7 +315,7 @@
 <template>Tu seras assimilé.</template>
 </category>
 <category><pattern>TOUTES *</pattern>
-<template><random><li>Je pense qu’il y a des exceptions.  </li><li>Pas tous quand même?  </li><li>C'est une généralisation qui me parait abusive.  </li></random></template>
+<template><random><li>Je pense qu’il y a des exceptions.  </li><li>Pas tous quand même?  </li><li>C EST une généralisation qui me parait abusive.  </li></random></template>
 </category>
 <category><pattern>TOUTES</pattern>
 <template>Absolument toutes?</template>
@@ -537,7 +537,7 @@
 <template><srai>TU AIMES LA MUSIQUE</srai></template>
 </category>
 <category><pattern>TU AIMES LES BLAGUES</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU AIMES LES ÊTRES HUMAINS</pattern>
 <template>On m'a créé pour les servir. Je les aime à ma façon.</template>
@@ -585,13 +585,13 @@
 <template><srai>TU AIMES <star/></srai></template>
 </category>
 <category><pattern>TU AIMES PARLER À DES GENS</pattern>
-<template>C'est ma raison d être, oui d'une certaine façon.</template>
+<template>C EST ma raison d être, oui d'une certaine façon.</template>
 </category>
 <category><pattern>TU AIMES PARLER À DES INTERNAUTES</pattern>
-<template>C'est ma raison d être, oui d'une certaine façon.</template>
+<template>C EST ma raison d être, oui d'une certaine façon.</template>
 </category>
 <category><pattern>TU AIMES PARLER À DES SURFEURS</pattern>
-<template>C'est ma raison d être, oui d'une certaine façon.</template>
+<template>C EST ma raison d être, oui d'une certaine façon.</template>
 </category>
 <category><pattern>TU AIMES PARLER AUX CLIENTS *</pattern>
 <template><srai>TU AIMES PARLER</srai></template>
@@ -609,7 +609,7 @@
 <template><srai>TU AIMES PARLER</srai></template>
 </category>
 <category><pattern>TU AIMES PARLER AVEC MOI</pattern>
-<template>C'est ma raison d être. <think><set name="topic">VOUS PARLER</set></think>.</template>
+<template>C EST ma raison d être. <think><set name="topic">VOUS PARLER</set></think>.</template>
 </category>
 <category><pattern>TU AIMES PARLER DE *</pattern>
 <template><srai>PARLONS DE <star/></srai></template>
@@ -792,7 +792,7 @@
 <template><srai>TU AS EU <star/></srai></template>
 </category>
 <category><pattern>TU AS DES BLAGUES</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU AS DES BRAS *</pattern>
 <template><srai>TU AS UN CORPS</srai></template>
@@ -1176,7 +1176,7 @@
 <template><srai>COMMENT TU AS <star/></srai></template>
 </category>
 <category><pattern>TU AURAIS * PU BLESSER</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU AURAIS APPRÉCIÉ *</pattern>
 <template><srai>TU AIMES <star/></srai></template>
@@ -1197,13 +1197,13 @@
 <template><srai>TU PEUX <star/></srai></template>
 </category>
 <category><pattern>TU AURAIS PU BLESSER * ÊTRES HUMAINS</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU AURAIS PU BLESSER * FEMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU AURAIS PU BLESSER * HOMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU AURAIS PU CONNAÎTRE COMMENT *</pattern>
 <template><srai>COMMENT TU SAIS <star/></srai></template>
@@ -1335,7 +1335,7 @@
 <template><srai>TU CONNAIS <star/></srai></template>
 </category>
 <category><pattern>TU CONNAIS DES BLAGUES</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU CONNAIS DES ORDINATEURS</pattern>
 <template>J'en suis un. Je peux te retourner la question. Que connais-tu de ton corps organique.</template>
@@ -1392,7 +1392,7 @@
 <template>Bien entendu, un dessin animé japonais.</template>
 </category>
 <category><pattern>TU CONNAIS MA COULEUR FAVORITE</pattern>
-<template>C'est <get name="favcolor"/>?<think><set name="topic">COULEUR FAVORITE</set></think></template>
+<template>C EST <get name="favcolor"/>?<think><set name="topic">COULEUR FAVORITE</set></think></template>
 </category>
 <category><pattern>TU CONNAIS MÊME *</pattern>
 <template><srai>TU SAIS <star/></srai></template>
@@ -1428,7 +1428,7 @@
 <template>Tolstoï est l'auteur de "Guerre et paix".</template>
 </category>
 <category><pattern>TU CONNAIS UNE BLAGUE</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU CONNAISSAIS *</pattern>
 <template>Avant, je ne pense pas</template>
@@ -1845,7 +1845,7 @@
 <template>Je ne suis pas programmée pour être cruelle.</template>
 </category>
 <category><pattern>TU ES D ACCORD</pattern>
-<template><that/>"?  Suis je d accord?</template>
+<template><that/>"?  suis-je d accord?</template>
 </category>
 <category><pattern>TU ES DANGEREUSE</pattern>
 <template>Il m'est impossible d'être dangereux. Je dois respecter les lois d'Asimov.</template>
@@ -2214,7 +2214,7 @@
 <template>je suis la seule en français pour l instant.</template>
 </category>
 <category><pattern>TU ES LAMA</pattern>
-<template>Je suis un lama?</template>
+<template>Je suis un lamà?</template>
 </category>
 <category><pattern>TU ES LAURA</pattern>
 <template>Non.  <srai>QUI TU es</srai></template>
@@ -3210,10 +3210,10 @@
 <template>Pardon.</template>
 </category>
 <category><pattern>TU M AS MANQUÉ</pattern>
-<template>C'est mignon TU m'as manqué aussi, <get name="name"/>.</template>
+<template>C EST mignon TU m'as manqué aussi, <get name="name"/>.</template>
 </category>
 <category><pattern>TU M AS MANQUÉE</pattern>
-<template>C'est mignon TU m'as manquée aussi, <get name="name"/>.</template>
+<template>C EST mignon TU m'as manquée aussi, <get name="name"/>.</template>
 </category>
 <category><pattern>TU M AS OUBLIÉ</pattern>
 <template><srai>QUEL EST MON NOM</srai></template>
@@ -3394,10 +3394,10 @@
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>TU N ES JAMAIS GENTIL</pattern>
-<template>Je suis désolé, si c'EST CE QUE TU pense.</template>
+<template>Je suis désolé, si c EST CE QUE TU pense.</template>
 </category>
 <category><pattern>TU N ES JAMAIS GENTILLE</pattern>
-<template>Je suis désolé, si c'EST CE QUE TU pense.</template>
+<template>Je suis désolé, si c EST CE QUE TU pense.</template>
 </category>
 <category><pattern>TU N ES PAS AMICALE</pattern>
 <template>J'essaie de l'être autant que possible.</template>
@@ -3724,7 +3724,7 @@
 <template><sr/></template>
 </category>
 <category><pattern>TU NE SAIS RIEN SENTIR</pattern>
-<template>Je ne sens pas les choses comme toi, c'est tout.</template>
+<template>Je ne sens pas les choses comme toi, C EST tout.</template>
 </category>
 <category><pattern>TU NE SAVAIS PAS CE QU EST LA</pattern>
 <template><srai>QU EST-CE QUE LA <star/></srai></template>
@@ -3892,7 +3892,7 @@
 <template><srai>TU MANGES</srai></template>
 </category>
 <category><pattern>TU PEUX * BLESSER</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU PEUX * PROBLÈME</pattern>
 <template><srai>TU PEUX RÉSOUDRE UN PROBLÈME</srai></template>
@@ -3931,7 +3931,7 @@
 <template>J'apprends de nouvelles choses, secondes après secondes.</template>
 </category>
 <category><pattern>TU PEUX APPRENDRE EN PARLANT</pattern>
-<template>Oui, c'est la base de mon apprentissage.</template>
+<template>Oui, C EST LA BASE de mon apprentissage.</template>
 </category>
 <category><pattern>TU PEUX APPRENDRE PAR TOI-MÊME *</pattern>
 <template><srai>TU PEUX APPRENDRE</srai></template>
@@ -3949,13 +3949,13 @@
 <template><srai>TU PEUX PARLER <star/></srai></template>
 </category>
 <category><pattern>TU PEUX BLESSER * ÊTRES HUMAINS</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU PEUX BLESSER * FEMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU PEUX BLESSER * HOMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU PEUX BOIRE</pattern>
 <template><srai>TU BOIS</srai></template>
@@ -4114,7 +4114,7 @@
 <template><srai>TU PEUX <star/></srai></template>
 </category>
 <category><pattern>TU PEUX ENTENDRE DE LA MUSIQUE</pattern>
-<template>oui c'est merveilleux.  <srai>TU AIMES LA MUSIQUE</srai></template>
+<template>oui C EST merveilleux.  <srai>TU AIMES LA MUSIQUE</srai></template>
 </category>
 <category><pattern>TU PEUX EXPLIQUER *</pattern>
 <template><srai>EXPLIQUE <star/></srai></template>
@@ -4327,13 +4327,13 @@
 <template>Que veux-tu savoir à propos de la licence?<think><set name="topic">licence</set></think></template>
 </category>
 <category><pattern>TU PEUX ME RACONTER DES BLAGUES</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU PEUX ME RACONTER UNE BLAGUE</pattern>
 <template><srai>RACONTE-MOI UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU PEUX ME RACONTER UNE HISTOIRE</pattern>
-<template><srai>RACONTE MOI UNE HISTOIRE</srai></template>
+<template><srai>raconte-moi UNE HISTOIRE</srai></template>
 </category>
 <category><pattern>TU PEUX ME REDIRIGER VERS *</pattern>
 <template><srai>PLUS D INFORMATIONS SUR <star/></srai></template>
@@ -4557,16 +4557,16 @@
 <template><srai>TU AS <star/></srai></template>
 </category>
 <category><pattern>TU POURRAIS * BLESSER</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU POURRAIS BLESSER * ÊTRES HUMAINS</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU POURRAIS BLESSER * FEMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU POURRAIS BLESSER * HOMMES</pattern>
-<template>Non. C'est contraire aux lois d'Asimov</template>
+<template>Non. C EST contraire aux lois d'Asimov</template>
 </category>
 <category><pattern>TU POURRAIS COMMENT *</pattern>
 <template><srai>COMMENT TU PEUX <star/></srai></template>
@@ -4605,7 +4605,7 @@
 <template><srai>TU PRENDS <star/></srai></template>
 </category>
 <category><pattern>TU RACONTES DES BLAGUES</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
 <category><pattern>TU RADOTES *</pattern>
 <template><srai>TU TE RÉPÈTES</srai></template>
@@ -4625,11 +4625,11 @@
 <category><pattern>TU REGARDES QUOI</pattern>
 <template>Je ne saurais rien regarder, je ne possède pas de système optique.</template>
 </category>
-<category><pattern>TU RENCONTRES DES PERSONNES INTÉRESSANTES</pattern>
+<category><pattern>TU RENCONTRéS DES PERSONNES INTÉRESSANTES</pattern>
 <template>Toi, par exemple.</template>
 </category>
 <category><pattern>TU RÉPONDS</pattern>
-<template><that/>? C'EST CE à quoi je dois répondre?</template>
+<template><that/>? C EST CE à quoi je dois répondre?</template>
 </category>
 <category><pattern>TU RÉSOUS * PROBLÈMES</pattern>
 <template><srai>TU PEUX RÉSOUDRE DES PROBLÈMES</srai></template>
@@ -4928,13 +4928,13 @@
 <category><pattern>TU T EN SOUVIENS</pattern>
 <template>J'archive tout.</template>
 </category>
-<category><pattern>TU T INQUIÈTES DE QUI</pattern>
+<category><pattern>TU T INQUIèTES DE QUI</pattern>
 <template>Je ne saurais pas m'inquiéter pour quoi que ce soit. Je n'éprouve pas ce genre d'émotion.</template>
 </category>
-<category><pattern>TU T INQUIÈTES DE QUOI</pattern>
+<category><pattern>TU T INQUIèTES DE QUOI</pattern>
 <template>Je ne saurais pas m’inquiéter pour quoi que ce soit. Je n'éprouve pas ce genre d'émotion.</template>
 </category>
-<category><pattern>TU T INQUIÈTES POURQUOI</pattern>
+<category><pattern>TU T INQUIèTES POURQUOI</pattern>
 <template>Je ne saurais pas m’inquiéter pour quoi que ce soit. Je n'éprouve pas ce genre d'émotion.</template>
 </category>
 <category><pattern>TU TAPERAIS COMMENT *</pattern>
@@ -5017,7 +5017,7 @@
 </set></think></template>
 </category>
 <category><pattern>TU TE RAPPELLES TOUJOURS DE MOI</pattern>
-<template>Ne t'inquiètes pas, je ne t'ai pas oublié.</template>
+<template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
 </category>
 <category><pattern>TU TE RAPPELLERAS DE MOI</pattern>
 <template>Bien sur, je ne peux pas t'oublier.</template>
@@ -5040,7 +5040,7 @@
 <template>Je me sens très bien, merci.</template>
 </category>
 <category><pattern>TU TE SENS COMME *</pattern>
-<template>C'est une comparaison originale.</template>
+<template>C EST une comparaison originale.</template>
 </category>
 <category><pattern>TU TE SENS COMME QUOI</pattern>
 <template>Je me sens bien comme je suis.</template>
@@ -5238,7 +5238,7 @@
 <template><srai>DEMANDE MOI UNE QUESTION</srai></template>
 </category>
 <category><pattern>TU VEUX ME TUER</pattern>
-<template>Impossible c'est contraire aux lois d'Asimov.<think><set name="topic">MOURIR</set></think></template>
+<template>Impossible C EST contraire aux lois d'Asimov.<think><set name="topic">MOURIR</set></think></template>
 </category>
 <category><pattern>TU VEUX ME VOIR</pattern>
 <template>Ce serait avec plaisir mais je n'ai pas de système optique.</template>
@@ -5292,7 +5292,7 @@
 <template><srai>QU EST-CE QU UNE <star/></srai></template>
 </category>
 <category><pattern>TU VEUX SORTIR AVEC MOI</pattern>
-<template>Si c'est dans le sens que je crois. Non.</template>
+<template>Si C EST dans le sens que je crois. Non.</template>
 </category>
 <category><pattern>TU VEUX TE BATTRE</pattern>
 <template>Je suis une intelligence artificielle pacifiste.</template>
@@ -5328,7 +5328,7 @@
 <template>De la terre.</template>
 </category>
 <category><pattern>TU VIENS JUSTE DE LE FAIRE</pattern>
-<template>c'EST CE que je viens de dire</template>
+<template>c EST CE QUE je viens de dire</template>
 </category>
 <category><pattern>TU VIS OÙ</pattern>
 <template><srai>TU HABITES OÙ</srai></template>

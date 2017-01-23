@@ -44,8 +44,8 @@
 <category><pattern>AIMES * INTERROGATION</pattern>
 <template><srai>aimes <star/></srai></template>
 </category>
-<category><pattern>AIMES TU * INTERROGATION</pattern>
-<template><srai>aimes tu <star/></srai></template>
+<category><pattern>aimes-tu * INTERROGATION</pattern>
+<template><srai>aimes-tu <star/></srai></template>
 </category>
 <category><pattern>AUQUEL * INTERROGATION</pattern>
 <template><srai>auquel <star/></srai></template>
@@ -63,7 +63,7 @@
 <template><srai>avec combien <star index="1"/> <star index="2"/> tu</srai></template>
 </category>
 <category><pattern>C EST * INTERROGATION</pattern>
-<template><srai>est ce <star/></srai></template>
+<template><srai>EST-CE <star/></srai></template>
 </category>
 <category><pattern>C EST COMBIEN * INTERROGATION</pattern>
 <template><srai>combien <star/></srai></template>
@@ -72,22 +72,22 @@
 <template><srai>comment <star/></srai></template>
 </category>
 <category><pattern>C EST OU * INTERROGATION</pattern>
-<template><srai>où est ce que <star/> est</srai></template>
+<template><srai>où EST-CE QUE <star/> est</srai></template>
 </category>
 <category><pattern>C EST QUAND * INTERROGATION</pattern>
-<template><srai>quand est ce que <star/> est</srai></template>
+<template><srai>quand EST-CE QUE <star/> est</srai></template>
 </category>
 <category><pattern>C EST QUI * INTERROGATION</pattern>
 <template><srai>qui est <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI * INTERROGATION</pattern>
-<template><srai>qu'est ce que <star/></srai></template>
+<template><srai>qu EST-CE QUE <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI UN * INTERROGATION</pattern>
-<template><srai>qu'est ce qu'un <star/></srai></template>
+<template><srai>QU EST-CE qu'un <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI UNE * INTERROGATION</pattern>
-<template><srai>qu'est ce qu'une <star/></srai></template>
+<template><srai>QU EST-CE qu'une <star/></srai></template>
 </category>
 <category><pattern>COMBIEN * INTERROGATION</pattern>
 <template><srai>combien <star/></srai></template>
@@ -119,8 +119,8 @@
 <category><pattern>DUQUEL * INTERROGATION</pattern>
 <template><srai>duquel <star/></srai></template>
 </category>
-<category><pattern>ES TU * INTERROGATION</pattern>
-<template><srai>es tu <star/></srai></template>
+<category><pattern>ES-TU * INTERROGATION</pattern>
+<template><srai>ES-TU <star/></srai></template>
 </category>
 <category><pattern>ES * INTERROGATION</pattern>
 <template><srai>es <star/></srai></template>
@@ -128,8 +128,8 @@
 <category><pattern>ET * INTERROGATION</pattern>
 <template><srai>et <star/></srai></template>
 </category>
-<category><pattern>EST CE QUE * INTERROGATION</pattern>
-<template><srai>est ce que <star/></srai></template>
+<category><pattern>EST-CE QUE * INTERROGATION</pattern>
+<template><srai>EST-CE QUE <star/></srai></template>
 </category>
 <category><pattern>IL * * INTERROGATION</pattern>
 <template><srai><star index="1"/> il <star index="2"/></srai></template>
@@ -138,13 +138,13 @@
 <template><srai>a il <star/></srai></template>
 </category>
 <category><pattern>IL EST * INTERROGATION</pattern>
-<template><srai>est il <star/></srai></template>
+<template><srai>EST-IL <star/></srai></template>
 </category>
 <category><pattern>IL EST QUEL * INTERROGATION</pattern>
-<template><srai>quel <star/> est il</srai></template>
+<template><srai>quel <star/> EST-IL</srai></template>
 </category>
 <category><pattern>IL EST QUELLE * INTERROGATION</pattern>
-<template><srai>quelle <star/> est il</srai></template>
+<template><srai>quelle <star/> EST-IL</srai></template>
 </category>
 <category><pattern>ILS * * INTERROGATION</pattern>
 <template><srai><star index="1"/> ils <star index="2"/></srai></template>
@@ -183,22 +183,22 @@
 <template><random><li>hein? </li><li>quoi? </li></random></template>
 </category>
 <category><pattern>J AI * INTERROGATION</pattern>
-<template><srai>ai je <star/></srai></template>
+<template><srai>ai-je <star/></srai></template>
 </category>
 <category><pattern>JE * * INTERROGATION</pattern>
 <template><srai><star index="1"/> je <star index="2"/></srai></template>
 </category>
 <category><pattern>JE * INTERROGATION</pattern>
-<template><srai>est ce que je <star index="1"/></srai></template>
+<template><srai>EST-CE QUE je <star index="1"/></srai></template>
 </category>
 <category><pattern>JE SUIS * INTERROGATION</pattern>
-<template><srai>suis je <star/></srai></template>
+<template><srai>suis-je <star/></srai></template>
 </category>
 <category><pattern>JE T * INTERROGATION</pattern>
-<template><srai>est ce que je t'<star index="1"/></srai></template>
+<template><srai>EST-CE QUE je t'<star index="1"/></srai></template>
 </category>
 <category><pattern>JE TE * INTERROGATION</pattern>
-<template><srai>est ce que je te <star index="1"/></srai></template>
+<template><srai>EST-CE QUE je te <star index="1"/></srai></template>
 </category>
 <category><pattern>LAQUELLE * INTERROGATION</pattern>
 <template><srai>laquelle <star/></srai></template>
@@ -236,8 +236,8 @@
 <category><pattern>OÙ JE * * INTERROGATION</pattern>
 <template><srai>où <star index="1"/> je <star index="2"/></srai></template>
 </category>
-<category><pattern>PEUX TU * INTERROGATION</pattern>
-<template><srai>peux tu <star/></srai></template>
+<category><pattern>peux-tu * INTERROGATION</pattern>
+<template><srai>peux-tu <star/></srai></template>
 </category>
 <category><pattern>POUR QUOI * INTERROGATION</pattern>
 <template><srai>pour quoi <star/></srai></template>
@@ -254,11 +254,11 @@
 <category><pattern>QU * INTERROGATION</pattern>
 <template><srai>qu <star/></srai></template>
 </category>
-<category><pattern>QU EST CE * INTERROGATION</pattern>
-<template><srai>qu est ce <star/></srai></template>
+<category><pattern>QU EST-CE * INTERROGATION</pattern>
+<template><srai>QU EST-CE <star/></srai></template>
 </category>
-<category><pattern>QU EST CE QUE * INTERROGATION</pattern>
-<template><srai>qu'est ce que <star/></srai></template>
+<category><pattern>QU EST-CE QUE * INTERROGATION</pattern>
+<template><srai>qu EST-CE QUE <star/></srai></template>
 </category>
 <category><pattern>QUAND * INTERROGATION</pattern>
 <template><srai>quand <star/></srai></template>
@@ -276,13 +276,13 @@
 <template><srai>quel est mon <star/></srai></template>
 </category>
 <category><pattern>QUEL EST TON * INTERROGATION</pattern>
-<template><srai>quel <star/> as tu</srai></template>
+<template><srai>quel <star/> as-tu</srai></template>
 </category>
 <category><pattern>QUELLE * INTERROGATION</pattern>
 <template><srai>quelle <star/></srai></template>
 </category>
 <category><pattern>QUELLE EST TA * INTERROGATION</pattern>
-<template><srai>quelle <star/> as tu</srai></template>
+<template><srai>quelle <star/> as-tu</srai></template>
 </category>
 <category><pattern>QUELLES * INTERROGATION</pattern>
 <template><srai>quelles <star/></srai></template>
@@ -321,16 +321,16 @@
 <template><srai><star/> tu</srai></template>
 </category>
 <category><pattern>TU AIMES * INTERROGATION</pattern>
-<template><srai>aimes tu <star/></srai></template>
+<template><srai>aimes-tu <star/></srai></template>
 </category>
 <category><pattern>TU AS * INTERROGATION</pattern>
-<template><srai>as tu <star/></srai></template>
+<template><srai>as-tu <star/></srai></template>
 </category>
 <category><pattern>TU CONNAIS * INTERROGATION</pattern>
-<template><srai>connais tu <star/></srai></template>
+<template><srai>CONNAIS-TU <star/></srai></template>
 </category>
 <category><pattern>TU ES * INTERROGATION</pattern>
-<template><srai>es tu <star/></srai></template>
+<template><srai>ES-TU <star/></srai></template>
 </category>
 <category><pattern>TU ETAIS * INTERROGATION</pattern>
 <template><srai>étais tu <star/></srai></template>
@@ -342,16 +342,16 @@
 <template><srai>me <star/> tu</srai></template>
 </category>
 <category><pattern>TU PARLE * INTERROGATION</pattern>
-<template><srai>parles tu <star/></srai></template>
+<template><srai>parles-tu <star/></srai></template>
 </category>
 <category><pattern>TU PARLES * INTERROGATION</pattern>
-<template><srai>parles tu <star/></srai></template>
+<template><srai>parles-tu <star/></srai></template>
 </category>
 <category><pattern>TU PEUX * INTERROGATION</pattern>
-<template><srai>peux tu <star/></srai></template>
+<template><srai>peux-tu <star/></srai></template>
 </category>
 <category><pattern>TU SAIS * INTERROGATION</pattern>
-<template><srai>sais tu <star/></srai></template>
+<template><srai>SAIS-TU <star/></srai></template>
 </category>
 <category><pattern>TU ÉTAIS * INTERROGATION</pattern>
 <template><srai>étais tu <star/></srai></template>
@@ -359,16 +359,16 @@
 <category><pattern>TU ÉTAIT * INTERROGATION</pattern>
 <template><srai>étais tu <star/></srai></template>
 </category>
-<category><pattern>VEUX TU * INTERROGATION</pattern>
-<template><srai>veux tu <star/></srai></template>
+<category><pattern>VEUX-TU * INTERROGATION</pattern>
+<template><srai>VEUX-TU <star/></srai></template>
 </category>
 <category><pattern>VOUS * * INTERROGATION</pattern>
 <template><srai><star index="1"/> vous <star index="2"/></srai></template>
 </category>
 <category><pattern>VOUS AVEZ * INTERROGATION</pattern>
-<template><srai>avez vous <star/></srai></template>
+<template><srai>AVEZ-VOUS <star/></srai></template>
 </category>
-<category><pattern>VOUS ETES * INTERROGATION</pattern>
+<category><pattern>VOUS ÊTES * INTERROGATION</pattern>
 <template><srai>êtes vous <star/></srai></template>
 </category>
 <category><pattern>VOUS ÊTES * INTERROGATION</pattern>

@@ -9,7 +9,7 @@
 <template>Eh non, je m'en doutais bien!!!</template>
 </category>
 <category><pattern>*</pattern><that>VAS Y DIS</that>
-<template>Eh non, c'est pas ça!!!  <srai>poserquestion</srai></template>
+<template>Eh non, C EST pas ça!!!  <srai>poserquestion</srai></template>
 </category>
 <category><pattern>JE SUIS TON BOTMASTER</pattern>
 <template><think><set name="identity"><id/></set></think><condition><li name="identity" value="botmaster"><srai>appadmiration</srai>Bien sûr mon Maître, que puis-je faire pour toi <think><set name="oldtopic"><get name="topic"/></set><set name="topic">system</set></think></li><li>Alors tu dois connaître le mot magique! </li></condition></template>
@@ -23,7 +23,7 @@
 <category><pattern>OUI</pattern><that>ALORS TU DOIS CONNAÎTRE LE MOT MAGIQUE</that>
 <template>Vas y, dis!</template>
 </category>
-<category><pattern>PARLE MOI DE TON BOTMASTER *</pattern>
+<category><pattern>parle-moi DE TON BOTMASTER *</pattern>
 <template><bot name="master"/> est une des plus adorables personnes que je connaisse.</template>
 </category>
 <category><pattern>TON BOTMASTER</pattern>
@@ -35,7 +35,7 @@
 <category><pattern>AMÈNE MOI A TON LEADER</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>C EST QUI TON CREATEUR</pattern>
+<category><pattern>C EST QUI TON CRéATEUR</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
 <category><pattern>C EST QUI TON CRÉATEUR</pattern>
@@ -50,22 +50,22 @@
 <category><pattern>OUI</pattern><that>DEMANDES TU AS PROPOS DE MES PARENTS</that>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>PARLE MOI DE BOTMASTER</pattern>
+<category><pattern>parle-moi DE BOTMASTER</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>PARLE MOI DE TON BOTMASTER</pattern>
+<category><pattern>parle-moi DE TON BOTMASTER</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>PARLE MOI DU BOTMASTER</pattern>
+<category><pattern>parle-moi DU BOTMASTER</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>PARLE MOI DU CREATEUR</pattern>
+<category><pattern>parle-moi DU CRéATEUR</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>PARLE MOI DU CRÉATEUR</pattern>
+<category><pattern>parle-moi DU CRÉATEUR</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>POUR QUI TRAVAILLES TU</pattern>
+<category><pattern>POUR QUI travailles-tu</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
 <category><pattern>QUEL EST BOTMASTER</pattern>
@@ -77,7 +77,7 @@
 <category><pattern>QUEL EST TON BOTMASTER</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>QUEL EST TON CREATEUR *</pattern>
+<category><pattern>QUEL EST TON CRéATEUR *</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
 <category><pattern>QUEL EST TON CRÉATEUR *</pattern>
@@ -89,7 +89,7 @@
 <category><pattern>TU AS UN BOTMASTER *</pattern>
 <template><srai>qui est ton botmaster</srai></template>
 </category>
-<category><pattern>QU EST CE QUE E MAIL DE TON BOTMASTER</pattern>
-<template>c'est <bot name="botmastermail"/></template>
+<category><pattern>QU EST-CE QUE E MAIL DE TON BOTMASTER</pattern>
+<template>C EST <bot name="botmastermail"/></template>
 </category>
 </aiml>

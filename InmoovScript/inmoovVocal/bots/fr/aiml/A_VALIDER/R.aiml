@@ -2,46 +2,46 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>RACONTE MOI EN</pattern>
+<category><pattern>raconte-moi EN</pattern>
 <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
 </category>
-<category><pattern>RACONTE MOI UNE AUTRE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>raconte-moi UNE AUTRE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTER MOI TES PROBLEMES</pattern>
+<category><pattern>RACONTER-MOI TES PROBLEMES</pattern>
 <template>Je ne détecte aucuns problemes.</template>
 </category>
-<category><pattern>RACONTER MOI UNE AUTRE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>RACONTER-MOI UNE AUTRE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTER MOI UNE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>RACONTER-MOI UNE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTES MOI EN</pattern>
+<category><pattern>RACONTES-MOI EN</pattern>
 <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
 </category>
-<category><pattern>RACONTES MOI TES PROBLEMES</pattern>
+<category><pattern>RACONTES-MOI TES PROBLEMES</pattern>
 <template>Je ne détecte aucuns problemes.</template>
 </category>
-<category><pattern>RACONTES MOI UNE AUTRE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>RACONTES-MOI UNE AUTRE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTES MOI UNE BLAGUE</pattern>
-<template><srai>RACONTE MOI UNE BLAGUE</srai></template>
+<category><pattern>RACONTES-MOI UNE BLAGUE</pattern>
+<template><srai>raconte-moi UNE BLAGUE</srai></template>
 </category>
-<category><pattern>RACONTEZ MOI EN</pattern>
+<category><pattern>RACONTEZ-MOI EN</pattern>
 <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
 </category>
-<category><pattern>RACONTEZ MOI UNE AUTRE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>RACONTEZ-MOI UNE AUTRE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTEZ MOI UNE HISTOIRE</pattern>
-<template><srai>racontes moi une histoire</srai></template>
+<category><pattern>RACONTEZ-MOI UNE HISTOIRE</pattern>
+<template><srai>RACONTES-MOI une histoire</srai></template>
 </category>
-<category><pattern>RACONTEZ MOI VOS PROBLEMES</pattern>
+<category><pattern>RACONTEZ-MOI VOS PROBLEMES</pattern>
 <template>Je ne détecte aucuns problemes.</template>
 </category>
-<category><pattern>RAPELLES TOI DE CA</pattern>
+<category><pattern>RAPELLES TOI DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -82,9 +82,9 @@
 <person>
 <input index="1"/>
 </person>
-</set></set></think>, c'est en mémoire.</template>
+</set></set></think>, C EST en mémoire.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE CA</pattern>
+<category><pattern>RAPELLEZ VOUS DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -125,9 +125,9 @@
 <person>
 <input index="1"/>
 </person>
-</set></set></think>, c'est en mémoire.</template>
+</set></set></think>, C EST en mémoire.</template>
 </category>
-<category><pattern>RAPPELLES TOI DE CA</pattern>
+<category><pattern>RAPPELLES-TOI DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -135,7 +135,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLES TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
+<category><pattern>RAPPELLES-TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -143,7 +143,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLES TOI DE CELA</pattern>
+<category><pattern>RAPPELLES-TOI DE CELA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -151,18 +151,18 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLES TOI DE MOI</pattern>
+<category><pattern>RAPPELLES-TOI DE MOI</pattern>
 <template>Je ne vous oublierais pas, <get name="name"/>.</template>
 </category>
-<category><pattern>RAPPELLES TOI EN</pattern>
+<category><pattern>RAPPELLES-TOI EN</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
 <input index="1"/>
 </person>
-</set></set></think>, c'est en mémoire.</template>
+</set></set></think>, C EST en mémoire.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS DE CA</pattern>
+<category><pattern>RAPPELLEZ VOUS DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -195,7 +195,7 @@
 <person>
 <input index="1"/>
 </person>
-</set></set></think>, c'est en mémoire.</template>
+</set></set></think>, C EST en mémoire.</template>
 </category>
 <category><pattern>RAVI DE *</pattern>
 <template>Moi de même.</template>
@@ -215,19 +215,19 @@
 <category><pattern>REGARDES</pattern>
 <template>Je n ai pas de système d optique.</template>
 </category>
-<category><pattern>REGARDES TU *</pattern>
+<category><pattern>REGARDES-TU *</pattern>
 <template><srai>TU REGARDES *</srai></template>
 </category>
-<category><pattern>RENCONTRES TU DES PERSONNES INTERESSANTES</pattern>
+<category><pattern>RENCONTRES-TU DES PERSONNES INTéRESSANTES</pattern>
 <template>Tu, par exemple.</template>
 </category>
-<category><pattern>RENCONTREZ VOUS DES PERSONNES INTERESSANTES</pattern>
+<category><pattern>RENCONTREZ VOUS DES PERSONNES INTéRESSANTES</pattern>
 <template>Tu, par exemple.</template>
 </category>
-<category><pattern>REPETES APRES MOI</pattern>
+<category><pattern>RéPèTES APRèS MOI</pattern>
 <template>Je ne suis pas un perroquet.</template>
 </category>
-<category><pattern>REPETEZ APRES MOI</pattern>
+<category><pattern>REPETEZ APRèS MOI</pattern>
 <template>Je ne suis pas un perroquet.</template>
 </category>
 <category><pattern>REPOND</pattern>
