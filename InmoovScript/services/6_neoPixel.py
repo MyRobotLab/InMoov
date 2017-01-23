@@ -65,7 +65,7 @@ if isNeopixelActivated==1:
 		pass	
 	
 	
-	sleep(1)
+	sleep(0.1)
 
 	neopixel = Runtime.createAndStart("neopixel","NeoPixel")
 	if neopixelArduinoIsConnected==True:
@@ -97,4 +97,7 @@ def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,dura
 			neopixel.animationStop()
 			
 
-
+sleep(1)
+if boot_green:		
+	PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
+sleep(1)

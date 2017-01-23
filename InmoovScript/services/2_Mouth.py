@@ -81,7 +81,8 @@ def setRobotLanguage():
 	if MyLanguage!="en":
 		try:
 			mouth.setLanguage(MyLanguage)
-			i01.ear.setLanguage(MyLanguage)
+			if EarEngine!="Sphinx":
+				i01.ear.setLanguage(MyLanguage)
 		except:
 			errorSpokenFunc('MyLanguage')
 			LanguageError=1
@@ -129,3 +130,4 @@ if languagePackLoaded==0:
 
 talkEvent(lang_startingMouth)
 talkEvent(lang_whatIsThisLanguage)
+talkEvent(lang_startingEar+", "+EarEngine)

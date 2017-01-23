@@ -37,6 +37,7 @@ try:
 	DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 	IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
 	EarInterpretEngine=BasicConfig.get('VOCAL', 'EarInterpretEngine')
+	EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
 	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
 
 

@@ -36,8 +36,12 @@ EarInterpretEngine=ear.AddCommand
 ;ear.addCommand : it's is hardcoded text, very simple to use and script
 ;chatbot : Very powefull AIML engine
 
+EarEngine=WebkitSpeechRecognition
+;WebkitSpeechRecognition or Sphinx
+
 IsMute=0
 ;talk about starting actions
+
 [GENERAL]
 LoadingPicture=False
 ;----------------------------------- END --------------------------------------------------
