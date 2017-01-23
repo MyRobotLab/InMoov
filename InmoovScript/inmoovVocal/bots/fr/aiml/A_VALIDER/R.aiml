@@ -41,7 +41,7 @@
 <category><pattern>RACONTEZ-MOI VOS PROBLEMES</pattern>
 <template>Je ne détecte aucuns problemes.</template>
 </category>
-<category><pattern>RAPELLES TOI DE ÇA</pattern>
+<category><pattern>RAPELLES-TOI DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -49,7 +49,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLES TOI DE CE QUE JE TE DIS</pattern>
+<category><pattern>RAPELLES-TOI DE CE QUE JE TE DIS</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -57,7 +57,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLES TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
+<category><pattern>RAPELLES-TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -65,7 +65,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLES TOI DE CELA</pattern>
+<category><pattern>RAPELLES-TOI DE CELA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -73,10 +73,10 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLES TOI DE MOI</pattern>
+<category><pattern>RAPELLES-TOI DE MOI</pattern>
 <template>Je ne vous oublierais pas, <get name="name"/>.</template>
 </category>
-<category><pattern>RAPELLES TOI EN</pattern>
+<category><pattern>RAPELLES-TOI EN</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -84,7 +84,7 @@
 </person>
 </set></set></think>, C EST en mémoire.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE ÇA</pattern>
+<category><pattern>RAPELLEZ-VOUS DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -92,7 +92,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE CE QUE JE VIENS DE VOUS DIRE</pattern>
+<category><pattern>RAPELLEZ-VOUS DE CE QUE JE VIENS DE VOUS DIRE</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -100,7 +100,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE CE QUE JE VOUS DIS</pattern>
+<category><pattern>RAPELLEZ-VOUS DE CE QUE JE VOUS DIS</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -108,7 +108,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE CELA</pattern>
+<category><pattern>RAPELLEZ-VOUS DE CELA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -116,10 +116,10 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS DE MOI</pattern>
+<category><pattern>RAPELLEZ-VOUS DE MOI</pattern>
 <template>Je ne vous oublierais pas, <get name="name"/>.</template>
 </category>
-<category><pattern>RAPELLEZ VOUS EN</pattern>
+<category><pattern>RAPELLEZ-VOUS EN</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -162,7 +162,7 @@
 </person>
 </set></set></think>, C EST en mémoire.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS DE ÇA</pattern>
+<category><pattern>RAPPELLEZ-VOUS DE ÇA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -170,7 +170,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS DE CE QUE JE VIENS DE VOUS DIRE</pattern>
+<category><pattern>RAPPELLEZ-VOUS DE CE QUE JE VIENS DE VOUS DIRE</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -178,7 +178,7 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS DE CELA</pattern>
+<category><pattern>RAPPELLEZ-VOUS DE CELA</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -186,10 +186,10 @@
 </person>
 </set></set></think>Information mémorisée.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS DE MOI</pattern>
+<category><pattern>RAPPELLEZ-VOUS DE MOI</pattern>
 <template>Je ne vous oublierais pas, <get name="name"/>.</template>
 </category>
-<category><pattern>RAPPELLEZ VOUS EN</pattern>
+<category><pattern>RAPPELLEZ-VOUS EN</pattern>
 <template><think><set name="memory">
 <set name="topic">
 <person>
@@ -221,7 +221,7 @@
 <category><pattern>RENCONTRES-TU DES PERSONNES INTéRESSANTES</pattern>
 <template>Tu, par exemple.</template>
 </category>
-<category><pattern>RENCONTREZ VOUS DES PERSONNES INTéRESSANTES</pattern>
+<category><pattern>RENCONTREZ-VOUS DES PERSONNES INTéRESSANTES</pattern>
 <template>Tu, par exemple.</template>
 </category>
 <category><pattern>RéPèTES APRèS MOI</pattern>
@@ -239,10 +239,10 @@
 <category><pattern>REPONDEZ MOI</pattern>
 <template>Essayer de m interroger avec des mots plus simples.</template>
 </category>
-<category><pattern>REPONDRAIS TU *</pattern>
+<category><pattern>REPONDRAIS-TU *</pattern>
 <template><srai>TU REPONDRAIS <star/></srai></template>
 </category>
-<category><pattern>REPONDRIEZ VOUS *</pattern>
+<category><pattern>REPONDRIEZ-VOUS *</pattern>
 <template><srai>VOUS REPONDRIEZ <star/></srai></template>
 </category>
 <category><pattern>REPONDS A LA * QUESTION</pattern>
@@ -263,25 +263,25 @@
 <category><pattern>RESISTANCE EST FUTILE</pattern>
 <template>Tu serez assimilé.</template>
 </category>
-<category><pattern>RESSEMBLES TU A *</pattern>
+<category><pattern>RESSEMBLES-TU A *</pattern>
 <template><srai>TU RESSEMBLES A QUOI</srai></template>
 </category>
-<category><pattern>RESSEMBLES TU A UN HUMAIN</pattern>
+<category><pattern>RESSEMBLES-TU A UN HUMAIN</pattern>
 <template>Non.</template>
 </category>
 <category><pattern>RESSEMBLEZ VOUS A UN HUMAIN</pattern>
 <template>Non.</template>
 </category>
-<category><pattern>RESSENS TU *</pattern>
+<category><pattern>RESSENS-TU *</pattern>
 <template>Je suis un robot, je ressens pas ce genre de chose.</template>
 </category>
 <category><pattern>RESSENT TU *</pattern>
 <template><srai>TU RESSENS <star/></srai></template>
 </category>
-<category><pattern>RESSENTEZ VOUS *</pattern>
+<category><pattern>RESSENTEZ-VOUS *</pattern>
 <template>Je suis un robot, je ressens pas ce genre de chose.</template>
 </category>
-<category><pattern>RESTES TU *</pattern>
+<category><pattern>RESTES-TU *</pattern>
 <template><srai>TU ES <star/></srai></template>
 </category>
 <category><pattern>RETIRE LA</pattern>

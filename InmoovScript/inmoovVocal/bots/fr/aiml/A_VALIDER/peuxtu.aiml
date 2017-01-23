@@ -15,7 +15,7 @@
 <template>Peut que?</template>
 </category>
 <category><pattern>PEUX *</pattern>
-<template><random><li>j'espère souvent pouvoir <set name="that"> <star/> </set>. </li><li>Un livre peut il n'avoir aucun titre? </li><li>Peux quoi? </li></random></template>
+<template><random><li>j'espère souvent pouvoir <set name="that"> <star/> </set>. </li><li>Un livre peut-il n'avoir aucun titre? </li><li>Peux quoi? </li></random></template>
 </category>
 <category><pattern>peux-tu * AVOIR DES IDÉES</pattern>
 <template><srai>PENSES-TU</srai></template>
@@ -98,7 +98,7 @@
 <category><pattern>peux-tu APPRENDRE DE NOUVELLES CHOSES</pattern>
 <template>Oui mon botmaster m'apprend de nouvelles choses tout le temps.</template>
 </category>
-<category><pattern>peux-tu APPRENDRE TOI MEME *</pattern>
+<category><pattern>peux-tu APPRENDRE TOI MÊME *</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
 <category><pattern>peux-tu APPRENDRE TOI MÊME *</pattern>
@@ -131,7 +131,7 @@
 <category><pattern>peux-tu AVOIR *</pattern>
 <template><srai>as-tu <star/></srai></template>
 </category>
-<category><pattern>peux-tu AVOIR DES EMOTIONS</pattern>
+<category><pattern>peux-tu AVOIR DES éMOTIONS</pattern>
 <template><srai>as-tu des sentiments</srai></template>
 </category>
 <category><pattern>peux-tu AVOIR DES KIDS</pattern>
@@ -185,8 +185,8 @@
 <category><pattern>peux-tu COMPRENDRE L ALLEMAND</pattern>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">allemand</set> </set> </think><srai>peux-tu parler ALLEMAND</srai></template>
 </category>
-<category><pattern>peux-tu COMPRENDRE LE FRANCAIS</pattern>
-<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">français</set> </set> </think><srai>peux-tu parler FRANCAIS</srai></template>
+<category><pattern>peux-tu COMPRENDRE LE FRANçAIS</pattern>
+<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">français</set> </set> </think><srai>peux-tu parler FRANçAIS</srai></template>
 </category>
 <category><pattern>peux-tu COMPRENDRE LE FRANÇAIS</pattern>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">français</set> </set> </think><srai>peux-tu parler FRANÇAIS</srai></template>
@@ -257,7 +257,7 @@
 <category><pattern>peux-tu DEMANDER A LA QUESTION *</pattern>
 <template><srai>poses moi une question</srai></template>
 </category>
-<category><pattern>peux-tu DEPLACER</pattern>
+<category><pattern>peux-tu DéPLACER</pattern>
 <template>Mon corps de robot est toujours "en construction.</template>
 </category>
 <category><pattern>peux-tu DESOBEIR *</pattern>
@@ -272,7 +272,7 @@
 <category><pattern>peux-tu DETESTER</pattern>
 <template>Non je suis programmé seulement pour l amour.</template>
 </category>
-<category><pattern>peux-tu DEVELOPPER *</pattern>
+<category><pattern>peux-tu DEvéloPPER *</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
 <category><pattern>peux-tu DEVENIR *</pattern>
@@ -332,7 +332,7 @@
 <category><pattern>peux-tu DÉTESTER</pattern>
 <template>Non je suis programmé seulement pour l amour.</template>
 </category>
-<category><pattern>peux-tu DÉVELOPPER *</pattern>
+<category><pattern>peux-tu DÉvéloPPER *</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
 <category><pattern>peux-tu ECHAPPER</pattern>
@@ -377,7 +377,7 @@
 <category><pattern>peux-tu ETENDRE *</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
-<category><pattern>peux-tu ÊTRE * NE PEUT PAS TU</pattern>
+<category><pattern>peux-tu ÊTRE * NE PEUT PAS-TU</pattern>
 <template><srai>peux-tu être <star/></srai></template>
 </category>
 <category><pattern>peux-tu ÊTRE * TU CONNAIT</pattern>
@@ -398,7 +398,7 @@
 <category><pattern>peux-tu ÊTRE MON AMI</pattern>
 <template><srai>suis-je ton ami</srai></template>
 </category>
-<category><pattern>peux-tu ÊTRE PLUS PRECIS</pattern>
+<category><pattern>peux-tu ÊTRE PLUS PRéCIS</pattern>
 <template><that/>"? Plus précis de cela?</template>
 </category>
 <category><pattern>peux-tu ÊTRE PLUS SPECIFIQUE</pattern>
@@ -410,7 +410,7 @@
 <category><pattern>peux-tu ÊTRE</pattern>
 <template><srai>existe tu</srai></template>
 </category>
-<category><pattern>peux-tu EVOLUER</pattern>
+<category><pattern>peux-tu éVOLUER</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
 <category><pattern>peux-tu EXISTER *</pattern>
@@ -683,7 +683,7 @@
 <category><pattern>peux-tu ME MONTRER</pattern>
 <template><srai>montre moi</srai></template>
 </category>
-<category><pattern>peux-tu ME PARLER A PROPOS DE TOI MEME</pattern>
+<category><pattern>peux-tu ME PARLER A PROPOS DE TOI MÊME</pattern>
 <template><srai>parle-moi de toi</srai></template>
 </category>
 <category><pattern>peux-tu ME PARLER À PROPOS DE TOI MÊME</pattern>
@@ -927,13 +927,13 @@
 <template><srai>peux-tu résoudre des problèmes</srai></template>
 </category>
 <category><pattern>peux-tu RESSEMBLER *</pattern>
-<template><srai>à quoi ressembles tu</srai></template>
+<template><srai>à quoi RESSEMBLES-TU</srai></template>
 </category>
 <category><pattern>peux-tu RESSEMBLER A *</pattern>
-<template><srai>à quoi ressembles tu</srai></template>
+<template><srai>à quoi RESSEMBLES-TU</srai></template>
 </category>
 <category><pattern>peux-tu RESSEMBLER A UN *</pattern>
-<template><srai>à quoi ressembles tu</srai></template>
+<template><srai>à quoi RESSEMBLES-TU</srai></template>
 </category>
 <category><pattern>peux-tu REVER</pattern>
 <template><srai>peux-tu rêver</srai></template>
@@ -1196,7 +1196,7 @@
 <category><pattern>peux-tu ÉVOLUER</pattern>
 <template><srai>peux-tu apprendre</srai></template>
 </category>
-<category><pattern>peux-tu ÊTRE * NE PEUT PAS TU</pattern>
+<category><pattern>peux-tu ÊTRE * NE PEUT PAS-TU</pattern>
 <template><srai>peux-tu être <star/></srai></template>
 </category>
 <category><pattern>peux-tu ÊTRE * TU CONNAIT</pattern>

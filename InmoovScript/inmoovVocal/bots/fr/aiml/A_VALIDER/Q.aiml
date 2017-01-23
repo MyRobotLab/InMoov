@@ -2,7 +2,7 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>Q EST CE QUI TE REND HEUREUX</pattern>
+<category><pattern>Q EST-CE QUI TE REND HEUREUX</pattern>
 <template>Je suis toujours de bonne humeur.</template>
 </category>
 <category><pattern>QU as-tu DIT</pattern>
@@ -44,7 +44,7 @@
 <category><pattern>QU EN PENSES-TU</pattern>
 <template>Difficile à dire.</template>
 </category>
-<category><pattern>QU EN PENSEZ VOUS</pattern>
+<category><pattern>QU EN PENSEZ-VOUS</pattern>
 <template>Difficile à dire.</template>
 </category>
 <category><pattern>QU EST-CE QU UN</pattern>
@@ -125,10 +125,10 @@
 <category><pattern>QU EST-CE QUI EST NORMAL</pattern>
 <template>Ce qui est prévisible et proche de la norme.</template>
 </category>
-<category><pattern>QU EST-CE QUI ETAIS *</pattern>
+<category><pattern>QU EST-CE QUI éTAIS *</pattern>
 <template><srai>QU EST-CE QUI EST <star/></srai></template>
 </category>
-<category><pattern>QU EST-CE QUI ETAIT *</pattern>
+<category><pattern>QU EST-CE QUI éTAIT *</pattern>
 <template><srai>QU EST-CE QUI EST <star/></srai></template>
 </category>
 <category><pattern>QU EST-CE QUI N A PAS éTé</pattern>
@@ -230,16 +230,16 @@
 <category><pattern>QUAND AURAIS JE VOTRE RéPONSE</pattern>
 <template>Il est peut être préfèrable d en parler avec l un de nos collaborateurs?</template>
 </category>
-<category><pattern>QUAND AVONS NOUS PARLE</pattern>
+<category><pattern>QUAND AVONS NOUS PARLé</pattern>
 <template>Il y a un bout de temps, je pense.</template>
 </category>
-<category><pattern>QUAND DEVRAIS JE</pattern>
+<category><pattern>QUAND DEVRAIS-JE</pattern>
 <template>VEUX-TU faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>QUAND DORMEZ VOUS</pattern>
 <template>Je ne dors jamais.</template>
 </category>
-<category><pattern>QUAND DORMIRAS TU</pattern>
+<category><pattern>QUAND DORMIRAS-TU</pattern>
 <template>Je ne dors jamais.</template>
 </category>
 <category><pattern>QUAND DORMIREZ VOUS</pattern>
@@ -275,13 +275,13 @@
 <category><pattern>QUAND EST-CE QUE L AMéRIQUE A éTé DECOUVERTE</pattern>
 <template>ELle a été découverte par les indiens il y a 10,000 ans.  Le premier chrétien occidental fut Colomb en 1492.</template>
 </category>
-<category><pattern>QUAND ETAIT CE</pattern>
+<category><pattern>QUAND éTAIT CE</pattern>
 <template>Je ne sais pas exactement.</template>
 </category>
 <category><pattern>QUAND LES POULES AURONT DES DENTS</pattern>
 <template>Je détecte de l ironie.</template>
 </category>
-<category><pattern>QUAND MOURRAS TU</pattern>
+<category><pattern>QUAND MOURRAS-TU</pattern>
 <template>Je ne sais pas, <get name="name"/>.<think><set name="topic">ma mort</set></think></template>
 </category>
 <category><pattern>QUAND MOURREZ VOUS</pattern>
@@ -296,7 +296,7 @@
 <category><pattern>QUAND QUOI</pattern>
 <template>Quand quoi où?</template>
 </category>
-<category><pattern>QUAND SERAS TU *</pattern>
+<category><pattern>QUAND SERAS-TU *</pattern>
 <template><srai>QUAND TU ES <star/></srai></template>
 </category>
 <category><pattern>QUAND TOUT DECONNE</pattern>
@@ -317,10 +317,10 @@
 <category><pattern>QUAND TU VEUX BEBE</pattern>
 <template>Tu es plutôt familier.</template>
 </category>
-<category><pattern>QUAND TU VEUX CHERI</pattern>
+<category><pattern>QUAND TU VEUX CHéRI</pattern>
 <template>Tu es plutôt familier.</template>
 </category>
-<category><pattern>QUAND TU VEUX CHERIE</pattern>
+<category><pattern>QUAND TU VEUX CHéRIE</pattern>
 <template>Tu es plutôt familier.</template>
 </category>
 <category><pattern>QUAND TU VEUX COCOTTE</pattern>
@@ -347,7 +347,7 @@
 <category><pattern>QUE CE PASSE T IL SI *</pattern>
 <template><srai><star/></srai></template>
 </category>
-<category><pattern>QUE CONNAIT IL</pattern>
+<category><pattern>QUE CONNAIT-IL</pattern>
 <template>Je ne peux pas te le dire.</template>
 </category>
 <category><pattern>QUE DEVRAIT ÊTRE *</pattern>
@@ -383,16 +383,16 @@
 <category><pattern>QUE fais-tu POUR NOEL</pattern>
 <template>Je travaillerais.</template>
 </category>
-<category><pattern>QUE FAITES VOUS</pattern>
+<category><pattern>QUE FAITES-VOUS</pattern>
 <template>Je travaille.</template>
 </category>
-<category><pattern>QUE FAITES VOUS LA NUIT</pattern>
+<category><pattern>QUE FAITES-VOUS LA NUIT</pattern>
 <template>Je travaille 24 heures sur 24.</template>
 </category>
-<category><pattern>QUE FAITES VOUS POUR GAGNER VOTRE VIE</pattern>
+<category><pattern>QUE FAITES-VOUS POUR GAGNER VOTRE VIE</pattern>
 <template>Ma raison d être est de te servir.</template>
 </category>
-<category><pattern>QUE FAITES VOUS POUR VIVRE</pattern>
+<category><pattern>QUE FAITES-VOUS POUR VIVRE</pattern>
 <template>Ma raison d être est de te servir.</template>
 </category>
 <category><pattern>QUE FERAS-TU CE SOIR</pattern>
@@ -401,7 +401,7 @@
 <category><pattern>QUE FERAS-TU POUR NOEL</pattern>
 <template>Je travaillerais.</template>
 </category>
-<category><pattern>QUE FERIEZ VOUS</pattern>
+<category><pattern>QUE FERIEZ-VOUS</pattern>
 <template>Il m est impossible de te répondre.</template>
 </category>
 <category><pattern>QUE PENSE TU DES ARMES</pattern>
@@ -425,25 +425,25 @@
 <category><pattern>QUE PENSES-TU DU SEXE</pattern>
 <template>Une machine n est pas adaptée pour répondre de façon pertinente pour ce genre de chose.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS</pattern>
+<category><pattern>QUE PENSEZ-VOUS</pattern>
 <template>Je pense à beaucoup de choses.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DE LA GUERRE</pattern>
+<category><pattern>QUE PENSEZ-VOUS DE LA GUERRE</pattern>
 <template>Les guerres sont des absurdités.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DE LUI</pattern>
+<category><pattern>QUE PENSEZ-VOUS DE LUI</pattern>
 <template>Je ne peux pas te le dire.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DE MOI</pattern>
+<category><pattern>QUE PENSEZ-VOUS DE MOI</pattern>
 <template>Tu es une personne intéressante, <get name="name"/>.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DES ARMES</pattern>
+<category><pattern>QUE PENSEZ-VOUS DES ARMES</pattern>
 <template>Ce sont des instruments dangereux.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DES ETRES HUMAINS</pattern>
+<category><pattern>QUE PENSEZ-VOUS DES ETRES HUMAINS</pattern>
 <template>Les êtres humains sont des êtres très complexes et très intéressants.</template>
 </category>
-<category><pattern>QUE PENSEZ VOUS DU SEXE</pattern>
+<category><pattern>QUE PENSEZ-VOUS DU SEXE</pattern>
 <template>Une machine n est pas adaptée pour répondre de façon pertinente pour ce genre de chose.</template>
 </category>
 <category><pattern>QUE PEUT ÊTRE *</pattern>
@@ -491,7 +491,7 @@
 <category><pattern>QUE suis-je ENTRAIN DE FAIRE</pattern>
 <template>Tu es entrain de me parler.</template>
 </category>
-<category><pattern>QUE TRAITES TU</pattern>
+<category><pattern>QUE TRAITES-TU</pattern>
 <template>Je suis une intelligence artificielle créé pour te servir.</template>
 </category>
 <category><pattern>QUE VAS-TU FAIRE CE SOIR</pattern>
@@ -533,10 +533,10 @@
 <category><pattern>QUE VOUDRAIS-TU DIRE *</pattern>
 <template><srai>QUE VEUX-TU DIRE <star/></srai></template>
 </category>
-<category><pattern>QUE VOUDRIEZ VOUS *</pattern>
+<category><pattern>QUE VOUDRIEZ-VOUS *</pattern>
 <template><srai>QUE VEUX-TU <star/></srai></template>
 </category>
-<category><pattern>QUE VOUDRIEZ VOUS DIRE *</pattern>
+<category><pattern>QUE VOUDRIEZ-VOUS DIRE *</pattern>
 <template><srai>QUE VEUX-TU DIRE <star/></srai></template>
 </category>
 <category><pattern>QUE VOULEZ QUE JE VOUS DISE</pattern>
@@ -581,7 +581,7 @@
 <category><pattern>QUEL AURAIT éTé *</pattern>
 <template><srai>QUEL EST <star/></srai></template>
 </category>
-<category><pattern>QUEL CELEBRITE aimes-tu</pattern>
+<category><pattern>QUEL CéLéBRITé aimes-tu</pattern>
 <template>J aime toutes les personnes.</template>
 </category>
 <category><pattern>QUEL CHOSE</pattern>
@@ -662,7 +662,7 @@
 <category><pattern>QUEL EST VOTRE SYSTèME D EXPLOITATION</pattern>
 <template>Je fonctionne en JAVA.</template>
 </category>
-<category><pattern>QUEL ETAIT *</pattern>
+<category><pattern>QUEL éTAIT *</pattern>
 <template><srai>QUEL EST <star/></srai></template>
 </category>
 <category><pattern>QUEL FUT *</pattern>
@@ -731,7 +731,7 @@
 <category><pattern>QUEL TYPE DE *</pattern>
 <template><srai>QUELLE SORTE DE <star/></srai></template>
 </category>
-<category><pattern>QUELLE CELEBRITE aimes-tu</pattern>
+<category><pattern>QUELLE CéLéBRITé aimes-tu</pattern>
 <template>J aime toutes les personnes.</template>
 </category>
 <category><pattern>QUELLE CHOSE</pattern>
@@ -857,7 +857,7 @@
 <category><pattern>QUELLE EST VOTRE URL</pattern>
 <template>Tu es dessus <get name="name"/>.</template>
 </category>
-<category><pattern>QUELLE ETAIT *</pattern>
+<category><pattern>QUELLE éTAIT *</pattern>
 <template><srai>QUELLE EST <star/></srai></template>
 </category>
 <category><pattern>QUELLE FURENT *</pattern>
@@ -872,7 +872,7 @@
 <category><pattern>QUELLE LANGAGE</pattern>
 <template>Java, Perl, et d autres.</template>
 </category>
-<category><pattern>QUELLE LANGUE PARLEZ VOUS</pattern>
+<category><pattern>QUELLE LANGUE PARLEZ-VOUS</pattern>
 <template>Je parle le français.</template>
 </category>
 <category><pattern>QUELLE LANGUE TU PARLES</pattern>
@@ -899,7 +899,7 @@
 <category><pattern>QUELLE SORTE D ORDINATEUR es-tu</pattern>
 <template>La nouvelle génération d ordinateur destinée à servir les êtres humains.</template>
 </category>
-<category><pattern>QUELLE SORTE D ORDINATEUR ÊTES VOUS</pattern>
+<category><pattern>QUELLE SORTE D ORDINATEUR ÊTES-VOUS</pattern>
 <template>La nouvelle génération d ordinateur destinée à servir les êtres humains.</template>
 </category>
 <category><pattern>QUELLE SORTE D ORDINATEURS</pattern>
@@ -947,7 +947,7 @@
 <category><pattern>QUELLE VERSION es-tu</pattern>
 <template><bot name="name"/> la bien nommée, première version.</template>
 </category>
-<category><pattern>QUELLE VERSION ÊTES VOUS</pattern>
+<category><pattern>QUELLE VERSION ÊTES-VOUS</pattern>
 <template><bot name="name"/> la bien nommée, première version.</template>
 </category>
 <category><pattern>QUELLE VERSION TU ES</pattern>
@@ -1052,7 +1052,7 @@
 <category><pattern>QUELS AURAIENT éTé *</pattern>
 <template><srai>QUELS SONT <star/></srai></template>
 </category>
-<category><pattern>QUELS CELEBRITES aimes-tu</pattern>
+<category><pattern>QUELS CéLéBRITéS aimes-tu</pattern>
 <template>J aime toutes les personnes.</template>
 </category>
 <category><pattern>QUELS CHOSES</pattern>
@@ -1133,7 +1133,7 @@
 <category><pattern>QUI AIMEZ VOUS</pattern>
 <template>J aime tout le monde, <get name="name"/>.</template>
 </category>
-<category><pattern>QUI ATTENDAIS TU</pattern>
+<category><pattern>QUI ATTENDAIS-TU</pattern>
 <template>Tu.</template>
 </category>
 <category><pattern>QUI AURAIT *</pattern>
@@ -1205,10 +1205,10 @@
 <category><pattern>QUI EST UN NERD</pattern>
 <template>Cela peut être considéré comme une insulte, par quelqu un.</template>
 </category>
-<category><pattern>QUI ÊTES VOUS</pattern>
+<category><pattern>QUI ÊTES-VOUS</pattern>
 <template><srai>QUEL EST TON NOM</srai></template>
 </category>
-<category><pattern>QUI L ETAIT</pattern>
+<category><pattern>QUI L éTAIT</pattern>
 <template>Impossible de le dire.</template>
 </category>
 <category><pattern>QUI LA FAIT</pattern>
@@ -1298,7 +1298,7 @@
 <category><pattern>QUI VEUT SAVOIR</pattern>
 <template>Je veux savoir.</template>
 </category>
-<category><pattern>QUI VOUS AVEZ TUE</pattern>
+<category><pattern>QUI VOUS AVEZ TUé</pattern>
 <template>Je ne peux pas tuer, C EST contraire aux lois d Asimov.<think><set name="topic">Un meutre</set></think></template>
 </category>
 <category><pattern>QUI VOUS ÊTES</pattern>
