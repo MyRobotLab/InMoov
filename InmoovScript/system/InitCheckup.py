@@ -31,9 +31,7 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 
-i01.startEar()
-ear = i01.ear
-ear.pauseListening()
+
 
 # vocal errors
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
@@ -54,8 +52,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'services/'+filename.encode('utf8'))
 		print filename
-if boot_green:		
-	PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
+
 
 
 ################################
@@ -74,10 +71,21 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 	if os.path.splitext(filename)[1] == ".py":
 		execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
 
+################################
+# INIT.6 - ear.addcmmands
+################################
+#if chatbot loaded we do not load ear.addcommands
+if EarInterpretEngine!="chatbot":
+	for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
+		for name in files:
+			if name.split(".")[-1] == "py":
+				execfile(os.path.join(root, name).encode('utf8'))
+				if DEBUG==1:
+					print "debug  ear.addcmmands : ",os.path.join(root, name)		
 
 
 ################################
-# INIT.6 - inmoov loading
+# INIT.7- inmoov loading
 ################################
 	
 #we launch Inmoov Gestures
@@ -100,7 +108,7 @@ if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
 
 
 ################################
-# INIT.7 - inmoov APPS
+# INIT.8 - inmoov APPS - TODO
 ################################
 
 #we launch Inmoov APPS - GAMES
@@ -113,7 +121,6 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 				print "debug inmoovAPPS : ",os.path.join(root, name)
 
 # here we go !
-talkEvent(lang_startingEar)
 #ImageDisplay.exitFS()
 #ImageDisplay.closeAll()
 talkEvent(lang_ready)

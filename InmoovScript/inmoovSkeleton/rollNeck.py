@@ -30,28 +30,30 @@ except:
   
   
   
-# ##############################################################################
-# 								ARDUINO CHECK
-# ##############################################################################
-masterArduinoRollNeckIsconnected=0
-try:
-	
-	RollNeckArduino=eval(RollNeckArduino)
-	if RollNeckArduino==left:
-		masterArduinoRollNeckIsconnected=LeftPortIsConnected
-	if RollNeckArduino==right:
-		masterArduinoRollNeckIsconnected=RightPortIsConnected
-	
-except:
-	errorSpokenFunc('BAdrduinoChoosen',', Roll Neck')
-	isRollNeckActivated=0
-	pass	
+
 
 # ##############################################################################
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
 if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
+
+# ##############################################################################
+# 								ARDUINO CHECK
+# ##############################################################################
+	masterArduinoRollNeckIsconnected=0
+	try:
+		
+		RollNeckArduino=eval(RollNeckArduino)
+		if RollNeckArduino==left:
+			masterArduinoRollNeckIsconnected=LeftPortIsConnected
+		if RollNeckArduino==right:
+			masterArduinoRollNeckIsconnected=RightPortIsConnected
+		
+	except:
+		errorSpokenFunc('BAdrduinoChoosen',', Roll Neck')
+		isRollNeckActivated=0
+		pass	
 	
 	if masterArduinoRollNeckIsconnected:
 		talkEvent(lang_startingRollNeck)
