@@ -44,11 +44,12 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 	masterArduinoRollNeckIsconnected=0
 	try:
 		
-		RollNeckArduino=eval(RollNeckArduino)
-		if RollNeckArduino==left:
+		
+		if RollNeckArduino=="left":
 			masterArduinoRollNeckIsconnected=LeftPortIsConnected
-		if RollNeckArduino==right:
+		if RollNeckArduino=="right":
 			masterArduinoRollNeckIsconnected=RightPortIsConnected
+		RollNeckArduino=eval(RollNeckArduino)
 		
 	except:
 		errorSpokenFunc('BAdrduinoChoosen',', Roll Neck')
