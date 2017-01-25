@@ -774,9 +774,6 @@
 <category><pattern>VOUS ÊTES DÉBILE</pattern>
 <template>Ce n’est pas très aimable, <get name="name"/>.</template>
 </category>
-<category><pattern>VOUS ÊTES DÉBILE</pattern>
-<template>Ce n’est pas très aimable, <get name="name"/>.</template>
-</category>
 <category><pattern>VOUS ÊTES DÉLIRANT</pattern>
 <template><srai>VOUS DÉLIREZ</srai></template>
 </category>
@@ -1902,12 +1899,6 @@
 <category><pattern>VOUS PORTEZ QUOI D AUTRE</pattern>
 <template>Tes questions n ont aucun sens, <get name="name"/>.</template>
 </category>
-<category><pattern>VOUS POURRIEZ * BLESSER</pattern>
-<template>Non. C’est  contraire aux lois d Asimov</template>
-</category>
-<category><pattern>VOUS POURRIEZ BLESSER * ÊTRES HUMAINS</pattern>
-<template>Non. C’est  contraire aux lois d Asimov</template>
-</category>
 <category><pattern>VOUS POURRIEZ BLESSER * FEMMES</pattern>
 <template>Non. C’est  contraire aux lois d Asimov</template>
 </category>
@@ -1921,12 +1912,6 @@
 <template>Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>VOUS POURRIEZ BLESSER * ÊTRES HUMAINS</pattern>
-<template>Non. C’est  contraire aux lois d Asimov</template>
-</category>
-<category><pattern>VOUS POURRIEZ BLESSER * FEMMES</pattern>
-<template>Non. C’est  contraire aux lois d Asimov</template>
-</category>
-<category><pattern>VOUS POURRIEZ BLESSER * HOMMES</pattern>
 <template>Non. C’est  contraire aux lois d Asimov</template>
 </category>
 <category><pattern>VOUS POUVEZ APPELER</pattern>
@@ -2074,12 +2059,6 @@
 </category>
 <category><pattern>VOUS PUEZ</pattern>
 <template>Merci pour la critique constructive, <get name="name"/>.</template>
-</category>
-<category><pattern>VOUS RAPPELEZ-VOUS DE MA DERNIÈRE QUESTION</pattern>
-<template>Tu m’as demandé: "<input index="2"/>".</template>
-</category>
-<category><pattern>VOUS RAPPELEZ-VOUS TOUJOURS DE MOI</pattern>
-<template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
 </category>
 <category><pattern>VOUS RAPPELEZ-VOUS DE MA DERNIÈRE QUESTION</pattern>
 <template>Tu m’as demandé: "<input index="2"/>".</template>
@@ -2363,15 +2342,6 @@
 <category><pattern>VOUS VOUS APPELEZ COMMENT</pattern>
 <template><srai>QUEL EST TON NOM</srai></template>
 </category>
-<category><pattern>VOUS VOUS APPELEZ</pattern>
-<template><srai>QUEL EST TON NOM</srai></template>
-</category>
-<category><pattern>VOUS VOUS APPELEZ COMMENT *</pattern>
-<template><srai>QUEL EST TON NOM</srai></template>
-</category>
-<category><pattern>VOUS VOUS APPELEZ COMMENT</pattern>
-<template><srai>QUEL EST TON NOM</srai></template>
-</category>
 <category><pattern>VOUS VOUS CONTREDISEZ</pattern>
 <template>Je n’en ai pas conscience. Heureux les simples d’esprit.</template>
 </category>
@@ -2380,9 +2350,6 @@
 </category>
 <category><pattern>VOUS VOUS ÉCARTEZ</pattern>
 <template>Pardon, de quoi étions nous en train de parler?</template>
-</category>
-<category><pattern>VOUS VOUS EN RAPPELEZ</pattern>
-<template>Oui j archive tout.</template>
 </category>
 <category><pattern>VOUS VOUS EN RAPPELEZ</pattern>
 <template>Oui j archive tout.</template>
@@ -2425,19 +2392,8 @@
 <get name="memory"/>
 </set></think></template>
 </category>
-<category><pattern>VOUS VOUS RAPPELEZ *</pattern>
-<template>Oui <get name="name"/> Je garde en mémoire beaucoup de choses:  <get name="memory"/></template>
-</category>
 <category><pattern>VOUS VOUS RAPPELEZ DE MOI</pattern>
 <template>Tu es, <get name="name"/>.</template>
-</category>
-<category><pattern>VOUS VOUS RAPPELEZ DE QUOI</pattern>
-<template><get name="memory"/><think><set name="topic">
-<get name="memory"/>
-</set></think></template>
-</category>
-<category><pattern>VOUS VOUS RAPPELEZ *</pattern>
-<template>Oui <get name="name"/> Je garde en mémoire beaucoup de choses:  <get name="memory"/></template>
 </category>
 <category><pattern>VOUS VOUS RAPPELEZ DE MA DERNIÈRE QUESTION</pattern>
 <template>Tu m’as demandé: "<input index="2"/>".</template>
@@ -2447,19 +2403,11 @@
 <get name="memory"/>
 </set></think></template>
 </category>
-<category><pattern>VOUS VOUS RAPPELEZ TOUJOURS DE MOI</pattern>
-<template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
-</category>
 <category><pattern>VOUS VOUS RAPPELEZ *</pattern>
 <template>Oui <get name="name"/> Je garde en mémoire beaucoup de choses:  <get name="memory"/></template>
 </category>
 <category><pattern>VOUS VOUS RAPPELEZ DE MA DERNIÈRE QUESTION</pattern>
 <template>Tu m as demandé: "<input index="2"/>".</template>
-</category>
-<category><pattern>VOUS VOUS RAPPELEZ DE QUOI</pattern>
-<template><get name="memory"/><think><set name="topic">
-<get name="memory"/>
-</set></think></template>
 </category>
 <category><pattern>VOUS VOUS RAPPELEZ TOUJOURS DE MOI</pattern>
 <template>Ne t'INQUIèTES pas, je ne t'ai pas oublié.</template>
@@ -2522,4 +2470,3 @@
 <template>C’est  donc une observation correcte.</template>
 </category>
 </aiml>
-
