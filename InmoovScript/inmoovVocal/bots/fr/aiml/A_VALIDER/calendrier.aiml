@@ -18,7 +18,7 @@
 <template>Nous sommes en <date format="%Y" jformat="YYYY"/></template>
 </category>
 <category><pattern>MOIS</pattern>
-<template>C EST le mois <date format="%B" jformat="MMMMMMMMM"/></template>
+<template>C'est le mois <date format="%B" jformat="MMMMMMMMM"/></template>
 </category>
 <category><pattern>DONNER L HEURE</pattern>
 <template>Il est exactement <date format="%I:%M %p" jformat="h:mm a"/></template>
@@ -124,8 +124,8 @@ jours avant noël.</template>
 <srai>JOUR</srai></template></category>
 <category><pattern>QUELLE JOUR SOMME NOUS INTERROGATION</pattern><template><srai>JOUR</srai></template></category>
 
-<category><pattern>* MINUTES</pattern><template>C EST long. </template></category>
-<category><pattern>* MINUTE</pattern><template>C EST vite passé! </template></category>
+<category><pattern>* MINUTES</pattern><template>C'est long. </template></category>
+<category><pattern>* MINUTE</pattern><template>C'est vite passé! </template></category>
 <category><pattern>* HEURES</pattern><template><srai>DONNER L HEURE</srai></template></category>
 <category><pattern>* HEURE</pattern><template><srai>DONNER L HEURE</srai></template></category>
 

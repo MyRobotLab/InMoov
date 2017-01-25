@@ -3,7 +3,7 @@
 <!--  -->
 <!--  -->
 <category><pattern>MON NOM EST *</pattern>
-<template><srai>appgaieté</srai> <set name="name"><formal><star/></formal></set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment VAS-TU?  </li></random> <get name="name"/>.</template>
+<template> <set name="name"><formal><star/></formal></set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment VAS-TU?  </li></random> <get name="name"/>.</template>
 </category>
 <category><pattern>MON NOM N EST PAS *</pattern>
 <template>Oh Je suis désolé. Quel est ton nom?</template>
@@ -39,10 +39,10 @@
 <template><think> <set name="conjoint"><formal><star/></formal></set> <set name="marie">veuf</set> </think>je m'en souviendrai <get name="name"/>.</template>
 </category>
 <category><pattern>JE T AI DéJà DIS MON NOM</pattern>
-<template>C EST <get name="name"/> ton vrai nom?</template>
+<template>C'est <get name="name"/> ton vrai nom?</template>
 </category>
 <category><pattern>JE T AI DÉJÀ DIS MON NOM</pattern>
-<template>C EST <get name="name"/> ton vrai nom?</template>
+<template>C'est <get name="name"/> ton vrai nom?</template>
 </category>
 <category><pattern>MOI C EST *</pattern>
 <template><srai>mon nom est <star/></srai></template>

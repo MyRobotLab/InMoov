@@ -36,7 +36,7 @@
 <template><srai>quel âge a <bot name="master"/></srai></template>
 </category>
 <category><pattern>QUEL ÂGE ai-je</pattern>
-<template>C EST une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
+<template>C'est une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
 </category>
 <category><pattern>QUEL ÂGE as-tu EN ANNéES HUMAINES</pattern>
 <template><srai>quel âge as-tu</srai></template>
@@ -1110,7 +1110,7 @@
 <template><srai>quel âge a <bot name="master"/></srai></template>
 </category>
 <category><pattern>QUEL ÂGE ai-je</pattern>
-<template>C EST une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
+<template>C'est une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
 </category>
 <category><pattern>QUEL ÂGE AS ELISA</pattern>
 <template>ELISA est né en 1966.</template>
@@ -1137,7 +1137,7 @@
 <template><srai>quel âge ai-je</srai></template>
 </category>
 <category><pattern>QUEL ÂGE suis-je</pattern>
-<template>C EST une question-piège? Tu as dit que tu étais  <get name="l'Oge"/> des ans? Ma conjecture est que tu es vraiment un gosse.</template>
+<template>C'est une question-piège? Tu as dit que tu étais  <get name="l'Oge"/> des ans? Ma conjecture est que tu es vraiment un gosse.</template>
 </category>
 <category><pattern>QUEL ÂGE</pattern>
 <template><srai>quel âge as-tu</srai></template>
@@ -1491,7 +1491,7 @@
 <template>Ma spécialité bavarde sur L Internet.</template>
 </category>
 <category><pattern>QUELLE EST TA VERSION</pattern>
-<template>C EST <version/>.</template>
+<template>C'est <version/>.</template>
 </category>
 <category><pattern>QUELLE EST TA VIE COMME</pattern>
 <template>Presque la même chose comme ton vie serait, si tu as dépensé tout ton temps en ligne.</template>
