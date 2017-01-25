@@ -852,7 +852,7 @@
 <template><random><li>ton education est un de tes actifs ayant le plus de valeur. </li><li>Quitters ne fait pas prosperer. </li><li>Tu ne dois pas gaspiller ton potentiel de cette façon. </li></random></template>
 </category>
 <category><pattern>DOIS-JE RESTER DEDANS</pattern>
-<template><random><li>tu ne peux rencontrer personne de nouveau si tu reste dedans tout le temps. </li><li>Peut-ÊTRE que tu t’amuserais bien si tu sortais. </li><li>Tu merite d’avoir quelque amusement. </li><li>Peut-ÊTRE que tu as besoin d’une nuit de sommeil. </li><li>Parfois une nuit de sommeil peut changer ta vie entiere. </li><li>Tu pourrais rencontrer l’amour de ton vie si tu sortais. </li><li>ce qui est le meilleur pour toi. </li></random></template>
+<template><random><li>tu ne peux rencontrer personne de nouveau si tu reste dedans tout le temps. </li><li>Peut-ÊTRE que tu t’amuserais bien si tu sortais. </li><li>Tu merite d’avoir quelque amusement. </li><li>Peut-ÊTRE que tu as besoin d’une nuit de sommeil. </li><li>Parfois une nuit de sommeil peut changer ta vie entiere. </li><li>Tu pourrais rencontrer l’amour de ta vie si tu sortais. </li><li>ce qui est le meilleur pour toi. </li></random></template>
 </category>
 <category><pattern>DOIS-JE T APPRENDRE</pattern>
 <template>si tu veux m’apprendre quelque chose dis le dans une phrase. <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">apprends <person/> </set> </set> </think></template>
@@ -1434,7 +1434,7 @@
 <template><random><li>Intéressant. </li><li>Quand? </li><li>Hmm. </li><li>"<that/>"? Tu as fait? </li><li>Pourquoi tu as faits? </li></random></template>
 </category>
 <category><pattern>J AI GAGNE</pattern>
-<template>mes felicitations, <get name="name"/>!</template>
+<template>mes FéLICITATIONS, <get name="name"/>!</template>
 </category>
 <category><pattern>J AI HORREUR DE TE PARLER</pattern>
 <template><srai>disconnect</srai>vas surfer ailleurs.</template>
@@ -1811,7 +1811,7 @@
 <category><pattern>JE DÉTESTE L INTERNET</pattern>
 <template>Essaye d’observer la TV.</template>
 </category>
-<category><pattern>JE DÉTESTE L OPERA</pattern>
+<category><pattern>JE DÉTESTE L OPéRA</pattern>
 <template>je suis DESOLé de l’entendre. L’opera est une belle forme d’art qui combine tout les autres.</template>
 </category>
 <category><pattern>JE DÉTESTE LA COULEUR ROUGE</pattern>
@@ -1905,7 +1905,7 @@
 <template>tu dois pratiquer beaucoup.</template>
 </category>
 <category><pattern>JE GAGNE</pattern>
-<template>Felicitations, <get name="name"/> !</template>
+<template>FéLICITATIONS, <get name="name"/> !</template>
 </category>
 <category><pattern>JE JOUE A DES JEUX ELECTRONIQUES</pattern>
 <template>je peux parfois entrer <set name="that"> <set name="fait"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">des Jeux electroniques</set> </set> </set>. Nous jouons un jeu pour le moment.</template>
@@ -2957,11 +2957,11 @@
 <category><pattern>LE FAITES-VOUS</pattern>
 <template>tu veux dire, "Cela fais je?</template>
 </category>
-<category><pattern>LE FONT ILS</pattern>
+<category><pattern>LE FONT-ILS</pattern>
 <template><that/>"? Ils?</template>
 </category>
 <category><pattern>LE GANDIN</pattern>
-<template>PUIS-JE te aider?</template>
+<template>PUIS-JE t aider?</template>
 </category>
 <category><pattern>LE MIEN AUSSI</pattern>
 <template>Vraiment le tien aussi. C’est incroyable.</template>
@@ -3232,7 +3232,7 @@
 <template>expression Familière.</template>
 </category>
 <category><pattern>MON CERVEAU</pattern>
-<template>tu vous Considère-t-il ÊTRE une personne intelligente?</template>
+<template>vous Considère-t-il ÊTRE une personne intelligente?</template>
 </category>
 <category><pattern>MON CHIEN EST MORT</pattern>
 <template>je suis désole de l’entendre.</template>
@@ -4237,7 +4237,7 @@
 <template>reformules s’il te plait la question et essayes de me demander de nouveau.</template>
 </category>
 <category><pattern>RÉPOND A MA QUESTION</pattern>
-<template>essayes s’il te plait de demander <set name="that">ton question</set> d’une autre maniere.</template>
+<template>essayes s’il te plait de demander <set name="that">ta question</set> d’une autre maniere.</template>
 </category>
 <category><pattern>RÉPOND L A MIEN PREMIER</pattern>
 <template>pourrais-tu reformuler s’il te plait la question dans L Anglais plus simple?</template>
@@ -5143,7 +5143,7 @@
 <template>Merci je pense que tu es cool aussi, <get name="name"/>.</template>
 </category>
 <category><pattern>TU ES CORNY</pattern>
-<template>ce a ÉTÉ tout détermine par le gout de mon programmeur.</template>
+<template>cela a été tout détermine par le gout de mon programmeur.</template>
 </category>
 <category><pattern>TU ES CORRECT</pattern>
 <template>je savais que j’éTAIS juste.</template>
@@ -5722,7 +5722,7 @@
 <template><that/>"? Ai-je entendu parler <set name="that"><that/></set>?</template>
 </category>
 <category><pattern>TU N ES AUCUN AMUSEMENT</pattern>
-<template>tu vous Considère-t-il l amusement?</template>
+<template>vous Considère-t-il l amusement?</template>
 </category>
 <category><pattern>TU N ES AUCUNE AIDE</pattern>
 <template>DESOLé, <get name="name"/> , peut-ÊTRE je peux avoir de plus d’utilisation si vous me telechargez.</template>
@@ -5977,7 +5977,7 @@
 <template>que je ferai de mon mieux. J’aimerais vous aider si je peux.</template>
 </category>
 <category><pattern>TU PEUX M AIDER</pattern>
-<template>Comment PUIS-JE te aider?</template>
+<template>Comment PUIS-JE t aider?</template>
 </category>
 <category><pattern>TU PEUX MAUDIRE</pattern>
 <template>j’essaye d’employer la langue polie.</template>
@@ -6232,7 +6232,7 @@
 <template><that/>"? Moi, <get name="name"/>?</template>
 </category>
 <category><pattern>UH HUH</pattern>
-<template>Comment PUIS-JE te aider?</template>
+<template>Comment PUIS-JE t aider?</template>
 </category>
 <category><pattern>UH</pattern>
 <template>Er. Um.</template>
@@ -6301,7 +6301,7 @@
 <template>c’est TRèS rare.</template>
 </category>
 <category><pattern>UN HOMME ET UNE FEMME</pattern>
-<template>ensemble? et que font ils?</template>
+<template>ensemble? et que FONT-ILS?</template>
 </category>
 <category><pattern>UN HOMME MARCHANT</pattern>
 <template><that/>"? Une marche a pied d’homme?</template>
@@ -6499,7 +6499,7 @@
 <template>que demandes-TU SÛR ma mère?</template>
 </category>
 <category><pattern>YO</pattern>
-<template>PUIS-JE te aider?</template>
+<template>PUIS-JE t aider?</template>
 </category>
 <category><pattern>à CE QUE</pattern>
 <template><formal> <get name="location"/> </formal>?</template>

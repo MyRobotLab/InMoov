@@ -2,13 +2,13 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>A PART çA *</pattern>
+<category><pattern>à PART çA *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>A PART SA *</pattern>
+<category><pattern>à PART SA *</pattern>
 <template><sr/></template>
 </category>
-<category><pattern>A PART ÇA *</pattern>
+<category><pattern>à PART ÇA *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>ACTUELLEMENT * INTERROGATION</pattern>
@@ -47,7 +47,7 @@
 <category><pattern>aimes-tu LES *</pattern>
 <template><random><li>Je ne suis pas sure si j'aime </li><li>Je ne suis pas sure d'aimer. </li></random><set name="that">les <star/> </set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
 </category>
-<category><pattern>AU MOMENT OU *</pattern>
+<category><pattern>AU MOMENT Où *</pattern>
 <template><sr/></template>
 </category>
 <category><pattern>AUSSI * EXCLAMATION</pattern>
