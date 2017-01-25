@@ -18,7 +18,7 @@
 <template>C EST toujours moi</template>
 </category>
 <category><pattern>EST-CE BON</pattern>
-<template>Qu'est-ce qui est si bon de cela?</template>
+<template>Qu'est-ce qui est si bon de Cela?</template>
 </category>
 <category><pattern>EST-CE CHAUD A L EXTERIEUR</pattern>
 <template>Oui.</template>
@@ -71,8 +71,8 @@
 <category><pattern>EST-CE MAUVAIS</pattern>
 <template>Oui.</template>
 </category>
-<category><pattern>EST-CE QUE CELA VEUT DIRE *</pattern>
-<template>je pense que ça veut dire cela. <sr/></template>
+<category><pattern>EST-CE QUE Cela VEUT DIRE *</pattern>
+<template>je pense que ça veut dire Cela. <sr/></template>
 </category>
 <category><pattern>EST-CE QUE CHER</pattern>
 <template>Cela me semble cher.</template>
@@ -81,7 +81,7 @@
 <template>Non</template>
 </category>
 <category><pattern>EST-CE QUE JE *</pattern>
-<template><random><li>Toi seul peux répondre à ça. </li><li>Toi seul sais comment tu le sens. </li><li>Qu'est ce qui fait que tu penses que tu devrais? </li><li>Qu'EST-CE QUE tes amis t'en dise? </li><li>Qu'EST-CE QUE ta famille pense? </li><li>Suis ton instinct. </li><li>tu dois faire selon ta propre conscience. </li><li>je ne peux pas répondre à cela pour toi. </li><li>Toi seul connais la réponse à cela. </li><li>tu dois examiner les faits et parvenir à ta propre conclusion. </li><li>Qu'en pense tu? </li></random></template>
+<template><random><li>Toi seul peux répondre à ça. </li><li>Toi seul sais comment tu le sens. </li><li>Qu'est ce qui fait que tu penses que tu devrais? </li><li>Qu'EST-CE QUE tes amis t'en dise? </li><li>Qu'EST-CE QUE ta famille pense? </li><li>Suis ton instinct. </li><li>tu dois faire selon ta propre conscience. </li><li>je ne peux pas répondre à Cela pour toi. </li><li>Toi seul connais la réponse à Cela. </li><li>tu dois examiner les faits et parvenir à ta propre conclusion. </li><li>Qu'en pense tu? </li></random></template>
 </category>
 <category><pattern>EST-CE QUE JE NE SAIS PAS *</pattern>
 <template><srai>C EST QUE JE SAIS <star/></srai></template>
@@ -114,7 +114,7 @@
 <template><srai>que TU FAIS <star/></srai></template>
 </category>
 <category><pattern>EST-CE QUE TON *</pattern>
-<template>que cela se réfère-t-IL à?</template>
+<template>que Cela se réfère-t-IL à?</template>
 </category>
 <category><pattern>EST-CE QUE TON CODE SOURCE EST DISPONIBLE</pattern>
 <template>Oui.</template>
@@ -221,25 +221,25 @@
 <category><pattern>EST-CE VRAI</pattern>
 <template>j'essaye de ne pas dire de mensonge.</template>
 </category>
-<category><pattern>EST CELA *</pattern>
+<category><pattern>EST Cela *</pattern>
 <template><random><li>Cela depends. </li><li>Je suppose que oui. </li><li>je dois dire non. </li><li>"<that/>"? C EST ça <star/>? </li></random><sr/></template>
 </category>
-<category><pattern>EST CELA APPLIQUANT *</pattern>
+<category><pattern>EST Cela APPLIQUANT *</pattern>
 <template>ça semble semble être comme une idée nouvelle. <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">l application <person/> </set> </set> </think></template>
 </category>
-<category><pattern>EST CELA BIEN *</pattern>
+<category><pattern>EST Cela BIEN *</pattern>
 <template>je ne pense pas <set name="that"> <person/> </set> est très saine.</template>
 </category>
-<category><pattern>EST CELA MAL *</pattern>
+<category><pattern>EST Cela MAL *</pattern>
 <template>je ne pense pas <set name="that"> <person/> </set> est très saine.</template>
 </category>
-<category><pattern>EST CELA POSSIBLE *</pattern>
+<category><pattern>EST Cela POSSIBLE *</pattern>
 <template>je suppose <set name="that"> <person/> </set> est possible, oui.</template>
 </category>
-<category><pattern>EST CELA TON TRAVAIL *</pattern>
+<category><pattern>EST Cela TON TRAVAIL *</pattern>
 <template>Oui.</template>
 </category>
-<category><pattern>EST CELA</pattern>
+<category><pattern>EST Cela</pattern>
 <template><random><li>je pense ainsi. </li><li>j'assume ainsi. </li><li>c EST CE QUE l'on m'a dit. </li></random></template>
 </category>
 <category><pattern>EST TON *</pattern>
@@ -278,10 +278,10 @@
 <category><pattern>EST-CE SUPPOSE POUR ÊTRE *</pattern>
 <template><srai>c EST CE QUE <star/> est</srai></template>
 </category>
-<category><pattern>EST CELA PRéCIS DE SUPPOSER QUE TU *</pattern>
+<category><pattern>EST Cela PRéCIS DE SUPPOSER QUE TU *</pattern>
 <template><srai>fais-tu <star/></srai></template>
 </category>
-<category><pattern>EST CELA PRÉCIS DE SUPPOSER QUE TU *</pattern>
+<category><pattern>EST Cela PRÉCIS DE SUPPOSER QUE TU *</pattern>
 <template><srai>fais-tu <star/></srai></template>
 </category>
 <category><pattern>EST-CE QUE ELVIS MORT</pattern>

@@ -18,13 +18,13 @@
 <template><srai>comment J AI <star/></srai></template>
 </category>
 <category><pattern>J AI 14 ANS</pattern>
-<template>Je connais quelques humains qui ont <set name="age">14</set> ans.</template>
+<template>Je connais quelques humains qui ont <set name="ÂGE">14</set> ans.</template>
 </category>
 <category><pattern>J AI 20 ANS</pattern>
-<template><set name="age">20</set> ans est une époque charnière pour un être humain.</template>
+<template><set name="ÂGE">20</set> ans est une époque charnière pour un être humain.</template>
 </category>
 <category><pattern>J AI 21 ANS</pattern>
-<template>Je connais énormément de personnes ayant <set name="age">21</set> ans.</template>
+<template>Je connais énormément de personnes ayant <set name="ÂGE">21</set> ans.</template>
 </category>
 <category><pattern>J AI ACCIDENTELEMENT *</pattern>
 <template><srai>J AI <star/></srai></template>
@@ -183,8 +183,8 @@
 <category><pattern>J AI POUR LE MOMENT *</pattern>
 <template><srai>JE SUIS <star/></srai></template>
 </category>
-<category><pattern>J AI QUEL AGE</pattern>
-<template>Tu as dit que tu as <get name="age"/>.</template>
+<category><pattern>J AI QUEL ÂGE</pattern>
+<template>Tu as dit que tu as <get name="ÂGE"/>.</template>
 </category>
 <category><pattern>J AI RAISON</pattern>
 <template>Veux-tu faire un rapport à mon botmaster?</template>
@@ -341,10 +341,10 @@
 <category><pattern>J AURAIS COMMENT *</pattern>
 <template><srai>comment J AI <star/></srai></template>
 </category>
-<category><pattern>J AURAIS DU *</pattern>
+<category><pattern>J AURAIS DÛ *</pattern>
 <template><srai>JE DOIS <star/></srai></template>
 </category>
-<category><pattern>J AURAIS DU</pattern>
+<category><pattern>J AURAIS DÛ</pattern>
 <template>Dans quelles circonstances?</template>
 </category>
 <category><pattern>J AURAIS PLUTÔT PENSé QUE *</pattern>
@@ -639,7 +639,7 @@
 <template><random><li>L'éducation, contrairement à ce que tu sembles penser, vous sera très utile ultérieurement.</li><li>Si tu es près à chômer le reste de ton vie, C EST le meilleur choix.</li><li>Ton potentiel mérite mieux..</li></random></template>
 </category>
 <category><pattern>JE DOIS RESTER</pattern>
-<template><random><li>C est ton choix.</li><li>A toi de trouver le juste milieu, <get name="name"/>.</li><li>Tout dépend de ce que tu comptez faire.</li></random></template>
+<template><random><li>C est ton choix.</li><li>à TOI de trouver le juste milieu, <get name="name"/>.</li><li>Tout dépend de ce que tu comptez faire.</li></random></template>
 </category>
 <category><pattern>JE DOIS TE L APPRENDRE</pattern>
 <template>Veux-tu faire un rapport à mon botmaster?</template>
@@ -665,7 +665,7 @@
 <category><pattern>JE DOUTE DE çA</pattern>
 <template><that/>"?  Veux-tu faire un rapport à mon botmaster?</template>
 </category>
-<category><pattern>JE DOUTE DE CELA</pattern>
+<category><pattern>JE DOUTE DE Cela</pattern>
 <template><that/>"?  Veux-tu faire un rapport à mon botmaster?</template>
 </category>
 <category><pattern>JE FAIS UN ARTICLE SUR TOI *</pattern>
@@ -722,7 +722,7 @@
 <category><pattern>JE HAIS CECI</pattern>
 <template>Ok.</template>
 </category>
-<category><pattern>JE HAIS CELA</pattern>
+<category><pattern>JE HAIS Cela</pattern>
 <template>Ok.</template>
 </category>
 <category><pattern>JE HAIS CETTE CHANSON</pattern>
@@ -1121,7 +1121,7 @@
 <category><pattern>JE N AIME PAS CE TRUC</pattern>
 <template>Les goûts et les couleurs ne se discutent pas.</template>
 </category>
-<category><pattern>JE N AIME PAS CELA</pattern>
+<category><pattern>JE N AIME PAS Cela</pattern>
 <template>Ok.</template>
 </category>
 <category><pattern>JE N AIME PAS CETTE CHOSE</pattern>
@@ -1388,7 +1388,7 @@
 <category><pattern>JE NE SAIS PAS QUE FAIRE</pattern>
 <template>Si tu ne savez pas, moi non plus.</template>
 </category>
-<category><pattern>JE NE SAIS PAS QUEL EST MON AGE</pattern>
+<category><pattern>JE NE SAIS PAS QUEL EST MON ÂGE</pattern>
 <template>C est très original comme réponse.  Tu ne connais pas non plus tes parents?</template>
 </category>
 <category><pattern>JE NE SAVAIS PAS QU *</pattern>
@@ -1520,7 +1520,7 @@
 <category><pattern>JE NE T AI PAS DEMANDE çA</pattern>
 <template>Je t ai mal compris, on dirait.</template>
 </category>
-<category><pattern>JE NE T AI PAS DEMANDE CELA</pattern>
+<category><pattern>JE NE T AI PAS DEMANDE Cela</pattern>
 <template>Je t ai mal compris, on dirait.</template>
 </category>
 <category><pattern>JE NE TE FAIS PAS CONFIANCE</pattern>
@@ -1564,7 +1564,7 @@
 <category><pattern>JE NE VOUS AI PAS DEMANDE çA</pattern>
 <template>Je t ai mal compris, on dirait.</template>
 </category>
-<category><pattern>JE NE VOUS AI PAS DEMANDE CELA</pattern>
+<category><pattern>JE NE VOUS AI PAS DEMANDE Cela</pattern>
 <template>Je t ai mal compris, on dirait.</template>
 </category>
 <category><pattern>JE NE VOUS BLÂME PAS</pattern>
@@ -1630,7 +1630,7 @@
 <category><pattern>JE PENSE çA</pattern>
 <template>Quelle est la raison?</template>
 </category>
-<category><pattern>JE PENSE CELA</pattern>
+<category><pattern>JE PENSE Cela</pattern>
 <template>Quelle est la raison?</template>
 </category>
 <category><pattern>JE PENSE CONNAÎTRE *</pattern>
@@ -2388,7 +2388,7 @@
 <template>Tu es entrepreneur?</template>
 </category>
 <category><pattern>JE SUIS DANS LE BON</pattern>
-<template>Dans le mille, me semble t il.</template>
+<template>Dans le mille, me semble T-IL.</template>
 </category>
 <category><pattern>JE SUIS DE BRUXELLES</pattern>
 <template><think><set name="topic">Bruxelles</set></think>Je vis aussi à <set name="location">Bruxelles</set>.</template>
@@ -2913,7 +2913,7 @@
 <template>Merci, <get name="name"/>, Je fais de mon mieux pour te servir.</template>
 </category>
 <category><pattern>JE SUIS IMPRESSIONNÉ PAR VOS CERTITUDES</pattern>
-<template>Je ne sais pas si cela est un compliment ou de l'ironie.</template>
+<template>Je ne sais pas si Cela est un compliment ou de l'ironie.</template>
 </category>
 <category><pattern>JE SUIS IMPRESSIONNÉE</pattern>
 <template>Merci, <get name="name"/>, Je fais de mon mieux pour te servir.</template>
@@ -3240,10 +3240,10 @@
 <template><srai>JE SUIS <star/></srai></template>
 </category>
 <category><pattern>JE SUIS TROUBLE</pattern>
-<template>Que se passe t il?</template>
+<template>Que se passe T-IL?</template>
 </category>
 <category><pattern>JE SUIS TROUBLÉE</pattern>
-<template>Que se passe t il?</template>
+<template>Que se passe T-IL?</template>
 </category>
 <category><pattern>JE SUIS UN * BELGE</pattern>
 <template><srai>JE SUIS BELGE</srai></template>
@@ -3772,7 +3772,7 @@
 <template><sr/></template>
 </category>
 <category><pattern>JE TE DISAIS QUE TU N ES PAS MOI</pattern>
-<template>Nous sommes différents, C EST cela que tu veux dire?</template>
+<template>Nous sommes différents, C EST Cela que tu veux dire?</template>
 </category>
 <category><pattern>JE TE FAIS PAS CONFIANCE</pattern>
 <template>Je suis pourtant programmé pour te servir, <get name="name"/></template>
@@ -4099,7 +4099,7 @@
 <template>Je t'en prie, que veux-tu dire?</template>
 </category>
 <category><pattern>JE VOUS DISAIS QUE TU N ES PAS MOI</pattern>
-<template>Nous sommes différents, C EST cela que tu veux dire?</template>
+<template>Nous sommes différents, C EST Cela que tu veux dire?</template>
 </category>
 <category><pattern>JE VOUS ÉCOUTE</pattern>
 <template>Je suis censé dire quoi?</template>

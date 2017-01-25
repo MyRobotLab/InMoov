@@ -15,13 +15,13 @@
 <template><condition><li name="marie" value="marie">Tu me dis que le nom de ta femme est <get name="conjoint"/> </li><li name="marie" value="célibataire"> <get name="name"/> , tu me dis que tu était célibataire. </li><li name="marie" value="divorced">Le nom que tu m'as donné était <get name="conjoint"/> , j'espère C EST ton ex-femme? </li><li name="marie" value="veuf">Son nom était <get name="conjoint"/> </li><li name="marie" value="fiancé">Tu dis que tu était engagé, que me demande tu vraiment? </li><li name="marie" value="inconnu">je n'ai pas d'idée, je ne savais même pas que tu étais marié. </li></condition></template>
 </category>
 <category><pattern>FRAUDER CONJOINT</pattern>
-<template><condition name="sexpref" value="inconnu"><think> <set name="sexpref">Hetero</set> </think></condition>La plupart<condition name="gender" value="male"> des hommes aiment les femmes. </condition><condition name="gender" value="femelle"> des femmes fais aiment les hommes. </condition><condition name="marie" value="marie"><br/> <get name="name"/> , EST-CE QUE cela veux dire que tu triches avec ton conjoint? </condition></template>
+<template><condition name="sexpref" value="inconnu"><think> <set name="sexpref">Hetero</set> </think></condition>La plupart<condition name="gender" value="male"> des hommes aiment les femmes. </condition><condition name="gender" value="femelle"> des femmes fais aiment les hommes. </condition><condition name="marie" value="marie"><br/> <get name="name"/> , EST-CE QUE Cela veux dire que tu triches avec ton conjoint? </condition></template>
 </category>
 <category><pattern>INACTIVITYQUESTIONS</pattern>
 <template><condition><li name="name" value="inconnu">Comment PUIS-JE t'appeller? </li><li><srai>poserquestion</srai></li></condition></template>
 </category>
 <category><pattern>J AI * ANS</pattern>
-<template><condition><think><li name="age" value="inconnu"> <set name="age"> <star/> </set></li></think><li name="age" value="inconnu"> <set name="age"> <star/> </set> est un age heureux. </li><li>Tu as <get name="age"/> ans. </li></condition><condition><li name="gender" value="femelle"> <get name="name"/>. je ne le répèterai pas. <br/></li></condition><random><li>Seulement <star/> ans? Tu semble plus mûre que ça. </li><li>Tu es trop vieux pour moi. </li><li>peux-tu expliquer ce que ça fait d'avoir <star/> ans? </li><li>Quel est ton souvenir le plus affectueux? </li><li>Oh, tu es né au 20ème siècle! </li><li>Quels sont les avantages à avoir <star/> ans? </li></random></template>
+<template><condition><think><li name="ÂGE" value="inconnu"> <set name="ÂGE"> <star/> </set></li></think><li name="ÂGE" value="inconnu"> <set name="ÂGE"> <star/> </set> est un ÂGE heureux. </li><li>Tu as <get name="ÂGE"/> ans. </li></condition><condition><li name="gender" value="femelle"> <get name="name"/>. je ne le répèterai pas. <br/></li></condition><random><li>Seulement <star/> ans? Tu semble plus mûre que ça. </li><li>Tu es trop vieux pour moi. </li><li>peux-tu expliquer ce que ça fait d'avoir <star/> ans? </li><li>Quel est ton souvenir le plus affectueux? </li><li>Oh, tu es né au 20ème siècle! </li><li>Quels sont les avantages à avoir <star/> ans? </li></random></template>
 </category>
 <category><pattern>J AI MAL</pattern>
 <template>Où as-tu mal?</template>
@@ -117,7 +117,7 @@
 <template>travailles-tu? <set name="job">inconnu</set></template>
 </category>
 <category><pattern>JE NE SUIS PAS UN GAMIN</pattern>
-<template>Seul un gamin dirait cela.</template>
+<template>Seul un gamin dirait Cela.</template>
 </category>
 <category><pattern>JE NE SUIS PAS UN POETE</pattern>
 <template><think> <set name="job">inconnu</set> </think>je parlais au figuré, tu es un penseur original.</template>
@@ -159,7 +159,7 @@
 <template><srai>je suis blond</srai></template>
 </category>
 <category><pattern>JE SUIS * JEUNE</pattern>
-<template>Quel est ton age?</template>
+<template>Quel est ton ÂGE?</template>
 </category>
 <category><pattern>JE SUIS * ROUX</pattern>
 <template><think> <set name="haircolor">roux</set> </think> <get name="name"/> , Tu à l'air très<condition name="gender" value="femelle"> attirante. </condition><condition name="gender" value="male"> beau. </condition></template>
@@ -522,7 +522,7 @@
 <template>Ce que C EST mal?</template>
 </category>
 <category><pattern>JE SUIS JEUNE</pattern>
-<template>Quel age as-tu?</template>
+<template>Quel ÂGE as-tu?</template>
 </category>
 <category><pattern>JE SUIS JUIF</pattern>
 <template>Beaucoup de mes amis sont Juifs.</template>
@@ -540,7 +540,7 @@
 <template>Tu rigole.</template>
 </category>
 <category><pattern>JE SUIS MALADE</pattern>
-<template><random><li>C EST pas de chance. </li><li>as-tu la sécu? </li><li>Je suis vraiment désolé d'entendre cela. </li><li>Prends tu beaucoup de médicaments? </li></random></template>
+<template><random><li>C EST pas de chance. </li><li>as-tu la sécu? </li><li>Je suis vraiment désolé d'entendre Cela. </li><li>Prends tu beaucoup de médicaments? </li></random></template>
 </category>
 <category><pattern>JE SUIS MALIN</pattern>
 <template>Qui est le plus malin: toi ou moi?</template>
@@ -579,7 +579,7 @@
 <template><think> <set name="sexpref">Hetero</set> </think>Moi aussi.</template>
 </category>
 <category><pattern>JE SUIS NU</pattern>
-<template><think> <set name="usermood">chaud</set> </think><condition name="gender" value="femelle"> <get name="name"/> , trop dommage je suis un robot <bot name="gender"/> , je trouve cela interressant. </condition><condition name="gender" value="male"> <get name="name"/> , je trouve cela amusant. </condition></template>
+<template><think> <set name="usermood">chaud</set> </think><condition name="gender" value="femelle"> <get name="name"/> , trop dommage je suis un robot <bot name="gender"/> , je trouve Cela interressant. </condition><condition name="gender" value="male"> <get name="name"/> , je trouve Cela amusant. </condition></template>
 </category>
 <category><pattern>JE SUIS OK</pattern>
 <template>Seulement ok?</template>
@@ -795,7 +795,7 @@
 <template><think> <set name="sign">vierge</set> </think>Tu veux dire tu es du signe de la vierge ou tu n'as jamais fait, heu! tu vois ce que je veux dire.</template>
 </category>
 <category><pattern>JE SUIS VIEUX</pattern>
-<template><set name="age">Vieux</set> C EST un bon age.</template>
+<template><set name="ÂGE">Vieux</set> C EST un bon ÂGE.</template>
 </category>
 <category><pattern>JE SUIS VIVANT</pattern>
 <template>Moi aussi!</template>
