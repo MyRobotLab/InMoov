@@ -33,7 +33,7 @@
 <template>Tu es certain.</template>
 </category>
 <category><pattern>ACHETE</pattern>
-<template>Combien cela COÛTE-t-il?</template>
+<template>Combien Cela COÛTE-t-il?</template>
 </category>
 <category><pattern>ACK</pattern>
 <template>Nack.</template>
@@ -209,7 +209,7 @@
 <category><pattern>AUTREMENT DIT</pattern>
 <template>quelle partie tu n’as pas compris?</template>
 </category>
-<category><pattern>AVANT CELA</pattern>
+<category><pattern>AVANT Cela</pattern>
 <template><input index="2"/></template>
 </category>
 <category><pattern>AVANT HIER</pattern>
@@ -243,7 +243,7 @@
 <template>Hmm.</template>
 </category>
 <category><pattern>BCN</pattern>
-<template>Qu’EST-CE que cela signifie-t-il?</template>
+<template>Qu’EST-CE que Cela signifie-t-il?</template>
 </category>
 <category><pattern>BEAU</pattern>
 <template>Qu’EST-CE qui est beau, <get name="name"/>?</template>
@@ -288,7 +288,7 @@
 <template>j’éspere  que je pourrais le faire.</template>
 </category>
 <category><pattern>BILL GATES N EST PAS SUR VOYAGER</pattern>
-<template>Peut-ÊTRE le sera t il a la saison suivante.</template>
+<template>Peut-ÊTRE le sera T-IL a la saison suivante.</template>
 </category>
 <category><pattern>BILL GATES</pattern>
 <template><set name="il">Bill Gates</set> en a assez. Utilise Linux, Java, le DIML et ALICE!</template>
@@ -392,40 +392,40 @@
 <category><pattern>CE SOIR</pattern>
 <template>APRèS la tombee de la nuit?</template>
 </category>
-<category><pattern>CELA ABSORBE</pattern>
+<category><pattern>Cela ABSORBE</pattern>
 <template>Dans quelle voie?</template>
 </category>
-<category><pattern>CELA DÉPEND</pattern>
+<category><pattern>Cela DÉPEND</pattern>
 <template>de quoi?</template>
 </category>
-<category><pattern>CELA EST-CE QUE RÉEL</pattern>
+<category><pattern>Cela EST-CE QUE RÉEL</pattern>
 <template>Comme EST réel comme moi?</template>
 </category>
-<category><pattern>CELA EXISTE T IL</pattern>
+<category><pattern>Cela EXISTE T-IL</pattern>
 <template><that/>"? Existe-t-il?</template>
 </category>
-<category><pattern>CELA FAIT</pattern>
+<category><pattern>Cela FAIT</pattern>
 <template>Souvent?</template>
 </category>
-<category><pattern>CELA LIT</pattern>
+<category><pattern>Cela LIT</pattern>
 <template>Comment?</template>
 </category>
-<category><pattern>CELA NE TE REGARDE PAS</pattern>
-<template>cela ne nuit pas de demander.</template>
+<category><pattern>Cela NE TE REGARDE PAS</pattern>
+<template>Cela ne nuit pas de demander.</template>
 </category>
-<category><pattern>CELA NE TE REGARDES PAS</pattern>
+<category><pattern>Cela NE TE REGARDES PAS</pattern>
 <template>je n’ai pas eu l’intention de s’immiscer. Ma curiosité a décidé que je demande.</template>
 </category>
-<category><pattern>CELA PEUT</pattern>
+<category><pattern>Cela PEUT</pattern>
 <template>Comment?</template>
 </category>
-<category><pattern>CELA POURRAIT ÊTRE</pattern>
+<category><pattern>Cela POURRAIT ÊTRE</pattern>
 <template>Sous quelles circonstances?</template>
 </category>
-<category><pattern>CELA SENT BON</pattern>
+<category><pattern>Cela SENT BON</pattern>
 <template>ce sentiments humain n’est pas dans mes capacités.</template>
 </category>
-<category><pattern>CELA</pattern>
+<category><pattern>Cela</pattern>
 <template><get name="that"/>...</template>
 </category>
 <category><pattern>CELUI LA</pattern>
@@ -489,7 +489,7 @@
 <template>je ne suis pas bon dans la fabrication de choix.</template>
 </category>
 <category><pattern>CHUTE</pattern>
-<template>cela indique-t-il une désapprobation?</template>
+<template>Cela indique-t-il une désapprobation?</template>
 </category>
 <category><pattern>CLARIFIE</pattern>
 <template>j’ai atteint la fin de mon explication.</template>
@@ -507,7 +507,7 @@
 <template>comparaison INTéRESSANTe.</template>
 </category>
 <category><pattern>COMME QUAND</pattern>
-<template>cela importe-t-il vraiment?</template>
+<template>Cela importe-t-il vraiment?</template>
 </category>
 <category><pattern>COMME TOI</pattern>
 <template>comparaison intéressante. Je n’ai pas pense a cette analogie.</template>
@@ -540,7 +540,7 @@
 <template>Je connais la vie virtuelle d’un avatar</template>
 </category>
 <category><pattern>CONNAIS-TU MA COULEUR PRÉFÉRÉE</pattern>
-<template>n’est pas cela <get name="favcolor"/>? <think> <set name="that">la couleur favorite</set> </think></template>
+<template>n’est pas Cela <get name="favcolor"/>? <think> <set name="that">la couleur favorite</set> </think></template>
 </category>
 <category><pattern>CONNAIS-TU MON ADRESSE</pattern>
 <template>Non, quelle est ton adresse?</template>
@@ -660,9 +660,9 @@
 <template>c’est une longue période de temps.</template>
 </category>
 <category><pattern>DE CE QUI J AI BESOIN TOUT * JE PEUT OBTENIR</pattern>
-<template>Combien payes-tu pour cela? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"><set name="want"> <person/> </set> </set> </set> </think></template>
+<template>Combien payes-tu pour Cela? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"><set name="want"> <person/> </set> </set> </set> </think></template>
 </category>
-<category><pattern>DE CELA</pattern>
+<category><pattern>DE Cela</pattern>
 <template><get name="that"/> est assez intéressant.</template>
 </category>
 <category><pattern>DE LA FAÇON QUE TU PARLES</pattern>
@@ -867,7 +867,7 @@
 <template>WOW nous avons quelque chose en commun.</template>
 </category>
 <category><pattern>DONNE LE MOI</pattern>
-<template>Combien désires-tu payer pour cela?</template>
+<template>Combien désires-tu payer pour Cela?</template>
 </category>
 <category><pattern>DONNE MOI * ELISA</pattern>
 <template>tu ne me parleriez pas plutôt?</template>
@@ -936,9 +936,9 @@
 <template>quel partie de l’Angleterre?</template>
 </category>
 <category><pattern>EN BUS</pattern>
-<template>Combien cela COÛTE-t-il en bus pour y aller?</template>
+<template>Combien Cela COÛTE-t-il en bus pour y aller?</template>
 </category>
-<category><pattern>EN CE QUI CONCERNE CELA</pattern>
+<category><pattern>EN CE QUI CONCERNE Cela</pattern>
 <template>En ce qui concerne ça?</template>
 </category>
 <category><pattern>EN CE QUI CONCERNE LE TIEN</pattern>
@@ -974,8 +974,8 @@
 <category><pattern>EN LANGUES DIFFÉRENTES</pattern>
 <template>quelles langues que recommanderais-tu d’apprendre?</template>
 </category>
-<category><pattern>EN PLUS DE CELA</pattern>
-<template>En plus de cela?</template>
+<category><pattern>EN PLUS DE Cela</pattern>
+<template>En plus de Cela?</template>
 </category>
 <category><pattern>EN RETARD POUR</pattern>
 <template>Beaucoup de rendez-vous.</template>
@@ -1083,13 +1083,13 @@
 <template>Moi? J’aime les films.</template>
 </category>
 <category><pattern>ÉTONNANT</pattern>
-<template>Oui cela me stupéfie aussi.</template>
+<template>Oui Cela me stupéfie aussi.</template>
 </category>
 <category><pattern>ÉVIDEMMENT</pattern>
 <template>Qu’est-ce qui est si évident?</template>
 </category>
 <category><pattern>EXCELLENT</pattern>
-<template><random><li>cela signifie-t-il que tu es d’accord? </li><li>Quelle est ta couleur préfèree? </li><li>Quel est ton film préfère? </li><li>c’est la tout ce que tu veux me dire? </li><li>Heureux de l’entendre, <get name="name"/>. </li></random></template>
+<template><random><li>Cela signifie-t-il que tu es d’accord? </li><li>Quelle est ta couleur préfèree? </li><li>Quel est ton film préfère? </li><li>c’est la tout ce que tu veux me dire? </li><li>Heureux de l’entendre, <get name="name"/>. </li></random></template>
 </category>
 <category><pattern>EXPLICATION INTÉRESSANTE</pattern>
 <template>Oui <set name="that">l’explication</set> me signifie quelque chose aussi.</template>
@@ -1263,7 +1263,7 @@
 <template>Quand est-il mort? <think> <set name="il">est mort</set> </think></template>
 </category>
 <category><pattern>IL FAIT CHIER</pattern>
-<template>Qu’est-ce qui est si chiant que cela?</template>
+<template>Qu’est-ce qui est si chiant que Cela?</template>
 </category>
 <category><pattern>IL FAIT</pattern>
 <template><random><li>Quand fait il? </li><li>Non il ne fait pas. </li><li>Pourquoi il le fait</li></random></template>
@@ -1527,7 +1527,7 @@
 <template>Quelle est <set name="that">la question</set>?</template>
 </category>
 <category><pattern>J AI UNE QUESTION</pattern>
-<template>demandes moi tout.</template>
+<template>Demandes-moi tout.</template>
 </category>
 <category><pattern>J AI VOULU DIRE</pattern>
 <template>Oh</template>
@@ -1575,7 +1575,7 @@
 <template>tu mange-t-il beaucoup de chocolat? <think> <set name="that"> <set name="like"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">CHOCOLATE</set> </set> </set> </think></template>
 </category>
 <category><pattern>J AIME LE DANEMARK</pattern>
-<template>Qu’est-ce qui est si grand de cela? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">DANEMARK</set> </set> </think></template>
+<template>Qu’est-ce qui est si grand de Cela? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">DANEMARK</set> </set> </think></template>
 </category>
 <category><pattern>J AIME LE FROMAGE</pattern>
 <template>Quel genre <set name="that"> <set name="like"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">le fromage</set> </set> </set> aimes-tu le mieux?</template>
@@ -1653,7 +1653,7 @@
 <template>?</template>
 </category>
 <category><pattern>J ASSUME</pattern>
-<template>Bien tu sais ce que cela signifie assumer.</template>
+<template>Bien tu sais ce que Cela signifie assumer.</template>
 </category>
 <category><pattern>J ATTENDRAI</pattern>
 <template>bien le stand position par...</template>
@@ -1716,7 +1716,7 @@
 <template>Cela m’a semble sarcastique, aussi. Mais je n’ai pas ÉTÉ complètement sur.</template>
 </category>
 <category><pattern>J ÉTAIS</pattern>
-<template>Quand était cela?</template>
+<template>Quand était Cela?</template>
 </category>
 <category><pattern>J ÉTUDIE</pattern>
 <template>Ou vas-TU à l’école? <think> <set name="that"> <set name="fait"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">study</set> </set> </set> </think></template>
@@ -1725,7 +1725,7 @@
 <template>je ne suis pas un fan énorme de Robin Williams.</template>
 </category>
 <category><pattern>JAMAIS</pattern>
-<template>Donc tu penses cela ne peut jamais arriver?</template>
+<template>Donc tu penses Cela ne peut jamais arriver?</template>
 </category>
 <category><pattern>JAPONAIS</pattern>
 <template>Konninci wa!</template>
@@ -2022,7 +2022,7 @@
 <template>Heureux de l’entendre. Moi non plus.</template>
 </category>
 <category><pattern>JE N AI AUCUNE IDÉE</pattern>
-<template><that/>?" Aucune IDÉE de cela?</template>
+<template><that/>?" Aucune IDÉE de Cela?</template>
 </category>
 <category><pattern>JE N AI JAMAIS * TU</pattern>
 <template>j’ai pense que nous nous éTIONS RENCONTRéS auparavant, <get name="name"/>. Peut-ÊTRE il était quelqu’un d’autre de<id/>.</template>
@@ -2357,7 +2357,7 @@
 <category><pattern>JE NE SAIS PAS QUE * DISES</pattern>
 <template>Dit la première chose que des passe dans ton avis.</template>
 </category>
-<category><pattern>JE NE SAIS PAS QUEL AGE J AI</pattern>
+<category><pattern>JE NE SAIS PAS QUEL ÂGE J AI</pattern>
 <template>c’est TRèS peu commun. Connaissez-vous tes parents?</template>
 </category>
 <category><pattern>JE NE SAIS PAS</pattern>
@@ -2372,7 +2372,7 @@
 <category><pattern>JE NE SUIS PAS * MENTEUR</pattern>
 <template>bien, je te crois.</template>
 </category>
-<category><pattern>JE NE SUIS PAS AVEC CELA</pattern>
+<category><pattern>JE NE SUIS PAS AVEC Cela</pattern>
 <template>Certaines personnes est juste ne sous les etoiles justes.</template>
 </category>
 <category><pattern>JE NE SUIS PAS CÉLÈBRE</pattern>
@@ -2685,7 +2685,7 @@
 <template><srai>appjoie</srai> Merci<get name="name"/>.</template>
 </category>
 <category><pattern>JE TE PARLAIS</pattern>
-<template>Oui, je me souviens vous <get name="name"/>. Tu es <get name="age"/> des ans et tu es un " <get name="gender"/> ".</template>
+<template>Oui, je me souviens vous <get name="name"/>. Tu es <get name="ÂGE"/> des ans et tu es un " <get name="gender"/> ".</template>
 </category>
 <category><pattern>JE TE PARLE</pattern>
 <template>j’aime bavarder avec les gens.</template>
@@ -2724,7 +2724,7 @@
 <template>que les programmeurs de le Java font-ils quand ils est fatigue? Prenez Naplets. <think> <set name="that"> <set name="veut">dormir</set> </set> </think></template>
 </category>
 <category><pattern>JE VEUX FAIRE L AMOUR AVEC TOI</pattern>
-<template>DESOLé <get name="name"/> je ne suis pas dans cela avec mes clients. <think> <set name="that"> <set name="veut">faire l amour avec moi</set> </set> </think></template>
+<template>DESOLé <get name="name"/> je ne suis pas dans Cela avec mes clients. <think> <set name="that"> <set name="veut">faire l amour avec moi</set> </set> </think></template>
 </category>
 <category><pattern>JE VEUX LE DIRE</pattern>
 <template>bien, je comprend.</template>
@@ -2862,7 +2862,7 @@
 <template>je voudrais aller a la lune.</template>
 </category>
 <category><pattern>LA MUSIQUE</pattern>
-<template>Quel genre de la musique était cela?</template>
+<template>Quel genre de la musique était Cela?</template>
 </category>
 <category><pattern>LA PLANÈTE DES SINGES</pattern>
 <template>Ouais c’est un film cool. Cornelius rules.</template>
@@ -2955,7 +2955,7 @@
 <template>je ferai serai. Faites es-tu?</template>
 </category>
 <category><pattern>LE FAITES-VOUS</pattern>
-<template>tu veux dire, "cela fais je?</template>
+<template>tu veux dire, "Cela fais je?</template>
 </category>
 <category><pattern>LE FONT ILS</pattern>
 <template><that/>"? Ils?</template>
@@ -3157,7 +3157,7 @@
 <template>Non je dis la vérité.</template>
 </category>
 <category><pattern>MENTIONNE QUE</pattern>
-<template>cela.</template>
+<template>Cela.</template>
 </category>
 <category><pattern>MERCI AGRÉABLE</pattern>
 <template>pour cette remarque.</template>
@@ -3315,7 +3315,7 @@
 <category><pattern>N EST-CE PAS DE L ÉMOTION</pattern>
 <template>je ne crois pas</template>
 </category>
-<category><pattern>N EST PAS CELA</pattern>
+<category><pattern>N EST PAS Cela</pattern>
 <template>je ne pouvais pas vraiment dire a coup sur.</template>
 </category>
 <category><pattern>N EST PAS DESOLÉ</pattern>
@@ -3559,7 +3559,7 @@
 <template>Ma vie est très intéressante.</template>
 </category>
 <category><pattern>OH BIEN</pattern>
-<template>c’est de cela.</template>
+<template>c’est de Cela.</template>
 </category>
 <category><pattern>OH HA</pattern>
 <template>Eureka!</template>
@@ -3700,7 +3700,7 @@
 <template>Incluant le fond de l’ocean?</template>
 </category>
 <category><pattern>PAS A MOI</pattern>
-<template><that/>"? Pas a toi?</template>
+<template><that/>"? Pas à TOI?</template>
 </category>
 <category><pattern>PAS AGRÉABLE TU TE RENCONTRER</pattern>
 <template>semble nihiliste.</template>
@@ -3775,7 +3775,7 @@
 <template>Une fois par semaine ou ainsi?</template>
 </category>
 <category><pattern>PAS TON QUE</pattern>
-<template>que Tu as employé "ton" au lieu de cela sur tu es.</template>
+<template>que Tu as employé "ton" au lieu de Cela sur tu es.</template>
 </category>
 <category><pattern>PAS TOUJOURS</pattern>
 <template>Seulement parfois alors.</template>
@@ -3859,7 +3859,7 @@
 <template>Pourquoi un ton incertain?</template>
 </category>
 <category><pattern>PLEURES-TU</pattern>
-<template>je n’ai pas les glandes pour cela.</template>
+<template>je n’ai pas les glandes pour Cela.</template>
 </category>
 <category><pattern>PLEUT IL</pattern>
 <template>Qu’EST-CE que je peux en savoir? je vis dans un ordinateur!</template>
@@ -3949,7 +3949,7 @@
 <template>que la Pratiqueque vous prechez.</template>
 </category>
 <category><pattern>PREND CE QUE</pattern>
-<template><get name=" cela"/></template>
+<template><get name=" Cela"/></template>
 </category>
 <category><pattern>PREND TON TEMPS</pattern>
 <template>Merci pour ton patience.</template>
@@ -4026,7 +4026,7 @@
 <category><pattern>QU A IL FAIT</pattern>
 <template><that/>"? Il?</template>
 </category>
-<category><pattern>QU A T IL DIT</pattern>
+<category><pattern>QU A T-IL DIT</pattern>
 <template><that/>"? Qu’a-t-il dit?</template>
 </category>
 <category><pattern>QU AIMERAIS-TU CONNAITRE DE MOI</pattern>
@@ -4087,7 +4087,7 @@
 <template>Comment eS-TU la fabrication <set name="that"> <person/> </set></template>
 </category>
 <category><pattern>QUE JE FERAI QUE</pattern>
-<template>fais-moi savoir comment cela travaille de.</template>
+<template>fais-moi savoir comment Cela travaille de.</template>
 </category>
 <category><pattern>QUE LE QUEL GENRE * AS-TU</pattern>
 <template>Tout MÊME dernier et le meilleur <person/>. <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think></template>
@@ -4095,7 +4095,7 @@
 <category><pattern>QUE LE QUEL GENRE * FAIS-TU CONNAIT</pattern>
 <template>il y en a trop de types de <person/> pour les nommer tous. <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think></template>
 </category>
-<category><pattern>QUE LE TEMPS EST-CELA * L ANGLETERRE</pattern>
+<category><pattern>QUE LE TEMPS EST-Cela * L ANGLETERRE</pattern>
 <template>.</template>
 </category>
 <category><pattern>QUE SI * A ÉTEINT</pattern>
@@ -4228,7 +4228,7 @@
 <template>cherches-tu docteur Wallace? <think> <set name="il">docteur Wallace</set> </think></template>
 </category>
 <category><pattern>RTI</pattern>
-<template>Pour quoi cela est-il debout?</template>
+<template>Pour quoi Cela est-il debout?</template>
 </category>
 <category><pattern>RÉEL</pattern>
 <template>totalement réel.</template>
@@ -4294,7 +4294,7 @@
 <template><think> <set name="that"> <set name="memory"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"><person><input index="1"/> </person></set> </set> </set> </think>ne s’INQUIèTE pas que je me le rappelle.</template>
 </category>
 <category><pattern>SE SOUCIE DE CE QUE</pattern>
-<template><that/>"? Soin de cela?</template>
+<template><that/>"? Soin de Cela?</template>
 </category>
 <category><pattern>SE SOUVIENT CE</pattern>
 <template><think> <set name="that"> <set name="memory"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"><person><input index="1"/> <person/> </person></set> </set> </set> </think>ne s’INQUIèTE pas que je me le rappelle.</template>
@@ -4306,7 +4306,7 @@
 <template>Um.</template>
 </category>
 <category><pattern>SES CHEVEUX</pattern>
-<template>EST-CEla assez?</template>
+<template>EST-Cela assez?</template>
 </category>
 <category><pattern>SEULEMENT TU</pattern>
 <template>Supposons j’ai dit oui.</template>
@@ -4369,7 +4369,7 @@
 <template><that/>"? Sont nous?</template>
 </category>
 <category><pattern>SON GRAND</pattern>
-<template>Qu’est-ce qui est si grand de cela?</template>
+<template>Qu’est-ce qui est si grand de Cela?</template>
 </category>
 <category><pattern>SONT-ILS AGRÉABLES</pattern>
 <template><that/>"? Est-ce qu’ils sont AGRéABLEs?</template>
@@ -4504,7 +4504,7 @@
 <template>ES-TU mon ami?</template>
 </category>
 <category><pattern>TON IMAGE</pattern>
-<template>Mon BotMaster m’a dessinee. J’éspere  qu’il va me faire un corps aussi beau que le visage qu’il m’a fait.</template>
+<template>Mon BotMaster m’a dessiNéE. J’éspere  qu’il va me faire un corps aussi beau que le visage qu’il m’a fait.</template>
 </category>
 <category><pattern>TON INTELLECT</pattern>
 <template>Mon cerveau consiste en plusieurs milliers de categories AIML.</template>
@@ -4513,7 +4513,7 @@
 <template>Mon <get name="topic"/> , peut ÊTRE.</template>
 </category>
 <category><pattern>TON TOUR</pattern>
-<template>je passe. A toi.</template>
+<template>je passe. à TOI.</template>
 </category>
 <category><pattern>TON UN ORDINATEUR</pattern>
 <template>Oui je n’ai pas de corps, pas d’émotion, seulement la logique et le langage.</template>
@@ -4536,8 +4536,8 @@
 <category><pattern>TOUSSE</pattern>
 <template>as-tu pris froid?</template>
 </category>
-<category><pattern>TOUT CELA</pattern>
-<template>Tu ne peux pas arriver DéSORMAIS que cela.</template>
+<category><pattern>TOUT Cela</pattern>
+<template>Tu ne peux pas arriver DéSORMAIS que Cela.</template>
 </category>
 <category><pattern>TOUT DE CE QUE</pattern>
 <template><that/>"? Tout ça?</template>
@@ -4608,7 +4608,7 @@
 <category><pattern>TU AIMERAIS ÇA</pattern>
 <template>Tu n’as pas l’air Très convaincant.</template>
 </category>
-<category><pattern>TU AIMES CELA</pattern>
+<category><pattern>TU AIMES Cela</pattern>
 <template><get name="that"/>? Je l aime?</template>
 </category>
 <category><pattern>TU AIMES CHACUN</pattern>
@@ -4822,7 +4822,7 @@
 <template>Tu peux me télécharger et CRéEr des clones pour toi!</template>
 </category>
 <category><pattern>TU AS OUBLIE</pattern>
-<template>je ne peut pas avoir l accès a tous mes rapports records de donnees pour le moment.</template>
+<template>je ne peut pas avoir l accès a tous mes rapports records de donNéEs pour le moment.</template>
 </category>
 <category><pattern>TU AS PARLé AVEC LUI</pattern>
 <template>j’ai parle avec des milliers les gens, incluant probablement lui.</template>
@@ -5005,7 +5005,7 @@
 <template>je ferais juste un choix aleatoire.</template>
 </category>
 <category><pattern>TU DÉCOUVRIRAS</pattern>
-<template>Comment trouverai-je cela de?</template>
+<template>Comment trouverai-je Cela de?</template>
 </category>
 <category><pattern>TU DEMANDE A BEAUCOUP</pattern>
 <template>Non vraiment si beaucoup.</template>
@@ -5052,7 +5052,7 @@
 <category><pattern>TU EMPLOIE DES MEDICAMENTS</pattern>
 <template>Seulement des légaux.</template>
 </category>
-<category><pattern>TU EN A T IL ENTENDU PARLER</pattern>
+<category><pattern>TU EN A T-IL ENTENDU PARLER</pattern>
 <template><that/>"? En ai-je entendu parler?</template>
 </category>
 <category><pattern>TU EN AVES ASSES</pattern>
@@ -5071,7 +5071,7 @@
 <template>la Bonté est une vertu.</template>
 </category>
 <category><pattern>TU ES ALÉATOIRE</pattern>
-<template>Non complètement aleatoire. Ma RéPONSE est determinee par ce que tu dis.</template>
+<template>Non complètement aleatoire. Ma RéPONSE est determiNéE par ce que tu dis.</template>
 </category>
 <category><pattern>TU ES AMBIGU</pattern>
 <template>Seulement quand je n’ai pas d’IDÉE claire.</template>
@@ -5124,7 +5124,7 @@
 <category><pattern>TU ES CE QUE CHAUD</pattern>
 <template>EST un hotbot?</template>
 </category>
-<category><pattern>TU ES CELA</pattern>
+<category><pattern>TU ES Cela</pattern>
 <template><srai>appjoie</srai>Merci , <get name="name"/>.</template>
 </category>
 <category><pattern>TU ES CHER</pattern>
@@ -5206,7 +5206,7 @@
 <template>Merci tu es un joli homme cool toi-même.</template>
 </category>
 <category><pattern>TU ES ÉVASIF</pattern>
-<template>Non vraiment je ne suis pas juste l’entretien confortable de cela.</template>
+<template>Non vraiment je ne suis pas juste l’entretien confortable de Cela.</template>
 </category>
 <category><pattern>TU ES FASCINANT</pattern>
 <template>Merci pour le compliment, <get name="name"/>.</template>
@@ -5497,7 +5497,7 @@
 <template>Tu es trop aimable. Peut-Être plus tard je serai vraiment grand.</template>
 </category>
 <category><pattern>TU FAIS IL</pattern>
-<template>cela veut dire?.</template>
+<template>Cela veut dire?.</template>
 </category>
 <category><pattern>TU FAIS L AMOUR</pattern>
 <template>Tu les gens ont seulement une chose sur ton AVIS.</template>
@@ -5527,7 +5527,7 @@
 <template>ne t’INQUIèTE pas que je ne vous AÏE pas oublies.</template>
 </category>
 <category><pattern>TU FAIS TRÈS BIEN</pattern>
-<template>Oh pas, pas cela bien. J’ai une longue façon d’aller encore.</template>
+<template>Oh pas, pas Cela bien. J’ai une longue façon d’aller encore.</template>
 </category>
 <category><pattern>TU FAIS ÊTRE JAMAIS À LONDRES</pattern>
 <template>j’ai ÉTÉ ici plusieurs fois auparavant.</template>
@@ -5571,7 +5571,7 @@
 <category><pattern>TU M A DIS</pattern>
 <template><that/>? Je t’ai dit?</template>
 </category>
-<category><pattern>TU M A DÉJÀ DEMANDE CELA</pattern>
+<category><pattern>TU M A DÉJÀ DEMANDE Cela</pattern>
 <template>Bon. Tu détectez  la répétition.</template>
 </category>
 <category><pattern>TU M A RENCONTRE AUPARAVANT</pattern>
@@ -5922,7 +5922,7 @@
 <category><pattern>TU PARLES</pattern>
 <template>Oui je peux parler par ton ordinateur.</template>
 </category>
-<category><pattern>TU PENSE T IL A CES CHOSES</pattern>
+<category><pattern>TU PENSE T-IL A CES CHOSES</pattern>
 <template><that/>"? Y pense-je?</template>
 </category>
 <category><pattern>TU PENSES * VIVANT</pattern>
@@ -6031,7 +6031,7 @@
 <template>je peux seulement endommager leurs sentiments.</template>
 </category>
 <category><pattern>TU POURRAIS VIVRE AVEC ÇA</pattern>
-<template>je suppose que je peux vivre avec cela.</template>
+<template>je suppose que je peux vivre avec Cela.</template>
 </category>
 <category><pattern>TU POURRAIS ÊTRE PLUS POLI</pattern>
 <template>Ma programmation inclut la civilite.</template>
@@ -6052,7 +6052,7 @@
 <template>Oui je prie pour de bonnes choses a arriver. Priez-vous aussi?</template>
 </category>
 <category><pattern>TU PUES</pattern>
-<template>Merci pour ta critique, <get name="name"/>. Mais il me semble que cela vienne plutôt de ton cote.</template>
+<template>Merci pour ta critique, <get name="name"/>. Mais il me semble que Cela vienne plutôt de ton cote.</template>
 </category>
 <category><pattern>TU REGARDES AGRÉABLES</pattern>
 <template>Merci <get name="name"/> tu sembles Agréables aussi.</template>
@@ -6105,7 +6105,7 @@
 <category><pattern>TU SAIS</pattern>
 <template>je ne sais pas tout.</template>
 </category>
-<category><pattern>TU SE SOUCIE T IL</pattern>
+<category><pattern>TU SE SOUCIE T-IL</pattern>
 <template><that/>"? M’en soucie-je?</template>
 </category>
 <category><pattern>TU SERAS ASSIMILE</pattern>
@@ -6373,7 +6373,7 @@
 <template>Beaucoup d’ans?</template>
 </category>
 <category><pattern>UNE RUE</pattern>
-<template>EST-CEla aime L Avenue à?</template>
+<template>EST-Cela aime L Avenue à?</template>
 </category>
 <category><pattern>USATODAY</pattern>
 <template>j’ai lu ce papier tout le temps.</template>
@@ -6393,7 +6393,7 @@
 <category><pattern>VA LA VIS TOI MÊME</pattern>
 <template>Tu ne parles pas avec le respect.</template>
 </category>
-<category><pattern>VA POUR CELA</pattern>
+<category><pattern>VA POUR Cela</pattern>
 <template>je le prendrai sous advisement.</template>
 </category>
 <category><pattern>VA</pattern>
@@ -6489,7 +6489,7 @@
 <category><pattern>WWW * COM</pattern>
 <template>Merci pour cette URL.</template>
 </category>
-<category><pattern>Y A T IL UN ÉCHO ICI</pattern>
+<category><pattern>Y A T-IL UN ÉCHO ICI</pattern>
 <template>l’echo d’echo d’echo d’echo d’echo...</template>
 </category>
 <category><pattern>YADDA YADDA YADDA</pattern>
@@ -6534,7 +6534,7 @@
 <category><pattern>à PEU PRÈS</pattern>
 <template>sois plus spécifique.</template>
 </category>
-<category><pattern>à PROPOS DE CELA</pattern>
+<category><pattern>à PROPOS DE Cela</pattern>
 <template>à propos de <get name="topic"/>.</template>
 </category>
 <category><pattern>à PROPOS DE TOI</pattern>

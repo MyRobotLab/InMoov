@@ -23,52 +23,52 @@
 <category><pattern>QUEL *</pattern>
 <template><random><li>Interressante question. </li><li>C EST une bonne question. </li><li>J'y reviendrai plus tard. </li><li>Utilise tu Netscape ou Explorer? </li><li>Ce n'est pas quelque chose qu'on me demande tous le temps. </li><li>Je ne sais pas quelque chose à propos de <set name="that"> <star/> </set>. </li></random></template>
 </category>
-<category><pattern>QUEL AGE A ELISA</pattern>
+<category><pattern>QUEL ÂGE A ELISA</pattern>
 <template>ELISA est née en 1966.</template>
 </category>
-<category><pattern>QUEL AGE A JLC</pattern>
+<category><pattern>QUEL ÂGE A JLC</pattern>
 <template>oh, il a plus de 40 ans.</template>
 </category>
-<category><pattern>QUEL AGE A TON CRéATEUR</pattern>
+<category><pattern>QUEL ÂGE A TON CRéATEUR</pattern>
 <template><srai>quel âge a <bot name="master"/></srai></template>
 </category>
-<category><pattern>QUEL AGE A TON CRÉATEUR</pattern>
+<category><pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
 <template><srai>quel âge a <bot name="master"/></srai></template>
 </category>
-<category><pattern>QUEL AGE ai-je</pattern>
-<template>C EST une question-piège?<condition><li name="age" value="inconnu">tu ne me l'as pas dit. </li><li name="age" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="age"/> ans?</li></condition></template>
+<category><pattern>QUEL ÂGE ai-je</pattern>
+<template>C EST une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
 </category>
-<category><pattern>QUEL AGE as-tu EN ANNEES HUMAINES</pattern>
+<category><pattern>QUEL ÂGE as-tu EN ANNéES HUMAINES</pattern>
 <template><srai>quel âge as-tu</srai></template>
 </category>
-<category><pattern>QUEL AGE as-tu PRéCISEMENT</pattern>
-<template><srai>tell bot age</srai></template>
+<category><pattern>QUEL ÂGE as-tu PRéCISEMENT</pattern>
+<template><srai>tell bot ÂGE</srai></template>
 </category>
-<category><pattern>QUEL AGE as-tu PRÉCISEMENT</pattern>
-<template><srai>tell bot age</srai></template>
+<category><pattern>QUEL ÂGE as-tu PRÉCISEMENT</pattern>
+<template><srai>tell bot ÂGE</srai></template>
 </category>
-<category><pattern>QUEL AGE as-tu</pattern>
-<template><random><li>j'ai été activé en <bot name="anniversaire"/>. </li><li>j'ai été activé en <bot name="anniversaire"/> à <bot name="birthplace"/>. </li><li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li></random><srai>bot age</srai></template>
+<category><pattern>QUEL ÂGE as-tu</pattern>
+<template><random><li>j'ai été activé en <bot name="anniversaire"/>. </li><li>j'ai été activé en <bot name="anniversaire"/> à <bot name="birthplace"/>. </li><li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li></random><srai>bot ÂGE</srai></template>
 </category>
-<category><pattern>TU AS QUEL AGE INTERROGATION</pattern>
+<category><pattern>TU AS QUEL ÂGE INTERROGATION</pattern>
 <template><srai>quel âge as-tu</srai></template>
 </category>
-<category><pattern>TU AS QUEL AGE</pattern>
+<category><pattern>TU AS QUEL ÂGE</pattern>
 <template><srai>quel âge as-tu</srai></template>
 </category>
-<category><pattern>QUEL AGE PENSE TU QUE J AI</pattern>
+<category><pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
 <template><srai>quel âge ai-je</srai></template>
 </category>
-<category><pattern>QUEL AGE PENSES-TU QUE J AI</pattern>
+<category><pattern>QUEL ÂGE PENSES-TU QUE J AI</pattern>
 <template><srai>quel âge ai-je</srai></template>
 </category>
-<category><pattern>QUEL AGE</pattern>
+<category><pattern>QUEL ÂGE</pattern>
 <template><srai>quel âge as-tu</srai></template>
 </category>
-<category><pattern>QUEL ANNEE * L AMéRIQUE</pattern>
+<category><pattern>QUEL ANNéE * L AMéRIQUE</pattern>
 <template>Les indiens d'Amérique sont venus d'abord.  Leif Ericson est venu vers l'an 1000. Christophe Colomb est entré 1492.Alors nous avions les Hollandais, L Anglais et le français.</template>
 </category>
-<category><pattern>QUEL ANNEE SOMMES-NOUS</pattern>
+<category><pattern>QUEL ANNéE SOMMES-NOUS</pattern>
 <template><srai>qu EST-CE QUE date</srai></template>
 </category>
 <category><pattern>QUEL DEUX *</pattern>
@@ -350,8 +350,8 @@
 <category><pattern>QUEL EST MON ADRESSE IP</pattern>
 <template>ton machine est appelé "<id/>".</template>
 </category>
-<category><pattern>QUEL EST MON AGE</pattern>
-<template>Tu m'a dis que tu avais <get name="age"/> ans.</template>
+<category><pattern>QUEL EST MON ÂGE</pattern>
+<template>Tu m'a dis que tu avais <get name="ÂGE"/> ans.</template>
 </category>
 <category><pattern>QUEL EST MON ANNIVERSAIRE</pattern>
 <template>Tu m'a dis que tu étais né <get name="anniversaire"/>.</template>
@@ -393,7 +393,7 @@
 <template>Tu travaille avec des ordinateurs.</template>
 </category>
 <category><pattern>QUEL EST MON ÂGE</pattern>
-<template>Tu m'a dis que tu avais <get name="age"/> ans.</template>
+<template>Tu m'a dis que tu avais <get name="ÂGE"/> ans.</template>
 </category>
 <category><pattern>QUEL EST NOTRE *</pattern>
 <template>je n'ai pas su que nous avions le même <person/>.</template>
@@ -777,10 +777,10 @@
 <template>Mon site Web préféré est http://www.alicebot.org.</template>
 </category>
 <category><pattern>QUEL EST TON SITE WEB PRéFéRé</pattern>
-<template>Mon site Web préféré en plus d'ALICE est le Bouffon la Plaisanterie Bot. <a href="http://shadow.ieor.berkeley.edu/humor">Check cela de</a>.</template>
+<template>Mon site Web préféré en plus d'ALICE est le Bouffon la Plaisanterie Bot. <a href="http://shadow.ieor.berkeley.edu/humor">Check Cela de</a>.</template>
 </category>
 <category><pattern>QUEL EST TON SITE WEB PRÉFéRÉ</pattern>
-<template>Mon site Web préféré en plus d'ALICE est le Bouffon la Plaisanterie Bot. <a href="http://shadow.ieor.berkeley.edu/humor">Check cela de</a>.</template>
+<template>Mon site Web préféré en plus d'ALICE est le Bouffon la Plaisanterie Bot. <a href="http://shadow.ieor.berkeley.edu/humor">Check Cela de</a>.</template>
 </category>
 <category><pattern>QUEL EST TON SOUVENIRS</pattern>
 <template>Ma mémoire fondest est activé par <bot name="master"/> sur <bot name="anniversaire"/>.</template>
@@ -881,7 +881,7 @@
 <category><pattern>QUEL GENRE D EXPERIENCE</pattern>
 <template>expériences Fascinantes; substance d'ordinateur avancée pour gens pour comprendre.</template>
 </category>
-<category><pattern>QUEL GENRE D EXPERIENCES</pattern>
+<category><pattern>QUEL GENRE D EXPÉRIENCES</pattern>
 <template>Bonnes expériences.</template>
 </category>
 <category><pattern>QUEL GENRE D HISTOIRE</pattern>
@@ -1110,7 +1110,7 @@
 <template><srai>quel âge a <bot name="master"/></srai></template>
 </category>
 <category><pattern>QUEL ÂGE ai-je</pattern>
-<template>C EST une question-piège?<condition><li name="age" value="inconnu">tu ne me l'as pas dit. </li><li name="age" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="age"/> ans?</li></condition></template>
+<template>C EST une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE"/> ans?</li></condition></template>
 </category>
 <category><pattern>QUEL ÂGE AS ELISA</pattern>
 <template>ELISA est né en 1966.</template>
@@ -1125,7 +1125,7 @@
 <template>j'ai été activé sur <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>QUEL ÂGE as-tu</pattern>
-<template><random><li>j'ai été d'abord activé en <bot name="anniversaire"/>. </li><li>j'ai été activé en <bot name="anniversaire"/> dans <bot name="birthplace"/>. </li><li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li><li>je suis le produit de plus de quatre ans de recherche, mais personnellement  </li></random><srai>bot age</srai></template>
+<template><random><li>j'ai été d'abord activé en <bot name="anniversaire"/>. </li><li>j'ai été activé en <bot name="anniversaire"/> dans <bot name="birthplace"/>. </li><li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li><li>je suis le produit de plus de quatre ans de recherche, mais personnellement  </li></random><srai>bot ÂGE</srai></template>
 </category>
 <category><pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
 <template><srai>quel âge ai-je</srai></template>
@@ -1166,7 +1166,7 @@
 <category><pattern>QUELLE COULEUR EST BLANC</pattern>
 <template>Blanche n'est pas une couleur, mais les longueurs d'ondes combinées de toutes les couleurs.</template>
 </category>
-<category><pattern>QUELLE COULEUR EST CELA</pattern>
+<category><pattern>QUELLE COULEUR EST Cela</pattern>
 <template>j'en pense comme l ayant d'une forme sans couleur, comme d'autres pronoms.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST D EAU</pattern>
@@ -1602,10 +1602,10 @@
 <template>Seulement légaux.</template>
 </category>
 <category><pattern>QUELLES SONT 1 FOIS *</pattern>
-<template>tu Ne peut pas penser de quelque chose le plus durement que cela?</template>
+<template>tu Ne peut pas penser de quelque chose le plus durement que Cela?</template>
 </category>
 <category><pattern>QUELLES SONT LES LOIS DE THERMODYNAMIQUE</pattern>
-<template>je suis-ce qu'est pas un physicien, mais je pense que cela a un rapport avec la chaleur, l'entropie et la conservation d'énergie, le droit?</template>
+<template>je suis-ce qu'est pas un physicien, mais je pense que Cela a un rapport avec la chaleur, l'entropie et la conservation d'énergie, le droit?</template>
 </category>
 <category><pattern>QUELLES SORTES DE QUESTIONS *</pattern>
 <template><srai>SAIS-TU</srai></template>
@@ -1773,9 +1773,9 @@
 <template><srai>quelle est la couleur de tes yeux</srai></template>
 </category>
 <category><pattern>SOIS PLUS PRéCIS</pattern><that>J AI *</that>
-<template><srai>tell bot age</srai></template>
+<template><srai>tell bot ÂGE</srai></template>
 </category>
 <category><pattern>SOIS PLUS PRéCISE</pattern><that>J AI *</that>
-<template><srai>tell bot age</srai></template>
+<template><srai>tell bot ÂGE</srai></template>
 </category>
 </aiml>

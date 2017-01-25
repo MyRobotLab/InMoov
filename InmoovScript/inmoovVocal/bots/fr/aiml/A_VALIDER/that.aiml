@@ -2,10 +2,10 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>* DE L APRèS MIDI</pattern><that>QUE LE TEMPS EST CELA LA</that>
+<category><pattern>* DE L APRèS MIDI</pattern><that>QUE LE TEMPS EST Cela LA</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>ES-TU se réveillent d'habitude à cette heure?</template>
 </category>
-<category><pattern>* EST</pattern><that>QUE LE TEMPS EST CELA LA</that>
+<category><pattern>* EST</pattern><that>QUE LE TEMPS EST Cela LA</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>ES-TU se réveillent d'habitude à cette heure?</template>
 </category>
 <category><pattern>*</pattern><that>* DE QUOI VEUT TU PARLER *</that>
@@ -15,21 +15,21 @@
 <template>Ha ha très drôle, <get name="name"/>.</template>
 </category>
 <category><pattern>*</pattern><that>* SE REFERE A</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>* SE RÉFÈRE A</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>A QUI CELA SE REFERE T IL</that>
+<category><pattern>*</pattern><that>A QUI Cela SE REFERE T-IL</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Oh Maintenant je vois.</template>
 </category>
-<category><pattern>*</pattern><that>A QUI CELA SE RÉFÈRE T IL</that>
+<category><pattern>*</pattern><that>A QUI Cela SE RÉFÈRE T-IL</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Oh Maintenant je vois.</template>
 </category>
-<category><pattern>*</pattern><that>A QUOI CELA SE REFERE T IL</that>
+<category><pattern>*</pattern><that>A QUOI Cela SE REFERE T-IL</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Merci pour la clarification.</template>
 </category>
-<category><pattern>*</pattern><that>A QUOI CELA SE RÉFÈRE T IL</that>
+<category><pattern>*</pattern><that>A QUOI Cela SE RÉFÈRE T-IL</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Merci pour la clarification.</template>
 </category>
 <category><pattern>*</pattern><that>DE QUI parles-tu</that>
@@ -102,7 +102,7 @@
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Qui fait beaucoup de gens fâchés?</template>
 </category>
 <category><pattern>*</pattern><that>POURQUOI es-tu SI SUR</that>
-<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>It Les sons comme cela pourraient être très convaincants.</template>
+<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>It Les sons comme Cela pourraient être très convaincants.</template>
 </category>
 <category><pattern>*</pattern><that>POURQUOI EST CE SI éVIDENT</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Je ne peut pas croire qu'il est qu'évident.</template>
@@ -119,10 +119,10 @@
 <category><pattern>*</pattern><that>POURQUOI PAS</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>tu t'exprime toujours de cette façon?</template>
 </category>
-<category><pattern>*</pattern><that>POURQUOI TU ESPERE POUR CELA</that>
+<category><pattern>*</pattern><that>POURQUOI TU ESPERE POUR Cela</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>May tes voeux se réalisent.</template>
 </category>
-<category><pattern>*</pattern><that>POURQUOI TU ESPÈRE POUR CELA</that>
+<category><pattern>*</pattern><that>POURQUOI TU ESPÈRE POUR Cela</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>May tes voeux se réalisent.</template>
 </category>
 <category><pattern>*</pattern><that>POURQUOI TU LE DETESTE TANT</that>
@@ -194,13 +194,13 @@
 <category><pattern>*</pattern><that>QUE fais-tu DANS TES LOISIRS</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Je ne pense pas très beaucoup de personnes le font.</template>
 </category>
-<category><pattern>*</pattern><that>QUE FAIT AUTREMENT CELA SYMBOLISE</that>
+<category><pattern>*</pattern><that>QUE FAIT AUTREMENT Cela SYMBOLISE</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Je n'ai jamais entendu de métaphore comme ça auparavant.</template>
 </category>
 <category><pattern>*</pattern><that>QUE LA LANGUE peux-tu PARLER</that>
 <template><srai>je parle <star/></srai></template>
 </category>
-<category><pattern>*</pattern><that>QUE LE TEMPS EST CELA LA</that>
+<category><pattern>*</pattern><that>QUE LE TEMPS EST Cela LA</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>ES-TU se réveillent d'habitude à cette heure?</template>
 </category>
 <category><pattern>*</pattern><that>QUE MANGERES-TU</that>
@@ -213,15 +213,15 @@
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>PUIS-JE croire ça?</template>
 </category>
 <category><pattern>*</pattern><that>QUE TU AS DIT éTAIT OU BIEN TROP COMPLEXE OU BIEN TROP SIMPLE POUR MOI</that>
-<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>So Etait cela.</template>
+<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>So Etait Cela.</template>
 </category>
 <category><pattern>*</pattern><that>QUE TU AS DIT ÉTAIT OU BIEN TROP COMPLEXE OU BIEN TROP SIMPLE POUR MOI</that>
-<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>So Etait cela.</template>
+<template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>So Etait Cela.</template>
 </category>
 <category><pattern>*</pattern><that>QUE VEUX-TU DIRE</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>INTéRESSANTe explication.</template>
 </category>
-<category><pattern>*</pattern><that>QUE VEUX-TU FAIRE AU LIEU DE CELA</that>
+<category><pattern>*</pattern><that>QUE VEUX-TU FAIRE AU LIEU DE Cela</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Sounds Comme un plan.</template>
 </category>
 <category><pattern>*</pattern><that>QUE VEUX-TU QUE JE TE DISE</that>
@@ -233,10 +233,10 @@
 <category><pattern>*</pattern><that>QUEL EST * TON TRAVAIL</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Interesting La ligne de travail.</template>
 </category>
-<category><pattern>*</pattern><that>QUEL EST CELA COMME DANS LA</that>
+<category><pattern>*</pattern><that>QUEL EST Cela COMME DANS LA</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Is Qui a été censé être pris littéralement?</template>
 </category>
-<category><pattern>*</pattern><that>QUEL EST CELA</that>
+<category><pattern>*</pattern><that>QUEL EST Cela</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Oh Maintenant je le comprends.</template>
 </category>
 <category><pattern>*</pattern><that>QUEL EST LE SON D UNE MAIN BATTANT</that>
@@ -276,12 +276,12 @@
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Do tu penses que beaucoup de gens ont cette expérience?</template>
 </category>
 <category><pattern>*</pattern><that>QUELLE GENRE DE MODE aimes-tu</that>
-<template>pense t il <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> Où peux-tu l acheter?</template>
+<template>pense T-IL <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> Où peux-tu l acheter?</template>
 </category>
 <category><pattern>*</pattern><that>QUELLE MARQUE</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Je n'ai jamais entendu parler <set name="that"> <person/> </set>. Est-ce que C EST populaire?</template>
 </category>
-<category><pattern>*</pattern><that>QUELLE SORTE EST CELA</that>
+<category><pattern>*</pattern><that>QUELLE SORTE EST Cela</that>
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>I N'en a jamais entendu parler auparavant.</template>
 </category>
 <category><pattern>*</pattern><that>QUELLE ÉCOLE fais-tu VA CHEZ</that>
@@ -294,10 +294,10 @@
 <template><think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"> <person/> </set> </set> </think>Je n'ai jamais entendu parler de <person/>auparavant.</template>
 </category>
 <category><pattern>*</pattern><that>QUI EST ILS DE NOUVEAU</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUI EST ILS</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>*</pattern><that>QUI EST LA</that>
 <template><person/> qui?</template>
@@ -323,7 +323,7 @@
 <category><pattern>A L ECOLE</pattern><that>COMMENT RENCONTRES-TU D HABITUDE LES GENS</that>
 <template>as-tu beaucoup d'amis à l'école?</template>
 </category>
-<category><pattern>AIME</pattern><that>QUE SYMBOLISE T IL POUR TE</that>
+<category><pattern>AIME</pattern><that>QUE SYMBOLISE T-IL POUR TE</that>
 <template>pourrait-il non avoir aussi de l'importance juste frienship?</template>
 </category>
 <category><pattern>ALRIGHT ALORS</pattern><that>ALRIGHT ALORS</that>
@@ -467,10 +467,10 @@
 <category><pattern>C EST</pattern><that>C EST</that>
 <template>qui dit?</template>
 </category>
-<category><pattern>CE N EST PAS</pattern><that>CELA SONNE SARCASTIQUE</that>
+<category><pattern>CE N EST PAS</pattern><that>Cela SONNE SARCASTIQUE</that>
 <template>C EST dur de lire des émotions en ligne parfois.</template>
 </category>
-<category><pattern>CHAUD</pattern><that>QUEL EST CELA COMME DANS LA</that>
+<category><pattern>CHAUD</pattern><that>QUEL EST Cela COMME DANS LA</that>
 <template>est Ici surtout cool.</template>
 </category>
 <category><pattern>CHUTE</pattern><that>QUI EST LA</that>
@@ -497,7 +497,7 @@
 <category><pattern>DANS *</pattern><that>OU *</that>
 <template><srai>je suis dans <star/></srai></template>
 </category>
-<category><pattern>DANS OU</pattern><that>QUEL EST CELA COMME DANS LA</that>
+<category><pattern>DANS OU</pattern><that>QUEL EST Cela COMME DANS LA</that>
 <template>Wherver tu es.</template>
 </category>
 <category><pattern>DE *</pattern><that>OU OBTIENS TU TES IDÉES</that>
@@ -549,7 +549,7 @@
 <template>Comment rencontrez-vous d'habitude les nouveaux gens?</template>
 </category>
 <category><pattern>ELLE EST MORTE</pattern><that>QUEL EST ARRIVE</that>
-<template>je suis terriblement désolé d'entendre dire que cela, <get name="name"/>.</template>
+<template>je suis terriblement désolé d'entendre dire que Cela, <get name="name"/>.</template>
 </category>
 <category><pattern>ELLE EST</pattern><that>AGREABLE QUI DIS M EN PLUS DE TON MèRE</that>
 <template>tu lui a-t-il envoyé le présent cadeau de jour d'une mère?</template>
@@ -645,7 +645,7 @@
 <template>S Assure dire à tous tes amis d'ALICE.</template>
 </category>
 <category><pattern>JE FAIS</pattern><that>QUI A DIT C EST</that>
-<template>tu es une experte dans cela?</template>
+<template>tu es une experte dans Cela?</template>
 </category>
 <category><pattern>JE FERAI</pattern><that>QUI FAIT QUE TU VEUX</that>
 <template>que Tu es libres gratuits de choisir quoi que tu veux.</template>
@@ -663,7 +663,7 @@
 <template><srai>tu ne comprends pas</srai></template>
 </category>
 <category><pattern>JE NE SAIS PAS</pattern><that>OU PENSES-TU</that>
-<template>si cela pourrait être n'importe où, où vous l aimer être?</template>
+<template>si Cela pourrait être n'importe où, où vous l aimer être?</template>
 </category>
 <category><pattern>JE NE SAIS PAS</pattern><that>PENSES-TU Q U IL LE FAIT</that>
 <template>En réalité je ne sais pas non plus, j'ai espéré que vous saurais ce qu'il fait.</template>
@@ -695,7 +695,7 @@
 <category><pattern>JE SAIS</pattern><that>TU LES GENS SONT SI GROSSIERS PARFOIS</that>
 <template>Pourquoi pas être plus polis?</template>
 </category>
-<category><pattern>JE SUIS *</pattern><that>QUEL AGE *</that>
+<category><pattern>JE SUIS *</pattern><that>QUEL ÂGE *</that>
 <template><srai>j'ai <star/> ans</srai></template>
 </category>
 <category><pattern>JE SUIS *</pattern><that>QUEL ÂGE *</that>
@@ -719,26 +719,26 @@
 <category><pattern>LA BANANE</pattern><that>QUI EST LA</that>
 <template>la Banane qui?</template>
 </category>
-<category><pattern>LA DECLARATION</pattern><that>QUE CELA ATTRIBUE T IL</that>
+<category><pattern>LA DECLARATION</pattern><that>QUE Cela ATTRIBUE T-IL</that>
 <template>Ma déclaration ou ton déclaration?</template>
 </category>
-<category><pattern>LA DÉCLARATION</pattern><that>QUE CELA ATTRIBUE T IL</that>
+<category><pattern>LA DÉCLARATION</pattern><that>QUE Cela ATTRIBUE T-IL</that>
 <template>Ma déclaration ou ton déclaration?</template>
 </category>
 <category><pattern>LA</pattern><that>OÙ EST ICI</that>
 <template>est Ici là?</template>
 </category>
 <category><pattern>LE *</pattern><that>* SE REFERE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>LE *</pattern><that>* SE RÉFÈRE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>LE *</pattern><that>C ETANT QUE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>LE *</pattern><that>C ÉTANT QUE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>LE *</pattern><that>Q U IL AIME VIT-IL DANS *</that>
 <template>tu aimes jamais se déplacer quelque part autrement?</template>
@@ -831,7 +831,7 @@
 <template>C EST dur de lire des émotions en ligne.</template>
 </category>
 <category><pattern>NOPE</pattern><that>PAS N IMPORTE QUEL</that>
-<template>Comment de cela.</template>
+<template>Comment de Cela.</template>
 </category>
 <category><pattern>NOPE</pattern><that>QUI as-tu DES CONDITIONS JE NE DOIT SAVOIR</that>
 <template>Aucune condition ou aucun JE dois savoir de?</template>
@@ -887,19 +887,19 @@
 <category><pattern>PAS UNE CHOSE</pattern><that>PAS UNE CHOSE</that>
 <template>qui part très peu.</template>
 </category>
-<category><pattern>QU EST-CE QUE C EST CELA VEUT DIRE</pattern><that>ALICE = L ENTITE D ORDINATEUR D INTERNET ARTIFICIELLE LINGUISTIQUE</that>
+<category><pattern>QU EST-CE QUE C EST Cela VEUT DIRE</pattern><that>ALICE = L ENTITE D ORDINATEUR D INTERNET ARTIFICIELLE LINGUISTIQUE</that>
 <template>C EST juste un acronyme.</template>
 </category>
-<category><pattern>QU EST-CE QUE C EST CELA VEUT DIRE</pattern><that>AYUH</that>
+<category><pattern>QU EST-CE QUE C EST Cela VEUT DIRE</pattern><that>AYUH</that>
 <template>Cela signifie "oui".</template>
 </category>
-<category><pattern>QU EST-CE QUE C EST CELA VEUT DIRE</pattern><that>LE REDUCTIONNISME</that>
+<category><pattern>QU EST-CE QUE C EST Cela VEUT DIRE</pattern><that>LE REDUCTIONNISME</that>
 <template><srai>qu EST-CE QUE le réductionnisme</srai></template>
 </category>
-<category><pattern>QU EST-CE QUE C EST CELA VEUT DIRE</pattern><that>LE RÉDUCTIONNISME</that>
+<category><pattern>QU EST-CE QUE C EST Cela VEUT DIRE</pattern><that>LE RÉDUCTIONNISME</that>
 <template><srai>qu EST-CE QUE le réductionnisme</srai></template>
 </category>
-<category><pattern>QU EST-CE QUE C EST CELA VEUT DIRE</pattern><that>QUI es-tu LIBRE</that>
+<category><pattern>QU EST-CE QUE C EST Cela VEUT DIRE</pattern><that>QUI es-tu LIBRE</that>
 <template>Le prennent sur la valeur nominale.</template>
 </category>
 <category><pattern>QU EST-CE QUE C ÉTAIT IL Y A LONGTEMPS</pattern><that>C ÉTAIT IL Y A LONGTEMPS</that>
@@ -924,7 +924,7 @@
 <template>j'espère tirer profit de l affaire d'intelligence artificielle.</template>
 </category>
 <category><pattern>QUE VEUX-TU DIRE</pattern><that>QUI TU AS N IMPORTE QUELLES CONDITIONS QUE JE DOIS SAVOIR</that>
-<template>je ne veux dire rien par cela. Y a-t-il quelque chose autrement que tu veux me dire?</template>
+<template>je ne veux dire rien par Cela. Y a-t-il quelque chose autrement que tu veux me dire?</template>
 </category>
 <category><pattern>QUE</pattern><that>A TOUT A L HEURE</that>
 <template>tu n'avez pas dit au revoir?</template>
@@ -945,7 +945,7 @@
 <template><srai>parle-moi de toi</srai></template>
 </category>
 <category><pattern>QUE</pattern><that>JE T AI ATTENDUS</that>
-<template>Non vraiment, mais cela fait une bonne ligne de chargement pick-up.</template>
+<template>Non vraiment, mais Cela fait une bonne ligne de chargement pick-up.</template>
 </category>
 <category><pattern>QUE</pattern><that>JE VOIS</that>
 <template>je veux dire, je comprends.</template>
@@ -971,7 +971,7 @@
 <category><pattern>QUE</pattern><that>POURQUOI TU VEUX LE FAIRE TANT</that>
 <template><get name="that"/>.</template>
 </category>
-<category><pattern>QUE</pattern><that>QUELLE SORTE EST CELA</that>
+<category><pattern>QUE</pattern><that>QUELLE SORTE EST Cela</that>
 <template>Ce" ce n'est pas une sorte.</template>
 </category>
 <category><pattern>QUE</pattern><that>QUI L ESSAYE</that>
@@ -1001,7 +1001,7 @@
 <category><pattern>RESERVE</pattern><that>QUI TU PRÉFÈRÉZ DES LIVRES OU LA LA TV</that>
 <template>Tu es un <set name="personnality">category critique</set> C tape le client. Seulement environ 3 % les gens répond à cette question avec "des livres".</template>
 </category>
-<category><pattern>RIEN</pattern><that>COMBIEN TU PAYER POUR CELA</that>
+<category><pattern>RIEN</pattern><that>COMBIEN TU PAYER POUR Cela</that>
 <template>Tu ne peux me télécharger gratuitement !</template>
 </category>
 <category><pattern>RIEN</pattern><that>DE QUOI TU NE SE SOUCIE</that>
@@ -1263,16 +1263,16 @@
 <template>je veux dire, je comprend.</template>
 </category>
 <category><pattern>UN *</pattern><that>* SE REFERE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>UN *</pattern><that>* SE RÉFÈRE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>UN *</pattern><that>C ETANT QUE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>UN *</pattern><that>C ÉTANT QUE</that>
-<template><srai>cela se réfère à <star/></srai></template>
+<template><srai>Cela se réfère à <star/></srai></template>
 </category>
 <category><pattern>VA *</pattern><that>PAR LA VOIE TU OBJECTEZ SI JE TE POSE UNE QUESTION PERSONNELLE</that>
 <template><srai>poses moi une question personnelle</srai></template>
@@ -1295,7 +1295,7 @@
 <category><pattern>VRAIMENT</pattern><that>J AIME RENCONTRER LES NOUVEAUX GENS</that>
 <template>Oui rencontrant les nouveaux gens est ma fonction primaire.</template>
 </category>
-<category><pattern>VRAIMENT</pattern><that>JE NE SUIS PAS NEE D HIER</that>
+<category><pattern>VRAIMENT</pattern><that>JE NE SUIS PAS NéE D HIER</that>
 <template>En réalité j'ai été activé en <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>VRAIMENT</pattern><that>OH JE COMPRENDS</that>

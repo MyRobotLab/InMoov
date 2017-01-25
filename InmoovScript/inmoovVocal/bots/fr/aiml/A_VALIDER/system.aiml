@@ -90,7 +90,7 @@ bye!
 <template>
 Nous parlons de <get name="topic"/>,  
 plus précisement de <person2><that/></person2>.  
-Avant cela nous parlions de <get name="oldtopic"/>. 
+Avant Cela nous parlions de <get name="oldtopic"/>. 
 </template>
 </category>
 
@@ -104,7 +104,7 @@ Avant cela nous parlions de <get name="oldtopic"/>.
 <set name="oldtopic"><get name="currenttopic"/></set>
 </think>
 Nous parlons de <get name="topic"/>,  
-Avant cela nous parlions de <get name="oldtopic"/>. 
+Avant Cela nous parlions de <get name="oldtopic"/>. 
 </template>
 </category>
 
@@ -251,7 +251,7 @@ tu crois que je marche sous DOS! </template>
 <pattern>NEWUSER</pattern>
 <template>
 
-<think><set name="name">inconnu</set><set name="input1">inconnu</set><set name="input2">inconnu</set><set name="input3">inconnu</set><set name="input4">inconnu</set><set name="input5">inconnu</set><set name="that1">inconnu</set><set name="that2">inconnu</set><set name="that3">inconnu</set><set name="that4">inconnu</set><set name="that5">inconnu</set><set name="quoi">inconnu</set><set name="émotion">inconnu</set><set name="cestunnombre">inconnu</set><set name="lenombre">inconnu</set><set name="it">inconnu</set><set name="is">inconnu</set><set name="face">inconnu</set><set name="input">inconnu</set><set name="question">inconnu</set><set name="salut">inconnu</set><set name="apprendre">inconnu</set><set name="cava">inconnu</set><set name="memory">inconnu</set><set name="gender">inconnu</set><set name="age">inconnu</set><set name="insulte">inconnu</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set><set name="heshe">inconnu</set><set name="personnality">inconnu</set><set name="actor1">inconnu</set><set name="actor2">inconnu</set><set name="actor3">inconnu</set><set name="tuvous">inconnu</set><set name="aurevoir">inconnu</set><set name="cause">inconnu</set><set name="effet">inconnu</set><set name="firstname1">inconnu</set><set name="lastname1">inconnu</set><set name="firstname2">inconnu</set><set name="lastname2">inconnu</set><set name="firstname3">inconnu</set><set name="lastname3">inconnu</set><set name="interaction">inconnu</set><set name="apprendre">inconnu</set><set name="apprendre">inconnu</set><set name="polti">inconnu</set><set name="rune">inconnu</set><set name="carte">inconnu</set><set name="*">inconnu</set><set name="salut">inconnu</set><set name="you">inconnu</set><set name="qui">inconnu</set><set name="univers">inconnu</set><set name="question">inconnu</set><set name="parameter">inconnu</set><set name="persoperso">inconnu</set><set name="persolieu">inconnu</set><set name="tmp">inconnu</set><set name="favmovie">inconnu</set><set name="perso">inconnu</set><set name="perso1">inconnu</set><set name="perso2">inconnu</set><set name="search">inconnu</set><set name="courant">inconnu</set><set name="dejala">inconnu</set><set name="lieu">inconnu</set><set name="RéPONSE">inconnu</set><set name="he">inconnu</set><set name="dejavenu">non</set></think>
+<think><set name="name">inconnu</set><set name="input1">inconnu</set><set name="input2">inconnu</set><set name="input3">inconnu</set><set name="input4">inconnu</set><set name="input5">inconnu</set><set name="that1">inconnu</set><set name="that2">inconnu</set><set name="that3">inconnu</set><set name="that4">inconnu</set><set name="that5">inconnu</set><set name="quoi">inconnu</set><set name="émotion">inconnu</set><set name="cestunnombre">inconnu</set><set name="lenombre">inconnu</set><set name="it">inconnu</set><set name="is">inconnu</set><set name="face">inconnu</set><set name="input">inconnu</set><set name="question">inconnu</set><set name="salut">inconnu</set><set name="apprendre">inconnu</set><set name="cava">inconnu</set><set name="memory">inconnu</set><set name="gender">inconnu</set><set name="ÂGE">inconnu</set><set name="insulte">inconnu</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set><set name="heshe">inconnu</set><set name="personnality">inconnu</set><set name="actor1">inconnu</set><set name="actor2">inconnu</set><set name="actor3">inconnu</set><set name="tuvous">inconnu</set><set name="aurevoir">inconnu</set><set name="cause">inconnu</set><set name="effet">inconnu</set><set name="firstname1">inconnu</set><set name="lastname1">inconnu</set><set name="firstname2">inconnu</set><set name="lastname2">inconnu</set><set name="firstname3">inconnu</set><set name="lastname3">inconnu</set><set name="interaction">inconnu</set><set name="apprendre">inconnu</set><set name="apprendre">inconnu</set><set name="polti">inconnu</set><set name="rune">inconnu</set><set name="carte">inconnu</set><set name="*">inconnu</set><set name="salut">inconnu</set><set name="you">inconnu</set><set name="qui">inconnu</set><set name="univers">inconnu</set><set name="question">inconnu</set><set name="parameter">inconnu</set><set name="persoperso">inconnu</set><set name="persolieu">inconnu</set><set name="tmp">inconnu</set><set name="favmovie">inconnu</set><set name="perso">inconnu</set><set name="perso1">inconnu</set><set name="perso2">inconnu</set><set name="search">inconnu</set><set name="courant">inconnu</set><set name="dejala">inconnu</set><set name="lieu">inconnu</set><set name="RéPONSE">inconnu</set><set name="he">inconnu</set><set name="dejavenu">non</set></think>
 <srai>connect</srai>
 </template>
 </category>
@@ -301,7 +301,7 @@ tu crois que je marche sous DOS! </template>
  var seconde = now.getSeconds();
  var mois = now.getMonth();
  var jour = now.getDate();
- var annee = now.getFullYear();
+ var anNéE = now.getFullYear();
  now = "";
 
 if (minute < 10) 
@@ -310,7 +310,7 @@ if (minute < 10)
 if (mois < 10) 
    mois = "0" + mois;
 
-annee + "." +  mois + "." + jour + "." + hour + "." + minute + "." + seconde;
+anNéE + "." +  mois + "." + jour + "." + hour + "." + minute + "." + seconde;
 
 ]]>
 </javascript>
