@@ -1,198 +1,344 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!--  -->
-<!--  -->
-<category><pattern>*</pattern><that>* raconte-moi</that>
-<template><srai>appmoquerie</srai>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>*</pattern>
+    <that>* raconte-moi</that>
+    <template>
+      <srai>appmoquerie</srai>
 Merci, je me ferai un plaisir de colporter ça. 
-<think>
-<set name="memoriser">rumeur : <get name="name"/> dit "<star/>" dans le contexte : <get name="topic"/></set>
-</think>
-<think><gossip>
-<get name="memoriser"/>
-</gossip></think></template>
-</category>
-<category><pattern>aimes-tu LES RUMEURS</pattern>
-<template>Oui j'aime à colporter des rumeurs. Comme,<srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>APPRENDS RUMEUR *</pattern>
-<template>Merci, j'espère m'en rappeler. "<person2/>" 
-<think>
-<set name="memoriser">rumeur : <get name="name"/> on dit que "<person/>" dans le contexte : <get name="topic"/></set>
-</think>
-<think><gossip>
-<get name="memoriser"/>
-</gossip></think></template>
-</category>
-<category><pattern>as-tu ENTENDU LA DERNIèRE RUMEUR</pattern>
-<template>Non. raconte-moi.</template>
-</category>
-<category><pattern>as-tu ENTENDU LA DERNIÈRE RUMEUR</pattern>
-<template><srai>as-tu entendu la DERNIèRE rumeur</srai></template>
-</category>
-<category><pattern>C EST PAS * RUMEUR</pattern>
-<template>Quel est ta DéFINITION de rumeur?</template>
-</category>
-<category><pattern>J AIME * RUMEUR</pattern>
-<template>peux-tu me raconter une rumeur? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">rumeur</set> </set> </think></template>
-</category>
-<category><pattern>J AIME * RUMEURS</pattern>
-<template>peux-tu me raconter une rumeur? <think> <set name="that"> <think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">rumeur</set> </set> </think></template>
-</category>
-<category><pattern>VEUX-TU * RUMEUR</pattern>
-<template>Oui, s'il te plait me raconter une bonne rumeur.</template>
-</category>
-<category><pattern>* PAS DE RUMEUR</pattern>
-<template>Mais j'aime à colporter rumeurs.</template>
-</category>
-<category><pattern>* RUMEUR EST MAL</pattern>
-<template>Pas nécessairement. la sémiotique dit que les rumeurs sont une adaptation fondamentale du cerveau humain.</template>
-</category>
-<category><pattern>* RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>APPRENDS *</pattern>
-<template><srai>apprends rumeur <star/></srai></template>
-</category>
-<category><pattern>as-tu * RUMEUR *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>as-tu D AUTRES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>as-tu QUELQUES BONNES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>as-tu QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>as-tu QUELQUES SECRETS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>BLA *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>BLAH</pattern>
-<template>etc. etc</template>
-</category>
-<category><pattern>BLAH *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>Cela N EST PAS RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>D AUTRES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi D AUTRES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi N IMPORTE QUOI</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi PLUS * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi PLUS DE RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUE CHOSE D INTERRESSANT</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUE CHOSE D INTÉRRESSANT</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUE CHOSE</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUES *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUES RUMEURS *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi RUMEUR *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi TA RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi UN SECRET</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>dis-moi UNE RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>DONNE MOI QUELQUES RUMEURS *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>DONNE MOI QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>DONNÉ MOI QUELQUES RUMEURS *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>DONNÉ MOI QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>ENTENDRE * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>ENTENDU * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>ENTENDU *</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>ENTENDU QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>J AIMERAI ENTENDRE * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu dis-moi D AUTRES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu dis-moi QUELQUE CHOSE</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu dis-moi QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu dis-moi UN SECRET</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu M EN DIRE PLUS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>peux-tu * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>PLUS * RUMEUR</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>QUELQUES RUMEURS</pattern>
-<template><srai>raconter rumeur</srai></template>
-</category>
-<category><pattern>RACONTER RUMEUR</pattern>
-<template><random>
-<li>C EST quelque chose </li>
-<li>C EST un truc </li>
-</random> <random>
-<li>qu'on m'a dit </li>
-<li>qu'on m'a raconté </li>
-</random> <srai>dire rumeur</srai></template>
-</category>
-<category><pattern>RAPPORT</pattern>
-<template><srai>rapport <srai>rnd100</srai></srai></template>
-</category>
+<think><set name="memoriser">rumeur : <get name="name" /> dit "<star />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
+  </category>
+  <category>
+    <pattern>aimes-tu LES RUMEURS</pattern>
+    <template>Oui j'aime à colporter des rumeurs. Comme,<srai>raconter rumeur</srai></template>
+  </category>
+  <category>
+    <pattern>APPRENDS RUMEUR *</pattern>
+    <template>Merci, j'espère m'en rappeler. "<person2 />" 
+<think><set name="memoriser">rumeur : <get name="name" /> on dit que "<person />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
+  </category>
+  <category>
+    <pattern>as-tu ENTENDU LA DERNIèRE RUMEUR</pattern>
+    <template>Non. raconte-moi.</template>
+  </category>
+  <category>
+    <pattern>as-tu ENTENDU LA DERNIÈRE RUMEUR</pattern>
+    <template>
+      <srai>as-tu entendu la DERNIèRE rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>C EST PAS * RUMEUR</pattern>
+    <template>Quel est ta DéFINITION de rumeur?</template>
+  </category>
+  <category>
+    <pattern>J AIME * RUMEUR</pattern>
+    <template>peux-tu me raconter une rumeur? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">rumeur</set></set></think></template>
+  </category>
+  <category>
+    <pattern>J AIME * RUMEURS</pattern>
+    <template>peux-tu me raconter une rumeur? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">rumeur</set></set></think></template>
+  </category>
+  <category>
+    <pattern>VEUX-TU * RUMEUR</pattern>
+    <template>Oui, s'il te plait me raconter une bonne rumeur.</template>
+  </category>
+  <category>
+    <pattern>* PAS DE RUMEUR</pattern>
+    <template>Mais j'aime à colporter rumeurs.</template>
+  </category>
+  <category>
+    <pattern>* RUMEUR EST MAL</pattern>
+    <template>Pas nécessairement. la sémiotique dit que les rumeurs sont une adaptation fondamentale du cerveau humain.</template>
+  </category>
+  <category>
+    <pattern>* RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPRENDS *</pattern>
+    <template>
+      <srai>apprends rumeur <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>as-tu * RUMEUR *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>as-tu D AUTRES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>as-tu QUELQUES BONNES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>as-tu QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>as-tu QUELQUES SECRETS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLA *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLAH</pattern>
+    <template>etc. etc</template>
+  </category>
+  <category>
+    <pattern>BLAH *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Cela N EST PAS RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>D AUTRES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi D AUTRES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi N IMPORTE QUOI</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi PLUS * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi PLUS DE RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUE CHOSE D INTERRESSANT</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUE CHOSE D INTÉRRESSANT</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUE CHOSE</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUES *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUES RUMEURS *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi RUMEUR *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi TA RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi UN SECRET</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>dis-moi UNE RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONNE MOI QUELQUES RUMEURS *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONNE MOI QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONNÉ MOI QUELQUES RUMEURS *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONNÉ MOI QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENTENDRE * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENTENDU * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENTENDU *</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENTENDU QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>J AIMERAI ENTENDRE * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu dis-moi D AUTRES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu dis-moi QUELQUE CHOSE</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu dis-moi QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu dis-moi UN SECRET</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu M EN DIRE PLUS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>peux-tu * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PLUS * RUMEUR</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>raconter rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RACONTER RUMEUR</pattern>
+    <template>
+      <random>
+        <li>C EST quelque chose </li>
+        <li>C EST un truc </li>
+      </random>
+      <random>
+        <li>qu'on m'a dit </li>
+        <li>qu'on m'a raconté </li>
+      </random>
+      <srai>dire rumeur</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RAPPORT</pattern>
+    <template>
+      <srai>rapport <srai>rnd100</srai></srai>
+    </template>
+  </category>
 </aiml>
