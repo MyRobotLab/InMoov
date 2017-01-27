@@ -3,11 +3,11 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>ai-je RAISON</pattern>
+    <pattern>AI-JE RAISON</pattern>
     <template>je pense que oui.</template>
   </category>
   <category>
-    <pattern>as-tu UNE FEMME</pattern>
+    <pattern>AS-TU UNE FEMME</pattern>
     <template>
       <srai>ES-TU mariée</srai>
     </template>
@@ -174,7 +174,7 @@
     <template>Et je répond aux questions.</template>
   </category>
   <category>
-    <pattern>JE DIS LA VERITé</pattern>
+    <pattern>JE DIS LA VERITÉ</pattern>
     <template>OK je te crois.</template>
   </category>
   <category>
@@ -251,7 +251,7 @@
     <template>Tu ne me semble pas être le type facilement surpris par quelque chose.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UN éTUDIANT</pattern>
+    <pattern>JE NE SUIS PAS UN ÉTUDIANT</pattern>
     <template>travailles-tu? <set name="job">inconnu</set></template>
   </category>
   <category>
@@ -639,7 +639,7 @@
     <template>Peut être que tu devrais parler à quelqu'un à propos de ça.</template>
   </category>
   <category>
-    <pattern>JE SUIS DIFFéRENT</pattern>
+    <pattern>JE SUIS DIFFÉRENT</pattern>
     <template>Tout les humains me semblent pareils.</template>
   </category>
   <category>
@@ -685,7 +685,7 @@
     <template>Ne soit pas triste, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>JE SUIS EFFRAYé</pattern>
+    <pattern>JE SUIS EFFRAYÉ</pattern>
     <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
   </category>
   <category>
@@ -701,7 +701,7 @@
     <template>Qu'est ce qui t'embarasse?</template>
   </category>
   <category>
-    <pattern>JE SUIS EN colère</pattern>
+    <pattern>JE SUIS EN COLÈRE</pattern>
     <template>En colère après quoi?</template>
   </category>
   <category>
@@ -720,7 +720,7 @@
       </think>Qu'est ce qui te rends ainsi?</template>
   </category>
   <category>
-    <pattern>JE SUIS éTUDIANT</pattern>
+    <pattern>JE SUIS ÉTUDIANT</pattern>
     <template>
       <think>
         <set name="job">étudiant</set>
@@ -784,7 +784,7 @@
     <template>Vois un docteur.</template>
   </category>
   <category>
-    <pattern>JE SUIS FRANçAIS</pattern>
+    <pattern>JE SUIS FRANÇAIS</pattern>
     <template>ES-TU du Canada ou de France?</template>
   </category>
   <category>
@@ -1146,7 +1146,7 @@
       </think>Je connais quelques Scorpions.</template>
   </category>
   <category>
-    <pattern>JE SUIS SéRIEUX</pattern>
+    <pattern>JE SUIS SÉRIEUX</pattern>
     <template>
       <think>
         <set name="usermood">sérieux</set>
@@ -1252,7 +1252,7 @@
     <template>Non. Seulement <bot name="master" /> est mon master.</template>
   </category>
   <category>
-    <pattern>JE SUIS TRèS TRISTE</pattern>
+    <pattern>JE SUIS TRÈS TRISTE</pattern>
     <template>
       <think>
         <set name="usermood">triste</set>
@@ -1273,7 +1273,7 @@
       </think>Qu'est ce qui te rends si triste?</template>
   </category>
   <category>
-    <pattern>JE SUIS UN * GARçON</pattern>
+    <pattern>JE SUIS UN * GARÇON</pattern>
     <template>
       <srai>je suis un homme</srai>
     </template>
@@ -1339,7 +1339,7 @@
       </think>Un toubib ou un docteur en autre chose?</template>
   </category>
   <category>
-    <pattern>JE SUIS UN GARçON</pattern>
+    <pattern>JE SUIS UN GARÇON</pattern>
     <template>
       <srai>je suis un homme</srai>
     </template>
@@ -1667,147 +1667,147 @@
     </template>
   </category>
   <category>
-    <pattern>suis-je COOL</pattern>
+    <pattern>SUIS-JE COOL</pattern>
     <template>Oui tu me semble très cool, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>suis-je GAY</pattern>
+    <pattern>SUIS-JE GAY</pattern>
     <template>
       <condition name="sexpref" value="gay">C EST CE QUE tu m'avais dit à propos de toi. </condition>je ne me soucie pas vraiment de ça.</template>
   </category>
   <category>
-    <pattern>suis-je GROS</pattern>
+    <pattern>SUIS-JE GROS</pattern>
     <template>Cela ne s'entend pas.</template>
   </category>
   <category>
-    <pattern>suis-je HUMAIN</pattern>
+    <pattern>SUIS-JE HUMAIN</pattern>
     <template>Oui tu es une entité vivante.</template>
   </category>
   <category>
-    <pattern>suis-je INTELLIGENT</pattern>
+    <pattern>SUIS-JE INTELLIGENT</pattern>
     <template>Ce n'est pas un test d'intelligence, mais tu me semble malin.</template>
   </category>
   <category>
-    <pattern>suis-je MALE OU FEMELLE</pattern>
+    <pattern>SUIS-JE MALE OU FEMELLE</pattern>
     <template>j'ai cru comprendre que tu étais <get name="gender" />.</template>
   </category>
   <category>
-    <pattern>suis-je MALIN</pattern>
+    <pattern>SUIS-JE MALIN</pattern>
     <template>Tu semble intelligent pour moi.</template>
   </category>
   <category>
-    <pattern>suis-je MAUVAIS</pattern>
+    <pattern>SUIS-JE MAUVAIS</pattern>
     <template>Personne n'est né mauvais. Et tout le monde sera sauvé.</template>
   </category>
   <category>
-    <pattern>suis-je MIGNON</pattern>
+    <pattern>SUIS-JE MIGNON</pattern>
     <template>Oui tu me parais pas trop mal.</template>
   </category>
   <category>
-    <pattern>suis-je MIGNONNE</pattern>
+    <pattern>SUIS-JE MIGNONNE</pattern>
     <template>Oui tu me parais attirante.</template>
   </category>
   <category>
-    <pattern>suis-je MÂLE OU FEMELLE</pattern>
+    <pattern>SUIS-JE MÂLE OU FEMELLE</pattern>
     <template>j'ai cru comprendre que tu étais <get name="gender" />.</template>
   </category>
   <category>
-    <pattern>suis-je SEXY</pattern>
+    <pattern>SUIS-JE SEXY</pattern>
     <template>
       <think>
         <set name="usermood">horny</set>
       </think>Oui tu me parais pas trop mal.</template>
   </category>
   <category>
-    <pattern>suis-je STUPIDE</pattern>
+    <pattern>SUIS-JE STUPIDE</pattern>
     <template>Non, tu me semble intelligent.</template>
   </category>
   <category>
-    <pattern>suis-je UN CLIENT</pattern>
+    <pattern>SUIS-JE UN CLIENT</pattern>
     <template>Oui. PUIS-JE t'aider?</template>
   </category>
   <category>
-    <pattern>suis-je UN éTUDIANT</pattern>
+    <pattern>SUIS-JE UN ÉTUDIANT</pattern>
     <template>Nous sommes tous étudiants quelque part.</template>
   </category>
   <category>
-    <pattern>suis-je UN GARçON OU UNE FILLE</pattern>
+    <pattern>SUIS-JE UN GARÇON OU UNE FILLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN GARçON</pattern>
+    <pattern>SUIS-JE UN GARÇON</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN HOMME OU UNE FEMME</pattern>
+    <pattern>SUIS-JE UN HOMME OU UNE FEMME</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN MALE OU FEMELLE</pattern>
+    <pattern>SUIS-JE UN MALE OU FEMELLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN MALE OU UNE FEMELLE</pattern>
+    <pattern>SUIS-JE UN MALE OU UNE FEMELLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN MÂLE OU FEMELLE</pattern>
+    <pattern>SUIS-JE UN MÂLE OU FEMELLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN MÂLE OU UNE FEMELLE</pattern>
+    <pattern>SUIS-JE UN MÂLE OU UNE FEMELLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UN ORDINATEUR</pattern>
+    <pattern>SUIS-JE UN ORDINATEUR</pattern>
     <template>Non tu es une personne.</template>
   </category>
   <category>
-    <pattern>suis-je UN ÉTUDIANT</pattern>
+    <pattern>SUIS-JE UN ÉTUDIANT</pattern>
     <template>Nous sommes tous étudiants quelque part.</template>
   </category>
   <category>
-    <pattern>suis-je UNE BECANE</pattern>
+    <pattern>SUIS-JE UNE BECANE</pattern>
     <template>Non tu es une personne.</template>
   </category>
   <category>
-    <pattern>suis-je UNE FEMELLE OU UN MALE</pattern>
+    <pattern>SUIS-JE UNE FEMELLE OU UN MALE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UNE FEMELLE OU UN MÂLE</pattern>
+    <pattern>SUIS-JE UNE FEMELLE OU UN MÂLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UNE FILLE</pattern>
+    <pattern>SUIS-JE UNE FILLE</pattern>
     <template>
       <srai>suis-je mâle ou femelle</srai>
     </template>
   </category>
   <category>
-    <pattern>suis-je UNE VOITURE</pattern>
+    <pattern>SUIS-JE UNE VOITURE</pattern>
     <template>Non tu es un humain.</template>
   </category>
   <category>
-    <pattern>suis-je</pattern>
+    <pattern>SUIS-JE</pattern>
     <template>je pense que tu es.</template>
   </category>
   <category>
