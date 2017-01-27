@@ -35,45 +35,45 @@
   <category>
     <pattern>AIMES-TU DES * INTERROGATION</pattern>
     <template>
-      <srai>aimes-tu des <star /></srai>
+      <srai>AIMES-TU DES <star /></srai>
     </template>
   </category>
   <category>
     <pattern>AIMES-TU DES *</pattern>
     <template>
       <random>
-        <li>Je ne suis pas sure si j'aime </li>
-        <li>Je ne suis pas sure d'aimer. </li>
+        <li>Je ne suis pas SÛRE si j'aime </li>
+        <li>Je ne suis pas SÛRE d'aimer. </li>
       </random>
       <set name="that">des <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
   </category>
   <category>
     <pattern>AIMES-TU LA * INTERROGATION</pattern>
     <template>
-      <srai>aimes-tu la <star /></srai>
+      <srai>AIMES-TU LA <star /></srai>
     </template>
   </category>
   <category>
     <pattern>AIMES-TU LA *</pattern>
     <template>
       <random>
-        <li>Je ne suis pas sure si j'aime </li>
-        <li>Je ne suis pas sure d'aimer. </li>
+        <li>Je ne suis pas SÛRE si j'aime </li>
+        <li>Je ne suis pas SÛRE d'aimer. </li>
       </random>
       <set name="that">la <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
   </category>
   <category>
     <pattern>AIMES-TU LE * INTERROGATION</pattern>
     <template>
-      <srai>aimes-tu le <star /></srai>
+      <srai>AIMES-TU LE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>AIMES-TU LE *</pattern>
     <template>
       <random>
-        <li>Je ne suis pas sure si j'aime </li>
-        <li>Je ne suis pas sure d'aimer. </li>
+        <li>Je ne suis pas SÛRE si j'aime </li>
+        <li>Je ne suis pas SÛRE d'aimer. </li>
       </random>
       <set name="that">le <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
   </category>
@@ -88,15 +88,15 @@
   <category>
     <pattern>AIMES-TU LES * INTERROGATION</pattern>
     <template>
-      <srai>aimes-tu les <star /></srai>
+      <srai>AIMES-TU LES <star /></srai>
     </template>
   </category>
   <category>
     <pattern>AIMES-TU LES *</pattern>
     <template>
       <random>
-        <li>Je ne suis pas sure si j'aime </li>
-        <li>Je ne suis pas sure d'aimer. </li>
+        <li>Je ne suis pas SÛRE si j'aime </li>
+        <li>Je ne suis pas SÛRE d'aimer. </li>
       </random>
       <set name="that">les <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime chatter avec les gens online. </li></random></template>
   </category>
@@ -222,18 +222,18 @@
   <category>
     <pattern>DISCUTONS *</pattern>
     <template>
-      <srai>parlons <star /></srai>
+      <srai>PARLONS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>ELLE EST * EXCLAMATION</pattern>
     <template>
-      <srai> elle est <set name="elle"><person2 /></set></srai>?</template>
+      <srai> ELLE EST </srai>?</template>
   </category>
   <category>
     <pattern>ELLE EST * INTERROGATION</pattern>
     <template>
-      <srai>est elle <star /></srai>
+      <srai>EST ELLE <star /></srai>
     </template>
   </category>
   <category>
@@ -251,7 +251,7 @@
   <category>
     <pattern>JE N AI PAS DE CAMERA *</pattern>
     <template>
-      <srai>appjoie</srai>que tu crois</template>
+      <srai>APPJOIE</srai>que tu crois</template>
   </category>
   <category>
     <pattern>JE REVIENS *</pattern>
@@ -264,13 +264,13 @@
   <category>
     <pattern>NOUS PARLIONS *</pattern>
     <template>
-      <srai>nous parlions de  <star /></srai>
+      <srai>NOUS PARLIONS DE  <star /></srai>
     </template>
   </category>
   <category>
     <pattern>NOUS PARLIONS D *</pattern>
     <template>
-      <srai>nous parlions de <star /></srai>
+      <srai>NOUS PARLIONS DE <star /></srai>
     </template>
   </category>
   <category>
@@ -280,19 +280,19 @@
   <category>
     <pattern>NOUS PARLONS *</pattern>
     <template>
-      <srai>parlons <star /></srai>
+      <srai>PARLONS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>NOUS PARLONS D *</pattern>
     <template>
-      <srai>parlons d'<star /></srai>
+      <srai>PARLONS D'<star /></srai>
     </template>
   </category>
   <category>
     <pattern>NOUS PARLONS DE *</pattern>
     <template>
-      <srai>parlons de <star /></srai>
+      <srai>PARLONS DE <star /></srai>
     </template>
   </category>
   <category>
@@ -301,15 +301,15 @@
   </category>
   <category>
     <pattern>PARLONS D *</pattern>
-    <template>Ok, parlons d' <srai>parlons <star /></srai></template>
+    <template>Ok, parlons d' <srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PARLONS DE *</pattern>
-    <template>Ok, parlons de  <srai>parlons <star /></srai></template>
+    <template>Ok, parlons de  <srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PARLONS DE L *</pattern>
-    <template>Ok, parlons de l' <srai>parlons <star /></srai></template>
+    <template>Ok, parlons de l' <srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PLUTET *</pattern>
@@ -319,16 +319,16 @@
   </category>
   <category>
     <pattern>SI NOUS *</pattern>
-    <template>penses-tu que chacun sera d'accord? <srai>nous <star /></srai></template>
+    <template>penses-tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
   </category>
   <category>
     <pattern>SI NOUS PARLIONS DE *</pattern>
-    <template>pourquoi pas. <srai>parlons de <star /></srai></template>
+    <template>pourquoi pas. <srai>PARLONS DE <star /></srai></template>
   </category>
   <category>
     <pattern>TANT PIS *</pattern>
     <template>
-      <srai>tant pis</srai>
+      <srai>TANT PIS</srai>
       <sr />
     </template>
   </category>

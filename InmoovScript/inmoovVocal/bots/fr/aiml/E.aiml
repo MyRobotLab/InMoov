@@ -854,11 +854,11 @@ Sois plus spécifique.</li>
     <template>Je te présente mes excuses.</template>
   </category>
   <category>
-    <pattern>EXCUSE MOI</pattern>
+    <pattern>EXCUSE-MOI</pattern>
     <template>Tu es excusé.</template>
   </category>
   <category>
-    <pattern>EXCUSE MOI MAIS *</pattern>
+    <pattern>EXCUSE-MOI MAIS *</pattern>
     <template>
       <sr />
     </template>
@@ -903,7 +903,7 @@ Sois plus spécifique.</li>
   <category>
     <pattern>EXPLIQUE COMMENT *</pattern>
     <template>
-      <srai>comment <star /></srai>
+      <srai>COMMENT <star /></srai>
     </template>
   </category>
   <category>
@@ -970,7 +970,7 @@ Sois plus spécifique.</li>
   <category>
     <pattern>EXPLIQUE-MOI COMMENT *</pattern>
     <template>
-      <srai>comment <star /></srai>
+      <srai>COMMENT <star /></srai>
     </template>
   </category>
   <category>

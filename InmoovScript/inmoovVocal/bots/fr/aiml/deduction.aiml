@@ -10,7 +10,7 @@
           <star />
         </set>
       </think>
-      <srai>qu EST-CE QUE <get name="topic" /></srai>
+      <srai>QU EST-CE QUE <get name="topic" /></srai>
     </template>
   </category>
   <category>
@@ -21,43 +21,43 @@
           <star />
         </set>
       </think>
-      <srai>qu EST-CE QUE <get name="topic" /></srai>
+      <srai>QU EST-CE QUE <get name="topic" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI</pattern>
     <template>
-      <srai>qu EST-CE QUE</srai>
+      <srai>QU EST-CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS LE</pattern>
     <template>
-      <srai>qu EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST-CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS</pattern>
     <template>
-      <srai>qu EST-CE QUE</srai>
+      <srai>QU EST-CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI LE</pattern>
     <template>
-      <srai>qu EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST-CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI</pattern>
     <template>
-      <srai>qu EST-CE QUE</srai>
+      <srai>QU EST-CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS LE</pattern>
     <template>
-      <srai>qu EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST-CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -126,7 +126,7 @@
     <pattern>NON</pattern>
     <template>
       <srai>
-        <person2>négatif <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1" /></person2>
       </srai>
     </template>
   </category>
@@ -134,7 +134,7 @@
     <pattern>NON</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>chngmode <person2><that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2><that index="1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -152,7 +152,7 @@
     <pattern>NON</pattern>
     <that>TU VEUX * INTERROGATION</that>
     <template>
-      <srai>chngmode <person2>négatif <that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2>NÉGATIF <that index="1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -160,7 +160,7 @@
     <that>TU VEUX *</that>
     <template>
       <srai>
-        <person2>négatif <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1" /></person2>
       </srai>
     </template>
   </category>
@@ -179,7 +179,7 @@
     <that>ET TOI</that>
     <template>
       <srai>
-        <person2>négatif <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1" /></person2>
       </srai>
     </template>
   </category>
@@ -213,7 +213,7 @@
     <that>* INTERROGATION</that>
     <template>
       <srai>
-        <person2>chngmodia<that index="1" /></person2>
+        <person2>CHNGMODIA<that index="1" /></person2>
       </srai>
     </template>
   </category>
@@ -221,7 +221,7 @@
     <pattern>OUI</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>chngmode <person2>négatif <that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2>NÉGATIF <that index="1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -229,7 +229,7 @@
     <that>TU NE VEUX *</that>
     <template>
       <srai>
-        <person2>négatif <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1" /></person2>
       </srai>
     </template>
   </category>
@@ -237,7 +237,7 @@
     <pattern>OUI</pattern>
     <that>TU VEUX * INTERROGATION</that>
     <template>
-      <srai>chngmode <person2><that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2><that index="1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -279,13 +279,13 @@
           <star />
         </set>
       </think>
-      <srai>où est synonyme <star /></srai>
+      <srai>OÙ EST SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>OÙ EST-CE QUE * EST</pattern>
     <template>
-      <srai>où est <star /></srai>
+      <srai>OÙ EST <star /></srai>
     </template>
   </category>
   <category>
@@ -300,7 +300,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>où est <get name="tmp" /></srai>
+      <srai>OÙ EST <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -311,13 +311,13 @@
           <star />
         </set>
       </think>
-      <srai>où était synonyme <star /></srai>
+      <srai>OÙ ÉTAIT SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>OÙ ÉTAIT JE NE SAIS PAS</pattern>
     <template>
-      <srai>où est <get name="courant" /></srai>
+      <srai>OÙ EST <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -328,13 +328,13 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>où était <get name="tmp" /></srai>
+      <srai>OÙ ÉTAIT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
     <pattern>QU EST-CE QUE *</pattern>
     <template>
-      <srai>qu EST-CE QUE <srai>synonyme <star /></srai></srai>
+      <srai>QU EST-CE QUE <srai>SYNONYME <star /></srai></srai>
     </template>
   </category>
   <category>
@@ -344,7 +344,7 @@
   <category>
     <pattern>QU EST-CE QUE ÇA</pattern>
     <template>
-      <srai>qu EST-CE QUE <that index="1" /></srai>
+      <srai>QU EST-CE QUE <that index="1" /></srai>
     </template>
   </category>
   <category>
@@ -353,19 +353,19 @@
       <think>
         <set name="search">quoi</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QU EST-CE QUI A *</pattern>
     <template>
-      <srai>qui a <star /></srai>
+      <srai>QUI A <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUAND EST-CE QUE * EST</pattern>
     <template>
-      <srai>quand est <star /></srai>
+      <srai>QUAND EST <star /></srai>
     </template>
   </category>
   <category>
@@ -376,7 +376,7 @@
           <star />
         </set>
       </think>
-      <srai>quand est ce synonyme <star /></srai>
+      <srai>QUAND EST CE SYNONYME <star /></srai>
     </template>
   </category>
   <category>
@@ -391,7 +391,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>quand est ce <get name="tmp" /></srai>
+      <srai>QUAND EST CE <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -402,13 +402,13 @@
           <star />
         </set>
       </think>
-      <srai>quand était-ce synonyme <star /></srai>
+      <srai>QUAND ÉTAIT-CE SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUAND ÉTAIT-CE JE NE SAIS PAS</pattern>
     <template>
-      <srai>quand est ce <get name="courant" /></srai>
+      <srai>QUAND EST CE <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -419,19 +419,19 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>quand était-ce <get name="tmp" /></srai>
+      <srai>QUAND ÉTAIT-CE <get name="tmp" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUE SONT *</pattern>
     <template>
-      <srai>qu EST-CE QUE <srai>singulier <star /></srai></srai>
+      <srai>QU EST-CE QUE <srai>SINGULIER <star /></srai></srai>
     </template>
   </category>
   <category>
     <pattern>QUI A FAIT *</pattern>
     <template>
-      <srai>qui a fait synonyme <star /></srai>
+      <srai>QUI A FAIT SYNONYME <star /></srai>
     </template>
   </category>
   <category>
@@ -446,7 +446,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui a fait <get name="tmp" /></srai>
+      <srai>QUI A FAIT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -457,13 +457,13 @@
           <star />
         </set>
       </think>
-      <srai>qui a trouvé synonyme <star /></srai>
+      <srai>QUI A TROUVÉ SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI A TROUVÉ JE NE SAIS PAS</pattern>
     <template>
-      <srai>qui a fait <get name="courant" /></srai>
+      <srai>QUI A FAIT <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -474,7 +474,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui a trouvé <get name="tmp" /></srai>
+      <srai>QUI A TROUVÉ <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -485,13 +485,13 @@
           <star />
         </set>
       </think>
-      <srai>qui a écrit synonyme <star /></srai>
+      <srai>QUI A ÉCRIT SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI A ÉCRIT JE NE SAIS PAS</pattern>
     <template>
-      <srai>qui a fait <get name="courant" /></srai>
+      <srai>QUI A FAIT <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -502,7 +502,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui a écrit <get name="tmp" /></srai>
+      <srai>QUI A ÉCRIT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -513,13 +513,13 @@
           <star />
         </set>
       </think>
-      <srai>qui a dit synonyme <star /></srai>
+      <srai>QUI A DIT SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI A DIT JE NE SAIS PAS</pattern>
     <template>
-      <srai>qui a fait <get name="courant" /></srai>
+      <srai>QUI A FAIT <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -530,19 +530,19 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui a dit <get name="tmp" /></srai>
+      <srai>QUI A DIT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI EST *</pattern>
     <template>
-      <srai>qui est synonyme <star /></srai>
+      <srai>QUI EST SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI EST-CE QUE * EST</pattern>
     <template>
-      <srai>qui est <star /></srai>
+      <srai>QUI EST <star /></srai>
     </template>
   </category>
   <category>
@@ -563,7 +563,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui est <get name="tmp" /></srai>
+      <srai>QUI EST <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -574,13 +574,13 @@
           <star />
         </set>
       </think>
-      <srai>qui est <srai>singulier <star /></srai></srai>
+      <srai>QUI EST <srai>SINGULIER <star /></srai></srai>
     </template>
   </category>
   <category>
     <pattern>QUI SONT JE NE SAIS PAS</pattern>
     <template>
-      <srai>qui est <get name="tmp" /></srai>
+      <srai>QUI EST <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -591,7 +591,7 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui sont <get name="tmp" /></srai>
+      <srai>QUI SONT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
@@ -602,13 +602,13 @@
           <star />
         </set>
       </think>
-      <srai>qui était synonyme <star /></srai>
+      <srai>QUI ÉTAIT SYNONYME <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUI ÉTAIT JE NE SAIS PAS</pattern>
     <template>
-      <srai>qui est <get name="courant" /></srai>
+      <srai>QUI EST <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -619,33 +619,33 @@
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>qui était <get name="tmp" /></srai>
+      <srai>QUI ÉTAIT <get name="tmp" /></srai>
     </template>
   </category>
   <category>
     <pattern>SI *</pattern>
     <template>
-      <srai>négatif <person2><that /></person2></srai>
+      <srai>NÉGATIF <person2><that /></person2></srai>
     </template>
   </category>
   <category>
     <pattern>SI</pattern>
     <template>
-      <srai>négatif <person2><that /></person2></srai>
+      <srai>NÉGATIF <person2><that /></person2></srai>
     </template>
   </category>
   <category>
     <pattern>SI</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>négatif <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
     </template>
   </category>
   <category>
     <pattern>SI</pattern>
     <that>TU NE VEUX *</that>
     <template>
-      <srai>négatif <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -723,7 +723,7 @@
   <category>
     <pattern>SI MAIS *</pattern>
     <template>
-      <srai>négatif <that /></srai>
+      <srai>NÉGATIF <that /></srai>
       <sr />
     </template>
   </category>
@@ -731,7 +731,7 @@
     <pattern>SI MAIS *</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>négatif <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
       <sr />
     </template>
   </category>
@@ -739,7 +739,7 @@
     <pattern>SI MAIS *</pattern>
     <that>TU NE VEUX *</that>
     <template>
-      <srai>négatif <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
       <sr />
     </template>
   </category>
@@ -771,14 +771,14 @@
     <pattern>OUI</pattern>
     <that>* TXTSRC  WIDTH 640 HEIGHT 480 RESIZABLE NO SCROLLBARS NO STATUS NO TOOLBAR NO *</that>
     <template>
-      <srai>j'aime ça</srai>
+      <srai>J'AIME ÇA</srai>
     </template>
   </category>
   <category>
     <pattern>NON</pattern>
     <that>* TXTSRC  WIDTH 640 HEIGHT 480 RESIZABLE NO SCROLLBARS NO STATUS NO TOOLBAR NO *</that>
     <template>
-      <srai>je n'aime pas ça</srai>
+      <srai>JE N'AIME PAS ÇA</srai>
     </template>
   </category>
   <category>
@@ -787,9 +787,9 @@
     <template>
       <srai>
         <random>
-          <li>mais encore? </li>
-          <li>et? </li>
-          <li>oui mais... </li>
+          <li>MAIS ENCORE? </li>
+          <li>ET? </li>
+          <li>OUI MAIS... </li>
         </random>
       </srai>
     </template>

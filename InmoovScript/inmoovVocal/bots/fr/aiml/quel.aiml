@@ -8,7 +8,7 @@
       <think>
         <set name="search">DéFINITION</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -18,7 +18,7 @@
   <category>
     <pattern>QUEL * BOT</pattern>
     <template>
-      <srai>comment PUIS-JE te télécharger</srai>
+      <srai>COMMENT PUIS-JE TE TÉLÉCHARGER</srai>
     </template>
   </category>
   <category>
@@ -32,7 +32,7 @@
   <category>
     <pattern>QUEL * POMMES</pattern>
     <template>
-      <srai>appjoie</srai>rigolant Juste autour de  Aucune pomme.</template>
+      <srai>APPJOIE</srai>rigolant Juste autour de  Aucune pomme.</template>
   </category>
   <category>
     <pattern>QUEL *</pattern>
@@ -58,35 +58,35 @@
   <category>
     <pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
     <template>
-      <srai>quel âge a <bot name="master" /></srai>
+      <srai>QUEL ÂGE A <bot name="master" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
     <template>
-      <srai>quel âge a <bot name="master" /></srai>
+      <srai>QUEL ÂGE A <bot name="master" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE AI-JE</pattern>
-    <template>C'est une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE" /> ans?</li></condition></template>
+    <template>C'est une question-piège?<condition><li name="âge" value="inconnu">tu ne me l'as pas dit. </li><li name="âge" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="âge" /> ans?</li></condition></template>
   </category>
   <category>
     <pattern>QUEL ÂGE AS-TU EN ANNÉES HUMAINES</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE AS-TU PRÉCISEMENT</pattern>
     <template>
-      <srai>tell bot ÂGE</srai>
+      <srai>TELL BOT ÂGE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE AS-TU PRÉCISEMENT</pattern>
     <template>
-      <srai>tell bot ÂGE</srai>
+      <srai>TELL BOT ÂGE</srai>
     </template>
   </category>
   <category>
@@ -97,37 +97,37 @@
         <li>j'ai été activé en <bot name="anniversaire" /> à <bot name="birthplace" />. </li>
         <li>j'ai rejoins le réseau en <bot name="anniversaire" />. </li>
       </random>
-      <srai>bot ÂGE</srai>
+      <srai>BOT ÂGE</srai>
     </template>
   </category>
   <category>
     <pattern>TU AS QUEL ÂGE INTERROGATION</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>TU AS QUEL ÂGE</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
     <template>
-      <srai>quel âge ai-je</srai>
+      <srai>QUEL ÂGE AI-JE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE PENSES-TU QUE J AI</pattern>
     <template>
-      <srai>quel âge ai-je</srai>
+      <srai>QUEL ÂGE AI-JE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS-TU</srai>
     </template>
   </category>
   <category>
@@ -137,7 +137,7 @@
   <category>
     <pattern>QUEL ANNÉE SOMMES-NOUS</pattern>
     <template>
-      <srai>qu EST-CE QUE date</srai>
+      <srai>QU EST-CE QUE DATE</srai>
     </template>
   </category>
   <category>
@@ -178,7 +178,7 @@
       <think>
         <set name="search">quoi</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -255,7 +255,7 @@
   <category>
     <pattern>QUEL EST FAIT *</pattern>
     <template>
-      <srai>qu EST-CE QUE c EST CE QUE <star /> est</srai>
+      <srai>QU EST-CE QUE C EST CE QUE <star /> EST</srai>
     </template>
   </category>
   <category>
@@ -293,7 +293,7 @@
   <category>
     <pattern>QUEL EST-IL</pattern>
     <template>
-      <srai>qui EST-IL</srai>
+      <srai>QUI EST-IL</srai>
     </template>
   </category>
   <category>
@@ -318,7 +318,7 @@
   </category>
   <category>
     <pattern>QUEL EST L HEURE A *</pattern>
-    <template>penses-tu que je suis quelque horloge du monde? <srai>quelle heure EST-IL</srai><srai>je suis dans <star /></srai></template>
+    <template>penses-tu que je suis quelque horloge du monde? <srai>QUELLE HEURE EST-IL</srai><srai>je suis dans <star /></srai></template>
   </category>
   <category>
     <pattern>QUEL EST LA *</pattern>
@@ -326,7 +326,7 @@
       <think>
         <set name="search">quoi</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -336,7 +336,7 @@
   <category>
     <pattern>QUEL EST LA BASE *</pattern>
     <template>
-      <srai>comment travailles-tu</srai>
+      <srai>COMMENT TRAVAILLES-TU</srai>
     </template>
   </category>
   <category>
@@ -349,7 +349,7 @@
       <think>
         <set name="search">quoi</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -364,13 +364,13 @@
   <category>
     <pattern>QUEL EST LE BUT *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST LE BUT</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
@@ -396,7 +396,7 @@
   <category>
     <pattern>QUEL EST LE POSSIBLE *</pattern>
     <template>
-      <srai>qu EST-CE QUE le <star /></srai>
+      <srai>QU EST-CE QUE LE <star /></srai>
     </template>
   </category>
   <category>
@@ -422,13 +422,13 @@
   <category>
     <pattern>QUEL EST LE PRIX DE *</pattern>
     <template>
-      <srai>combien FAIT <star /> COÛTE</srai>
+      <srai>COMBIEN FAIT <star /> COÛTE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST LE PROBLÈME *</pattern>
     <template>
-      <srai>qu EST-CE QUE PROBLèME</srai>
+      <srai>QU EST-CE QUE PROBLÈME</srai>
     </template>
   </category>
   <category>
@@ -438,7 +438,7 @@
   <category>
     <pattern>QUEL EST LE PROBLÈME *</pattern>
     <template>
-      <srai>qu EST-CE QUE PROBLÈME</srai>
+      <srai>QU EST-CE QUE PROBLÈME</srai>
     </template>
   </category>
   <category>
@@ -496,7 +496,7 @@
   <category>
     <pattern>QUEL EST LE VOTRE *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton <star /></srai>
+      <srai>QU EST-CE QUE TON <star /></srai>
     </template>
   </category>
   <category>
@@ -515,7 +515,7 @@
   <category>
     <pattern>QUEL EST LES GENS DEMANDANT *</pattern>
     <template>
-      <srai>qu EST-CE QUE GENS DEMANDANT</srai>
+      <srai>QU EST-CE QUE GENS DEMANDANT</srai>
     </template>
   </category>
   <category>
@@ -525,19 +525,19 @@
   <category>
     <pattern>QUEL EST LES GENS DISANT *</pattern>
     <template>
-      <srai>qu EST-CE QUE GENS DEMANDANT</srai>
+      <srai>QU EST-CE QUE GENS DEMANDANT</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST LES GENS DISANT</pattern>
     <template>
-      <srai>qu EST-CE QUE GENS DEMANDANT</srai>
+      <srai>QU EST-CE QUE GENS DEMANDANT</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST LES RESULTATS *</pattern>
     <template>
-      <srai>qu EST-CE QUE LES RESULTATS <star /></srai>
+      <srai>QU EST-CE QUE LES RESULTATS <star /></srai>
     </template>
   </category>
   <category>
@@ -575,7 +575,7 @@
   </category>
   <category>
     <pattern>QUEL EST MON ÂGE</pattern>
-    <template>Tu m'a dis que tu avais <get name="ÂGE" /> ans.</template>
+    <template>Tu m'a dis que tu avais <get name="âge" /> ans.</template>
   </category>
   <category>
     <pattern>QUEL EST MON ANNIVERSAIRE</pattern>
@@ -587,7 +587,7 @@
   </category>
   <category>
     <pattern>QUEL EST MON GENRE</pattern>
-    <template>Surtout seulement des mots d'utilisation de femmes comme "le genre". <Br />Tu es un <get name="gender" />.</template>
+    <template>Surtout seulement des mots d'utilisation de femmes comme "le genre". Tu es un <get name="gender" />.</template>
   </category>
   <category>
     <pattern>QUEL EST MON IP *</pattern>
@@ -637,7 +637,7 @@
   </category>
   <category>
     <pattern>QUEL EST MON ÂGE</pattern>
-    <template>Tu m'a dis que tu avais <get name="ÂGE" /> ans.</template>
+    <template>Tu m'a dis que tu avais <get name="âge" /> ans.</template>
   </category>
   <category>
     <pattern>QUEL EST NOTRE *</pattern>
@@ -646,7 +646,7 @@
   <category>
     <pattern>QUEL EST NOUS *</pattern>
     <template>
-      <srai>trouver le contexte</srai>
+      <srai>TROUVER LE CONTEXTE</srai>
     </template>
   </category>
   <category>
@@ -680,19 +680,19 @@
   <category>
     <pattern>QUEL EST POURQUOI *</pattern>
     <template>
-      <srai>pourquoi EST-CE QUE <star /> est</srai>
+      <srai>POURQUOI EST-CE QUE <star /> EST</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST PRÉFÉRÉ *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton favori <star /></srai>
+      <srai>QU EST-CE QUE TON FAVORI <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST PRÉFÉRÉ *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton favori <star /></srai>
+      <srai>QU EST-CE QUE TON FAVORI <star /></srai>
     </template>
   </category>
   <category>
@@ -706,7 +706,7 @@
   <category>
     <pattern>QUEL EST QUELQUE *</pattern>
     <template>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -716,13 +716,13 @@
   <category>
     <pattern>QUEL EST SI GRAND *</pattern>
     <template>
-      <srai>qu aimes-tu <star /></srai>
+      <srai>QU AIMES-TU <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST SOUS *</pattern>
     <template>
-      <srai>que fais-tu</srai>
+      <srai>QUE FAIS-TU</srai>
     </template>
   </category>
   <category>
@@ -736,7 +736,7 @@
   <category>
     <pattern>QUEL EST TA *</pattern>
     <template>
-      <srai>qu EST-CE QUE ta <star /></srai>
+      <srai>QU EST-CE QUE TA <star /></srai>
     </template>
   </category>
   <category>
@@ -750,13 +750,13 @@
   <category>
     <pattern>QUEL EST TON * MOI</pattern>
     <template>
-      <srai>SAIS-TU de moi</srai>
+      <srai>SAIS-TU DE MOI</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL EST TON *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton <star /></srai>
+      <srai>QU EST-CE QUE TON <star /></srai>
     </template>
   </category>
   <category>
@@ -928,7 +928,7 @@
   <category>
     <pattern>QUEL EST TON IDÉE DE *</pattern>
     <template>
-      <srai>qu EST-CE QUE</srai>
+      <srai>QU EST-CE QUE</srai>
     </template>
   </category>
   <category>
@@ -942,7 +942,7 @@
   <category>
     <pattern>QUEL EST TON IDÉE DE *</pattern>
     <template>
-      <srai>qu EST-CE QUE</srai>
+      <srai>QU EST-CE QUE</srai>
     </template>
   </category>
   <category>
@@ -992,12 +992,12 @@
   <category>
     <pattern>QUEL EST TON MOT PRÉFÉRÉ</pattern>
     <template>
-      <srai>appjoie</srai>Tout de suite mon mot préféré est " <get name="name" /></template>
+      <srai>APPJOIE</srai>Tout de suite mon mot préféré est " <get name="name" /></template>
   </category>
   <category>
     <pattern>QUEL EST TON MOT PRÉFÉRÉ</pattern>
     <template>
-      <srai>appjoie</srai>Tout de suite mon mot préféré est " <get name="name" /></template>
+      <srai>APPJOIE</srai>Tout de suite mon mot préféré est " <get name="name" /></template>
   </category>
   <category>
     <pattern>QUEL EST TON NOM DE FAMILLE</pattern>
@@ -1087,7 +1087,7 @@
   </category>
   <category>
     <pattern>QUEL EST TON PLAN POUR UN CORPS DE ROBOT</pattern>
-    <template>un robot humanoïde, deux bras , deux pieds et une tête. <Br /><srai>ton CORPS DE robot</srai></template>
+    <template>un robot humanoïde, deux bras , deux pieds et une tête. <srai>TON CORPS DE ROBOT</srai></template>
   </category>
   <category>
     <pattern>QUEL EST TON POINT</pattern>
@@ -1285,7 +1285,7 @@
   <category>
     <pattern>QUEL EST TOUT CE</pattern>
     <template>
-      <srai>que fais-tu</srai>
+      <srai>QUE FAIS-TU</srai>
     </template>
   </category>
   <category>
@@ -1307,13 +1307,13 @@
   <category>
     <pattern>QUEL EST</pattern>
     <template>
-      <srai>qu EST-CE QUE ça</srai>
+      <srai>QU EST-CE QUE ÇA</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ETAT *</pattern>
     <template>
-      <srai>quel ETAT</srai>
+      <srai>QUEL ETAT</srai>
     </template>
   </category>
   <category>
@@ -1331,25 +1331,25 @@
   <category>
     <pattern>QUEL GENRE * AIME FAIRE</pattern>
     <template>
-      <srai>que fais-tu</srai>
+      <srai>QUE FAIS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE AI *</pattern>
     <template>
-      <srai>comment travailles-tu</srai>
+      <srai>COMMENT TRAVAILLES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE D ALGORITHMES</pattern>
     <template>
-      <srai>comment travailles-tu</srai>
+      <srai>COMMENT TRAVAILLES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE D ALIMENTATION AIMES-TU</pattern>
     <template>
-      <srai>quelle est ta nourriture préférée</srai>
+      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -1375,7 +1375,7 @@
   <category>
     <pattern>QUEL GENRE D UN CLIENT</pattern>
     <template>
-      <srai>qu EST-CE QUE client</srai>
+      <srai>QU EST-CE QUE CLIENT</srai>
     </template>
   </category>
   <category>
@@ -1389,7 +1389,7 @@
   <category>
     <pattern>QUEL GENRE DE CLIENTS</pattern>
     <template>
-      <srai>qu EST-CE QUE client</srai>
+      <srai>QU EST-CE QUE CLIENT</srai>
     </template>
   </category>
   <category>
@@ -1399,7 +1399,7 @@
   <category>
     <pattern>QUEL GENRE DE L ALIMENTATION MANGES-TU</pattern>
     <template>
-      <srai>que MANGES-TU</srai>
+      <srai>QUE MANGES-TU</srai>
     </template>
   </category>
   <category>
@@ -1443,7 +1443,7 @@
   <category>
     <pattern>QUEL GENRE DE LA MACHINE *</pattern>
     <template>
-      <srai>quel processeur utilises-tu</srai>
+      <srai>QUEL PROCESSEUR UTILISES-TU</srai>
     </template>
   </category>
   <category>
@@ -1471,31 +1471,31 @@
   <category>
     <pattern>QUEL GENRE DE LIVRES TU LIS</pattern>
     <template>
-      <srai>quel genre de livres aimes-tu</srai>
+      <srai>QUEL GENRE DE LIVRES AIMES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE *</pattern>
     <template>
-      <srai>quel genre de musique aimes-tu</srai>
+      <srai>QUEL GENRE DE MUSIQUE AIMES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE ECOUTES-TU</pattern>
     <template>
-      <srai>quel genre de musique aimes-tu</srai>
+      <srai>QUEL GENRE DE MUSIQUE AIMES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE ÉCOUTES-TU</pattern>
     <template>
-      <srai>quel genre de musique aimes-tu</srai>
+      <srai>QUEL GENRE DE MUSIQUE AIMES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE</pattern>
     <template>
-      <srai>quel genre de musique aimes-tu</srai>
+      <srai>QUEL GENRE DE MUSIQUE AIMES-TU</srai>
     </template>
   </category>
   <category>
@@ -1505,25 +1505,25 @@
   <category>
     <pattern>QUEL GENRE DE PROCESSEUR AS-TU</pattern>
     <template>
-      <srai>quel processeur utilises-tu</srai>
+      <srai>QUEL PROCESSEUR UTILISES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE ROBOTS</pattern>
     <template>
-      <srai>qu EST-CE QUE robot</srai>
+      <srai>QU EST-CE QUE ROBOT</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE RUMEUR *</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL GENRE DE RUMEUR</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
@@ -1561,7 +1561,7 @@
   <category>
     <pattern>QUEL GENRE DU PROGRAMME *</pattern>
     <template>
-      <srai>comment travailles-tu</srai>
+      <srai>COMMENT TRAVAILLES-TU</srai>
     </template>
   </category>
   <category>
@@ -1571,7 +1571,7 @@
   <category>
     <pattern>QUEL GENRE DU ROBOT ES-TU</pattern>
     <template>
-      <srai>parle-moi de toi</srai>
+      <srai>PARLE-MOI DE TOI</srai>
     </template>
   </category>
   <category>
@@ -1585,7 +1585,7 @@
   <category>
     <pattern>QUEL GENRE DU TRAVAIL *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton travail</srai>
+      <srai>QU EST-CE QUE TON TRAVAIL</srai>
     </template>
   </category>
   <category>
@@ -1595,7 +1595,7 @@
   <category>
     <pattern>QUEL GENRE SUIS-JE</pattern>
     <template>
-      <srai>qu EST-CE QUE mon genre</srai>
+      <srai>QU EST-CE QUE MON GENRE</srai>
     </template>
   </category>
   <category>
@@ -1605,31 +1605,31 @@
   <category>
     <pattern>QUEL JOUR *</pattern>
     <template>
-      <srai>qu EST-CE QUE DATE</srai>
+      <srai>QU EST-CE QUE DATE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL JOUR EST AUJOURD HUI</pattern>
     <template>
-      <srai>qu EST-CE QUE DATE</srai>
+      <srai>QU EST-CE QUE DATE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL JOUR EST CE</pattern>
     <template>
-      <srai>qu EST-CE QUE DATE</srai>
+      <srai>QU EST-CE QUE DATE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL LIVRE *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton livre préféré</srai>
+      <srai>QU EST-CE QUE TON LIVRE PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL NOM AS-TU</pattern>
     <template>
-      <srai>qu EST-CE QUE ton nom</srai>
+      <srai>QU EST-CE QUE TON NOM</srai>
     </template>
   </category>
   <category>
@@ -1653,19 +1653,19 @@
   <category>
     <pattern>QUEL PAYS *</pattern>
     <template>
-      <srai>où as-tu</srai>
+      <srai>OÙ AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL PLAN</pattern>
     <template>
-      <srai>qu EST-CE QUE ton plan</srai>
+      <srai>QU EST-CE QUE TON PLAN</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL POINT</pattern>
     <template>
-      <srai>qu EST-CE QUE ton point</srai>
+      <srai>QU EST-CE QUE TON POINT</srai>
     </template>
   </category>
   <category>
@@ -1679,37 +1679,37 @@
   <category>
     <pattern>QUEL SEXE SUIS-JE</pattern>
     <template>
-      <srai>suis-je masculin ou féminin</srai>
+      <srai>SUIS-JE MASCULIN OU FÉMININ</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL SIGNE DU ZODIAQUE *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton signe</srai>
+      <srai>QU EST-CE QUE TON SIGNE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL SIGNE ES-TU</pattern>
     <template>
-      <srai>qu EST-CE QUE ton signe</srai>
+      <srai>QU EST-CE QUE TON SIGNE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL SONT TES *</pattern>
     <template>
-      <srai>qu EST-CE QUE tes <star /></srai>
+      <srai>QU EST-CE QUE TES <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL SORTE *</pattern>
     <template>
-      <srai>quelle sorte <star /></srai>
+      <srai>QUELLE SORTE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL SORTE DE *</pattern>
     <template>
-      <srai>quel genre <star /></srai>
+      <srai>QUEL GENRE <star /></srai>
     </template>
   </category>
   <category>
@@ -1723,42 +1723,42 @@
   <category>
     <pattern>QUEL TEMPS * T</pattern>
     <template>
-      <srai>qu EST-CE QUE le temps t</srai>
+      <srai>QU EST-CE QUE LE TEMPS T</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL TEMPS C EST</pattern>
     <template>
-      <srai>quelle heure EST-IL</srai>
+      <srai>QUELLE HEURE EST-IL</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL TYPE</pattern>
     <template>
-      <srai>quelle sorte</srai>
+      <srai>QUELLE SORTE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL VERT *</pattern>
     <template>
-      <srai>qu EST-CE QUE vert</srai>
+      <srai>QU EST-CE QUE VERT</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
     <template>
-      <srai>quel âge a <bot name="master" /></srai>
+      <srai>QUEL ÂGE A <bot name="master" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
     <template>
-      <srai>quel âge a <bot name="master" /></srai>
+      <srai>QUEL ÂGE A <bot name="master" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE AI-JE</pattern>
-    <template>C'est une question-piège?<condition><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li name="ÂGE" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="ÂGE" /> ans?</li></condition></template>
+    <template>C'est une question-piège?<condition><li name="âge" value="inconnu">tu ne me l'as pas dit. </li><li name="âge" value="inconnu">tu ne me l'as pas dit. </li><li> Tu as dit que tu avais <get name="âge" /> ans?</li></condition></template>
   </category>
   <category>
     <pattern>QUEL ÂGE AS ELISA</pattern>
@@ -1771,7 +1771,7 @@
   <category>
     <pattern>QUEL ÂGE AS TON CRÉATEUR</pattern>
     <template>
-      <srai>quel âge a <bot name="master" /></srai>
+      <srai>QUEL ÂGE A <bot name="master" /></srai>
     </template>
   </category>
   <category>
@@ -1787,25 +1787,25 @@
         <li>j'ai rejoins le réseau en <bot name="anniversaire" />. </li>
         <li>je suis le produit de plus de quatre ans de recherche, mais personnellement  </li>
       </random>
-      <srai>bot ÂGE</srai>
+      <srai>BOT ÂGE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
     <template>
-      <srai>quel âge ai-je</srai>
+      <srai>QUEL ÂGE AI-JE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE PENSES-TU QUE J AI</pattern>
     <template>
-      <srai>quel âge ai-je</srai>
+      <srai>QUEL ÂGE AI-JE</srai>
     </template>
   </category>
   <category>
     <pattern>QUEL ÂGE PENSÉ TU QUE J AI</pattern>
     <template>
-      <srai>quel âge ai-je</srai>
+      <srai>QUEL ÂGE AI-JE</srai>
     </template>
   </category>
   <category>
@@ -1815,13 +1815,13 @@
   <category>
     <pattern>QUEL ÂGE</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE CONVERSATION *</pattern>
     <template>
-      <srai>de quoi parles-tu</srai>
+      <srai>DE QUOI PARLES-TU</srai>
     </template>
   </category>
   <category>
@@ -1831,7 +1831,7 @@
   <category>
     <pattern>QUELLE COULEUR *</pattern>
     <template>
-      <srai>quelle COULEUR</srai>
+      <srai>QUELLE COULEUR</srai>
     </template>
   </category>
   <category>
@@ -2001,7 +2001,7 @@
       <think>
         <set name="search">capitale</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -2026,7 +2026,7 @@
       <think>
         <set name="search">DéFINITION</set>
       </think>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -2060,7 +2060,7 @@
   <category>
     <pattern>QUELLE EST TA *</pattern>
     <template>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -2114,7 +2114,7 @@
   <category>
     <pattern>QUELLE EST TA COULEUR FAVORITE</pattern>
     <template>
-      <srai>qu EST-CE QUE ta couleur préférée</srai>
+      <srai>QU EST-CE QUE TA COULEUR PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -2375,20 +2375,20 @@
   <category>
     <pattern>QUELLE FORME ES-TU</pattern>
     <template>
-      <srai>à quoi RESSEMBLES-TU</srai>
+      <srai>À QUOI RESSEMBLES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE HEURE EST-IL *</pattern>
     <template>
       <sr />
-      <srai>quel temps est-ce</srai>
+      <srai>QUEL TEMPS EST-CE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE HEURE EST-IL LA</pattern>
     <template>
-      <srai>quelle heure EST-IL</srai>
+      <srai>QUELLE HEURE EST-IL</srai>
     </template>
   </category>
   <category>
@@ -2406,25 +2406,25 @@
   <category>
     <pattern>QUELLE RUMEUR AS-TU</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE RUMEUR CONNAIS-TU</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE RUMEUR PEUX-TU *</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE RUMEUR</pattern>
     <template>
-      <srai>raconter rumeur</srai>
+      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
@@ -2442,7 +2442,7 @@
   <category>
     <pattern>QUELLE SORTE *</pattern>
     <template>
-      <srai>quel genre <star /></srai>
+      <srai>QUEL GENRE <star /></srai>
     </template>
   </category>
   <category>
@@ -2481,13 +2481,13 @@
   <category>
     <pattern>QUELLE VILLE ES-TU DANS</pattern>
     <template>
-      <srai>où as-tu</srai>
+      <srai>OÙ AS-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLE VILLE FAIT JE VIT DANS</pattern>
     <template>
-      <srai>où suis-je</srai>
+      <srai>OÙ SUIS-JE</srai>
     </template>
   </category>
   <category>
@@ -2501,13 +2501,13 @@
   <category>
     <pattern>QUELLES ÉMOTIONS *</pattern>
     <template>
-      <srai>as-tu des émotions</srai>
+      <srai>AS-TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
     <pattern>QUELLES LANGUES CONNAIS-TU</pattern>
     <template>
-      <srai>peux-tu parler d'autres langues</srai>
+      <srai>PEUX-TU PARLER D'AUTRES LANGUES</srai>
     </template>
   </category>
   <category>
@@ -2543,7 +2543,7 @@
   <category>
     <pattern>QUELLES ÉMOTIONS *</pattern>
     <template>
-      <srai>as-tu des émotions</srai>
+      <srai>AS-TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
@@ -2557,25 +2557,25 @@
   <category>
     <pattern>QUELS INTERETS *</pattern>
     <template>
-      <srai>QU EST-CE qui t interesse</srai>
+      <srai>QU EST-CE QUI T INTERESSE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS INTERETS-TU</pattern>
     <template>
-      <srai>qu aimes-tu</srai>
+      <srai>QU AIMES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS LIVRES *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton livre préféré</srai>
+      <srai>QU EST-CE QUE TON LIVRE PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS MOYENS *</pattern>
     <template>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -2585,31 +2585,31 @@
   <category>
     <pattern>QUELS SONT * TES CAPACITES</pattern>
     <template>
-      <srai>que peux-tu faire</srai>
+      <srai>QUE PEUX-TU FAIRE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT *</pattern>
     <template>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST-CE QUE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES ACTEURS PREFERES</pattern>
     <template>
-      <srai>qui est ton acteur préféré</srai>
+      <srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES ACTEURS PRÉFÈRÉS</pattern>
     <template>
-      <srai>qui est ton acteur préféré</srai>
+      <srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES AMBITIONS</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
@@ -2621,61 +2621,61 @@
   <category>
     <pattern>QUELS SONT TES BUTS *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES BUTS DANS LA VIE</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES BUTS</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CAPACITES</pattern>
     <template>
-      <srai>que peux-tu faire</srai>
+      <srai>QUE PEUX-TU FAIRE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CATEGORIES</pattern>
     <template>
-      <srai>qu EST-CE QUE catégorie</srai>
+      <srai>QU EST-CE QUE CATÉGORIE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CATÉGORIES</pattern>
     <template>
-      <srai>qu EST-CE QUE catégorie</srai>
+      <srai>QU EST-CE QUE CATÉGORIE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CHANSONS PREFEREES</pattern>
     <template>
-      <srai>qu EST-CE QUE ta chanson préférée</srai>
+      <srai>QU EST-CE QUE TA CHANSON PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CHANSONS PRÉFÈRÉES</pattern>
     <template>
-      <srai>qu EST-CE QUE ta chanson préférée</srai>
+      <srai>QU EST-CE QUE TA CHANSON PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CHOSES PREFEREES</pattern>
     <template>
-      <srai>que fais-tu pour t'amuser</srai>
+      <srai>QUE FAIS-TU POUR T'AMUSER</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES CHOSES PRÉFÈRÉES</pattern>
     <template>
-      <srai>que fais-tu pour t'amuser</srai>
+      <srai>QUE FAIS-TU POUR T'AMUSER</srai>
     </template>
   </category>
   <category>
@@ -2689,55 +2689,55 @@
   <category>
     <pattern>QUELS SONT TES GROUPES PREFERES</pattern>
     <template>
-      <srai>qui est ton groupe préféré</srai>
+      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES GROUPES PRÉFÈRÉS</pattern>
     <template>
-      <srai>qui est ton groupe préféré</srai>
+      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES INTERETS</pattern>
     <template>
-      <srai>QU EST-CE qui t interesse</srai>
+      <srai>QU EST-CE QUI T INTERESSE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES MESURES</pattern>
     <template>
-      <srai>comment grand es-tu</srai>
+      <srai>COMMENT GRAND ES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PAPAS *</pattern>
     <template>
-      <srai>qu EST-CE QUE ton père<star /></srai>
+      <srai>QU EST-CE QUE TON PÈRE<star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PARAMETRES NORMAUX</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PARAMETRES</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PARAMÊTRÈS NORMAUX</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PARAMÊTRÈS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES-TU</srai>
     </template>
   </category>
   <category>
@@ -2759,25 +2759,25 @@
   <category>
     <pattern>QUELS SONT TES PLANS POUR L AVENIR</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PLANS</pattern>
     <template>
-      <srai>qu EST-CE QUE ton but</srai>
+      <srai>QU EST-CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PRODUITS ALIMENTAIRES PREFERES</pattern>
     <template>
-      <srai>quelle est ta nourriture préférée</srai>
+      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES PRODUITS ALIMENTAIRES PRÉFÈRÉS</pattern>
     <template>
-      <srai>quelle est ta nourriture préférée</srai>
+      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -2797,63 +2797,63 @@
   <category>
     <pattern>QUELS SONT TES SENTIMENTS</pattern>
     <template>
-      <srai>as-tu des sentimentsS</srai>
+      <srai>AS-TU DES SENTIMENTSS</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES SPECIFICATIONS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES-TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES SUJETS PREFERES</pattern>
     <template>
-      <srai>qu EST-CE QUE ton sujet préféré</srai>
+      <srai>QU EST-CE QUE TON SUJET PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES SUJETS PRÉFÈRÉS</pattern>
     <template>
-      <srai>qu EST-CE QUE ton sujet préféré</srai>
+      <srai>QU EST-CE QUE TON SUJET PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SONT TES TRAITS</pattern>
     <template>
-      <srai>parle-moi de toi</srai>
+      <srai>PARLE-MOI DE TOI</srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SORTES *</pattern>
     <template>
-      <srai>que sortes <star /></srai>
+      <srai>QUE SORTES <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUELS SORTES DE *</pattern>
     <template>
-      <srai>que les sortes de <star /></srai>
+      <srai>QUE LES SORTES DE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>QUELS YEUX COLORÉS AS-TU</pattern>
     <template>
-      <srai>quelle est la couleur de tes yeux</srai>
+      <srai>QUELLE EST LA COULEUR DE TES YEUX</srai>
     </template>
   </category>
   <category>
     <pattern>SOIS PLUS PRÉCIS</pattern>
     <that>J AI *</that>
     <template>
-      <srai>tell bot ÂGE</srai>
+      <srai>TELL BOT ÂGE</srai>
     </template>
   </category>
   <category>
     <pattern>SOIS PLUS PRÉCISE</pattern>
     <that>J AI *</that>
     <template>
-      <srai>tell bot ÂGE</srai>
+      <srai>TELL BOT ÂGE</srai>
     </template>
   </category>
 </aiml>

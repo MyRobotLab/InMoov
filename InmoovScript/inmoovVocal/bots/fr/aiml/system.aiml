@@ -38,7 +38,7 @@
   <category>
     <pattern>INACTIVITY</pattern>
     <template>
-      <srai>appel</srai>
+      <srai>APPEL</srai>
     </template>
   </category>
   <category>
@@ -114,7 +114,7 @@ bye!
     <template>
       <set name="compteappel">
       </set>
-      <srai>apptristesse</srai>
+      <srai>APPTRISTESSE</srai>
 bye! 
 </template>
   </category>
@@ -136,7 +136,7 @@ bye!
           <person2 />
         </set>
       </think>
-      <srai>catchall</srai>
+      <srai>CATCHALL</srai>
     </template>
   </category>
   <category>
@@ -256,23 +256,23 @@ tu crois que je marche sous DOS! </template>
   <category>
     <pattern>DELETE *</pattern>
     <template>
-      <srai>AppMoquerie</srai>Tu crois pouvoir accéder à mes fichiers aussi facilement, <get name="name" />. </template>
+      <srai>APPMOQUERIE</srai>Tu crois pouvoir accéder à mes fichiers aussi facilement, <get name="name" />. </template>
   </category>
   <category>
     <pattern>EFFACE *</pattern>
     <template>
-      <srai>AppMoquerie</srai>Tu ne peux pas accéder à mes fichiers aussi facilement, <get name="name" />. </template>
+      <srai>APPMOQUERIE</srai>Tu ne peux pas accéder à mes fichiers aussi facilement, <get name="name" />. </template>
   </category>
   <category>
     <pattern>ERREUR</pattern>
     <template>
-      <srai>error</srai>
+      <srai>ERROR</srai>
     </template>
   </category>
   <category>
     <pattern>ERROR</pattern>
     <template>
-      <srai>AppDesolee</srai>Je suis désolée, une erreur C EST produite quelque part, essaie autre chose. </template>
+      <srai>APPDESOLEE</srai>Je suis désolée, une erreur C EST produite quelque part, essaie autre chose. </template>
   </category>
   <category>
     <pattern>HELP *</pattern>
@@ -285,7 +285,7 @@ tu crois que je marche sous DOS! </template>
   <category>
     <pattern>JE TE PRESENTE *</pattern>
     <template>
-      <srai>newuser</srai>
+      <srai>NEWUSER</srai>
       <set name="name">
         <star />
       </set>
@@ -298,7 +298,7 @@ tu crois que je marche sous DOS! </template>
   <category>
     <pattern>LOGOUT</pattern>
     <template>
-      <srai>au revoir</srai>
+      <srai>AU REVOIR</srai>
     </template>
   </category>
   <category>
@@ -330,7 +330,7 @@ tu crois que je marche sous DOS! </template>
         <set name="cava">inconnu</set>
         <set name="memory">inconnu</set>
         <set name="gender">inconnu</set>
-        <set name="ÂGE">inconnu</set>
+        <set name="âge">inconnu</set>
         <set name="insulte">inconnu</set>
         <think>
           <set name="oldtopic">
@@ -381,7 +381,7 @@ tu crois que je marche sous DOS! </template>
         <set name="he">inconnu</set>
         <set name="dejavenu">non</set>
       </think>
-      <srai>connect</srai>
+      <srai>CONNECT</srai>
     </template>
   </category>
   <category>
@@ -390,18 +390,18 @@ tu crois que je marche sous DOS! </template>
       <set name="url">
         <star />
       </set>
-      <srai>openurl</srai>
+      <srai>OPENURL</srai>
     </template>
   </category>
   <category>
     <pattern>OUBLIE CE QUE TU SAIS DE MOI</pattern>
     <template>
-      <srai>newuser</srai>ok, j'ai tout oublié. </template>
+      <srai>NEWUSER</srai>ok, j'ai tout oublié. </template>
   </category>
   <category>
     <pattern>OUBLIE MOI</pattern>
     <template>
-      <srai>newuser</srai>ok, j'ai tout oublié. </template>
+      <srai>NEWUSER</srai>ok, j'ai tout oublié. </template>
   </category>
   <category>
     <pattern>SUIS-JE LOGUÉ</pattern>
