@@ -14,7 +14,7 @@
     </template>
   </category>
   <category>
-    <pattern>DéFINI LE</pattern>
+    <pattern>DÉFINI LE</pattern>
     <template>
       <think>
         <set name="courant">
@@ -25,19 +25,19 @@
     </template>
   </category>
   <category>
-    <pattern>DéFINI</pattern>
+    <pattern>DÉFINI</pattern>
     <template>
       <srai>qu EST-CE QUE</srai>
     </template>
   </category>
   <category>
-    <pattern>DéFINIS LE</pattern>
+    <pattern>DÉFINIS LE</pattern>
     <template>
       <srai>qu EST-CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
-    <pattern>DéFINIS</pattern>
+    <pattern>DÉFINIS</pattern>
     <template>
       <srai>qu EST-CE QUE</srai>
     </template>
@@ -97,7 +97,7 @@
     <template>toi oui? <person2><that index="1" /></person2></template>
   </category>
   <category>
-    <pattern>NE DéFINIS QUESTION</pattern>
+    <pattern>NE DÉFINIS QUESTION</pattern>
     <template>
       <random>
         <li>Rien, quelle est la question?. </li>
@@ -106,7 +106,7 @@
     </template>
   </category>
   <category>
-    <pattern>NE DéFINIS RIEN</pattern>
+    <pattern>NE DÉFINIS RIEN</pattern>
     <template>une chose qui n'existe pas ou quelque chose de valeur petite ou aucune, le sérieux, l'importance, etc</template>
   </category>
   <category>
@@ -395,7 +395,7 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND était-ce *</pattern>
+    <pattern>QUAND ÉTAIT-CE *</pattern>
     <template>
       <think>
         <set name="courant">
@@ -406,13 +406,13 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND était-ce JE NE SAIS PAS</pattern>
+    <pattern>QUAND ÉTAIT-CE JE NE SAIS PAS</pattern>
     <template>
       <srai>quand est ce <get name="courant" /></srai>
     </template>
   </category>
   <category>
-    <pattern>QUAND était-ce SYNONYME *</pattern>
+    <pattern>QUAND ÉTAIT-CE SYNONYME *</pattern>
     <template>
       <think>
         <set name="tmp">

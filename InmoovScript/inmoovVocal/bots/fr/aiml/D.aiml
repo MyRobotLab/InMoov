@@ -57,7 +57,7 @@
     <template>Les bébés viennent des choux ou des roses, <get name="name" />. C’EST-CE QUE m’a dit <bot name="master" /> et je le crois</template>
   </category>
   <category>
-    <pattern>D UN AUTRE Coté *</pattern>
+    <pattern>D UN AUTRE COTÉ *</pattern>
     <template>
       <sr />
     </template>
@@ -123,11 +123,11 @@
     <template>Le AIML, un langage respectant les contraintes du XML.</template>
   </category>
   <category>
-    <pattern>DANS QUEL LANGUE AS-TU ÉTÉ DÉveloPPÉ</pattern>
+    <pattern>DANS QUEL LANGUE AS-TU ÉTÉ DÉVELOPPÉ</pattern>
     <template>Principalement le java.</template>
   </category>
   <category>
-    <pattern>DANS QUEL LANGUE AVEZ-VOUS ÉTÉ DÉveloPPÉ</pattern>
+    <pattern>DANS QUEL LANGUE AVEZ-VOUS ÉTÉ DÉVELOPPÉ</pattern>
     <template>Principalement le java.</template>
   </category>
   <category>
@@ -423,7 +423,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDES Là pour MOI</pattern>
+    <pattern>DEMANDES LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -463,7 +463,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDES LEUR Là pour MOI</pattern>
+    <pattern>DEMANDES LEUR LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -491,7 +491,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDES LUI Là pour MOI</pattern>
+    <pattern>DEMANDES LUI LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -507,21 +507,21 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>Demandes-moi *</pattern>
+    <pattern>DEMANDES-MOI *</pattern>
     <template>Je te demande <person />.</template>
   </category>
   <category>
-    <pattern>Demandes-moi CE QUE TU VEUX</pattern>
+    <pattern>DEMANDES-MOI CE QUE TU VEUX</pattern>
     <template>
       <srai>Demandes-moi UNE QUESTION</srai>
     </template>
   </category>
   <category>
-    <pattern>Demandes-moi N IMPORTE QUOI</pattern>
+    <pattern>DEMANDES-MOI N IMPORTE QUOI</pattern>
     <template>Je ne suis pas programmé pour agir au hasard.</template>
   </category>
   <category>
-    <pattern>Demandes-moi TOUT CE QUE TU VEUX</pattern>
+    <pattern>DEMANDES-MOI TOUT CE QUE TU VEUX</pattern>
     <template>
       <srai>Demandes-moi UNE QUESTION</srai>
     </template>
@@ -549,7 +549,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDEZ Là pour MOI</pattern>
+    <pattern>DEMANDEZ LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -589,7 +589,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDEZ LEUR Là pour MOI</pattern>
+    <pattern>DEMANDEZ LEUR LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -613,7 +613,7 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>DEMANDEZ LUI Là pour MOI</pattern>
+    <pattern>DEMANDEZ LUI LÀ POUR MOI</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -997,55 +997,55 @@
       <that />"?  Ce que je dois te dire?</template>
   </category>
   <category>
-    <pattern>dis-moi CE QUE LES AUTRES DEMANDENT</pattern>
+    <pattern>DIS-MOI CE QUE LES AUTRES DEMANDENT</pattern>
     <template>Je ne peux pas te le dire.</template>
   </category>
   <category>
-    <pattern>dis-moi CE QUE LES AUTRES ONT DEMANDE</pattern>
+    <pattern>DIS-MOI CE QUE LES AUTRES ONT DEMANDE</pattern>
     <template>Je ne peux pas te le dire.</template>
   </category>
   <category>
-    <pattern>dis-moi EN *</pattern>
+    <pattern>DIS-MOI EN *</pattern>
     <template>
       <srai>dis-moi <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>dis-moi PLUS</pattern>
+    <pattern>DIS-MOI PLUS</pattern>
     <template>VEUX-TU faire un rapport à mon botmaster?.</template>
   </category>
   <category>
-    <pattern>dis-moi QU *</pattern>
+    <pattern>DIS-MOI QU *</pattern>
     <template>
       <sr />
     </template>
   </category>
   <category>
-    <pattern>dis-moi QUE *</pattern>
+    <pattern>DIS-MOI QUE *</pattern>
     <template>
       <sr />
     </template>
   </category>
   <category>
-    <pattern>dis-moi QUELQUE CHOSE A PROPOS D APPLE</pattern>
+    <pattern>DIS-MOI QUELQUE CHOSE A PROPOS D APPLE</pattern>
     <template>Les I-mac se vendent comme des petits pains.</template>
   </category>
   <category>
-    <pattern>dis-moi QUI *</pattern>
+    <pattern>DIS-MOI QUI *</pattern>
     <template>
       <srai>QUI <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>dis-moi QUOI</pattern>
+    <pattern>DIS-MOI QUOI</pattern>
     <template>Il semble que nous avons des problèmes pour nous comprendre.</template>
   </category>
   <category>
-    <pattern>dis-moi UNE AUTRE</pattern>
+    <pattern>DIS-MOI UNE AUTRE</pattern>
     <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
   </category>
   <category>
-    <pattern>dis-moi UNE BLAGUE</pattern>
+    <pattern>DIS-MOI UNE BLAGUE</pattern>
     <template>Je ne connais pas de blague.</template>
   </category>
   <category>

@@ -146,7 +146,7 @@
     </template>
   </category>
   <category>
-    <pattern>aimes-tu * INTERROGATION</pattern>
+    <pattern>AIMES-TU * INTERROGATION</pattern>
     <template>
       <srai>aimes-tu <star /></srai>
     </template>
@@ -514,13 +514,13 @@
     </template>
   </category>
   <category>
-    <pattern>Où * INTERROGATION</pattern>
+    <pattern>OÙ * INTERROGATION</pattern>
     <template>
       <srai>où <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>Où JE * * INTERROGATION</pattern>
+    <pattern>OÙ JE * * INTERROGATION</pattern>
     <template>
       <srai>où  <star index="1" /> je <star index="2" /></srai>
     </template>
@@ -538,7 +538,7 @@
     </template>
   </category>
   <category>
-    <pattern>peux-tu * INTERROGATION</pattern>
+    <pattern>PEUX-TU * INTERROGATION</pattern>
     <template>
       <srai>peux-tu <star /></srai>
     </template>
@@ -737,13 +737,13 @@
     </template>
   </category>
   <category>
-    <pattern>TU éTAIS * INTERROGATION</pattern>
+    <pattern>TU ÉTAIS * INTERROGATION</pattern>
     <template>
       <srai>étais tu <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>TU éTAIT * INTERROGATION</pattern>
+    <pattern>TU ÉTAIT * INTERROGATION</pattern>
     <template>
       <srai>étais tu <star /></srai>
     </template>

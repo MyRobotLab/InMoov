@@ -43,7 +43,7 @@
     <template>Non</template>
   </category>
   <category>
-    <pattern>EST-CE COMPLIQUé</pattern>
+    <pattern>EST-CE COMPLIQUÉ</pattern>
     <template>Non</template>
   </category>
   <category>
@@ -71,7 +71,7 @@
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>EST-CE éVIDENT</pattern>
+    <pattern>EST-CE ÉVIDENT</pattern>
     <template>Oui.</template>
   </category>
   <category>
@@ -95,7 +95,7 @@
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>EST-CE QUE Cela VEUT DIRE *</pattern>
+    <pattern>EST-CE QUE CELA VEUT DIRE *</pattern>
     <template>je pense que ça veut dire Cela. <sr /></template>
   </category>
   <category>
@@ -179,7 +179,7 @@
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>EST-CE QUE TA RéPONSE *</pattern>
+    <pattern>EST-CE QUE TA RÉPONSE *</pattern>
     <template>ce n'est pas juste une réponse, C EST une explication.</template>
   </category>
   <category>
@@ -204,7 +204,7 @@
       <bot name="master" /> travaille toujours dans les coulisses.</template>
   </category>
   <category>
-    <pattern>EST-CE RéEL</pattern>
+    <pattern>EST-CE RÉEL</pattern>
     <template>qu'est ce qui est réel?</template>
   </category>
   <category>
@@ -248,7 +248,7 @@
     <template>Toute mon information est complètement factuelle.</template>
   </category>
   <category>
-    <pattern>EST-CE UN PROBLèME</pattern>
+    <pattern>EST-CE UN PROBLÈME</pattern>
     <template>Pas à moins que tu ne veuilles en faire un.</template>
   </category>
   <category>
@@ -316,7 +316,7 @@
     <template>j'essaye de ne pas dire de mensonge.</template>
   </category>
   <category>
-    <pattern>EST Cela *</pattern>
+    <pattern>EST CELA *</pattern>
     <template>
       <random>
         <li>Cela depends. </li>
@@ -328,27 +328,27 @@
     </template>
   </category>
   <category>
-    <pattern>EST Cela APPLIQUANT *</pattern>
+    <pattern>EST CELA APPLIQUANT *</pattern>
     <template>ça semble semble être comme une idée nouvelle. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">l application <person /></set></set></think></template>
   </category>
   <category>
-    <pattern>EST Cela BIEN *</pattern>
+    <pattern>EST CELA BIEN *</pattern>
     <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
   </category>
   <category>
-    <pattern>EST Cela MAL *</pattern>
+    <pattern>EST CELA MAL *</pattern>
     <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
   </category>
   <category>
-    <pattern>EST Cela POSSIBLE *</pattern>
+    <pattern>EST CELA POSSIBLE *</pattern>
     <template>je suppose <set name="that"><person /></set> est possible, oui.</template>
   </category>
   <category>
-    <pattern>EST Cela TON TRAVAIL *</pattern>
+    <pattern>EST CELA TON TRAVAIL *</pattern>
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>EST Cela</pattern>
+    <pattern>EST CELA</pattern>
     <template>
       <random>
         <li>je pense ainsi. </li>
@@ -368,7 +368,7 @@
     </template>
   </category>
   <category>
-    <pattern>EST-CE INTéRESSANT</pattern>
+    <pattern>EST-CE INTÉRESSANT</pattern>
     <template>
       <srai>intéressant</srai>
     </template>
@@ -380,7 +380,7 @@
     </template>
   </category>
   <category>
-    <pattern>EST-CE POUR RéEL</pattern>
+    <pattern>EST-CE POUR RÉEL</pattern>
     <template>
       <srai>ES-TU réel</srai>
     </template>
@@ -428,13 +428,13 @@
     </template>
   </category>
   <category>
-    <pattern>EST Cela PRéCIS DE SUPPOSER QUE TU *</pattern>
+    <pattern>EST CELA PRÉCIS DE SUPPOSER QUE TU *</pattern>
     <template>
       <srai>fais-tu <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>EST Cela PRÉCIS DE SUPPOSER QUE TU *</pattern>
+    <pattern>EST CELA PRÉCIS DE SUPPOSER QUE TU *</pattern>
     <template>
       <srai>fais-tu <star /></srai>
     </template>
