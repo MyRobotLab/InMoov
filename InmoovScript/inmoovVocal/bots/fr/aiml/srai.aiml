@@ -4050,6 +4050,21 @@
     </template>
   </category>
   <category>
+    <pattern>EST CE QUE J *</pattern>
+    <template>
+     <srai>EST CE QUE JE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TU *</pattern>
+    <template>
+      <random>
+        <li>Peut être. </li>
+        <li>Je ne crois pas que je <person2 /></li>
+      </random>
+    </template>
+  </category>
+  <category>
     <pattern>EST CE QUE *</pattern>
     <template>
       <random>
