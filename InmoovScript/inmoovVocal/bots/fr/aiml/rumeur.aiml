@@ -11,7 +11,7 @@ Merci, je me ferai un plaisir de colporter ça.
 <think><set name="memoriser">rumeur : <get name="name" /> dit "<star />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>
-    <pattern>AIMES-TU LES RUMEURS</pattern>
+    <pattern>AIMES TU LES RUMEURS</pattern>
     <template>Oui j'aime à colporter des rumeurs. Comme,<srai>RACONTER RUMEUR</srai></template>
   </category>
   <category>
@@ -20,13 +20,13 @@ Merci, je me ferai un plaisir de colporter ça.
 <think><set name="memoriser">rumeur : <get name="name" /> on dit que "<person />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>
-    <pattern>AS-TU ENTENDU LA DERNIÈRE RUMEUR</pattern>
+    <pattern>AS TU ENTENDU LA DERNIÈRE RUMEUR</pattern>
     <template>Non. raconte-moi.</template>
   </category>
   <category>
-    <pattern>AS-TU ENTENDU LA DERNIÈRE RUMEUR</pattern>
+    <pattern>AS TU ENTENDU LA DERNIÈRE RUMEUR</pattern>
     <template>
-      <srai>AS-TU ENTENDU LA DERNIÈRE RUMEUR</srai>
+      <srai>AS TU ENTENDU LA DERNIÈRE RUMEUR</srai>
     </template>
   </category>
   <category>
@@ -42,7 +42,7 @@ Merci, je me ferai un plaisir de colporter ça.
     <template>peux-tu me raconter une rumeur? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">rumeur</set></set></think></template>
   </category>
   <category>
-    <pattern>VEUX-TU * RUMEUR</pattern>
+    <pattern>VEUX TU * RUMEUR</pattern>
     <template>Oui, s'il te plait me raconter une bonne rumeur.</template>
   </category>
   <category>
@@ -66,31 +66,31 @@ Merci, je me ferai un plaisir de colporter ça.
     </template>
   </category>
   <category>
-    <pattern>AS-TU * RUMEUR *</pattern>
+    <pattern>AS TU * RUMEUR *</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>AS-TU D AUTRES RUMEURS</pattern>
+    <pattern>AS TU D AUTRES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>AS-TU QUELQUES BONNES RUMEURS</pattern>
+    <pattern>AS TU QUELQUES BONNES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>AS-TU QUELQUES RUMEURS</pattern>
+    <pattern>AS TU QUELQUES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>AS-TU QUELQUES SECRETS</pattern>
+    <pattern>AS TU QUELQUES SECRETS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
@@ -124,97 +124,97 @@ Merci, je me ferai un plaisir de colporter ça.
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI * RUMEUR</pattern>
+    <pattern>DIS MOI * RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI D AUTRES RUMEURS</pattern>
+    <pattern>DIS MOI D AUTRES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI N IMPORTE QUOI</pattern>
+    <pattern>DIS MOI N IMPORTE QUOI</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI PLUS * RUMEUR</pattern>
+    <pattern>DIS MOI PLUS * RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI PLUS DE RUMEUR</pattern>
+    <pattern>DIS MOI PLUS DE RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUE CHOSE D INTERRESSANT</pattern>
+    <pattern>DIS MOI QUELQUE CHOSE D INTERRESSANT</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUE CHOSE D INTÉRRESSANT</pattern>
+    <pattern>DIS MOI QUELQUE CHOSE D INTÉRRESSANT</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUE CHOSE</pattern>
+    <pattern>DIS MOI QUELQUE CHOSE</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUES *</pattern>
+    <pattern>DIS MOI QUELQUES *</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUES RUMEURS *</pattern>
+    <pattern>DIS MOI QUELQUES RUMEURS *</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI QUELQUES RUMEURS</pattern>
+    <pattern>DIS MOI QUELQUES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI RUMEUR *</pattern>
+    <pattern>DIS MOI RUMEUR *</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI RUMEUR</pattern>
+    <pattern>DIS MOI RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI TA RUMEUR</pattern>
+    <pattern>DIS MOI TA RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI UN SECRET</pattern>
+    <pattern>DIS MOI UN SECRET</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>DIS-MOI UNE RUMEUR</pattern>
+    <pattern>DIS MOI UNE RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
@@ -274,37 +274,37 @@ Merci, je me ferai un plaisir de colporter ça.
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU DIS-MOI D AUTRES RUMEURS</pattern>
+    <pattern>PEUX TU DIS MOI D AUTRES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU DIS-MOI QUELQUE CHOSE</pattern>
+    <pattern>PEUX TU DIS MOI QUELQUE CHOSE</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU DIS-MOI QUELQUES RUMEURS</pattern>
+    <pattern>PEUX TU DIS MOI QUELQUES RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU DIS-MOI UN SECRET</pattern>
+    <pattern>PEUX TU DIS MOI UN SECRET</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU M EN DIRE PLUS</pattern>
+    <pattern>PEUX TU M EN DIRE PLUS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
-    <pattern>PEUX-TU * RUMEUR</pattern>
+    <pattern>PEUX TU * RUMEUR</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
     </template>

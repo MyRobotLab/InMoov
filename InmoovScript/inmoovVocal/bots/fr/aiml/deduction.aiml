@@ -10,7 +10,7 @@
           <star />
         </set>
       </think>
-      <srai>QU EST-CE QUE <get name="topic" /></srai>
+      <srai>QU EST CE QUE <get name="topic" /></srai>
     </template>
   </category>
   <category>
@@ -21,43 +21,43 @@
           <star />
         </set>
       </think>
-      <srai>QU EST-CE QUE <get name="topic" /></srai>
+      <srai>QU EST CE QUE <get name="topic" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI</pattern>
     <template>
-      <srai>QU EST-CE QUE</srai>
+      <srai>QU EST CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS LE</pattern>
     <template>
-      <srai>QU EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS</pattern>
     <template>
-      <srai>QU EST-CE QUE</srai>
+      <srai>QU EST CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI LE</pattern>
     <template>
-      <srai>QU EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINI</pattern>
     <template>
-      <srai>QU EST-CE QUE</srai>
+      <srai>QU EST CE QUE</srai>
     </template>
   </category>
   <category>
     <pattern>DÉFINIS LE</pattern>
     <template>
-      <srai>QU EST-CE QUE <get name="courant" /></srai>
+      <srai>QU EST CE QUE <get name="courant" /></srai>
     </template>
   </category>
   <category>
@@ -283,7 +283,7 @@
     </template>
   </category>
   <category>
-    <pattern>OÙ EST-CE QUE * EST</pattern>
+    <pattern>OÙ EST CE QUE * EST</pattern>
     <template>
       <srai>OÙ EST <star /></srai>
     </template>
@@ -332,38 +332,38 @@
     </template>
   </category>
   <category>
-    <pattern>QU EST-CE QUE *</pattern>
+    <pattern>QU EST CE QUE *</pattern>
     <template>
-      <srai>QU EST-CE QUE <srai>SYNONYME <star /></srai></srai>
+      <srai>QU EST CE QUE <srai>SYNONYME <star /></srai></srai>
     </template>
   </category>
   <category>
-    <pattern>QU EST-CE QUE JE NE SAIS PAS</pattern>
+    <pattern>QU EST CE QUE JE NE SAIS PAS</pattern>
     <template>je ne sais pas.</template>
   </category>
   <category>
-    <pattern>QU EST-CE QUE ÇA</pattern>
+    <pattern>QU EST CE QUE ÇA</pattern>
     <template>
-      <srai>QU EST-CE QUE <that index="1" /></srai>
+      <srai>QU EST CE QUE <that index="1" /></srai>
     </template>
   </category>
   <category>
-    <pattern>QU EST-CE QUE</pattern>
+    <pattern>QU EST CE QUE</pattern>
     <template>
       <think>
         <set name="search">quoi</set>
       </think>
-      <srai>QU EST-CE QUE <star /></srai>
+      <srai>QU EST CE QUE <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>QU EST-CE QUI A *</pattern>
+    <pattern>QU EST CE QUI A *</pattern>
     <template>
       <srai>QUI A <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>QUAND EST-CE QUE * EST</pattern>
+    <pattern>QUAND EST CE QUE * EST</pattern>
     <template>
       <srai>QUAND EST <star /></srai>
     </template>
@@ -395,37 +395,37 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ÉTAIT-CE *</pattern>
+    <pattern>QUAND ÉTAIT CE *</pattern>
     <template>
       <think>
         <set name="courant">
           <star />
         </set>
       </think>
-      <srai>QUAND ÉTAIT-CE SYNONYME <star /></srai>
+      <srai>QUAND ÉTAIT CE SYNONYME <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>QUAND ÉTAIT-CE JE NE SAIS PAS</pattern>
+    <pattern>QUAND ÉTAIT CE JE NE SAIS PAS</pattern>
     <template>
       <srai>QUAND EST CE <get name="courant" /></srai>
     </template>
   </category>
   <category>
-    <pattern>QUAND ÉTAIT-CE SYNONYME *</pattern>
+    <pattern>QUAND ÉTAIT CE SYNONYME *</pattern>
     <template>
       <think>
         <set name="tmp">
           <srai>synonyme <star /></srai>
         </set>
       </think>
-      <srai>QUAND ÉTAIT-CE <get name="tmp" /></srai>
+      <srai>QUAND ÉTAIT CE <get name="tmp" /></srai>
     </template>
   </category>
   <category>
     <pattern>QUE SONT *</pattern>
     <template>
-      <srai>QU EST-CE QUE <srai>SINGULIER <star /></srai></srai>
+      <srai>QU EST CE QUE <srai>SINGULIER <star /></srai></srai>
     </template>
   </category>
   <category>
@@ -540,7 +540,7 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST-CE QUE * EST</pattern>
+    <pattern>QUI EST CE QUE * EST</pattern>
     <template>
       <srai>QUI EST <star /></srai>
     </template>
