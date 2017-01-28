@@ -25,7 +25,7 @@ def onRecognized(text):
 	if DEBUG==1:
 		print "onRecognized : ",text
 	if EarInterpretEngine=="chatbot":
-		chatBot.getResponse(text.replace("'", " "))
+		chatBot.getResponse(text.replace("'", " ").replace("-", " "))
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS

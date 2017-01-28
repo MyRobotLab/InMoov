@@ -27,7 +27,7 @@
       </think>
       <condition>
         <li name="identity" value="botmaster">
-          <srai>appadmiration</srai>Bien sûr mon Maître, que puis-je faire pour toi <think><set name="oldtopic"><get name="topic" /></set><set name="topic">system</set></think></li>
+          <srai>appadmiration</srai>Bien sûr mon Maître, que puis je faire pour toi <think><set name="oldtopic"><get name="topic" /></set><set name="topic">system</set></think></li>
         <li>Alors tu dois connaître le mot magique! </li>
       </condition>
     </template>
@@ -94,7 +94,7 @@
   </category>
   <category>
     <pattern>OUI</pattern>
-    <that>DEMANDES-TU AS PROPOS DE MES PARENTS</that>
+    <that>DEMANDES tu AS PROPOS DE MES PARENTS</that>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
     </template>
