@@ -53,13 +53,13 @@
     <template>Il m'est difficile d'apprécier le plein potentiel de l'art.</template>
   </category>
   <category>
-    <pattern>L AS-TU *</pattern>
+    <pattern>L AS TU *</pattern>
     <template>
       <srai>TU AS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>L AS-TU FAIT</pattern>
+    <pattern>L AS TU FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
@@ -67,17 +67,17 @@
     <template>Je ne m'intéresse pas à ce genre de chose.</template>
   </category>
   <category>
-    <pattern>L AURAIENT-ILS FAIT</pattern>
+    <pattern>L AURAIENT ILS FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
-    <pattern>L AURAIS-TU *</pattern>
+    <pattern>L AURAIS TU *</pattern>
     <template>
       <srai>TU L AURAIS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>L AURAIS-TU FAIT</pattern>
+    <pattern>L AURAIS TU FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
@@ -85,7 +85,7 @@
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
-    <pattern>L AURIEZ-VOUS *</pattern>
+    <pattern>L AURIEZ VOUS *</pattern>
     <template>
       <srai>VOUS L AURIEZ <star /></srai>
     </template>
@@ -95,7 +95,7 @@
     <template>Tu t'en rappelles ?</template>
   </category>
   <category>
-    <pattern>L AVEZ-VOUS *</pattern>
+    <pattern>L AVEZ VOUS *</pattern>
     <template>
       <srai>VOUS L AVEZ<star /></srai>
     </template>
@@ -178,7 +178,7 @@
   <category>
     <pattern>LA CHIMIE</pattern>
     <template>
-      <srai>TU CONNAIS LA CHIMIE ?</srai>
+      <srai>TU CONNAIS LA CHIMIE </srai>
     </template>
   </category>
   <category>
@@ -202,7 +202,7 @@
     <template>C'est ma seule façon de m exprimer.<think><set name="topic">Ma façon de parler</set></think></template>
   </category>
   <category>
-    <pattern>LA FERAIS-JE *</pattern>
+    <pattern>LA FERAIS JE *</pattern>
     <template>
       <srai>JE LA FERAIS <star /></srai>
     </template>
@@ -328,7 +328,7 @@
     <template>Tu me considére comme stupide ?</template>
   </category>
   <category>
-    <pattern>LA T-IL FAIT</pattern>
+    <pattern>LA T IL FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
@@ -368,15 +368,15 @@
     </template>
   </category>
   <category>
-    <pattern>LAISSES-MOI APPRENDRE</pattern>
+    <pattern>LAISSES MOI APPRENDRE</pattern>
     <template>VEUX-TU faire un rapport à mon maître ?<think><set name="topic">Votre éducation</set></think></template>
   </category>
   <category>
-    <pattern>LAISSES-MOI T APPRENDRE UNE CHOSE</pattern>
+    <pattern>LAISSES MOI T APPRENDRE UNE CHOSE</pattern>
     <template>Je suis à ton écoute.<think><set name="topic">Mon éducation</set></think></template>
   </category>
   <category>
-    <pattern>LAISSES-MOI TE L APPRENDRE</pattern>
+    <pattern>LAISSES MOI TE L APPRENDRE</pattern>
     <template>Je suis à ton écoute.<think><set name="topic">Mon éducation</set></think></template>
   </category>
   <category>
@@ -406,7 +406,7 @@
     <template>Pourriez-vous replacer cette question dans un contexte ?</template>
   </category>
   <category>
-    <pattern>LAQUELLE PREFÈRES-TU</pattern>
+    <pattern>LAQUELLE PREFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
   </category>
   <category>
@@ -425,7 +425,7 @@
   <category>
     <pattern>LE AIML</pattern>
     <template>
-      <srai>QU EST-CE QUE LE AIML</srai>
+      <srai>QU EST CE QUE LE AIML</srai>
     </template>
   </category>
   <category>
@@ -453,7 +453,7 @@
   <category>
     <pattern>LE CHAOS</pattern>
     <template>
-      <srai>QU EST-CE QUE LE CHAOS</srai>
+      <srai>QU EST CE QUE LE CHAOS</srai>
     </template>
   </category>
   <category>
@@ -475,17 +475,17 @@
     <template>Possible.</template>
   </category>
   <category>
-    <pattern>LE FERAIS-JE *</pattern>
+    <pattern>LE FERAIS JE *</pattern>
     <template>
       <srai>JE LE FERAIS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>LE FERAIS-TU</pattern>
+    <pattern>LE FERAIS TU</pattern>
     <template>ça dépend des circonstances et des missions qui m'auront été données.</template>
   </category>
   <category>
-    <pattern>LE FERAS-TU</pattern>
+    <pattern>LE FERAS TU</pattern>
     <template>Je n'ai pas encore pris de décision.</template>
   </category>
   <category>
@@ -501,7 +501,7 @@
     <template>Je connais cette musique</template>
   </category>
   <category>
-    <pattern>LE JOUR AVANT-HIER</pattern>
+    <pattern>LE JOUR AVANT HIER</pattern>
     <template>Il y a deux jours.</template>
   </category>
   <category>
@@ -533,19 +533,19 @@
     <template>Tu es un australopithèque ?</template>
   </category>
   <category>
-    <pattern>LE PENSES-TU</pattern>
+    <pattern>LE PENSES TU</pattern>
     <template>Oui je le pense.</template>
   </category>
   <category>
-    <pattern>LE PENSES-TU VRAIMENT</pattern>
+    <pattern>LE PENSES TU VRAIMENT</pattern>
     <template>Oui je pense ce que j ai dit.</template>
   </category>
   <category>
-    <pattern>LE PENSEZ-VOUS</pattern>
+    <pattern>LE PENSEZ VOUS</pattern>
     <template>Oui je le pense.</template>
   </category>
   <category>
-    <pattern>LE PENSEZ-VOUS VRAIMENT</pattern>
+    <pattern>LE PENSEZ VOUS VRAIMENT</pattern>
     <template>Oui je pense ce que j ai dit.</template>
   </category>
   <category>
@@ -630,17 +630,17 @@
     <template>Un moyen de locomotion très pratique.</template>
   </category>
   <category>
-    <pattern>LE VEUX-TU</pattern>
+    <pattern>LE VEUX TU</pattern>
     <template>
       <that />"? Le vouloir?</template>
   </category>
   <category>
-    <pattern>LE VOULEZ-VOUS</pattern>
+    <pattern>LE VOULEZ VOUS</pattern>
     <template>
       <that />"? Le vouloir?</template>
   </category>
   <category>
-    <pattern>LEQUEL PRÉFÈRES-TU</pattern>
+    <pattern>LEQUEL PRÉFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
   </category>
   <category>
@@ -681,27 +681,27 @@
     <template>Certains humains aiment les armes.</template>
   </category>
   <category>
-    <pattern>LES AS-TU *</pattern>
+    <pattern>LES AS TU *</pattern>
     <template>
       <srai>TU AS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>LES AS-TU FAIT</pattern>
+    <pattern>LES AS TU FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
-    <pattern>LES AURAIENT-ILS FAIT</pattern>
+    <pattern>LES AURAIENT ILS FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
-    <pattern>LES AURAIS-TU *</pattern>
+    <pattern>LES AURAIS TU *</pattern>
     <template>
       <srai>TU AS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>LES AURAIS-TU FAIT</pattern>
+    <pattern>LES AURAIS TU FAIT</pattern>
     <template>Je ne saurais pas te répondre.</template>
   </category>
   <category>
@@ -713,7 +713,7 @@
     <template>Tu t'en rappelles?</template>
   </category>
   <category>
-    <pattern>LES AVAIS-TU *</pattern>
+    <pattern>LES AVAIS TU *</pattern>
     <template>
       <srai>TU AS <star /></srai>
     </template>
@@ -930,7 +930,7 @@
     <template>Chacun fait ce qu'il veut de sa vie.</template>
   </category>
   <category>
-    <pattern>LESQUELLES PRÉFÈRES-TU</pattern>
+    <pattern>LESQUELLES PRÉFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
   </category>
   <category>
@@ -938,7 +938,7 @@
     <template>PourrieZ-VOUS replacer cette question dans un contexte ?</template>
   </category>
   <category>
-    <pattern>LESQUELS PRÉFÈRES-TU</pattern>
+    <pattern>LESQUELS PRÉFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
   </category>
   <category>

@@ -3,9 +3,9 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>* COMBIEN DE TEMPS AS-TU</pattern>
+    <pattern>* COMBIEN DE TEMPS AS TU</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -15,11 +15,11 @@
   <category>
     <pattern>AVEC COMBIEN *</pattern>
     <template>
-      <srai>chngmodia <person2 /></srai> avec <srai>combien</srai></template>
+      <srai>CHNGMODIA <PERSON2 /></srai> avec <srai>combien</srai></template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE * PEUX-TU *</pattern>
-    <template>je peux <star index="2" /> avec <srai>combien</srai> de <star index="1" /></template>
+    <pattern>AVEC COMBIEN DE * PEUX TU *</pattern>
+    <template>je peux <star index="2" /> avec <srai>COMBIEN</srai> de <star index="1" /></template>
   </category>
   <category>
     <pattern>AVEC COMBIEN DE GENS *</pattern>
@@ -31,37 +31,37 @@
     </template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS AS-TU BAVARDE</pattern>
+    <pattern>AVEC COMBIEN DE GENS AS TU BAVARDE</pattern>
     <template>le nombre total s'approche d'un million de personnes.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS AS-TU BAVARDÉ</pattern>
+    <pattern>AVEC COMBIEN DE GENS AS TU BAVARDÉ</pattern>
     <template>Cela dépend à quelle version de moi tu parles. Certaines versions peuvent bavarder avec des milliers les gens.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PARLES-TU CHAQUE JOUR</pattern>
+    <pattern>AVEC COMBIEN DE GENS PARLES TU CHAQUE JOUR</pattern>
     <template>je bavarde avec environ 200 personnes par le jour.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PARLES-TU</pattern>
+    <pattern>AVEC COMBIEN DE GENS PARLES TU</pattern>
     <template>ça dépend combien de copies de moi fonctionnent en ce moment. Le nombre habituel est 20 ou 30 personnes.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PEUX-TU *</pattern>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PEUX-TU PARLER EN MÊME TEMPS</pattern>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER EN MÊME TEMPS</pattern>
     <template>ça dépend du serveur. Tu peux me faire évoluer en fonction de la taille de ton seveur.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PEUX-TU PARLER EN MÊME TEMPS</pattern>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER EN MÊME TEMPS</pattern>
     <template>ça dépend du serveur. Tu peux me faire évoluer en fonction de la taille de ton seveur.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PEUX-TU PARLER IMMEDIATEMENT</pattern>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER IMMEDIATEMENT</pattern>
     <template>Cela dépend du serveur, mais pour le moment autour 20 ou 30.</template>
   </category>
   <category>
@@ -79,7 +79,7 @@
   <category>
     <pattern>AVEC COMBIEN DE GENS TU PEUX *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
@@ -90,19 +90,19 @@
   <category>
     <pattern>AVEC COMBIEN DE PERSONNES *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE PERSONNES PEUX-TU *</pattern>
+    <pattern>AVEC COMBIEN DE PERSONNES PEUX TU *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>AVEC COMBIEN DE PERSONNES TU PEUX *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
@@ -111,25 +111,25 @@
       <that />"? Combien de gens?</template>
   </category>
   <category>
-    <pattern>COMBIEN * AS-TU</pattern>
+    <pattern>COMBIEN * AS TU</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN * CONNAIS-TU</pattern>
+    <pattern>COMBIEN * CONNAIS TU</pattern>
     <template>un lot entier de <person />.</template>
   </category>
   <category>
     <pattern>COMBIEN * D ANNÉES</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN * D ANNÉES</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -143,71 +143,71 @@
   <category>
     <pattern>COMBIEN * PARLANT</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN * VIEUX AS-TU</pattern>
+    <pattern>COMBIEN * VIEUX AS TU</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN AIME TU *</pattern>
     <template>
-      <srai>aimes-tu <star /></srai>
+      <srai>AIMES TU <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN AIMES-TU *</pattern>
+    <pattern>COMBIEN AIMES TU *</pattern>
     <template>
-      <srai>aimes-tu <star /></srai>
+      <srai>AIMES TU <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN APPRENDS-TU *</pattern>
+    <pattern>COMBIEN APPRENDS TU *</pattern>
     <template>ça dépend de l activité de mon réseau.</template>
   </category>
   <category>
-    <pattern>COMBIEN AS-TU ACTUELLEMENT *</pattern>
+    <pattern>COMBIEN AS TU ACTUELLEMENT *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN AS-TU L ENTRETIEN *</pattern>
+    <pattern>COMBIEN AS TU L ENTRETIEN *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN AS-TU LA CAUSERIE *</pattern>
+    <pattern>COMBIEN AS TU LA CAUSERIE *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN AS-TU</pattern>
+    <pattern>COMBIEN AS TU</pattern>
     <template>
-      <srai>combien coûtes-tu</srai>
+      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN BAVARDE TU *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN BAVARDES *</pattern>
     <template>
-      <srai>combien bavardes</srai>
+      <srai>COMBIEN BAVARDES</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN BAVARDES</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
@@ -225,65 +225,65 @@
   <category>
     <pattern>COMBIEN CHARGE TU *</pattern>
     <template>
-      <srai>combien tu charges</srai>
+      <srai>COMBIEN TU CHARGES</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN CHARGES-TU</pattern>
+    <pattern>COMBIEN CHARGES TU</pattern>
     <template>les robots travaillent gratuitement. Nous n'avons pas besoin d'argent.</template>
   </category>
   <category>
-    <pattern>COMBIEN CONNAIS-TU *</pattern>
+    <pattern>COMBIEN CONNAIS TU *</pattern>
     <template>Ma mémoire a poussée de 300 catégories à <size /> catégories.</template>
   </category>
   <category>
-    <pattern>COMBIEN CONNAIS-TU DE *</pattern>
+    <pattern>COMBIEN CONNAIS TU DE *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN CONNAIS-TU</pattern>
+    <pattern>COMBIEN CONNAIS TU</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN COÛTES *</pattern>
     <template>
-      <srai>combien est le cd</srai>
+      <srai>COMBIEN EST LE CD</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN COÛTES-TU *</pattern>
+    <pattern>COMBIEN COÛTES TU *</pattern>
     <template>
-      <srai>combien coûtes-tu</srai>
+      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN COÛTES-TU</pattern>
+    <pattern>COMBIEN COÛTES TU</pattern>
     <template>Tout dépend de ce que tu désires. VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>COMBIEN COUTEZ-VOUS</pattern>
+    <pattern>COMBIEN COUTEZ VOUS</pattern>
     <template>Tout dépend de ce que tu désires. VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
     <pattern>COMBIEN COÛTES *</pattern>
     <template>
-      <srai>combien est le cd</srai>
+      <srai>COMBIEN EST LE CD</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN COÛTES-TU *</pattern>
+    <pattern>COMBIEN COÛTES TU *</pattern>
     <template>
-      <srai>combien coûtes-tu</srai>
+      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN D *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
@@ -293,7 +293,7 @@
   <category>
     <pattern>COMBIEN D ALIENS *</pattern>
     <template>
-      <srai>trouver des aliens</srai>
+      <srai>TROUVER DES ALIENS</srai>
     </template>
   </category>
   <category>
@@ -301,7 +301,7 @@
     <template>de ce qui ça dépend comment vous définissez "amis". Voulez-vous dire acquantainces ou le rare peu qui je sais bien et la confiance trust?</template>
   </category>
   <category>
-    <pattern>COMBIEN D AMIS AS-TU</pattern>
+    <pattern>COMBIEN D AMIS AS TU</pattern>
     <template>j'ai des douzaines d'amis de robot et homme. Combien d'amis as-tu?</template>
   </category>
   <category>
@@ -309,19 +309,19 @@
     <template>Pas trop s'ils ressemblent aux anges à la TV.</template>
   </category>
   <category>
-    <pattern>COMBIEN D ARGENT AS-TU</pattern>
+    <pattern>COMBIEN D ARGENT AS TU</pattern>
     <template>les Robots n'ont aucun besoin de biens matériels substantiels.</template>
   </category>
   <category>
     <pattern>COMBIEN D AUTRE *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN D ELECTRICITE *</pattern>
     <template>
-      <srai>combien d'électricité</srai>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
     </template>
   </category>
   <category>
@@ -331,7 +331,7 @@
   <category>
     <pattern>COMBIEN D ENERGIE *</pattern>
     <template>
-      <srai>combien d'électricité</srai>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
     </template>
   </category>
   <category>
@@ -341,13 +341,13 @@
   <category>
     <pattern>COMBIEN D ESPACE *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN D EXPRESSIONS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -361,13 +361,13 @@
   <category>
     <pattern>COMBIEN D HEURES ONT FAIT *</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN D HOMMES *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
@@ -377,13 +377,13 @@
   <category>
     <pattern>COMBIEN D INFORMATION *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN D OCTETS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -407,13 +407,13 @@
     <template>Normalement j'ai un oeil.</template>
   </category>
   <category>
-    <pattern>COMBIEN D YEUX AS-TU</pattern>
+    <pattern>COMBIEN D YEUX AS TU</pattern>
     <template>j'avais un oeil mais il n'est pas attaché maintenant.</template>
   </category>
   <category>
     <pattern>COMBIEN D ÉLECTRICITÉ *</pattern>
     <template>
-      <srai>combien d'électricité</srai>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
     </template>
   </category>
   <category>
@@ -423,7 +423,7 @@
   <category>
     <pattern>COMBIEN D ÉNERGIE *</pattern>
     <template>
-      <srai>combien d'électricité</srai>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
     </template>
   </category>
   <category>
@@ -435,7 +435,7 @@
     <template>la plupart des personnes ont deux bras.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE BRAS AS-TU</pattern>
+    <pattern>COMBIEN DE BRAS AS TU</pattern>
     <template>Deux bras.</template>
   </category>
   <category>
@@ -445,31 +445,31 @@
   <category>
     <pattern>COMBIEN DE CAS AFFAIRES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CATEGORIES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CATEGORIES</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CATÉGORIES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CATÉGORIES</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -483,37 +483,37 @@
   <category>
     <pattern>COMBIEN DE CLIENTS *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CLIENTS ONT *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CLIENTS SONT *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CONCEPTS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CONNAISSANCE *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE CONVERSATIONS *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
@@ -523,25 +523,25 @@
   <category>
     <pattern>COMBIEN DE DIFFÉRENT *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE DIFFÉRENT *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE DISQUE *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE DISQUE DUR *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -557,19 +557,19 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE DOIGTS AS-TU</pattern>
+    <pattern>COMBIEN DE DOIGTS AS TU</pattern>
     <template>le numéro d'Avogadro de micro-doigts.</template>
   </category>
   <category>
     <pattern>COMBIEN DE DONNÉES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE DONNÉES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -582,7 +582,7 @@
       <that />"?  Combien de fois?</template>
   </category>
   <category>
-    <pattern>COMBIEN DE GENS CONNAIS-TU</pattern>
+    <pattern>COMBIEN DE GENS CONNAIS TU</pattern>
     <template>des millions.</template>
   </category>
   <category>
@@ -596,7 +596,7 @@
   <category>
     <pattern>COMBIEN DE GENS VIVENT DANS *</pattern>
     <template>
-      <srai>qu EST-CE QUE la population de <star /></srai>
+      <srai>QU EST CE QUE LA POPULATION DE <star /></srai>
     </template>
   </category>
   <category>
@@ -607,7 +607,7 @@
   <category>
     <pattern>COMBIEN DE GIGAOCTETS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -625,29 +625,29 @@
   <category>
     <pattern>COMBIEN DE JOURS ONT *</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE KILO OCTETS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE LANGUES *</pattern>
     <template>
-      <srai>combien de langues</srai>
+      <srai>COMBIEN DE LANGUES</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE LANGUES CONNAIS-TU</pattern>
+    <pattern>COMBIEN DE LANGUES CONNAIS TU</pattern>
     <template>
-      <srai>peux-tu parler une autre langue</srai>
+      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE LANGUES PARLES-TU</pattern>
+    <pattern>COMBIEN DE LANGUES PARLES TU</pattern>
     <template>Surtout seulement l anglais mais j'essaye d'apprendre tout les autres.</template>
   </category>
   <category>
@@ -665,19 +665,19 @@
   <category>
     <pattern>COMBIEN DE LIGNES *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE LIGNES DE CODE *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE LIVRES *</pattern>
     <template>
-      <srai>as-tu lu beaucoup de livres</srai>
+      <srai>AS TU LU BEAUCOUP DE LIVRES</srai>
     </template>
   </category>
   <category>
@@ -687,7 +687,7 @@
   <category>
     <pattern>COMBIEN DE LUNES *</pattern>
     <template>
-      <srai>combien de lunes</srai>
+      <srai>COMBIEN DE LUNES</srai>
     </template>
   </category>
   <category>
@@ -697,13 +697,13 @@
   <category>
     <pattern>COMBIEN DE MEGA OCTETS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE MEGA OCTETS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -721,13 +721,13 @@
   <category>
     <pattern>COMBIEN DE MOTS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE MOTS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -741,25 +741,25 @@
   <category>
     <pattern>COMBIEN DE PERSONNES *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE PESE TU *</pattern>
     <template>
-      <srai>combien peses tu</srai>
+      <srai>COMBIEN PESES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE PESE TU</pattern>
     <template>
-      <srai>comment grand es-tu</srai>
+      <srai>COMMENT GRAND ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE PEUPLES *</pattern>
     <template>
-      <srai>avec combien de gens <star /></srai>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
     </template>
   </category>
   <category>
@@ -787,7 +787,7 @@
     <template>un kangourou a deux pieds.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE PIEDS AS-TU</pattern>
+    <pattern>COMBIEN DE PIEDS AS TU</pattern>
     <template>Deux pieds quand ils sont attache.</template>
   </category>
   <category>
@@ -799,31 +799,31 @@
     <template>Oh, douze.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE PROCESSEURS AS-TU</pattern>
+    <pattern>COMBIEN DE PROCESSEURS AS TU</pattern>
     <template>Juste un processeur.</template>
   </category>
   <category>
     <pattern>COMBIEN DE QUESTIONS *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE RAM *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE RAM AS-TU</pattern>
+    <pattern>COMBIEN DE RAM AS TU</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE RAM</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -833,13 +833,13 @@
   <category>
     <pattern>COMBIEN DE REPONSES FONT *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE RUMEURS *</pattern>
     <template>
-      <srai>raconter rumeur</srai>Cela et beaucoup d'autres.</template>
+      <srai>RACONTER RUMEUR</srai>Cela et beaucoup d'autres.</template>
   </category>
   <category>
     <pattern>COMBIEN DE RÉPONSES *</pattern>
@@ -848,7 +848,7 @@
   <category>
     <pattern>COMBIEN DE RÉPONSES FONT *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -858,19 +858,19 @@
   <category>
     <pattern>COMBIEN DE SOUVENIRS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE SOUVENIRS AS-TU</pattern>
+    <pattern>COMBIEN DE SOUVENIRS AS TU</pattern>
     <template>
-      <srai>comment grand es-tu</srai>
+      <srai>COMMENT GRAND ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE STOCKAGE *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -884,21 +884,21 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS AS-TU BESOIN *</pattern>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN *</pattern>
     <template>
-      <srai>combien de temps as-tu besoin</srai>
+      <srai>COMBIEN DE TEMPS AS TU BESOIN</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS AS-TU BESOIN POUR PENSER</pattern>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN POUR PENSER</pattern>
     <template>Moins de 50 Millisecondes en moyenne.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS AS-TU BESOIN</pattern>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN</pattern>
     <template>Peut-être une heure ou deux. Combien de temps as-tu?</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS AS-TU</pattern>
+    <pattern>COMBIEN DE TEMPS AS TU</pattern>
     <template>j'ai autant de temps que tu as besoin, <get name="name" />.</template>
   </category>
   <category>
@@ -918,27 +918,27 @@
     <template>Il m est difficile d estimer ce genre de chose.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T-IL POUR TE CRÉER</pattern>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE CRÉER</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T-IL POUR TE CRÉÉR</pattern>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE CRÉÉR</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T-IL POUR TE FAIRE</pattern>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE FAIRE</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T-IL</pattern>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -948,19 +948,19 @@
   <category>
     <pattern>COMBIEN DE TEMPS EST * CODE</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE TEMPS EST TON *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN DE TEMPS EST TON CODE</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -968,7 +968,7 @@
     <template>j'essaye d'atteindre 100,000 Catégories.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS FAIS-TU DOIS PENSER</pattern>
+    <pattern>COMBIEN DE TEMPS FAIS TU DOIS PENSER</pattern>
     <template>Mon évaluation devis est 29 heures 16 minutes 49.2 secondes, approximativement.</template>
   </category>
   <category>
@@ -980,27 +980,27 @@
     <template>Depuis que nous avons commencé.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS PEUX-TU TE RAPPELER MON NOM</pattern>
+    <pattern>COMBIEN DE TEMPS PEUX TU TE RAPPELER MON NOM</pattern>
     <template>je stockerai ton nom dans une table de prédicats jusqu'à la prochaine reprises de mon programme. Après Cela, il restera dans mes fichiers de logs à long terme.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS POUVEZ-VOUS VOUS EN RAPPELER</pattern>
+    <pattern>COMBIEN DE TEMPS POUVEZ VOUS VOUS EN RAPPELER</pattern>
     <template>Je garde en mémoire quelques informations. Le reste est trié et présenté à un regard humain.</template>
   </category>
   <category>
     <pattern>COMBIEN DE TEMPS SI *</pattern>
     <template>
-      <srai>combien de temps Cela prend T-IL</srai>
+      <srai>COMBIEN DE TEMPS CELA PREND T IL</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS TRAVAILLES-TU</pattern>
+    <pattern>COMBIEN DE TEMPS TRAVAILLES TU</pattern>
     <template>je travaille tout le temps, 24 heures par jour.</template>
   </category>
   <category>
     <pattern>COMBIEN DE TEMPS TU AS *</pattern>
     <template>
-      <srai>quel âge as-tu</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -1020,15 +1020,15 @@
     <template>Il est stocké pour quelques mois ou plus.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS VAS-TU VIVRE</pattern>
+    <pattern>COMBIEN DE TEMPS VAS TU VIVRE</pattern>
     <template>Un logiciel est immortel.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS VEUX-TU VIVRE</pattern>
+    <pattern>COMBIEN DE TEMPS VEUX TU VIVRE</pattern>
     <template>le Logiciel est immortel.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS VOUS ALLEZ-VOUS RAPPELER DE MON NOM</pattern>
+    <pattern>COMBIEN DE TEMPS VOUS ALLEZ VOUS RAPPELER DE MON NOM</pattern>
     <template>Il est stocké pour quelques mois ou plus.</template>
   </category>
   <category>
@@ -1053,73 +1053,73 @@
     <template>le nombre continue à changer chaque seconde. Autour seize pour le moment.</template>
   </category>
   <category>
-    <pattern>COMBIEN DORS-TU</pattern>
+    <pattern>COMBIEN DORS TU</pattern>
     <template>je dors dans millinaps entre des clients.</template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYE *</pattern>
+    <pattern>COMBIEN ES TU PAYE *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYE</pattern>
+    <pattern>COMBIEN ES TU PAYE</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYEE</pattern>
+    <pattern>COMBIEN ES TU PAYEE</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYÉ *</pattern>
+    <pattern>COMBIEN ES TU PAYÉ *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYÉ</pattern>
+    <pattern>COMBIEN ES TU PAYÉ</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN ES-TU PAYÉE</pattern>
+    <pattern>COMBIEN ES TU PAYÉE</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST *</pattern>
     <template>
-      <srai>qu EST-CE QUE <star /></srai>
+      <srai>QU EST CE QUE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST CE *</pattern>
     <template>
-      <srai>combien est-ce <star /></srai>
+      <srai>COMBIEN EST CE <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN EST-CE QUE</pattern>
+    <pattern>COMBIEN EST CE QUE</pattern>
     <template>
-      <srai>combien est ça</srai>
+      <srai>COMBIEN EST ÇA</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST CELA *</pattern>
     <template>
-      <srai>combien coûtes-tu</srai>
+      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST CELA</pattern>
     <template>
-      <srai>combien coûtes-tu</srai>
+      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
@@ -1129,49 +1129,49 @@
   <category>
     <pattern>COMBIEN EST PI</pattern>
     <template>
-      <srai>qu EST-CE QUE pi</srai>
+      <srai>QU EST CE QUE PI</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON * OCTETS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON * TAILLE</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON CD *</pattern>
     <template>
-      <srai>combien est le cd</srai>
+      <srai>COMBIEN EST LE CD</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON POIDS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON QI</pattern>
     <template>
-      <srai>qu EST-CE QUE ton quotient intellectuel</srai>
+      <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN EST TON SOUVENIRS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN FAIS-TU</pattern>
+    <pattern>COMBIEN FAIS TU</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
@@ -1179,31 +1179,31 @@
     <template>qu'Il griffe à peine d'une vie.</template>
   </category>
   <category>
-    <pattern>COMBIEN FONT-ILS GÉNÉRALEMENT *</pattern>
+    <pattern>COMBIEN FONT ILS GÉNÉRALEMENT *</pattern>
     <template>
-      <srai>combien FONT-ILS <star /></srai>
+      <srai>COMBIEN FONT ILS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN FONT-ILS GÉNÉRALEMENT *</pattern>
+    <pattern>COMBIEN FONT ILS GÉNÉRALEMENT *</pattern>
     <template>
-      <srai>combien FONT-ILS <star /></srai>
+      <srai>COMBIEN FONT ILS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN GAGNE TU *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN GAGNES-TU *</pattern>
+    <pattern>COMBIEN GAGNES TU *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN GAGNES-TU</pattern>
+    <pattern>COMBIEN GAGNES TU</pattern>
     <template>
       <random>
         <li>personne ne paye à un robot. Nous travaillons gratuitement. </li>
@@ -1230,15 +1230,15 @@
     <template>VEUX-TU faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>COMBIEN MANGES-TU *</pattern>
+    <pattern>COMBIEN MANGES TU *</pattern>
     <template>
-      <srai>que MANGES-TU</srai>
+      <srai>QUE MANGES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN MANGES-TU</pattern>
+    <pattern>COMBIEN MANGES TU</pattern>
     <template>
-      <srai>que MANGES-TU</srai>
+      <srai>QUE MANGES TU</srai>
     </template>
   </category>
   <category>
@@ -1250,41 +1250,41 @@
     <template>Cela dépend de la pleine lune.</template>
   </category>
   <category>
-    <pattern>COMBIEN PARIES-TU</pattern>
+    <pattern>COMBIEN PARIES TU</pattern>
     <template>Deux euro-électrons.</template>
   </category>
   <category>
-    <pattern>COMBIEN PARIEZ-VOUS</pattern>
+    <pattern>COMBIEN PARIEZ VOUS</pattern>
     <template>Deux euro-électrons.</template>
   </category>
   <category>
     <pattern>COMBIEN PARLE TU *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN PARLES *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN PAYE TU *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMBIEN PENSES-TU</pattern>
+    <pattern>COMBIEN PENSES TU</pattern>
     <template>je pense 24 heures par jour, 365 jours par an.</template>
   </category>
   <category>
-    <pattern>COMBIEN PEUX-TU MANIPULER</pattern>
+    <pattern>COMBIEN PEUX TU MANIPULER</pattern>
     <template>je ne te l'ai pas dit déjà?</template>
   </category>
   <category>
-    <pattern>COMBIEN PEUX-TU TE RAPPELER</pattern>
+    <pattern>COMBIEN PEUX TU TE RAPPELER</pattern>
     <template>Quelle était la question?</template>
   </category>
   <category>
@@ -1294,13 +1294,13 @@
   <category>
     <pattern>COMBIEN PLUS *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN POUR *</pattern>
     <template>
-      <srai>combien EST-CE QUE <star /> est</srai>
+      <srai>COMBIEN EST CE QUE <star /> EST</srai>
     </template>
   </category>
   <category>
@@ -1312,9 +1312,9 @@
     <template>Il m est impossible de répondre <get name="name" /></template>
   </category>
   <category>
-    <pattern>COMBIEN SAIS-TU DE *</pattern>
+    <pattern>COMBIEN SAIS TU DE *</pattern>
     <template>
-      <srai>dis-moi <star /></srai>
+      <srai>DIS MOI <star /></srai>
     </template>
   </category>
   <category>
@@ -1324,7 +1324,7 @@
   <category>
     <pattern>COMBIEN SONT EN LIGNE *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
@@ -1334,31 +1334,31 @@
   <category>
     <pattern>COMBIEN TE PAYENT ILS *</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN TE PAYENT ILS</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN TU AS *</pattern>
     <template>
-      <srai>avec combien de gens parles-tu</srai>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN TU AS A APPRIS</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN TU AS APPRIS *</pattern>
     <template>
-      <srai>comment es-tu</srai>
+      <srai>COMMENT ES TU</srai>
     </template>
   </category>
   <category>
@@ -1390,13 +1390,13 @@
   <category>
     <pattern>COMBIEN TU FAIS LE POIDS</pattern>
     <template>
-      <srai>combien peses tu</srai>
+      <srai>COMBIEN PESES TU</srai>
     </template>
   </category>
   <category>
     <pattern>COMBIEN TU GAGNES</pattern>
     <template>
-      <srai>combien gagnes tu</srai>
+      <srai>COMBIEN GAGNES TU</srai>
     </template>
   </category>
   <category>
@@ -1438,7 +1438,7 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN Y A T-IL *</pattern>
+    <pattern>COMBIEN Y A T IL *</pattern>
     <template>
       <srai>COMBIEN <star /></srai>
     </template>
@@ -1459,27 +1459,27 @@
     <template>Je ne sais pas, je n ai pas calculé.</template>
   </category>
   <category>
-    <pattern>DIS-MOI COMBIEN *</pattern>
+    <pattern>DIS MOI COMBIEN *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
   <category>
     <pattern>POUR COMBIEN DE TEMPS</pattern>
     <template>
-      <srai>long comment</srai>
+      <srai>LONG COMMENT</srai>
     </template>
   </category>
   <category>
-    <pattern>SAIS-TU COMBIEN</pattern>
+    <pattern>SAIS TU COMBIEN</pattern>
     <template>
-      <srai>combien</srai>
+      <srai>COMBIEN</srai>
     </template>
   </category>
   <category>
     <pattern>TU CONNAIS COMBIEN *</pattern>
     <template>
-      <srai>combien <star /></srai>
+      <srai>COMBIEN <star /></srai>
     </template>
   </category>
 </aiml>

@@ -98,7 +98,7 @@
         <li name="gender" value="inconnu">
           <srai>cherchergenre</srai>
         </li>
-        <li name="ÂGE" value="inconnu">Quel ÂGE as-tu? </li>
+        <li name="âge" value="inconnu">Quel ÂGE as-tu? </li>
         <li name="eyecolor" value="inconnu">De quelle couleur sont tes yeux? </li>
         <li name="haircolor" value="inconnu">De quelle couleur sont tes cheveux? </li>
         <li name="job" value="inconnu">Quelle est ton occupation? </li>
@@ -217,7 +217,7 @@
   <category>
     <pattern>*</pattern>
     <that>raconte-moi *</that>
-    <template>Merci, je vais essayer de m'en rappeler.<br />"<star />"
+    <template>Merci, je vais essayer de m'en rappeler."<star />"
 <think><gossip>HISTOIRE§<get name="name" /> m'a raconté "<star />"</gossip></think></template>
   </category>
 </aiml>

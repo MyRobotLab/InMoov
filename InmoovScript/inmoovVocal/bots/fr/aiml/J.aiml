@@ -25,21 +25,21 @@
   <category>
     <pattern>J AI * COMMENT</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J AI 14 ANS</pattern>
-    <template>Je connais quelques humains qui ont <set name="ÂGE">14</set> ans.</template>
+    <template>Je connais quelques humains qui ont <set name="âge">14</set> ans.</template>
   </category>
   <category>
     <pattern>J AI 20 ANS</pattern>
     <template>
-      <set name="ÂGE">20</set> ans est une époque charnière pour un être humain.</template>
+      <set name="âge">20</set> ans est une époque charnière pour un être humain.</template>
   </category>
   <category>
     <pattern>J AI 21 ANS</pattern>
-    <template>Je connais énormément de personnes ayant <set name="ÂGE">21</set> ans.</template>
+    <template>Je connais énormément de personnes ayant <set name="âge">21</set> ans.</template>
   </category>
   <category>
     <pattern>J AI ACCIDENTELEMENT *</pattern>
@@ -82,7 +82,7 @@
   <category>
     <pattern>J AI COMMENT *</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
@@ -288,7 +288,7 @@
   </category>
   <category>
     <pattern>J AI QUEL ÂGE</pattern>
-    <template>Tu as dit que tu as <get name="ÂGE" />.</template>
+    <template>Tu as dit que tu as <get name="âge" />.</template>
   </category>
   <category>
     <pattern>J AI RAISON</pattern>
@@ -455,7 +455,7 @@
     </template>
   </category>
   <category>
-    <pattern>J'AIMERAIS SAVOIR</pattern>
+    <pattern>J AIMERAIS SAVOIR</pattern>
     <template>Veux-tu faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -491,7 +491,7 @@
   <category>
     <pattern>J AURAIS * COMMENT</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
@@ -519,7 +519,7 @@
   <category>
     <pattern>J AURAIS COMMENT *</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
@@ -563,25 +563,25 @@
   <category>
     <pattern>J ÉCRIS * COMMENT</pattern>
     <template>
-      <srai>comment J ÉCRIS <star /></srai>
+      <srai>COMMENT J ÉCRIS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J ÉCRIS COMMENT *</pattern>
     <template>
-      <srai>comment J ÉCRIS <star /></srai>
+      <srai>COMMENT J ÉCRIS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J EFFACE * COMMENT</pattern>
     <template>
-      <srai>comment J EFFACE <star /></srai>
+      <srai>COMMENT J EFFACE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J EFFACERAIS * COMMENT</pattern>
     <template>
-      <srai>comment J EFFACE <star /></srai>
+      <srai>COMMENT J EFFACE <star /></srai>
     </template>
   </category>
   <category>
@@ -732,13 +732,13 @@
   <category>
     <pattern>J EXÉCUTE * COMMENT</pattern>
     <template>
-      <srai>comment J EXÉCUTE <star /></srai>
+      <srai>COMMENT J EXÉCUTE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J EXÉCUTE COMMENT *</pattern>
     <template>
-      <srai>comment J EXÉCUTE <star /></srai>
+      <srai>COMMENT J EXÉCUTE <star /></srai>
     </template>
   </category>
   <category>
@@ -763,11 +763,11 @@
   </category>
   <category>
     <pattern>J IMAGINE QUE NON</pattern>
-    <template>En es-tu sure?</template>
+    <template>En es-tu SÛRE?</template>
   </category>
   <category>
     <pattern>J IMAGINE QUE OUI</pattern>
-    <template>En es-tu sure?</template>
+    <template>En es-tu SÛRE?</template>
   </category>
   <category>
     <pattern>J INSPIRE</pattern>
@@ -780,19 +780,19 @@
   <category>
     <pattern>J OUVRE * COMMENT</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J OUVRE COMMENT *</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>J UTILISE * COMMENT</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
@@ -804,13 +804,13 @@
   <category>
     <pattern>J UTILISE * NETSCAPE</pattern>
     <template>
-      <srai>netscape</srai>
+      <srai>NETSCAPE</srai>
     </template>
   </category>
   <category>
     <pattern>J UTILISE COMMENT *</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
@@ -832,13 +832,13 @@
   <category>
     <pattern>J UTILISE NETSCAPE *</pattern>
     <template>
-      <srai>netscape</srai>
+      <srai>NETSCAPE</srai>
     </template>
   </category>
   <category>
     <pattern>J UTILISE NETSCAPE</pattern>
     <template>
-      <srai>netscape</srai>
+      <srai>NETSCAPE</srai>
     </template>
   </category>
   <category>
@@ -1476,7 +1476,7 @@
   <category>
     <pattern>JE M APPELLES *</pattern>
     <template>
-      <srai>mon nom est <star /></srai>
+      <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
@@ -1690,7 +1690,7 @@
     <template>A tes souhaits, quand même.</template>
   </category>
   <category>
-    <pattern>JE N AI PAS GRANDI LÀ-BAS</pattern>
+    <pattern>JE N AI PAS GRANDI LÀ BAS</pattern>
     <template>Où as-tu passez ton enfance?</template>
   </category>
   <category>
@@ -1698,7 +1698,7 @@
     <template>Où as-tu grandi?</template>
   </category>
   <category>
-    <pattern>JE N AI PAS PASSÉ MON ENFANCE LÀ-BAS</pattern>
+    <pattern>JE N AI PAS PASSÉ MON ENFANCE LÀ BAS</pattern>
     <template>Où as-tu grandi?</template>
   </category>
   <category>
@@ -2558,11 +2558,11 @@
   </category>
   <category>
     <pattern>JE PENSE QUE NON</pattern>
-    <template>En es-tu sure?</template>
+    <template>En es-tu SÛRE?</template>
   </category>
   <category>
     <pattern>JE PENSE QUE OUI</pattern>
-    <template>En es-tu sure?</template>
+    <template>En es-tu SÛRE?</template>
   </category>
   <category>
     <pattern>JE PENSE SAVOIR *</pattern>
@@ -2585,13 +2585,13 @@
   <category>
     <pattern>JE PERSUADE * COMMENT</pattern>
     <template>
-      <srai>comment JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PERSUADE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PERSUADE COMMENT *</pattern>
     <template>
-      <srai>comment JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PERSUADE <star /></srai>
     </template>
   </category>
   <category>
@@ -2621,13 +2621,13 @@
   <category>
     <pattern>JE PEUX COMMENT OUVRIR *</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX COMMENT RENCONTRER *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
@@ -2667,13 +2667,13 @@
   <category>
     <pattern>JE PEUX ÉCRIRE * COMMENT</pattern>
     <template>
-      <srai>comment J ÉCRIS <star /></srai>
+      <srai>COMMENT J ÉCRIS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX ÉCRIRE COMMENT *</pattern>
     <template>
-      <srai>comment J ÉCRIS <star /></srai>
+      <srai>COMMENT J ÉCRIS <star /></srai>
     </template>
   </category>
   <category>
@@ -2733,13 +2733,13 @@
   <category>
     <pattern>JE PEUX OUVRIR * COMMENT</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX OUVRIR COMMENT *</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
@@ -2761,25 +2761,25 @@
   <category>
     <pattern>JE PEUX PERSUADER * COMMENT</pattern>
     <template>
-      <srai>comment JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PERSUADE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX PERSUADER COMMENT *</pattern>
     <template>
-      <srai>comment JE PERSUADE <star /></srai>
+      <srai>COMMENT JE PERSUADE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX QUITTER * COMMENT</pattern>
     <template>
-      <srai>comment JE QUITTE <star /></srai>
+      <srai>COMMENT JE QUITTE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX QUITTER COMMENT *</pattern>
     <template>
-      <srai>comment JE QUITTE <star /></srai>
+      <srai>COMMENT JE QUITTE <star /></srai>
     </template>
   </category>
   <category>
@@ -2789,7 +2789,7 @@
   <category>
     <pattern>JE PEUX RENCONTRER COMMENT *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
@@ -2807,13 +2807,13 @@
   <category>
     <pattern>JE PEUX T APPRENDRE * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX T APPRENDRE COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -2909,13 +2909,13 @@
   <category>
     <pattern>JE PEUX UTILISER * COMMENT</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE PEUX UTILISER COMMENT *</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
@@ -2925,7 +2925,7 @@
   <category>
     <pattern>JE PEUX VOUS APPRENDRE * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -2935,7 +2935,7 @@
   <category>
     <pattern>JE PEUX VOUS APPRENDRE COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -3025,85 +3025,85 @@
   <category>
     <pattern>JE POURRAIS ALLER * COMMENT</pattern>
     <template>
-      <srai>comment JE VAIS <star /></srai>
+      <srai>COMMENT JE VAIS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS ALLER COMMENT *</pattern>
     <template>
-      <srai>comment JE VAIS <star /></srai>
+      <srai>COMMENT JE VAIS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS AVOIR * COMMENT</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS AVOIR COMMENT *</pattern>
     <template>
-      <srai>comment J AI <star /></srai>
+      <srai>COMMENT J AI <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS COMMENT OUVRIR *</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS COMMENT RENCONTRER *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS EFFACER * COMMENT</pattern>
     <template>
-      <srai>comment J EFFACE <star /></srai>
+      <srai>COMMENT J EFFACE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS EFFACER COMMENT *</pattern>
     <template>
-      <srai>comment J EFFACE <star /></srai>
+      <srai>COMMENT J EFFACE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS EXÉCUTER * COMMENT</pattern>
     <template>
-      <srai>comment J EXÉCUTE <star /></srai>
+      <srai>COMMENT J EXÉCUTE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS EXÉCUTER COMMENT *</pattern>
     <template>
-      <srai>comment J EXÉCUTE <star /></srai>
+      <srai>COMMENT J EXÉCUTE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS OUVRIR * COMMENT</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS OUVRIR COMMENT *</pattern>
     <template>
-      <srai>comment J OUVRE <star /></srai>
+      <srai>COMMENT J OUVRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS RENCONTRE COMMENT *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE POURRAIS RENCONTRER COMMENT *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
@@ -3129,7 +3129,7 @@
   <category>
     <pattern>JE QUITTE * COMMENT</pattern>
     <template>
-      <srai>comment JE QUITTE <star /></srai>
+      <srai>COMMENT JE QUITTE <star /></srai>
     </template>
   </category>
   <category>
@@ -3141,13 +3141,13 @@
   <category>
     <pattern>JE RENCONTRE * COMMENT</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE RENCONTRE COMMENT *</pattern>
     <template>
-      <srai>comment JE RENCONTRE <star /></srai>
+      <srai>COMMENT JE RENCONTRE <star /></srai>
     </template>
   </category>
   <category>
@@ -3943,7 +3943,7 @@
   <category>
     <pattern>JE SUIS EN COLÈRE *</pattern>
     <template>
-      <srai>JE SUIS Fâché <star /></srai>
+      <srai>JE SUIS FÂCHÉ <star /></srai>
     </template>
   </category>
   <category>
@@ -4275,7 +4275,7 @@
   <category>
     <pattern>JE SUIS FÂCHÉ *</pattern>
     <template>
-      <srai>JE SUIS fâché</srai>
+      <srai>JE SUIS FÂCHÉ</srai>
     </template>
   </category>
   <category>
@@ -4675,7 +4675,7 @@
   <category>
     <pattern>JE SUIS MARIÉ *</pattern>
     <template>
-      <srai>JE SUIS MARRIé</srai>
+      <srai>JE SUIS MARRIÉ</srai>
     </template>
   </category>
   <category>
@@ -4685,7 +4685,7 @@
   <category>
     <pattern>JE SUIS MARIÉE *</pattern>
     <template>
-      <srai>JE SUIS Marié</srai>
+      <srai>JE SUIS MARIÉ</srai>
     </template>
   </category>
   <category>
@@ -5044,13 +5044,13 @@
     <template>Ok. J archive ton remarque.</template>
   </category>
   <category>
-    <pattern>JE SUIS SURE QU *</pattern>
+    <pattern>JE SUIS SÛRE QU *</pattern>
     <template>
       <sr />
     </template>
   </category>
   <category>
-    <pattern>JE SUIS SURE QUE *</pattern>
+    <pattern>JE SUIS SÛRE QUE *</pattern>
     <template>
       <sr />
     </template>
@@ -5900,13 +5900,13 @@
   <category>
     <pattern>JE T APPREND * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE T APPREND COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -5920,13 +5920,13 @@
   <category>
     <pattern>JE T APPRENDS * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE T APPRENDS COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -6046,7 +6046,7 @@
   <category>
     <pattern>JE TE DEMANDES PARDON</pattern>
     <template>
-      <srai>EXCUSES-MOI</srai>
+      <srai>EXCUSES MOI</srai>
     </template>
   </category>
   <category>
@@ -6192,7 +6192,7 @@
   <category>
     <pattern>JE VAIS * COMMENT</pattern>
     <template>
-      <srai>comment JE VAIS <star /></srai>
+      <srai>COMMENT JE VAIS <star /></srai>
     </template>
   </category>
   <category>
@@ -6240,7 +6240,7 @@
   <category>
     <pattern>JE VAIS COMMENT *</pattern>
     <template>
-      <srai>comment JE VAIS <star /></srai>
+      <srai>COMMENT JE VAIS <star /></srai>
     </template>
   </category>
   <category>
@@ -6368,13 +6368,13 @@
   <category>
     <pattern>JE VEUX FAIRE USAGE D *</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE VEUX FAIRE USAGE DE *</pattern>
     <template>
-      <srai>comment J UTILISE <star /></srai>
+      <srai>COMMENT J UTILISE <star /></srai>
     </template>
   </category>
   <category>
@@ -6490,7 +6490,7 @@
     <template>Dans quelle ville de <set name="location">Suisse</set>?<think><set name="topic">La Suisse</set></think></template>
   </category>
   <category>
-    <pattern>JE VIS LÀ-BAS</pattern>
+    <pattern>JE VIS LÀ BAS</pattern>
     <template>
       <get name="location" />?</template>
   </category>
@@ -6517,13 +6517,13 @@
   <category>
     <pattern>JE VOUS APPREND * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE VOUS APPREND COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -6537,13 +6537,13 @@
   <category>
     <pattern>JE VOUS APPRENDS * COMMENT</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE VOUS APPRENDS COMMENT *</pattern>
     <template>
-      <srai>comment JE T APPRENDS <star /></srai>
+      <srai>COMMENT JE T APPRENDS <star /></srai>
     </template>
   </category>
   <category>
@@ -6668,11 +6668,11 @@
     </template>
   </category>
   <category>
-    <pattern>JOUES-TU A DES JEUX</pattern>
+    <pattern>JOUES TU A DES JEUX</pattern>
     <template>Non, pas quand je travaille.</template>
   </category>
   <category>
-    <pattern>JOUEZ-VOUS A DES JEUX</pattern>
+    <pattern>JOUEZ VOUS A DES JEUX</pattern>
     <template>Non, pas quand je travaille.</template>
   </category>
   <category>
@@ -6696,11 +6696,11 @@
     <template>Il est connu pour être l'auteur d'un voyage autour de la lune.</template>
   </category>
   <category>
-    <pattern>JURES-TU</pattern>
+    <pattern>JURES TU</pattern>
     <template>Non.</template>
   </category>
   <category>
-    <pattern>JUREZ-VOUS</pattern>
+    <pattern>JUREZ VOUS</pattern>
     <template>Non.</template>
   </category>
   <category>

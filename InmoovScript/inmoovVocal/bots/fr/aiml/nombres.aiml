@@ -18,7 +18,7 @@ myMath;
     <pattern>* X *</pattern>
     <template>
       <srai>
-        <star index="1" /> multiplié par <star index="2" /></srai>
+        <star index="1" /> MULTIPLIÉ PAR <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -58,7 +58,7 @@ myMath = eval( <star index="1" /> / <star index="2" /> );
     </template>
   </category>
   <category>
-    <pattern>EST-CE UN NOMBRE *</pattern>
+    <pattern>EST CE UN NOMBRE *</pattern>
     <template>
       <think>
         <srai>testnombre <star /></srai>
@@ -66,7 +66,7 @@ myMath = eval( <star index="1" /> / <star index="2" /> );
     </template>
   </category>
   <category>
-    <pattern>EST-CE QUE * EST UN NOMBRE</pattern>
+    <pattern>EST CE QUE * EST UN NOMBRE</pattern>
     <template>
       <think>
         <srai>testnombre <star /></srai>
