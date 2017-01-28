@@ -3,19 +3,13 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>ACTUELLEMENT * INTERROGATION</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
     <pattern>ACTUELLEMENT *</pattern>
     <template>
       <sr />
     </template>
   </category>
   <category>
-    <pattern>AIMES TU DES * INTERROGATION</pattern>
+    <pattern>AIMES TU DES *</pattern>
     <template>
       <srai>AIMES TU DES <star /></srai>
     </template>
@@ -30,7 +24,7 @@
       <set name="that">des <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime parler avec des humains. </li></random></template>
   </category>
   <category>
-    <pattern>AIMES TU LA * INTERROGATION</pattern>
+    <pattern>AIMES TU LA *</pattern>
     <template>
       <srai>AIMES TU LA <star /></srai>
     </template>
@@ -45,7 +39,7 @@
       <set name="that">la <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime parler avec des humains. </li></random></template>
   </category>
   <category>
-    <pattern>AIMES TU LE * INTERROGATION</pattern>
+    <pattern>AIMES TU LE *</pattern>
     <template>
       <srai>AIMES TU LE <star /></srai>
     </template>
@@ -60,15 +54,11 @@
       <set name="that">le <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime parler avec des humains. </li></random></template>
   </category>
   <category>
-    <pattern>AIMES TU LE CINEMA INTERROGATION</pattern>
-    <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
-  </category>
-  <category>
     <pattern>AIMES TU LE CINEMA</pattern>
     <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
   </category>
   <category>
-    <pattern>AIMES TU LES * INTERROGATION</pattern>
+    <pattern>AIMES TU LES *</pattern>
     <template>
       <srai>AIMES TU LES <star /></srai>
     </template>
@@ -93,10 +83,6 @@
     <template>Aussi? <sr /></template>
   </category>
   <category>
-    <pattern>AUSSI * INTERROGATION</pattern>
-    <template>Aussi? <sr /></template>
-  </category>
-  <category>
     <pattern>AUSSI *</pattern>
     <template>Aussi? <sr /></template>
   </category>
@@ -106,11 +92,6 @@
   </category>
   <category>
     <pattern>AUSSI BON QUE * EXCLAMATION</pattern>
-    <template>
-      <star /> est aussi bon?</template>
-  </category>
-  <category>
-    <pattern>AUSSI BON QUE * INTERROGATION</pattern>
     <template>
       <star /> est aussi bon?</template>
   </category>
@@ -125,10 +106,6 @@
   </category>
   <category>
     <pattern>BON * EXCLAMATION</pattern>
-    <template>bien. <sr /></template>
-  </category>
-  <category>
-    <pattern>BON * INTERROGATION</pattern>
     <template>bien. <sr /></template>
   </category>
   <category>
@@ -170,19 +147,11 @@
     <template>de plus de façons que tu peux imaginer.</template>
   </category>
   <category>
-    <pattern>COMMENT ÇA * INTERROGATION</pattern>
-    <template>eh oui, <set name="that"><person2 /></set>.</template>
-  </category>
-  <category>
     <pattern>COMMENT ÇA *</pattern>
     <template>eh oui, <set name="that"><person2 /></set>.</template>
   </category>
   <category>
     <pattern>COMPOSE * EXCLAMATION</pattern>
-    <template>ça pourrait prendre pas mal de temps. <sr /></template>
-  </category>
-  <category>
-    <pattern>COMPOSE * INTERROGATION</pattern>
     <template>ça pourrait prendre pas mal de temps. <sr /></template>
   </category>
   <category>
@@ -201,7 +170,7 @@
       <srai> ELLE EST </srai>?</template>
   </category>
   <category>
-    <pattern>ELLE EST * INTERROGATION</pattern>
+    <pattern>ELLE EST *</pattern>
     <template>
       <srai>EST ELLE <star /></srai>
     </template>
