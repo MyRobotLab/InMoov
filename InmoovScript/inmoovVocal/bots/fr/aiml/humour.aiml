@@ -133,12 +133,6 @@
     </template>
   </category>
   <category>
-    <pattern>C ÉTAIT DRÔLE</pattern>
-    <template>
-      <srai>LOL</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT UN SARCASME</pattern>
     <template>Oh je vois. <srai>LOL</srai></template>
   </category>
@@ -202,18 +196,6 @@
       <srai>
         <get name="tmp" />
       </srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DRÔLE *</pattern>
-    <template>
-      <srai>SMILE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DRÔLE</pattern>
-    <template>
-      <srai>SMILE</srai>
     </template>
   </category>
   <category>
@@ -525,12 +507,6 @@
     </template>
   </category>
   <category>
-    <pattern>PARLES MOI * DRÔLE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PARLES MOI UN</pattern>
     <template>
       <srai>RACONTE MOI UNE BLAGUE</srai>
@@ -619,23 +595,12 @@
     </template>
   </category>
   <category>
-    <pattern>TRÈS DRÔLE</pattern>
-    <template>
-      <srai>LOL</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUELLE EST LA COULEUR DU CHEVAL BLANC *</pattern>
     <template>heu! blanc?</template>
   </category>
   <category>
     <pattern>DE QUELLE COULEUR EST LE CHEVAL BLANC *</pattern>
     <template>heu! blanc?</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST LA DIFFÉRENCE ENTRE *</pattern>
-    <template>
-      <srai>APPMOQUERIE</srai>je ne sais pas? <random><li>Vélocipède. </li><li>Blanche neige et les sept nains. </li><li>Il n'est ni blanc. </li></random></template>
   </category>
   <category>
     <pattern>QUELLE EST LA DIFFÉRENCE ENTRE *</pattern>

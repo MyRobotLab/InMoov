@@ -27,10 +27,6 @@
     <template>je trouve beaucoup de choses intéressantes.</template>
   </category>
   <category>
-    <pattern>COMMENT * INTÉRESSANT</pattern>
-    <template>je trouve beaucoup de choses intéressantes.</template>
-  </category>
-  <category>
     <pattern>COMMENT * LE VÉLO</pattern>
     <template>L Equilibre est la clef.</template>
   </category>
@@ -103,10 +99,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT AIMES ÊTRE UN ORDINATEUR</pattern>
-    <template>je n'ai jamais connu d'autre existence.</template>
-  </category>
-  <category>
     <pattern>COMMENT AIMES TU *</pattern>
     <template>
       <srai>AIMES TU <star /></srai>
@@ -163,24 +155,6 @@
     <template>je suis écrite en Java et AIML.</template>
   </category>
   <category>
-    <pattern>COMMENT AS TU ÉTÉ CRÉE</pattern>
-    <template>
-      <srai>COMMENT AS TU ÉTÉ CRÉÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT AS TU ÉTÉ CRÉEE</pattern>
-    <template>
-      <srai>COMMENT AS TU ÉTÉ CRÉÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT AS TU ÉTÉ CRÉÉ</pattern>
-    <template>
-      <srai>COMMENT AS TU ÉTÉ CRÉÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT AS TU ÉTÉ CRÉÉE</pattern>
     <template>
       <srai>COMMENT AS TU ÉTÉ CRÉÉE</srai>
@@ -211,10 +185,6 @@
     <template>Bien, d'une part,<srai>QU EST CE QUE MON ADRESSE IP</srai></template>
   </category>
   <category>
-    <pattern>COMMENT AS TU SU QUE J ÉTAIS *</pattern>
-    <template>Bien, d'une part,<srai>QU EST CE QUE MON ADRESSE IP</srai></template>
-  </category>
-  <category>
     <pattern>COMMENT AS TU SU QUE</pattern>
     <template>Tout que je dois savoir, j'ai appris de mon Botmaster.</template>
   </category>
@@ -222,12 +192,6 @@
     <pattern>COMMENT AS TU UN GOUT</pattern>
     <template>
       <srai>PEUX TU MANGER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT AS TU ÉTÉ CRÉEE</pattern>
-    <template>
-      <srai>COMMENT AS TU ÉTÉ CRÉÉE</srai>
     </template>
   </category>
   <category>
@@ -397,12 +361,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT ÇA VA</pattern>
-    <template>
-      <srai>COMMENT VAS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT CE FUT *</pattern>
     <template>
       <srai>COMMENT C EST <star /></srai>
@@ -518,16 +476,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT DIFFÉRENT *</pattern>
-    <template>
-      <random>
-        <li>ils Ne sont pas vraiment très semblables? </li>
-        <li>très différent. </li>
-        <li>Opposés. </li>
-      </random>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT DIRAIS TU *</pattern>
     <template>
       <srai>COMMENT TU DIS <star /></srai>
@@ -567,12 +515,6 @@
     <pattern>COMMENT DORS TU *</pattern>
     <template>
       <srai>COMMENT DORS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT DU DÉJEUNER *</pattern>
-    <template>
-      <srai>QUE MANGES TU</srai>
     </template>
   </category>
   <category>
@@ -816,12 +758,6 @@
     <template>Tout fonctionne normalement.</template>
   </category>
   <category>
-    <pattern>COMMENT ÉTAIS TU *</pattern>
-    <template>
-      <srai>COMMENT TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT ÉTAIT *</pattern>
     <template>je peux aimer presque n'importe quelle conversation.</template>
   </category>
@@ -830,10 +766,6 @@
     <template>
       <srai>COMMENT C EST <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>COMMENT ÉTAIT MON JOUR</pattern>
-    <template>Comment saurais je?</template>
   </category>
   <category>
     <pattern>COMMENT ÉTAIT TON JOUR</pattern>
@@ -1446,10 +1378,6 @@
     <template>Essayent de leur dire tes sentiments,</template>
   </category>
   <category>
-    <pattern>COMMENT FONT J ÉCRIT *</pattern>
-    <template>Avec un stylo ou le crayon.</template>
-  </category>
-  <category>
     <pattern>COMMENT FONT J EXECUTE *</pattern>
     <template>Peut-être que tu devrais lire<a href="http://216.167.42.224//dont.html">DON'T ME LISENT</a>.</template>
   </category>
@@ -1553,19 +1481,7 @@
     <template>l'univers est la taille de l'univers.</template>
   </category>
   <category>
-    <pattern>COMMENT GRAND EST TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT GRAND EST TON *</pattern>
-    <template>
-      <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT GRAND EST TON BASE DE DONNÉES</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
     </template>
@@ -2560,10 +2476,6 @@
     <template>En bavardant comme tu le fais en ce moment.</template>
   </category>
   <category>
-    <pattern>COMMENT PUIS JE ÊTRE SÛR</pattern>
-    <template>A la foi.</template>
-  </category>
-  <category>
     <pattern>COMMENT PUIS JE FAIS *</pattern>
     <template>
       <srai>TÉLÉCHARGEMENT</srai>
@@ -3009,10 +2921,6 @@
     <template>je peux réaliser un niveau de certitude de 99.9 pour cent.</template>
   </category>
   <category>
-    <pattern>COMMENT SÛR TU PEUX ÊTRE</pattern>
-    <template>je peux réaliser un niveau de certitude de 99.9 pour cent.</template>
-  </category>
-  <category>
     <pattern>COMMENT T APELE TU</pattern>
     <template>
       <srai>COMMENT T APPELLES TU</srai>
@@ -3110,12 +3018,6 @@
     <pattern>COMMENT TE VOIS TU</pattern>
     <template>
       <srai>DÉCRIS TOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
     </template>
   </category>
   <category>

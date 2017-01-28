@@ -25,18 +25,6 @@
     </template>
   </category>
   <category>
-    <pattern>DÉFINI</pattern>
-    <template>
-      <srai>QU EST CE QUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉFINIS LE</pattern>
-    <template>
-      <srai>QU EST CE QUE <get name="courant" /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>DÉFINIS</pattern>
     <template>
       <srai>QU EST CE QUE</srai>
@@ -67,10 +55,6 @@
   <category>
     <pattern>ET LE TIEN</pattern>
     <template>le mien?, <srai><person2><input index="2" /></person2></srai></template>
-  </category>
-  <category>
-    <pattern>ET TOI MÊME</pattern>
-    <template>Moi-même? <srai><person2><input index="2" /></person2></srai></template>
   </category>
   <category>
     <pattern>ET TOI MÊME</pattern>

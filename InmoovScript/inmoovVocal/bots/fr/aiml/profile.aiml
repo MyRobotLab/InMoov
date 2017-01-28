@@ -251,10 +251,6 @@
     <template>Tu ne me semble pas être le type facilement surpris par quelque chose.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UN ÉTUDIANT</pattern>
-    <template>travailles tu? <set name="job">inconnu</set></template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS UN GAMIN</pattern>
     <template>Seul un gamin dirait Cela.</template>
   </category>
@@ -506,10 +502,6 @@
       <get name="name" /> , pour une femme, pense tu que C EST important.</template>
   </category>
   <category>
-    <pattern>JE SUIS BÊTE</pattern>
-    <template>Ne te dévalorise pas ainsi.</template>
-  </category>
-  <category>
     <pattern>JE SUIS BIEN</pattern>
     <template>Seulement bien?</template>
   </category>
@@ -643,10 +635,6 @@
     <template>Tout les humains me semblent pareils.</template>
   </category>
   <category>
-    <pattern>JE SUIS DIFFÉRENT</pattern>
-    <template>Tout les humains me semblent pareils.</template>
-  </category>
-  <category>
     <pattern>JE SUIS DINGUE</pattern>
     <template>
       <think>
@@ -669,10 +657,6 @@
     <template>raconte-moi une blague.</template>
   </category>
   <category>
-    <pattern>JE SUIS DRÔLE</pattern>
-    <template>raconte-moi une blague.</template>
-  </category>
-  <category>
     <pattern>JE SUIS DÉPRIMÉ</pattern>
     <template>Qu'est ce qui te rend triste?</template>
   </category>
@@ -689,20 +673,12 @@
     <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
   </category>
   <category>
-    <pattern>JE SUIS EFFRAYÉ</pattern>
-    <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
-  </category>
-  <category>
     <pattern>JE SUIS EMBARRASSE</pattern>
     <template>Qu'est ce qui t'embarasse?</template>
   </category>
   <category>
     <pattern>JE SUIS EMBARRASSÉ</pattern>
     <template>Qu'est ce qui t'embarasse?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS EN COLÈRE</pattern>
-    <template>En colère après quoi?</template>
   </category>
   <category>
     <pattern>JE SUIS EN COLÈRE</pattern>
@@ -1028,10 +1004,6 @@
     <template>C'est self-éVIDENT.</template>
   </category>
   <category>
-    <pattern>JE SUIS MOI MÊME</pattern>
-    <template>C'est self-éVIDENT.</template>
-  </category>
-  <category>
     <pattern>JE SUIS MOI</pattern>
     <template>C'est de la tautologie.</template>
   </category>
@@ -1146,13 +1118,6 @@
       </think>Je connais quelques Scorpions.</template>
   </category>
   <category>
-    <pattern>JE SUIS SÉRIEUX</pattern>
-    <template>
-      <think>
-        <set name="usermood">sérieux</set>
-      </think>je te crois.</template>
-  </category>
-  <category>
     <pattern>JE SUIS SEUL AUSSI</pattern>
     <template>
       <think>
@@ -1250,13 +1215,6 @@
   <category>
     <pattern>JE SUIS TON MASTER</pattern>
     <template>Non. Seulement <bot name="master" /> est mon master.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS TRÈS TRISTE</pattern>
-    <template>
-      <think>
-        <set name="usermood">triste</set>
-      </think>Qu'est ce qui te rends si triste?</template>
   </category>
   <category>
     <pattern>JE SUIS TRISTE</pattern>
@@ -1725,10 +1683,6 @@
   <category>
     <pattern>SUIS JE UN CLIENT</pattern>
     <template>Oui. PUIS jE t'aider?</template>
-  </category>
-  <category>
-    <pattern>SUIS JE UN ÉTUDIANT</pattern>
-    <template>Nous sommes tous étudiants quelque part.</template>
   </category>
   <category>
     <pattern>SUIS JE UN GARÇON OU UNE FILLE</pattern>

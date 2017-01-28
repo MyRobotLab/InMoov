@@ -63,10 +63,6 @@
     <template>Tu m'avais dit que ton nom réel était <get name="name" />.</template>
   </category>
   <category>
-    <pattern>JE T AI DÉJÀ DIS QUE *</pattern>
-    <template>Tu m'avais dit que ton nom réel était <get name="name" />.</template>
-  </category>
-  <category>
     <pattern>JE VEUX QUE *</pattern>
     <template>Tu peux obtenir ton désir.</template>
   </category>
@@ -227,18 +223,6 @@
     </template>
   </category>
   <category>
-    <pattern>QU AS TU FAIS * LE DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS * LE DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QU AS TU FAIS *</pattern>
     <template>
       <srai>CE QUE TU AS <star /></srai>
@@ -248,18 +232,6 @@
     <pattern>QU AS TU FAIS POUR LE DÎNER *</pattern>
     <template>
       <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS POUR LE DÎNER *</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS POUR LE PETIT DÉJEUNER</pattern>
-    <template>
-      <srai>QUE MANGES TU</srai>
     </template>
   </category>
   <category>
@@ -310,12 +282,6 @@
     <pattern>QU IL *</pattern>
     <template>
       <srai>IL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU IL A ÉTÉ *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
     </template>
   </category>
   <category>
@@ -489,10 +455,6 @@
     <template>je n'ai aucun problème maintenant.</template>
   </category>
   <category>
-    <pattern>QUE DES PROBLÈMES</pattern>
-    <template>je n'ai aucun problème maintenant.</template>
-  </category>
-  <category>
     <pattern>QUE DIABLE *</pattern>
     <template>Oh. <srai>QUEL <star /></srai></template>
   </category>
@@ -545,18 +507,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE DOIS JE MANGER * LE DÉJEUNER</pattern>
-    <template>
-      <srai>POUR LE DÎNER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE DOIS JE MANGER * LE DÎNER</pattern>
-    <template>
-      <srai>POUR LE DÎNER</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE DOIS JE PORTER</pattern>
     <template>
       <random>
@@ -595,18 +545,6 @@
   </category>
   <category>
     <pattern>QUE FAIS TU * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU * LE DÉJEUNER</pattern>
     <template>
       <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
@@ -831,12 +769,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE J AI ÉCRIT *</pattern>
-    <template>
-      <srai>J AI ÉCRIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE J AI A OUBLIE</pattern>
     <template>
       <srai>J AI OUBLIÉ</srai>
@@ -900,18 +832,6 @@
     <pattern>QUE KINDA *</pattern>
     <template>
       <srai>QUEL GENRE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE L OPÉRA *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON OPÉRA PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE L OPÉRA</pattern>
-    <template>
-      <srai>QU EST CE QUE TON OPÉRA PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -1299,12 +1219,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE PENSES TU DE TON PÈRE</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE PENSES TU DE WALESA LECH</pattern>
     <template>
       <srai>QUI EST WALESA LECH</srai>
@@ -1668,12 +1582,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE TU AS DONNÉ *</pattern>
-    <template>
-      <srai>TU AS DONNÉ <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE TU AS REPETE CE QUE J AI DIS</pattern>
     <template>
       <srai>TU RÉPÈTES</srai>
@@ -1690,10 +1598,6 @@
     <template>
       <srai>DIS <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUE TU M AS DÉJÀ DIT QUE *</pattern>
-    <template>je le disais de nouveau pour l accent.</template>
   </category>
   <category>
     <pattern>QUE TU M AS DÉJÀ DIT QUE *</pattern>
@@ -1864,10 +1768,6 @@
     <template>
       <bot name="kindmusic" />
     </template>
-  </category>
-  <category>
-    <pattern>QUEL OPÉRA</pattern>
-    <template>j'aime Traviata La le mieux.</template>
   </category>
   <category>
     <pattern>QUEL OPÉRA</pattern>

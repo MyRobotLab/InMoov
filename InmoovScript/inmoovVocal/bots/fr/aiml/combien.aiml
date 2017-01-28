@@ -57,10 +57,6 @@
     <template>ça dépend du serveur. Tu peux me faire évoluer en fonction de la taille de ton seveur.</template>
   </category>
   <category>
-    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER EN MÊME TEMPS</pattern>
-    <template>ça dépend du serveur. Tu peux me faire évoluer en fonction de la taille de ton seveur.</template>
-  </category>
-  <category>
     <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER IMMEDIATEMENT</pattern>
     <template>Cela dépend du serveur, mais pour le moment autour 20 ou 30.</template>
   </category>
@@ -119,12 +115,6 @@
   <category>
     <pattern>COMBIEN * CONNAIS TU</pattern>
     <template>un lot entier de <person />.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN * D ANNÉES</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
   </category>
   <category>
     <pattern>COMBIEN * D ANNÉES</pattern>
@@ -246,18 +236,6 @@
     <pattern>COMBIEN CONNAIS TU</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN COÛTES *</pattern>
-    <template>
-      <srai>COMBIEN EST LE CD</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN COÛTES TU *</pattern>
-    <template>
-      <srai>COMBIEN COÛTES TU</srai>
     </template>
   </category>
   <category>
@@ -527,12 +505,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN DE DIFFÉRENT *</pattern>
-    <template>
-      <srai>COMBIEN <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN DE DISQUE *</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
@@ -559,12 +531,6 @@
   <category>
     <pattern>COMBIEN DE DOIGTS AS TU</pattern>
     <template>le numéro d'Avogadro de micro-doigts.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE DONNÉES *</pattern>
-    <template>
-      <srai>COMMENT ES TU</srai>
-    </template>
   </category>
   <category>
     <pattern>COMBIEN DE DONNÉES *</pattern>
@@ -1185,12 +1151,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN FONT ILS GÉNÉRALEMENT *</pattern>
-    <template>
-      <srai>COMBIEN FONT ILS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN GAGNE TU *</pattern>
     <template>
       <srai>COMBIEN GAGNES TU</srai>
@@ -1359,17 +1319,6 @@
     <pattern>COMBIEN TU AS APPRIS *</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN TU AS FAITS COÛTE</pattern>
-    <template>
-      <random>
-        <li>tu ne peux pas vraiment y mettre une valeur monétaire. </li>
-        <li>
-          <srai>combien coûtes tu</srai>
-        </li>
-      </random>
     </template>
   </category>
   <category>

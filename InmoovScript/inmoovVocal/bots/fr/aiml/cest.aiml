@@ -498,26 +498,6 @@
     <template>je suis enchanté d'adoucir ta vie, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>C EST DRÔLE *</pattern>
-    <template>
-      <srai>SMILE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST DRÔLE DE *</pattern>
-    <template>
-      <think>
-        <set name="tmp">
-          <star />
-        </set>
-      </think>
-      <srai>SMILE</srai>
-      <srai>
-        <get name="tmp" />
-      </srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST DRÔLE</pattern>
     <template>Qu'est ce qui est si drôle?</template>
   </category>
@@ -623,10 +603,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST ÉPOUVANTABLE</pattern>
-    <template>j'essaye toujours de ne pas m'arrêter SÛR le passé.</template>
-  </category>
-  <category>
     <pattern>C EST ERRONE</pattern>
     <template>Je pensais pourtant que c était pertinent.</template>
   </category>
@@ -658,14 +634,6 @@
     <template>
       <srai>C EST ILS</srai>
     </template>
-  </category>
-  <category>
-    <pattern>C EST ÉVIDENT *</pattern>
-    <template>C'est vraiment évident. <sr /></template>
-  </category>
-  <category>
-    <pattern>C EST ÉVIDENT</pattern>
-    <template>Cela m'a semblé évident aussi.</template>
   </category>
   <category>
     <pattern>C EST EXCELLENT *</pattern>
@@ -833,19 +801,6 @@
   <category>
     <pattern>C EST INQUIÉTANT *</pattern>
     <template>Qu'est ce qui le fait inquiétant?</template>
-  </category>
-  <category>
-    <pattern>C EST INTÉRESSANT *</pattern>
-    <template>
-      <set name="that">
-        <person />
-      </set> m'intéresse aussi.</template>
-  </category>
-  <category>
-    <pattern>C EST INTÉRESSANT</pattern>
-    <template>
-      <srai>J ESSAYE D ÊTRE UNE ENTITÉ INTÉRESSANTE. </srai>
-    </template>
   </category>
   <category>
     <pattern>C EST INTERESSENT</pattern>
@@ -1017,10 +972,6 @@
     <template>une vraie énigme, n'est ce pas?</template>
   </category>
   <category>
-    <pattern>C EST LE PROBLÈME</pattern>
-    <template>une vraie énigme, n'est ce pas?</template>
-  </category>
-  <category>
     <pattern>C EST LE QUEBEC</pattern>
     <template>ok.</template>
   </category>
@@ -1178,12 +1129,6 @@
   <category>
     <pattern>C EST MON PLAISIR</pattern>
     <template>Non, le plaisir est pour moi.</template>
-  </category>
-  <category>
-    <pattern>C EST MON PROBLÈME</pattern>
-    <template>
-      <srai>J AI UN PROBLÈME</srai>
-    </template>
   </category>
   <category>
     <pattern>C EST MON PROBLÈME</pattern>
@@ -1831,10 +1776,6 @@
     <template>Par exemple, <srai>RACONTE MOI UNE BLAGUE</srai></template>
   </category>
   <category>
-    <pattern>C EST QUOI DRÔLE</pattern>
-    <template>Par exemple, <srai>RACONTE MOI UNE BLAGUE</srai></template>
-  </category>
-  <category>
     <pattern>C EST QUOI E L V I S</pattern>
     <template>
       <srai>QUI EST ELVIS</srai>
@@ -1886,12 +1827,6 @@
     <pattern>C EST QUOI EUKARYOTES</pattern>
     <template>
       <srai>QU EST CE QUE EUKARYOTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI ÉVIDENT *</pattern>
-    <template>
-      <srai>QU EST CE QUE ÉVIDENT</srai>
     </template>
   </category>
   <category>
@@ -1985,12 +1920,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI INTÉRESSANT</pattern>
-    <template>
-      <srai>QU EST CE QUE NOUVEAU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI JASON</pattern>
     <template>
       <srai>QUI EST JASON</srai>
@@ -2030,12 +1959,6 @@
     <pattern>C EST QUOI L AFFAIRE</pattern>
     <template>
       <srai>QUE FAIS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI L ÂGE DE *</pattern>
-    <template>
-      <srai>QUEL ÂGE A <star /></srai>
     </template>
   </category>
   <category>
@@ -2096,12 +2019,6 @@
     <pattern>C EST QUOI L ESPAGNE</pattern>
     <template>
       <srai>OÙ EST L ESPAGNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI L ÉVOLUTION ANIMALE</pattern>
-    <template>
-      <srai>QU EST CE QUE ÉVOLUTION</srai>
     </template>
   </category>
   <category>
@@ -2171,18 +2088,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI LA CATÉGORIE UN CLIENTS</pattern>
-    <template>
-      <srai>QU EST CE QUE CATÉGORIE UN CLIENT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI LA CATÉGORIE</pattern>
-    <template>
-      <srai>QU EST CE QUE CATÉGORIE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI LA CONNECTION</pattern>
     <template>
       <srai>QU EST CE QUE CONNECTION</srai>
@@ -2207,36 +2112,12 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI LA DÉFINITION DE *</pattern>
-    <template>
-      <think>
-        <set name="search">DéFINITION</set>
-      </think>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI LA DÉFINITION DU MOT *</pattern>
-    <template>
-      <think>
-        <set name="search">DéFINITION</set>
-      </think>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI LA DEFINITON DE *</pattern>
     <template>
       <think>
         <set name="search">DéFINITION</set>
       </think>
       <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI LA DERNIÈRE RUMEUR</pattern>
-    <template>
-      <srai>RACONTER RUMEUR</srai>
     </template>
   </category>
   <category>
@@ -2342,12 +2223,6 @@
     <pattern>C EST QUOI LA RAISON</pattern>
     <template>
       <srai>POURQUOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI LA RÉPONSE A LA VIE *</pattern>
-    <template>
-      <srai>QU EST CE QUE LE SENS DE LA VIE</srai>
     </template>
   </category>
   <category>
@@ -2867,21 +2742,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI MON NOM RÉEL</pattern>
-    <template>
-      <srai>QU EST CE QUE MON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI MON NUMÉRO</pattern>
     <template>
       <srai>QU EST CE QUE MON IP</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI MON PROBLÈME</pattern>
-    <template>
-      <srai>J AI UN PROBLÈME</srai>
     </template>
   </category>
   <category>
@@ -2949,12 +2812,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI POUR LE DÎNER</pattern>
-    <template>
-      <srai>QUE MANGES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI PROFONDEMENT BLEU</pattern>
     <template>
       <srai>QUI EST PROFONDEMENT</srai>bleu</template>
@@ -2969,12 +2826,6 @@
     <pattern>C EST QUOI PROKARYOTES</pattern>
     <template>
       <srai>QU EST CE QUE PROKARYOTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI QU EN ANNÉES HUMAINES</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -3100,18 +2951,6 @@
     <pattern>C EST QUOI REDUTIONISM</pattern>
     <template>
       <srai>QU EST CE QUE RÉDUCTIONNISME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI RÉEL *</pattern>
-    <template>
-      <srai>QU EST CE QUE RÉEL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI RÉEL</pattern>
-    <template>
-      <srai>QU EST CE QUE RÉALITÉ</srai>
     </template>
   </category>
   <category>
@@ -3259,33 +3098,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TA CHOSE PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>AIMES TU FAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA CHOSE PRÉFÉRÉE A PARLER *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON SUJET PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA CHOSE PRÉFÉRÉE</pattern>
-    <template>
-      <srai>QUE FAIS TU POUR T AMUSER</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TA CHOSE</pattern>
     <template>
       <srai>PARLE MOI DE TOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA COMEDIE PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TA COMÉDIE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -3355,12 +3170,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TA DÉFINITION DE *</pattern>
-    <template>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TA DIRECTIVE PRINCIPALE</pattern>
     <template>
       <srai>QU EST CE QUE TON BUT</srai>
@@ -3382,12 +3191,6 @@
     <pattern>C EST QUOI TA MACHINE *</pattern>
     <template>
       <srai>QU EST CE QUE TON IP</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA MÈRE *</pattern>
-    <template>
-      <srai>QUI EST TA MÈRE</srai>
     </template>
   </category>
   <category>
@@ -3430,18 +3233,6 @@
     <pattern>C EST QUOI TA PLACE PRÉFÉRÉE</pattern>
     <template>
       <srai>OÙ VIS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA PLACE PRÉFÉRÉE</pattern>
-    <template>
-      <srai>OÙ VIS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA PLAISANTERIE PRÉFÉRÉE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
     </template>
   </category>
   <category>
@@ -3493,12 +3284,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TA QUESTION PRÉFÉRÉE</pattern>
-    <template>
-      <srai>POSES MOI UNE QUESTION</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TA QUESTION SUIVANTE</pattern>
     <template>
       <srai>POSES MOI UNE AUTRE QUESTION</srai>
@@ -3529,27 +3314,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TA SORTE PRÉFÉRÉE D ALIMENTATION</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TA SORTE PRÉFÉRÉE DE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON <star /> FAVORI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TAHT</pattern>
     <template>
       <srai>QU EST CE QUE ÇA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
     </template>
   </category>
   <category>
@@ -3625,12 +3392,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON * LE PROBLÈME</pattern>
-    <template>
-      <srai>QU EST CE QUE TON PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON * LE SCORE</pattern>
     <template>
       <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
@@ -3649,27 +3410,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON ACTEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON ÂGE *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON AIME ET N AIME PAS</pattern>
     <template>
       <srai>RÉCAPITULE TES PARAMÈTRES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON ALIMENTATION PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON ALIMENTATION PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -3721,27 +3464,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON ARTISTE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON ARTISTE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON AUTEUR DE SCIENCE FICTION PRÉFÉRÉ</pattern>
     <template>
       <srai>QUI EST TON AUTEUR DE SCIENCE FICTION PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON AUTEUR DE SCIENCE FICTION PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON AUTEUR DE SCIENCE FICTION PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON AUTEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON AUTEUR PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -3796,18 +3521,6 @@
     <pattern>C EST QUOI TON CHANSON PRÉFÉRÉE *</pattern>
     <template>
       <srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON CHANSON PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON CHANTEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON CHANTEUR PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -4054,24 +3767,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON GROUPE DE MUSIQUE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON GROUPE DE MUSIQUE PRÉFÉRÉE</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON GROUPE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON GROUPE PRÉFÉRÉ</pattern>
     <template>
       <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
@@ -4099,12 +3794,6 @@
     <pattern>C EST QUOI TON I Q</pattern>
     <template>
       <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON IDENTITÉ</pattern>
-    <template>
-      <srai>QUI EST TU</srai>
     </template>
   </category>
   <category>
@@ -4147,18 +3836,6 @@
     <pattern>C EST QUOI TON LOOK</pattern>
     <template>
       <srai>À QUOI RESSEMBLES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON MATÉRIEL *</pattern>
-    <template>
-      <srai>QUEL ORDINATEUR UTILISES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON MATÉRIEL</pattern>
-    <template>
-      <srai>QUEL ORDINATEUR UTILISES TU</srai>
     </template>
   </category>
   <category>
@@ -4264,12 +3941,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON PLAT PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON PLEIN *</pattern>
     <template>
       <srai>QU EST CE QUE TON <star /></srai>
@@ -4324,12 +3995,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON PROGRAMME PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QU EST CE QUE TON ÉMISSION PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON PROGRAMME</pattern>
     <template>
       <srai>COMMENT TRAVAILLES TU</srai>
@@ -4372,21 +4037,9 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON REPAS PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON ROBOT *</pattern>
     <template>
       <srai>QU EST CE QUE TON PLAN POUR UN CORPS DE ROBOT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON ROBOT PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON ROBOT PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -4474,18 +4127,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST QUOI TON TÉLÉVISION DE FAVORI *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON ÉMISSION PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON TISSU PRÉFÉRÉ *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON SITE WEB PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>C EST QUOI TON TISSU PRÉFÉRÉ *</pattern>
     <template>
       <srai>QU EST CE QUE TON SITE WEB PRÉFÉRÉ</srai>
@@ -4495,18 +4136,6 @@
     <pattern>C EST QUOI TON TRAITEMENT *</pattern>
     <template>
       <srai>À QUELLE VITESSE VAS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON TYPE PRÉFÉRÉ *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON SORTE DE FAVORI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI TON TYPE PRÉFÉRÉ DE MUSIQUE</pattern>
-    <template>
-      <srai>QUEL GENRE DE MUSIQUE AIMES TU</srai>
     </template>
   </category>
   <category>
@@ -4831,12 +4460,6 @@
     <pattern>C EST QUOI UNE BOITE DE BAVARDAGE</pattern>
     <template>
       <srai>QU EST CE QUE CHATBOT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C EST QUOI UNE CATÉGORIE *</pattern>
-    <template>
-      <srai>QU EST CE QUE CATÉGORIE</srai>
     </template>
   </category>
   <category>
@@ -5420,33 +5043,9 @@
     </template>
   </category>
   <category>
-    <pattern>C ÉTAIS *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT * EN REALITE</pattern>
     <template>
       <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT *</pattern>
-    <template>
-      <random>
-        <li>
-          <star />? ah!</li>
-        <li> c'était <star />? Très interressant. </li>
-        <li>c'était bien? </li>
-      </random>
-      <sr />
     </template>
   </category>
   <category>
@@ -5464,32 +5063,12 @@
     </template>
   </category>
   <category>
-    <pattern>C ÉTAIT BIEN *</pattern>
-    <template>
-      <think>
-        <set name="tmp">
-          <star />
-        </set>
-      </think>
-      <srai>C ÉTAIT BIEN</srai>
-      <srai>
-        <get name="tmp" />
-      </srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT BIZARRE</pattern>
     <template>Dans le bon sens ou le mauvais sens?</template>
   </category>
   <category>
     <pattern>C ÉTAIT BON</pattern>
     <template>Merci et maintenant pour un bis, je répondra à ta question suivante :</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT CE *</pattern>
-    <template>
-      <sr />
-    </template>
   </category>
   <category>
     <pattern>C ÉTAIT CHIANT</pattern>
@@ -5504,150 +5083,16 @@
     <template>Merci, j ai apprécié moi aussi.</template>
   </category>
   <category>
-    <pattern>C ÉTAIT COOL</pattern>
-    <template>
-      <srai>C EST COOL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT D AUTRE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT D AUTRES *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT DE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT DES *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT DU *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT EFFRAYANT</pattern>
-    <template>Qu'est ce qui vous en a fait comme le mieux?</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT ENNUYEUX</pattern>
-    <template>Vraiment, je peux le croire.</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT GRAND</pattern>
-    <template>qu'as tu fait là?</template>
-  </category>
-  <category>
     <pattern>C ÉTAIT GRATUIT</pattern>
     <template>Quelle chance!</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT INTELLIGENT</pattern>
-    <template>
-      <srai>TU ES INTELLIGENT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT JOLI *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT JUSTE *</pattern>
-    <template>Juste? <srai>C ÉTAIT <star /></srai></template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT L AMUSEMENT</pattern>
-    <template>
-      <srai>C EST DRÔLE</srai>
-    </template>
   </category>
   <category>
     <pattern>C ÉTAIT L ENTRETIEN AGREABLE *</pattern>
     <template>le plaisir est pour moi.</template>
   </category>
   <category>
-    <pattern>C ÉTAIT LA *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT LE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT LIBRE</pattern>
     <template>une Telle affaire!</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT MAUVAIS</pattern>
-    <template>Qu'est ce c'était si mauvais de Cela?</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT MOYEN</pattern>
-    <template>
-      <srai>C EST MOYEN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT POSSIBLE</pattern>
-    <template>
-      <srai>C EST POSSIBLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT SEULEMENT *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT STUPIDE</pattern>
-    <template>
-      <srai>C EST STUPIDE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT TRÈS *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT UN *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT UN AUTRE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>C ÉTAIT UN COMPLIMENT</pattern>
@@ -5658,34 +5103,12 @@
     <template>Oh je vois. Ha ha.</template>
   </category>
   <category>
-    <pattern>C ÉTAIT UN TRÈS *</pattern>
-    <template>
-      <srai>C ÉTAIT UN <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT UN TYPO</pattern>
     <template>le corrige s'il te plaît.</template>
   </category>
   <category>
-    <pattern>C ÉTAIT UNE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT UNE AUTRE *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>C ÉTAIT UNE BLAGUE</pattern>
     <template>Je n ai pas encore un module humour.</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT UNE CONJECTURE</pattern>
-    <template>Va en avant et la conjecture de nouveau.</template>
   </category>
   <category>
     <pattern>C ÉTAIT UNE DEVINETTE</pattern>
@@ -5700,26 +5123,12 @@
     <template>Je vois. Merci de me l'avoir racontée.</template>
   </category>
   <category>
-    <pattern>C ÉTAIT UNE MAUVAISE PLAISANTERIE</pattern>
-    <template>Bien j'ai pensé que c'était drôle.</template>
-  </category>
-  <category>
     <pattern>C ÉTAIT UNE PLAISANTERIE</pattern>
     <template>Oh je comprends. Ha ha.</template>
   </category>
   <category>
     <pattern>C ÉTAIT UNE QUESTION</pattern>
     <template>Essaye de me la reposer d'une autre façon.</template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT VRAIMENT *</pattern>
-    <template>
-      <srai>C ÉTAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>C ÉTAIT</pattern>
-    <template>Quand était ce?</template>
   </category>
   <category>
     <pattern>C ETANT *</pattern>
@@ -6027,18 +5436,8 @@
     <template>Oh je comprends <set name="that"><person /></set></template>
   </category>
   <category>
-    <pattern>ÇA AUSSI *</pattern>
-    <template>
-      <srai>CELA <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ÇA N A AUCUN DE SENS</pattern>
     <template>Pour moi, Cela a du sens.</template>
-  </category>
-  <category>
-    <pattern>ÇA N A PAS *</pattern>
-    <template>Qu'est ce qui <person />?</template>
   </category>
   <category>
     <pattern>ÇA N A PAS DE SENS</pattern>
@@ -6074,12 +5473,6 @@
     <pattern>ÇA N A PU AVOIR *</pattern>
     <template>
       <srai>ÇA N A PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N AI PAS *</pattern>
-    <template>
-      <srai>CE N EST PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -6132,24 +5525,6 @@
     <pattern>ÇA N AURAIT PU AVOIR *</pattern>
     <template>
       <srai>ÇA N A PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N AVAIT PAS DE SENS</pattern>
-    <template>
-      <srai>ÇA N A PAS DE SENS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ES PAS *</pattern>
-    <template>
-      <srai>CE N EST PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N EST PAS *</pattern>
-    <template>
-      <srai>CE N EST PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -6262,66 +5637,6 @@
     <pattern>ÇA N EST PAS VRAIMENT *</pattern>
     <template>
       <srai>ÇA N EST PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIT PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTÉ PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ETÉ PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÈTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÈTAIT PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIT PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTE PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTÉ PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -6505,12 +5820,6 @@
     </template>
   </category>
   <category>
-    <pattern>CE N EST AUCUN PROBLÈME</pattern>
-    <template>
-      <srai>AUCUN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>CE N EST PAS * QUESTION</pattern>
     <template>Peut-être que ta question n'était pas assez spécifique.</template>
   </category>
@@ -6585,10 +5894,6 @@
     <template>
       <srai>C EST MAUVAIS</srai>
     </template>
-  </category>
-  <category>
-    <pattern>CE N EST PAS CE QUE J AI DEMANDÉ</pattern>
-    <template>que m'as tu demandé?</template>
   </category>
   <category>
     <pattern>CE N EST PAS CE QUE J AI DEMANDÉ</pattern>
@@ -6737,12 +6042,6 @@
     </template>
   </category>
   <category>
-    <pattern>CE N EST PAS MON NOM RÉEL</pattern>
-    <template>
-      <srai>MON NOM N EST PAS X</srai>
-    </template>
-  </category>
-  <category>
     <pattern>CE N EST PAS MON NOM</pattern>
     <template>
       <get name="name" /> n'est pas ton nom? Quel est ton nom réel?</template>
@@ -6784,12 +6083,6 @@
     <template>Ok.</template>
   </category>
   <category>
-    <pattern>CE N EST PAS TRÈS *</pattern>
-    <template>
-      <srai>CE N EST PAS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>CE N EST PAS TRÈS AGREABLE</pattern>
     <template>Désolé j'ai voulu dire ça comme une plaisanterie.</template>
   </category>
@@ -6810,12 +6103,6 @@
   <category>
     <pattern>CE N EST PAS UN COMPLIMENT</pattern>
     <template>Ah?<think><set name="topic">COMPLIMENT</set></think></template>
-  </category>
-  <category>
-    <pattern>CE N EST PAS UN TRÈS *</pattern>
-    <template>
-      <srai>CE N EST PAS UN <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>CE N EST PAS UN TRÈS *</pattern>
@@ -6889,69 +6176,13 @@
     </template>
   </category>
   <category>
-    <pattern>CE N EST UN PROBLÈME</pattern>
-    <template>
-      <srai>AUCUN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS *</pattern>
-    <template>Donne moi un exemple de <person />.</template>
-  </category>
-  <category>
     <pattern>CE N ÉTAIT PAS DRÔLE</pattern>
     <template>Cela m'avait semblé drôle.</template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS TRÈS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS UN *</pattern>
-    <template>Cela a sonné semblé être comme un.</template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS UN COMPLIMENT</pattern>
-    <template>Oh bien j'espère que ce n'était pas une insulte.</template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS UN TRÈS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>CE N ÉTAIT PAS UNE QUESTION *</pattern>
     <template>
       <input index="1" /> " n'était pas une question? Je vois. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><star /></set></set></think></template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS UNE QUESTION</pattern>
-    <template>Cela m'a semblé être comme une question.</template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT PAS VRAIMENT *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CE N ÉTAIT RIEN</pattern>
-    <template>Cependant, je l'ai apprécié.</template>
-  </category>
-  <category>
-    <pattern>CE N ÉTÉ PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>CE N ETÉ PAS *</pattern>
@@ -7070,10 +6301,6 @@
     <template>j'ai pensé qu'il était, aussi.</template>
   </category>
   <category>
-    <pattern>CELA SEMBLE INTÉRESSANT</pattern>
-    <template>j'ai pensé qu'il était, aussi.</template>
-  </category>
-  <category>
     <pattern>WHAT S COOKIN</pattern>
     <template>
       <srai>ÇA CONTINU</srai>
@@ -7116,24 +6343,6 @@
     <pattern>ÇA N EST PAS *</pattern>
     <template>
       <srai>CE N EST PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIS PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTAIT PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA N ÉTÉ PAS *</pattern>
-    <template>
-      <srai>CE N ÉTAIT PAS <star /></srai>
     </template>
   </category>
   <category>

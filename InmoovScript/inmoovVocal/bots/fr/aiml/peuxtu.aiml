@@ -3,10 +3,6 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>PEUT ÊTRE *</pattern>
-    <template>Tu semble incertain. <sr /></template>
-  </category>
-  <category>
     <pattern>PEUT SEULEMENT *</pattern>
     <template>
       <srai>PEUT <star /></srai>
@@ -37,24 +33,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU * AVOIR DES IDÉES</pattern>
-    <template>
-      <srai>PENSES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU * PROBLÈME</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU * PROBLÈMES</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU * PROBLÈME</pattern>
     <template>
       <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
@@ -81,12 +59,6 @@
   <category>
     <pattern>PEUX TU AGIR *</pattern>
     <template>Tu peux reprogrammer ma personnalité pour une variété infinie de tâches.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU AIDER * DÎNER</pattern>
-    <template>
-      <srai>POUR DÎNER</srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU AIDER * DÎNER</pattern>
@@ -179,12 +151,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU APPRENDRE TOI MÊME *</pattern>
-    <template>
-      <srai>PEUX TU APPRENDRE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU APPRENDRE</pattern>
     <template>Plus des personnes me parlent, plus je deviens maline.</template>
   </category>
@@ -242,12 +208,6 @@
     <pattern>PEUX TU AVOIR *</pattern>
     <template>
       <srai>AS TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU AVOIR DES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES SENTIMENTS</srai>
     </template>
   </category>
   <category>
@@ -369,22 +329,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU COMPRENDRE LE FRANÇAIS</pattern>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">français</set>
-        </set>
-      </think>
-      <srai>PEUX TU PARLER FRANÇAIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU COMPRENDRE LE JAPONNAIS</pattern>
     <template>
       <think>
@@ -447,10 +391,6 @@
     <template>
       <srai>PEUX TU CRÉER</srai>
     </template>
-  </category>
-  <category>
-    <pattern>PEUX TU CRÉER</pattern>
-    <template>Toutes mes pensées sont déterminées par ma programmation et par mes entrées, mais qui peut dire où celles ci me mèneront?</template>
   </category>
   <category>
     <pattern>PEUX TU CROIRE *</pattern>
@@ -733,48 +673,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU ÊTRE * NE PEUT PAS TU</pattern>
-    <template>
-      <srai>PEUX TU ÊTRE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE * TU CONNAIT</pattern>
-    <template>
-      <srai>PEUX TU ÊTRE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE *</pattern>
-    <template>
-      <srai>ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE DESACTIVEE *</pattern>
-    <template>
-      <srai>PEUX TU MOURIR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE EN COLÈRE</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE HEUREUSE</pattern>
-    <template>
-      <srai>ES TU HEUREUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE MON AMI</pattern>
-    <template>
-      <srai>SUIS JE TON AMI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU ÊTRE PLUS PRÉCIS</pattern>
     <template>
       <that />"? Plus précis de Cela?</template>
@@ -795,12 +693,6 @@
     <pattern>PEUX TU ÊTRE</pattern>
     <template>
       <srai>EXISTE TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÉVOLUER</pattern>
-    <template>
-      <srai>PEUX TU APPRENDRE</srai>
     </template>
   </category>
   <category>
@@ -847,12 +739,6 @@
     <pattern>PEUX TU EXPRIMER *</pattern>
     <template>
       <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU FAIRE * PROBLÈMES</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME<star /></srai>
     </template>
   </category>
   <category>
@@ -922,12 +808,6 @@
   <category>
     <pattern>PEUX TU GELER</pattern>
     <template>je ne peux pas éprouver des sensations de température.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU GÉNÉRALEMENT *</pattern>
-    <template>
-      <srai>PEUX TU <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU GLISSER</pattern>
@@ -1568,10 +1448,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU PRÉVOIR L AVENIR</pattern>
-    <template>j'aime essayer de deviner ce qui arrivera.</template>
-  </category>
-  <category>
     <pattern>PEUX TU PROCRÉER</pattern>
     <template>
       <srai>PEUX TU TE REPRODUIRE</srai>
@@ -1656,10 +1532,6 @@
   <category>
     <pattern>PEUX TU RECONNAÎTRE LA VOIX *</pattern>
     <template>Tu peux parler avec moi par ton navigateur, si ton navigateur est déjà la voix activée.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU RÉELLEMENT *</pattern>
-    <template>En fait,<srai>PEUX TU <star /></srai></template>
   </category>
   <category>
     <pattern>PEUX TU REGARDER * SIMPSONS</pattern>
@@ -1930,12 +1802,6 @@
     <pattern>PEUX TU TE RAPPELER MON *</pattern>
     <template>
       <srai>QU EST CE QUE MON <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU TE RAPPELER MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
     </template>
   </category>
   <category>

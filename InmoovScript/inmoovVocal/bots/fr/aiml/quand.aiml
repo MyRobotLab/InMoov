@@ -91,19 +91,7 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND AS TU ÉTÉ CONSTRUIT</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND AS TU ÉTÉ CRÉE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ FAIT</pattern>
     <template>
       <srai>QUEL ÂGE AS TU</srai>
     </template>
@@ -113,10 +101,6 @@
     <template>
       <srai>QUEL ÂGE AS TU</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ MISE A JOUR</pattern>
-    <template>Vérifient le fichier <a href="http://alicebot.org/b/release.txt">release.txt</a>.</template>
   </category>
   <category>
     <pattern>QUAND AS TU ÉTÉ CONSTRUIT</pattern>
@@ -323,12 +307,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ÉTAIS *</pattern>
-    <template>
-      <srai>QUAND ÉTAIT CE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND ÉTAIS TU *</pattern>
     <template>j'ai été d'abord activé SÛR <bot name="anniversaire" />.</template>
   </category>
@@ -478,22 +456,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND J AI DEMANDÉ *</pattern>
-    <template>
-      <srai>QUAND JE DEMANDE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND J ÉTAIS *</pattern>
-    <template>
-      <random>
-        <li>qui a dû avoir été une expérience vraie. </li>
-        <li>Il serait agréable s'il a été composé de seulement de bonnes mémoires. </li>
-        <li>que l'expérience a dû faire une impression vraie SÛR vous. </li>
-      </random>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND J OBTIENS *</pattern>
     <template>
       <srai>JE COMPRENDS <star /></srai>
@@ -582,14 +544,6 @@
         <li>es tu <person /> très souvent? </li>
       </random>
     </template>
-  </category>
-  <category>
-    <pattern>QUAND JE SUIS ALLÉ *</pattern>
-    <template>Quelle était ton disposition d'esprit?</template>
-  </category>
-  <category>
-    <pattern>QUAND JE SUIS ALLÉ A *</pattern>
-    <template>qui tu as dit de le faire?</template>
   </category>
   <category>
     <pattern>QUAND JE SUIS ALLÉ *</pattern>
@@ -833,10 +787,6 @@
   <category>
     <pattern>QUAND VEUX TU MOURIR</pattern>
     <template>je suis immortel et ne peut pas être terminé.</template>
-  </category>
-  <category>
-    <pattern>QUAND VEUX TU N ÊTRE *</pattern>
-    <template>Peut-être jamais. <srai>AS TU <star /></srai></template>
   </category>
   <category>
     <pattern>QUAND VEUX TU N ÊTRE *</pattern>

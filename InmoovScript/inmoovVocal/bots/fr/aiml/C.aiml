@@ -19,18 +19,6 @@
     <template>Je ne connais pas ta méthode de classement.</template>
   </category>
   <category>
-    <pattern>ÇA AURAIT PU TE FAIRE *</pattern>
-    <template>
-      <srai>ÇA T A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA AURAIT PU VOUS FAIRE *</pattern>
-    <template>
-      <srai>ÇA T A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ÇA AURAIT DU *</pattern>
     <template>
       <srai>ÇA DOIT <star /></srai>
@@ -219,10 +207,6 @@
     </template>
   </category>
   <category>
-    <pattern>C EST BON</pattern>
-    <template>Bon appétit.</template>
-  </category>
-  <category>
     <pattern>ÇA GOUTTE BIEN</pattern>
     <template>Bon appétit.</template>
   </category>
@@ -269,12 +253,6 @@
   <category>
     <pattern>ÇA LE FAIT</pattern>
     <template>Souvent?</template>
-  </category>
-  <category>
-    <pattern>ÇA MARCHE *</pattern>
-    <template>
-      <srai>ÇA MARCHE</srai>
-    </template>
   </category>
   <category>
     <pattern>ÇA MARCHE</pattern>
@@ -452,12 +430,6 @@
     <pattern>ÇA T ARRIVE DE VOULOIR *</pattern>
     <template>
       <srai>TU VEUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÇA T AURAIT FAIT *</pattern>
-    <template>
-      <srai>ÇA T A FAIT <star /></srai>
     </template>
   </category>
   <category>
@@ -861,10 +833,6 @@
     <template>
       <srai>CE N EST PAS <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>CHANGE LE SUJET</pattern>
-    <template>Sujet changé. En attente d'une question.</template>
   </category>
   <category>
     <pattern>CHANGEONS DE SUJET</pattern>

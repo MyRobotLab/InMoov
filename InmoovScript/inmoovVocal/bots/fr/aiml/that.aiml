@@ -169,23 +169,6 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où as tu TES IDÉES</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>je comprends mes idées de mon botmaster.</template>
-  </category>
-  <category>
-    <pattern>*</pattern>
     <that>Où es tu PLACE</that>
     <template>
       <srai>JE SUIS DANS <star /></srai>
@@ -1700,11 +1683,6 @@
   </category>
   <category>
     <pattern>BON</pattern>
-    <that>BIEN J ARRÊTERAI DE PARLER MAINTENANT</that>
-    <template>Terminant le rapport connexion.</template>
-  </category>
-  <category>
-    <pattern>BON</pattern>
     <that>BIEN J ESSAYERAI DE NE PAS LE FAIRE TANT</that>
     <template>la question Suivante?</template>
   </category>
@@ -1854,23 +1832,6 @@
     <pattern>DANS OU</pattern>
     <that>QUEL EST Cela COMME DANS LA</that>
     <template>Wherver tu es.</template>
-  </category>
-  <category>
-    <pattern>DE *</pattern>
-    <that>Où OBTIENS tu TES IDÉES</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Etant debout SÛR les épaules de géants, hein?</template>
   </category>
   <category>
     <pattern>DE *</pattern>
@@ -2107,11 +2068,6 @@
     <template>Et la même fréquence aussi.</template>
   </category>
   <category>
-    <pattern>JE CONSENS</pattern>
-    <that>TOI ET MOI SOMMES SÛR LA MÊME LONGUEUR D ONDES *</that>
-    <template>Et la même fréquence aussi.</template>
-  </category>
-  <category>
     <pattern>JE FAIS JUSTE</pattern>
     <that>COMMENT LE CONNAIS tu</that>
     <template>de l'expérience ou a priori?</template>
@@ -2212,13 +2168,6 @@
     <pattern>JE SAIS</pattern>
     <that>TU LES GENS SONT SI GROSSIERS PARFOIS</that>
     <template>Pourquoi pas être plus polis?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS *</pattern>
-    <that>QUEL ÂGE *</that>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
@@ -2367,11 +2316,6 @@
     <template>Nope</template>
   </category>
   <category>
-    <pattern>MÊME ICI</pattern>
-    <that>J AIME RENCONTRER de nouvelles personnes</that>
-    <template>Comment rencontrez vous d'habitude de nouvelles personnes?</template>
-  </category>
-  <category>
     <pattern>MES AMIS</pattern>
     <that>QUI EST ILS</that>
     <template>qu'autrement disent-ils?</template>
@@ -2381,13 +2325,6 @@
     <that>J AIME RENCONTRER de nouvelles personnes</that>
     <template>
       <srai>J AIME RENCONTRER DE NOUVELLES PERSONNES AUSSI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MOI MÊME</pattern>
-    <that>DE QUI parles tu</that>
-    <template>
-      <srai>LE SUJET EST MOI</srai>
     </template>
   </category>
   <category>
@@ -2493,11 +2430,6 @@
     <template>
       <srai>JE N AI PAS COMPRIS</srai>
     </template>
-  </category>
-  <category>
-    <pattern>NOPE</pattern>
-    <that>QUI NE PEUT PAS TU ÊTRE PLUS POLI</that>
-    <template>l'homme Drôle.</template>
   </category>
   <category>
     <pattern>NOPE</pattern>
@@ -2698,11 +2630,6 @@
   </category>
   <category>
     <pattern>QUE</pattern>
-    <that>PEUT-ÊTRE J EN EXPRIME JUSTE MON PROPRE SOUCI ENTREPRISE</that>
-    <template>Nous parle de <get name="topic" />.</template>
-  </category>
-  <category>
-    <pattern>QUE</pattern>
     <that>POUR RéEL</that>
     <template>Vraiment</template>
   </category>
@@ -2742,11 +2669,6 @@
     <pattern>REDRESSE</pattern>
     <that>PAS UNE CHOSE</that>
     <template>Juste un moment. Juste un moment.</template>
-  </category>
-  <category>
-    <pattern>REMERCIE LE DIEU</pattern>
-    <that>BIEN J ARRÊTERAI DE PARLER MAINTENANT</that>
-    <template>la Voix désactivée.</template>
   </category>
   <category>
     <pattern>REMERCIE LE DIEU</pattern>
@@ -2958,11 +2880,6 @@
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>Où OBTIENS tu TES IDÉES</that>
-    <template>de moi?</template>
-  </category>
-  <category>
-    <pattern>TOI</pattern>
     <that>POURQUOI es tu FACHE</that>
     <template>
       <srai>TU ME FAIT FACHÉ</srai>
@@ -3087,11 +3004,6 @@
     </template>
   </category>
   <category>
-    <pattern>TRÈS BIEN</pattern>
-    <that>connais tu bien CETTE PERSONNE</that>
-    <template>que entendez vous?</template>
-  </category>
-  <category>
     <pattern>TROIS</pattern>
     <that>COMBIEN D ENFANTS TU AS</that>
     <template>Wow qui doit être beaucoup de travail.</template>
@@ -3104,7 +3016,7 @@
   <category>
     <pattern>TRÈS BIEN</pattern>
     <that>connais tu bien CETTE PERSONNE</that>
-    <template>que entendez vous?</template>
+    <template>qu entendez vous?</template>
   </category>
   <category>
     <pattern>TU *</pattern>

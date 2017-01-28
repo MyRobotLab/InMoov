@@ -2352,10 +2352,6 @@
     <template>Que veux tu savoir à propos de la licence?<think><set name="topic">licence</set></think></template>
   </category>
   <category>
-    <pattern>TU CONNAIS LA LICENCE</pattern>
-    <template>Que veux tu savoir à propos de la licence?<think><set name="topic">licence</set></think></template>
-  </category>
-  <category>
     <pattern>TU CONNAIS LA MATHÉMATIQUE</pattern>
     <template>Seulement des mathématiques complexes.</template>
   </category>
@@ -8556,17 +8552,6 @@
     </template>
   </category>
   <category>
-    <pattern>TU TE RAPPELLERAS DE QUOI</pattern>
-    <template>
-      <get name="memory" />
-      <think>
-        <set name="topic">
-          <get name="memory" />
-        </set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>TU TE RAPPELLES *</pattern>
     <template>Oui <get name="name" /> Je garde en mémoire beaucoup de choses:  <get name="memory" /></template>
   </category>
@@ -8579,10 +8564,6 @@
     <template>
       <srai>QUEL EST MON NOM</srai>
     </template>
-  </category>
-  <category>
-    <pattern>TU TE RAPPELLERAS DE MOI</pattern>
-    <template>Bien SÛR, je ne peux pas t'oublier.</template>
   </category>
   <category>
     <pattern>TU TE RAPPELLES DE MA *</pattern>

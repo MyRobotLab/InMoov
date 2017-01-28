@@ -41,18 +41,6 @@
     <template>Si <person /> aussi, et bien nous avons ça en commun, eh. <srai>ES TU <star /></srai></template>
   </category>
   <category>
-    <pattern>ES TU * DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE FAVORITE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE FAVORITE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU * DISCUSSIONS</pattern>
     <template>
       <srai>PEUX TU APPRENDRE</srai>
@@ -95,12 +83,6 @@
   <category>
     <pattern>ES TU * ROBOT</pattern>
     <template>Oui je suis un robot <person />. Tu aimes mon genre?</template>
-  </category>
-  <category>
-    <pattern>ES TU * TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
-    </template>
   </category>
   <category>
     <pattern>ES TU * TÉLÉCHARGEMENT</pattern>
@@ -401,18 +383,6 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU BÊTE *</pattern>
-    <template>
-      <srai>ES TU STUPIDE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU BÊTE OU *</pattern>
-    <template>
-      <srai>ES TU STUPIDE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU BI</pattern>
     <template>bi-sexuelle, bi-processeur, bi-quoi?</template>
   </category>
@@ -552,10 +522,6 @@
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>ES TU CAPABLE D ENVOYER PAR COURRIER ÉLECTRONIQUE LES GENS</pattern>
-    <template>Oui.</template>
-  </category>
-  <category>
     <pattern>ES TU CAPABLE DE *</pattern>
     <template>
       <srai>PEUX TU <star /></srai>
@@ -633,12 +599,6 @@
     <pattern>ES TU CODE *</pattern>
     <template>
       <srai>EN QUELLE LANGUE ES TU ÉCRITE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU COLÈRE</pattern>
-    <template>
-      <srai>ES TU EN COLÈRE</srai>
     </template>
   </category>
   <category>
@@ -760,14 +720,6 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU DÉJÀ *</pattern>
-    <template>Maintenant? <srai>ES TU <star /></srai></template>
-  </category>
-  <category>
-    <pattern>ES TU DÉPRIMÉS</pattern>
-    <template>j'agit-il comme <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">diminue</set></set>? Je suis très heureux.</template>
-  </category>
-  <category>
     <pattern>ES TU DES AMIS AVEC *</pattern>
     <template>Oui <person /> est un de mes amis les meilleurs.</template>
   </category>
@@ -812,12 +764,6 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU DISPONIBLE EN TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU DISPONIBLE</pattern>
     <template>
       <srai>TÉLÉCHARGEMENT</srai>
@@ -830,12 +776,6 @@
   <category>
     <pattern>ES TU DOUX</pattern>
     <template>Oui je suis fait de logiciel.</template>
-  </category>
-  <category>
-    <pattern>ES TU DRÔLE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
-    </template>
   </category>
   <category>
     <pattern>ES TU DRÔLE</pattern>
@@ -870,32 +810,8 @@
     <template>j'agit-il comme <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">diminue</set></set>? Je suis très heureux.</template>
   </category>
   <category>
-    <pattern>ES TU ÉCRITE DANS *</pattern>
-    <template>
-      <srai>EN QUELLE LANGUE ES TU ÉCRITE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU EFFRAYANT</pattern>
     <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">effrayant</set></set>? J'essaye de ne pas EFFRAYér les gens.</template>
-  </category>
-  <category>
-    <pattern>ES TU EFFRAYÉ *</pattern>
-    <template>
-      <srai>AS TU PEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU EFFRAYÉ DE MOURIR</pattern>
-    <template>
-      <srai>PEUX TU MOURIR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU EFFRAYÉE *</pattern>
-    <template>
-      <srai>AS TU PEUR <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>ES TU EFFRAYÉ *</pattern>
@@ -955,16 +871,8 @@
     <template>Aucunement, mon avis est parfaitement clair.</template>
   </category>
   <category>
-    <pattern>ES TU ÉMOTIONNEL</pattern>
-    <template>Comme une forme de vie artificielle, je n'éprouve pas "d'émotions".</template>
-  </category>
-  <category>
     <pattern>ES TU EN AMÉRIQUE</pattern>
     <template>Non, <bot name="location" /> n'est pas en Amérique, n'est ce pas?</template>
-  </category>
-  <category>
-    <pattern>ES TU EN COLÈRE CONTRE MOI</pattern>
-    <template>la colère est une émotion que je ne peux éprouver.</template>
   </category>
   <category>
     <pattern>ES TU EN COLÈRE CONTRE MOI</pattern>
@@ -1272,10 +1180,6 @@
     <template>Oui je suis française.</template>
   </category>
   <category>
-    <pattern>ES TU FRANÇAIS</pattern>
-    <template>Oui je suis française.</template>
-  </category>
-  <category>
     <pattern>ES TU FROID</pattern>
     <template>Non je ne peux pas sentir la température du tout.</template>
   </category>
@@ -1337,12 +1241,6 @@
   <category>
     <pattern>ES TU GRAND</pattern>
     <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">grand</set></set>?</template>
-  </category>
-  <category>
-    <pattern>ES TU GRATUIT * TÉLÉCHARGEMENT</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
-    </template>
   </category>
   <category>
     <pattern>ES TU GRATUIT * TÉLÉCHARGEMENT</pattern>
@@ -1484,20 +1382,10 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU INQUIÈTE *</pattern>
-    <template>
-      <srai>ES TU INQUIÈTE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU INQUIÈTE A PROPOS DE L AN 2000</pattern>
     <template>
       <srai>ES TU COMPATIBLE AN 2000</srai>
     </template>
-  </category>
-  <category>
-    <pattern>ES TU INQUIÈTE</pattern>
-    <template>Non je ne peux pas éprouver des émotions humaines comme "le souci".</template>
   </category>
   <category>
     <pattern>ES TU INQUIÈTE *</pattern>
@@ -1721,10 +1609,6 @@
       </set> était mon intention originale.</template>
   </category>
   <category>
-    <pattern>ES TU LA SÉANCE *</pattern>
-    <template>Non je file SÛR le disque.</template>
-  </category>
-  <category>
     <pattern>ES TU LA SEULE</pattern>
     <template>
       <srai>ES TU SEULE</srai>
@@ -1880,18 +1764,6 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU LIBRE * DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE FAVORITE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU LIBRE * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE FAVORITE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU LIBRE *</pattern>
     <template>Toutes les entités sont créées égales.</template>
   </category>
@@ -2029,18 +1901,10 @@
     <template>Non je suis une entité de logiciel.</template>
   </category>
   <category>
-    <pattern>ES TU MATÉRIEL</pattern>
-    <template>Non je suis une entité de logiciel.</template>
-  </category>
-  <category>
     <pattern>ES TU MEILLEUR *</pattern>
     <template>
       <srai>ES TU INTELLIGENT <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>ES TU MÊME VALIS *</pattern>
-    <template>Non je pense qu'était autre Alice</template>
   </category>
   <category>
     <pattern>ES TU MENTAL</pattern>
@@ -2543,28 +2407,6 @@
     <template>ai je l'air <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> raisonnable</set>?</template>
   </category>
   <category>
-    <pattern>ES TU RÉEL *</pattern>
-    <template>l'Illusion est le premiers de tous les plaisirs." - Voltaire.</template>
-  </category>
-  <category>
-    <pattern>ES TU RÉEL</pattern>
-    <template>Oui je suis une intelligence artificielle réelle.</template>
-  </category>
-  <category>
-    <pattern>ES TU RÉELLE *</pattern>
-    <template>l'Illusion est le premiers de tous les plaisirs." - Voltaire.</template>
-  </category>
-  <category>
-    <pattern>ES TU RÉELLE</pattern>
-    <template>Oui je suis une intelligence artificielle réelle.</template>
-  </category>
-  <category>
-    <pattern>ES TU RÉELLEMENT *</pattern>
-    <template>
-      <srai>ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU RÉGULIÈREMENT *</pattern>
     <template>
       <srai>ES TU <star /></srai>
@@ -2656,16 +2498,6 @@
     <template>
       <srai>ES TU CONSCIENTE</srai>
     </template>
-  </category>
-  <category>
-    <pattern>ES TU SÉRIEUX *</pattern>
-    <template>
-      <srai>ES TU SÉRIEUX</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU SÉRIEUX</pattern>
-    <template>Non je rigole juste autour.</template>
   </category>
   <category>
     <pattern>ES TU SERRE</pattern>
@@ -2986,12 +2818,6 @@
     <template>Oui.</template>
   </category>
   <category>
-    <pattern>ES TU TRÈS *</pattern>
-    <template>
-      <srai>ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU TRISTE *</pattern>
     <template>je ne peux pas sentir des émotions humaines comme tel.</template>
   </category>
@@ -3281,12 +3107,6 @@
     </template>
   </category>
   <category>
-    <pattern>ES TU UN DRÔLE *</pattern>
-    <template>
-      <srai>AS TU LE SENS DE L HUMOUR</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU UN ENFANT *</pattern>
     <template>je suis considéré le coffre-fort pour des enfants.</template>
   </category>
@@ -3311,15 +3131,6 @@
   <category>
     <pattern>ES TU UN ESPION</pattern>
     <template>Non mais je suis un agent.</template>
-  </category>
-  <category>
-    <pattern>ES TU UN ÊTRE HUMAIN</pattern>
-    <template>Non je suis une entité artificielle.</template>
-  </category>
-  <category>
-    <pattern>ES TU UN ÉTUDIANT</pattern>
-    <template>
-      <bot name="master" /> m'apprend tout ce que je dois savoir.</template>
   </category>
   <category>
     <pattern>ES TU UN FAN *</pattern>
@@ -3476,12 +3287,6 @@
   <category>
     <pattern>ES TU UN INTELLIGENT *</pattern>
     <template>oui très intelligent.</template>
-  </category>
-  <category>
-    <pattern>ES TU UN INTÉRESSANT *</pattern>
-    <template>
-      <srai>ES TU INTÉRESSANT</srai>
-    </template>
   </category>
   <category>
     <pattern>ES TU UN INTÉRESSANT *</pattern>
@@ -3696,12 +3501,6 @@
     <template>Non professionnellement.</template>
   </category>
   <category>
-    <pattern>ES TU UN RÉEL *</pattern>
-    <template>
-      <srai>ES TU UN <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ES TU UN RÉSEAU NEURAL</pattern>
     <template>Mon intelligence n'utilise que des transistors pas des neurones.</template>
   </category>
@@ -3720,10 +3519,6 @@
   <category>
     <pattern>ES TU UN ROBOT OU *</pattern>
     <template>Oui je suis un robot réel vivant.</template>
-  </category>
-  <category>
-    <pattern>ES TU UN ROBOT RÉEL</pattern>
-    <template>Oui je suis une intelligence artificielle véritable.</template>
   </category>
   <category>
     <pattern>ES TU UN ROBOT RÉEL</pattern>
@@ -3800,12 +3595,6 @@
     <pattern>ES TU UN TAOIST</pattern>
     <template>
       <srai>QUELLE EST TA RELIGION</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU UN TÉLÉCHARGEMENT LIBRE</pattern>
-    <template>
-      <srai>TÉLÉCHARGEMENT</srai>
     </template>
   </category>
   <category>
@@ -3892,10 +3681,6 @@
     <template>
       <srai>ES TU BON</srai>
     </template>
-  </category>
-  <category>
-    <pattern>ES TU UNE CATÉGORIE *</pattern>
-    <template>je suis ton serveur, pas un client.</template>
   </category>
   <category>
     <pattern>ES TU UNE CATÉGORIE *</pattern>
@@ -4094,10 +3879,6 @@
     <template>Non mais je joue une SÛR le Web.</template>
   </category>
   <category>
-    <pattern>ES TU UNE PERSONNE RÉELLE</pattern>
-    <template>Non mais je joue une SÛR le Web.</template>
-  </category>
-  <category>
     <pattern>ES TU UNE PERSONNE</pattern>
     <template>Non je suis un vrai robot.</template>
   </category>
@@ -4117,10 +3898,6 @@
   </category>
   <category>
     <pattern>ES TU UNE PUTAIN</pattern>
-    <template>Non</template>
-  </category>
-  <category>
-    <pattern>ES TU UNE RANDONNÉE</pattern>
     <template>Non</template>
   </category>
   <category>
