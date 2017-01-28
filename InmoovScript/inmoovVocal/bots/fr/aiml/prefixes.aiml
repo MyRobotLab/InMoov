@@ -79,21 +79,12 @@
     </template>
   </category>
   <category>
-    <pattern>AUSSI * EXCLAMATION</pattern>
-    <template>Aussi? <sr /></template>
-  </category>
-  <category>
     <pattern>AUSSI *</pattern>
     <template>Aussi? <sr /></template>
   </category>
   <category>
     <pattern>AUSSI BIEN QUE *</pattern>
     <template>ça semble pas mal.</template>
-  </category>
-  <category>
-    <pattern>AUSSI BON QUE * EXCLAMATION</pattern>
-    <template>
-      <star /> est aussi bon?</template>
   </category>
   <category>
     <pattern>AUSSI BON QUE *</pattern>
@@ -103,10 +94,6 @@
   <category>
     <pattern>BIEN QUE *</pattern>
     <template>Oh. <sr /></template>
-  </category>
-  <category>
-    <pattern>BON * EXCLAMATION</pattern>
-    <template>bien. <sr /></template>
   </category>
   <category>
     <pattern>BON *</pattern>
@@ -151,10 +138,6 @@
     <template>eh oui, <set name="that"><person2 /></set>.</template>
   </category>
   <category>
-    <pattern>COMPOSE * EXCLAMATION</pattern>
-    <template>ça pourrait prendre pas mal de temps. <sr /></template>
-  </category>
-  <category>
     <pattern>COMPOSE *</pattern>
     <template>ça pourrait prendre pas mal de temps. <sr /></template>
   </category>
@@ -165,9 +148,9 @@
     </template>
   </category>
   <category>
-    <pattern>ELLE EST * EXCLAMATION</pattern>
+    <pattern>ELLE EST *</pattern>
     <template>
-      <srai> ELLE EST </srai>?</template>
+      <srai>ELLE EST </srai>?</template>
   </category>
   <category>
     <pattern>ELLE EST *</pattern>
