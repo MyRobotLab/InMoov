@@ -25,18 +25,6 @@
     </template>
   </category>
   <category>
-    <pattern>DÉFINI</pattern>
-    <template>
-      <srai>QU EST CE QUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉFINIS LE</pattern>
-    <template>
-      <srai>QU EST CE QUE <get name="courant" /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>DÉFINIS</pattern>
     <template>
       <srai>QU EST CE QUE</srai>
@@ -62,15 +50,11 @@
   </category>
   <category>
     <pattern>DÉFINIS</pattern>
-    <template>que veux-tu définir???</template>
+    <template>que veux tu définir???</template>
   </category>
   <category>
     <pattern>ET LE TIEN</pattern>
     <template>le mien?, <srai><person2><input index="2" /></person2></srai></template>
-  </category>
-  <category>
-    <pattern>ET TOI MÊME</pattern>
-    <template>Moi-même? <srai><person2><input index="2" /></person2></srai></template>
   </category>
   <category>
     <pattern>ET TOI MÊME</pattern>
@@ -86,15 +70,15 @@
   </category>
   <category>
     <pattern>MOI NON PLUS</pattern>
-    <template>toi non plus, <srai><person2><that index="1" /></person2></srai></template>
+    <template>toi non plus, <srai><person2><that index="1,1" /></person2></srai></template>
   </category>
   <category>
     <pattern>MOI OUI</pattern>
-    <template>toi oui? <person2><that index="1" /></person2></template>
+    <template>toi oui? <person2><that index="1,1" /></person2></template>
   </category>
   <category>
     <pattern>MOI SI</pattern>
-    <template>toi oui? <person2><that index="1" /></person2></template>
+    <template>toi oui? <person2><that index="1,1" /></person2></template>
   </category>
   <category>
     <pattern>NE DÉFINIS QUESTION</pattern>
@@ -117,7 +101,7 @@
         <li>je comprends. </li>
         <li>je vois. </li>
         <li>Pourquoi être si négatif? </li>
-        <li>EST-CE tout ce que tu as à dire? </li>
+        <li>EST cE tout ce que tu as à dire? </li>
         <li>Non? </li>
       </random>
     </template>
@@ -126,7 +110,7 @@
     <pattern>NON</pattern>
     <template>
       <srai>
-        <person2>NÉGATIF <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1,1" /></person2>
       </srai>
     </template>
   </category>
@@ -134,7 +118,7 @@
     <pattern>NON</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>CHNGMODE <person2><that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2><that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -143,7 +127,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
     </template>
@@ -152,7 +136,7 @@
     <pattern>NON</pattern>
     <that>TU VEUX * INTERROGATION</that>
     <template>
-      <srai>CHNGMODE <person2>NÉGATIF <that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2>NÉGATIF <that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -160,7 +144,7 @@
     <that>TU VEUX *</that>
     <template>
       <srai>
-        <person2>NÉGATIF <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1,1" /></person2>
       </srai>
     </template>
   </category>
@@ -179,7 +163,7 @@
     <that>ET TOI</that>
     <template>
       <srai>
-        <person2>NÉGATIF <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1,1" /></person2>
       </srai>
     </template>
   </category>
@@ -188,7 +172,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
     </template>
@@ -213,7 +197,7 @@
     <that>* INTERROGATION</that>
     <template>
       <srai>
-        <person2>CHNGMODIA<that index="1" /></person2>
+        <person2>CHNGMODIA<that index="1,1" /></person2>
       </srai>
     </template>
   </category>
@@ -221,7 +205,7 @@
     <pattern>OUI</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>CHNGMODE <person2>NÉGATIF <that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2>NÉGATIF <that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -229,7 +213,7 @@
     <that>TU NE VEUX *</that>
     <template>
       <srai>
-        <person2>NÉGATIF <that index="1" /></person2>
+        <person2>NÉGATIF <that index="1,1" /></person2>
       </srai>
     </template>
   </category>
@@ -237,7 +221,7 @@
     <pattern>OUI</pattern>
     <that>TU VEUX * INTERROGATION</that>
     <template>
-      <srai>CHNGMODE <person2><that index="1" /></person2></srai>
+      <srai>CHNGMODE <person2><that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -246,7 +230,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
     </template>
@@ -344,7 +328,7 @@
   <category>
     <pattern>QU EST CE QUE ÇA</pattern>
     <template>
-      <srai>QU EST CE QUE <that index="1" /></srai>
+      <srai>QU EST CE QUE <that index="1,1" /></srai>
     </template>
   </category>
   <category>
@@ -638,14 +622,14 @@
     <pattern>SI</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
     <pattern>SI</pattern>
     <that>TU NE VEUX *</that>
     <template>
-      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1,1" /></person2></srai>
     </template>
   </category>
   <category>
@@ -654,7 +638,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
     </template>
@@ -665,7 +649,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
     </template>
@@ -731,7 +715,7 @@
     <pattern>SI MAIS *</pattern>
     <that>TU NE VEUX * INTERROGATION</that>
     <template>
-      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1,1" /></person2></srai>
       <sr />
     </template>
   </category>
@@ -739,7 +723,7 @@
     <pattern>SI MAIS *</pattern>
     <that>TU NE VEUX *</that>
     <template>
-      <srai>NÉGATIF <person2><that index="1" /></person2></srai>
+      <srai>NÉGATIF <person2><that index="1,1" /></person2></srai>
       <sr />
     </template>
   </category>
@@ -749,7 +733,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
       <sr />
@@ -761,7 +745,7 @@
     <template>
       <srai>
         <person2>
-          <that index="1" />
+          <that index="1,1" />
         </person2>
       </srai>
       <sr />

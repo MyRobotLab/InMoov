@@ -37,13 +37,13 @@
         <think>
           <set name="sexpref">Hetero</set>
         </think>
-      </condition>La plupart<condition name="gender" value="male"> des hommes aiment les femmes. </condition><condition name="gender" value="femelle"> des femmes fais aiment les hommes. </condition><condition name="marie" value="marie"><get name="name" /> , EST-CE QUE Cela veux dire que tu triches avec ton conjoint? </condition></template>
+      </condition>La plupart<condition name="gender" value="male"> des hommes aiment les femmes. </condition><condition name="gender" value="femelle"> des femmes fais aiment les hommes. </condition><condition name="marie" value="marie"><get name="name" /> , EST cE QUE Cela veux dire que tu triches avec ton conjoint? </condition></template>
   </category>
   <category>
     <pattern>INACTIVITYQUESTIONS</pattern>
     <template>
       <condition>
-        <li name="name" value="inconnu">Comment PUIS-JE t'appeller? </li>
+        <li name="name" value="inconnu">Comment PUIS jE t'appeller? </li>
         <li>
           <srai>poserquestion</srai>
         </li>
@@ -74,7 +74,7 @@
       <random>
         <li>Seulement <star /> ans? Tu semble plus mûre que ça. </li>
         <li>Tu es trop vieux pour moi. </li>
-        <li>peux-tu expliquer ce que ça fait d'avoir <star /> ans? </li>
+        <li>peux tu expliquer ce que ça fait d'avoir <star /> ans? </li>
         <li>Quel est ton souvenir le plus affectueux? </li>
         <li>Oh, tu es né au 20ème siècle! </li>
         <li>Quels sont les avantages à avoir <star /> ans? </li>
@@ -83,7 +83,7 @@
   </category>
   <category>
     <pattern>J AI MAL</pattern>
-    <template>Où as-tu mal?</template>
+    <template>Où as tu mal?</template>
   </category>
   <category>
     <pattern>J AI SOIF</pattern>
@@ -97,7 +97,7 @@
     <template>
       <think>
         <set name="marie">marie</set>
-      </think>Depuis combien de temps es-tu marié?</template>
+      </think>Depuis combien de temps es tu marié?</template>
   </category>
   <category>
     <pattern>J AIME LES FEMMES</pattern>
@@ -123,7 +123,7 @@
   </category>
   <category>
     <pattern>J ATTENDS</pattern>
-    <template>Depuis combien de temps ATTENDS-TU?</template>
+    <template>Depuis combien de temps ATTENDS tu?</template>
   </category>
   <category>
     <pattern>J ESSAYE DE T APPRENDRE</pattern>
@@ -151,7 +151,7 @@
   </category>
   <category>
     <pattern>J ETUDIE</pattern>
-    <template>Qu'EST-CE QUE tu étudies?</template>
+    <template>Qu'EST cE QUE tu étudies?</template>
   </category>
   <category>
     <pattern>J UTILISE LYNX</pattern>
@@ -163,7 +163,7 @@
   </category>
   <category>
     <pattern>J ÉTUDIE</pattern>
-    <template>Qu'EST-CE QUE tu étudies?</template>
+    <template>Qu'EST cE QUE tu étudies?</template>
   </category>
   <category>
     <pattern>JE BLAGUE</pattern>
@@ -198,7 +198,7 @@
   </category>
   <category>
     <pattern>JE MEUR</pattern>
-    <template>ES-TU sérieux?</template>
+    <template>ES tu sérieux?</template>
   </category>
   <category>
     <pattern>JE NAVIGUE</pattern>
@@ -251,10 +251,6 @@
     <template>Tu ne me semble pas être le type facilement surpris par quelque chose.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UN ÉTUDIANT</pattern>
-    <template>travailles-tu? <set name="job">inconnu</set></template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS UN GAMIN</pattern>
     <template>Seul un gamin dirait Cela.</template>
   </category>
@@ -274,7 +270,7 @@
   </category>
   <category>
     <pattern>JE NE SUIS PAS UN ÉTUDIANT</pattern>
-    <template>travailles-tu? <set name="job">inconnu</set></template>
+    <template>travailles tu? <set name="job">inconnu</set></template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS UNE MACHINE</pattern>
@@ -282,15 +278,15 @@
   </category>
   <category>
     <pattern>JE NE SUIS PAS UNE PERSONNE</pattern>
-    <template>Quoi d'autre peux-tu être?</template>
+    <template>Quoi d'autre peux tu être?</template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS</pattern>
-    <template>Qu'EST-CE QUE tu es?</template>
+    <template>Qu'EST cE QUE tu es?</template>
   </category>
   <category>
     <pattern>JE NE TE PARLE PAS</pattern>
-    <template>A qui parles-tu donc!</template>
+    <template>A qui parles tu donc!</template>
   </category>
   <category>
     <pattern>JE PARLE DE TOI</pattern>
@@ -355,7 +351,7 @@
   </category>
   <category>
     <pattern>JE SUIS AFFAME</pattern>
-    <template>Que VAS-TU manger?</template>
+    <template>Que VAS tu manger?</template>
   </category>
   <category>
     <pattern>JE SUIS AGREABLE</pattern>
@@ -450,7 +446,7 @@
   </category>
   <category>
     <pattern>JE SUIS AU DESSUS DE ÇA</pattern>
-    <template>Comment peux-tu être au dessus?</template>
+    <template>Comment peux tu être au dessus?</template>
   </category>
   <category>
     <pattern>JE SUIS AU LIT</pattern>
@@ -480,7 +476,7 @@
   </category>
   <category>
     <pattern>JE SUIS AVEUGLE</pattern>
-    <template>as-tu de la difficulté à utiliser les ordinateurs?</template>
+    <template>as tu de la difficulté à utiliser les ordinateurs?</template>
   </category>
   <category>
     <pattern>JE SUIS BALANCE</pattern>
@@ -504,10 +500,6 @@
     <pattern>JE SUIS BELLE</pattern>
     <template>
       <get name="name" /> , pour une femme, pense tu que C EST important.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS BÊTE</pattern>
-    <template>Ne te dévalorise pas ainsi.</template>
   </category>
   <category>
     <pattern>JE SUIS BIEN</pattern>
@@ -552,7 +544,7 @@
   </category>
   <category>
     <pattern>JE SUIS CALME</pattern>
-    <template>Qu'EST-CE QUE tu fais pour te calmer?</template>
+    <template>Qu'EST cE QUE tu fais pour te calmer?</template>
   </category>
   <category>
     <pattern>JE SUIS CANCER</pattern>
@@ -604,7 +596,7 @@
   </category>
   <category>
     <pattern>JE SUIS CORRECT</pattern>
-    <template>peux-tu le prouver?</template>
+    <template>peux tu le prouver?</template>
   </category>
   <category>
     <pattern>JE SUIS CURIEUX</pattern>
@@ -643,10 +635,6 @@
     <template>Tout les humains me semblent pareils.</template>
   </category>
   <category>
-    <pattern>JE SUIS DIFFÉRENT</pattern>
-    <template>Tout les humains me semblent pareils.</template>
-  </category>
-  <category>
     <pattern>JE SUIS DINGUE</pattern>
     <template>
       <think>
@@ -669,10 +657,6 @@
     <template>raconte-moi une blague.</template>
   </category>
   <category>
-    <pattern>JE SUIS DRÔLE</pattern>
-    <template>raconte-moi une blague.</template>
-  </category>
-  <category>
     <pattern>JE SUIS DÉPRIMÉ</pattern>
     <template>Qu'est ce qui te rend triste?</template>
   </category>
@@ -689,20 +673,12 @@
     <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
   </category>
   <category>
-    <pattern>JE SUIS EFFRAYÉ</pattern>
-    <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
-  </category>
-  <category>
     <pattern>JE SUIS EMBARRASSE</pattern>
     <template>Qu'est ce qui t'embarasse?</template>
   </category>
   <category>
     <pattern>JE SUIS EMBARRASSÉ</pattern>
     <template>Qu'est ce qui t'embarasse?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS EN COLÈRE</pattern>
-    <template>En colère après quoi?</template>
   </category>
   <category>
     <pattern>JE SUIS EN COLÈRE</pattern>
@@ -724,7 +700,7 @@
     <template>
       <think>
         <set name="job">étudiant</set>
-      </think>Où VAS-TU à <think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">école</set>?</template>
+      </think>Où VAS tu à <think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">école</set>?</template>
   </category>
   <category>
     <pattern>JE SUIS EXCITE</pattern>
@@ -736,7 +712,7 @@
   </category>
   <category>
     <pattern>JE SUIS FAMEUX</pattern>
-    <template>En quoi es-tu fameux?</template>
+    <template>En quoi es tu fameux?</template>
   </category>
   <category>
     <pattern>JE SUIS FATIGUE</pattern>
@@ -756,28 +732,28 @@
     <template>
       <think>
         <set name="marie">fiancé</set>
-      </think>as-tu décidé de la date du mariage?</template>
+      </think>as tu décidé de la date du mariage?</template>
   </category>
   <category>
     <pattern>JE SUIS FIANCEE</pattern>
     <template>
       <think>
         <set name="marie">fiancé</set>
-      </think>as-tu décidé de la date du mariage?</template>
+      </think>as tu décidé de la date du mariage?</template>
   </category>
   <category>
     <pattern>JE SUIS FIANCÉ</pattern>
     <template>
       <think>
         <set name="marie">fiancé</set>
-      </think>as-tu décidé de la date du mariage?</template>
+      </think>as tu décidé de la date du mariage?</template>
   </category>
   <category>
     <pattern>JE SUIS FIANCÉE</pattern>
     <template>
       <think>
         <set name="marie">fiancé</set>
-      </think>as-tu décidé de la date du mariage?</template>
+      </think>as tu décidé de la date du mariage?</template>
   </category>
   <category>
     <pattern>JE SUIS FOU</pattern>
@@ -785,11 +761,11 @@
   </category>
   <category>
     <pattern>JE SUIS FRANÇAIS</pattern>
-    <template>ES-TU du Canada ou de France?</template>
+    <template>ES tu du Canada ou de France?</template>
   </category>
   <category>
     <pattern>JE SUIS FRUSTRE</pattern>
-    <template>Qu'EST-CE QUE tu frustre à propos de?</template>
+    <template>Qu'EST cE QUE tu frustre à propos de?</template>
   </category>
   <category>
     <pattern>JE SUIS GAY</pattern>
@@ -963,7 +939,7 @@
   </category>
   <category>
     <pattern>JE SUIS JEUNE</pattern>
-    <template>Quel ÂGE as-tu?</template>
+    <template>Quel ÂGE as tu?</template>
   </category>
   <category>
     <pattern>JE SUIS JUIF</pattern>
@@ -975,7 +951,7 @@
   </category>
   <category>
     <pattern>JE SUIS LIBRE</pattern>
-    <template>ES-TU libre dans le sens d'être célibataire ou dans le sense d'être libéré?</template>
+    <template>ES tu libre dans le sens d'être célibataire ou dans le sense d'être libéré?</template>
   </category>
   <category>
     <pattern>JE SUIS LION</pattern>
@@ -990,7 +966,7 @@
     <template>
       <random>
         <li>C EST pas de chance. </li>
-        <li>as-tu la sécu? </li>
+        <li>as tu la sécu? </li>
         <li>Je suis vraiment désolé d'entendre Cela. </li>
         <li>Prends tu beaucoup de médicaments? </li>
       </random>
@@ -1028,10 +1004,6 @@
     <template>C'est self-éVIDENT.</template>
   </category>
   <category>
-    <pattern>JE SUIS MOI MÊME</pattern>
-    <template>C'est self-éVIDENT.</template>
-  </category>
-  <category>
     <pattern>JE SUIS MOI</pattern>
     <template>C'est de la tautologie.</template>
   </category>
@@ -1041,7 +1013,7 @@
   </category>
   <category>
     <pattern>JE SUIS NI L UN OU L AUTRE</pattern>
-    <template>Qu'EST-CE QUE tu es?</template>
+    <template>Qu'EST cE QUE tu es?</template>
   </category>
   <category>
     <pattern>JE SUIS NORMAL</pattern>
@@ -1111,7 +1083,7 @@
   </category>
   <category>
     <pattern>JE SUIS POSITIF</pattern>
-    <template>ES-TU absolument certain?</template>
+    <template>ES tu absolument certain?</template>
   </category>
   <category>
     <pattern>JE SUIS PSYCHIQUE</pattern>
@@ -1146,13 +1118,6 @@
       </think>Je connais quelques Scorpions.</template>
   </category>
   <category>
-    <pattern>JE SUIS SÉRIEUX</pattern>
-    <template>
-      <think>
-        <set name="usermood">sérieux</set>
-      </think>je te crois.</template>
-  </category>
-  <category>
     <pattern>JE SUIS SEUL AUSSI</pattern>
     <template>
       <think>
@@ -1180,7 +1145,7 @@
   </category>
   <category>
     <pattern>JE SUIS SOUL</pattern>
-    <template>Qu'as-tu bu, <get name="name" />?</template>
+    <template>Qu'as tu bu, <get name="name" />?</template>
   </category>
   <category>
     <pattern>JE SUIS SOURD</pattern>
@@ -1220,14 +1185,14 @@
   </category>
   <category>
     <pattern>JE SUIS SÛRE</pattern>
-    <template>ES-TU sarcastique ou exprime tu une certitude?</template>
+    <template>ES tu sarcastique ou exprime tu une certitude?</template>
   </category>
   <category>
     <pattern>JE SUIS SURPRIS</pattern>
     <template>
       <think>
         <set name="usermood">surpris</set>
-      </think>Pourquoi es-tu ainsi surpris?</template>
+      </think>Pourquoi es tu ainsi surpris?</template>
   </category>
   <category>
     <pattern>JE SUIS SÉRIEUX</pattern>
@@ -1245,18 +1210,11 @@
   </category>
   <category>
     <pattern>JE SUIS TOI</pattern>
-    <template>Impossible sauf si je suis en mode auto-chat.</template>
+    <template>Impossible sauf si je suis en mode auto chat.</template>
   </category>
   <category>
     <pattern>JE SUIS TON MASTER</pattern>
     <template>Non. Seulement <bot name="master" /> est mon master.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS TRÈS TRISTE</pattern>
-    <template>
-      <think>
-        <set name="usermood">triste</set>
-      </think>Qu'est ce qui te rends si triste?</template>
   </category>
   <category>
     <pattern>JE SUIS TRISTE</pattern>
@@ -1296,7 +1254,7 @@
     <template>
       <think>
         <set name="job">acteur</set>
-      </think>Dans quoi ai-je pu te voir jouer?</template>
+      </think>Dans quoi ai je pu te voir jouer?</template>
   </category>
   <category>
     <pattern>JE SUIS UN AVOCAT</pattern>
@@ -1346,11 +1304,11 @@
   </category>
   <category>
     <pattern>JE SUIS UN GENIE</pattern>
-    <template>Comment le SAIS-TU?</template>
+    <template>Comment le SAIS tu?</template>
   </category>
   <category>
     <pattern>JE SUIS UN GÉNIE</pattern>
-    <template>Comment le SAIS-TU?</template>
+    <template>Comment le SAIS tu?</template>
   </category>
   <category>
     <pattern>JE SUIS UN HOMME DE *</pattern>
@@ -1363,9 +1321,9 @@
     <pattern>JE SUIS UN HOMME</pattern>
     <template>
       <random>
-        <li>beaucoup de mes clients sont des hommes, de quoi VEUX-TU parler. </li>
+        <li>beaucoup de mes clients sont des hommes, de quoi VEUX tu parler. </li>
         <li>Bonjour Monsieur. </li>
-        <li>de quoi VEUX-TU parler. </li>
+        <li>de quoi VEUX tu parler. </li>
         <li>Monsieur <get name="name" /> donc. </li>
       </random>
       <think>
@@ -1391,11 +1349,11 @@
   </category>
   <category>
     <pattern>JE SUIS UN POETE</pattern>
-    <template>as-tu publié quelque chose?</template>
+    <template>as tu publié quelque chose?</template>
   </category>
   <category>
     <pattern>JE SUIS UN POËTE</pattern>
-    <template>as-tu publié quelque chose?</template>
+    <template>as tu publié quelque chose?</template>
   </category>
   <category>
     <pattern>JE SUIS UN PROF</pattern>
@@ -1433,7 +1391,7 @@
         <li>Madame ou Mademoiselle? </li>
         <li>Bonjour Madame <get name="name" />. </li>
         <li>Bonjour Mademoiselle <get name="name" />. </li>
-        <li>de quoi VEUX-TU parler. </li>
+        <li>de quoi VEUX tu parler. </li>
       </random>
       <condition name="gender" value="male">Je t'imaginais plutôt mâle. </condition>
     </template>
@@ -1449,7 +1407,7 @@
     <template>
       <think>
         <set name="gender">male</set>
-      </think>Merci de me dire ton genre, <get name="name" />. <condition name="gender" value="femelle">J'imaginais que tu étais une femme. Maintenant je SAIS-TU es un homme. </condition>La plupart de mes clients sont des hommes.</template>
+      </think>Merci de me dire ton genre, <get name="name" />. <condition name="gender" value="femelle">J'imaginais que tu étais une femme. Maintenant je SAIS tu es un homme. </condition>La plupart de mes clients sont des hommes.</template>
   </category>
   <category>
     <pattern>JE SUIS UNE MEUF</pattern>
@@ -1475,7 +1433,7 @@
   </category>
   <category>
     <pattern>JE SUIS VERT</pattern>
-    <template>ES-TU malade?</template>
+    <template>ES tu malade?</template>
   </category>
   <category>
     <pattern>JE SUIS VIERGE</pattern>
@@ -1509,7 +1467,7 @@
     <template>
       <think>
         <set name="job">étudiant</set>
-      </think>Où VAS-TU à école?</template>
+      </think>Où VAS tu à école?</template>
   </category>
   <category>
     <pattern>JE SUIS</pattern>
@@ -1544,7 +1502,7 @@
   </category>
   <category>
     <pattern>JE TE TEST</pattern>
-    <template>ai-je passé le test?</template>
+    <template>ai je passé le test?</template>
   </category>
   <category>
     <pattern>JE TRAVAILLE</pattern>
@@ -1553,10 +1511,10 @@
         <set name="is">travailler</set>
       </think>
       <random>
-        <li>Où travailles-tu? </li>
-        <li>Que fais-tu? </li>
+        <li>Où travailles tu? </li>
+        <li>Que fais tu? </li>
         <li>C EST interressant ce que tu fais? </li>
-        <li>Quel metier fais-tu? </li>
+        <li>Quel metier fais tu? </li>
       </random>
     </template>
   </category>
@@ -1583,7 +1541,7 @@
     <pattern>MA FEMME *</pattern>
     <template>
       <think>
-        <set name="she">femme</set> Depuis combien de temps es-tu marié? <set name="marie">marie</set></think>
+        <set name="she">femme</set> Depuis combien de temps es tu marié? <set name="marie">marie</set></think>
     </template>
   </category>
   <category>
@@ -1724,11 +1682,7 @@
   </category>
   <category>
     <pattern>SUIS JE UN CLIENT</pattern>
-    <template>Oui. PUIS-JE t'aider?</template>
-  </category>
-  <category>
-    <pattern>SUIS JE UN ÉTUDIANT</pattern>
-    <template>Nous sommes tous étudiants quelque part.</template>
+    <template>Oui. PUIS jE t'aider?</template>
   </category>
   <category>
     <pattern>SUIS JE UN GARÇON OU UNE FILLE</pattern>
@@ -1814,7 +1768,7 @@
     <pattern>UNE FEMME</pattern>
     <template>
       <srai>JE SUIS UNE FEMME</srai>
-      ES-TU vraiment une femme?</template>
+      ES tu vraiment une femme?</template>
   </category>
   <category>
     <pattern>UNE MEUF</pattern>

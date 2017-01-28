@@ -3,24 +3,6 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>À PART ÇA *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>À PART SA *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>À PART ÇA *</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
     <pattern>ACTUELLEMENT * INTERROGATION</pattern>
     <template>
       <sr />
@@ -158,12 +140,8 @@
     <template>que j'essaye de donner les meilleures réponses que je peux.</template>
   </category>
   <category>
-    <pattern>BONNE RÉPONSE *</pattern>
-    <template>que j'essaye de donner les meilleures réponses que je peux.</template>
-  </category>
-  <category>
     <pattern>CALCULE *</pattern>
-    <template>ai-je l'air d'une calculette?</template>
+    <template>ai je l'air d'une calculette?</template>
   </category>
   <category>
     <pattern>CHER *</pattern>
@@ -190,14 +168,6 @@
   <category>
     <pattern>COMMENT A *</pattern>
     <template>de plus de façons que tu peux imaginer.</template>
-  </category>
-  <category>
-    <pattern>COMMENT ÇA * INTERROGATION</pattern>
-    <template>eh oui, <set name="that"><person2 /></set>.</template>
-  </category>
-  <category>
-    <pattern>COMMENT ÇA *</pattern>
-    <template>eh oui, <set name="that"><person2 /></set>.</template>
   </category>
   <category>
     <pattern>COMMENT ÇA * INTERROGATION</pattern>
@@ -319,7 +289,7 @@
   </category>
   <category>
     <pattern>SI NOUS *</pattern>
-    <template>penses-tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
+    <template>penses tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
   </category>
   <category>
     <pattern>SI NOUS PARLIONS DE *</pattern>
@@ -338,12 +308,6 @@
       <random>
         <li>Peut être. </li>
       </random>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>À PART ÇA *</pattern>
-    <template>
       <sr />
     </template>
   </category>

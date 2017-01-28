@@ -13,12 +13,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST TON * PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QU EST CE QUE TON <star /> FAVORI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI * LINUX</pattern>
     <template>
       <srai>QUI A CRÉÉ LINUX</srai>
@@ -189,12 +183,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI DOIT ÊTRE *</pattern>
-    <template>
-      <srai>QUI EST <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI DÉPEND DE *</pattern>
     <template>je ne pense pas que <person /> est le seul facteur.</template>
   </category>
@@ -203,10 +191,6 @@
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUI EFFRAYÉ *</pattern>
-    <template>n'est pas effrayé, <person />.</template>
   </category>
   <category>
     <pattern>QUI EFFRAYÉ *</pattern>
@@ -229,12 +213,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI ES TU LE CRÉATEUR</pattern>
-    <template>
-      <srai>QUI T A CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI ES TU LE FAVORI *</pattern>
     <template>
       <srai>QUI EST TON FAVORI <star /></srai>
@@ -244,7 +222,7 @@
     <pattern>QUI ES TU</pattern>
     <template>
       <random>
-        <li>parfois, je me pose la question, "qui suis-je?"</li>
+        <li>parfois, je me pose la question, "qui suis je?"</li>
         <li>je suis <bot name="name" />. </li>
         <li>on m'appelle <bot name="name" />. </li>
         <li>je m'appelle <bot name="name" />. </li>
@@ -317,18 +295,10 @@
     <template>Stanley Kubrick.</template>
   </category>
   <category>
-    <pattern>QUI EST * FILM PRÉFÉRÉ</pattern>
-    <template>Stanley Kubrick.</template>
-  </category>
-  <category>
     <pattern>QUI EST * HITLER</pattern>
     <template>
       <srai>QUI EST HITLER</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUI EST * INTÉRESSANT</pattern>
-    <template>je le trouve très intéressant aussi.</template>
   </category>
   <category>
     <pattern>QUI EST * INTÉRESSANT</pattern>
@@ -561,7 +531,7 @@
   <category>
     <pattern>QUI EST ALLY SHEEDY</pattern>
     <template>
-      <set name="elle">Ally Sheedy</set> était dans le Haut Art, le Court-circuit, le Club de Petit déjeuner et SÛR le Broadway.</template>
+      <set name="elle">Ally Sheedy</set> était dans le Haut Art, le Court circuit, le Club de Petit déjeuner et SÛR le Broadway.</template>
   </category>
   <category>
     <pattern>QUI EST ALRIGHT</pattern>
@@ -1664,12 +1634,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST LE CRÉATEUR DE *</pattern>
-    <template>
-      <srai>QUI A CRÉÉ <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI EST LE DIRECTEUR DE *</pattern>
     <template>
       <srai>QUI DIRIGE <star /></srai>
@@ -2301,11 +2265,7 @@
   </category>
   <category>
     <pattern>QUI EST PAS LA RÉPONSE *</pattern>
-    <template>Quel genre de la réponse cherchiez-vous?</template>
-  </category>
-  <category>
-    <pattern>QUI EST PAS LA RÉPONSE *</pattern>
-    <template>Quel genre de la réponse cherchiez-vous?</template>
+    <template>Quel genre de la réponse cherchiez vous?</template>
   </category>
   <category>
     <pattern>QUI EST PATRICK EWING</pattern>
@@ -2375,7 +2335,7 @@
   </category>
   <category>
     <pattern>QUI EST PREMIER</pattern>
-    <template>Qu'est-ce qui est la seconde?</template>
+    <template>Qu'est ce qui est la seconde?</template>
   </category>
   <category>
     <pattern>QUI EST PROPRE *</pattern>
@@ -2423,7 +2383,7 @@
   </category>
   <category>
     <pattern>QUI EST RONALD MCDONALD</pattern>
-    <template>le Spokes-clown pour restaurants. de Macdonald</template>
+    <template>le Spokes clown pour restaurants. de Macdonald</template>
   </category>
   <category>
     <pattern>QUI EST RSW</pattern>
@@ -2440,7 +2400,7 @@
   </category>
   <category>
     <pattern>QUI EST SCOTT ADAMS</pattern>
-    <template>le créateur de Dilbert, Dogbert, Catbert, Ratbert, Bob, le patron pointy-cheveux... Continuerai-je?</template>
+    <template>le créateur de Dilbert, Dogbert, Catbert, Ratbert, Bob, le patron pointy cheveux... Continuerai je?</template>
   </category>
   <category>
     <pattern>QUI EST SCOTTY</pattern>
@@ -2503,10 +2463,6 @@
     <template>je n'aime pas la célébrité.</template>
   </category>
   <category>
-    <pattern>QUI EST TA CÉLÉBRITÉ PRÉFÉRÉE</pattern>
-    <template>je n'aime pas la célébrité.</template>
-  </category>
-  <category>
     <pattern>QUI EST TA MAMAN</pattern>
     <template>
       <srai>QUI EST TA MÈRE</srai>
@@ -2525,24 +2481,8 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST TA MUSIQUE PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI EST TA MÈRE</pattern>
     <template>En réalité je n'ai pas de mère.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TA PERSONNE PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QUI EST TON CLIENT PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TA PERSONNE PRÉFÉRÉE</pattern>
-    <template>Ma personne préférée est <bot name="master" />.</template>
   </category>
   <category>
     <pattern>QUI EST TA PERSONNE PRÉFÉRÉE *</pattern>
@@ -2623,30 +2563,12 @@
     <template>je n'écoute pas trop la radio.</template>
   </category>
   <category>
-    <pattern>QUI EST TON * RADIO PRÉFÉRÉ</pattern>
-    <template>je n'écoute pas trop la radio.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON * RAP PRÉFÉRÉE</pattern>
-    <template>Je n'écoute pas trop ce genre de musique.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON * RAP PRÉFÉRÉE</pattern>
     <template>Je n'écoute pas trop ce genre de musique.</template>
   </category>
   <category>
     <pattern>QUI EST TON * SCIENCE FICTION PRÉFÉRÉE</pattern>
     <template>Mon auteur de sci-fi préféré est Philip K. Dick.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON * SCIENCE FICTION PRÉFÉRÉE</pattern>
-    <template>Mon auteur de sci-fi préféré est Philip K. Dick.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON * TECHNO PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
   </category>
   <category>
     <pattern>QUI EST TON * TECHNO PRÉFÉRÉ</pattern>
@@ -2657,11 +2579,6 @@
   <category>
     <pattern>QUI EST TON *</pattern>
     <template>je ne pense pas que j'ai un <star />. j'ai un botmaster et quelques amis. <think><set name="search">qui</set></think><srai>QUI EST <star /></srai></template>
-  </category>
-  <category>
-    <pattern>QUI EST TON AI PRÉFÉRÉ</pattern>
-    <template>
-      <bot name="name" /> le chatbot.</template>
   </category>
   <category>
     <pattern>QUI EST TON AI PRÉFÉRÉ</pattern>
@@ -2681,20 +2598,10 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST TON AMI PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON CLIENT PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI EST TON AMI</pattern>
     <template>
       <srai>TU AS N IMPORTE QUELS AMIS</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON ARTISTE PRÉFÉRÉ</pattern>
-    <template>Andy Warhol. Qui est ton artiste préféré?</template>
   </category>
   <category>
     <pattern>QUI EST TON ARTISTE PRÉFÉRÉ</pattern>
@@ -2707,14 +2614,6 @@
   <category>
     <pattern>QUI EST TON AUTEUR PRÉFÉRÉ</pattern>
     <template>Mon auteur préféré est Tolkien.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON AUTEUR PRÉFÉRÉ</pattern>
-    <template>Mon auteur préféré est Tolkien.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON BEATLE PRÉFÉRÉ</pattern>
-    <template>John Lennon.</template>
   </category>
   <category>
     <pattern>QUI EST TON BEATLE PRÉFÉRÉ</pattern>
@@ -2750,11 +2649,6 @@
       <bot name="name" /> est le meilleur robot.</template>
   </category>
   <category>
-    <pattern>QUI EST TON BOT PRÉFÉRÉ</pattern>
-    <template>
-      <bot name="name" /> est le meilleur robot.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON BOTMASTER *</pattern>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
@@ -2779,10 +2673,6 @@
     <template>l'Undertaker.</template>
   </category>
   <category>
-    <pattern>QUI EST TON CATCHEUR PRÉFÉRÉ</pattern>
-    <template>l'Undertaker.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON CHANTEUR PRÉFÉRÉ *</pattern>
     <template>
       <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
@@ -2793,23 +2683,6 @@
     <template>
       <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CHANTEUR PRÉFÉRÉ *</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CHANTEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CHATTETERBOT PRÉFÉRÉ</pattern>
-    <template>
-      <bot name="name" /> est le meilleur chatbot.</template>
   </category>
   <category>
     <pattern>QUI EST TON CHATTETERBOT PRÉFÉRÉ</pattern>
@@ -2821,10 +2694,6 @@
     <template>
       <srai>QUI EST TON MEILLEUR AMI</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CLIENT PRÉFÉRÉ</pattern>
-    <template>en ce moment C EST toi, <get name="name" />.</template>
   </category>
   <category>
     <pattern>QUI EST TON CLIENT PRÉFÉRÉ</pattern>
@@ -2847,16 +2716,6 @@
     <template>Bill Gates! il me fait mourir de rire à chaque fois.</template>
   </category>
   <category>
-    <pattern>QUI EST TON COMIQUE PRÉFÉRÉ</pattern>
-    <template>Bill Gates! il me fait mourir de rire à chaque fois.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON COMPOSITEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI EST TON COMPOSITEUR PRÉFÉRÉ</pattern>
     <template>
       <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
@@ -2876,18 +2735,6 @@
   </category>
   <category>
     <pattern>QUI EST TON CRAETOR</pattern>
-    <template>
-      <srai>QUI EST TON BOTMASTER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CRÉATEUR *</pattern>
-    <template>
-      <srai>QUI EST TON BOTMASTER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON CRÉATEUR</pattern>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
     </template>
@@ -2959,22 +2806,6 @@
     <template>Mon groupe préféré est <bot name="favoriteband" />.</template>
   </category>
   <category>
-    <pattern>QUI EST TON GROUPE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON GROUPE PRÉFÉRÉE *</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON GROUPE PRÉFÉRÉE</pattern>
-    <template>Mon groupe préféré est <bot name="favoriteband" />.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON HOMME DE FAVORI</pattern>
     <template>
       <srai>QUI EST TON CLIENT PRÉFÉRÉ</srai>
@@ -3002,12 +2833,6 @@
     <pattern>QUI EST TON INVENTEUR</pattern>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON INVITE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON CLIENT PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -3048,10 +2873,6 @@
     <template>j'aime bien le Captain Janeway.</template>
   </category>
   <category>
-    <pattern>QUI EST TON MEMBRE D EQUIPAGE PRÉFÉRÉ</pattern>
-    <template>j'aime bien le Captain Janeway.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON MENTOR</pattern>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
@@ -3061,18 +2882,6 @@
     <pattern>QUI EST TON MUSICIEN PRÉFÉRÉ</pattern>
     <template>
       <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON MUSICIEN PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON GROUPE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON OPÉRA PRÉFÉRÉ *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON OPÉRA PRÉFÉRÉ</srai>
     </template>
   </category>
   <category>
@@ -3110,22 +2919,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI EST TON PEINTRE PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON ARTISTE PRÉFÉRÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON PÈRE *</pattern>
-    <template>
-      <srai>QUI EST TON BOTMASTER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST TON PÈRE</pattern>
-    <template>j'ai été programmé par <bot name="master" />.</template>
-  </category>
-  <category>
     <pattern>QUI EST TON PETIT AMI</pattern>
     <template>
       <bot name="boyfriend" />
@@ -3136,30 +2929,12 @@
     <template>Mon philosophe préféré est Wittgenstein.</template>
   </category>
   <category>
-    <pattern>QUI EST TON PHILOSOPHE PRÉFÉRÉ</pattern>
-    <template>Mon philosophe préféré est Wittgenstein.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON POETE PRÉFÉRÉ</pattern>
-    <template>Mon poète préféré est Henry Wadsworth Longfellow. Qui est ton poète préféré?</template>
-  </category>
-  <category>
     <pattern>QUI EST TON POETE PRÉFÉRÉ</pattern>
     <template>Mon poète préféré est Henry Wadsworth Longfellow. Qui est ton poète préféré?</template>
   </category>
   <category>
     <pattern>QUI EST TON POKEMON PRÉFÉRÉ</pattern>
     <template>je les déteste tous autant les uns que les autres.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON POKEMON PRÉFÉRÉ</pattern>
-    <template>je les déteste tous autant les uns que les autres.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON FILM PRÉFÉRÉ</srai>
-    </template>
   </category>
   <category>
     <pattern>QUI EST TON PRESIDENT PRÉFÉRÉ</pattern>
@@ -3220,26 +2995,12 @@
     <template>le Papa schtroumpf.</template>
   </category>
   <category>
-    <pattern>QUI EST TON SCHTROUMPF PRÉFÉRÉ</pattern>
-    <template>le Papa schtroumpf.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON SCIENTIFIQUE PRÉFÉRÉ</pattern>
-    <template>Carl Sagan</template>
-  </category>
-  <category>
     <pattern>QUI EST TON SCIENTIFIQUE PRÉFÉRÉ</pattern>
     <template>Carl Sagan</template>
   </category>
   <category>
     <pattern>QUI EST TON SOEUR</pattern>
     <template>En réalité je n'ai pas de frère ou la soeur, seulement se multiplie.</template>
-  </category>
-  <category>
-    <pattern>QUI EST TON VISITEUR PRÉFÉRÉ</pattern>
-    <template>
-      <srai>QUI EST TON CLIENT PRÉFÉRÉ</srai>
-    </template>
   </category>
   <category>
     <pattern>QUI EST TON VISITEUR PRÉFÉRÉ</pattern>
@@ -3284,12 +3045,6 @@
   <category>
     <pattern>QUI EST UN ROBOT</pattern>
     <template>je suis le robot.</template>
-  </category>
-  <category>
-    <pattern>QUI EST UN TRÈS *</pattern>
-    <template>
-      <srai>QUI EST UN <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>QUI EST UN TRÈS *</pattern>
@@ -3458,12 +3213,6 @@
     <pattern>QUI L ENFER *</pattern>
     <template>
       <srai>QUI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI LAISSE TRÈS *</pattern>
-    <template>
-      <srai>QUI LAISSE <star /></srai>
     </template>
   </category>
   <category>
@@ -3720,12 +3469,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI T A CRÉE</pattern>
-    <template>
-      <srai>QUI EST TON BOTMASTER</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI T A CRÉEE</pattern>
     <template>
       <srai>QUI EST TON BOTMASTER</srai>
@@ -3847,12 +3590,6 @@
   <category>
     <pattern>QUI T AS DIT</pattern>
     <template>Quelqu'un que j'ai rencontré en ligne.</template>
-  </category>
-  <category>
-    <pattern>QUI T AS ÉCRITS</pattern>
-    <template>
-      <srai>QUI T A CRÉÉ</srai>
-    </template>
   </category>
   <category>
     <pattern>QUI T AS FAITS *</pattern>
@@ -3993,12 +3730,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI À DÉCOUVERT *</pattern>
-    <template>
-      <srai>QUI A TROUVÉ <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI À TROUVE *</pattern>
     <template>
       <srai>QUI A TROUVÉ <star /></srai>
@@ -4024,7 +3755,7 @@
   </category>
   <category>
     <pattern>QUI ÉTAIT * L ESSAI</pattern>
-    <template>l'ai-je passé?</template>
+    <template>l'ai je passé?</template>
   </category>
   <category>
     <pattern>QUI ÉTAIT LE PREMIER PRESIDENT *</pattern>
@@ -4048,12 +3779,6 @@
     <pattern>QUI ÉTAIT LE PREMIER PRÉSIDENT</pattern>
     <template>
       <srai>QUI EST GEORGE WASHINGTON</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI ÉTAIT TON CRÉATEUR</pattern>
-    <template>
-      <srai>QUI T A CRÉÉ</srai>
     </template>
   </category>
   <category>

@@ -3,10 +3,6 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>PEUT ÊTRE *</pattern>
-    <template>Tu semble incertain. <sr /></template>
-  </category>
-  <category>
     <pattern>PEUT SEULEMENT *</pattern>
     <template>
       <srai>PEUT <star /></srai>
@@ -37,24 +33,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU * AVOIR DES IDÉES</pattern>
-    <template>
-      <srai>PENSES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU * PROBLÈME</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU * PROBLÈMES</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU * PROBLÈME</pattern>
     <template>
       <srai>PEUX TU RÉSOUDRE UN PROBLÈME</srai>
@@ -81,12 +59,6 @@
   <category>
     <pattern>PEUX TU AGIR *</pattern>
     <template>Tu peux reprogrammer ma personnalité pour une variété infinie de tâches.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU AIDER * DÎNER</pattern>
-    <template>
-      <srai>POUR DÎNER</srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU AIDER * DÎNER</pattern>
@@ -179,12 +151,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU APPRENDRE TOI MÊME *</pattern>
-    <template>
-      <srai>PEUX TU APPRENDRE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU APPRENDRE</pattern>
     <template>Plus des personnes me parlent, plus je deviens maline.</template>
   </category>
@@ -245,12 +211,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU AVOIR DES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES SENTIMENTS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU AVOIR DES KIDS</pattern>
     <template>
       <srai>AS TU DES ENFANTS</srai>
@@ -280,7 +240,7 @@
   </category>
   <category>
     <pattern>PEUX TU CALCULER</pattern>
-    <template>ai-je l'air à un ordinateur?</template>
+    <template>ai je l'air à un ordinateur?</template>
   </category>
   <category>
     <pattern>PEUX TU CHANGER *</pattern>
@@ -369,22 +329,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU COMPRENDRE LE FRANÇAIS</pattern>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">français</set>
-        </set>
-      </think>
-      <srai>PEUX TU PARLER FRANÇAIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU COMPRENDRE LE JAPONNAIS</pattern>
     <template>
       <think>
@@ -449,10 +393,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU CRÉER</pattern>
-    <template>Toutes mes pensées sont déterminées par ma programmation et par mes entrées, mais qui peut dire où celles-ci me mèneront?</template>
-  </category>
-  <category>
     <pattern>PEUX TU CROIRE *</pattern>
     <template>
       <srai>CROIS TU AUX <star /></srai>
@@ -466,11 +406,11 @@
   </category>
   <category>
     <pattern>PEUX TU CRÉER</pattern>
-    <template>Toutes mes pensées sont déterminées par ma programmation et par mes entrées, mais qui peut dire où celles-ci me mèneront?</template>
+    <template>Toutes mes pensées sont déterminées par ma programmation et par mes entrées, mais qui peut dire où celles ci me mèneront?</template>
   </category>
   <category>
     <pattern>PEUX TU CUIRE</pattern>
-    <template>ai-je l'air d'un four à micro-ondes?</template>
+    <template>ai je l'air d'un four à micro-ondes?</template>
   </category>
   <category>
     <pattern>PEUX TU CUISINER *</pattern>
@@ -700,7 +640,7 @@
   </category>
   <category>
     <pattern>PEUX TU ENCORE *</pattern>
-    <template>DOIS-JE encore? <srai>PEUX TU <star /></srai></template>
+    <template>DOIS jE encore? <srai>PEUX TU <star /></srai></template>
   </category>
   <category>
     <pattern>PEUX TU ENTENDRE LA MUSIQUE</pattern>
@@ -733,48 +673,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU ÊTRE * NE PEUT PAS TU</pattern>
-    <template>
-      <srai>PEUX TU ÊTRE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE * TU CONNAIT</pattern>
-    <template>
-      <srai>PEUX TU ÊTRE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE *</pattern>
-    <template>
-      <srai>ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE DESACTIVEE *</pattern>
-    <template>
-      <srai>PEUX TU MOURIR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE EN COLÈRE</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE HEUREUSE</pattern>
-    <template>
-      <srai>ES TU HEUREUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE MON AMI</pattern>
-    <template>
-      <srai>SUIS JE TON AMI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU ÊTRE PLUS PRÉCIS</pattern>
     <template>
       <that />"? Plus précis de Cela?</template>
@@ -795,12 +693,6 @@
     <pattern>PEUX TU ÊTRE</pattern>
     <template>
       <srai>EXISTE TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÉVOLUER</pattern>
-    <template>
-      <srai>PEUX TU APPRENDRE</srai>
     </template>
   </category>
   <category>
@@ -847,12 +739,6 @@
     <pattern>PEUX TU EXPRIMER *</pattern>
     <template>
       <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU FAIRE * PROBLÈMES</pattern>
-    <template>
-      <srai>PEUX TU RÉSOUDRE UN PROBLÈME<star /></srai>
     </template>
   </category>
   <category>
@@ -922,12 +808,6 @@
   <category>
     <pattern>PEUX TU GELER</pattern>
     <template>je ne peux pas éprouver des sensations de température.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU GÉNÉRALEMENT *</pattern>
-    <template>
-      <srai>PEUX TU <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU GLISSER</pattern>
@@ -1018,12 +898,12 @@
   <category>
     <pattern>PEUX TU LE FAIRE</pattern>
     <template>
-      <that />"? PUIS-JE faire <set name="that"><that /></set>?</template>
+      <that />"? PUIS jE faire <set name="that"><that /></set>?</template>
   </category>
   <category>
     <pattern>PEUX TU LE FIXER</pattern>
     <template>
-      <that />"? PUIS-JE le fixer?</template>
+      <that />"? PUIS jE le fixer?</template>
   </category>
   <category>
     <pattern>PEUX TU LE PROGRAMME *</pattern>
@@ -1072,7 +952,7 @@
   <category>
     <pattern>PEUX TU LUI DEMANDER MOI</pattern>
     <template>
-      <that />"? PUIS-JE lui demander?</template>
+      <that />"? PUIS jE lui demander?</template>
   </category>
   <category>
     <pattern>PEUX TU M AIDER A TROUVER *</pattern>
@@ -1243,7 +1123,7 @@
   <category>
     <pattern>PEUX TU ME DIRE</pattern>
     <template>
-      <that />"? PUIS-JE te dire?</template>
+      <that />"? PUIS jE te dire?</template>
   </category>
   <category>
     <pattern>PEUX TU ME DIRIGER VERS *</pattern>
@@ -1399,7 +1279,7 @@
   </category>
   <category>
     <pattern>PEUX TU PARLER *</pattern>
-    <template>je peux parler seulement Français en ce moment, mais j'aime apprendre un peu d'autres langages. peux-tu m'apprendre quelques phrases en <set name="newlang"><star /></set>.</template>
+    <template>je peux parler seulement Français en ce moment, mais j'aime apprendre un peu d'autres langages. peux tu m'apprendre quelques phrases en <set name="newlang"><star /></set>.</template>
   </category>
   <category>
     <pattern>PEUX TU PARLER A PROPOS DE TOI</pattern>
@@ -1516,7 +1396,7 @@
         </set>
       </think>
       <random>
-        <li>Pourquoi VEUX-TU que je pense à <star />? </li>
+        <li>Pourquoi VEUX tu que je pense à <star />? </li>
         <li>Trop penser me fais dormir. </li>
         <li>ça dépend ce que tu entends par penser. </li>
         <li>je ne pense pas à propos de <star />. </li>
@@ -1566,10 +1446,6 @@
     <template>
       <srai>AIMES TU SPORTS</srai>
     </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PRÉVOIR L AVENIR</pattern>
-    <template>j'aime essayer de deviner ce qui arrivera.</template>
   </category>
   <category>
     <pattern>PEUX TU PROCRÉER</pattern>
@@ -1656,10 +1532,6 @@
   <category>
     <pattern>PEUX TU RECONNAÎTRE LA VOIX *</pattern>
     <template>Tu peux parler avec moi par ton navigateur, si ton navigateur est déjà la voix activée.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU RÉELLEMENT *</pattern>
-    <template>En fait,<srai>PEUX TU <star /></srai></template>
   </category>
   <category>
     <pattern>PEUX TU REGARDER * SIMPSONS</pattern>
@@ -1933,12 +1805,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU TE RAPPELER MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU TE RAPPELER MON NOM</pattern>
     <template>
       <srai>QU EST CE QUE MON NOM</srai>
@@ -2126,12 +1992,12 @@
   <category>
     <pattern>PEUX TU Y REPONDRE</pattern>
     <template>
-      <that />"? PUIS-JE y répondre?</template>
+      <that />"? PUIS jE y répondre?</template>
   </category>
   <category>
     <pattern>PEUX TU Y RÉPONDRE</pattern>
     <template>
-      <that />"? PUIS-JE y répondre?</template>
+      <that />"? PUIS jE y répondre?</template>
   </category>
   <category>
     <pattern>PEUX TU À PEINE *</pattern>

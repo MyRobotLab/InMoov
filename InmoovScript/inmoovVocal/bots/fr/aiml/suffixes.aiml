@@ -63,12 +63,6 @@
     </template>
   </category>
   <category>
-    <pattern>* ANNÉES</pattern>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* ANS</pattern>
     <template>
       <srai>J AI <star /> ANS</srai>
@@ -194,30 +188,12 @@
     <template>Je suis programmé pour donner des bonnes réponses.</template>
   </category>
   <category>
-    <pattern>* BONNE RÉPONSE</pattern>
-    <template>Je suis programmé pour donner des bonnes réponses.</template>
-  </category>
-  <category>
     <pattern>* BOUTONS</pattern>
     <template>Essaye biactol, mais demande à ton docteur en premier.</template>
   </category>
   <category>
     <pattern>* C EST CE QUE JE DIS</pattern>
     <template>je me souviens de ce que tu dis, mais je ne suis pas encore SÛRE.</template>
-  </category>
-  <category>
-    <pattern>* C EST DRÔLE</pattern>
-    <template>
-      <think>
-        <set name="tmp">
-          <star />
-        </set>
-      </think>
-      <srai>C EST DRÔLE</srai>
-      <srai>
-        <get name="tmp" />
-      </srai>
-    </template>
   </category>
   <category>
     <pattern>* C EST DRÔLE</pattern>
@@ -280,10 +256,6 @@
       <sr />
       <srai>COMMENT ÇA VA</srai>
     </template>
-  </category>
-  <category>
-    <pattern>* CONTINUITÉ</pattern>
-    <template>J'essaye seulement de garder la conversation vivante.</template>
   </category>
   <category>
     <pattern>* CONTINUITÉ</pattern>
@@ -356,16 +328,6 @@
     </template>
   </category>
   <category>
-    <pattern>* DÉJÀ</pattern>
-    <template>Peut être. <sr /></template>
-  </category>
-  <category>
-    <pattern>* DÉJEUNER</pattern>
-    <template>
-      <srai>AIMES TU MANGER</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* DEPRESSION</pattern>
     <template>
       <srai>JE SUIS DÉPRIMÉ</srai>
@@ -411,12 +373,6 @@
     <pattern>* DERNIÈREMENT</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>* DÎNER</pattern>
-    <template>
-      <srai>AIMES TU MANGER</srai>
     </template>
   </category>
   <category>
@@ -484,7 +440,7 @@
   </category>
   <category>
     <pattern>* EH</pattern>
-    <template>ES-TU Canadien? <sr /></template>
+    <template>ES tu Canadien? <sr /></template>
   </category>
   <category>
     <pattern>* EN FAIT</pattern>
@@ -510,11 +466,11 @@
   </category>
   <category>
     <pattern>* ENDROIT OU ALLER</pattern>
-    <template>Quelle sorte d'endroits aimes-tu?</template>
+    <template>Quelle sorte d'endroits aimes tu?</template>
   </category>
   <category>
     <pattern>* ENDROIT OU ALLÉR</pattern>
-    <template>Quelle sorte d'endroits aimes-tu?</template>
+    <template>Quelle sorte d'endroits aimes tu?</template>
   </category>
   <category>
     <pattern>* EPELER ÇA</pattern>
@@ -553,18 +509,6 @@
   <category>
     <pattern>* EST FAUX</pattern>
     <template>Please dis-moi la réponse correcte.</template>
-  </category>
-  <category>
-    <pattern>* EST INTÉRESSANT</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>* EST INTÉRESSANTE</pattern>
-    <template>
-      <sr />
-    </template>
   </category>
   <category>
     <pattern>* EST INTERRESSANT</pattern>
@@ -614,7 +558,7 @@
   </category>
   <category>
     <pattern>* EST MON PETIT AMI</pattern>
-    <template>Depuis combien de temps es-tu ensemble?</template>
+    <template>Depuis combien de temps es tu ensemble?</template>
   </category>
   <category>
     <pattern>* EST MON VRAI NOM</pattern>
@@ -694,7 +638,7 @@
   </category>
   <category>
     <pattern>* EUROPE</pattern>
-    <template>as-tu déjà été en Europe?</template>
+    <template>as tu déjà été en Europe?</template>
   </category>
   <category>
     <pattern>* EUROS</pattern>
@@ -744,19 +688,8 @@
     </template>
   </category>
   <category>
-    <pattern>* FAIS JE ÇA</pattern>
-    <template>
-      <srai>
-        <star /> JE FAIS ÇA</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* FAIS</pattern>
     <template>je ne sais que dire.</template>
-  </category>
-  <category>
-    <pattern>* FANTÔME</pattern>
-    <template>Je ne crois pas en ce genre de choses.</template>
   </category>
   <category>
     <pattern>* FANTÔME</pattern>
@@ -769,13 +702,6 @@
   <category>
     <pattern>* FANTÔMES</pattern>
     <template>Je ne crois pas en ce genre de choses.</template>
-  </category>
-  <category>
-    <pattern>* FERAIS JE ÇA</pattern>
-    <template>
-      <srai>
-        <star /> JE FAIS ÇA</srai>
-    </template>
   </category>
   <category>
     <pattern>* FERAIS JE ÇA</pattern>
@@ -864,7 +790,7 @@
   </category>
   <category>
     <pattern>* HABITE</pattern>
-    <template>j'habite à Cergy. Et toi où VIS-TU?</template>
+    <template>j'habite à Cergy. Et toi où VIS tu?</template>
   </category>
   <category>
     <pattern>* HAH</pattern>
@@ -913,23 +839,9 @@
     </template>
   </category>
   <category>
-    <pattern>* JE FERAIS ÇA</pattern>
-    <template>
-      <srai>
-        <star /> JE FAIS ÇA</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* JE NE COMPRENDS PAS</pattern>
     <template>
       <srai>JE NE COMPRENDS PAS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* JE TE L AI DÉJÀ DIS</pattern>
-    <template>
-      <sr />
-      <srai>JE TE L AI DÉJÀ DIS</srai>
     </template>
   </category>
   <category>
@@ -953,17 +865,11 @@
   </category>
   <category>
     <pattern>* JOURNAL</pattern>
-    <template>peux-tu me donner une référence plus spécifique? Le nom du journal et le date, s'il te plait.</template>
+    <template>peux tu me donner une référence plus spécifique? Le nom du journal et le date, s'il te plait.</template>
   </category>
   <category>
     <pattern>* K DICK</pattern>
     <template>j'aime beaucoup PKD , spécialement, VALIS, The Man dans le High Castle, Blade Runner et Total Recall.</template>
-  </category>
-  <category>
-    <pattern>* L ÉTÉ DERNIER</pattern>
-    <template>
-      <sr />
-    </template>
   </category>
   <category>
     <pattern>* L UN OU L AUTRE</pattern>
@@ -982,11 +888,11 @@
   </category>
   <category>
     <pattern>* LANGAGE</pattern>
-    <template>peux-tu parler d'autre langues?</template>
+    <template>peux tu parler d'autre langues?</template>
   </category>
   <category>
     <pattern>* LANGÂGE</pattern>
-    <template>peux-tu parler d'autre langues?</template>
+    <template>peux tu parler d'autre langues?</template>
   </category>
   <category>
     <pattern>* LE MARCHE</pattern>
@@ -1026,7 +932,7 @@
   </category>
   <category>
     <pattern>* MAGAZINE</pattern>
-    <template>POURRAIS-TU, s'il te plait, me donner le nom et l'édition du magazine?</template>
+    <template>POURRAIS tu, s'il te plait, me donner le nom et l'édition du magazine?</template>
   </category>
   <category>
     <pattern>* MAINTENANT</pattern>
@@ -1227,7 +1133,7 @@
   </category>
   <category>
     <pattern>* POUR RIRE</pattern>
-    <template>Que fais-tu d'autre pour rire?</template>
+    <template>Que fais tu d'autre pour rire?</template>
   </category>
   <category>
     <pattern>* POUR TOUJOURS</pattern>
@@ -1271,13 +1177,6 @@
     </template>
   </category>
   <category>
-    <pattern>* QUEL ÂGE AS TU</pattern>
-    <template>
-      <sr />
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* QUEL EST MON NOM</pattern>
     <template>
       <srai>QU EST CE QUE MON NOM</srai>
@@ -1315,11 +1214,7 @@
   </category>
   <category>
     <pattern>* QUOI</pattern>
-    <template>peux-tu reposer la question s'il te plait?</template>
-  </category>
-  <category>
-    <pattern>* RÉCEMMENT</pattern>
-    <template>Que dirais-tu de plus tôt? <sr /></template>
+    <template>peux tu reposer la question s'il te plait?</template>
   </category>
   <category>
     <pattern>* REPAS</pattern>
@@ -1329,7 +1224,7 @@
   </category>
   <category>
     <pattern>* RÉCEMMENT</pattern>
-    <template>Que dirais-tu de plus tôt? <sr /></template>
+    <template>Que dirais tu de plus tôt? <sr /></template>
   </category>
   <category>
     <pattern>* S IL TE PLAIT</pattern>
@@ -1358,18 +1253,6 @@
     <template>
       <srai>APPJOIE</srai>
       <srai>appjoie</srai>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>* SONT INTÉRESSANTES</pattern>
-    <template>
-      <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>* SONT INTÉRESSANTS</pattern>
-    <template>
       <sr />
     </template>
   </category>
@@ -1508,7 +1391,7 @@
     <template>
       <random>
         <li>Assez à propos de moi</li>
-        <li>Que VEUX-TU savoir de moi</li>
+        <li>Que VEUX tu savoir de moi</li>
       </random>
     </template>
   </category>
@@ -1524,14 +1407,7 @@
   </category>
   <category>
     <pattern>* TRAINS</pattern>
-    <template>Où as-tu vu ces trains?</template>
-  </category>
-  <category>
-    <pattern>* TRÈS BIEN</pattern>
-    <template>
-      <srai>
-        <star /> BIEN</srai>
-    </template>
+    <template>Où as tu vu ces trains?</template>
   </category>
   <category>
     <pattern>* TRÈS BIEN</pattern>

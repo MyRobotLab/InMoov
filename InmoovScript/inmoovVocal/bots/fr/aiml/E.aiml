@@ -509,36 +509,6 @@
     </template>
   </category>
   <category>
-    <pattern>ESSAIE DE DEVINER</pattern>
-    <template>Donnez-moi un indice.</template>
-  </category>
-  <category>
-    <pattern>ESSAIE DE T EN RAPPELER</pattern>
-    <template>
-      <think>
-        <set name="memory">
-          <set name="topic">
-            <person>
-              <input index="1" />
-            </person>
-          </set>
-        </set>
-      </think>C EST mémorisé.</template>
-  </category>
-  <category>
-    <pattern>ESSAYEZ DE VOUS EN RAPPELER</pattern>
-    <template>
-      <think>
-        <set name="memory">
-          <set name="topic">
-            <person>
-              <input index="1" />
-            </person>
-          </set>
-        </set>
-      </think>C est mémorisé.</template>
-  </category>
-  <category>
     <pattern>ESSAIE ENCORE</pattern>
     <template>Je n'ai pas d'informations supplémentaires, la réponse sera identique.</template>
   </category>
@@ -568,19 +538,6 @@
   </category>
   <category>
     <pattern>ESSAIE DE T EN RAPPELER</pattern>
-    <template>
-      <think>
-        <set name="memory">
-          <set name="topic">
-            <person>
-              <input index="1" />
-            </person>
-          </set>
-        </set>
-      </think>C EST mémorisé.</template>
-  </category>
-  <category>
-    <pattern>ESSAYEZ DE VOUS EN RAPPELER</pattern>
     <template>
       <think>
         <set name="memory">
@@ -713,15 +670,15 @@
   </category>
   <category>
     <pattern>ET LA VÔTRE</pattern>
-    <template>Pouvez-vous être plus précis?</template>
+    <template>Pouvez vous être plus précis?</template>
   </category>
   <category>
     <pattern>ET LE VÔTRE</pattern>
-    <template>Pouvez-vous être plus précis?</template>
+    <template>Pouvez vous être plus précis?</template>
   </category>
   <category>
     <pattern>ET LES VÔTRES</pattern>
-    <template>Pouvez-vous être plus précis?</template>
+    <template>Pouvez vous être plus précis?</template>
   </category>
   <category>
     <pattern>ET MOI *</pattern>
@@ -847,11 +804,7 @@ Sois plus spécifique.</li>
   </category>
   <category>
     <pattern>EUX</pattern>
-    <template>Qu'en penses-tu?</template>
-  </category>
-  <category>
-    <pattern>EXCUSE TOI</pattern>
-    <template>Je te présente mes excuses.</template>
+    <template>Qu'en penses tu?</template>
   </category>
   <category>
     <pattern>EXCUSE MOI</pattern>
@@ -892,7 +845,7 @@ Sois plus spécifique.</li>
   </category>
   <category>
     <pattern>EXPLIQUE</pattern>
-    <template>Veux-tu faire un rapport à mon botmaster.</template>
+    <template>Veux tu faire un rapport à mon botmaster.</template>
   </category>
   <category>
     <pattern>EXPLIQUE CE *</pattern>
@@ -1004,12 +957,6 @@ Sois plus spécifique.</li>
     </template>
   </category>
   <category>
-    <pattern>EXPLIQUE QUOI</pattern>
-    <template>
-      <srai>QUOI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>EXPLIQUE TOI</pattern>
     <template>
       <srai>QUI TU ES</srai>
@@ -1035,7 +982,7 @@ Sois plus spécifique.</li>
   </category>
   <category>
     <pattern>EXPLIQUEZ</pattern>
-    <template>Veux-tu faire un rapport à mon botmaster.</template>
+    <template>Veux tu faire un rapport à mon botmaster.</template>
   </category>
   <category>
     <pattern>EXPLIQUEZ L HISTOIRE</pattern>

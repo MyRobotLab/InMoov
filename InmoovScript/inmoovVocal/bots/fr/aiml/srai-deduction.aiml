@@ -47,28 +47,6 @@
     </template>
   </category>
   <category>
-    <pattern>DÉFINI *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉFINIS *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ON FAIT QUOI A *</pattern>
     <template>
       <srai>QUE FAIT ON À <star /></srai>
@@ -308,50 +286,6 @@
   </category>
   <category>
     <pattern>QU EST CE QUE C ÉTAIT QUE ÇA</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE ÇA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE QUE C ÉTAIT QUE ÇA</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE ÇA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE QUE C ÉTAIT QUE ÇA</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE ÇA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE QUE C ÉTAIT QUE ÇA</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QU EST CE QUE ÇA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE QUE C ÉTAIT QUE CELA</pattern>
     <template>
       <think>
         <set name="courant">
@@ -660,17 +594,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI A CRÉE *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QUI A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI A CRÉÉ *</pattern>
     <template>
       <think>
@@ -679,17 +602,6 @@
         </set>
       </think>
       <srai>QUI A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI A DÉCOUVERT *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QUI A TROUVÉ <star /></srai>
     </template>
   </category>
   <category>
@@ -844,17 +756,6 @@
         </set>
       </think>
       <srai>QUI EST <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI ÉTAIS *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>C ÉTAIT <star /></srai>
     </template>
   </category>
   <category>

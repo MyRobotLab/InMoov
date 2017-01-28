@@ -9,7 +9,7 @@
         <formal>
           <star />
         </formal>
-      </set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment VAS-TU?  </li></random><get name="name" />.</template>
+      </set> . <random><li>Heureuse de te rencontrer, </li><li>Enchantée, </li><li>comment VAS tu?  </li></random><get name="name" />.</template>
   </category>
   <category>
     <pattern>MON NOM N EST PAS *</pattern>
@@ -81,18 +81,6 @@
       </think>je m'en souviendrai <get name="name" />.</template>
   </category>
   <category>
-    <pattern>LE NOM DE MA FEMME ÉTAIT *</pattern>
-    <template>
-      <think>
-        <set name="conjoint">
-          <formal>
-            <star />
-          </formal>
-        </set>
-        <set name="marie">veuf</set>
-      </think>je m'en souviendrai <get name="name" />.</template>
-  </category>
-  <category>
     <pattern>LE NOM DE MON MARI EST *</pattern>
     <template>
       <think>
@@ -110,22 +98,6 @@
         </set>
         <set name="marie">veuf</set>
       </think>je m'en souviendrai <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>LE NOM DE MON MARI ÉTAIT *</pattern>
-    <template>
-      <think>
-        <set name="conjoint">
-          <formal>
-            <star />
-          </formal>
-        </set>
-        <set name="marie">veuf</set>
-      </think>je m'en souviendrai <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE T AI DÉJÀ DIS MON NOM</pattern>
-    <template>C'est <get name="name" /> ton vrai nom?</template>
   </category>
   <category>
     <pattern>JE T AI DÉJÀ DIS MON NOM</pattern>
@@ -467,28 +439,28 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT PUIS-JE T APPELER INTERROGATION</that>
+    <that>COMMENT PUIS jE T APPELER INTERROGATION</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT PUIS-JE T APPELER INTERROGATION</that>
+    <that>* COMMENT PUIS jE T APPELER INTERROGATION</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT T APPELLES-TU INTERROGATION</that>
+    <that>COMMENT T APPELLES tu INTERROGATION</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT T APPELLES-TU INTERROGATION</that>
+    <that>* COMMENT T APPELLES tu INTERROGATION</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -516,28 +488,28 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT PUIS-JE T APPELER</that>
+    <that>COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT T APPELLES-TU</that>
+    <that>COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>COMMENT T APPELLES-TU</that>
+    <that>COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>COMMENT T APPELLES-TU</that>
+    <that>COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -558,7 +530,7 @@
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>COMMENT PUIS-JE T APPELER</that>
+    <that>COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -579,7 +551,7 @@
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>COMMENT PUIS-JE T APPELER</that>
+    <that>COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -600,7 +572,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT PUIS-JE T APPELER</that>
+    <that>* COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -621,7 +593,7 @@
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>* COMMENT PUIS-JE T APPELER</that>
+    <that>* COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -642,7 +614,7 @@
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>* COMMENT PUIS-JE T APPELER</that>
+    <that>* COMMENT PUIS jE T APPELER</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -656,21 +628,21 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT T APPELLES-TU</that>
+    <that>* COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>* COMMENT T APPELLES-TU</that>
+    <that>* COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>* COMMENT T APPELLES-TU</that>
+    <that>* COMMENT T APPELLES tu</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -684,7 +656,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT PUIS-JE T APPELER *</that>
+    <that>COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -698,7 +670,7 @@
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>COMMENT PUIS-JE T APPELER *</that>
+    <that>COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -719,7 +691,7 @@
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>COMMENT PUIS-JE T APPELER *</that>
+    <that>COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -740,21 +712,21 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>COMMENT T APPELLES-TU *</that>
+    <that>COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>COMMENT T APPELLES-TU *</that>
+    <that>COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>COMMENT T APPELLES-TU *</that>
+    <that>COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -768,7 +740,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT PUIS-JE T APPELER *</that>
+    <that>* COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -789,7 +761,7 @@
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>* COMMENT PUIS-JE T APPELER *</that>
+    <that>* COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -810,7 +782,7 @@
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>* COMMENT PUIS-JE T APPELER *</that>
+    <that>* COMMENT PUIS jE T APPELER *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
@@ -824,21 +796,21 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>* COMMENT T APPELLES-TU *</that>
+    <that>* COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>JE SUIS *</pattern>
-    <that>* COMMENT T APPELLES-TU *</that>
+    <that>* COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
   </category>
   <category>
     <pattern>MOI C EST *</pattern>
-    <that>* COMMENT T APPELLES-TU *</that>
+    <that>* COMMENT T APPELLES tu *</that>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>

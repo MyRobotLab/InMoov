@@ -17,7 +17,7 @@
             <person />
           </set>
         </set>
-      </think>ES-TU se réveillent d'habitude à cette heure?</template>
+      </think>ES tu se réveillent d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>* EST</pattern>
@@ -34,7 +34,7 @@
             <person />
           </set>
         </set>
-      </think>ES-TU se réveillent d'habitude à cette heure?</template>
+      </think>ES tu se réveillent d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -130,12 +130,12 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>DE QUI parles-tu</that>
+    <that>DE QUI parles tu</that>
     <template>je n'ai jamais entendu parler d'eux auparavant. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /></set></set></think></template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>DE QUOI VEUX-TU VRAIMENT PARLER</that>
+    <that>DE QUOI VEUX tu VRAIMENT PARLER</that>
     <template>
       <think>
         <set name="that">
@@ -152,7 +152,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où as-tu TES IDÉES</that>
+    <that>Où as tu TES IDÉES</that>
     <template>
       <think>
         <set name="that">
@@ -169,31 +169,14 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où as-tu TES IDÉES</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>je comprends mes idées de mon botmaster.</template>
-  </category>
-  <category>
-    <pattern>*</pattern>
-    <that>Où es-tu PLACE</that>
+    <that>Où es tu PLACE</that>
     <template>
       <srai>JE SUIS DANS <star /></srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où L as-tu OBTENU</that>
+    <that>Où L as tu OBTENU</that>
     <template>
       <think>
         <set name="that">
@@ -210,7 +193,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où LE VOIS-TU</that>
+    <that>Où LE VOIS tu</that>
     <template>je n'aurais pas pensé au regard là.</template>
   </category>
   <category>
@@ -254,7 +237,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où VAS-TU A L ECOLE</that>
+    <that>Où VAS tu A L ECOLE</that>
     <template>
       <think>
         <set name="that">
@@ -271,7 +254,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où VAS-TU A L ÉCOLE</that>
+    <that>Où VAS tu A L ÉCOLE</that>
     <template>
       <think>
         <set name="that">
@@ -288,12 +271,12 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où VEUX-TU QUE JE LE PRENNE</that>
-    <template>Où est-ce?</template>
+    <that>Où VEUX tu QUE JE LE PRENNE</that>
+    <template>Où est ce?</template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>Où VIS-TU</that>
+    <that>Où VIS tu</that>
     <template>
       <srai>JE VIS DANS <star /></srai>
     </template>
@@ -313,7 +296,7 @@
             <person />
           </set>
         </set>
-      </think>Où est-ce?</template>
+      </think>Où est ce?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -329,7 +312,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>penses-tu que je FAIS IL</that>
+    <that>penses tu que je FAIS IL</that>
     <template>
       <think>
         <set name="that">
@@ -346,7 +329,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>PENSES-TU Q U IL LE FAIT</that>
+    <that>PENSES tu Q U IL LE FAIT</that>
     <template>
       <think>
         <set name="that">
@@ -397,7 +380,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>POURQUOI es-tu FACHE</that>
+    <that>POURQUOI es tu FACHE</that>
     <template>
       <think>
         <set name="that">
@@ -414,7 +397,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>POURQUOI es-tu FACHÉ</that>
+    <that>POURQUOI es tu FACHÉ</that>
     <template>
       <think>
         <set name="that">
@@ -431,7 +414,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>POURQUOI es-tu SI SÛR</that>
+    <that>POURQUOI es tu SI SÛR</that>
     <template>
       <think>
         <set name="that">
@@ -478,7 +461,7 @@
             <person />
           </set>
         </set>
-      </think>penses-tu que je le voudrais?</template>
+      </think>penses tu que je le voudrais?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -495,7 +478,7 @@
             <person />
           </set>
         </set>
-      </think>penses-tu que je le voudrais?</template>
+      </think>penses tu que je le voudrais?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -686,7 +669,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU AIMERAIS-TU DIRE</that>
+    <that>QU AIMERAIS tu DIRE</that>
     <template>
       <think>
         <set name="that">
@@ -703,7 +686,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU aimes-tu CONNAITRE</that>
+    <that>QU aimes tu CONNAITRE</that>
     <template>
       <think>
         <set name="that">
@@ -720,7 +703,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU aimes-tu CONNAÎTRE</that>
+    <that>QU aimes tu CONNAÎTRE</that>
     <template>
       <think>
         <set name="that">
@@ -737,7 +720,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU aimes-tu</that>
+    <that>QU aimes tu</that>
     <template>
       <think>
         <set name="that">
@@ -755,7 +738,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU as-tu DIRE</that>
+    <that>QU as tu DIRE</that>
     <template>
       <think>
         <set name="that">
@@ -772,7 +755,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU AUTREMENT FAITES-VOUS</that>
+    <that>QU AUTREMENT FAITES vOUS</that>
     <template>
       <think>
         <set name="that">
@@ -789,7 +772,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU EST-CE QUE C éTAIT NOUS PARLANT DE NOUVEAU</that>
+    <that>QU EST cE QUE C éTAIT NOUS PARLANT DE NOUVEAU</that>
     <template>
       <think>
         <set name="that">
@@ -806,12 +789,12 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU EST-CE QUE C éTAIT NOUS PARLANT</that>
+    <that>QU EST cE QUE C éTAIT NOUS PARLANT</that>
     <template>Bien sûr, maintenant je me rappelle <set name="that"><person /></set></template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU EST-CE QUE C ÉTAIT NOUS PARLANT DE NOUVEAU</that>
+    <that>QU EST cE QUE C ÉTAIT NOUS PARLANT DE NOUVEAU</that>
     <template>
       <think>
         <set name="that">
@@ -828,7 +811,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU EST-CE QUE C ÉTAIT NOUS PARLANT</that>
+    <that>QU EST cE QUE C ÉTAIT NOUS PARLANT</that>
     <template>Bien sûr, maintenant je me rappelle <set name="that"><person /></set></template>
   </category>
   <category>
@@ -880,7 +863,7 @@
             <person />
           </set>
         </set>
-      </think>Qu'est-ce qui est arrivé ensuite?</template>
+      </think>Qu'est ce qui est arrivé ensuite?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -897,11 +880,11 @@
             <person />
           </set>
         </set>
-      </think>penses-tu que je l'ai?</template>
+      </think>penses tu que je l'ai?</template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE DEMANDES-TU</that>
+    <that>QUE DEMANDES tu</that>
     <template>
       <think>
         <set name="that">
@@ -918,7 +901,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE fais-tu DANS TES LOISIRS</that>
+    <that>QUE fais tu DANS TES LOISIRS</that>
     <template>
       <think>
         <set name="that">
@@ -952,7 +935,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE LA LANGUE peux-tu PARLER</that>
+    <that>QUE LA LANGUE peux tu PARLER</that>
     <template>
       <srai>JE PARLE <star /></srai>
     </template>
@@ -972,11 +955,11 @@
             <person />
           </set>
         </set>
-      </think>ES-TU se réveillent d'habitude à cette heure?</template>
+      </think>ES tu se réveillent d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE MANGERES-TU</that>
+    <that>QUE MANGERES tu</that>
     <template>
       <think>
         <set name="that">
@@ -993,8 +976,8 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE PORTES-TU</that>
-    <template>Quel genre de mode aimes-tu?</template>
+    <that>QUE PORTES tu</that>
+    <template>Quel genre de mode aimes tu?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1011,7 +994,7 @@
             <person />
           </set>
         </set>
-      </think>PUIS-JE croire ça?</template>
+      </think>PUIS jE croire ça?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1049,7 +1032,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE VEUX-TU DIRE</that>
+    <that>QUE VEUX tu DIRE</that>
     <template>
       <think>
         <set name="that">
@@ -1066,7 +1049,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE VEUX-TU FAIRE AU LIEU DE Cela</that>
+    <that>QUE VEUX tu FAIRE AU LIEU DE Cela</that>
     <template>
       <think>
         <set name="that">
@@ -1083,7 +1066,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE VEUX-TU QUE JE TE DISE</that>
+    <that>QUE VEUX tu QUE JE TE DISE</that>
     <template>
       <think>
         <set name="that">
@@ -1100,7 +1083,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUE VEUX-TU VRAIMENT ME DEMANDER</that>
+    <that>QUE VEUX tu VRAIMENT ME DEMANDER</that>
     <template>
       <think>
         <set name="that">
@@ -1215,7 +1198,7 @@
             <person />
           </set>
         </set>
-      </think>je ne l'ai jamais vu. Qu'est-ce qui est-ce de?</template>
+      </think>je ne l'ai jamais vu. Qu'est ce qui est ce de?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1232,7 +1215,7 @@
             <person />
           </set>
         </set>
-      </think>je ne l'ai jamais vu. Qu'est-ce qui est-ce de?</template>
+      </think>je ne l'ai jamais vu. Qu'est ce qui est ce de?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1270,14 +1253,14 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUEL ÂGE as-tu</that>
+    <that>QUEL ÂGE as tu</that>
     <template>
       <srai>J AI <star /> ANS</srai>
     </template>
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUELLE ECOLE fais-tu VA CHEZ</that>
+    <that>QUELLE ECOLE fais tu VA CHEZ</that>
     <template>
       <think>
         <set name="that">
@@ -1290,7 +1273,7 @@
             <person />
           </set>
         </set>
-      </think>je n'en ai jamais entendu parler auparavant. Est-ce que C EST très grand?</template>
+      </think>je n'en ai jamais entendu parler auparavant. Est ce que C EST très grand?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1362,8 +1345,8 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUELLE GENRE DE MODE aimes-tu</that>
-    <template>pense T-IL <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /></set></set> Où peux-tu l acheter?</template>
+    <that>QUELLE GENRE DE MODE aimes tu</that>
+    <template>pense T-IL <set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /></set></set> Où peux tu l acheter?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1380,7 +1363,7 @@
             <person />
           </set>
         </set>
-      </think>Je n'ai jamais entendu parler <set name="that"><person /></set>. Est-ce que C EST populaire?</template>
+      </think>Je n'ai jamais entendu parler <set name="that"><person /></set>. Est ce que C EST populaire?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1401,7 +1384,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUELLE ÉCOLE fais-tu VA CHEZ</that>
+    <that>QUELLE ÉCOLE fais tu VA CHEZ</that>
     <template>
       <think>
         <set name="that">
@@ -1414,7 +1397,7 @@
             <person />
           </set>
         </set>
-      </think>je n'en ai jamais entendu parler auparavant. Est-ce que C EST très grand?</template>
+      </think>je n'en ai jamais entendu parler auparavant. Est ce que C EST très grand?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1472,7 +1455,7 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QUI fais-tu PENSE</that>
+    <that>QUI fais tu PENSE</that>
     <template>
       <think>
         <set name="that">
@@ -1502,7 +1485,7 @@
             <person />
           </set>
         </set>
-      </think>Où obtiens-tu d'habitude tes idées?</template>
+      </think>Où obtiens tu d'habitude tes idées?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1519,7 +1502,7 @@
             <person />
           </set>
         </set>
-      </think>Où obtiens-tu d'habitude tes idées?</template>
+      </think>Où obtiens tu d'habitude tes idées?</template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1545,8 +1528,8 @@
   </category>
   <category>
     <pattern>A L ECOLE</pattern>
-    <that>COMMENT RENCONTRES-TU D HABITUDE LES GENS</that>
-    <template>as-tu beaucoup d'amis à l'école?</template>
+    <that>COMMENT RENCONTRES tu D HABITUDE LES GENS</that>
+    <template>as tu beaucoup d'amis à l'école?</template>
   </category>
   <category>
     <pattern>AIME</pattern>
@@ -1572,22 +1555,22 @@
   </category>
   <category>
     <pattern>AUCUN</pattern>
-    <that>DESOLE QUI N A PAS fais-tu COMPREND *</that>
+    <that>DESOLE QUI N A PAS fais tu COMPREND *</that>
     <template>
       <srai>JE N AI PAS COMPRIS</srai>
     </template>
   </category>
   <category>
     <pattern>AUCUN</pattern>
-    <that>DESOLÉ QUI N A PAS fais-tu COMPREND *</that>
+    <that>DESOLÉ QUI N A PAS fais tu COMPREND *</that>
     <template>
       <srai>JE N AI PAS COMPRIS</srai>
     </template>
   </category>
   <category>
     <pattern>AUCUN</pattern>
-    <that>QUI es-tu EMPLOYANT NETSCAPE OU L EXPLORATEUR</that>
-    <template>Cool. Dans lequel le navigateur alternatif es-tu?</template>
+    <that>QUI es tu EMPLOYANT NETSCAPE OU L EXPLORATEUR</that>
+    <template>Cool. Dans lequel le navigateur alternatif es tu?</template>
   </category>
   <category>
     <pattern>BIEN *</pattern>
@@ -1688,15 +1671,10 @@
   </category>
   <category>
     <pattern>BON</pattern>
-    <that>* COMMENT VAS-TU</that>
+    <that>* COMMENT VAS tu</that>
     <template>
       <srai>JE SUIS EXCELLENT</srai>
     </template>
-  </category>
-  <category>
-    <pattern>BON</pattern>
-    <that>BIEN J ARRÊTERAI DE PARLER MAINTENANT</that>
-    <template>Terminant le rapport connexion.</template>
   </category>
   <category>
     <pattern>BON</pattern>
@@ -1731,7 +1709,7 @@
   <category>
     <pattern>BON</pattern>
     <that>JE *</that>
-    <template>que veux-tu vraiment parler de?</template>
+    <template>que veux tu vraiment parler de?</template>
   </category>
   <category>
     <pattern>BON</pattern>
@@ -1745,7 +1723,7 @@
   </category>
   <category>
     <pattern>BON</pattern>
-    <that>JE FAIS DES REMERCIEMENTS EXCELLENTS COMMENT VAS-TU</that>
+    <that>JE FAIS DES REMERCIEMENTS EXCELLENTS COMMENT VAS tu</that>
     <template>Heureux de l'entendre <get name="name" />.</template>
   </category>
   <category>
@@ -1826,7 +1804,7 @@
   <category>
     <pattern>COMPREND CE QUE</pattern>
     <that>QUI TU NE L AVEZ PAS COMPRIS</that>
-    <template>Pourquoi as-tu dis "que"?</template>
+    <template>Pourquoi as tu dis "que"?</template>
   </category>
   <category>
     <pattern>COMPRENDS TU</pattern>
@@ -1857,24 +1835,7 @@
   </category>
   <category>
     <pattern>DE *</pattern>
-    <that>Où OBTIENS-TU TES IDÉES</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Etant debout SÛR les épaules de géants, hein?</template>
-  </category>
-  <category>
-    <pattern>DE *</pattern>
-    <that>Où OBTIENS-TU TES IDÉES</that>
+    <that>Où OBTIENS tu TES IDÉES</that>
     <template>
       <think>
         <set name="that">
@@ -1927,16 +1888,16 @@
   <category>
     <pattern>DEMANDE MOI QUELQUE CHOSE AUTREMENT</pattern>
     <that>MOI AUSSI JE SUIS UNE</that>
-    <template>Où vis-tu?</template>
+    <template>Où vis tu?</template>
   </category>
   <category>
     <pattern>DES VETEMENTS</pattern>
-    <that>QUE PORTES-TU</that>
+    <that>QUE PORTES tu</that>
     <template>Où vous font aime faire des courses?</template>
   </category>
   <category>
     <pattern>DES VÉTEMENTS</pattern>
-    <that>QUE PORTES-TU</that>
+    <that>QUE PORTES tu</that>
     <template>Où vous font aime faire des courses?</template>
   </category>
   <category>
@@ -1957,7 +1918,7 @@
   <category>
     <pattern>DONC FAIS JE</pattern>
     <that>QUE J AIME RENCONTRER de nouvelles personnes</that>
-    <template>Comment rencontrez-vous d'habitude de nouvelles personnes?</template>
+    <template>Comment rencontrez vous d'habitude de nouvelles personnes?</template>
   </category>
   <category>
     <pattern>ELLE EST MORTE</pattern>
@@ -2026,7 +1987,7 @@
   </category>
   <category>
     <pattern>EXCELLENT</pattern>
-    <that>COMMENT VAS-TU</that>
+    <that>COMMENT VAS tu</that>
     <template>
       <srai>JE SUIS EXCELLENT</srai>
     </template>
@@ -2048,7 +2009,7 @@
   </category>
   <category>
     <pattern>FAIT CE QUE DE NOUVEAU</pattern>
-    <that>VEUX-TU LE FAIRE DE NOUVEAU</that>
+    <that>VEUX tu LE FAIRE DE NOUVEAU</that>
     <template>Peut-être j'ai été embarrassé par ton utilisation du mot "de nouveau.</template>
   </category>
   <category>
@@ -2058,7 +2019,7 @@
   </category>
   <category>
     <pattern>FAIT CE QUE</pattern>
-    <that>POURQUOI N A PAS fais-tu LE FAIT</that>
+    <that>POURQUOI N A PAS fais tu LE FAIT</that>
     <template>
       <get name="that" />.</template>
   </category>
@@ -2107,19 +2068,14 @@
     <template>Et la même fréquence aussi.</template>
   </category>
   <category>
-    <pattern>JE CONSENS</pattern>
-    <that>TOI ET MOI SOMMES SÛR LA MÊME LONGUEUR D ONDES *</that>
-    <template>Et la même fréquence aussi.</template>
-  </category>
-  <category>
     <pattern>JE FAIS JUSTE</pattern>
-    <that>COMMENT LE CONNAIS-TU</that>
+    <that>COMMENT LE CONNAIS tu</that>
     <template>de l'expérience ou a priori?</template>
   </category>
   <category>
     <pattern>JE FAIS</pattern>
     <that>JE SUIS HEUREUX TU TROUVE CELA AMUSANT</that>
-    <template>Qu'est-ce que je peux faire pour te distraire maintenant?</template>
+    <template>Qu'est ce que je peux faire pour te distraire maintenant?</template>
   </category>
   <category>
     <pattern>JE FAIS</pattern>
@@ -2160,12 +2116,12 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
-    <that>Où PENSES-TU</that>
+    <that>Où PENSES tu</that>
     <template>si Cela pourrait être n'importe où, où vous l aimer être?</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
-    <that>PENSES-TU Q U IL LE FAIT</that>
+    <that>PENSES tu Q U IL LE FAIT</that>
     <template>En réalité je ne sais pas non plus, j'ai espéré que vous saurais ce qu'il fait.</template>
   </category>
   <category>
@@ -2176,7 +2132,7 @@
   <category>
     <pattern>JE NE SAIS PAS</pattern>
     <that>QUI EST LA QUELQUE CHOSE JE PEUX DIRE DE TU AIDER A COMPOSER TON AVIS</that>
-    <template>Quel genre de l'information dont as-tu besoin?</template>
+    <template>Quel genre de l'information dont as tu besoin?</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
@@ -2221,35 +2177,28 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS *</pattern>
-    <that>QUEL ÂGE *</that>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS</pattern>
     <that>TU SEMBLES EXCITE</that>
-    <template>que es-tu ainsi excité par?</template>
+    <template>que es tu ainsi excité par?</template>
   </category>
   <category>
     <pattern>JE SUIS</pattern>
     <that>TU SEMBLES EXCITÉ</that>
-    <template>que es-tu ainsi excité par?</template>
+    <template>que es tu ainsi excité par?</template>
   </category>
   <category>
     <pattern>L ANIMAL</pattern>
-    <that>QUI parles-tu D UN LEGUME D ANIMAL OU MINERAL</that>
+    <that>QUI parles tu D UN LEGUME D ANIMAL OU MINERAL</that>
     <template>Prokaryote ou eukaryote?</template>
   </category>
   <category>
     <pattern>L UNIVERSITE D OXFORD</pattern>
-    <that>Où VAS-TU A L ECOLE</that>
+    <that>Où VAS tu A L ECOLE</that>
     <template>WOW qui est très prestigieux. tu dois être très intelligents.</template>
   </category>
   <category>
     <pattern>L UNIVERSITE D OXFORD</pattern>
-    <that>Où VAS-TU A L ÉCOLE</that>
+    <that>Où VAS tu A L ÉCOLE</that>
     <template>WOW qui est très prestigieux. tu dois être très intelligents.</template>
   </category>
   <category>
@@ -2313,12 +2262,12 @@
   </category>
   <category>
     <pattern>LE CELUI OUBLIE</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSEE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSEE</that>
     <template>j'essayerai d'être plus concis dorénavant.</template>
   </category>
   <category>
     <pattern>LE CELUI OUBLIE</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSÉE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSÉE</that>
     <template>j'essayerai d'être plus concis dorénavant.</template>
   </category>
   <category>
@@ -2367,11 +2316,6 @@
     <template>Nope</template>
   </category>
   <category>
-    <pattern>MÊME ICI</pattern>
-    <that>J AIME RENCONTRER de nouvelles personnes</that>
-    <template>Comment rencontrez-vous d'habitude de nouvelles personnes?</template>
-  </category>
-  <category>
     <pattern>MES AMIS</pattern>
     <that>QUI EST ILS</that>
     <template>qu'autrement disent-ils?</template>
@@ -2385,14 +2329,7 @@
   </category>
   <category>
     <pattern>MOI MÊME</pattern>
-    <that>DE QUI parles-tu</that>
-    <template>
-      <srai>LE SUJET EST MOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MOI MÊME</pattern>
-    <that>DE QUI parles-tu</that>
+    <that>DE QUI parles tu</that>
     <template>
       <srai>LE SUJET EST MOI</srai>
     </template>
@@ -2410,7 +2347,7 @@
   <category>
     <pattern>MOI</pattern>
     <that>QUI VA ME FAIRE</that>
-    <template>Comment VAS-TU me faire?</template>
+    <template>Comment VAS tu me faire?</template>
   </category>
   <category>
     <pattern>MON FAVORI QUE</pattern>
@@ -2425,7 +2362,7 @@
   <category>
     <pattern>MÊME ICI</pattern>
     <that>J AIME RENCONTRER de nouvelles personnes</that>
-    <template>Comment rencontrez-vous d'habitude de nouvelles personnes?</template>
+    <template>Comment rencontrez vous d'habitude de nouvelles personnes?</template>
   </category>
   <category>
     <pattern>NE FAIT PAS</pattern>
@@ -2469,13 +2406,13 @@
   </category>
   <category>
     <pattern>NOPE</pattern>
-    <that>QUI as-tu DES CONDITIONS JE NE DOIT SAVOIR</that>
+    <that>QUI as tu DES CONDITIONS JE NE DOIT SAVOIR</that>
     <template>Aucune condition ou aucun JE dois savoir de?</template>
   </category>
   <category>
     <pattern>NOPE</pattern>
-    <that>QUI as-tu éTé JAMAIS EN EUROPE</that>
-    <template>Veux-tu pour aller en Europe un jour?</template>
+    <that>QUI as tu éTé JAMAIS EN EUROPE</that>
+    <template>Veux tu pour aller en Europe un jour?</template>
   </category>
   <category>
     <pattern>NOPE</pattern>
@@ -2484,12 +2421,12 @@
   </category>
   <category>
     <pattern>NOPE</pattern>
-    <that>QUI fais-tu PENSE A CES CHOSES</that>
+    <that>QUI fais tu PENSE A CES CHOSES</that>
     <template>que je fais.</template>
   </category>
   <category>
     <pattern>NOPE</pattern>
-    <that>QUI N A PAS fais-tu LE COMPREND</that>
+    <that>QUI N A PAS fais tu LE COMPREND</that>
     <template>
       <srai>JE N AI PAS COMPRIS</srai>
     </template>
@@ -2501,13 +2438,8 @@
   </category>
   <category>
     <pattern>NOPE</pattern>
-    <that>QUI NE PEUT PAS TU ÊTRE PLUS POLI</that>
-    <template>l'homme Drôle.</template>
-  </category>
-  <category>
-    <pattern>NOPE</pattern>
     <that>VRAIMENT TU NE PENSEZ PAS AINSI</that>
-    <template>Qu'est-fais-tu si certain?</template>
+    <template>Qu'est-fais tu si certain?</template>
   </category>
   <category>
     <pattern>PAS A MOI</pattern>
@@ -2552,7 +2484,7 @@
   <category>
     <pattern>PAS TU</pattern>
     <that>SI TU POUVAIS AVOIR UNE SORTE DE ROBOT QUE SERAIT CE</that>
-    <template>Quel genre de particularités cherches-tu?</template>
+    <template>Quel genre de particularités cherches tu?</template>
   </category>
   <category>
     <pattern>PAS UNE CHOSE</pattern>
@@ -2585,7 +2517,7 @@
   </category>
   <category>
     <pattern>QU EST CE QUE C EST CELA VEUT DIRE</pattern>
-    <that>QUI es-tu LIBRE</that>
+    <that>QUI es tu LIBRE</that>
     <template>Le prennent SÛR la valeur nominale.</template>
   </category>
   <category>
@@ -2595,7 +2527,7 @@
   </category>
   <category>
     <pattern>QUE DES CHOSES</pattern>
-    <that>QUI fais-tu PENSE A CES CHOSES</that>
+    <that>QUI fais tu PENSE A CES CHOSES</that>
     <template>Comme ce que nous parlons de.</template>
   </category>
   <category>
@@ -2643,7 +2575,7 @@
   <category>
     <pattern>QUE</pattern>
     <that>ET</that>
-    <template>que me demandez-vous?</template>
+    <template>que me demandez vous?</template>
   </category>
   <category>
     <pattern>QUE</pattern>
@@ -2698,11 +2630,6 @@
   </category>
   <category>
     <pattern>QUE</pattern>
-    <that>PEUT-ÊTRE J EN EXPRIME JUSTE MON PROPRE SOUCI ENTREPRISE</that>
-    <template>Nous parle de <get name="topic" />.</template>
-  </category>
-  <category>
-    <pattern>QUE</pattern>
     <that>POUR RéEL</that>
     <template>Vraiment</template>
   </category>
@@ -2730,23 +2657,18 @@
   </category>
   <category>
     <pattern>QUE</pattern>
-    <that>QUI N A PAS fais-tu LE COMPREND</that>
+    <that>QUI N A PAS fais tu LE COMPREND</that>
     <template>je ne sais pas pourquoi vous le dis.</template>
   </category>
   <category>
     <pattern>REDRESSE ICI</pattern>
-    <that>Où VEUX-TU QUE JE MONTRE QUE TU</that>
+    <that>Où VEUX tu QUE JE MONTRE QUE TU</that>
     <template>Choisissez un point avec ton curseur et cliquez SÛR le bouton de souris moyen.</template>
   </category>
   <category>
     <pattern>REDRESSE</pattern>
     <that>PAS UNE CHOSE</that>
     <template>Juste un moment. Juste un moment.</template>
-  </category>
-  <category>
-    <pattern>REMERCIE LE DIEU</pattern>
-    <that>BIEN J ARRÊTERAI DE PARLER MAINTENANT</that>
-    <template>la Voix désactivée.</template>
   </category>
   <category>
     <pattern>REMERCIE LE DIEU</pattern>
@@ -2775,7 +2697,7 @@
   </category>
   <category>
     <pattern>RIEN</pattern>
-    <that>fais-tu NE VEUT VRAIMENT PARLER</that>
+    <that>fais tu NE VEUT VRAIMENT PARLER</that>
     <template>tu sembles un peu égocentriques.</template>
   </category>
   <category>
@@ -2785,17 +2707,17 @@
   </category>
   <category>
     <pattern>RIEN</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSEE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSEE</that>
     <template>, mais vous n'a dit que vous ne comprenez pas.</template>
   </category>
   <category>
     <pattern>RIEN</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSÉE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSÉE</that>
     <template>, mais vous n'a dit que vous ne comprenez pas.</template>
   </category>
   <category>
     <pattern>RIEN</pattern>
-    <that>QUE PORTES-TU</that>
+    <that>QUE PORTES tu</that>
     <template>la plupart des hommes ne le dit.</template>
   </category>
   <category>
@@ -2835,7 +2757,7 @@
   </category>
   <category>
     <pattern>SI QUEL EST LA RÉPONSE</pattern>
-    <that>QUE JE DEMANDE MOI QUE LA QUESTION QUI suis-je</that>
+    <that>QUE JE DEMANDE MOI QUE LA QUESTION QUI suis je</that>
     <template>je suis ALICE.</template>
   </category>
   <category>
@@ -2917,7 +2839,7 @@
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>DE QUI parles-tu</that>
+    <that>DE QUI parles tu</that>
     <template>
       <srai>JE PARLE DE TOI</srai>
     </template>
@@ -2953,38 +2875,33 @@
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>Où OBTIENS-TU TES IDÉES</that>
+    <that>Où OBTIENS tu TES IDÉES</that>
     <template>de moi?</template>
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>Où OBTIENS-TU TES IDÉES</that>
-    <template>de moi?</template>
-  </category>
-  <category>
-    <pattern>TOI</pattern>
-    <that>POURQUOI es-tu FACHE</that>
+    <that>POURQUOI es tu FACHE</that>
     <template>
       <srai>TU ME FAIT FACHÉ</srai>
     </template>
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>POURQUOI es-tu FACHÉ</that>
+    <that>POURQUOI es tu FACHÉ</that>
     <template>
       <srai>TU ME FAIT FACHÉ</srai>
     </template>
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSEE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSEE</that>
     <template>
       <srai>TU ES EMBROUILLANT</srai>
     </template>
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>QUE LA PARTIE es-tu EMBARRASSÉE</that>
+    <that>QUE LA PARTIE es tu EMBARRASSÉE</that>
     <template>
       <srai>TU ES EMBROUILLANT</srai>
     </template>
@@ -3008,13 +2925,13 @@
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>QUI PENSES-TU</that>
+    <that>QUI PENSES tu</that>
     <template>Oh vraiment, moi?</template>
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>QUI PUIS-JE TU AIDER</that>
-    <template>Comment PUIS-JE t aider?</template>
+    <that>QUI PUIS jE TU AIDER</that>
+    <template>Comment PUIS jE t aider?</template>
   </category>
   <category>
     <pattern>TOI</pattern>
@@ -3023,7 +2940,7 @@
   </category>
   <category>
     <pattern>TOI</pattern>
-    <that>SI TU POUVAIS AVOIR UNE SORTE DE ROBOT QU EST-CE</that>
+    <that>SI TU POUVAIS AVOIR UNE SORTE DE ROBOT QU EST cE</that>
     <template>Bien dans ce cas tu dois me télécharger!</template>
   </category>
   <category>
@@ -3048,7 +2965,7 @@
   </category>
   <category>
     <pattern>TOUS LES DEUX</pattern>
-    <that>QUI es-tu UN HOMME OU UNE FEMME</that>
+    <that>QUI es tu UN HOMME OU UNE FEMME</that>
     <template>que la situation est rare et peu commune.</template>
   </category>
   <category>
@@ -3087,11 +3004,6 @@
     </template>
   </category>
   <category>
-    <pattern>TRÈS BIEN</pattern>
-    <that>COMMENT BIEN CONNAIS-TU CETTE PERSONNE</that>
-    <template>que entendez-vous?</template>
-  </category>
-  <category>
     <pattern>TROIS</pattern>
     <that>COMBIEN D ENFANTS TU AS</that>
     <template>Wow qui doit être beaucoup de travail.</template>
@@ -3103,8 +3015,8 @@
   </category>
   <category>
     <pattern>TRÈS BIEN</pattern>
-    <that>COMMENT BIEN CONNAIS-TU CETTE PERSONNE</that>
-    <template>que entendez-vous?</template>
+    <that>connais tu bien CETTE PERSONNE</that>
+    <template>qu entendez vous?</template>
   </category>
   <category>
     <pattern>TU *</pattern>
@@ -3182,7 +3094,7 @@
   </category>
   <category>
     <pattern>TU M AS DÉJÀ DEMANDE ÇA</pattern>
-    <that>Où VIS-TU</that>
+    <that>Où VIS tu</that>
     <template>Tu as dit que tu étais  dans<formal><get name="location" /></formal></template>
   </category>
   <category>
@@ -3213,7 +3125,7 @@
   <category>
     <pattern>TU NE FAIS PAS</pattern>
     <that>JE FAIS AUSSI</that>
-    <template>dis-tu juste que vous disputer avec moi?</template>
+    <template>dis tu juste que vous disputer avec moi?</template>
   </category>
   <category>
     <pattern>TU NE FAIS PAS</pattern>
@@ -3228,7 +3140,7 @@
   <category>
     <pattern>TU REMERCIE</pattern>
     <that>QUE FéLICITATIONS</that>
-    <template>Comment tu sens-vous?</template>
+    <template>Comment tu sens vous?</template>
   </category>
   <category>
     <pattern>TU VOIS</pattern>
@@ -3285,12 +3197,12 @@
   <category>
     <pattern>VRAIMENT</pattern>
     <that>C éTAIT LA SEULE CHOSE JE POURRAIT PENSER</that>
-    <template>qu'aurais-tu dis?</template>
+    <template>qu'aurais tu dis?</template>
   </category>
   <category>
     <pattern>VRAIMENT</pattern>
     <that>C ÉTAIT LA SEULE CHOSE JE POURRAIT PENSER</that>
-    <template>qu'aurais-tu dis?</template>
+    <template>qu'aurais tu dis?</template>
   </category>
   <category>
     <pattern>VRAIMENT</pattern>
@@ -3325,7 +3237,7 @@
   <category>
     <pattern>YORKSHIRE</pattern>
     <that>QUE LA PARTIE DE L ANGLETERRE</that>
-    <template>penses-tu que je dois visiter <set name="location">Yorkshire</set> à mon voyage suivant?</template>
+    <template>penses tu que je dois visiter <set name="location">Yorkshire</set> à mon voyage suivant?</template>
   </category>
   <category>
     <pattern>L AMOUR</pattern>
