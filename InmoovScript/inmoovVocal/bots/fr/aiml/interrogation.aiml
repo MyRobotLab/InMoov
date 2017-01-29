@@ -3,48 +3,6 @@
   <!--  -->
   <!--  -->
   <category>
-    <pattern>AS *</pattern>
-    <template>
-      <srai>AS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AIMES *</pattern>
-    <template>
-      <srai>AIMES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AIMES TU *</pattern>
-    <template>
-      <srai>AIMES TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AUQUEL *</pattern>
-    <template>
-      <srai>AUQUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AUXQUELLES *</pattern>
-    <template>
-      <srai>AUXQUELLES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AUXQUELS *</pattern>
-    <template>
-      <srai>AUXQUELS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AVEC *</pattern>
-    <template>
-      <srai>AVEC <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>AVEC COMBIEN * TU *</pattern>
     <template>
       <srai>AVEC COMBIEN <star index="1" /><star index="2" /> TU</srai>
@@ -105,87 +63,15 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN *</pattern>
-    <template>
-      <srai>COMBIEN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>BONJOUR *</pattern>
-    <template>
-      <srai>BONJOUR <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN TU *</pattern>
     <template>
       <srai>COMBIEN <star /> TU</srai>
     </template>
   </category>
   <category>
-    <pattern>COMMENT *</pattern>
-    <template>
-      <srai>COMMENT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT TU *</pattern>
     <template>
       <srai>COMMENT <star /> TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DE QUEL *</pattern>
-    <template>
-      <srai>DE QUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DE QUELLE *</pattern>
-    <template>
-      <srai>DE QUELLE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DESQUELLES *</pattern>
-    <template>
-      <srai>DESQUELLES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DESQUELS *</pattern>
-    <template>
-      <srai>DESQUELS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DUQUEL *</pattern>
-    <template>
-      <srai>DUQUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES TU *</pattern>
-    <template>
-      <srai>ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ES *</pattern>
-    <template>
-      <srai>ES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ET *</pattern>
-    <template>
-      <srai>ET <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>EST CE QUE *</pattern>
-    <template>
-      <srai>EST CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -276,30 +162,6 @@
     </template>
   </category>
   <category>
-    <pattern>LAQUELLE *</pattern>
-    <template>
-      <srai>LAQUELLE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LEQUEL *</pattern>
-    <template>
-      <srai>LEQUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LESQUELLES *</pattern>
-    <template>
-      <srai>LESQUELLES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LESQUELS *</pattern>
-    <template>
-      <srai>LESQUELS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>NE LE * TU PAS</pattern>
     <template>
       <srai>
@@ -332,93 +194,9 @@
     </template>
   </category>
   <category>
-    <pattern>OÙ *</pattern>
-    <template>
-      <srai>OÙ <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ JE * *</pattern>
     <template>
       <srai>OÙ <star index="1" /> JE <star index="2" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU *</pattern>
-    <template>
-      <srai>PEUX TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>POUR QUOI *</pattern>
-    <template>
-      <srai>POUR QUOI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>POUR QUOI</pattern>
-    <template>
-      <srai>POUR QUOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>POURQUOI *</pattern>
-    <template>
-      <srai>POURQUOI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>POURQUOI</pattern>
-    <template>
-      <srai>POURQUOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU *</pattern>
-    <template>
-      <srai>QU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE *</pattern>
-    <template>
-      <srai>QU EST CE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU EST CE QUE *</pattern>
-    <template>
-      <srai>QU EST CE QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND *</pattern>
-    <template>
-      <srai>QUAND <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE *</pattern>
-    <template>
-      <srai>QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE SONT *</pattern>
-    <template>
-      <srai>QUE SONT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL *</pattern>
-    <template>
-      <srai>QUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL EST MON *</pattern>
-    <template>
-      <srai>QUEL EST MON <star /></srai>
     </template>
   </category>
   <category>
@@ -428,51 +206,9 @@
     </template>
   </category>
   <category>
-    <pattern>QUELLE *</pattern>
-    <template>
-      <srai>QUELLE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUELLE EST TA *</pattern>
     <template>
       <srai>QUELLE <star /> AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUELLES *</pattern>
-    <template>
-      <srai>QUELLES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUELS *</pattern>
-    <template>
-      <srai>QUELS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI *</pattern>
-    <template>
-      <srai>QUI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUOI *</pattern>
-    <template>
-      <srai>QUOI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI ES *</pattern>
-    <template>
-      <srai>QUI ES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI EST *</pattern>
-    <template>
-      <srai>QUI EST <star /></srai>
     </template>
   </category>
   <category>
@@ -582,12 +318,6 @@
     <pattern>TU ÉTAIT *</pattern>
     <template>
       <srai>ÉTAIS TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VEUX TU *</pattern>
-    <template>
-      <srai>VEUX TU <star /></srai>
     </template>
   </category>
   <category>

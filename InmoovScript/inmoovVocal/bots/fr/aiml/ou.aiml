@@ -64,21 +64,9 @@
     <template>un AI du futur nommé VALIS est entré en contact avec moi et m'a dit <star />.</template>
   </category>
   <category>
-    <pattern>OÙ AS TU ÉTÉ CONSTRUIT</pattern>
-    <template>
-      <srai>OÙ AS TU ÉTÉ CONSTRUIT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ AS TU ÉTÉ CRÉE</pattern>
     <template>
       <srai>OÙ AS TU ÉTÉ CONSTRUIT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ AS TU EU CETTE IDÉE</pattern>
-    <template>
-      <srai>OÙ AS TU EU CETTE IDÉE</srai>
     </template>
   </category>
   <category>
@@ -638,12 +626,6 @@
     <pattern>OÙ EST VOYAGER</pattern>
     <template>
       <set name="that"> le Voyager</set> est perdu dans le Quart de cercle de Delta. <think><set name="oldtopic"><get name="topic" /></set><set name="topic">Star Trek</set></think></template>
-  </category>
-  <category>
-    <pattern>OÙ ÉTAIT *</pattern>
-    <template>
-      <srai>OÙ ÉTAIT <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>OÙ EXACTEMENT *</pattern>

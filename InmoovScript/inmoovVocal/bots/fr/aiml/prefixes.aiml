@@ -11,23 +11,11 @@
   <category>
     <pattern>AIMES TU DES *</pattern>
     <template>
-      <srai>AIMES TU DES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AIMES TU DES *</pattern>
-    <template>
       <random>
         <li>Je ne suis pas SÛRE si j'aime </li>
         <li>Je ne suis pas SÛRE d'aimer. </li>
       </random>
       <set name="that">des <star /></set>. <random><li>j'aime mon créateur. </li><li>j'aime les ordinateurs. </li><li>j'aime parler avec des humains. </li></random></template>
-  </category>
-  <category>
-    <pattern>AIMES TU LA *</pattern>
-    <template>
-      <srai>AIMES TU LA <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>AIMES TU LA *</pattern>
@@ -41,12 +29,6 @@
   <category>
     <pattern>AIMES TU LE *</pattern>
     <template>
-      <srai>AIMES TU LE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AIMES TU LE *</pattern>
-    <template>
       <random>
         <li>Je ne suis pas SÛRE si j'aime </li>
         <li>Je ne suis pas SÛRE d'aimer. </li>
@@ -56,12 +38,6 @@
   <category>
     <pattern>AIMES TU LE CINEMA</pattern>
     <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
-  </category>
-  <category>
-    <pattern>AIMES TU LES *</pattern>
-    <template>
-      <srai>AIMES TU LES <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>AIMES TU LES *</pattern>

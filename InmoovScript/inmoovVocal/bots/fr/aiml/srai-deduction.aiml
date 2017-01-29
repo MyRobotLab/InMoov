@@ -649,17 +649,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI A ÉCRIT *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QUI A ÉCRIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI A FAIS *</pattern>
     <template>
       <think>
@@ -690,17 +679,6 @@
         </set>
       </think>
       <srai>QUI A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI A TUÉ *</pattern>
-    <template>
-      <think>
-        <set name="courant">
-          <star />
-        </set>
-      </think>
-      <srai>QUI A TUÉ <star /></srai>
     </template>
   </category>
   <category>
