@@ -1,49 +1,25 @@
 ;----------------------------- HEAD CONFIGURATION ----------------------------------------
 [MAIN]
 isHeadActivated=False
-MouthControlActivated=True
 autoAttach=True
 autoDetach=True
 
-[SERVO_MINIMUM]
+[MOUTHCONTROL]
+MouthControlActivated=True
+
+[SERVO_MINIMUM_MAP_OUTPUT]
 jaw=81
 eyeX=20
 eyeY=20
 neck=20
 rothead=20
 
-
-[SERVO_MAXIMUM]
+[SERVO_MAXIMUM_MAP_OUTPUT]
 jaw=120
 eyeX=160
 eyeY=160
 neck=160
 rothead=160
-
-
-[MINIMUM_MAP]
-jaw=0
-eyeX=0
-eyeY=0
-neck=0
-rothead=0
-
-
-[MAXIMUM_MAP]
-jaw=180
-eyeX=180
-eyeY=180
-neck=180
-rothead=180
-
-
-[SERVO_INVERTED]
-jaw=False
-eyeX=False
-eyeY=False
-neck=False
-rothead=False
-
 
 [SERVO_MAP_REST]
 jaw=90
@@ -52,6 +28,36 @@ eyeY=90
 neck=90
 rothead=90
 
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[AUDIOSIGNALPROCESSING]
+;this is optional
+AudioSignalProcessing=False
+;analog pin range are 14-18 on uno, 54-70 on mega
+AnalogPin=59
+HowManyPollsBySecond=100
+sensibility=20
+
+[SERVO_INVERTED]
+jaw=False
+eyeX=False
+eyeY=False
+neck=False
+rothead=False
+
+[MINIMUM_MAP_INPUT]
+jaw=0
+eyeX=0
+eyeY=0
+neck=0
+rothead=0
+
+[MAXIMUM_MAP_INPUT]
+jaw=180
+eyeX=180
+eyeY=180
+neck=180
+rothead=180
 
 [DEF_SPEED]
 jaw=100

@@ -36,8 +36,8 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		talkEvent(lang_startingTorso)
 		torso = Runtime.create("i01.torso","InMoovTorso")
 				
-		torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'topStom')) 
-		torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'midStom')) 
+		torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
+		torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
 		
 		torso.topStom.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'topStom'))
 		torso.midStom.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'midStom'))

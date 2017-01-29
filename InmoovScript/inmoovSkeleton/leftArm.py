@@ -33,10 +33,10 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		leftArm = Runtime.create("i01.leftArm", "InMoovArm")
 		
 		try:			
-			leftArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'bicep')) 
-			leftArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'shoulder')) 
-			leftArm.rotate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'rotate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'rotate')) 
-			leftArm.omoplate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'omoplate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'omoplate')) 
+			leftArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
+			leftArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'shoulder')) 
+			leftArm.rotate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rotate')) 
+			leftArm.omoplate.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'omoplate')) 
 		
 			leftArm.bicep.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'bicep'))
 			leftArm.shoulder.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'shoulder'))

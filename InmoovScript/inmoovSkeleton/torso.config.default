@@ -7,40 +7,39 @@ TorsoConnectedToArduino=left
 autoAttach=True
 autoDetach=True
 
-
-[SERVO_MINIMUM]
+[SERVO_MINIMUM_MAP_OUTPUT]
 topStom=60
 midStom=60
 
-[SERVO_MAXIMUM]
-topStom=60
-midStom=60
+[SERVO_MAXIMUM_MAP_OUTPUT]
+topStom=120
+midStom=120
+
+[SERVO_MAP_REST]
+topStom=90
+midStom=90
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
 [SERVO_INVERTED]
 topStom=False
 midStom=False
 
-[SERVO_MAP_REST]
-topStom=120
-midStom=120
-
 [DEF_SPEED]
 topStom=100
 midStom=100
 
-
-;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
-;todo : pin change
-;topStom=27
-;midStom=28
-
-[MINIMUM_MAP]
+[MINIMUM_MAP_INPUT]
 topStom=0
 midStom=0
 
-[MAXIMUM_MAP]
+[MAXIMUM_MAP_INPUT]
 topStom=180
 midStom=180
+
+;todo : pin change
+;topStom=27
+;midStom=28
 
 ;----------------------------------- END --------------------------------------------------
 

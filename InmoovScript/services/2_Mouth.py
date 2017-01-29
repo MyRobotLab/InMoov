@@ -18,6 +18,7 @@ subconsciousMouth.setVoice("cmu-slt-hsmm")
 #inmoov mouth service
 i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 mouth=i01.mouth
+
 #vocal startup globalized so :
 i01.setMute(1)
 
@@ -47,12 +48,24 @@ def onEndSpeaking(text):
 	RobotIsActualySpeaking=0
 	if RobotIsStarted==1:
 		ear.resumeListening()
-		
+	if MouthControlActivated:
+		try:
+			head.jaw.detach()
+		except:
+			print "onEndSpeaking error"
+			pass
 	
 def onStartSpeaking(text):
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=1
 	ear.pauseListening()
+	if MouthControlActivated:
+		try:
+			head.jaw.attach()
+		except:
+			print "onStartSpeaking error"
+			pass
+		
 		
 
 

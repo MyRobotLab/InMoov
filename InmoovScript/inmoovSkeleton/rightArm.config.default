@@ -4,41 +4,17 @@ isRightArmActivated=False
 autoAttach=True
 autoDetach=True
 
-
-[SERVO_MINIMUM]
+[SERVO_MINIMUM_MAP_OUTPUT]
 bicep=0
 shoulder=0
 rotate=40
 omoplate=10
 
-
-[SERVO_MAXIMUM]
+[SERVO_MAXIMUM_MAP_OUTPUT]
 bicep=90
 shoulder=180
 rotate=180
 omoplate=80
-
-
-[MINIMUM_MAP]
-bicep=0
-shoulder=0
-rotate=0
-omoplate=0
-
-
-[MAXIMUM_MAP]
-bicep=180
-shoulder=180
-rotate=180
-omoplate=180
-
-
-[SERVO_INVERTED]
-bicep=False
-shoulder=False
-rotate=False
-omoplate=False
-
 
 [SERVO_MAP_REST]
 bicep=0
@@ -46,6 +22,25 @@ shoulder=30
 rotate=90
 omoplate=10
 
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[MINIMUM_MAP_INPUT]
+bicep=0
+shoulder=0
+rotate=0
+omoplate=0
+
+[MAXIMUM_MAP_INPUT]
+bicep=180
+shoulder=180
+rotate=180
+omoplate=180
+
+[SERVO_INVERTED]
+bicep=False
+shoulder=False
+rotate=False
+omoplate=False
 
 [DEF_SPEED]
 bicep=100

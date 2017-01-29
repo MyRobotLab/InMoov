@@ -4,7 +4,7 @@ isRightHandActivated=True
 autoAttach=True
 autoDetach=True
 
-[SERVO_MINIMUM]
+[SERVO_MINIMUM_MAP_OUTPUT]
 thumb=0
 index=0
 majeure=0
@@ -12,31 +12,7 @@ ringFinger=0
 pinky=0
 wrist=0
 
-[SERVO_MAXIMUM]
-thumb=180
-index=180
-majeure=180
-ringFinger=180
-pinky=180
-wrist=180
-
-[SERVO_INVERTED]
-thumb=0
-index=0
-majeure=0
-ringFinger=0
-pinky=0
-wrist=0
-
-[MINIMUM_MAP]
-thumb=0
-index=0
-majeure=0
-ringFinger=0
-pinky=0
-wrist=0
-
-[MAXIMUM_MAP]
+[SERVO_MAXIMUM_MAP_OUTPUT]
 thumb=180
 index=180
 majeure=180
@@ -51,6 +27,32 @@ majeure=0
 ringFinger=0
 pinky=0
 wrist=0
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[SERVO_INVERTED]
+thumb=0
+index=0
+majeure=0
+ringFinger=0
+pinky=0
+wrist=0
+
+[MINIMUM_MAP_INPUT]
+thumb=0
+index=0
+majeure=0
+ringFinger=0
+pinky=0
+wrist=0
+
+[MAXIMUM_MAP_INPUT]
+thumb=180
+index=180
+majeure=180
+ringFinger=180
+pinky=180
+wrist=180
 
 [DEF_SPEED]
 thumb=100

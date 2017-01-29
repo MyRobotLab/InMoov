@@ -3,7 +3,7 @@
 # ##############################################################################
 
 
- 
+head = Runtime.create("i01.head","InMoovHead")
   
 # ##############################################################################
 # 							PERSONNAL PARAMETERS
@@ -18,7 +18,8 @@ try:
 
 	isHeadActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isHeadActivated') 
 	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
-	MouthControlActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'MouthControlActivated')
+	MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
+	AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
 except:
 	errorSpokenFunc('ConfigParserProblem','head.config')
 	pass
@@ -33,13 +34,13 @@ except:
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
 		talkEvent(lang_startingHead)
-		head = Runtime.create("i01.head","InMoovHead")
+		
 				
-		head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw')) 
-		head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeX')) 
-		head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'eyeY')) 
-		head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'neck')) 
-		head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'rothead'))
+		head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
+		head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 
+		head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeY')) 
+		head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
+		head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
 		
 		
 		head.jaw.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'jaw'))
@@ -68,9 +69,9 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 
 		
 		i01.startHead(MyLeftPort)
-		if MouthControlActivated:
+		if MouthControlActivated and not AudioSignalProcessing:
 			i01.startMouthControl(MyLeftPort)
-			i01.mouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'jaw'))
+			i01.mouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
 		
 		head.jaw.enableAutoAttach(1)
 		head.jaw.autoDetach()
@@ -90,5 +91,9 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	else:
 		#we force parameter if arduino is off
 		isHeadActivated=0
+		MouthControlActivated=0
+		
+else:
+	MouthControlActivated=0
 		
 #todo set inverted

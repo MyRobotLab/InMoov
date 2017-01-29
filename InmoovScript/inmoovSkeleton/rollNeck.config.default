@@ -9,23 +9,25 @@ RollNeckArduino=right
 RollNeckPin=12
 ;RollNeckArduino=right / left / other previously declared in arduino.py service
 
-[SERVO_MINIMUM]
+[SERVO_MINIMUM_MAP_OUTPUT]
 RollNeck=20
 
-[SERVO_MAXIMUM]
+[SERVO_MAXIMUM_MAP_OUTPUT]
 RollNeck=100
 
-[MINIMUM_MAP]
-RollNeck=20
+[SERVO_MAP_REST]
+RollNeck=90
 
-[MAXIMUM_MAP]
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[MINIMUM_MAP_INPUT]
+RollNeck=0
+
+[MAXIMUM_MAP_INPUT]
 RollNeck=180
 
 [SERVO_INVERTED]
 RollNeck=False
-
-[SERVO_MAP_REST]
-RollNeck=90
 
 [DEF_SPEED]
 RollNeck=100

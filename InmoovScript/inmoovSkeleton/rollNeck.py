@@ -60,7 +60,7 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 		talkEvent(lang_startingRollNeck)
 		rollneck = Runtime.create("rollneck","Servo")
 				
-		rollneck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'rollneck')) 
+		rollneck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck')) 
 		rollneck.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'rollneck'))
 		rollneck.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rollneck'))
 		
