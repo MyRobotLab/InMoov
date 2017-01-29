@@ -1,4 +1,4 @@
-def lookAtThis()
+def lookAtThis():
 	i01.moveHead(66,79)
 	i01.moveArm("left",89,75,78,19)
 	i01.moveArm("right",90,91,72,26)

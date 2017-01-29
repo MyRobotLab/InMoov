@@ -1,4 +1,4 @@
-def armsFront()
+def armsFront():
 	i01.moveHead(99,82)
 	i01.moveArm("left",9,115,96,51)
 	i01.moveArm("right",13,104,101,49)
