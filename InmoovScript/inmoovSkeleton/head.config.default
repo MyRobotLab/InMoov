@@ -1,4 +1,5 @@
 ;----------------------------- HEAD CONFIGURATION ----------------------------------------
+
 [MAIN]
 isHeadActivated=False
 autoAttach=True
@@ -8,18 +9,18 @@ autoDetach=True
 MouthControlActivated=True
 
 [SERVO_MINIMUM_MAP_OUTPUT]
-jaw=81
-eyeX=20
-eyeY=20
+jaw=10
+eyeX=60
+eyeY=50
 neck=20
-rothead=20
+rothead=30
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
-jaw=120
-eyeX=160
-eyeY=160
+jaw=25
+eyeX=100
+eyeY=100
 neck=160
-rothead=160
+rothead=150
 
 [SERVO_MAP_REST]
 jaw=90
@@ -65,6 +66,13 @@ eyeX=100
 eyeY=100
 neck=50
 rothead=50
+
+[SERVO_PIN]
+jaw=26
+eyeX=22
+eyeY=24
+neck=12
+rothead=13
 
 ;----------------------------------- END --------------------------------------------------
 
