@@ -7,7 +7,7 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-
+inMoov=i01
 
 #Inmoov Left / right arduino connect
 if ScriptType=="RightSide" or ScriptType=="Full":

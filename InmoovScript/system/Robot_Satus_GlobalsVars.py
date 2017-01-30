@@ -14,6 +14,8 @@ global RobotIsActualySpeaking
 RobotIsActualySpeaking=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
+global RobotCanMoveBodyRamdom
+RobotCanMoveRamdom=0
 
 
 #system values

@@ -1,8 +1,9 @@
 # ##############################################################################
-#						*** INMOOV MINIMAL ***
+#						*** INMOOV MINIMAL GLOBALIZED ***
 # 			  Those actions are inside inmoovGestures
 # ##############################################################################
 
+# The language pack is read from /system/languagepack folder, if exist
 
 # GENERAL
 ear.addCommand(lang_attach_everything, "i01", "attach")
@@ -10,6 +11,7 @@ ear.addCommand(lang_disconnect_everything, "i01", "detach")
 ear.addCommand(lang_rest, "python", "rest")
 ear.addCommand(lang_list, "python", "rest")
 ear.addCommand(lang_first, "python", "rest")
+ear.addCommand(lang_gesture_test, "python", "gestureTEST")
 
 # ARM((S) - inmoovGestures\_minimalArm.py
 ear.addCommand(lang_attach_left_arm, "i01.leftArm", "attach") #to remove soon
