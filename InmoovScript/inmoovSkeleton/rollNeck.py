@@ -61,7 +61,8 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 		rollneck = Runtime.create("rollneck","Servo")
 				
 		rollneck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck')) 
-		rollneck.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'rollneck'))
+		rollneck.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'rollneck'))
+		rollneck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollneck'))
 		rollneck.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rollneck'))
 		
 	
@@ -69,7 +70,7 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 			rollneck.setInverted(True)
 			
 		rollneck = Runtime.start("rollneck","Servo")
-		rollneck.attach(RollNeckArduino, RollNeckPin, ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rollneck'), ThisSkeletonPartConfig.getint('DEF_SPEED', 'rollneck'))
+		rollneck.attach(RollNeckArduino, RollNeckPin, ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rollneck'), ThisSkeletonPartConfig.getint('VELOCITY', 'rollneck'))
 		
 		if autoDetach:
 			rollneck.enableAutoAttach(1)

@@ -39,8 +39,11 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
 		torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
 		
-		torso.topStom.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'topStom'))
-		torso.midStom.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'midStom'))
+		torso.topStom.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'topStom'))
+		torso.midStom.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'midStom'))
+		
+		torso.topStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
+		torso.midStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
 		
 		torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'topStom'))
 		torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'midStom'))

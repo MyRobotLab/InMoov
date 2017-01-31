@@ -35,21 +35,25 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
 		talkEvent(lang_startingHead)
 		
-				
+		#map		
 		head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
 		head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 
 		head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeY')) 
 		head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
 		head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
 		
+		#velocity
+		#head.jaw.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'jaw'))
+		#head.eyeX.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeX'))
+		#head.eyeY.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeY'))
+		head.neck.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'neck'))
+		head.rothead.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'rothead'))
 		
-		head.jaw.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'jaw'))
-		head.eyeX.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'eyeX'))
-		head.eyeY.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'eyeY'))
-		head.neck.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'neck'))
-		head.rothead.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'rothead'))
-
+		#maxvelocity
+		head.neck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
+		head.rothead.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
 		
+		#rest
 		head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'jaw'))
 		head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeX'))
 		head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'))

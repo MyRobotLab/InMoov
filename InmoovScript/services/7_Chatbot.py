@@ -18,15 +18,17 @@ if EarInterpretEngine=="chatbot":
 			pass
 		chatBot.setPath(RuningFolder+"inmoovVocal/")
 		chatBot.cleanOutOfDateAimlIFFiles(MyLanguage)
+		talkEvent(lang_chatbotLoading)
 		chatBot.startSession("default",MyLanguage)
 		talkEvent(lang_chatbotActivated)
+		talkEvent(lang_earaddcomandsDeactivated)
 		chatBot.addTextListener(htmlFilter)
 		htmlFilter.addListener("publishText", python.name, "talk") 
 	else:
 		errorSpokenFunc('lang_ChatbotError')
 else:
-	talkEvent(lang_chatbotDesactivated)
-
+	talkEvent(lang_chatbotDeactivated)
+	talkEvent(lang_earaddcomandsActivated)
 def writeAIML():	
 	chatBot.writeAIMLIF()
 	
