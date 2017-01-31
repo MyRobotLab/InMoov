@@ -11,7 +11,7 @@ import os
 #currentdir=os.getcwd()
 # To set a directory
 # os.chdir("h:/mrl/sound")
-os.chdir("C:/myrobotlab/myrobotlab.1.0.1920/audioFile/google/en_gb/audrey")
+os.chdir("C:/myrobotlab/myrobotlab.1.0.1920/audioFile")
 
 # the name of the local file
 # remove the file if it already exist in the Audiofile directory
