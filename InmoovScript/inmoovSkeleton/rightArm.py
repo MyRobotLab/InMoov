@@ -73,10 +73,10 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 
 		rightArm.detach()
 		
-		rightArm.bicep.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'bicep'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'bicep'))
-		rightArm.shoulder.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'shoulder'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'shoulder'))
-		rightArm.rotate.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rotate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
-		rightArm.omoplate.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'omoplate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
+		rightArm.bicep.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'bicep'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'bicep'))
+		rightArm.shoulder.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'shoulder'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'shoulder'))
+		rightArm.rotate.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rotate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
+		rightArm.omoplate.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'omoplate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
 	
 
 	else:
