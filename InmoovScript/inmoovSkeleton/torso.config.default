@@ -4,8 +4,8 @@ isTorsoActivated=False
 TorsoConnectedToArduino=left
 ;left or right
 
-autoAttach=True
-autoDetach=True
+autoAttach=False
+autoDetach=False
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 topStom=60
@@ -30,8 +30,8 @@ topStom=13
 midStom=13
 
 [MAX_VELOCITY]
-topStom=13
-midStom=13
+topStom=-1
+midStom=-1
 
 [MINIMUM_MAP_INPUT]
 topStom=0

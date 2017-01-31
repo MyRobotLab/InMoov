@@ -1,8 +1,8 @@
 ;----------------------------- RIGHT ARM CONFIGURATION ----------------------------------------
 [MAIN]
 isRightArmActivated=False
-autoAttach=True
-autoDetach=True
+autoAttach=False
+autoDetach=False
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 bicep=0
@@ -49,10 +49,10 @@ rotate=18
 omoplate=15
 
 [MAX_VELOCITY]
-bicep=26
-shoulder=14
-rotate=18
-omoplate=15
+bicep=-1
+shoulder=-1
+rotate=-1
+omoplate=-1
 
 [SERVO_PIN]
 bicep=8

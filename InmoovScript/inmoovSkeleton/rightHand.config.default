@@ -1,8 +1,8 @@
 ;----------------------------- RIGHT HAND CONFIGURATION ----------------------------------------
 [MAIN]
 isRightHandActivated=True
-autoAttach=True
-autoDetach=True
+autoAttach=False
+autoDetach=False
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 thumb=0
@@ -63,12 +63,12 @@ pinky=40
 wrist=40
 
 [MAX_VELOCITY]
-thumb=10
-index=40
-majeure=40
-ringFinger=40
-pinky=40
-wrist=40
+thumb=-1
+index=-1
+majeure=-1
+ringFinger=-1
+pinky=-1
+wrist=-1
 
 [SERVO_PIN]
 thumb=2
