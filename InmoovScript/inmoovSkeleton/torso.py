@@ -11,6 +11,7 @@
   
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+isTorsoActivated=0
 try:
 	CheckFileExist(ThisSkeletonPart)
 	ThisSkeletonPartConfig = ConfigParser.ConfigParser()
@@ -18,10 +19,13 @@ try:
 
 	isTorsoActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isTorsoActivated') 
 	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
-	TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
 
+	TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
+	TorsoConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
 except:
 	errorSpokenFunc('ConfigParserProblem','torso.config')
+	isTorsoActivated=0
+	TorsoConnectedToArduino=""
 	pass
     
   
@@ -55,16 +59,14 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		
 		
 		
-		i01.startTorso(TorsoConnectedToArduino)
-		
+		i01.startTorso(TorsoConnectedToArduinoPort)
+		torso.detach()
+		torso.topStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'topStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
+		torso.midStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'midStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
 		
 		if autoDetach:
 			torso.topStom.enableAutoAttach(1)
 			torso.midStom.enableAutoAttach(1)
-		
-		torso.rest()
-		sleep(3)
-		torso.detach()
 		
 		
 	else:

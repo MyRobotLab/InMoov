@@ -87,14 +87,14 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 			rightHand.wrist.enableAutoAttach(1)
 		
 		rightHand.detach()
-		rightHand.thumb.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'))
-		rightHand.index.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'))
-		rightHand.majeure.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'))
-		rightHand.ringFinger.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'))
-		rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'))
-		rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'))
+		rightHand.thumb.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'thumb'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
+		rightHand.index.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'index'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
+		rightHand.majeure.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'majeure'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
+		rightHand.ringFinger.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'ringFinger'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
+		rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
+		rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
 		
-		rightHand.rest()
+		
 	else:
 		#we force parameter if arduino is off
 		isRightHandActivated=0

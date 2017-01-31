@@ -1,4 +1,5 @@
 #this is a test file about gestures integration
+# THIS IS A CLONE OF DAVINCI
 
 def gestureTEST():
 	

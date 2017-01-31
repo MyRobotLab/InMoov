@@ -86,19 +86,16 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			
 		head.detach()
 		
-		head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'))
-		head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'))
-		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'))
-		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'))
-		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'))
+		head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'jaw'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'jaw'))
+		head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeX'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeX'))
+		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
+		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
+		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
 		
 		if MouthControlActivated and not AudioSignalProcessing:
 			i01.startMouthControl(MyLeftPort)
 			i01.mouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
 
-		head.rest()
-	
-		
 		
 		
 	else:

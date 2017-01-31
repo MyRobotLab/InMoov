@@ -77,9 +77,8 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 		
 		if autoDetach:
 			rollneck.autoDetach()		
-		rollneck.rest()
-		sleep(2)
-		rollneck.detach()
+	
+		
 		
 		
 	else:

@@ -2,7 +2,7 @@
 # 				ROBOT REST POSITIONS ( minimal )
 # ##############################################################################
 
-def rest():
+def rest(optionalDetach=0):
 	#fullspeed()
 	if isRightHandActivated:
 		i01.rightHand.attach()
@@ -62,7 +62,12 @@ def fullspeed():
 		i01.setTorsoSpeed(1.0, 1.0, 1.0)
 			
 	if isRollNeckActivated:
-		i01.setSpeed(1.0)
+		rollneck.setSpeed(1.0)
+		
+def detachAll():
+	i01.detach()
+	if isRollNeckActivated:
+		rollneck.detach()
 		
    #TODO RANDOM GESTURE
    #global MoveBodyRandom
