@@ -2,13 +2,6 @@
 #						*** LEFT HAND ***
 # ##############################################################################
 
-# Thumb------pin 2
-# Index------pin 3
-# Majeure----pin 4
-# RingFinger-pin 5
-# Pinky------pin 6
-# wrist------pin 7  
-  
 # ##############################################################################
 # 							PERSONNAL PARAMETERS
 # ##############################################################################  
@@ -36,8 +29,15 @@ except:
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
 		talkEvent(lang_startingLeftHand)
+		
+		thumb = Runtime.createAndStart("i01.leftHand.thumb","Servo")
+		index = Runtime.createAndStart("i01.leftHand.index","Servo")
+		majeure = Runtime.createAndStart("i01.leftHand.majeure","Servo")
+		ringFinger = Runtime.createAndStart("i01.leftHand.ringFinger","Servo")
+		pinky = Runtime.createAndStart("i01.leftHand.pinky","Servo")
+		wrist = Runtime.createAndStart("i01.leftHand.wrist","Servo")
+		
 		leftHand = Runtime.create("i01.leftHand", "InMoovHand")
-				
 		leftHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
 		leftHand.index.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'index')) 
 		leftHand.majeure.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'majeure'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'majeure')) 
@@ -89,9 +89,16 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			leftHand.pinky.enableAutoAttach(1)
 			leftHand.wrist.enableAutoAttach(1)
 		
-		leftHand.rest()
-		sleep(1)
 		leftHand.detach()
+		leftHand.thumb.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'))
+		leftHand.index.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'))
+		leftHand.majeure.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'))
+		leftHand.ringFinger.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'))
+		leftHand.pinky.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'))
+		leftHand.wrist.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'))
+			
+		leftHand.rest()
+		
 	else:
 		#we force parameter if arduino is off
 		isleftHandActivated=0

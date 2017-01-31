@@ -2,12 +2,6 @@
 #						*** RIGHT HAND ***
 # ##############################################################################
 
-# Thumb------pin 2
-# Index------pin 3
-# Majeure----pin 4
-# RingFinger-pin 5
-# Pinky------pin 6
-# wrist------pin 7
  
   
 # ##############################################################################
@@ -37,6 +31,7 @@ except:
 if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 	if RightPortIsConnected:
 		talkEvent(lang_startingRightHand)
+		
 		rightHand = Runtime.create("i01.rightHand", "InMoovHand")
 				
 		rightHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
@@ -91,10 +86,15 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 			rightHand.pinky.enableAutoAttach(1)
 			rightHand.wrist.enableAutoAttach(1)
 		
-		rightHand.rest()
-		sleep(1)
 		rightHand.detach()
+		rightHand.thumb.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'))
+		rightHand.index.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'))
+		rightHand.majeure.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'))
+		rightHand.ringFinger.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'))
+		rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'))
+		rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'))
 		
+		rightHand.rest()
 	else:
 		#we force parameter if arduino is off
 		isRightHandActivated=0

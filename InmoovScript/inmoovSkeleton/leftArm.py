@@ -73,9 +73,14 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			leftArm.rotate.enableAutoAttach(1)
 			leftArm.omoplate.enableAutoAttach(1)
 
-		leftArm.rest()
-		sleep(3)
 		leftArm.detach()
+		
+		leftArm.bicep.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'bicep'))
+		leftArm.shoulder.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'))
+		leftArm.rotate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'))
+		leftArm.omoplate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'))
+	
+		leftArm.rest()
 	else:
 		#we force parameter if arduino is off
 		isLeftArmActivated=0
