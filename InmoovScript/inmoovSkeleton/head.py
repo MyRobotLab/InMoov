@@ -74,8 +74,8 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		
 		i01.startHead(MyLeftPort)
 				
-		head.jaw.enableAutoAttach(1)
-		head.jaw.autoDetach()
+		#head.jaw.enableAutoAttach(1)
+		#head.jaw.autoDetach()
 		
 		if autoDetach:
 			
@@ -91,14 +91,15 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
 		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
 		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
-		
+		head.jaw.setSpeed(1.0)
 		MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
 		if MouthControlActivated and not AudioSignalProcessing:
 			#i01.startMouthControl(MyLeftPort)
-			MouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
+			
 			MouthControl.setArduino(left)
 			MouthControl.setJaw(head.jaw)
 			MouthControl.startService()
+			MouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
 		
 		
 	else:

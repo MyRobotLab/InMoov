@@ -48,7 +48,7 @@ def onEndSpeaking(text):
 	RobotIsActualySpeaking=0
 	if RobotIsStarted==1:
 		ear.resumeListening()
-	if MouthControlActivated:
+	if AudioSignalProcessing:
 		try:
 			head.jaw.detach()
 		except:
@@ -59,7 +59,7 @@ def onStartSpeaking(text):
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=1
 	ear.pauseListening()
-	if MouthControlActivated:
+	if AudioSignalProcessing:
 		try:
 			head.jaw.attach()
 		except:

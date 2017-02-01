@@ -6,7 +6,7 @@
 
 # GENERAL
 ear.addCommand("attach everything", "i01", "attach")
-ear.addCommand("disconnect everything", "i01", "detach")
+ear.addCommand("disconnect everything", "python", "detachAll()")
 ear.addCommand("rest", "python", "rest")
 ear.addCommand("list", "python", "rest")
 ear.addCommand("first", "python", "rest")

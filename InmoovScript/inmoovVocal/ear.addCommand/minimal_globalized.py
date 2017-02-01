@@ -7,7 +7,7 @@
 
 # GENERAL
 ear.addCommand(lang_attach_everything, "i01", "attach")
-ear.addCommand(lang_disconnect_everything, "i01", "detach")
+ear.addCommand(lang_disconnect_everything, "python", "detachAll()")
 ear.addCommand(lang_rest, "python", "rest")
 ear.addCommand(lang_list, "python", "rest")
 ear.addCommand(lang_first, "python", "rest")
