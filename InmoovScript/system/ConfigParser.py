@@ -39,6 +39,8 @@ try:
 	EarInterpretEngine=BasicConfig.get('VOCAL', 'EarInterpretEngine')
 	EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
 	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
+	StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
+	
 
 
 except:

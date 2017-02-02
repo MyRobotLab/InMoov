@@ -7,15 +7,14 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
 
 python.subscribe(AudioPlayer.getName(),"publishAudioStart")
 python.subscribe(AudioPlayer.getName(),"publishAudioEnd")
 
 def onAudioStart(data):
-	if AudioSignalProcessing and MouthControlActivated:
+	if AudioSignalProcessing and isHeadActivated:
 		head.jaw.attach()
 
 def onAudioEnd(data):
-	if AudioSignalProcessing and MouthControlActivated:
+	if AudioSignalProcessing and isHeadActivated:
 		head.jaw.detach()

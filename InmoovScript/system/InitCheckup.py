@@ -2,11 +2,16 @@
 # 								INITIAL CHECKUP
 # ##############################################################################
 
+################################
+# INIT.0
+################################
+
 GUIService.dockPanel("python")
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."
 DEBUG=0
+
 
 ################################
 # INIT.1 - system dependencies
@@ -30,7 +35,10 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-
+#startup sound
+AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
+if StartupSound:	
+	AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
 
 
 # vocal errors
