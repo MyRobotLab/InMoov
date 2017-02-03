@@ -3,12 +3,12 @@
 # ##############################################################################
 
 
-head = Runtime.create("i01.head","InMoovHead")
+
   
 # ##############################################################################
 # 							PERSONNAL PARAMETERS
 # ##############################################################################  
-  
+isHeadActivated=0  
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
 try:
@@ -21,6 +21,7 @@ try:
 	MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
 	AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
 except:
+	isHeadActivated=0
 	errorSpokenFunc('ConfigParserProblem','head.config')
 	pass
     
@@ -34,7 +35,7 @@ except:
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 	if LeftPortIsConnected:
 		talkEvent(lang_startingHead)
-		
+		head = Runtime.create("i01.head","InMoovHead")
 		#map		
 		head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
 		head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 

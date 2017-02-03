@@ -28,6 +28,7 @@ try:
 	ScriptType=BasicConfig.get('MAIN', 'ScriptType')
 	MyRightPort=BasicConfig.get('ARDUINO', 'MyRightPort')
 	MyLeftPort=BasicConfig.get('ARDUINO', 'MyLeftPort')
+	ForceArduinoIsConnected=BasicConfig.get('ARDUINO', 'ForceArduinoIsConnected')
 	#read personnal config
 
 	MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')

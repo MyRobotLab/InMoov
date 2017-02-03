@@ -19,16 +19,19 @@ def CheckArduinos(Card,Port,slave=0):
 	else:
 		Card.connect(Port)
 	
-	if not Card.isConnected() and slave==0:
-		errorSpokenFunc('ArduinoNotConnected',Port)
-		return False
-	if Card.isConnected() or slave!=0:
-		print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
-		if Card.getBoardInfo().version!=MRLCOMM_VERSION:
-			errorSpokenFunc('BadMrlcommVersion',Port)
-		else:
-			print "Arduino ",Port," OK"
-			return True
+	if ForceArduinoIsConnected:
+		return True
+	else:
+		if not Card.isConnected() and slave==0:
+			errorSpokenFunc('ArduinoNotConnected',Port)
+			return False
+		if Card.isConnected() or slave!=0:
+			print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
+			if Card.getBoardInfo().version!=MRLCOMM_VERSION:
+				errorSpokenFunc('BadMrlcommVersion',Port)
+			else:
+				print "Arduino ",Port," OK"
+				return True
 
 			
 #analog pin listener
