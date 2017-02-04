@@ -41,7 +41,7 @@ try:
 	EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
 	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
 	StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
-	
+	IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
 
 
 except:

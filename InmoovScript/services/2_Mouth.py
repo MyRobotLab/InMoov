@@ -130,7 +130,9 @@ i01.startMouth()
 setRobotLanguage()
 
 #check and update marytts voices	
-checkAndDownloadVoice()
+#no worky on linux
+if not IuseLinux:
+	checkAndDownloadVoice()
 #set CustomVoice
 setCustomVoice()
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )

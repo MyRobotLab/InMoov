@@ -1,6 +1,6 @@
 # language pack
 
-languagePack=MyLanguage
+languagePack=MyLanguage.lower()
 languagePackLoaded=1
 
 # we load default english language pack
