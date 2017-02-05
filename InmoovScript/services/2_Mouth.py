@@ -50,7 +50,10 @@ def onEndSpeaking(text):
 		ear.resumeListening()
 	if AudioSignalProcessing:
 		try:
+			left.disablePin(AnalogPinFromSoundCard)
+			head.jaw.moveTo(0)
 			head.jaw.detach()
+			
 		except:
 			print "onEndSpeaking error"
 			pass
@@ -62,6 +65,8 @@ def onStartSpeaking(text):
 	if AudioSignalProcessing:
 		try:
 			head.jaw.attach()
+			head.jaw.moveTo(90)
+			left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
 		except:
 			print "onStartSpeaking error"
 			pass

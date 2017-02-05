@@ -35,16 +35,20 @@ def CheckArduinos(Card,Port,slave=0):
 
 			
 #analog pin listener
-def publishPin(pins):
+def publishPinLeft(pins):
 	global AudioInputValues
+	
 	for pin in range(0, len(pins)):
+		
 		#mouth control listener
 		if isHeadActivated:
-			if AudioSignalProcessingCalibration and NewMouthControlActivated and MouthControlActivated:
+			if AudioSignalProcessingCalibration:
 				AudioInputValues.append(pins[pin].value)
-			if AudioSignalProcessing and MouthControlActivated:
+				
+			if AudioSignalProcessing:
 				if pins[pin].value>minAudioValue:
 					head.jaw.moveTo(pins[pin].value)
+					
 
 	
 	

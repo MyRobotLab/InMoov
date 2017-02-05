@@ -20,6 +20,10 @@ try:
 	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
 	MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
 	AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
+	AnalogPinFromSoundCard=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'AnalogPin')
+	HowManyPollsBySecond=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'HowManyPollsBySecond')
+	jawMIN=ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw')
+	jawMAX=ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')
 except:
 	isHeadActivated=0
 	errorSpokenFunc('ConfigParserProblem','head.config')
@@ -93,14 +97,59 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
 		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
 		head.jaw.setSpeed(1.0)
-		MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
-		if MouthControlActivated and not AudioSignalProcessing:
+		
+# ##############################################################################
+# 								Software mouth control
+# ##############################################################################		
+		
+		if MouthControlActivated and AudioSignalProcessing==False:
+			MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
 			#i01.startMouthControl(MyLeftPort)
-			
+			print "software mouthcontrol activation"
 			MouthControl.setArduino(left)
 			MouthControl.setJaw(head.jaw)
 			MouthControl.startService()
 			MouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
+		
+# ##############################################################################
+# 								mouth control based on audio signal processing
+# ##############################################################################	
+		
+		#please set aref
+		if AudioSignalProcessing:
+			left.addListener("publishPinArray","python","publishPinLeft")
+			AudioSignalProcessing=False
+			MouthControlActivated=False
+			AudioSignalProcessingCalibration=1
+			left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
+			talkBlocking(lang_MouthSyncronisation)
+			
+			
+			AudioSignalProcessingCalibration=0
+			maxAudioValue=maxAverage(AudioInputValues,10)
+			AudioInputValues=[]
+			AudioSignalProcessingCalibration=1
+			sleep(3)
+			AudioSignalProcessingCalibration=0
+			minAudioValue = (sum(AudioInputValues) / len(AudioInputValues)) + 20
+			left.disablePin(AnalogPinFromSoundCard)
+			result=0
+			#arduino dit not detect analog value
+			if minAudioValue>50:
+				talkBlocking(lang_MouthSyncronisationBad+str(AnalogPinFromSoundCard))
+				result=1
+			#arduino detect a poor value
+			if result==0 and (maxAudioValue-minAudioValue<=255):
+				head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
+				AudioSignalProcessing=True
+				talkBlocking(lang_MouthSyncronisationNotPerfect)
+			#arduino detect a good value	
+			if result==0 and (maxAudioValue-minAudioValue>255):
+				head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
+				AudioSignalProcessing=True
+				talkBlocking(lang_MouthSyncronisationOk)
+				
+			print maxAudioValue,minAudioValue
 		
 		
 	else:
