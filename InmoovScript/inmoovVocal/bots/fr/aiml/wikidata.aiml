@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+
+
+  <category>
+    <pattern>SYSTEM WIKIDATA *</pattern>
+    <template>
+      <think>
+        <set name="QUESTION_WhoOrWhat"><star/></set> <set name="QUESTION_action">C EST QUOI </set>
+      </think>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>askWiki("<star/>","C EST QUOI <star/>","SAY ","CONFUSION")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+
+
+</aiml>

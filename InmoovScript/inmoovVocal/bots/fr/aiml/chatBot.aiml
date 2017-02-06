@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- EDITE PAR GAEL -->
-  <!--  -->
+  <!-- MODIFIE PAR ANTHONY LE 6/2/17 ajout fonction say -->
+  
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+	<star/>
+    </template>
+	</category>
+  
   <category>
     <pattern>TRADUCTION</pattern>
     <template>Démarrage du topic traduction.
