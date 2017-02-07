@@ -23,6 +23,7 @@ else:
 # ##############################################################################
 if EarInterpretEngine=="chatbot":
 	chatBot.setPredicate("default","particule","")
+	chatBot.setPredicate("default","courant","")
 def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la description du sujet (query)
 	#Light(1,0,0)
 	if query!="":
