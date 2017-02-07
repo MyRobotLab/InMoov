@@ -313,6 +313,7 @@
   <category>
     <pattern>QU EST CE QUE *</pattern>
     <template>
+		<set name="courant"><star /></set>
       <srai>QU EST CE QUE <srai>SYNONYME <star /></srai></srai>
     </template>
   </category>
@@ -523,6 +524,11 @@
   <category>
     <pattern>QUI EST *</pattern>
     <template>
+		<think>
+			<set name="courant">
+			  <star />
+			</set>
+		</think>
       <srai>QUI EST SYNONYME <star /></srai>
     </template>
   </category>
@@ -535,11 +541,13 @@
   <category>
     <pattern>QUI EST JE NE SAIS PAS</pattern>
     <template>
-      <random>
-        <li>je ne sais pas. </li>
-        <li>je ne sais pas. Peut être un client. </li>
-        <li>je ne sais pas, une célébrité?. </li>
-      </random>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>askWiki("<get name="particule" />","<get name="courant" />","QUI EST <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
+        </mrl>
+      </oob>
     </template>
   </category>
   <category>
@@ -567,7 +575,7 @@
   <category>
     <pattern>QUI SONT JE NE SAIS PAS</pattern>
     <template>
-      <srai>QUI EST <get name="tmp" /></srai>
+		<srai>QUI EST <get name="tmp" /></srai>
     </template>
   </category>
   <category>
