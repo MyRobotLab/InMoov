@@ -318,7 +318,15 @@
   </category>
   <category>
     <pattern>QU EST CE QUE JE NE SAIS PAS</pattern>
-    <template><srai>SYSTEM WIKIDATA <get name="courant" /></srai></template>
+    <template>
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>askWiki("<get name="particule" />","<get name="courant" />","C EST QUOI <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
+        </mrl>
+      </oob>
+	</template>
   </category>
   <category>
     <pattern>QU EST CE QUE ÇA</pattern>
@@ -404,7 +412,7 @@
   <category>
     <pattern>QUE SONT *</pattern>
     <template>
-      <srai>QU EST CE QUE <srai>SINGULIER <star /></srai></srai>
+      <srai>QU EST CE QUE <star /></srai>
     </template>
   </category>
   <category>
@@ -553,7 +561,7 @@
           <star />
         </set>
       </think>
-      <srai>QUI EST <srai>SINGULIER <star /></srai></srai>
+      <srai>QUI EST <star /></srai>
     </template>
   </category>
   <category>
