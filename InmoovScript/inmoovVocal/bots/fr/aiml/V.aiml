@@ -69,9 +69,7 @@
   <category>
     <pattern>VEUX TU DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -191,9 +189,7 @@
   <category>
     <pattern>VOUDRIEZ VOUS DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -205,9 +201,7 @@
   <category>
     <pattern>VOULEZ VOUS DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -466,9 +460,7 @@
   <category>
     <pattern>VOUS AVEZ DIT QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -865,9 +857,7 @@
   <category>
     <pattern>VOUS DITE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -1774,7 +1764,7 @@
   <category>
     <pattern>VOUS ÉTIEZ DÉJÀ *</pattern>
     <template>
-      <srai>VOUS ÉTIEZ <star /></srai>
+      <srai>ES TU <star /></srai>
     </template>
   </category>
   <category>
@@ -2176,7 +2166,7 @@
   <category>
     <pattern>VOUS N AURIEZ PAS *</pattern>
     <template>
-      <srai>VOUS N AVEZ PAS <star /></srai>
+      <srai>TU N AS PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -2234,7 +2224,7 @@
   <category>
     <pattern>VOUS N AVIEZ PAS *</pattern>
     <template>
-      <srai>VOUS N AVEZ PAS <star /></srai>
+      <srai>TU N AS PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -3093,6 +3083,16 @@
     </template>
   </category>
   <category>
+    <pattern>VOUS VENDEZ *</pattern>
+    <template>
+		<random>
+		<li>Non je préfère garder <star /></li>
+		<li>Vendre <star />, j'espère que tu plaisante</li>
+		<li>Pour m'acheter des nouveaux servo moteurs, pourquoi pas</li>
+	    </random>
+    </template>
+  </category>
+  <category>
     <pattern>VOUS VENDRIEZ *</pattern>
     <template>
       <srai>VOUS VENDEZ <star /></srai>
@@ -3149,9 +3149,7 @@
   <category>
     <pattern>VOUS VOUDRIEZ DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -3216,9 +3214,7 @@
   <category>
     <pattern>VOUS VOULEZ DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>

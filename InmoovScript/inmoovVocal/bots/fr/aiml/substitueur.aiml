@@ -5,36 +5,31 @@
   <category>
     <pattern>* DETOURNER *</pattern>
     <template>
-      <srai>
-        <star index="1" /> DÉTOURNER <star index="2" /></srai>
+      <srai><star index="1" /> DÉTOURNER <star index="2" /></srai>
     </template>
   </category>
   <category>
     <pattern>* QUEL QUE *</pattern>
     <template>
-      <srai>
-        <star index="1" /> QUELQUE <star index="2" /></srai>
+      <srai><star index="1" /> QUELQUE <star index="2" /></srai>
     </template>
   </category>
   <category>
     <pattern>* QUEL QUE</pattern>
     <template>
-      <srai>
-        <star /> QUELQUE</srai>
+      <srai><star /> QUELQUE</srai>
     </template>
   </category>
   <category>
     <pattern>* UN PEUT *</pattern>
     <template>
-      <srai>
-        <star index="1" /> UN PEU<star index="2" /></srai>
+      <srai><star index="1" /> UN PEU <star index="2" /></srai>
     </template>
   </category>
   <category>
     <pattern>* UN PEUT</pattern>
     <template>
-      <srai>
-        <star /> UN PEU</srai>
+      <srai><star /> UN PEU</srai>
     </template>
   </category>
   <category>
@@ -1058,15 +1053,14 @@
     <pattern>VEUT TU *</pattern>
     <template>
       <srai>CHECK ORTHOGRAPHE</srai>
-      <srai>VEUX tu <star /></srai>
+      <srai>TU VEUX <star /></srai>
     </template>
   </category>
   <category>
     <pattern>_ DEVAN *</pattern>
     <template>
       <srai>CHECK ORTHOGRAPHE</srai>
-      <srai>
-        <star index="1" /> devant <star index="2" /></srai>
+      <srai><star index="1" /> devant <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -1080,8 +1074,7 @@
     <pattern>_ DEVANS *</pattern>
     <template>
       <srai>CHECK ORTHOGRAPHE</srai>
-      <srai>
-        <star index="1" /> devant <star index="2" /></srai>
+      <srai><star index="1" /> devant <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -1094,8 +1087,7 @@
   <category>
     <pattern>_ QQN</pattern>
     <template>
-      <srai>
-        <star /> QUELQU UN</srai>
+      <srai><star /> QUELQU UN</srai>
     </template>
   </category>
   <category>

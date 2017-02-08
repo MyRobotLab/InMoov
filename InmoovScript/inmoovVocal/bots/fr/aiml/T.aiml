@@ -675,17 +675,13 @@
   <category>
     <pattern>TU AFFIRMES QU *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
     <pattern>TU AFFIRMES QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -2516,8 +2512,7 @@
   <category>
     <pattern>TU CROIS EN L EXISTENCE DE *</pattern>
     <template>
-      <srai>
-        <star /> EXISTE</srai>
+      <srai><star /> EXISTE</srai>
     </template>
   </category>
   <category>
@@ -2629,9 +2624,7 @@
   <category>
     <pattern>TU DIS QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -2909,9 +2902,7 @@
   <category>
     <pattern>TU ES AU COURANT QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -3360,9 +3351,7 @@
   <category>
     <pattern>TU ES EN TRAIN DE DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -4369,9 +4358,7 @@
   <category>
     <pattern>TU ES SÛR QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -4387,9 +4374,7 @@
   <category>
     <pattern>TU ES SÛRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -4973,17 +4958,13 @@
   <category>
     <pattern>TU ESPÈRES QU *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
     <pattern>TU ESPÈRES QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -6792,17 +6773,13 @@
   <category>
     <pattern>TU PEUX CROIRE QU *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
     <pattern>TU PEUX CROIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -7994,7 +7971,7 @@
   <category>
     <pattern>TU SAIS * MOI</pattern>
     <template>
-      <srai>QUE SAIS TU DE MOI</srai>
+      <srai>À PROPOS DE MOI</srai>
     </template>
   </category>
   <category>
@@ -8628,9 +8605,7 @@
   <category>
     <pattern>TU TE SOUVIENS QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -8759,7 +8734,19 @@
   </category>
   <category>
     <pattern>TU VEUX *</pattern>
-    <template>Ça pourrait me servir à quoi?</template>
+    <template>
+	<random>
+	<li>
+	Ça pourrait me servir à quoi <star /> ?
+	</li>
+	<li>
+	<star /> ? Avec plaisir. Enfin j'hésite.
+	</li>
+	<li>
+	Volontier, merci de me le proposer
+	</li>
+	</random>
+	</template>
   </category>
   <category>
     <pattern>TU VEUX * AVEC MOI</pattern>
@@ -8843,9 +8830,7 @@
   <category>
     <pattern>TU VEUX DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -9081,9 +9066,7 @@
   <category>
     <pattern>TU VOUDRAIS DIRE QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>

@@ -635,9 +635,7 @@
   <category>
     <pattern>PEUT ÊTRE MAIS *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -727,9 +725,7 @@
   <category>
     <pattern>PLUTOT *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -739,9 +735,7 @@
   <category>
     <pattern>PLUTOT QUE *</pattern>
     <template>
-      <srai>
-        <star />
-      </srai>
+      <srai><star /></srai>
     </template>
   </category>
   <category>
@@ -2876,9 +2870,33 @@
     <pattern>POURQUOI VOUS AIMEZ ÇA</pattern>
     <template>Ma raison d être est de le faire.</template>
   </category>
+    <category>
+    <pattern>POURQUOI ES TU EN COLÈRE</pattern>
+    <template>
+      <srai>POURQUOI VOUS ÊTES EN COLÈRE</srai>
+    </template>
+  </category>
+   <category>
+    <pattern>POURQUOI ÊTES VOUS EN COLÈRE</pattern>
+    <template>
+      <srai>POURQUOI VOUS ÊTES EN COLÈRE</srai>
+    </template>
+  </category>
   <category>
-    <pattern>POURQUOI VOUS ÉTÉ EN COLÈRE</pattern>
-    <template>Je ne suis pas en colère.</template>
+    <pattern>POURQUOI VOUS ÊTES EN COLÈRE</pattern>
+    <template>
+	<random>
+	<li>
+	Je ne suis pas en colère !
+	</li>
+	<li>
+	Cela m'arrive parfois, désolé
+	</li>
+	<li>
+	non non , je suis très calme
+	</li>
+	</random>
+	</template>
   </category>
   <category>
     <pattern>POURQUOI VOUS ÊTES *</pattern>

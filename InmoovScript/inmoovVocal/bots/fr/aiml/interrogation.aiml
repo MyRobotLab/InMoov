@@ -77,8 +77,7 @@
   <category>
     <pattern>IL * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> IL <star index="2" /></srai>
+      <srai><star index="1" /> IL <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -108,8 +107,7 @@
   <category>
     <pattern>ILS * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> ILS <star index="2" /></srai>
+      <srai><star index="1" /> ILS <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -133,8 +131,7 @@
   <category>
     <pattern>JE * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> JE <star index="2" /></srai>
+      <srai><star index="1" /> JE <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -164,15 +161,13 @@
   <category>
     <pattern>NE LE * TU PAS</pattern>
     <template>
-      <srai>
-        <star /> TU <get name="QUOI" /></srai>
+      <srai><star /> TU <get name="QUOI" /></srai>
     </template>
   </category>
   <category>
     <pattern>NOUS * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> NOUS <star index="2" /></srai>
+      <srai><star index="1" /> NOUS <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -215,43 +210,37 @@
     <pattern>TU * * * *</pattern>
     <template>
       <srai>
-        <star index="1" />
-        <star index="2" /> TU <star index="3" /><star index="4" /></srai>
+       <star index="1" /> TU <star index="2" /> <star index="3" /> <star index="4" /></srai>
     </template>
   </category>
   <category>
     <pattern>TU * * * * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> TU <star index="2" /><star index="3" /><star index="4" /><star index="5" /></srai>
+      <srai><star index="1" /> TU <star index="2" /> <star index="3" /> <star index="4" /> <star index="5" /></srai>
     </template>
   </category>
   <category>
     <pattern>TU * * * * * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> TU <star index="2" /><star index="3" /><star index="4" /><star index="5" /><star index="6" /></srai>
+      <srai><star index="1" /> TU <star index="2" /> <star index="3" /> <star index="4" /> <star index="5" /> <star index="6" /></srai>
     </template>
   </category>
   <category>
     <pattern>TU * * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> TU <star index="2" /><star index="3" /></srai>
+      <srai><star index="1" /> TU <star index="2" /> <star index="3" /></srai>
     </template>
   </category>
   <category>
     <pattern>TU * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> TU <star index="2" /></srai>
+      <srai><star index="1" /> TU <star index="2" /></srai>
     </template>
   </category>
   <category>
     <pattern>TU *</pattern>
     <template>
-      <srai>
-        <star /> TU</srai>
+      <srai><star /> TU</srai>
     </template>
   </category>
   <category>
@@ -323,8 +312,7 @@
   <category>
     <pattern>VOUS * *</pattern>
     <template>
-      <srai>
-        <star index="1" /> VOUS <star index="2" /></srai>
+      <srai><star index="1" /> VOUS <star index="2" /></srai>
     </template>
   </category>
   <category>
