@@ -105,28 +105,24 @@
     </template>
   </category>
   <category>
-    <pattern>* AS PARLE DE *</pattern>
+    <pattern>* AS PARLÉ DE *</pattern>
     <template>
       <think>
         <set name="tmp">
           <star index="2" />
         </set>
       </think>
-      <srai><star index="1" /> DIT</srai>
+      <srai>C EST QUI <star index="1" /></srai>
       <srai>
-        <get name="tmp" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* AS PENSE *</pattern>
-    <template>
-      <srai><star index="1" /> PENSE <star index="2" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
     <pattern>* AS PENSÉ *</pattern>
     <template>
-      <srai><star index="1" /> PENSE <star index="2" /></srai>
+      <srai>
+        <star index="1" /> PENSE <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -917,7 +913,8 @@
       </think>
       <srai>AS TU PEUR</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -1661,7 +1658,9 @@
   <category>
     <pattern>BON MAIS *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -1872,7 +1871,8 @@
       </think>
       <srai>JAMAIS</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -3045,7 +3045,7 @@
   <category>
     <pattern>DIS MOI D OU TU VIENS *</pattern>
     <template>
-      <srai>D OÙ VIENS TU<star /></srai>
+      <srai>D OU VENEZ VOUS</srai>
     </template>
   </category>
   <category>
@@ -4046,7 +4046,8 @@
       </think>
       <srai>FEMME</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -5066,7 +5067,8 @@
       </think>
       <srai>J AI</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -6596,7 +6598,9 @@
   <category>
     <pattern>JE ME DEMANDAIS SI *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -6729,12 +6733,6 @@
     <pattern>JE N AI PAS FAIS JE *</pattern>
     <template>
       <srai>JE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE N AI PAS PENSE *</pattern>
-    <template>
-      <srai>JE NE PENSE PAS <star /></srai>
     </template>
   </category>
   <category>
@@ -8136,7 +8134,7 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS INTERESSE PAR *</pattern>
+    <pattern>JE SUIS INTéRESSE PAR *</pattern>
     <template>le sujet Intéressant. As tu recherché dans le web? <srai>TROUVER <star /></srai></template>
   </category>
   <category>
@@ -8945,7 +8943,8 @@
       </think>
       <srai>JE SUIS UNE FEMME</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -9173,7 +9172,8 @@
       </think>
       <srai>JE T AIME</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -9215,13 +9215,17 @@
   <category>
     <pattern>JE TE CONNAIS *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
     <pattern>JE TE CONNAISSAIS *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -9316,7 +9320,9 @@
   <category>
     <pattern>JE TE VOIS *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -9436,13 +9442,17 @@
   <category>
     <pattern>JE VEUX CONNAITRE *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
     <pattern>JE VEUX CONNAÎTRE *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -9580,7 +9590,8 @@
       </think>
       <srai>JE VOIS</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10034,7 +10045,9 @@
   <category>
     <pattern>LE PRÉCIS *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -10047,7 +10060,8 @@
       </think>
       <srai>COOL</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10168,7 +10182,8 @@
       </think>
       <srai>LES LIVRES</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10361,7 +10376,8 @@
       </think>
       <srai>QUE MANGES TU</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10434,7 +10450,8 @@
       </think>
       <srai>MERCI</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10503,7 +10520,8 @@
       </think>
       <srai>MOI AUSSI</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -10607,7 +10625,9 @@
   <category>
     <pattern>MON SIGNE EST *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -10757,7 +10777,8 @@
       </think>
       <srai>AUCUN</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -11025,7 +11046,8 @@
       </think>
       <srai>AUCUN</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -11357,15 +11379,14 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>PAR QUOI EST TU INTERESSEE</pattern>
     <template>
-      <srai>QU EST CE QUI T INTERESSE</srai>
+      <srai>QU EST CE QUI T INTéRESSE</srai>
     </template>
   </category>
   <category>
     <pattern>PAR QUOI EST TU INTÉRESSÉE</pattern>
     <template>
-      <srai>QU EST CE QUI T INTERESSE</srai>
+      <srai>QU EST CE QUI T INTéRESSE</srai>
     </template>
   </category>
   <category>
@@ -11484,7 +11505,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>AUCUN</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -11497,7 +11519,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>AUCUN</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -11650,7 +11673,9 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
   <category>
     <pattern>PENSES TU QU *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -12926,7 +12951,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>JE PLAISANTE</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -13230,7 +13256,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>APPJOIE</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -13925,7 +13952,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <template>
       <srai>
         <bot name="master" />
-        <star /></srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -14070,7 +14098,9 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
   <category>
     <pattern>TRÈS AGREABLE *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -14122,7 +14152,9 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
   <category>
     <pattern>TRÈS AGRÉABLE *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -14141,7 +14173,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>BIEN</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -14762,12 +14795,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TU AS OUBLIE *</pattern>
     <template>
       <srai>TU AS OUBLIÉ <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU AS PARLE *</pattern>
-    <template>
-      <srai>TU AS PARLÉ <star /></srai>
     </template>
   </category>
   <category>
@@ -15415,7 +15442,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>TU ES CORRECT</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -15530,7 +15558,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>TU ES GRAND</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -16134,7 +16163,9 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
   <category>
     <pattern>TU LE DOIT *</pattern>
     <template>
-      <srai><star /></srai>
+      <srai>
+        <star />
+      </srai>
     </template>
   </category>
   <category>
@@ -16229,7 +16260,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>TU NE COMPRENDS PAS</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -16750,7 +16782,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>TE RAPPELLES TU</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -18249,7 +18282,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>OUI</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>
@@ -18268,7 +18302,8 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
       </think>
       <srai>OUI</srai>
       <srai>
-        <get name="tmp" /></srai>
+        <get name="tmp" />
+      </srai>
     </template>
   </category>
   <category>

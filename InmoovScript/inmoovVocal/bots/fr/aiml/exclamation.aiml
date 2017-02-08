@@ -2,14 +2,7 @@
 <aiml>
   <!--  -->
   <!--  -->
-  <category>
-    <pattern>* EXCLAMATION *</pattern>
-    <template>
-      <srai><star index="1" /> EXCLAMATION</srai>
-      <srai><star index="2" /></srai>
-    </template>
-  </category>
-  <category>
+ <category>
     <pattern>C EST *</pattern>
     <template>
       <srai>C EST CE QUE <star /> EST</srai>
