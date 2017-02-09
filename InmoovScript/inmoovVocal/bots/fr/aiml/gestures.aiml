@@ -849,7 +849,7 @@
       </template>
     </category>
     <category>
-      <pattern>PRÉSENTE-MOI TES MUSCLES</pattern>
+      <pattern>PRÉSENTE moi TES MUSCLES</pattern>
       <template>J'ai de sacré muscles.
         <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob></template>
     </category>
@@ -994,7 +994,7 @@
       </template>
     </category>
     <category>
-      <pattern>FAIS-MOI NEW YORK</pattern>
+      <pattern>FAIS moi NEW YORK</pattern>
       <template>
         <oob>
           <mrl>
@@ -1050,7 +1050,7 @@
       </template>
     </category>
     <category>
-      <pattern>DONNE-MOI L'HEURE</pattern>
+      <pattern>DONNE moi L'HEURE</pattern>
       <template>
         <oob>
           <mrl>
@@ -1123,7 +1123,7 @@
     </category>
     <category>
       <pattern>EXÉCUTE UNE SIGNATURE</pattern>
-      <template>DONNEZ-MOI un papier et un stylo - Je vais faire Cela pour vous <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+      <template>DONNEZ moi un papier et un stylo - Je vais faire Cela pour vous <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>DÉMARRE UTUBE</pattern>
@@ -1136,13 +1136,13 @@
       </template>
     </category>
     <category>
-      <pattern>MONTRE-MOI UNE PHOTO DE *</pattern>
+      <pattern>MONTRE moi UNE PHOTO DE *</pattern>
       <template>D'accord <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>MONTRE-MOI UNE PHOTO D'UNE *</pattern>
+      <pattern>MONTRE moi UNE PHOTO D'UNE *</pattern>
       <template>
-        <srai>MONTRE-MOI UNE PHOTO DE * </srai>
+        <srai>MONTRE moi UNE PHOTO DE * </srai>
       </template>
     </category>
     <category>

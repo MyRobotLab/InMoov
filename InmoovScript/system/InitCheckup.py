@@ -135,7 +135,6 @@ sleep(5)
 detachAll()
 talkEvent(lang_ready)
 WebkitSpeechRecognitionFix.startClock()
-
 RobotIsStarted=1
 
 

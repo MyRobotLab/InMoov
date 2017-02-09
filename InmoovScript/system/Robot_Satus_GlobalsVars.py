@@ -16,7 +16,8 @@ global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
 RobotCanMoveRamdom=0
-
+global MoveHeadRandom
+MoveHeadRandom=1
 
 #system values
 #used by mouthcontrol audio signal processing

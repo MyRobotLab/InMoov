@@ -32,10 +32,12 @@ python.subscribe(mouth.getName(),"publishEndSpeaking")
 #functions to call about robot speak
 def talk(data):
 	if data:
+		if data[0:2]=="l ":data=data.replace("l ", "l'")
 		mouth.speak(unicode(data,'utf-8'))
 		
 def talkBlocking(data):
 	if data:
+		if data[0:2]=="l ":data=data.replace("l ", "l'")
 		mouth.speakBlocking(unicode(data,'utf-8'))
 		
 def talkEvent(data):
@@ -48,15 +50,16 @@ def onEndSpeaking(text):
 	RobotIsActualySpeaking=0
 	if RobotIsStarted==1:
 		ear.resumeListening()
+		MoveHeadTimer.stopClock()
 	if AudioSignalProcessing:
 		try:
 			left.disablePin(AnalogPinFromSoundCard)
 			head.jaw.moveTo(0)
 			head.jaw.detach()
-			
 		except:
 			print "onEndSpeaking error"
 			pass
+	
 	
 def onStartSpeaking(text):
 	global RobotIsActualySpeaking
@@ -70,6 +73,8 @@ def onStartSpeaking(text):
 		except:
 			print "onStartSpeaking error"
 			pass
+	if RobotIsStarted:
+		MoveHeadTimer.startClock()
 		
 		
 
