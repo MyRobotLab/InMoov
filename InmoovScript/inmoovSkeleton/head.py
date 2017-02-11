@@ -96,6 +96,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
 		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
 		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
+		head.attach()
 		head.jaw.setSpeed(1.0)
 		
 # ##############################################################################
@@ -131,13 +132,9 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			AudioSignalProcessingCalibration=1
 			sleep(3)
 			AudioSignalProcessingCalibration=0
-			result=0
-			minAudioValue=255
-			if len(AudioInputValues)>0:
-				minAudioValue = (sum(AudioInputValues) / len(AudioInputValues)) + 20
-				
+			minAudioValue = (sum(AudioInputValues) / len(AudioInputValues)) + 20
 			left.disablePin(AnalogPinFromSoundCard)
-			
+			result=0
 			#arduino dit not detect analog value
 			if minAudioValue>50:
 				talkBlocking(lang_MouthSyncronisationBad+str(AnalogPinFromSoundCard))

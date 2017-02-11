@@ -96,7 +96,7 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		leftHand.ringFinger.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'ringFinger'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
 		leftHand.pinky.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
 		leftHand.wrist.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
-
+		leftHand.attach()
 		
 	else:
 		#we force parameter if arduino is off
