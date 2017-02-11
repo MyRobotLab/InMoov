@@ -1,21 +1,21 @@
-def MoveHeadRandomize():
-	if MoveHeadRandom==1:
-		if isHeadActivated:
-			i01.head.attach()
-			i01.setHeadVelocity(11,11)
-			i01.moveHead(random.randint(70,100), random.randint(60,90))
-		if isRollNeckActivated:
-			rollneck.attach()
-			rollneck.setVelocity(11)
-			rollneck.moveTo(random.randint(50,130))
-	
+# ##############################################################################
+#						*** ROBOT MOVE THE HEAD ( ex WHILE SPEAKIN ) ***
+# ##############################################################################
 
+def MoveHeadRandomize():
+	MoveHeadTimer.setInterval(random.randint(1000,2000))
+	if MoveHeadRandom==1:
+			
+		if isHeadActivated:
+			i01.moveHead(random.randint(50,130), random.randint(70,110))
+		if isRollNeckActivated:
+			rollneck.moveTo(random.randint(20,150))
+	
 MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
-MoveHeadTimer.setInterval(random.randint(600,1200))
 
 def MoveHead(timedata):
 	MoveHeadRandomize()
-	MoveHeadTimer.setInterval(random.randint(5000,20000))
+	
 
 def MoveHeadStopped():
 	if MoveHeadRandom==1:
@@ -25,8 +25,19 @@ def MoveHeadStopped():
 			rollneck.moveTo(90)
 
 def MoveHeadStart():
+	if isHeadActivated:
+		i01.setHeadVelocity(20,20)
+		head.rothead.setAcceleration(20)
+		head.neck.setAcceleration(20)
+		i01.head.attach()
+	if isRollNeckActivated:
+		rollneck.setVelocity(15)
+		rollneck.setAcceleration(20)
+		rollneck.attach()
 	MoveHeadRandomize()
 	
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
 MoveHeadTimer.addListener("clockStopped", python.name, "MoveHeadStopped")		
 MoveHeadTimer.addListener("clockStarted", python.name, "MoveHeadStart")	
+
+#MoveHeadTimer.startClock()

@@ -131,9 +131,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			AudioSignalProcessingCalibration=1
 			sleep(3)
 			AudioSignalProcessingCalibration=0
-			minAudioValue = (sum(AudioInputValues) / len(AudioInputValues)) + 20
-			left.disablePin(AnalogPinFromSoundCard)
 			result=0
+			minAudioValue=255
+			if len(AudioInputValues)>0:
+				minAudioValue = (sum(AudioInputValues) / len(AudioInputValues)) + 20
+				
+			left.disablePin(AnalogPinFromSoundCard)
+			
 			#arduino dit not detect analog value
 			if minAudioValue>50:
 				talkBlocking(lang_MouthSyncronisationBad+str(AnalogPinFromSoundCard))
