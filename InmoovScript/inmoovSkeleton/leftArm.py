@@ -79,7 +79,8 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		leftArm.shoulder.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'shoulder'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'shoulder'))
 		leftArm.rotate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rotate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
 		leftArm.omoplate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'omoplate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
-	
+		
+		leftArm.attach()
 
 	else:
 		#we force parameter if arduino is off
