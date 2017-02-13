@@ -6,7 +6,6 @@
 # INIT.0
 ################################
 
-GUIService.dockPanel("python")
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."

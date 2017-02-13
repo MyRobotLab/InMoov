@@ -77,4 +77,3 @@ def fingermiddle():
 ##############
 #Go more further ! and code your own script in a separated file
 execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
-

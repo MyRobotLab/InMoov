@@ -27,6 +27,6 @@ if not exist %cd%\InmoovScript\Inmoov.py (
     echo PLEASE PUT SCRIPT AND FOLDERS INSIDE InmoovScript FOLDER
     timeout 10 > NUL
 ) else (
-java -jar myrobotlab.jar -invoke python execFile %cd%/InmoovScript/Inmoov.py -service GUIService GUIService python Python
+java -jar myrobotlab.jar -invoke python execFile %cd%/InmoovScript/Inmoov.py -service GUIService GUIService SwingGui SwingGui python Python
 )
 
