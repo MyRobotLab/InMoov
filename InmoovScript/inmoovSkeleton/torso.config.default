@@ -2,22 +2,39 @@
 [MAIN]
 isTorsoActivated=False
 TorsoConnectedToArduino=left
-;left or right
-
-autoAttach=False
-autoDetach=False
+;chose left or right existing and connected arduino
 
 [SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
 topStom=60
 midStom=60
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
 topStom=120
 midStom=120
 
-[SERVO_MAP_REST]
+[SERVO_REST_POSITION]
 topStom=90
 midStom=90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
@@ -44,6 +61,10 @@ midStom=180
 [SERVO_PIN]
 topStom=27
 midStom=28
+
+[EXPERIMENTAL]
+autoAttach=False
+autoDetach=False
 
 ;----------------------------------- END --------------------------------------------------
 

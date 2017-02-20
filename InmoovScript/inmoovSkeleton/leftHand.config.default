@@ -1,10 +1,9 @@
 ;----------------------------- LEFT HAND CONFIGURATION ----------------------------------------
 [MAIN]
 isLeftHandActivated=False
-autoAttach=False
-autoDetach=False
 
 [SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
 thumb=0
 index=0
 majeure=0
@@ -13,6 +12,7 @@ pinky=0
 wrist=0
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
 thumb=180
 index=180
 majeure=180
@@ -20,13 +20,27 @@ ringFinger=180
 pinky=180
 wrist=180
 
-[SERVO_MAP_REST]
+[SERVO_REST_POSITION]
 thumb=0
 index=0
 majeure=0
 ringFinger=0
 pinky=0
 wrist=90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
@@ -54,14 +68,6 @@ ringFinger=180
 pinky=180
 wrist=180
 
-[VELOCITY]
-thumb=10
-index=40
-majeure=40
-ringFinger=40
-pinky=40
-wrist=40
-
 [MAX_VELOCITY]
 thumb=-1
 index=-1
@@ -77,6 +83,10 @@ majeure=4
 ringFinger=5
 pinky=6
 wrist=7
+
+[EXPERIMENTAL]
+autoAttach=False
+autoDetach=False
 ;----------------------------------- END --------------------------------------------------
 
 

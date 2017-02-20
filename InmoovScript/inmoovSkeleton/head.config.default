@@ -2,13 +2,13 @@
 
 [MAIN]
 isHeadActivated=False
-autoAttach=False
-autoDetach=False
 
+;robot move the jaw while speaking
 [MOUTHCONTROL]
 MouthControlActivated=True
 
 [SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
 jaw=10
 eyeX=60
 eyeY=50
@@ -16,18 +16,33 @@ neck=20
 rothead=30
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
 jaw=25
 eyeX=100
 eyeY=100
 neck=160
 rothead=150
 
-[SERVO_MAP_REST]
+[SERVO_REST_POSITION]
 jaw=90
 eyeX=90
 eyeY=90
 neck=90
 rothead=90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
@@ -80,6 +95,10 @@ eyeX=22
 eyeY=24
 neck=12
 rothead=13
+
+[EXPERIMENTAL]
+autoAttach=False
+autoDetach=False
 
 ;----------------------------------- END --------------------------------------------------
 

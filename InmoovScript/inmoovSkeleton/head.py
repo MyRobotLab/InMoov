@@ -17,13 +17,14 @@ try:
 	ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
 	isHeadActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isHeadActivated') 
-	autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
 	MouthControlActivated=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlActivated')
 	AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
 	AnalogPinFromSoundCard=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'AnalogPin')
 	HowManyPollsBySecond=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'HowManyPollsBySecond')
 	jawMIN=ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw')
 	jawMAX=ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')
+	neckRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck')
+	rotheadRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead')
 except:
 	isHeadActivated=0
 	errorSpokenFunc('ConfigParserProblem','head.config')
@@ -51,19 +52,17 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		#head.jaw.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'jaw'))
 		#head.eyeX.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeX'))
 		#head.eyeY.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeY'))
-		head.neck.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'neck'))
-		head.rothead.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'rothead'))
-		
+	
 		#maxvelocity
 		head.neck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
 		head.rothead.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
 		
 		#rest
-		head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'jaw'))
-		head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeX'))
-		head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'))
-		head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'))
-		head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'))
+		head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'))
+		head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'))
+		head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'))
+		head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
+		head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
 	
 		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):
 			head.jaw.setInverted(True)
@@ -82,20 +81,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		#head.jaw.enableAutoAttach(1)
 		#head.jaw.autoDetach()
 		
-		if autoDetach:
-			
-			head.eyeX.enableAutoAttach(1)
-			head.eyeY.enableAutoAttach(1)
-			head.neck.enableAutoAttach(1)
-			head.rothead.enableAutoAttach(1)
-			
 		head.detach()
 		
-		head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'jaw'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'jaw'))
-		head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeX'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeX'))
-		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
-		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'neck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
-		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rothead'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
+		head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'jaw'))
+		head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeX'))
+		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
+		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'),10)
+		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'),10)
 		head.attach()
 		head.jaw.setSpeed(1.0)
 		

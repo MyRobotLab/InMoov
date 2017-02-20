@@ -1,13 +1,11 @@
 ;----------------------------- MOD ROLLNECK ----------------------------------------
 [MAIN]
 isRollNeckActivated=False
-autoAttach=False
-autoDetach=False
 
 [ARDUINO]
+;chose left or right existing and connected arduino
 RollNeckArduino=right
 RollNeckPin=12
-;RollNeckArduino=right / left / other previously declared in arduino.py service
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 RollNeck=20
@@ -15,8 +13,21 @@ RollNeck=20
 [SERVO_MAXIMUM_MAP_OUTPUT]
 RollNeck=100
 
-[SERVO_MAP_REST]
+[SERVO_REST_POSITION]
 RollNeck=90
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
@@ -29,11 +40,12 @@ RollNeck=180
 [SERVO_INVERTED]
 RollNeck=False
 
-[VELOCITY]
-RollNeck=50
-
 [MAX_VELOCITY]
 RollNeck=-1
+
+[EXPERIMENTAL]
+autoAttach=False
+autoDetach=False
 
 ;----------------------------------- END --------------------------------------------------
 
