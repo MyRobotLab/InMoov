@@ -11,6 +11,7 @@ def CheckFileExist(File):
 
 	
 CheckFileExist(RuningFolder + 'Inmoov')
+LaunchSwingGui=True
 try:
 	#basic config parse
 	BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
@@ -42,6 +43,7 @@ try:
 	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
 	StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
 	IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
+	LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
 
 
 except:

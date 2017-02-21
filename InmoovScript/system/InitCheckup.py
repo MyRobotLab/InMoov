@@ -93,7 +93,6 @@ if EarInterpretEngine!="chatbot":
 	
 #we launch Inmoov Gestures
 for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
-	print files
 	for name in files:
 		if name.split(".")[-1] == "py":
 			execfile(os.path.join(root, name))
@@ -101,7 +100,6 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
 		
 #we launch Inmoov life
 for root, subdirs, files in os.walk(RuningFolder+'inmoovLife'):
-	print files
 	for name in sorted(files):
 		if name.split(".")[-1] == "py":
 			execfile(os.path.join(root, name))
@@ -117,15 +115,14 @@ if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(
 
 #we launch Inmoov APPS - GAMES
 for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
-	print files
 	for name in files:
 		if name.split(".")[-1] == "py":
 			execfile(os.path.join(root, name))
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
 # here we go !
-#ImageDisplay.exitFS()
-#ImageDisplay.closeAll()
+ImageDisplay.exitFS()
+ImageDisplay.closeAll()
 #sleep(5)
 #detachAll()
 talkEvent(lang_ready)
