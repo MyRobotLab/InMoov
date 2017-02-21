@@ -8,10 +8,8 @@ languagePackLoaded=1
 for root, subdirs, files in os.walk(RuningFolder+'system/languagePack/en'):
 	for name in files:
 		if name.split(".")[-1] == "lang":
-			#if chatbot loaded we do not load ear.addcommands
 			execfile(os.path.join(root, name).encode('utf8'))
-			if DEBUG==1:
-				print "debug languagePack : ",os.path.join(root, name)
+			if DEBUG==1:print "debug languagePack : ",os.path.join(root, name)
 
 			
 # we try to load user system language pack
@@ -22,11 +20,9 @@ if (os.path.isdir(RuningFolder+'system/languagePack/'+languagePack)):
 			for name in files:
 				if name.split(".")[-1] == "lang":
 					execfile(os.path.join(root, name).encode('utf8'))
-					if DEBUG==1:
-						print "debug user languagePack : ",os.path.join(root, name)
+					if DEBUG==1:print "debug user languagePack : ",os.path.join(root, name)
 		
 	except:
 		languagePackLoaded=0
 		pass
-else:
-	languagePackLoaded=0
+else:languagePackLoaded=0
