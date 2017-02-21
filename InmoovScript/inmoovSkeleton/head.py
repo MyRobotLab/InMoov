@@ -21,10 +21,13 @@ try:
 	AudioSignalProcessing=ThisSkeletonPartConfig.getboolean('AUDIOSIGNALPROCESSING', 'AudioSignalProcessing')
 	AnalogPinFromSoundCard=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'AnalogPin')
 	HowManyPollsBySecond=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'HowManyPollsBySecond')
+	MouthControlJawMin=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMin')
+	MouthControlJawMax=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMax')
 	jawMIN=ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw')
 	jawMAX=ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')
 	neckRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck')
 	rotheadRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead')
+	neckPin=ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck')
 except:
 	isHeadActivated=0
 	errorSpokenFunc('ConfigParserProblem','head.config')
@@ -102,8 +105,8 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 			MouthControl.setArduino(left)
 			MouthControl.setJaw(head.jaw)
 			MouthControl.startService()
-			MouthControl.setmouth(ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw'))
-		
+			MouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
+			talkEvent(lang_startingMouth)
 # ##############################################################################
 # 								mouth control based on audio signal processing
 # ##############################################################################	

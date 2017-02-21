@@ -3,10 +3,6 @@
 [MAIN]
 isHeadActivated=False
 
-;robot move the jaw while speaking
-[MOUTHCONTROL]
-MouthControlActivated=True
-
 [SERVO_MINIMUM_MAP_OUTPUT]
 ;your servo minimal limits
 jaw=10
@@ -30,6 +26,12 @@ eyeY=90
 neck=90
 rothead=90
 
+;robot move the jaw while speaking
+[MOUTHCONTROL]
+MouthControlActivated=True
+;How much the jaw move ( after map )
+MouthControlJawMin=0
+MouthControlJawMax=100
 
 
 

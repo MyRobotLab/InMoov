@@ -36,8 +36,7 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 execfile(RuningFolder+'/system/ConfigParser.py')
 #startup sound
 AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
-if StartupSound:	
-	AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
+if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
 
 
 # vocal errors
@@ -66,8 +65,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 # INIT.4 - configuration and system health
 ################################
 #mrl version check
-if int(runtime.getVersion()[-4:])<int(mrlCompatible):
-	errorSpokenFunc('MrlNeedUpdate')
+if int(runtime.getVersion()[-4:])<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')
 
 	
 ################################
@@ -75,8 +73,7 @@ if int(runtime.getVersion()[-4:])<int(mrlCompatible):
 ################################
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
-	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
+	if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
 
 ################################
 # INIT.6 - ear.addcmmands
@@ -87,8 +84,7 @@ if EarInterpretEngine!="chatbot":
 		for name in files:
 			if name.split(".")[-1] == "py":
 				execfile(os.path.join(root, name).encode('utf8'))
-				if DEBUG==1:
-					print "debug  ear.addcmmands : ",os.path.join(root, name)		
+				if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)		
 
 
 ################################
@@ -101,17 +97,18 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
 	for name in files:
 		if name.split(".")[-1] == "py":
 			execfile(os.path.join(root, name))
-			if DEBUG==1:
-				print "debug inmoovAPPS : ",os.path.join(root, name)
+			if DEBUG==1:print "debug inmoovGestures : ",os.path.join(root, name)
 		
 #we launch Inmoov life
-for filename in os.listdir(RuningFolder+'inmoovLife'):		
-	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'inmoovLife/'+filename.encode('utf8'))
+for root, subdirs, files in os.walk(RuningFolder+'inmoovLife'):
+	print files
+	for name in sorted(files):
+		if name.split(".")[-1] == "py":
+			execfile(os.path.join(root, name))
+			if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
 
 #create the custom script, only if not exist
-if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):
-		shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
+if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
 
 
 ################################
@@ -124,8 +121,7 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 	for name in files:
 		if name.split(".")[-1] == "py":
 			execfile(os.path.join(root, name))
-			if DEBUG==1:
-				print "debug inmoovAPPS : ",os.path.join(root, name)
+			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
 # here we go !
 #ImageDisplay.exitFS()

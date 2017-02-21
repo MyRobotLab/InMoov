@@ -1,0 +1,24 @@
+;----------------------------- INMOOV LIFE CONFIGURATION ----------------------------------------
+
+;auto restart chrome red button
+[AUTOLISTEN]
+Activated=True
+TimerValue=15000
+
+;wip heatlh check
+[HEALTHCHECK]
+Activated=True
+TimerValue=60000
+
+;ramdom move the head
+[MOVEHEADRANDOM]
+RobotCanMoveHeadWhileSpeaking=True
+
+;todo
+[MOVEWHOLEROBOT]
+TimerValueMin=60000
+TimerValueMax=120000
+MoveHead=True
+MoveArms=True
+MoveStomac=True
+MoveHands=True

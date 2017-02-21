@@ -7,14 +7,12 @@
 # only if robot not actualy speaking
 ###############################################################################
 WebkitSpeechRecognitionFix = Runtime.start("WebkitSpeechRecognitionFix","Clock")
-WebkitSpeechRecognitionFix.setInterval(15000)
+WebkitSpeechRecognitionFix.setInterval(AutolistenTimerValue)
 
 def WebkitSpeechRecognitionON(timedata):
 
-	if RobotIsActualySpeaking==0:
-		ear.resumeListening()
+	if not RobotIsActualySpeaking and AutolistenActivated:ear.resumeListening()
 	
-
 WebkitSpeechRecognitionFix.addListener("pulse", python.name, "WebkitSpeechRecognitionON")
 
 
