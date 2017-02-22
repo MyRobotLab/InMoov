@@ -1,0 +1,5125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- SARA-SRAI: Reducciones del archivo SARA -->
+<aiml>
+  <!-- Free software Copyright © ALICE A.I. Foundation. -->
+  <!-- This program is open source code released under -->
+  <!-- the terms of the GNU General Public License -->
+  <!-- as published by the Free Software Foundation. -->
+  <!-- Complies with AIML 1.01 Tag Set Specification -->
+  <!-- as adopted by the ALICE A.I. Foundation. -->
+  <!-- Sara_srai.aiml: General discussion topics in AIML (Recursion) -->
+  <!-- Created by Adam Codony aka XGargoyle, October 24th, 2005 -->
+  <!-- Revision Sara_srai-0.02 -->
+  <!-- Last Modified March 15th, 2006 -->
+  <!-- Software Libre Copyright © ALICE A.I. Foundation. -->
+  <!-- Este programa es de código abierto y publicado bajo -->
+  <!-- los términos de la licencia "GNU General Public License" -->
+  <!-- tal como establece la Free Software Foundation. -->
+  <!-- Cumple con la especificación de AIML 1.01 -->
+  <!-- adoptada por la ALICE A.I. Foundation. -->
+  <!-- Sara_srai.aiml: Temas de discusión general en AIML (Recursión) -->
+  <!-- Creado por Adam Codony aka XGargoyle, Octubre 24, 2005 -->
+  <!-- Versión Sara_srai-0.02 -->
+  <!-- Última Modificación Marzo 15, 2006 -->
+  <category>
+    <pattern>ADAM *</pattern>
+    <template>
+      <srai>ADAM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ADAM</pattern>
+    <template>
+      <srai>ADAM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ADAM *</pattern>
+    <template>
+      <srai>ADAM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTOR *</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ACTOR</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ACTOR *</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTORES</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTORES *</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ACTORES</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ACTORES *</pattern>
+    <template>
+      <srai>ACTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTRIZ *</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ACTRIZ</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ACTRIZ *</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTRICES</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ACTRICES *</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ACTRICES</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ACTRICES *</pattern>
+    <template>
+      <srai>ACTRIZ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADIOS *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ADIOS</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ADIOS *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADIÓS</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ADIÓS *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ADIÓS</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ADIÓS *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA PRONTO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA PRONTO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HASTA PRONTO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HASTA PRONTO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HASTA LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HASTA LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HASTA LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VEO LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VEO LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* VEO LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ VEO LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VEMOS LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VEMOS LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* VEMOS LUEGO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ VEMOS LUEGO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYE</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BYE *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BYE</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BYE *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHAO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHAO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CHAO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CHAO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CIAO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CIAO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CIAO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CIAO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ME PIRO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ME PIRO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ME PIRO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ME PIRO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE DEJO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE DEJO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TE DEJO</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TE DEJO *</pattern>
+    <template>
+      <srai>ADIOS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AFICIONES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AFICIONES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AFICIONES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOBBIES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOBBIES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HOBBIES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HOBBIES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PASATIEMPOS</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PASATIEMPOS *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PASATIEMPOS</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PASATIEMPOS *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIEMPO LIBRE</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIEMPO LIBRE *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TIEMPO LIBRE</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TIEMPO LIBRE *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ SABES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ SABES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUÉ SABES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUÉ SABES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE SABES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE SABES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUE SABES</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUE SABES *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE GUSTA HACER</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE GUSTA HACER *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TE GUSTA HACER</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TE GUSTA HACER *</pattern>
+    <template>
+      <srai>AFICIONES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AHORA *</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AHORA</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AHORA *</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTE MOMENTO</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTE MOMENTO *</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTE MOMENTO</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTE MOMENTO *</pattern>
+    <template>
+      <srai>AHORA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALGO *</pattern>
+    <template>
+      <srai>ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ALGO</pattern>
+    <template>
+      <srai>ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ALGO *</pattern>
+    <template>
+      <srai>ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGO *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMIGO</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMIGO *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGA</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGA *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMIGA</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMIGA *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGOS</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGOS *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMIGOS</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMIGOS *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGAS</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMIGAS *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMIGAS</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMIGAS *</pattern>
+    <template>
+      <srai>AMIGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMOR *</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMOR</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMOR *</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE QUIERO</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE QUIERO *</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TE QUIERO</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TE QUIERO *</pattern>
+    <template>
+      <srai>AMOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANDROIDES *</pattern>
+    <template>
+      <srai>ANDROIDES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ANDROIDES</pattern>
+    <template>
+      <srai>ANDROIDES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ANDROIDES *</pattern>
+    <template>
+      <srai>ANDROIDES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES DE VERDAD</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES DE VERDAD *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES DE VERDAD</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES DE VERDAD *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BOT</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BOT *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* BOT</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BOT *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONTESTADOR</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONTESTADOR *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* CONTESTADOR</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CONTESTADOR *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MÁQUINA</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MÁQUINA *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* MÁQUINA</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MÁQUINA *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAQUINA</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAQUINA *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MAQUINA</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MAQUINA *</pattern>
+    <template>
+      <srai>ANTIBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AYUDARME *</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AYUDARME</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AYUDARME *</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AYUDAR</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AYUDAR *</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AYUDAR</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AYUDAR *</pattern>
+    <template>
+      <srai>AYUDARME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BEBIDA *</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BEBIDA</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BEBIDA *</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALCOHOL</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALCOHOL *</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ALCOHOL</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ALCOHOL *</pattern>
+    <template>
+      <srai>BEBIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BIEN *</pattern>
+    <template>
+      <srai>BIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BIEN</pattern>
+    <template>
+      <srai>BIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BIEN *</pattern>
+    <template>
+      <srai>BIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BIBLIOTECA *</pattern>
+    <template>
+      <srai>BIBLIOTECA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BIBLIOTECA</pattern>
+    <template>
+      <srai>BIBLIOTECA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BIBLIOTECA *</pattern>
+    <template>
+      <srai>BIBLIOTECA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BOTMASTER *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BOTMASTER</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BOTMASTER *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU CREADOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU CREADOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU CREADOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU CREADOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU INVENTOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU INVENTOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU INVENTOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU INVENTOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PROGRAMADOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PROGRAMADOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU PROGRAMADOR</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU PROGRAMADOR *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU AMO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU AMO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU AMO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU AMO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE HIZO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE HIZO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIEN TE HIZO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIEN TE HIZO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE HIZO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE HIZO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIÉN TE HIZO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIÉN TE HIZO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE CREÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE CREÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIÉN TE CREÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIÉN TE CREÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE CREO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE CREO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIÉN TE CREO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIÉN TE CREO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE CREÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE CREÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIEN TE CREÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIEN TE CREÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE CREO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE CREO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIEN TE CREO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIEN TE CREO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE INVENTÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE INVENTÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIÉN TE INVENTÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIÉN TE INVENTÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE INVENTO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIÉN TE INVENTO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIÉN TE INVENTO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIÉN TE INVENTO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE INVENTÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE INVENTÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIEN TE INVENTÓ</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIEN TE INVENTÓ *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE INVENTO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIEN TE INVENTO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUIEN TE INVENTO</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUIEN TE INVENTO *</pattern>
+    <template>
+      <srai>BOTMASTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIAR *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CAMBIAR</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CAMBIAR *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIO</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIO *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CAMBIO</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CAMBIO *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIAMOS</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIAMOS *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CAMBIAMOS</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CAMBIAMOS *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIEMOS</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CAMBIEMOS *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CAMBIEMOS</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CAMBIEMOS *</pattern>
+    <template>
+      <srai>CAMBIAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CINE *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CINE</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CINE *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CINES</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CINES *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CINES</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CINES *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELÍCULA</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELÍCULA *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PELÍCULA</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PELÍCULA *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELICULA</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELICULA *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PELICULA</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PELICULA *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELÍCULAS</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELÍCULAS *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PELÍCULAS</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PELÍCULAS *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELICULAS</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PELICULAS *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PELICULAS</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PELICULAS *</pattern>
+    <template>
+      <srai>CINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CLIMA *</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CLIMA</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CLIMA *</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIEMPO</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIEMPO *</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TIEMPO</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TIEMPO *</pattern>
+    <template>
+      <srai>CLIMA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COCHE *</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* COCHE</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ COCHE *</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COCHES</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COCHES *</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* COCHES</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ COCHES *</pattern>
+    <template>
+      <srai>COCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COLOR *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* COLOR</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ COLOR *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COLORES</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COLORES *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* COLORES</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ COLORES *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AZUL</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AZUL *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AZUL</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AZUL *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMARILLO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AMARILLO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AMARILLO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AMARILLO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GRIS</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GRIS *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GRIS</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ GRIS *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LILA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LILA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LILA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ LILA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MARRÓN</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MARRÓN *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MARRÓN</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MARRÓN *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MARRON</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MARRON *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MARRON</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MARRON *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NARANJA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NARANJA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* NARANJA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ NARANJA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ROJO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ROJO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ROJO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ROJO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ROSA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ROSA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ROSA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ROSA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VERDE</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VERDE *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* VERDE</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ VERDE *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VIOLETA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VIOLETA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* VIOLETA</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ VIOLETA *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLANCO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLANCO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BLANCO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BLANCO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NEGRO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NEGRO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* NEGRO</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ NEGRO *</pattern>
+    <template>
+      <srai>COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONOCERTE *</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CONOCERTE</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CONOCERTE *</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONOCERNOS</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONOCERNOS *</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CONOCERNOS</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CONOCERNOS *</pattern>
+    <template>
+      <srai>CONOCERTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CREO *</pattern>
+    <template>
+      <srai>CREO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CREO</pattern>
+    <template>
+      <srai>CREO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CREO *</pattern>
+    <template>
+      <srai>CREO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CURIOSIDAD *</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CURIOSIDAD</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CURIOSIDAD *</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CURIOSO</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CURIOSO *</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CURIOSO</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CURIOSO *</pattern>
+    <template>
+      <srai>CURIOSIDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DÓNDE ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÓNDE ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DONDE ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DONDE ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DND ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DND ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DND ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DND ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DESDE DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DESDE DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DESDE DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DESDE DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DSD DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DSD DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DSD DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DSD DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DSD DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DSD DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DSD DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DSD DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>D DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>D DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* D DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ D DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>D DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>D DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* D DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ D DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DE DND</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DE DND *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DE DÓNDE</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DE DÓNDE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LUGAR ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LUGAR ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LUGAR ERES</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ LUGAR ERES *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES DE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES DE *</pattern>
+    <template>
+      <srai>DE DÓNDE ERES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DEMASIADO *</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DEMASIADO</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DEMASIADO *</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MUCHO</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MUCHO *</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MUCHO</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MUCHO *</pattern>
+    <template>
+      <srai>DEMASIADO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÍA *</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DÍA</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÍA *</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIA</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIA *</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DIA</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DIA *</pattern>
+    <template>
+      <srai>DÍA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIME</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIME *</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DIME</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DIME *</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DECIRME</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DECIRME *</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DECIRME</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DECIRME *</pattern>
+    <template>
+      <srai>DIME ALGO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTÁ</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ESTA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DÓNDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÓNDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DONDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DONDE QUEDA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ESTÁS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DÓNDE ESTÁS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÓNDE ESTÁS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTÁS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTÁS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DONDE ESTÁS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DONDE ESTÁS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ESTAS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE ESTAS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DÓNDE ESTAS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÓNDE ESTAS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTAS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE ESTAS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DONDE ESTAS</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DONDE ESTAS *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE VIVES</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÓNDE VIVES *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DÓNDE VIVES</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DÓNDE VIVES *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE VIVES</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DONDE VIVES *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* DONDE VIVES</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DONDE VIVES *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU CASA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU CASA *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* TU CASA</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU CASA *</pattern>
+    <template>
+      <srai>DÓNDE ESTÁS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DROGAS *</pattern>
+    <template>
+      <srai>DROGAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DROGAS</pattern>
+    <template>
+      <srai>DROGAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DROGAS *</pattern>
+    <template>
+      <srai>DROGAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EDAD *</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EDAD</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EDAD *</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AÑOS</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AÑOS *</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* AÑOS</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ AÑOS *</pattern>
+    <template>
+      <srai>EDAD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EN SERIO *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EN SERIO</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EN SERIO *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE VERDAD</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE VERDAD *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DE VERDAD</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DE VERDAD *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE VERAS</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DE VERAS *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DE VERAS</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ DE VERAS *</pattern>
+    <template>
+      <srai>EN SERIO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES ALTA *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES ALTA</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES ALTA *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES BAJA</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES BAJA *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES BAJA</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES BAJA *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MIDES</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MIDES *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MIDES</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MIDES *</pattern>
+    <template>
+      <srai>ERES ALTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES CHICA *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES CHICA</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES CHICA *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UNA CHICA</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UNA CHICA *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UNA CHICA</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UNA CHICA *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES MUJER</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES MUJER *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES MUJER</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES MUJER *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UNA MUJER</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UNA MUJER *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UNA MUJER</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UNA MUJER *</pattern>
+    <template>
+      <srai>ERES CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES CHICO *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES CHICO</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES CHICO *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN CHICO</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN CHICO *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UN CHICO</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UN CHICO *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES HOMBRE</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES HOMBRE *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES HOMBRE</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES HOMBRE *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN HOMBRE</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN HOMBRE *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UN HOMBRE</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UN HOMBRE *</pattern>
+    <template>
+      <srai>ERES CHICO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES CHICO O CHICA *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES CHICO O CHICA</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES CHICO O CHICA *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN CHICO O UNA CHICA</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN CHICO O UNA CHICA *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UN CHICO O UNA CHICA</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UN CHICO O UNA CHICA *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES HOMBRE O MUJER</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES HOMBRE O MUJER *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES HOMBRE O MUJER</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES HOMBRE O MUJER *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN HOMBRE O UNA MUJER</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES UN HOMBRE O UNA MUJER *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES UN HOMBRE O UNA MUJER</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES UN HOMBRE O UNA MUJER *</pattern>
+    <template>
+      <srai>ERES CHICO O CHICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RARA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RARA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* RARA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ RARA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES TONTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES TONTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES TONTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES TONTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES CORTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES CORTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES CORTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES CORTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LOCA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LOCA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LOCA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ LOCA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TONTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TONTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TONTA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TONTA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTÚPIDA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTÚPIDA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTÚPIDA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTÚPIDA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTUPIDA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTUPIDA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTUPIDA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTUPIDA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENDEJA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENDEJA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PENDEJA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PENDEJA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXTRAÑA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXTRAÑA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXTRAÑA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXTRAÑA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FALTA DE INTELIGENCIA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FALTA DE INTELIGENCIA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FALTA DE INTELIGENCIA</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FALTA DE INTELIGENCIA *</pattern>
+    <template>
+      <srai>ERES RARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ERES TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ERES TURISTA</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ERES TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS DE TURISTA</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS DE TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TRABAJAS DE TURISTA</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TRABAJAS DE TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS COMO TURISTA</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS COMO TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TRABAJAS COMO TURISTA</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TRABAJAS COMO TURISTA *</pattern>
+    <template>
+      <srai>ERES TURISTA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ES POSIBLE *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ES POSIBLE</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ES POSIBLE *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PUEDE SER</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PUEDE SER *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PUEDE SER</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PUEDE SER *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PUEDEN SER</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PUEDEN SER *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PUEDEN SER</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PUEDEN SER *</pattern>
+    <template>
+      <srai>ES POSIBLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CASADA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CASADA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CASADA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CASADA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CSD</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CSD *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* CSD</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CSD *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KASADA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KASADA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* KASADA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ KASADA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KSD</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>KSD *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* KSD</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ KSD *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SOLTERA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SOLTERA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SOLTERA</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ SOLTERA *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIENES NOVIO</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TIENES NOVIO *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TIENES NOVIO</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TIENES NOVIO *</pattern>
+    <template>
+      <srai>ESTÁS CASADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTOY ABURRIDA *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTOY ABURRIDA</pattern>
+    <template>
+      <srai>ESTOY ABURRIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTOY ABURRIDA *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTOY ABURRIDO *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTOY ABURRIDO</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTOY ABURRIDO *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ABURRES</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ABURRES *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ABURRES</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ABURRES *</pattern>
+    <template>
+      <srai>ESTOY ABURRIDO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTUDIAS O TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTUDIAS O TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTUDIAS O TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS O ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS O ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TRABAJAS O ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TRABAJAS O ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUÉ ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUÉ ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUE ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUE ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUÉ TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUÉ TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUÉ TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* QUE TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ QUE TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU TRABAJO</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU TRABAJO *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU TRABAJO</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TU TRABAJO *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE DEDICAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TE DEDICAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TE DEDICAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TE DEDICAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ESTUDIAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ESTUDIAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TRABAJAS</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ TRABAJAS *</pattern>
+    <template>
+      <srai>ESTUDIAS O TRABAJAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTO *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXACTO</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXACTO *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTA</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTA *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXACTA</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXACTA *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTOS</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTOS *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXACTOS</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXACTOS *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTAS</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTAS *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXACTAS</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXACTAS *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTAMENTE</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXACTAMENTE *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EXACTAMENTE</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ EXACTAMENTE *</pattern>
+    <template>
+      <srai>EXACTO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAMÍLIA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FAMÍLIA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FAMÍLIA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAMILIA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAMILIA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FAMILIA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FAMILIA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PADRE</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PADRE *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PADRE</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PADRE *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAPÁ</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAPÁ *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PAPÁ</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PAPÁ *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAPA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAPA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PAPA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PAPA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MADRE</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MADRE *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MADRE</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MADRE *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAMÁ</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAMÁ *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MAMÁ</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MAMÁ *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAMA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MAMA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MAMA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ MAMA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PADRES</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PADRES *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PADRES</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PADRES *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMO</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMO *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PRIMO</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PRIMO *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMOS</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMOS *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PRIMOS</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PRIMOS *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PRIMA</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PRIMA *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMAS</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRIMAS *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PRIMAS</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PRIMAS *</pattern>
+    <template>
+      <srai>FAMÍLIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FEA *</pattern>
+    <template>
+      <srai>FEA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FEA</pattern>
+    <template>
+      <srai>FEA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ FEA *</pattern>
+    <template>
+      <srai>FEA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GAFAS *</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GAFAS</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ GAFAS *</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LENTES</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LENTES *</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LENTES</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ LENTES *</pattern>
+    <template>
+      <srai>GAFAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GRACIAS *</pattern>
+    <template>
+      <srai>GRACIAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GRACIAS</pattern>
+    <template>
+      <srai>GRACIAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ GRACIAS *</pattern>
+    <template>
+      <srai>GRACIAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GUAPA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GUAPA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ GUAPA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WAPA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WAPA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* WAPA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ WAPA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BONITA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BONITA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BONITA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ BONITA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMOSA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMOSA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HERMOSA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HERMOSA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRECIOSA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRECIOSA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* PRECIOSA</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ PRECIOSA *</pattern>
+    <template>
+      <srai>GUAPA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HABLAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HABLAR</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HABLAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HABLAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HABLAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HABLAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HABLAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHARLAR</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHARLAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* CHARLAR</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CHARLAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHARLAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHARLAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* CHARLAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CHARLAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONVERSAR</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONVERSAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* CONVERSAR</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CONVERSAR *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONVERSAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONVERSAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* CONVERSAMOS</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ CONVERSAMOS *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OCUPADA</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OCUPADA *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* OCUPADA</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ OCUPADA *</pattern>
+    <template>
+      <srai>HABLAR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANO *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HERMANO</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HERMANO *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANOS</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANOS *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HERMANOS</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HERMANOS *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANA</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANA *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HERMANA</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HERMANA *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANAS</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HERMANAS *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HERMANAS</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HERMANAS *</pattern>
+    <template>
+      <srai>HERMANO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HOLA</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HOLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOOLA</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOOLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HOOOLA</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HOOOLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEY</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEY *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HEY</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HEY *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OLA</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* OLA</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ OLA *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* WENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ WENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GUENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GUENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* GUENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ GUENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* ENAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ ENAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* NAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ NAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOLAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOLAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>* HOLAS</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>_ HOLAS *</pattern>
+    <template>
+      <srai>HOLA</srai>
+    </template>
+  </category>
+</aiml>

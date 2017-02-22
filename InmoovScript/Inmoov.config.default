@@ -4,7 +4,7 @@
 ScriptType=RightSide
 ; RightSide: Also called FINGERSTARTER : connect one arduino ( called right ) to use FingerStarter + inmoov right side
 ; LeftSide: connect one arduino ( called left) to use head / inmoov left side
-; NoArduino: vocal Only / not implemented yet
+; NoArduino: vocal Only
 ; Full: Both side arduinos connected
 
 debug=0
@@ -16,10 +16,10 @@ MyvoiceTTS=MarySpeech
 MyvoiceType=cmu-slt-hsmm
 ; Voices are automatic donwloaded
 ; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
-; NaturalReaderSpeech voices : https://www.naturalreaders.com/voicelist.html
+; NaturalReaderSpeech voices , Use real case , exemple : Bruno : https://www.naturalreaders.com/voicelist.html
 
 MyLanguage=en
-; en,fr,de,it
+; en,fr,es
 
 [ARDUINO]
 MyRightPort=COM4
@@ -56,5 +56,7 @@ IsMute=0
 LoadingPicture=False
 StartupSound=True
 IuseLinux=False
+;some things dont work on mac and linux like marytts voice automatic download
 LaunchSwingGui=True
+;usefull to speedup the system
 ;----------------------------------- END --------------------------------------------------
