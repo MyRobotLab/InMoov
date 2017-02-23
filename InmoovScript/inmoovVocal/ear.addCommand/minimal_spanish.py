@@ -6,42 +6,40 @@
 
 
 # GENERAL
-ear.addCommand(u"attach everything", "i01", "attach")
-ear.addCommand(u"disconnect everything", "python", "detachAll()")
-ear.addCommand(u"rest", "python", "rest")
-ear.addCommand(u"list", "python", "rest")
-ear.addCommand(u"first", "python", "rest")
-ear.addCommand(u"gesture test", "python", "gestureTEST")
+ear.addCommand(u"conectar todo", "i01", "attach")
+ear.addCommand(u"desconectar todo", "python", "detachAll()")
+ear.addCommand(u"descansar", "python", "rest")
+ear.addCommand(u"lista", "python", "rest")
+ear.addCommand(u"primero", "python", "rest")
+ear.addCommand(u"probar gestos", "python", "gestureTEST")
 
 # ARM((S) - inmoovGestures\ minimalArm.py
-ear.addCommand(u"attach left arm", "i01.leftArm", "attach") #to remove soon
-ear.addCommand(u"disconnect left arm", "i01.leftArm", "detach") #to remove soon
-ear.addCommand(u"raise your right bicep", "python", "rightbicepsraise")
-ear.addCommand(u"lower your right bicep", "python", "rightbicepslower")
-ear.addCommand(u"raise your left bicep", "python", "leftbicepsraise")
-ear.addCommand(u"lower your left bicep", "python", "lefttbicepslower")
-ear.addCommand(u"arms front", "i01.getName()", "armsFront")
+ear.addCommand(u"conectar brazo izquierdo", "i01.leftArm", "attach") #to remove soon
+ear.addCommand(u"desconectar brazo izquierdo", "i01.leftArm", "detach") #to remove soon
+ear.addCommand(u"levanta tu brazo derecho", "python", "rightbicepsraise")
+ear.addCommand(u"baja tu brazo derecho", "python", "rightbicepslower")
+ear.addCommand(u"levanta tu brazo izquierdo", "python", "leftbicepsraise")
+ear.addCommand(u"baja tu brazo izquierdo", "python", "lefttbicepslower")
+ear.addCommand(u"brazos adelante", "i01.getName()", "armsFront")
 ear.addCommand(u"da vinci", "i01.getName()", "daVinci")
 ear.addCommand(u"davinci", "i01.getName()", "daVinci")
-ear.addCommand(u"omoplate", "python", "omoplate")
+ear.addCommand(u"Omóplato", "python", "omoplate")
 
 # HAND(S) - inmoovGestures\ minimalHand.py
-ear.addCommand(u"open your hands", "python", "handsopen")
-ear.addCommand(u"close your hands", "python", "handsclose")
-ear.addCommand(u"open your right hand", "python", "handopen")
-ear.addCommand(u"close your right hand", "python", "handclose")
-ear.addCommand(u"open your hand", "python", "handopen")
-ear.addCommand(u"close your hand", "python", "handclose")
-ear.addCommand(u"open your left hand", "python", "lefthandopen")
-ear.addCommand(u"close your left hand", "python", "lefthandclose")
+ear.addCommand(u"abre tus manos", "python", "handsopen")
+ear.addCommand(u"cierra tus manos", "python", "handsclose")
+ear.addCommand(u"abre tu mano derecha", "python", "handopen")
+ear.addCommand(u"cierra tu mano derecha", "python", "handclose")
+ear.addCommand(u"abre tu mano", "python", "handopen")
+ear.addCommand(u"cierra tu mano", "python", "handclose")
+ear.addCommand(u"abre tu mano izquierda", "python", "lefthandopen")
+ear.addCommand(u"cierra tu mano izquierda", "python", "lefthandclose")
 
 # HEAD - inmoovGestures\ minimalHead.py
-ear.addCommand(u"attach head", "i01.head", "attach")
-ear.addCommand(u"disconnect head", "i01.head", "detach")
-ear.addCommand(u"attach eyes", "i01.head.eyeY", "attach")
-ear.addCommand(u"disconnect eyes", "i01.head.eyeY", "detach")
-ear.addCommand(u"look on your right side", "python", "lookrightside")
-ear.addCommand(u"look on your left side", "python", "lookleftside")
-ear.addCommand(u"look in the middle", "python", "lookinmiddle")
-
-
+ear.addCommand(u"Conectar la Cabeza", "i01.head", "attach")
+ear.addCommand(u"Desconectar la Cabeza", "i01.head", "detach")
+ear.addCommand(u"conectar los ojos", "i01.head.eyeY", "attach")
+ear.addCommand(u"desconectar los ojos", "i01.head.eyeY", "detach")
+ear.addCommand(u"Mira a la derecha", "python", "lookrightside")
+ear.addCommand(u"Mira a la izquierda", "python", "lookleftside")
+ear.addCommand(u"Mira al centro", "python", "lookinmiddle")
