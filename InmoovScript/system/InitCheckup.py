@@ -121,11 +121,18 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
 # here we go !
-ImageDisplay.exitFS()
-ImageDisplay.closeAll()
+#ImageDisplay.exitFS()
+#ImageDisplay.closeAll()
 #sleep(5)
 #detachAll()
-talkEvent(lang_ready)
+if EarInterpretEngine=="chatbot":
+	print  str(chatBot.getPredicate("default","firstinit"))
+	if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
+		chatBot.getResponse("FIRST_INIT")
+	else:
+		chatBot.getResponse("WAKE_UP")
+else:
+	talkEvent(lang_ready)
 WebkitSpeechRecognitionFix.startClock()
 RobotIsStarted=1
 
