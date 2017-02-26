@@ -19,7 +19,7 @@ try:
 	isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
 	
 except:
-	errorSpokenFunc('ConfigParserProblem','leftarm.config')
+	errorSpokenFunc('ConfigParserProblem','righthand.config')
 	pass
     
   
