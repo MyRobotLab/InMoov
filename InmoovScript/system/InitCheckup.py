@@ -120,10 +120,31 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			execfile(os.path.join(root, name))
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
-# here we go !
-#ImageDisplay.exitFS()
-#ImageDisplay.closeAll()
-#sleep(5)
+
+#detachAll()
+if EarInterpretEngine=="chatbot":
+	print  str(chatBot.getPredicate("default","firstinit"))
+	if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
+		chatBot.getResponse("FIRST_INIT")
+	else:
+		chatBot.getResponse("WAKE_UP")
+else:
+	talkEvent(lang_ready)
+WebkitSpeechRecognitionFix.startClock()
+RobotIsStarted=1
+
+################################
+# INIT.8 - inmoov Custom
+################################
+
+#we launch Inmoov APPS - GAMES
+for root, subdirs, files in os.walk(RuningFolder+'inmoovCustom'):
+	for name in files:
+		if name.split(".")[-1] == "py":
+			execfile(os.path.join(root, name))
+			if DEBUG==1:print "debug inmoovCustom : ",os.path.join(root, name)
+
+
 #detachAll()
 if EarInterpretEngine=="chatbot":
 	print  str(chatBot.getPredicate("default","firstinit"))

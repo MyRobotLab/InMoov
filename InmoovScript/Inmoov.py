@@ -5,7 +5,7 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    script - [wip]
-version='0.3.0'
+version='0.3.1'
 
 # this will run with versions of MRL above :
 mrlCompatible='1930'
@@ -50,6 +50,7 @@ execfile(RuningFolder+'/system/InitCheckup.py')
 # SAMPLE COMMANDS 
 # Go further you can find more vocal commands into inmoovVocal/ear.addCommand
 # Go further you can find more associated functions into inmoovGestures
+# Go more further ! and code your own script in a separated file inmoovCustom/Inmoov_custom.py
 # ###################################################################################
 
 ear.addCommand("attach your finger", "i01.rightHand.index", "attach") #to remove soon
@@ -70,10 +71,3 @@ def fingerclose():
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
   talkBlocking("ok you have my attention")
-  
-  
-  
-
-##############
-#Go more further ! and code your own script in a separated file
-execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
