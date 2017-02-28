@@ -120,14 +120,14 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			execfile(os.path.join(root, name))
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
-# here we go !
-#ImageDisplay.exitFS()
-#ImageDisplay.closeAll()
-#sleep(5)
-#detachAll()
+################################
+# INIT.9 - reade to go
+################################
+#first init check
 if EarInterpretEngine=="chatbot":
 	print  str(chatBot.getPredicate("default","firstinit"))
 	if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
+		chatBot.setPredicate("default","topic","default")
 		chatBot.getResponse("FIRST_INIT")
 	else:
 		chatBot.getResponse("WAKE_UP")

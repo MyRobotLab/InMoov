@@ -26,6 +26,8 @@
 	
 <topic name="firstinit">
 
+
+	
 	<category>
     <pattern>#</pattern>
     <that># quel est mon nom #</that>
@@ -35,10 +37,8 @@
 	</template>
 	</category>
 	
-	
-	
 	<category>
-    <pattern>OUI #</pattern>
+    <pattern># OUI #</pattern>
     <that># répond par oui , ou non #</that>
     <template>
 	<random>
@@ -57,16 +57,18 @@
 	</category>
 	
 	<category>
-    <pattern>NON #</pattern>
+    <pattern># NON #</pattern>
     <that># répond par oui , ou non #</that>
     <template>
 	On recommence alors.
 	Je t'écoute. quel est mon nom ?
     </template>
 	</category>
+
 	
 	<category>
     <pattern>#</pattern>
+	<that># répond par oui , ou non #</that>
     <template>
 	<random>
 	<li>
@@ -79,6 +81,8 @@
 	<get name="questionfirstinit"/>
     </template>
 	</category>
+	
+	
 	
 </topic>	
 	
@@ -118,11 +122,6 @@
     </template>
   </category>
   
-  <category>
-    <pattern>TRADUCTION</pattern>
-    <template>Démarrage du topic traduction.
-      <think><set name="topic">TRADUCTION</set></think></template>
-  </category>
   <category>
     <pattern>GESTURES</pattern>
     <template>Démarrage du topic gestuelle.
