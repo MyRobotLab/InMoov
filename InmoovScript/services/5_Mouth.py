@@ -7,17 +7,24 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
+global VoiceError
+VoiceError=0
+try:
+	#subconsciousMouth is an always worky english voice used to diagnostic
+	subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
+	subconsciousMouth.setVoice("cmu-slt-hsmm")
+	#inmoov mouth service
+	i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
+	
+except:
+	errorSpokenFunc('MyvoiceType')
+	VoiceError=1
+	pass
 
-#subconsciousMouth is an always worky english voice used to diagnostic
-subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("cmu-slt-hsmm")
-
-
-
-
-#inmoov mouth service
-i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 mouth=i01.mouth
+
+
+
 
 #vocal startup globalized so :
 i01.setMute(1)
