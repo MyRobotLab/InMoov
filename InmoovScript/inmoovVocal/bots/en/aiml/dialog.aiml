@@ -23,7 +23,7 @@
   <category>
     <pattern>SEND BUG REPORT</pattern>
     <template>Sending transcript to callmom-info@pandorabots.com.
-<oob><email><to>callmom-info@pandorabots.com</to><subject>Transcript of <bot name="name" /> with <get name="name" /> on <date /></subject><body><srai>DIALOG HISTORY</srai></body></email></oob></template>
+<oob><email><to>callmom-info@pandorabots.com</to><subject>Transcript of <get name="botname" /> with <get name="name" /> on <date /></subject><body><srai>DIALOG HISTORY</srai></body></email></oob></template>
   </category>
   <category>
     <pattern>REPORT A PROBLEM</pattern>
@@ -72,7 +72,7 @@ To help the developers understand your problem, you can choose to send us a tran
       <condition name="request">
         <li value="unknown" />
         <li>
-          <get name="name" />: <get name="request" /><bot name="name" />: <get name="response" /></li>
+          <get name="name" />: <get name="request" /><get name="botname" />: <get name="response" /></li>
       </condition>
     </template>
   </category>
@@ -115,6 +115,6 @@ To help the developers understand your problem, you can choose to send us a tran
   <category>
     <pattern>TRANSCRIPT</pattern>
     <template>Sending transcript to <get name="email" />.
-<oob><email><to><get name="email" /></to><subject>Transcript of <bot name="name" /> with <get name="name" /> on <date /></subject><body><srai>DIALOG HISTORY</srai></body></email></oob></template>
+<oob><email><to><get name="email" /></to><subject>Transcript of <get name="botname" /> with <get name="name" /> on <date /></subject><body><srai>DIALOG HISTORY</srai></body></email></oob></template>
   </category>
 </aiml>

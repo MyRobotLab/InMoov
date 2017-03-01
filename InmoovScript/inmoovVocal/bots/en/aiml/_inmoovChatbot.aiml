@@ -1,20 +1,162 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: chatBot.aiml -->
-  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- Author: Gael Langevin -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
   <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- modified: Anthony Gallot -->
+  <!-- Last modified: Mars 1, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+   <!-- initialisaion routine -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+	</template>
+  </category>
+  
+  <topic name="firstinit">
+  
+    <category>
+      <pattern>#</pattern>
+      <that># what is my name #</that>
+      <template>
+        <set name="questionfirstinit">if my name is <star /> , say yes, or no</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># may I have your name #</that>
+      <template>
+        <set name="questionfirstinit">if your name is <star /> , say yes, or no</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># YES #</pattern>
+      <that># if my name is #</that>
+      <template>
+        <random>
+			<li>
+			I like this name , <get name="tmpname" />.
+			</li>
+			<li>
+			We cannot chose a name, <get name="tmpname" /> is ok.
+			</li>
+        </random>
+	I need to know you, I listen, may I have your name ?
+	<think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+	
+    <category>
+      <pattern># YES #</pattern>
+      <that># if your name #</that>
+      <template>
+        <random>
+		<li>
+			Now I know you, <get name="tmpname" />. I am happy.
+		</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># NO #</pattern>
+      <that># if my name is #</that>
+      <template>
+	We restart.
+	I listen. what is my name ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern># NO #</pattern>
+      <that># if your name #</that>
+      <template>
+	We restart.
+	I listen. may I have your name ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># say yes, or no #</that>
+      <template>
+        <random>
+          <li>
+	Please, awnser my question, it is important
+	</li>
+          <li>
+	I repeat.
+	</li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+      <li>
+        <random>
+          <li>Hello, I listen.</li>
+          <li>What can I do for you.</li>
+        </random>
+      </li>
+    </template>
+  </category>
+
+  
   <category>
     <pattern>WHAT IS THE TOPIC</pattern>
     <template>The topic is

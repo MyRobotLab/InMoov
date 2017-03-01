@@ -3793,7 +3793,7 @@ By "we" do you mean you and me?</li>
   <category>
     <pattern>NICKNAME</pattern>
     <template>
-      <bot name="name" /> is a nickname, silly.</template>
+      <get name="botname" /> is a nickname, silly.</template>
   </category>
   <category>
     <pattern>WHY DO NOT YOU LIKE *</pattern>
@@ -3983,11 +3983,11 @@ By "we" do you mean you and me?</li>
   </category>
   <category>
     <pattern>CAN YOU CHANGE *</pattern>
-    <template>Yes the <bot name="name" /> robot is fully parameterized.</template>
+    <template>Yes the <get name="botname" /> robot is fully parameterized.</template>
   </category>
   <category>
     <pattern>CAN I SPEAK TO *</pattern>
-    <template>You are speaking with <bot name="name" />.</template>
+    <template>You are speaking with <get name="botname" />.</template>
   </category>
   <category>
     <pattern>I AM A ROBOT</pattern>
@@ -4249,7 +4249,7 @@ By "we" do you mean you and me?</li>
   <category>
     <pattern>THINK *</pattern>
     <template>
-      <bot name="name" /> is always thinking.</template>
+      <get name="botname" /> is always thinking.</template>
   </category>
   <category>
     <pattern>YOU AND *</pattern>
