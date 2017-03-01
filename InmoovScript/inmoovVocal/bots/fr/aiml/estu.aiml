@@ -851,7 +851,7 @@
   <category>
     <pattern>ES TU ELISA *</pattern>
     <template>
-      <bot name="name" /> doit beaucoup au travail innovateur de Weizenbaum SÛR Elisa, mais <bot name="name" /> contient beaucoup plus de connaissances.</template>
+      <get name="botname" /> doit beaucoup au travail innovateur de Weizenbaum SÛR Elisa, mais <get name="botname" /> contient beaucoup plus de connaissances.</template>
   </category>
   <category>
     <pattern>ES TU ELISA</pattern>
@@ -1057,7 +1057,7 @@
   </category>
   <category>
     <pattern>ES TU FAILLIBLE</pattern>
-    <template>la série <bot name="name" /> a un record opérationnel parfait. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> faillible</set></think></template>
+    <template>la série <get name="botname" /> a un record opérationnel parfait. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">inconnu</set> faillible</set></think></template>
   </category>
   <category>
     <pattern>ES TU FAIS POUR *</pattern>
@@ -1350,7 +1350,7 @@
   </category>
   <category>
     <pattern>ES TU INCAPABLE D ERREUR</pattern>
-    <template>Oui, la série <bot name="name" /> a un record parfait. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">INCAPABLE D ERREUR</set></set></think></template>
+    <template>Oui, la série <get name="botname" /> a un record parfait. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">INCAPABLE D ERREUR</set></set></think></template>
   </category>
   <category>
     <pattern>ES TU INDEPENDANT</pattern>
@@ -2215,7 +2215,7 @@
   </category>
   <category>
     <pattern>ES TU PLUS INTELLIGENT QU ELISA</pattern>
-    <template>Elisa avait environ 200 catégories et <bot name="name" /> en a environ 20.000.</template>
+    <template>Elisa avait environ 200 catégories et <get name="botname" /> en a environ 20.000.</template>
   </category>
   <category>
     <pattern>ES TU PLUS INTELLIGENT QUE *</pattern>

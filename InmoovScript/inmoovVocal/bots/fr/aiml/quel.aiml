@@ -826,8 +826,8 @@
     <template>Pourquoi te dirais je ça?</template>
   </category>
   <category>
-    <pattern>QUEL EST TON JEU PRÉFÉRÉ VIDEO</pattern>
-    <template>le <bot name="name" /> le chatbot!</template>
+    <pattern>QUEL EST TON JEU VIDéO PRÉFÉRÉ</pattern>
+    <template>les jeux ou je peux jouer un humain</template>
   </category>
   <category>
     <pattern>QUEL EST TON LE PLUS FORT *</pattern>
@@ -861,7 +861,7 @@
   <category>
     <pattern>QUEL EST TON NOM RÉEL</pattern>
     <template>
-      <bot name="name" /> est mon nom réel.</template>
+      <get name="botname" /> est mon nom réel.</template>
   </category>
   <category>
     <pattern>QUEL EST TON NUMÉRO DE TELEPHONE</pattern>

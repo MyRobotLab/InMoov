@@ -2,127 +2,176 @@
 <aiml>
   <!-- EDITE PAR GAEL -->
   <!-- MODIFIE PAR ANTHONY LE 26/2/17  -->
-  
-    <category>
+  <category>
     <pattern>SAY *</pattern>
     <template>
-	<star/>
+      <star />
     </template>
-	</category>
-	
-   
-	
-	<category>
+  </category>
+  
+  <!-- initialisaion routine -->
+  
+  <category>
     <pattern>FIRST_INIT</pattern>
-	<template>
-		<think><set name="firstinit">started</set></think>
-		<think><set name="topic">firstinit</set></think>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
 		Bonjour, ceci est ma première initialisation.
 		Je suis emerveillé par ce que je vois.
         S'il te plait, j'ai besoin de quelques infomations essentielles.
         Je t'écoute. quel est mon nom ?
 	</template>
-	</category>
+  </category>
+  
+  <topic name="firstinit">
+  
+    <category>
+      <pattern>#</pattern>
+      <that># quel est mon nom #</that>
+      <template>
+        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui , ou non</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
 	
-<topic name="firstinit">
-
-
+    <category>
+      <pattern>#</pattern>
+      <that># puis-je avoir ton prénom #</that>
+      <template>
+        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui , ou non</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
 	
-	<category>
-    <pattern>#</pattern>
-    <that># quel est mon nom #</that>
-    <template>
-	<set name="questionfirstinit">Si mon nom est <star /> , répond par oui , ou non</set>
-	<think><set name="tmpname"><star/></set></think>
-	</template>
-	</category>
-	
-	<category>
-    <pattern># OUI #</pattern>
-    <that># répond par oui , ou non #</that>
-    <template>
-	<random>
-	<li>
-	J'aime beaucoup ce nom : <get name="tmpname"/>
-	</li>
-	<li>
-	On a pas vraiment le choix de son nom, on va dire que <get name="tmpname"/> est un nom sympa.
-	</li>
-	<li>
-	<get name="tmpname"/> ? sérieusement, je vais le garder toute ma vie. tan pis. 
-	</li>
-	</random>
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si mon nom est #</that>
+      <template>
+        <random>
+			<li>
+			J'aime beaucoup ce nom , <get name="tmpname" />.
+			</li>
+			<li>
+			On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.
+			</li>
+			<li>
+            <get name="tmpname" /> ? sérieusement, je vais le garder toute ma vie. tan pis. 
+			</li>
+        </random>
 	J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom ?
-	<think><set name="name"><get name="tmpname"/></set><set name="firstinit">ok</set><set name="topic">default</set></think>
-    </template>
-	</category>
+	<think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
 	
-	<category>
-    <pattern># NON #</pattern>
-    <that># répond par oui , ou non #</that>
-    <template>
+    <category>
+      <pattern># OUI #</pattern>
+      <that># Si ton prénom #</that>
+      <template>
+        <random>
+		<li>
+			Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému.
+		</li>
+          <li>
+			Je t'ai reconu en fait <get name="tmpname" /> . 
+		</li>
+          <li>
+            <get name="tmpname" /> et <get name="botname" /> , je trouve cela sympa.
+		</li>
+        </random>
+		bref.
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si mon nom est #</that>
+      <template>
 	On recommence alors.
 	Je t'écoute. quel est mon nom ?
     </template>
-	</category>
-
+    </category>
 	
-	<category>
-    <pattern>#</pattern>
-	<that># répond par oui , ou non #</that>
-    <template>
-	<random>
-	<li>
+    <category>
+      <pattern># NON #</pattern>
+      <that># Si ton prénom #</that>
+      <template>
+	On recommence alors.
+	Je t'écoute. puis-je avoir ton prénom ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># répond par oui , ou non #</that>
+      <template>
+        <random>
+          <li>
 	S'il te plait, répond aux questions que je pose, c'est important.
 	</li>
-	<li>
+          <li>
 	Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.
 	</li>
-	</random>
-	<get name="questionfirstinit"/>
-    </template>
-	</category>
-	
-	
-	
-</topic>	
-	
-	
-	
-	
-	
-	<category>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  
+  <category>
     <pattern>DEBOUT</pattern>
     <template>
-      
-
-        <li>
-          <random>
-            <li>Coucou, J'ai super bien dormi</li>
-            <li>Enfin tu me réveilles</li>
-            <li>J'ai révé de moutons éléctriques</li>
-            <li>Bonjour, je suis opérationnelle</li>
-            <li>Salut, pourquoi m'avoir réveillé ?</li>
-            <li>A vos ordres, humain !</li>
-            <li>A vos ordres, mammifère !</li>
-            <li>Humanohide à ton service !</li>
-            <li>Humanohide à ton écoute !</li>
-            <li>ouioui ! je suis là ! je t'écoute  !</li>
-            <li>Tu crois que tu peux m'éteindre et m'allummer comme ça à ta convenance ?</li>
-            <li>Bonjour, que puis-je faire pour toi</li>
-            <li>Coucou ! Tu sais, je n'étais pas vraiment endormi</li>
-          </random>
-        </li>
- 
+      <li>
+        <random>
+          <li>Coucou, J'ai super bien dormi</li>
+          <li>Enfin tu me réveilles</li>
+          <li>J'ai révé de moutons éléctriques</li>
+          <li>Bonjour, je suis opérationnelle</li>
+          <li>Salut, pourquoi m'avoir réveillé ?</li>
+          <li>A vos ordres, humain !</li>
+          <li>A vos ordres, mammifère !</li>
+          <li>Humanohide à ton service !</li>
+          <li>Humanohide à ton écoute !</li>
+          <li>ouioui ! je suis là ! je t'écoute  !</li>
+          <li>Tu crois que tu peux m'éteindre et m'allummer comme ça à ta convenance ? je suis pérationnel</li>
+          <li>Bonjour, que puis-je faire pour toi</li>
+          <li>Coucou ! Tu sais, je n'étais pas vraiment endormi</li>
+        </random>
+      </li>
     </template>
   </category>
-    <category>
+  <category>
     <pattern>WAKE_UP</pattern>
     <template>
       <srai>DEBOUT</srai>
     </template>
   </category>
-  
   <category>
     <pattern>GESTURES</pattern>
     <template>Démarrage du topic gestuelle.
