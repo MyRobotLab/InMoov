@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- EDITE PAR GAEL -->
-  <!-- MODIFIE PAR ANTHONY LE 26/2/17  -->
+  <!-- File: inmoovchatBot.aiml -->
+  <!-- Authors: Gael Langevin, Anthony Gallot -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Anthony Gallot -->
+  <!-- Last modified: Mars 1, 2017 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
   <category>
     <pattern>SAY *</pattern>
     <template>
@@ -83,7 +96,7 @@
 			Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému.
 		</li>
           <li>
-			Je t'ai reconu en fait <get name="tmpname" /> . 
+			Je t'ai reconu en faite, <get name="tmpname" /> . 
 		</li>
           <li>
             <get name="tmpname" /> et <get name="botname" /> , je trouve cela sympa.
@@ -151,14 +164,11 @@
         <random>
           <li>Coucou, J'ai super bien dormi</li>
           <li>Enfin tu me réveilles</li>
-          <li>J'ai révé de moutons éléctriques</li>
           <li>Bonjour, je suis opérationnelle</li>
           <li>Salut, pourquoi m'avoir réveillé ?</li>
-          <li>A vos ordres, humain !</li>
-          <li>A vos ordres, mammifère !</li>
-          <li>Humanohide à ton service !</li>
-          <li>Humanohide à ton écoute !</li>
-          <li>ouioui ! je suis là ! je t'écoute  !</li>
+          <li>A vos ordres !</li>
+          <li>Inmouve à ton service !</li>
+          <li>Inmouve à ton écoute !</li>
           <li>Tu crois que tu peux m'éteindre et m'allummer comme ça à ta convenance ? je suis pérationnel</li>
           <li>Bonjour, que puis-je faire pour toi</li>
           <li>Coucou ! Tu sais, je n'étais pas vraiment endormi</li>
