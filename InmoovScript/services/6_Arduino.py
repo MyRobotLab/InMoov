@@ -53,7 +53,7 @@ def publishPinLeft(pins):
 				
 			if AudioSignalProcessing:
 				if pins[pin].value>minAudioValue:head.jaw.moveTo(pins[pin].value)
-					
+				
 
 	
 	

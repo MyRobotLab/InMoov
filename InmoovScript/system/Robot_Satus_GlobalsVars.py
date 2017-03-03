@@ -18,6 +18,8 @@ global RobotCanMoveBodyRamdom
 RobotCanMoveRamdom=0
 global MoveHeadRandom
 MoveHeadRandom=1
+global RobotPirHasDetectedHuman
+RobotPirHasDetectedHuman=0
 
 #system values
 #used by mouthcontrol audio signal processing
