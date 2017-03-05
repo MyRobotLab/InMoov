@@ -50,14 +50,10 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightArm.rotate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rotate'))
 		rightArm.omoplate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'))
 		
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'):
-			rightArm.bicep.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'):
-			rightArm.shoulder.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'):
-			rightArm.rotate.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'):
-			rightArm.omoplate.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'):rightArm.bicep.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'):rightArm.shoulder.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'):rightArm.rotate.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'):rightArm.omoplate.setInverted(True)
 
 		i01.startRightArm(MyRightPort)
 		
@@ -71,6 +67,18 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightArm.omoplate.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
 		
 		rightArm.attach()
+		
+		rightArm.bicep.enableAutoAttach(1)
+		rightArm.shoulder.enableAutoAttach(1)
+		rightArm.rotate.enableAutoAttach(1)
+		rightArm.omoplate.enableAutoAttach(1)
+		
+		rightArm.bicep.enableAutoDetach(0)
+		rightArm.shoulder.enableAutoDetach(0)
+		rightArm.rotate.enableAutoDetach(0)
+		rightArm.omoplate.enableAutoDetach(0)
+		
+		rightArm.rest()
 
 	else:
 		#we force parameter if arduino is off

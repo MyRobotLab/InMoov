@@ -9,7 +9,7 @@
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."
-DEBUG=0
+runtime.setLogLevel("WARN")
 
 
 ################################
@@ -34,9 +34,7 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-#startup sound
-AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
-if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
+
 
 
 # vocal errors
@@ -124,17 +122,11 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 # INIT.9 - reade to go
 ################################
 #first init check
-if EarInterpretEngine=="chatbot":
-	print  str(chatBot.getPredicate("default","firstinit"))
-	if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
-		chatBot.setPredicate("default","topic","default")
-		chatBot.getResponse("FIRST_INIT")
-	else:
-		chatBot.getResponse("WAKE_UP")
-else:
-	talkEvent(lang_ready)
-WebkitSpeechRecognitionFix.startClock()
+
+sleepModeWakeUp()
+
 RobotIsStarted=1
+
 
 
 

@@ -29,9 +29,6 @@ except:
     
   
   
-  
-
-
 # ##############################################################################
 # 								SERVO FUNCTIONS
 # ##############################################################################
@@ -65,12 +62,13 @@ if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
 		rollneck.setRest(RollNeckRestPosition)
 		
 	
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):
-			rollneck.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):rollneck.setInverted(True)
 			
 		rollneck = Runtime.start("rollneck","Servo")
-		rollneck.attach(RollNeckArduino, RollNeckPin, RollNeckRestPosition, 10)
-		
+		rollneck.attach(RollNeckArduino, RollNeckPin, RollNeckRestPosition, 100)
+		rollneck.enableAutoAttach(1)
+		rollneck.enableAutoDetach(0)
+		rollneck.rest()
 		
 	else:
 		#we force parameter if arduino is off

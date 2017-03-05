@@ -14,7 +14,9 @@ TimerValue=60000
 [MOVEHEADRANDOM]
 RobotCanMoveHeadWhileSpeaking=True
 
-;todo
+
+
+;------------ todo -------------
 [MOVEWHOLEROBOT]
 TimerValueMin=60000
 TimerValueMax=120000
@@ -22,3 +24,8 @@ MoveHead=True
 MoveArms=True
 MoveStomac=True
 MoveHands=True
+[SLEEPMODE]
+Activated=True
+UsePirToWakeUp=True
+;dont worry if you don't have one, vocal command will work too
+UsePirToWakeUp=True

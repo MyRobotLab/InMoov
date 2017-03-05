@@ -67,32 +67,37 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
 		head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
 	
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):
-			head.jaw.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):
-			head.eyeX.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):
-			head.eyeY.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):
-			head.neck.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):
-			head.rothead.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):head.jaw.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):head.eyeX.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):head.eyeY.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):head.neck.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):head.rothead.setInverted(True)
 
 		
 		i01.startHead(MyLeftPort)
 				
-		#head.jaw.enableAutoAttach(1)
-		#head.jaw.autoDetach()
+
 		
 		head.detach()
 		
 		head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'jaw'))
 		head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeX'))
 		head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
-		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'),10)
-		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'),10)
+		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'),100)
+		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'),100)
 		head.attach()
 		head.jaw.setSpeed(1.0)
+		
+		
+		head.rothead.enableAutoAttach(1)
+		head.neck.enableAutoAttach(1)
+		head.jaw.enableAutoAttach(1)
+		head.rothead.enableAutoDetach(0)
+		head.neck.enableAutoDetach(0)
+		head.jaw.enableAutoDetach(0)
+	
+		
+		head.rest()
 		
 # ##############################################################################
 # 								Software mouth control

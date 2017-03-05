@@ -19,7 +19,7 @@ try:
 	isRightHandActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightHandActivated') 
 	
 except:
-	errorSpokenFunc('ConfigParserProblem','righthand.config')
+	errorSpokenFunc('ConfigParserProblem','right hand . config')
 	pass
     
   
@@ -57,18 +57,12 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.pinky.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'))
 		rightHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'))
 		
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'thumb'):
-			rightHand.thumb.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'index'):
-			rightHand.index.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'majeure'):
-			rightHand.majeure.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'ringFinger'):
-			rightHand.ringFinger.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'):
-			rightHand.pinky.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'):
-			rightHand.wrist.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'thumb'):rightHand.thumb.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'index'):rightHand.index.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'majeure'):rightHand.majeure.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'ringFinger'):rightHand.ringFinger.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'):rightHand.pinky.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'):rightHand.wrist.setInverted(True)
 		
 		i01.startRightHand(MyRightPort)
 		
@@ -82,6 +76,22 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
 		rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
 		rightHand.attach()
+		
+		rightHand.thumb.enableAutoAttach(1)
+		rightHand.index.enableAutoAttach(1)
+		rightHand.majeure.enableAutoAttach(1)
+		rightHand.ringFinger.enableAutoAttach(1)
+		rightHand.pinky.enableAutoAttach(1)
+		rightHand.wrist.enableAutoAttach(1)
+		
+		rightHand.thumb.enableAutoDetach(0)
+		rightHand.index.enableAutoDetach(0)
+		rightHand.majeure.enableAutoDetach(0)
+		rightHand.ringFinger.enableAutoDetach(0)
+		rightHand.pinky.enableAutoDetach(0)
+		rightHand.wrist.enableAutoDetach(0)
+	
+		rightHand.rest()
 		
 	else:
 		#we force parameter if arduino is off

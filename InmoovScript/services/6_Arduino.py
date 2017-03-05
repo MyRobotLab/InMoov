@@ -52,7 +52,8 @@ def publishPinLeft(pins):
 			if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
 				
 			if AudioSignalProcessing:
-				if pins[pin].value>minAudioValue:head.jaw.moveTo(pins[pin].value)
+				if pins[pin].value>minAudioValue:
+					head.jaw.moveTo(pins[pin].value)
 				
 
 	

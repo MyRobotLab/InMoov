@@ -2,7 +2,8 @@
 #						*** PIR SENSOR ***
 # ##############################################################################
 
-
+# exemple after 5 minutes of inactivity we call the function sleepModeSleep()
+# and if human is detected and if the robot sleeping we call sleepModeWakeUp()
 
 
 # ##############################################################################
@@ -23,23 +24,48 @@ PirArduino=ThisServicePartConfig.get('MAIN', 'PirControlerArduino')
 HumanPresenceTimeout=ThisServicePartConfig.getint('TWEAK', 'HumanPresenceTimeout')
 PlayCurstomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCurstomSoundIfDetection')
 
-  
 # ##############################################################################
 # 								SERVICE START
 # ##############################################################################
 
 
-#analog pin listener
+#analog pin listener read the pir
 def publishPinPir(pins):
 	global pirTimerStarted
 	for pin in range(0, len(pins)):
 		if pins[pin].value>0:
-			pirTimerStarted=0
-			pirTimer.stopClock()
-			pirTimer.startClock()
+			if RobotIsStarted:
+				print "pir event"
+				pirTimerStarted=0
+				pirTimer.stopClock()
+				sleep(0.1)
+				pirTimer.startClock()
+			
+			
 		
+#pir timer to avoid human detection notification every seconds...
+global pirTimerStarted
+pirTimerStarted=0
+def pirTimerRoutine(timedata):
+	global pirTimerStarted
 
+	if RobotIsSleeping:
+		PirControlerArduino.disablePin(PirPin)
+		#wakup function to call
+		sleepModeWakeUp()
+		pirTimer.stopClock()
+	
+	if pirTimerStarted and not RobotIsSleeping:
+		PirControlerArduino.disablePin(PirPin)
+		#sleep function to call
+		sleepModeSleep()
+		pirTimer.stopClock()
+	pirTimerStarted=1
+	
+
+#pir starting	
 if isPirActivated:
+
 	try:
 		PirControlerArduino=eval(PirArduino)
 		talkEvent(lang_startingPir)
@@ -48,32 +74,11 @@ if isPirActivated:
 		errorSpokenFunc('BAdrduinoChoosen','pir')
 		isPirActivated=0
 		pass
-		
-#pir timer to avoid human detection notification every seconds...
-global pirTimerStarted
-pirTimerStarted=0
 
-def pirTimerRoutine(timedata):
-
-	global RobotPirHasDetectedHuman
-	global pirTimerStarted
-		
-	if not RobotPirHasDetectedHuman:
-		if PlayCurstomSoundIfDetection:AudioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')), False)
-	RobotPirHasDetectedHuman=1
-	if pirTimerStarted:
-		RobotPirHasDetectedHuman=0
-		pirTimer.stopClock()
-	
-	pirTimerStarted=1
-	
-	
-			
-if isPirActivated:
 	pirTimer = Runtime.createAndStart("pirTimer","Clock")
 	pirTimer.addListener("pulse", python.name, "pirTimerRoutine")
 	pirTimer.setInterval(HumanPresenceTimeout)
 	PirControlerArduino.addListener("publishPinArray","python","publishPinPir")
 	PirControlerArduino.enablePin(PirPin,1)
-
-		
+	
+	

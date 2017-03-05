@@ -49,10 +49,8 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
 		torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
 			
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'):
-			torso.topStom.setInverted(True)
-		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'):
-			torso.midStom.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'):torso.topStom.setInverted(True)
+		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'):torso.midStom.setInverted(True)
 		
 		
 		
@@ -60,7 +58,15 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		torso.detach()
 		torso.topStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
 		torso.midStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
-
+		
+		torso.attach()
+		
+		torso.topStom.enableAutoAttach(1)
+		torso.midStom.enableAutoAttach(1)
+		torso.topStom.enableAutoDetach(0)
+		torso.midStom.enableAutoDetach(0)
+	
+		torso.rest()
 		
 		
 	else:

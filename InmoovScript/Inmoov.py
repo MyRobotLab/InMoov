@@ -5,10 +5,10 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    script - [wip]
-version='0.3.0'
+version='0.3.2'
 
 # this will run with versions of MRL above :
-mrlCompatible='1930'
+mrlCompatible='1954'
 
 # ###################################################################################
 # This is a very minimal script for Inmoov
@@ -75,5 +75,5 @@ def fingermiddle():
   
 
 ##############
-#Go more further ! and code your own script in a separated file
+#Go more further ! and code your own script in this file
 execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
