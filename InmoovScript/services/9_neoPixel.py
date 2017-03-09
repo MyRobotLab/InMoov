@@ -55,14 +55,19 @@ except:
 
 if isNeopixelActivated==1:
 	neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
-	try:
-		masterArduino=eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster'))
-		neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)
-	except:
-		errorSpokenFunc('BAdrduinoChoosen','Neo pixel')
-		isNeopixelActivated=0
-		neopixelArduinoIsConnected=0
-		pass	
+	
+	#check if connection is serial or usb
+	if masterArduinoPort[:3].lower()=="com":
+		neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort)
+	else:
+		try:
+			masterArduino=eval(ThisServicePartConfig.get('MAIN', 'NeopixelMaster'))
+			neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort,masterArduino)
+		except:
+			errorSpokenFunc('BAdrduinoChoosen','Neo pixel')
+			isNeopixelActivated=0
+			neopixelArduinoIsConnected=0
+			pass	
 	
 	
 	sleep(0.1)
