@@ -19,7 +19,7 @@ def CheckArduinos(Card,Port,slave=0):
 	else:
 		Card.connect(Port)
 		sleep(1)
-		for i in range(0,10):
+		for i in range(0,3):
 			if not Card.isConnected():
 				Card.disconnect()
 				sleep(0.1)
