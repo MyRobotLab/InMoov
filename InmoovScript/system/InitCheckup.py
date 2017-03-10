@@ -125,6 +125,11 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 
 sleepModeWakeUp()
 
+if boot_green:		
+	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+	sleep(2)
+	StopNeopixelAnimation()
+
 RobotIsStarted=1
 
 
