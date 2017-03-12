@@ -2,6 +2,19 @@
 # 								CHATBOT PROGRAM.AB SERVICE
 # ##############################################################################
 
+# ##############################################################################
+# 							PERSONNAL PARAMETERS
+# ##############################################################################  
+  
+#read current service part config based on file name
+ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart+'.config')
+isChatbotActivated=0
+
+isChatbotActivated=ThisServicePartConfig.getboolean('MAIN', 'isChatbotActivated')
 
 # ##############################################################################
 # MRL SERVICE CALL
@@ -9,7 +22,7 @@
 
 Runtime.createAndStart("htmlFilter", "HtmlFilter")
 chatBot=Runtime.start("chatBot", "ProgramAB")
-if EarInterpretEngine=="chatbot":
+if isChatbotActivated:
 	if (os.path.isdir(RuningFolder+'inmoovVocal/bots/'+MyLanguage+'/aiml')):
 		try:
 			#waiting a fix we sould remove csv files
@@ -21,14 +34,11 @@ if EarInterpretEngine=="chatbot":
 		talkEvent(lang_chatbotLoading)
 		chatBot.startSession("default",MyLanguage)
 		talkEvent(lang_chatbotActivated)
-		talkEvent(lang_earaddcomandsDeactivated)
 		chatBot.addTextListener(htmlFilter)
 		htmlFilter.addListener("publishText", python.name, "talk") 
 	else:
 		errorSpokenFunc('lang_ChatbotError')
-else:
-	talkEvent(lang_chatbotDeactivated)
-	talkEvent(lang_earaddcomandsActivated)
+
 def writeAIML():	
 	chatBot.writeAIMLIF()
 	

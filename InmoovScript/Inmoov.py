@@ -5,10 +5,10 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    script - [wip]
-version='0.3.2'
+version='0.3.5'
 
 # this will run with versions of MRL above :
-mrlCompatible='1954'
+mrlCompatible='1970'
 
 # ###################################################################################
 # This is a very minimal script for Inmoov

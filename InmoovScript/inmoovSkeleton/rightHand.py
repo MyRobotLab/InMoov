@@ -50,6 +50,13 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.pinky.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
 		rightHand.wrist.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
 				
+		rightHand.thumb.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
+		rightHand.index.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
+		rightHand.majeure.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
+		rightHand.ringFinger.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
+		rightHand.pinky.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
+		rightHand.wrist.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
+				
 		rightHand.thumb.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'))
 		rightHand.index.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'))
 		rightHand.majeure.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'majeure'))
@@ -65,16 +72,16 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'):rightHand.wrist.setInverted(True)
 		
 		i01.startRightHand(MyRightPort)
-		
-
-		
+				
 		rightHand.detach()
+		
 		rightHand.thumb.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
 		rightHand.index.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
 		rightHand.majeure.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'majeure'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
 		rightHand.ringFinger.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'ringFinger'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
 		rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
 		rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
+		
 		rightHand.attach()
 		
 		rightHand.thumb.enableAutoAttach(1)
@@ -90,7 +97,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rightHand.ringFinger.enableAutoDetach(0)
 		rightHand.pinky.enableAutoDetach(0)
 		rightHand.wrist.enableAutoDetach(0)
-	
+		sleep(1)
 		rightHand.rest()
 		
 	else:

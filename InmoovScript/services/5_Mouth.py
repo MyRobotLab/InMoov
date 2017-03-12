@@ -54,19 +54,25 @@ def talkEvent(data):
 #stop autolisten
 def onEndSpeaking(text):
 	global RobotIsActualySpeaking
+	global RobotCanMoveHeadWhileSpeaking
 	RobotIsActualySpeaking=0
 	if RobotIsStarted==1:
 		ear.resumeListening()
 		MoveHeadTimer.stopClock()
+		
+		RobotCanMoveHeadWhileSpeaking=1
 	if AudioSignalProcessing:
 		try:
 			left.disablePin(AnalogPinFromSoundCard)
+			head.jaw.setVelocity(30)
+			head.jaw.moveTo(0)
 		except:
 			print "onEndSpeaking error"
 			pass
 	
 	
 def onStartSpeaking(text):
+			
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=1
 	ear.pauseListening()

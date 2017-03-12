@@ -21,7 +21,7 @@ else:
 # ##############################################################################
 # 								functions called by the chatbot
 # ##############################################################################
-if EarInterpretEngine=="chatbot":
+if isChatbotActivated:
 	chatBot.setPredicate("default","particule","")
 	chatBot.setPredicate("default","courant","")
 def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la description du sujet (query)

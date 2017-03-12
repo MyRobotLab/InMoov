@@ -21,10 +21,12 @@ chatBot=Runtime.create("chatBot", "ProgramAB")
 # ##############################################################################
 
 # this function catch the ear listening
+isChatbotActivated=0
 def onRecognized(text):
+
 	if DEBUG==1:
 		print "onRecognized : ",text
-	if EarInterpretEngine=="chatbot" and RobotIsStarted and not RobotIsSleeping:
+	if isChatbotActivated and RobotIsStarted and not RobotIsSleeping:
 		chatBot.getResponse(text.replace("'", " ").replace("-", " "))
 
 # ##############################################################################

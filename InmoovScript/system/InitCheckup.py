@@ -77,12 +77,11 @@ for filename in os.listdir(RuningFolder+'inmoovSkeleton'):
 # INIT.6 - ear.addcmmands
 ################################
 #if chatbot loaded we do not load ear.addcommands
-if EarInterpretEngine!="chatbot":
-	for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
-		for name in files:
-			if name.split(".")[-1] == "py":
-				execfile(os.path.join(root, name).encode('utf8'))
-				if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)		
+for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
+	for name in files:
+		if name.split(".")[-1] == "py":
+			execfile(os.path.join(root, name).encode('utf8'))
+			if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)		
 
 
 ################################
@@ -119,7 +118,19 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
 ################################
-# INIT.9 - reade to go
+# INIT.9 - update routines
+################################
+
+#v 0.3.5
+try:
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
+except:
+	pass
+			
+################################
+# INIT.10 - reade to go
 ################################
 #first init check
 

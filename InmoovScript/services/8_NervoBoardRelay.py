@@ -42,13 +42,7 @@ def relayAction(ard,pin,value):
 	ard.pinMode(pin, Arduino.OUTPUT)
 	ard.digitalWrite(pin,value)
 
-if isNervoboardRelayActivated:
-	try:
-		NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
-	except:
-		errorSpokenFunc('BAdrduinoChoosen','nervo board relay')
-		isNervoboardRelayActivated=0
-		pass
+
 		
 def switchOnAllNervo():
 	if isNervoboardRelayActivated:
@@ -84,5 +78,14 @@ def switchOffAllNervo():
 		if PinRightNervoPower3>0:
 			relayAction(NervoboardRelayControlerArduino,PinRightNervoPower3,1)
 			
-talkEvent(lang_startingNervoPower)
-switchOnAllNervo()
+if isNervoboardRelayActivated:
+	try:
+		NervoboardRelayControlerArduino=eval(ThisServicePartConfig.get('MAIN', 'NervoboardRelayControlerArduino'))
+		talkEvent(lang_startingNervoPower)
+		switchOnAllNervo()
+	except:
+		errorSpokenFunc('BAdrduinoChoosen','nervo board relay')
+		isNervoboardRelayActivated=0
+		pass
+			
+	

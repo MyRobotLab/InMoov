@@ -44,6 +44,9 @@ def errorSpokenFunc(errorType,param="0"):
 	
 	if errorType=="ChatbotError":
 		errorSpokenAlert=lang_ChatbotError	
+		
+	if errorType=="OpenCvNoWorky":
+		errorSpokenAlert=lang_OpenCvNoWorky+param
 	
 		
 	print errorSpokenAlert

@@ -26,7 +26,7 @@ def sleepModeWakeUp():
 			head.neck.rest()
 	else:
 		
-		if EarInterpretEngine=="chatbot":
+		if isChatbotActivated:
 			
 			if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
 				chatBot.setPredicate("default","topic","default")
