@@ -45,6 +45,7 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		
 		torso.topStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
 		torso.midStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
+		torso.lowStom.setMaxVelocity(-1)
 		
 		torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
 		torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
@@ -65,6 +66,8 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		torso.midStom.enableAutoAttach(1)
 		torso.topStom.enableAutoDetach(0)
 		torso.midStom.enableAutoDetach(0)
+		torso.lowStom.enableAutoAttach(1)
+		torso.lowStom.enableAutoDetach(0)
 	
 		torso.rest()
 		

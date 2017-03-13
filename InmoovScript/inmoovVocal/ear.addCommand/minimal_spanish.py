@@ -43,3 +43,7 @@ ear.addCommand(u"desconectar los ojos", "i01.head.eyeY", "detach")
 ear.addCommand(u"Mira a la derecha", "python", "lookrightside")
 ear.addCommand(u"Mira a la izquierda", "python", "lookleftside")
 ear.addCommand(u"Mira al centro", "python", "lookinmiddle")
+
+# TORSO - inmoovGestures\minimalTorso.py
+ear.addCommand("disconnect torso", "i01.torso", "detach")
+ear.addCommand("test your stomach", "python", "teststomach")

@@ -44,4 +44,6 @@ ear.addCommand(u"look on your right side", "python", "lookrightside")
 ear.addCommand(u"look on your left side", "python", "lookleftside")
 ear.addCommand(u"look in the middle", "python", "lookinmiddle")
 
-
+# TORSO - inmoovGestures\minimalTorso.py
+ear.addCommand("disconnect torso", "i01.torso", "detach")
+ear.addCommand("test your stomach", "python", "teststomach")
