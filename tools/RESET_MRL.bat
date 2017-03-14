@@ -9,7 +9,7 @@ taskkill.exe /F /IM javaW.exe
 echo ------------------------------------------------------
 echo LOG CLEAN UP to free space disk and send clean noworky
 echo ------------------------------------------------------
-cd../..
+cd..
 
 del myrobotlab.log
 echo .
