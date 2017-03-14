@@ -30,16 +30,25 @@ def CheckArduinos(Card,Port,slave=0):
 		
 	if ForceArduinoIsConnected:return True
 	else:
-		if not Card.isConnected() and slave==0:
-			errorSpokenFunc('ArduinoNotConnected',Port)
-			return False
-		if Card.isConnected() or slave!=0:
-			print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
-			if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BadMrlcommVersion',Port)
+	
+		
+		if slave==0:
+			if Card.isConnected():
+				print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
+				if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BadMrlcommVersion',Port)
+				else:
+					print "Arduino ",Port," OK"
+					return True
 			else:
-				print "Arduino ",Port," OK"
+				errorSpokenFunc('ArduinoNotConnected',Port)
+				return False
+				
+		if slave!=0:
+			print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
+			if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('NeopixelNoWorky',Port)
+			else:
+				print "Slave Arduino ",Port," OK"
 				return True
-
 			
 #analog pin listener
 def publishPinLeft(pins):

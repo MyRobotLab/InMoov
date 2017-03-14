@@ -84,6 +84,7 @@ if isNeopixelActivated==1:
 # 								SERVICE TWEAK
 # ##############################################################################
 
+
 #function to call to clean poweroff neopixel	
 def StopNeopixelAnimation():
 	if isNeopixelActivated==1:
@@ -94,15 +95,14 @@ def StopNeopixelAnimation():
 #function to call to play neopixel in blocking action	
 def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,duration=0):			
 	if isNeopixelActivated==1:
-		neopixel.animationStop()
-		sleep(0.2)
 		neopixel.setAnimation(Animation_Name, red, green, blue, speed)
+
 		if duration!=0:
 			sleep(duration)
 			neopixel.animationStop()
-			
 
-sleep(1)
+
+sleep(0.1)
 if boot_green:		
-	PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
-sleep(1)
+	PlayNeopixelAnimation("Theater Chase", 0, 255, 0, 5)
+

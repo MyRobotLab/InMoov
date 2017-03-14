@@ -31,6 +31,8 @@ python.subscribe(opencv.getName(),"publishOpenCVData")
 
 
 def openCvInit():
+	global opencvStarted	
+	opencvStarted=0
 	if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
 	opencv.setCameraIndex(CameraIndex)
 	opencv.removeFilters()
@@ -40,29 +42,26 @@ def openCvInit():
 	opencv.setDisplayFilter("FaceDetect")
 	opencv.capture()
 	#worky open cv camera detection
-	photoFileName=""
 	timeout=0
-	while photoFileName=="":
-		try:
-			photoFileName = opencv.recordSingleFrame()
-			sleep(0.1)
-			os.remove(os.getcwd().replace("\\", "/")+"/"+photoFileName)
-		except:pass
+	while not opencvStarted:
 		sleep(1)
 		timeout+=1
 		if timeout>5:break
 	
-	if photoFileName=="":
+	if not opencvStarted:
 		if ScriptType!="RightSide":
 			errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
 		isOpenCvActivated=0
 	else:talkEvent(lang_startingOpenCv)
 
-	
+
 def onOpenCVData(data):
 #####################################################
 # This is opencv functions that do jobs
 #####################################################
+	global opencvStarted
+	if data and not opencvStarted:
+		opencvStarted=1
 	global FaceDetected
 	
 

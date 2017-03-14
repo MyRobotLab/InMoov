@@ -47,6 +47,11 @@ def errorSpokenFunc(errorType,param="0"):
 		
 	if errorType=="OpenCvNoWorky":
 		errorSpokenAlert=lang_OpenCvNoWorky+param
+		
+	if errorType=="NeopixelNoWorky":
+		errorSpokenAlert=lang_NeopixelNoWorky
+		
+		
 	
 		
 	print errorSpokenAlert
