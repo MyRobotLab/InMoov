@@ -6,6 +6,12 @@ def CheckIfRobotCanLaunchAPPS(Needs):
 			break
 	return 1
 	
+def Parse(utfdata):
+	utfdata = urllib2.urlopen(utfdata).read()
+	utfdata = utfdata.replace("&#039;", "'")
+	return utfdata;
+	
+	
 #this function usefull to calculate a maximum average
 def maxAverage(list,howMany):
 	sortedmaxAverage=sorted(list)

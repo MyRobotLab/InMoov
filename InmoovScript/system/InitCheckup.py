@@ -13,7 +13,7 @@ runtime.setLogLevel("WARN")
 
 
 ################################
-# INIT.1 - system dependencies
+# INIT.1 - system dependencies & language pack
 ################################
 
 # libraries import
@@ -26,16 +26,8 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
-
-
-################################
-# INIT.2 - low level
-################################
-
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-
-
 
 # vocal errors
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
@@ -45,7 +37,43 @@ execfile(RuningFolder+'/system/languagePack.py')
 
 
 
+################################
+# INIT.2 - mrl core updater
+################################
 
+#mrl version check
+actualVersion=int(runtime.getVersion()[-4:])
+#mrl too old dude, update it !
+if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')
+currentMrlVersion=0
+iniFile=RuningFolder+'system/updater/currentMrlVersion.ini'
+
+currentMrlVersionCheck = ConfigParser.ConfigParser(allow_no_value = True)
+
+#write current mrl version inside cfg file
+if not os.path.isfile(iniFile):
+	currentMrlVersionCheck.add_section('CLIENT')
+	currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
+	with open(iniFile, 'w') as configfile:
+		currentMrlVersionCheck.write(configfile)
+
+currentMrlVersionCheck.read(iniFile)
+currentMrlVersion=currentMrlVersionCheck.getint('CLIENT', 'currentMrlVersion')
+
+#check if myrobotlab.jar version has changed
+#if yes we install mrl again
+
+if actualVersion!=currentMrlVersion:
+	
+	#update version
+	currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
+	with open(iniFile, 'w') as configfile:
+		currentMrlVersionCheck.write(configfile)
+		
+	#clean up mrl installation
+	os.system('start cmd /c '+os.getcwd().replace("\\", "/")+"/tools/RESET_MRL.bat")
+	runtime.exit()
+	
 
 ################################
 # INIT.3 - services call
@@ -57,24 +85,16 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 		execfile(RuningFolder+'services/'+filename.encode('utf8'))
 		print filename
 
-
-
+		
 ################################
-# INIT.4 - configuration and system health
-################################
-#mrl version check
-if int(runtime.getVersion()[-4:])<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')
-
-	
-################################
-# INIT.5 - skeleton loading
+# INIT.4 - skeleton loading
 ################################
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
 	if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
 
 ################################
-# INIT.6 - ear.addcmmands
+# INIT.5 - ear.addcmmands
 ################################
 #if chatbot loaded we do not load ear.addcommands
 for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
@@ -85,7 +105,7 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
 
 
 ################################
-# INIT.7- inmoov loading
+# INIT.6- inmoov loading
 ################################
 	
 #we launch Inmoov Gestures
@@ -107,7 +127,7 @@ if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(
 
 
 ################################
-# INIT.8 - inmoov APPS - TODO
+# INIT.7 - inmoov APPS - TODO - WIP
 ################################
 
 #we launch Inmoov APPS - GAMES
@@ -118,19 +138,13 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
 ################################
-# INIT.9 - update routines
+# INIT.8 - update routines
 ################################
 
-#v 0.3.5
-try:
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
-except:
-	pass
+execfile(RuningFolder+'/system/updater/updater.py')
 			
 ################################
-# INIT.10 - reade to go
+# INIT.9 - great, inmoov is alive
 ################################
 #first init check
 
