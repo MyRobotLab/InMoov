@@ -1,15 +1,11 @@
-
-# inmoov
-inmoovScript : Merge them all !
-
+Inmoov OS  
+Powered by Myrobotlab  
 
 [DOCUMENTATION]
 
-Copy all to mrl root ( with myrobotlab.jar )
+https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER
+https://github.com/MyRobotLab/inmoov/wiki/
 
 topic : http://myrobotlab.org/content/inmoov-script-merge-them-all
 
 bugs : https://github.com/MyRobotLab/inmoov/issues
-
-[TECHNICAL WIKI]  
-https://github.com/MyRobotLab/inmoov/wiki
