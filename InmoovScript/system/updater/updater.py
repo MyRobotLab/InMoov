@@ -1,5 +1,5 @@
 def CheckVersion():
-	RetourServer=Parse("http://www.myai.cloud/version.html")
+	RetourServer=Parse("https://raw.githubusercontent.com/MyRobotLab/inmoov/master/InmoovScript/system/updater/inmoovOsVersion.ini")
 	#print str(RetourServer)+' '+str(version)
 	if str(RetourServer)==str(version):
 		print "software is OK"
@@ -18,7 +18,7 @@ def dontUpdateMe():
 		talkBlocking(lang_newVersionNoUpdate)
 		
 
-IneedUpdate=1
+IneedUpdate=0
 
 if IneedUpdate:
 
