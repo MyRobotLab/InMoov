@@ -7,9 +7,15 @@ def CheckIfRobotCanLaunchAPPS(Needs):
 	return 1
 	
 def Parse(utfdata):
-	utfdata = urllib2.urlopen(utfdata).read()
-	utfdata = utfdata.replace("&#039;", "'")
-	return utfdata;
+	try:
+		utfdata = urllib2.urlopen(utfdata).read()
+		utfdata = utfdata.replace("&#039;", "'")
+		utfdata = utfdata.decode( "utf8" )
+	except:
+		utfdata=''
+		pass
+	return utfdata
+	
 	
 	
 #this function usefull to calculate a maximum average

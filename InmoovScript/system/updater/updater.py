@@ -1,12 +1,12 @@
+IneedUpdate=0
 def CheckVersion():
-	RetourServer=Parse("https://raw.githubusercontent.com/MyRobotLab/inmoov/master/InmoovScript/system/updater/inmoovOsVersion.ini")
-	#print str(RetourServer)+' '+str(version)
-	if str(RetourServer)==str(version):
-		print "software is OK"
-		#chatBot.getResponse("IAMUPDATED")
+	remoteVersion=Parse("https://raw.githubusercontent.com/MyRobotLab/inmoov/master/InmoovScript/system/updater/inmoovOsVersion.ini")
+	
+	if str(remoteVersion) == str(version) or str(remoteVersion)=='':
+		return False
 	else:
-		chatBot.getResponse("INEEDUPDATE")
-		sleep(3)
+		print "need update"
+		return True
 		
 def updateMe():
 	if IneedUpdate:
@@ -17,10 +17,9 @@ def dontUpdateMe():
 		IneedUpdate=0
 		talkBlocking(lang_newVersionNoUpdate)
 		
+		
 
-IneedUpdate=0
-
-if IneedUpdate:
+if CheckVersion():
 
 		
 	ear.addCommand(lang_newVersionYes, "python", "updateMe")
