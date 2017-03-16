@@ -20,7 +20,11 @@ currentMrlVersion=currentMrlVersionCheck.getint('CLIENT', 'currentMrlVersion')
 #if yes we install mrl again
 
 if actualVersion!=currentMrlVersion:
-	
+	try:
+		SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
+	except:
+		pass
+	r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/update_1024-600.jpg',1)
 	#update version
 	currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
 	with open(iniFile, 'w') as configfile:
