@@ -10,7 +10,6 @@
 
 def sleepModeWakeUp():
 	
-	
 	if isPirActivated:
 			PirControlerArduino.enablePin(PirPin,1)
 			SleepTimer.startClock()
@@ -69,6 +68,7 @@ def sleepModeSleep():
 		
 		
 def welcomeMessage():
+	global RobotIsStarted
 	if isChatbotActivated:
 		if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
 			chatBot.setPredicate("default","topic","default")
@@ -77,7 +77,7 @@ def welcomeMessage():
 			chatBot.getResponse("WAKE_UP")
 	else:
 		talkEvent(lang_ready)
-		
+	RobotIsStarted=1
 		
 def humanDetected():		
 	global SleepTimerAction		

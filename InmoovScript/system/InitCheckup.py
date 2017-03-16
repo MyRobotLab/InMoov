@@ -137,25 +137,31 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
 			execfile(os.path.join(root, name))
 			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
 
-################################
-# INIT.8 - update routines
-################################
-
-execfile(RuningFolder+'/system/updater/updater.py')
 			
 ################################
-# INIT.9 - great, inmoov is alive
+# INIT.8 - great, inmoov is alive
 ################################
 #first init check
+execfile(RuningFolder+'/system/updater/updater.py')
 
-sleepModeWakeUp()
+
+
+if CheckVersion():
+	talkBlocking(lang_newVersion)
+	
+else:
+	sleepModeWakeUp()
+	
+
+
 
 if boot_green:		
 	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
 	sleep(2)
 	StopNeopixelAnimation()
 
-RobotIsStarted=1
+
+
 
 
 
