@@ -43,8 +43,7 @@ execfile(RuningFolder+'/system/languagePack.py')
 
 #mrl version check
 actualVersion=int(runtime.getVersion()[-4:])
-#mrl too old dude, update it !
-if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')
+
 currentMrlVersion=0
 iniFile=RuningFolder+'system/updater/currentMrlVersion.ini'
 
@@ -85,7 +84,8 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 		execfile(RuningFolder+'services/'+filename.encode('utf8'))
 		print filename
 
-		
+#mrl too old dude, update it !
+if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')		
 ################################
 # INIT.4 - skeleton loading
 ################################
