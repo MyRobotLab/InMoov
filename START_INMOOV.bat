@@ -16,7 +16,7 @@ echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
 echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
 echo ------------------------------------------------------
 echo .
-move /y %cd%\InmoovScript\system\updater\myrobotlab.jar %cd%
+move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar
 timeout 2 > NUL
 java -jar myrobotlab.jar -install
 echo ------------------------------------------------------

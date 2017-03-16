@@ -51,6 +51,11 @@ def errorSpokenFunc(errorType,param="0"):
 	if errorType=="NeopixelNoWorky":
 		errorSpokenAlert=lang_NeopixelNoWorky
 		
+	if errorType=="lang_newMRL":
+		errorSpokenAlert=lang_newMRL
+		
+		
+		
 		
 	
 		

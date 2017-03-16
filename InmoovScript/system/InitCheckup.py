@@ -70,7 +70,8 @@ if actualVersion!=currentMrlVersion:
 		currentMrlVersionCheck.write(configfile)
 		
 	#clean up mrl installation
-	os.system('start cmd /c '+os.getcwd().replace("\\", "/")+"/tools/RESET_MRL.bat")
+	errorSpokenFunc('lang_newMRL')
+	sleep(3)
 	runtime.exit()
 	
 
