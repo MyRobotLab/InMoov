@@ -11,8 +11,6 @@ global VoiceError
 VoiceError=0
 try:
 	#subconsciousMouth is an always worky english voice used to diagnostic
-	subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-	subconsciousMouth.setVoice("cmu-slt-hsmm")
 	#inmoov mouth service
 	i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
 	

@@ -12,11 +12,28 @@ echo ------------------------------------------------------
 del myrobotlab.log
 echo .
 echo ------------------------------------------------------
-echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
-echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
+echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
 echo .
 move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar
+if not exist %cd%\repo.json (
+RMDIR /S /Q .myrobotlab
+RMDIR /S /Q haarcascades
+RMDIR /S /Q hogcascades
+RMDIR /S /Q lbpcascades
+RMDIR /S /Q libraries
+RMDIR /S /Q pythonModules
+RMDIR /S /Q repo
+RMDIR /S /Q resource
+RMDIR /S /Q tessdata
+del ivychain.xml
+del myrobotlab.log
+del repo.json
+)
+echo ------------------------------------------------------
+echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
+echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
+echo ------------------------------------------------------
 timeout 2 > NUL
 java -jar myrobotlab.jar -install
 echo ------------------------------------------------------
