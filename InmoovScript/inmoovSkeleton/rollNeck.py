@@ -33,7 +33,7 @@ except:
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
-if isRollNeckActivated==1 and (ScriptType!="NoArduino"):
+if isRollNeckActivated==1 and (ScriptType!="NoArduino" or ScriptType=="Virtual"):
 
 # ##############################################################################
 # 								ARDUINO CHECK

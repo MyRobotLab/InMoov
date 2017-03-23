@@ -29,7 +29,7 @@ except:
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
-if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
+if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or ScriptType=="Virtual"):
 	if RightPortIsConnected:
 		talkEvent(lang_startingRightHand)
 		

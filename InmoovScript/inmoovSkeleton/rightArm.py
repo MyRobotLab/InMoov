@@ -29,7 +29,7 @@ except:
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
-if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
+if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or ScriptType=="Virtual"):
 	if RightPortIsConnected:
 		talkEvent(lang_startingRightArm)
 		rightArm = Runtime.create("i01.rightArm", "InMoovArm")

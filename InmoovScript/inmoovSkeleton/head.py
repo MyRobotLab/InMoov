@@ -40,7 +40,7 @@ except:
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
-if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
+if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual"):
 	if LeftPortIsConnected:
 		talkEvent(lang_startingHead)
 		head = Runtime.create("i01.head","InMoovHead")

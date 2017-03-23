@@ -26,7 +26,7 @@ except:
 # 								SERVO FUNCTIONS
 # ##############################################################################
 
-if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
+if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual"):
 	if LeftPortIsConnected==True:
 		talkEvent(lang_startingLeftArm)
 		

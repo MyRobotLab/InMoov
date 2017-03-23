@@ -151,7 +151,10 @@ def setRobotLanguage():
 		mouth.setRate(-2)
 	
 	try:
-		mouth.setLanguage(tmplanguage)
+		if MyvoiceTTS=="MarySpeech" and MyLanguage=="en":
+			print ""
+		else:
+			mouth.setLanguage(tmplanguage)
 		if EarEngine!="Sphinx":
 			i01.ear.setLanguage(MyLanguage)
 	except:
