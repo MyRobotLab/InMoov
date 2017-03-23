@@ -78,15 +78,20 @@ def dontUpdateMe():
 	
 	
 #hard coded forced patch v 0.3.5
-try:
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackPoint.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackHumans.py")
-except:
-	pass
+
+def RemoveFile(file):
+	try:
+		os.remove(file)
+	except:
+		pass
+	
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackPoint.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackHumans.py")
+
 	#clean up .default.config
 for root, subdirs, files in os.walk(RuningFolder):
 	for name in files:
