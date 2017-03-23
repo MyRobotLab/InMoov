@@ -9,7 +9,7 @@
 print "MRL version : ",runtime.getVersion()[-4:]
 print "Inmoov version : ",version
 print "Starting..."
-runtime.setLogLevel("WARN")
+
 
 
 ################################
@@ -28,7 +28,10 @@ execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-
+if DEBUG:
+	runtime.setLogLevel("INFO")
+else:
+	runtime.setLogLevel("WARN")
 # vocal errors
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
@@ -49,7 +52,7 @@ if LoadingPicture:
 # INIT.2 - mrl core updater
 ################################
 
-execfile(RuningFolder+'/system/updater/mrl_updater.py')
+#execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 ################################
 # INIT.3 - services call
@@ -62,7 +65,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 		print filename
 
 #mrl too old dude, update it !
-if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')		
+#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')		
 ################################
 # INIT.4 - skeleton loading
 ################################
@@ -123,14 +126,14 @@ execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
 
-if CheckVersion():
-	talkBlocking(lang_newVersion)
+if CheckVersion() and isChatbotActivated:
+	r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
+	chatBot.getResponse("SYSTEM_NEW_VERSION")
+#	
 	
 else:
 	sleepModeWakeUp()
 	
-
-
 
 if boot_green:		
 	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)

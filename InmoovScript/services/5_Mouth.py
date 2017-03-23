@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 # ##############################################################################
 # 								MOUTH SERVICE FILE
 # ##############################################################################
@@ -13,14 +14,13 @@ try:
 	#subconsciousMouth is an always worky english voice used to diagnostic
 	#inmoov mouth service
 	i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
-	
+			
 except:
 	errorSpokenFunc('MyvoiceType')
 	VoiceError=1
 	pass
 
 mouth=i01.mouth
-
 
 
 
@@ -33,21 +33,45 @@ python.subscribe(mouth.getName(),"publishEndSpeaking")
 # ##############################################################################
 # MRL SERVICE TWEAKS
 # ##############################################################################
+global lastValue
+lastValue=0
+#analog pin listener use 
+def publishMouthcontrolPinLeft(pins):
+	global AudioInputValues
+	global AudioInputRawValue
+
+	for pin in range(0, len(pins)):
+		
+		#mouth control listener
+		if isHeadActivated:
+			if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
+				
+			if AudioSignalProcessing:
+				if pins[pin].value>minAudioValue:
+					head.jaw.setVelocity(random.uniform(80,120))
+					if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
+		
+					
+
+
 
 #functions to call about robot speak
 def talk(data):
 	if data:
 		if data[0:2]=="l ":data=data.replace("l ", "l'")
-		mouth.speak(unicode(data,'utf-8'))
+		if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+		mouth.speak(data)
 		
 def talkBlocking(data):
 	if data:
 		if data[0:2]=="l ":data=data.replace("l ", "l'")
-		mouth.speakBlocking(unicode(data,'utf-8'))
+		if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+		mouth.speakBlocking(data)
 		
 def talkEvent(data):
 	if IsMute==0:
-		subconsciousMouth.speakBlocking(unicode(data,'utf-8'))
+		if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+		subconsciousMouth.speakBlocking(data)
 
 #stop autolisten
 def onEndSpeaking(text):
@@ -57,33 +81,39 @@ def onEndSpeaking(text):
 	if RobotIsStarted==1:
 		ear.resumeListening()
 		MoveHeadTimer.stopClock()
+		#StopNeopixelAnimation()
 		
 		RobotCanMoveHeadWhileSpeaking=1
 	if AudioSignalProcessing:
 		try:
 			left.disablePin(AnalogPinFromSoundCard)
-			head.jaw.setVelocity(40)
+			head.jaw.setVelocity(20)
 			head.jaw.moveTo(0)
+			#head.jaw.setVelocity(200)
+			#head.jaw.moveTo(0)
 		except:
 			print "onEndSpeaking error"
 			pass
 	
 	
+	
 def onStartSpeaking(text):
-			
+	
+	
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=1
 	ear.pauseListening()
 	if AudioSignalProcessing:
 		try:
+			
 			left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-		
+			
 		except:
 			print "onStartSpeaking error"
 			pass
 	if RobotIsStarted:
 		MoveHeadTimer.startClock()
-		
+		#PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
 		
 
 
@@ -109,15 +139,25 @@ def CheckMaryTTSVoice(voiceCheck):
 def setRobotLanguage():
 	global LanguageError
 	LanguageError=0
-	if MyLanguage!="en":
-		try:
-			mouth.setLanguage(MyLanguage)
-			if EarEngine!="Sphinx":
-				i01.ear.setLanguage(MyLanguage)
-		except:
-			errorSpokenFunc('MyLanguage')
-			LanguageError=1
-			pass
+	tmplanguage=MyLanguage
+	if MyvoiceTTS=="VoiceRss":
+		i01.mouth.setKey(VoiceRssApi)
+		if tmplanguage=="fr":tmplanguage="fr-fr"
+		if tmplanguage=="en":tmplanguage="en-us"
+		if tmplanguage=="es":tmplanguage="es-es"
+		if tmplanguage=="cn":tmplanguage="zh-cn"
+		if tmplanguage=="de":tmplanguage="de-de"
+		if tmplanguage=="jp":tmplanguage="jp-jp"
+		mouth.setRate(-2)
+	
+	try:
+		mouth.setLanguage(tmplanguage)
+		if EarEngine!="Sphinx":
+			i01.ear.setLanguage(MyLanguage)
+	except:
+		errorSpokenFunc('MyLanguage')
+		LanguageError=1
+		pass
 	
 			
 def checkAndDownloadVoice():				
@@ -145,6 +185,7 @@ def setCustomVoice():
 #we start raw Inmoov ear and mouth service
 i01.startMouth()
 #set user language
+
 setRobotLanguage()
 
 #check and update marytts voices	
@@ -155,6 +196,14 @@ if not IuseLinux:
 setCustomVoice()
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
 
+
+try:
+	mouth.speak(",")
+except:
+	errorSpokenFunc('lang_VoiceRssNoWorky')
+	VoiceError=1
+	mouth=subconsciousMouth
+	pass
 
 if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
 	subconsciousMouth=mouth

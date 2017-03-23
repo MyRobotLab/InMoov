@@ -25,16 +25,13 @@ isChatbotActivated=0
 
 def onRecognized(text):
 	#RobotneedUpdate : fix about first question do you want to update
-	global RobotneedUpdate
+	
 
 	if DEBUG==1:
 		print "onRecognized : ",text,RobotneedUpdate
-	if isChatbotActivated and RobotIsStarted and not RobotIsSleeping and not RobotneedUpdate:
+	if isChatbotActivated and RobotIsStarted and not RobotIsSleeping:
 		chatBot.getResponse(text.replace("'", " ").replace("-", " "))
-		
-	if (text=="no" or text=="yes") and RobotneedUpdate:
-		print "test"
-		RobotneedUpdate=0
+	
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS

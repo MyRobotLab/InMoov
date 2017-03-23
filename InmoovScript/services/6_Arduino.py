@@ -50,21 +50,7 @@ def CheckArduinos(Card,Port,slave=0):
 				print "Slave Arduino ",Port," OK"
 				return True
 			
-#analog pin listener
-def publishPinLeft(pins):
-	global AudioInputValues
-	
-	for pin in range(0, len(pins)):
-		
-		#mouth control listener
-		if isHeadActivated:
-			if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
-				
-			if AudioSignalProcessing:
-				if pins[pin].value>minAudioValue:
-					head.jaw.setVelocity(-1)
-					if not head.jaw.isMoving():head.jaw.moveTo(pins[pin].value)
-					
+
 				
 
 	

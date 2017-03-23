@@ -24,7 +24,7 @@ if actualVersion!=currentMrlVersion:
 		SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
 	except:
 		pass
-	r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/update_1024-600.jpg',1)
+	r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_1024-600.jpg',1)
 	#update version
 	currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
 	with open(iniFile, 'w') as configfile:
@@ -34,5 +34,7 @@ if actualVersion!=currentMrlVersion:
 	os.remove(os.getcwd().replace("\\", "/")+"/repo.json")
 	errorSpokenFunc('lang_newMRL')
 	sleep(5)
+	ImageDisplay.exitFS()
+	ImageDisplay.closeAll()
 	runtime.exit()
 	

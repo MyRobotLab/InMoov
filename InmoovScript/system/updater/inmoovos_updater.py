@@ -1,35 +1,80 @@
+#inmoov os check if there is a new version ( stable or beta )
 def CheckVersion():
 	global RobotneedUpdate
-	remoteVersion=Parse("https://raw.githubusercontent.com/MyRobotLab/inmoov/master/InmoovScript/system/updater/inmoovOsVersion.ini")
-	print version,remoteVersion
+	global target
+	global branch
+	global RobotIsStarted
+	
+	branch="master"
+	if BetaVersion:branch="develop"
+	
+	#download remote information
+	urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InmoovScript/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
+	remoteVersion=""
+	#read downloaded file
+	BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
+	BasicConfig.read(RuningFolder+'system/updater/updater.ini')
+	remoteVersion=BasicConfig.get('updater', 'version')
+	targetstable=BasicConfig.get('updater', 'targetstable')
+	targetbeta=BasicConfig.get('updater', 'targetbeta')
+	#read myrobotlab.jar url
+	target=targetstable
+	if BetaVersion:target=targetbeta
+	
+	
 	if str(remoteVersion) == str(version) or str(remoteVersion)=='':
 		return False
 	else:
 		print "need update"
 		RobotneedUpdate=1
+		RobotIsStarted=1
 		return True
 		
+
+talkDownloadPercent = Runtime.start("talkDownloadPercent","Clock")
+talkDownloadPercent.setInterval(5000)
+global percentDownload
+percentDownload=0
+
+def talkDownloadPercentFunc(timedata):
+	chatBot.getResponse(str(percentDownload) + " SYSTEM_PERCENT")
+	
+	
+talkDownloadPercent.addListener("pulse", python.name, "talkDownloadPercentFunc")
+
+
+
+
+def dlProgress(count, blockSize, totalSize):
+		global percentDownload
+		percentDownload=(int(count * blockSize * 100 / totalSize))
+	
 def updateMe():
+	
+	
+	global RobotneedUpdate
 	if RobotneedUpdate:
-		#not implemented yet
-		#talkBlocking(lang_newVersionDownloadStart)
-		sleepModeWakeUp()
+		RobotneedUpdate=0
+		print "start"
+		PlayNeopixelAnimation("Theater Chase", 0, 0, 255, 5)
+		r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_1024-600.jpg',1)
+		sleep(2)
+		talkDownloadPercent.startClock()
+		urlretrieve(target, RuningFolder+'system/updater/myrobotlab-'+branch+".jar",reporthook=dlProgress)
+		sleep(2)
+		talkDownloadPercent.stopClock()
+		chatBot.getResponse("SYSTEM_DOWNLOAD_OK")
+		StopNeopixelAnimation()
+		sleep(3)
+		runtime.exit()
 
 def dontUpdateMe():
 	
 	if RobotneedUpdate:
-		talkBlocking(lang_newVersionNoUpdate)
+		global RobotneedUpdate
+		RobotneedUpdate=0
+		sleep(2)
 		sleepModeWakeUp()
-		
-		
-
-
-
-		
-ear.addCommand(lang_newVersionYes, "python", "updateMe")
-ear.addCommand(lang_newVersionNo, "python", "dontUpdateMe")
-	
-	
 	
 	
 #hard coded forced patch v 0.3.5
@@ -37,6 +82,9 @@ try:
 	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
 	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
 	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackPoint.py")
+	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackHumans.py")
 except:
 	pass
 	#clean up .default.config

@@ -36,6 +36,10 @@ ear.addCommand(u"détacher les yeux", "i01.head.eyeY", "detach")
 ear.addCommand(u"regarde sur ta droite", "python", "lookrightside")
 ear.addCommand(u"regarde sur ta gauche", "python", "lookleftside")
 ear.addCommand(u"regarde au milieu", "python", "lookinmiddle")
+ear.addCommand(u"cherche un humain", "python", "trackHumans")
+ear.addCommand(u"arrête de chercher", "python", "stopTracking")
+ear.addCommand(u"suis du regard ce point", "python", "trackPoint")
+ear.addCommand(u"arrête de suivre du regard", "python", "stopTracking")
 
 # TORSO - inmoovGestures\minimalTorso.py
 ear.addCommand(u"détacher le torse", "i01.torso", "detach")

@@ -3,6 +3,7 @@
 # ##############################################################################
 
 def teststomach():
+	sleep(1)
 	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
 	i01.setTorsoVelocity(20,20,20)
 	i01.moveTorso(90,90,90)
@@ -10,7 +11,6 @@ def teststomach():
 	i01.moveTorso(45,90,90)
 	sleep(4)
 	i01.moveTorso(90,90,90)
-	PlayNeopixelAnimation("Flash Random", 0, 0, 255, 1)
 	sleep(2)
 	i01.moveTorso(135,90,90)
 	sleep(4)

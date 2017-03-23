@@ -54,6 +54,9 @@ def errorSpokenFunc(errorType,param="0"):
 	if errorType=="lang_newMRL":
 		errorSpokenAlert=lang_newMRL
 		
+	if errorType=="lang_VoiceRssNoWorky":	
+		errorSpokenAlert=lang_VoiceRssNoWorky
+		
 		
 		
 		

@@ -12,30 +12,52 @@ def CheckFileExist(File):
 	
 CheckFileExist(RuningFolder + 'Inmoov')
 LaunchSwingGui=True
+
+
+
+		
+BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
+BasicConfig.read(RuningFolder+'Inmoov.config')
+
+#file patch
+configNeedUpdate=0
 try:
-	#basic config parse
-	BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-	BasicConfig.read(RuningFolder+'Inmoov.config')
+    VoiceRssApi = BasicConfig.get('TTS', 'VoiceRssApi')
+except:
+	BasicConfig.set('TTS', 'VoiceRssApi', 'xxx')
+	configNeedUpdate=1
+	pass
+	
+try:
+    VoiceRssApi = BasicConfig.get('GENERAL', 'BetaVersion')
+except:
+	BasicConfig.set('GENERAL', 'BetaVersion', 0)
+	configNeedUpdate=1
+	pass
+	
+	
+try:
+    if BasicConfig.get('VOCAL', 'EarInterpretEngine')!='':
+		BasicConfig.remove_option('VOCAL', 'EarInterpretEngine')
+		configNeedUpdate=1
+except:
+	pass	
+	
+if configNeedUpdate:
+	with open(RuningFolder+'Inmoov.config', 'wb') as f:
+		BasicConfig.write(f)
 
-	# CONFIG FILE UPDATE ( if we add prameters and you have an old file )
-	#if not BasicConfig.has_option('ARDUINO','MyNeopixelPort'):
-	#	config= ConfigParser.RawConfigParser()
-	#	config.read(RuningFolder+'Inmoov.config')
-	#	config.set('ARDUINO','MyNeopixelPort',0)
-	#	with open(RuningFolder+'Inmoov.config', 'wb') as configfile:
-	#		config.write(configfile)
-
+try:
 	# PARSE THE CONFIG FILE
 	ScriptType=BasicConfig.get('MAIN', 'ScriptType')
 	MyRightPort=BasicConfig.get('ARDUINO', 'MyRightPort')
 	MyLeftPort=BasicConfig.get('ARDUINO', 'MyLeftPort')
 	ForceArduinoIsConnected=BasicConfig.getboolean('ARDUINO', 'ForceArduinoIsConnected')
 	#read personnal config
-
 	MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
-	MyLanguage=BasicConfig.get('TTS', 'MyLanguage').lower()
+	MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
+	VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
 	MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
-	
 	DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 	IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
 	EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
@@ -43,6 +65,7 @@ try:
 	StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
 	IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
 	LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
+	BetaVersion=BasicConfig.getboolean('GENERAL', 'BetaVersion')
 
 
 except:

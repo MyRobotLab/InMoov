@@ -86,17 +86,17 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'),100)
 		head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'),100)
 		head.attach()
-		head.jaw.setSpeed(1.0)
+		
 		
 		
 		head.rothead.enableAutoAttach(1)
 		head.neck.enableAutoAttach(1)
-		head.jaw.enableAutoAttach(1)
+		head.jaw.enableAutoAttach(0)
 		head.rothead.enableAutoDetach(0)
 		head.neck.enableAutoDetach(0)
 		head.jaw.enableAutoDetach(0)
-	
-		
+		head.jaw.attach()
+		head.jaw.setVelocity(50)
 		head.rest()
 		
 # ##############################################################################
@@ -118,7 +118,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 		
 		#please set aref
 		if AudioSignalProcessing:
-			left.addListener("publishPinArray","python","publishPinLeft")
+			left.addListener("publishPinArray","python","publishMouthcontrolPinLeft")
 			AudioSignalProcessing=False
 			MouthControlActivated=False
 			AudioSignalProcessingCalibration=1
@@ -151,6 +151,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full"):
 				talkBlocking(lang_MouthSyncronisationOk)
 				
 			print maxAudioValue,minAudioValue
+			
+		
+		#tracking
+		if opencvStarted:
+			#i01.startEyesTracking(MyLeftPort,22,24)
+			#i01.startHeadTracking(MyLeftPort)
+			talkBlocking(lang_TrackingStarted)	
 		
 		
 	else:

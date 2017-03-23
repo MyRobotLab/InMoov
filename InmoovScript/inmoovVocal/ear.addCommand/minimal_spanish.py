@@ -43,6 +43,11 @@ ear.addCommand(u"desconectar los ojos", "i01.head.eyeY", "detach")
 ear.addCommand(u"Mira a la derecha", "python", "lookrightside")
 ear.addCommand(u"Mira a la izquierda", "python", "lookleftside")
 ear.addCommand(u"Mira al centro", "python", "lookinmiddle")
+#to translate
+#ear.addCommand(u"search humans", "python", "trackHumans")
+#ear.addCommand(u"quit search", "python", "stopTracking")
+#ear.addCommand(u"track", "python", "trackPoint")
+#ear.addCommand(u"freeze track", "python", "stopTracking")
 
 # TORSO - inmoovGestures\minimalTorso.py
 ear.addCommand("disconnect torso", "i01.torso", "detach")

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: chatBot.aiml -->
   <!-- Author: Gael Langevin -->
@@ -8,13 +8,18 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Anthony Gallot -->
-  <!-- Last modified: Mars 1, 2017 -->
+  <!-- Last modified: Mars 22, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
+  
+     <!-- initialisaion  -->
+	 <!-- updater  -->
+	 <!-- gesture  -->
+  
+  
     <category>
     <pattern>SAY *</pattern>
     <template>
@@ -22,7 +27,7 @@
     </template>
   </category>
   
-   <!-- initialisaion routine -->
+   <!-- initialisaion  -->
   
   <category>
     <pattern>FIRST_INIT</pattern>
@@ -144,6 +149,89 @@
     </category>
   </topic>
   <!-- end initialisaion routine -->
+  
+  <!-- updater  -->
+  
+  <category>
+    <pattern>SYSTEM_NEW_VERSION</pattern>
+    <template>
+       <think><set name="topic">updater</set></think>
+	   Alert, new Inmoov operating system version available, if you want I update it , say yes, or no
+	   </template>
+  </category>
+  
+  <topic name="updater">
+  
+	
+    <category>
+      <pattern># YES #</pattern>
+      <that># say yes #</that>
+      <template>
+       <think>
+         <set name="topic">default</set>
+        </think>
+			<li>
+			Starting the download, please wait.
+			</li>
+	<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob>		
+	</template>
+    </category>
+	
+     <category>
+      <pattern># NO #</pattern>
+      <that># say yes #</that>
+      <template>
+	  <think>
+         <set name="topic">default</set>
+        </think>
+	OK, as you want, next time maybe
+		<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob>	
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># say yes #</that>
+      <template>Please, awnser my question, it is important, say yes, or no</template>
+    </category>
+		
+  </topic>
+  
+    <category>
+    <pattern>* SYSTEM_PERCENT</pattern>
+    <template>
+      <li>
+        <star /> percent.
+      </li>
+    </template>
+  </category>
+  
+  
+      <category>
+    <pattern>SYSTEM_DOWNLOAD_OK</pattern>
+    <template>
+      <li>
+       Download ok, I will shutdown. please restart me.
+      </li>
+    </template>
+  </category>
+  
+    <!-- end updater  -->
+  
+	<!-- gesture  -->
+  
   
   <category>
     <pattern>WAKE_UP</pattern>
