@@ -30,6 +30,19 @@ CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 isNeopixelActivated=0
+
+
+
+try:
+    flash_when_speak = ThisServicePartConfig.getboolean('BASIC_REACTIONS', 'flash_when_speak')
+except:
+	flash_when_speak=0
+	ThisServicePartConfig.set('BASIC_REACTIONS', 'flash_when_speak', 0)
+	with open(ThisServicePart+'.config', 'wb') as f:
+		ThisServicePartConfig.write(f)
+	pass
+
+
 try:
 	isNeopixelActivated=ThisServicePartConfig.getboolean('MAIN', 'isNeopixelActivated') 
 	masterArduinoPort=ThisServicePartConfig.get('MAIN', 'NeopixelMasterPort')

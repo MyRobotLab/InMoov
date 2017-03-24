@@ -81,7 +81,8 @@ def onEndSpeaking(text):
 	if RobotIsStarted==1:
 		ear.resumeListening()
 		MoveHeadTimer.stopClock()
-		#StopNeopixelAnimation()
+		if flash_when_speak:
+			StopNeopixelAnimation()
 		
 		RobotCanMoveHeadWhileSpeaking=1
 	if AudioSignalProcessing:
@@ -99,7 +100,6 @@ def onEndSpeaking(text):
 	
 def onStartSpeaking(text):
 	
-	
 	global RobotIsActualySpeaking
 	RobotIsActualySpeaking=1
 	ear.pauseListening()
@@ -113,7 +113,8 @@ def onStartSpeaking(text):
 			pass
 	if RobotIsStarted:
 		MoveHeadTimer.startClock()
-		#PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+		if flash_when_speak:		
+			PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
 		
 
 
