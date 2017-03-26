@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								SWINGGUI SERVICE
+#                 SWINGGUI SERVICE
 # ##############################################################################
 # 
 
@@ -8,8 +8,8 @@
 # ##############################################################################
 
 if LaunchSwingGui:
-	try:
-		SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
-		GUIService=Runtime.createAndStart("GUIService", "GUIService")
-	except:
-		pass
+  try:
+    SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
+    GUIService=Runtime.createAndStart("GUIService", "GUIService")
+  except:
+    pass

@@ -1,11 +1,11 @@
 # ##############################################################################
-#						*** OPEN CV ***
+#            *** OPEN CV ***
 # ##############################################################################
 
 
 
 # ##############################################################################
-# 							PERSONNAL PARAMETERS
+#               PERSONNAL PARAMETERS
 # ##############################################################################  
   
 #read current service part config based on file name
@@ -21,7 +21,7 @@ CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex')
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
 # ##############################################################################
-# 								SERVICE START
+#                 SERVICE START
 # ##############################################################################
 
 
@@ -31,39 +31,39 @@ python.subscribe(opencv.getName(),"publishOpenCVData")
 
 
 def openCvInit():
-	global opencvStarted	
-	opencvStarted=0
-	if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
-	opencv.setCameraIndex(CameraIndex)
-	opencv.removeFilters()
-	opencv.addFilter("PyramidDown")
-	opencv.addFilter("Gray")
-	opencv.addFilter("FaceDetect")
-	opencv.setDisplayFilter("FaceDetect")
-	opencv.capture()
-	#worky open cv camera detection
-	timeout=0
-	while not opencvStarted:
-		sleep(1)
-		timeout+=1
-		if timeout>5:break
-	
-	if not opencvStarted:
-		if ScriptType!="RightSide":
-			errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
-		isOpenCvActivated=0
-	else:talkEvent(lang_startingOpenCv)
+  global opencvStarted  
+  opencvStarted=0
+  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
+  opencv.setCameraIndex(CameraIndex)
+  opencv.removeFilters()
+  opencv.addFilter("PyramidDown")
+  opencv.addFilter("Gray")
+  opencv.addFilter("FaceDetect")
+  opencv.setDisplayFilter("FaceDetect")
+  opencv.capture()
+  #worky open cv camera detection
+  timeout=0
+  while not opencvStarted:
+    sleep(1)
+    timeout+=1
+    if timeout>5:break
+  
+  if not opencvStarted:
+    if ScriptType!="RightSide":
+      errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
+    isOpenCvActivated=0
+  else:talkEvent(lang_startingOpenCv)
 
 
 def onOpenCVData(data):
 #####################################################
 # This is opencv functions that do jobs
 #####################################################
-	global opencvStarted
-	if data and not opencvStarted:
-		opencvStarted=1
-	global FaceDetected
-	
+  global opencvStarted
+  if data and not opencvStarted:
+    opencvStarted=1
+  global FaceDetected
+  
 
 if isOpenCvActivated:openCvInit()
-	
+  

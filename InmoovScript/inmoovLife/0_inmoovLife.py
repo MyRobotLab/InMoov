@@ -1,12 +1,12 @@
 # ##############################################################################
-#						*** INMOOV LIFE ***
+#            *** INMOOV LIFE ***
 # ##############################################################################
 
 
 
   
 # ##############################################################################
-# 							PERSONNAL PARAMETERS
+#               PERSONNAL PARAMETERS
 # ##############################################################################  
 
 #read current skeleton part config
@@ -22,4 +22,4 @@ HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
 HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
 global RobotCanMoveHeadWhileSpeaking
 RobotCanMoveHeadWhileSpeaking=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
-	
+  
