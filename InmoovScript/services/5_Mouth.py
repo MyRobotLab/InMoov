@@ -14,13 +14,16 @@ try:
 	#subconsciousMouth is an always worky english voice used to diagnostic
 	#inmoov mouth service
 	i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
-			
+	mouth=i01.mouth
+	mouth.speak(",")
+	
 except:
+	mouth=subconsciousMouth
 	errorSpokenFunc('MyvoiceType')
 	VoiceError=1
 	pass
 
-mouth=i01.mouth
+
 
 
 
