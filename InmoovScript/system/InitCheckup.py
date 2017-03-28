@@ -15,6 +15,9 @@ print "Starting..."
 ################################
 # INIT.1 - system dependencies & language pack
 ################################
+#subconsciousMouth for diagnose
+subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
+subconsciousMouth.setVoice("cmu-slt-hsmm")
 
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')
@@ -26,22 +29,23 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
+#inmoov.fr webgui
+execfile(RuningFolder+'/system/inmoov.fr.py')
+
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 if DEBUG:
   runtime.setLogLevel("INFO")
 else:
   runtime.setLogLevel("WARN")
-# vocal errors
-execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
 
+# vocal errors
+execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
-#subconsciousMouth for diagnose
-subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("cmu-slt-hsmm")
+
 
 
 ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")

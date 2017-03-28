@@ -2,6 +2,12 @@
 #                 CONFIGPARSER FILE
 # ##############################################################################
 
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('config',RuningFolder+"Inmoov.config")
+# ##############################################################################
+
+
 #shared parse function
 def CheckFileExist(File):
   global RobotIsErrorMode
@@ -14,8 +20,7 @@ CheckFileExist(RuningFolder + 'Inmoov')
 LaunchSwingGui=True
 
 
-
-    
+   
 BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
 BasicConfig.read(RuningFolder+'Inmoov.config')
 
@@ -29,7 +34,7 @@ except:
   pass
   
 try:
-    BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
+    VoiceRssApi = BasicConfig.get('GENERAL', 'BetaVersion')
 except:
   BasicConfig.set('GENERAL', 'BetaVersion', 1)
   configNeedUpdate=1
@@ -58,6 +63,8 @@ try:
   MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
   VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
   MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
+  if MyvoiceType[0]=="[":
+    MyvoiceType=MyvoiceType.split(']', 1 )[1]
   DEBUG=BasicConfig.getboolean('MAIN', 'debug')
   IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
   EarEngine=BasicConfig.get('VOCAL', 'EarEngine')

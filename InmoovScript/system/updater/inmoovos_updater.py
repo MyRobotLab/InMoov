@@ -9,17 +9,20 @@ def CheckVersion():
   if BetaVersion:branch="develop"
   
   #download remote information
-  urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InmoovScript/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
   remoteVersion=""
-  #read downloaded file
-  BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-  BasicConfig.read(RuningFolder+'system/updater/updater.ini')
-  remoteVersion=BasicConfig.get('updater', 'version')
-  targetstable=BasicConfig.get('updater', 'targetstable')
-  targetbeta=BasicConfig.get('updater', 'targetbeta')
-  #read myrobotlab.jar url
-  target=targetstable
-  if BetaVersion:target=targetbeta
+  try:
+    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InmoovScript/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
+    #read downloaded file
+    BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
+    BasicConfig.read(RuningFolder+'system/updater/updater.ini')
+    remoteVersion=BasicConfig.get('updater', 'version')
+    targetstable=BasicConfig.get('updater', 'targetstable')
+    targetbeta=BasicConfig.get('updater', 'targetbeta')
+    #read myrobotlab.jar url
+    target=targetstable
+    if BetaVersion:target=targetbeta
+  except:
+    pass
   
   
   if str(remoteVersion) == str(version) or str(remoteVersion)=='':

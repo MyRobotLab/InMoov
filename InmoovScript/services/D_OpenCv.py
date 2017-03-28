@@ -3,13 +3,17 @@
 # ##############################################################################
 
 
-
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
   
 #read current service part config based on file name
 ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('opencv',ThisServicePart+'.config')
+# ##############################################################################
 
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
