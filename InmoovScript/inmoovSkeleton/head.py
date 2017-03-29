@@ -11,6 +11,12 @@
 isHeadActivated=0  
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('head',ThisServicePart+'.config')
+# ##############################################################################
+
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()

@@ -11,6 +11,12 @@
   
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('torso',ThisServicePart+'.config')
+# ##############################################################################
+
 isTorsoActivated=0
 try:
   CheckFileExist(ThisSkeletonPart)

@@ -26,6 +26,11 @@
 #read current service part config based on file name
 ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
 
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('Neopixel',ThisServicePart+'.config')
+# ##############################################################################
+
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')

@@ -11,6 +11,12 @@
 #read current skeleton part config
 isLeftArmActivated=0
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('leftarm',ThisServicePart+'.config')
+# ##############################################################################
+
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()

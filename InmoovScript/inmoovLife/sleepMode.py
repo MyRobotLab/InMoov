@@ -37,7 +37,8 @@ def sleepModeWakeUp():
       head.neck.setVelocity(50)
       head.neck.rest()
   else:
-     welcomeMessage()
+    if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
+    welcomeMessage()
   
   global RobotIsSleeping
   RobotIsSleeping=0
@@ -69,6 +70,7 @@ def sleepModeSleep():
     
 def welcomeMessage():
   global RobotIsStarted
+  
   if isChatbotActivated:
     if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
       chatBot.setPredicate("default","topic","default")

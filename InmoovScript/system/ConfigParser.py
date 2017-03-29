@@ -34,7 +34,7 @@ except:
   pass
   
 try:
-    VoiceRssApi = BasicConfig.get('GENERAL', 'BetaVersion')
+    BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
 except:
   BasicConfig.set('GENERAL', 'BetaVersion', 1)
   configNeedUpdate=1

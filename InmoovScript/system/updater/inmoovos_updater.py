@@ -73,8 +73,8 @@ def updateMe():
 
 def dontUpdateMe():
   
+  global RobotneedUpdate
   if RobotneedUpdate:
-    global RobotneedUpdate
     RobotneedUpdate=0
     sleep(2)
     sleepModeWakeUp()
