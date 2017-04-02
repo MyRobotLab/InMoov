@@ -12,10 +12,10 @@
 #read current skeleton part config
 inmoovLifeConfigFile=inspect.getfile(inspect.currentframe()).replace('.py','')
 
-# ##############################################################################
+###############################################################################
 #                 webgui sync
-getInmoovFrParameter('inmoovlife',ThisServicePart+'.config')
-# ##############################################################################
+getInmoovFrParameter('inmoovlife',inmoovLifeConfigFile+'.config')
+###############################################################################
 
 CheckFileExist(inmoovLifeConfigFile)
 inmoovLifeConfig = ConfigParser.ConfigParser()

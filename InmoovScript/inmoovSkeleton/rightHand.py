@@ -12,10 +12,11 @@
 isRightHandActivated=0
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
 
-# ##############################################################################
+###############################################################################
 #                 webgui sync
-getInmoovFrParameter('righthand',ThisServicePart+'.config')
-# ##############################################################################
+getInmoovFrParameter('rightHand',ThisSkeletonPart+'.config')
+###############################################################################
+
 
 try:
   CheckFileExist(ThisSkeletonPart)

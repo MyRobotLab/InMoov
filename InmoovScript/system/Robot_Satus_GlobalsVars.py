@@ -22,6 +22,10 @@ global RobotIsSleeping
 RobotIsSleeping=0
 global RobotneedUpdate
 RobotneedUpdate=0
+global batterieLevel
+batterieLevel=100
+global iHaveInmoovFrKey
+iHaveInmoovFrKey=0
 
 #system values
 #used by mouthcontrol audio signal processing

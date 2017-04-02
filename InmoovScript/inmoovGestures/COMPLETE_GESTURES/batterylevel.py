@@ -1,4 +1,3 @@
 def batterylevel():
-  global level
-  print(level)
-  i01.mouth.speak(str(level)+"percent")
+  print(batterieLevel)
+  i01.mouth.speak(str(batterieLevel)+" percent")

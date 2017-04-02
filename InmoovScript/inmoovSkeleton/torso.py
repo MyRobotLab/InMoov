@@ -12,10 +12,11 @@
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
 
-# ##############################################################################
+###############################################################################
 #                 webgui sync
-getInmoovFrParameter('torso',ThisServicePart+'.config')
-# ##############################################################################
+getInmoovFrParameter('torso',ThisSkeletonPart+'.config')
+###############################################################################
+
 
 isTorsoActivated=0
 try:

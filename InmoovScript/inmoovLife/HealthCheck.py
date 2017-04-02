@@ -10,6 +10,15 @@ HealthCheck = Runtime.start("HealthCheck","Clock")
 HealthCheck.setInterval(60000)
 
 def HealthCheck_def(timedata):
+  global batterieLevel
+
+  try:
+    batterieLevel = Runtime.getBatteryLevel()
+    if not batterieLevel:batterieLevel=100
+  except:
+    pass
+  
+  
   
   if RobotIsErrorMode==1:
     if error_red:
