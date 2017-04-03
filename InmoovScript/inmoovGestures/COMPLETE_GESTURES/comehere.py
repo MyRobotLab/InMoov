@@ -61,4 +61,3 @@ def comehere():
   sleep(0.3)
   relax()
   sleep(3)
-  fullspeed()

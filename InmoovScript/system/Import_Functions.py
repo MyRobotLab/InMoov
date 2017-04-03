@@ -1,34 +1,34 @@
 # -*- coding: utf-8 -*- 
 def CheckIfRobotCanLaunchAPPS(Needs):
-	for modules in Needs:
-		if not modules:
-			return 0
-			break
-	return 1
-	
+  for modules in Needs:
+    if not modules:
+      return 0
+      break
+  return 1
+  
 def Parse(utfdata):
-	try:
-		utfdata = urllib2.urlopen(utfdata).read()
-		utfdata = utfdata.replace("&#039;", "'")
-		utfdata = utfdata.decode( "utf8" )
-	except:
-		utfdata=''
-		pass
-	return utfdata
-	
-	
-	
+  try:
+    utfdata = urllib2.urlopen(utfdata).read()
+    utfdata = utfdata.replace("&#039;", "'")
+    utfdata = utfdata.decode( "utf8" )
+  except:
+    utfdata=''
+    pass
+  return utfdata
+  
+  
+  
 #this function usefull to calculate a maximum average
 def maxAverage(list,howMany):
-	sortedmaxAverage=sorted(list)
-	maxAvg=[]
-	if len(sortedmaxAverage)>0:
-		for value in range(-1, -howMany, -1):
-			maxAvg.append(sortedmaxAverage[value])
-		return sum(maxAvg) / len(maxAvg)
-	else:
-		return 0
-		
+  sortedmaxAverage=sorted(list)
+  maxAvg=[]
+  if len(sortedmaxAverage)>0:
+    for value in range(-1, -howMany, -1):
+      maxAvg.append(sortedmaxAverage[value])
+    return sum(maxAvg) / len(maxAvg)
+  else:
+    return 0
+    
  
 # beta fonction to pluralize or singularize words
 def pluralize(word):
@@ -109,35 +109,35 @@ def Singularize(word):
         singular = GRAMMAR_RULE(word)
         if singular:
             return singular
-			
+      
 def _ail_word_sing(word):
-	if word.endswith("aux"):
-		if word in ("baux", "coraux", u"émaux", "fermaux", "soupiraux", "travaux", "vantaux", "ventaux", "vitraux"):
-			return word[:-3] + "ail"
-		else:
-			return word[:-3] + "al"
-			
+  if word.endswith("aux"):
+    if word in ("baux", "coraux", u"émaux", "fermaux", "soupiraux", "travaux", "vantaux", "ventaux", "vitraux"):
+      return word[:-3] + "ail"
+    else:
+      return word[:-3] + "al"
+      
 def _ou_word_sing(word):
     if word.endswith("oux"):
-		if word in ("bijoux", "cailloux", "choux", "genoux", "hiboux", "joujoux", "poux"):
-			return word[:-1]
-		else:
-			return word
-			
+      if word in ("bijoux", "cailloux", "choux", "genoux", "hiboux", "joujoux", "poux"):
+        return word[:-1]
+      else:
+        return word
+      
 def _s_word_sing(word):
-	if word.endswith("s"):
-		if word in (u"abcès", u"accès", "abus", "albatros", "anchois", "anglais", "autobus", "brebis", "carquois", "cas", "chas", "colis", "concours", "corps", "cours", u"cyprès", u"décès", "devis", "discours", "dos", "embarras", "engrais", "entrelacs", u"excès", u"fiançailles", "fois", "fonds", u"gâchis", "gars", "glas", "guet-apens", u"héros", "intrus", "jars", "jus", u"kermès", "lacis", "legs", "lilas", "marais", "matelas", u"mépris", "mets", "mois", "mors", "obus", "os", "palais", "paradis", "parcours", "pardessus", "pays", "plusieurs", "poids", "pois", "pouls", "printemps", "processus", u"progrès", "puits", "pus", "rabais", "radis", "recors", "recours", "refus", "relais", "remords", "remous", u"rhinocéros", "repas", "rubis", "sas", "secours", "souris", u"succès", "talus", "tapis", "taudis", "temps", "tiers", "univers", "velours", "verglas", "vernis", "virus", "accordailles", "affres", "aguets", "alentours", "ambages", "annales", "appointements", "archives", "armoiries", u"arrérages", "arrhes", "calendes", "cliques", "complies", u"condoléances", "confins", u"dépens", u"ébats", "entrailles", u"épousailles", "errements", "fiançailles", "frais", u"funérailles", "gens", "honoraires", "matines", "mœurs", u"obsèques", u"pénates", "pierreries", u"préparatifs", "relevailles", "rillettes", u"sévices", u"ténèbres", "thermes", "us", u"vêpres", "victuailles"):
-			return word
-		else:
-			return word[:-1]
-			
+  if word.endswith("s"):
+    if word in (u"abcès", u"accès", "abus", "albatros", "anchois", "anglais", "autobus", "brebis", "carquois", "cas", "chas", "colis", "concours", "corps", "cours", u"cyprès", u"décès", "devis", "discours", "dos", "embarras", "engrais", "entrelacs", u"excès", u"fiançailles", "fois", "fonds", u"gâchis", "gars", "glas", "guet-apens", u"héros", "intrus", "jars", "jus", u"kermès", "lacis", "legs", "lilas", "marais", "matelas", u"mépris", "mets", "mois", "mors", "obus", "os", "palais", "paradis", "parcours", "pardessus", "pays", "plusieurs", "poids", "pois", "pouls", "printemps", "processus", u"progrès", "puits", "pus", "rabais", "radis", "recors", "recours", "refus", "relais", "remords", "remous", u"rhinocéros", "repas", "rubis", "sas", "secours", "souris", u"succès", "talus", "tapis", "taudis", "temps", "tiers", "univers", "velours", "verglas", "vernis", "virus", "accordailles", "affres", "aguets", "alentours", "ambages", "annales", "appointements", "archives", "armoiries", u"arrérages", "arrhes", "calendes", "cliques", "complies", u"condoléances", "confins", u"dépens", u"ébats", "entrailles", u"épousailles", "errements", "fiançailles", "frais", u"funérailles", "gens", "honoraires", "matines", "mœurs", u"obsèques", u"pénates", "pierreries", u"préparatifs", "relevailles", "rillettes", u"sévices", u"ténèbres", "thermes", "us", u"vêpres", "victuailles"):
+      return word
+    else:
+      return word[:-1]
+      
 def _eu_word_sing(word):
-	if word.endswith("eux"):
-		if word=="yeux":
-			return "oeil"
-		else:
-			return word[:-1]
-			
+  if word.endswith("eux"):
+    if word=="yeux":
+      return "oeil"
+    else:
+      return word[:-1]
+      
 def _default_sing(word):
-	return word
-			
+  return word
+      

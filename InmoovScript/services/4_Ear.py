@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								EAR SERVICE FILE
+#                 EAR SERVICE FILE
 # ##############################################################################
 
 
@@ -24,17 +24,14 @@ chatBot=Runtime.create("chatBot", "ProgramAB")
 isChatbotActivated=0
 
 def onRecognized(text):
-	#RobotneedUpdate : fix about first question do you want to update
-	global RobotneedUpdate
+  #RobotneedUpdate : fix about first question do you want to update
+  
 
-	if DEBUG==1:
-		print "onRecognized : ",text,RobotneedUpdate
-	if isChatbotActivated and RobotIsStarted and not RobotIsSleeping and not RobotneedUpdate:
-		chatBot.getResponse(text.replace("'", " ").replace("-", " "))
-		
-	if (text=="no" or text=="yes") and RobotneedUpdate:
-		print "test"
-		RobotneedUpdate=0
+  if DEBUG==1:
+    print "onRecognized : ",text,RobotneedUpdate
+  if isChatbotActivated and RobotIsStarted and not RobotIsSleeping:
+    chatBot.getResponse(text.replace("'", " ").replace("-", " "))
+  
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS

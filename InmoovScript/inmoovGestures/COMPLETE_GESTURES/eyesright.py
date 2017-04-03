@@ -1,3 +1,3 @@
 def eyesright():
-    i01.head.eyeX.moveTo(0)
+  i01.head.eyeX.moveTo(0)
 

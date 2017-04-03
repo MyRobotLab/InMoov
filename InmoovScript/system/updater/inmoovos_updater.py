@@ -1,49 +1,105 @@
+#inmoov os check if there is a new version ( stable or beta )
 def CheckVersion():
-	global RobotneedUpdate
-	remoteVersion=Parse("https://raw.githubusercontent.com/MyRobotLab/inmoov/master/InmoovScript/system/updater/inmoovOsVersion.ini")
-	print version,remoteVersion
-	if str(remoteVersion) == str(version) or str(remoteVersion)=='':
-		return False
-	else:
-		print "need update"
-		RobotneedUpdate=1
-		return True
-		
+  global RobotneedUpdate
+  global target
+  global branch
+  global RobotIsStarted
+  
+  branch="master"
+  if BetaVersion:branch="develop"
+  
+  #download remote information
+  remoteVersion=""
+  try:
+    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InmoovScript/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
+    #read downloaded file
+    BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
+    BasicConfig.read(RuningFolder+'system/updater/updater.ini')
+    remoteVersion=BasicConfig.get('updater', 'version')
+    targetstable=BasicConfig.get('updater', 'targetstable')
+    targetbeta=BasicConfig.get('updater', 'targetbeta')
+    #read myrobotlab.jar url
+    target=targetstable
+    if BetaVersion:target=targetbeta
+  except:
+    pass
+  
+  
+  if str(remoteVersion) == str(version) or str(remoteVersion)=='':
+    return False
+  else:
+    print "need update"
+    RobotneedUpdate=1
+    RobotIsStarted=1
+    return True
+    
+
+talkDownloadPercent = Runtime.start("talkDownloadPercent","Clock")
+talkDownloadPercent.setInterval(5000)
+global percentDownload
+percentDownload=0
+
+def talkDownloadPercentFunc(timedata):
+  chatBot.getResponse(str(percentDownload) + " SYSTEM_PERCENT")
+  
+  
+talkDownloadPercent.addListener("pulse", python.name, "talkDownloadPercentFunc")
+
+
+
+
+def dlProgress(count, blockSize, totalSize):
+    global percentDownload
+    percentDownload=(int(count * blockSize * 100 / totalSize))
+  
 def updateMe():
-	if RobotneedUpdate:
-		#not implemented yet
-		#talkBlocking(lang_newVersionDownloadStart)
-		sleepModeWakeUp()
+  
+  
+  global RobotneedUpdate
+  if RobotneedUpdate:
+    RobotneedUpdate=0
+    print "start"
+    PlayNeopixelAnimation("Theater Chase", 0, 0, 255, 5)
+    r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_1024-600.jpg',1)
+    sleep(2)
+    talkDownloadPercent.startClock()
+    urlretrieve(target, RuningFolder+'system/updater/myrobotlab-'+branch+".jar",reporthook=dlProgress)
+    sleep(2)
+    talkDownloadPercent.stopClock()
+    chatBot.getResponse("SYSTEM_DOWNLOAD_OK")
+    StopNeopixelAnimation()
+    sleep(3)
+    runtime.exit()
 
 def dontUpdateMe():
-	
-	if RobotneedUpdate:
-		talkBlocking(lang_newVersionNoUpdate)
-		sleepModeWakeUp()
-		
-		
-
-
-
-		
-ear.addCommand(lang_newVersionYes, "python", "updateMe")
-ear.addCommand(lang_newVersionNo, "python", "dontUpdateMe")
-	
-	
-	
-	
+  
+  global RobotneedUpdate
+  if RobotneedUpdate:
+    RobotneedUpdate=0
+    sleep(2)
+    sleepModeWakeUp()
+  
+  
 #hard coded forced patch v 0.3.5
-try:
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
-	os.remove(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
-except:
-	pass
-	#clean up .default.config
-for root, subdirs, files in os.walk(RuningFolder):
-	for name in files:
-		if name.split(".")[-1] == "default":
-			os.remove(os.path.join(root, name))
-			if DEBUG==1:print "removed .default : ",os.path.join(root, name)
 
-	
+def RemoveFile(file):
+  try:
+    os.remove(file)
+  except:
+    pass
+  
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackPoint.py")
+RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackHumans.py")
+
+  #clean up .default.config
+for root, subdirs, files in os.walk(RuningFolder):
+  for name in files:
+    if name.split(".")[-1] == "default":
+      os.remove(os.path.join(root, name))
+      if DEBUG==1:print "removed .default : ",os.path.join(root, name)
+
+  

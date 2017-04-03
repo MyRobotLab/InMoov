@@ -17,4 +17,3 @@ def phonehome():
     AudioPlayer.playFile(RuningFolder+'/system/sounds/E,T phone the big home of the inmoov nation.mp3')
     sleep(0.2)
     relax()
-

@@ -1,52 +1,82 @@
 # ##############################################################################
-# 								CONFIGPARSER FILE
+#                 CONFIGPARSER FILE
 # ##############################################################################
+
+# ##############################################################################
+#                 webgui sync
+getInmoovFrParameter('config',RuningFolder+"Inmoov.config")
+# ##############################################################################
+
 
 #shared parse function
 def CheckFileExist(File):
-	global RobotIsErrorMode
-	if not os.path.isfile(File+'.config'):
-		shutil.move(File+'.config.default',File+'.config')
-		print "config file created : ",File+'.config'
+  global RobotIsErrorMode
+  if not os.path.isfile(File+'.config'):
+    shutil.move(File+'.config.default',File+'.config')
+    print "config file created : ",File+'.config'
 
-	
+  
 CheckFileExist(RuningFolder + 'Inmoov')
 LaunchSwingGui=True
+
+
+   
+BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
+BasicConfig.read(RuningFolder+'Inmoov.config')
+
+#file patch
+configNeedUpdate=0
 try:
-	#basic config parse
-	BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-	BasicConfig.read(RuningFolder+'Inmoov.config')
+    VoiceRssApi = BasicConfig.get('TTS', 'VoiceRssApi')
+except:
+  BasicConfig.set('TTS', 'VoiceRssApi', 'xxx')
+  configNeedUpdate=1
+  pass
+  
+try:
+    BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
+except:
+  BasicConfig.set('GENERAL', 'BetaVersion', 1)
+  configNeedUpdate=1
+  pass
+  
+  
+try:
+    if BasicConfig.get('VOCAL', 'EarInterpretEngine')!='':
+      BasicConfig.remove_option('VOCAL', 'EarInterpretEngine')
+      configNeedUpdate=1
+except:
+  pass  
+  
+if configNeedUpdate:
+  with open(RuningFolder+'Inmoov.config', 'wb') as f:
+    BasicConfig.write(f)
 
-	# CONFIG FILE UPDATE ( if we add prameters and you have an old file )
-	#if not BasicConfig.has_option('ARDUINO','MyNeopixelPort'):
-	#	config= ConfigParser.RawConfigParser()
-	#	config.read(RuningFolder+'Inmoov.config')
-	#	config.set('ARDUINO','MyNeopixelPort',0)
-	#	with open(RuningFolder+'Inmoov.config', 'wb') as configfile:
-	#		config.write(configfile)
-
-	# PARSE THE CONFIG FILE
-	ScriptType=BasicConfig.get('MAIN', 'ScriptType')
-	MyRightPort=BasicConfig.get('ARDUINO', 'MyRightPort')
-	MyLeftPort=BasicConfig.get('ARDUINO', 'MyLeftPort')
-	ForceArduinoIsConnected=BasicConfig.getboolean('ARDUINO', 'ForceArduinoIsConnected')
-	#read personnal config
-
-	MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
-	MyLanguage=BasicConfig.get('TTS', 'MyLanguage').lower()
-	MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
-	
-	DEBUG=BasicConfig.getboolean('MAIN', 'debug')
-	IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
-	EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
-	LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
-	StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
-	IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
-	LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
+try:
+  # PARSE THE CONFIG FILE
+  ScriptType=BasicConfig.get('MAIN', 'ScriptType')
+  MyRightPort=BasicConfig.get('ARDUINO', 'MyRightPort')
+  MyLeftPort=BasicConfig.get('ARDUINO', 'MyLeftPort')
+  ForceArduinoIsConnected=BasicConfig.getboolean('ARDUINO', 'ForceArduinoIsConnected')
+  #read personnal config
+  MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
+  MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
+  VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
+  MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
+  if MyvoiceType[0]=="[":
+    MyvoiceType=MyvoiceType.split(']', 1 )[1]
+  DEBUG=BasicConfig.getboolean('MAIN', 'debug')
+  IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
+  EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
+  LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
+  StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
+  IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
+  LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
+  BetaVersion=BasicConfig.getboolean('GENERAL', 'BetaVersion')
 
 
 except:
-	
-	print 'ConfigParserProblem'
-	RobotIsErrorMode=1
-	pass	
+  
+  print 'ConfigParserProblem'
+  RobotIsErrorMode=1
+  pass  

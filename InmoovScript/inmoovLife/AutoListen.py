@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								TIMER ACTION
+#                 TIMER ACTION
 # ##############################################################################
 
 ###############################################################################
@@ -10,8 +10,8 @@ WebkitSpeechRecognitionFix = Runtime.start("WebkitSpeechRecognitionFix","Clock")
 WebkitSpeechRecognitionFix.setInterval(AutolistenTimerValue)
 
 def WebkitSpeechRecognitionON(timedata):
-	if not RobotIsActualySpeaking and not RobotIsSleeping and AutolistenActivated:ear.resumeListening()
-	
+  if not RobotIsActualySpeaking and not RobotIsSleeping and AutolistenActivated:ear.resumeListening()
+  
 WebkitSpeechRecognitionFix.addListener("pulse", python.name, "WebkitSpeechRecognitionON")
 WebkitSpeechRecognitionFix.startClock()
 

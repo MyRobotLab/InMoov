@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								TIMERS ACTION
+#                 TIMERS ACTION
 # ##############################################################################
 
 ###############################################################################
@@ -10,12 +10,21 @@ HealthCheck = Runtime.start("HealthCheck","Clock")
 HealthCheck.setInterval(60000)
 
 def HealthCheck_def(timedata):
-	
-	if RobotIsErrorMode==1:
-		if error_red:
-			PlayNeopixelAnimation("Flash Random", 255, 0, 0, 5)
-	
+  global batterieLevel
 
-HealthCheck.addListener("pulse", python.name, "HealthCheck_def")		
+  try:
+    batterieLevel = Runtime.getBatteryLevel()
+    if not batterieLevel:batterieLevel=100
+  except:
+    pass
+  
+  
+  
+  if RobotIsErrorMode==1:
+    if error_red:
+      PlayNeopixelAnimation("Flash Random", 255, 0, 0, 5)
+  
+
+HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    
 HealthCheck.startClock()
 
