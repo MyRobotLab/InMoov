@@ -13,7 +13,8 @@ def phonehome():
     i01.moveHand("right",135,6,170,145,168,180)
     i01.moveTorso(25,80,90)
     sleep(2)
-    i01.mouth.speakBlocking("E,T phone the big home of the inmoov nation")
+    #i01.mouth.speakBlocking("E,T phone the big home of the inmoov nation")
+    AudioPlayer.playFile(RuningFolder+'/system/sounds/E,T phone the big home of the inmoov nation.mp3')
     sleep(0.2)
     relax()
 
