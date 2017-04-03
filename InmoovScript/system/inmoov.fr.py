@@ -115,29 +115,31 @@ def GESTURE(what):
   
 #time to loop
 # ##############################################################################
-inmoovfr = Runtime.start("inmoovfr","Clock")
-inmoovfr.setInterval(5000)
 
-def inmoovfr_def(timedata):
-  if RobotIsStarted and iHaveInmoovFrKey:
-    talkToInmoovFrQueue("MRLALIVE:"+str(runtime.getVersion()[-4:]))
-    talkToInmoovFrQueue("BATTERYLEVEL:"+str(batterieLevel))
-    data=getTheQueue()
-    if data:
-      i=0
-      for k in data:
-        r=data[i]["message"].split(':', 1 )
-        if len(r)>=2:
-          functionToCall=r[0]
-          parameterToCall=r[1]
-          if functionToCall=="ROBOTSAY":ROBOTSAY(parameterToCall)
-          if functionToCall=="GESTURE":GESTURE(parameterToCall)
-          resp=talkToInmoovFrQueue("0&mrldelmsg="+data[i]["id"])
-          logIt(RuningFolder+"system/inmoov.fr.log","queue : " + functionToCall + " >> "+ resp,"a")
-        i+=1
-    
-inmoovfr.addListener("pulse", python.name, "inmoovfr_def")    
-inmoovfr.startClock()
+if iHaveInmoovFrKey:
+  inmoovfr = Runtime.start("inmoovfr","Clock")
+  inmoovfr.setInterval(5000)
+
+  def inmoovfr_def(timedata):
+    if RobotIsStarted and iHaveInmoovFrKey:
+      talkToInmoovFrQueue("MRLALIVE:"+str(runtime.getVersion()[-4:]))
+      talkToInmoovFrQueue("BATTERYLEVEL:"+str(batterieLevel))
+      data=getTheQueue()
+      if data:
+        i=0
+        for k in data:
+          r=data[i]["message"].split(':', 1 )
+          if len(r)>=2:
+            functionToCall=r[0]
+            parameterToCall=r[1]
+            if functionToCall=="ROBOTSAY":ROBOTSAY(parameterToCall)
+            if functionToCall=="GESTURE":GESTURE(parameterToCall)
+            resp=talkToInmoovFrQueue("0&mrldelmsg="+data[i]["id"])
+            logIt(RuningFolder+"system/inmoov.fr.log","queue : " + functionToCall + " >> "+ resp,"a")
+          i+=1
+      
+  inmoovfr.addListener("pulse", python.name, "inmoovfr_def")    
+  inmoovfr.startClock()
   
   
           
