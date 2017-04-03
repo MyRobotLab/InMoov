@@ -108,7 +108,7 @@ def UPDATECONF(what):
   
 def GESTURE(what):
   try:
-    eval(what.split('.', 1 )[0])
+    exec(what.split('.', 1 )[0]+'()')
   except:
     logIt(RuningFolder+"system/inmoov.fr.log","GESTURE ERROR >> "+ str(what),"a")
     return False

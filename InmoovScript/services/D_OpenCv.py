@@ -19,7 +19,8 @@ CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 isOpenCvActivated=0
-
+global opencvStarted  
+opencvStarted=0
 isOpenCvActivated=ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated')
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
