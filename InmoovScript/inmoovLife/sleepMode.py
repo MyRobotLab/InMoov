@@ -42,7 +42,7 @@ def sleepModeWakeUp():
   
   global RobotIsSleeping
   RobotIsSleeping=0
-  #restart pir poling
+  StopNeopixelAnimation()
 
 
 
@@ -57,10 +57,13 @@ def sleepModeSleep():
   #head down
   if isHeadActivated:
     head.neck.setVelocity(60)
-    head.neck.moveTo(180)
-  sleep(5)
+    head.neck.moveTo(10)
+    sleep(5)
+    i01.detach()
   switchOffAllNervo()
   StopNeopixelAnimation()
+  sleep(2)
+  PlayNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
   
   RobotIsSleeping=1
   #restart pir poling
