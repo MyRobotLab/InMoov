@@ -122,5 +122,4 @@ def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,dura
 
 sleep(0.1)
 if boot_green:    
-  PlayNeopixelAnimation("Theater Chase", 0, 255, 0, 5)
-
+  PlayNeopixelAnimation("Theater Chase", 0, 255, 50, 1)
