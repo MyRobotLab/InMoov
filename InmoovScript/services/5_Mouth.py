@@ -15,7 +15,7 @@ try:
   #inmoov mouth service
   i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
   mouth=i01.mouth
-  mouth.speak(",")
+  #mouth.speak(",")
   
 except:
   mouth=subconsciousMouth
@@ -144,15 +144,18 @@ def setRobotLanguage():
   global LanguageError
   LanguageError=0
   tmplanguage=MyLanguage
-  if MyvoiceTTS=="VoiceRss":
-    i01.mouth.setKey(VoiceRssApi)
-    if tmplanguage=="fr":tmplanguage="fr-fr"
-    if tmplanguage=="en":tmplanguage="en-us"
-    if tmplanguage=="es":tmplanguage="es-es"
-    if tmplanguage=="cn":tmplanguage="zh-cn"
-    if tmplanguage=="de":tmplanguage="de-de"
-    if tmplanguage=="jp":tmplanguage="jp-jp"
-    mouth.setRate(-2)
+  try:
+    if MyvoiceTTS=="VoiceRss":
+      i01.mouth.setKey(VoiceRssApi)
+      if tmplanguage=="fr":tmplanguage="fr-fr"
+      if tmplanguage=="en":tmplanguage="en-us"
+      if tmplanguage=="es":tmplanguage="es-es"
+      if tmplanguage=="cn":tmplanguage="zh-cn"
+      if tmplanguage=="de":tmplanguage="de-de"
+      if tmplanguage=="jp":tmplanguage="jp-jp"
+      #mouth.setRate(-2)
+  except:
+    pass
   
   try:
     if MyvoiceTTS=="MarySpeech" and MyLanguage=="en":
