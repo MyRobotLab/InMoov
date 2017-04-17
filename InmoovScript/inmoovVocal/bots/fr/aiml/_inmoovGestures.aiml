@@ -550,25 +550,25 @@
         <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>PHOTO A DROITE</pattern>
-      <template>Photo a droite.
+      <pattern>PHOTO à droite</pattern>
+      <template>Photo à droite.
         <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>PHOTO DU COTÉ DROIT</pattern>
       <template>
-        <srai>PHOTO A DROITE</srai>
+        <srai>PHOTO à droite</srai>
       </template>
     </category>
     <category>
-      <pattern>PHOTO A GAUCHE</pattern>
-      <template>Photo a gauche.
+      <pattern>PHOTO à GAUCHE</pattern>
+      <template>Photo à GAUCHE.
         <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>PHOTO DU COTÉ GAUCHE</pattern>
       <template>
-        <srai>PHOTO A GAUCHE</srai>
+        <srai>PHOTO à GAUCHE</srai>
       </template>
     </category>
     <category>
@@ -589,66 +589,78 @@
       </template>
     </category>
     <category>
-      <pattern>REGARDE A DROITE</pattern>
-      <template>Je tourne ma tête a droite.
+      <pattern>REGARDE à DROITE</pattern>
+      <template>Je tourne ma tête à droite.
         <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
     </category>
-    <category>
-      <pattern>TOURNE LA TÊTE A DROITE</pattern>
+	   <category>
+      <pattern>REGARDE SUR TA droite</pattern>
       <template>
-        <srai>REGARDE A DROITE</srai>
+        <srai>REGARDE à DROITE</srai>
+      </template>
+    </category>
+	   <category>
+      <pattern>REGARDE SUR TA GAUCHE</pattern>
+      <template>
+        <srai>REGARDE à GAUCHE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNER LA TÊTE A DROITE</pattern>
+      <pattern>TOURNE LA TÊTE à droite</pattern>
       <template>
-        <srai>REGARDE A DROITE</srai>
+        <srai>REGARDE à DROITE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNE TA TÊTE A DROITE</pattern>
+      <pattern>TOURNER LA TÊTE à droite</pattern>
       <template>
-        <srai>REGARDE A DROITE</srai>
+        <srai>REGARDE à DROITE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNER TA TÊTE A DROITE</pattern>
+      <pattern>TOURNE TA TÊTE à droite</pattern>
       <template>
-        <srai>REGARDE A DROITE</srai>
+        <srai>REGARDE à DROITE</srai>
       </template>
     </category>
     <category>
-      <pattern>REGARDE A GAUCHE</pattern>
-      <template>Je tourne ma tête a gauche.
+      <pattern>TOURNER TA TÊTE à droite</pattern>
+      <template>
+        <srai>REGARDE à DROITE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>REGARDE à GAUCHE</pattern>
+      <template>Je tourne ma tête à GAUCHE.
         <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>TOURNE LA TÊTE A GAUCHE</pattern>
+      <pattern>TOURNE LA TÊTE à GAUCHE</pattern>
       <template>
-        <srai>REGARDE A GAUCHE</srai>
+        <srai>REGARDE à GAUCHE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNER LA TÊTE A GAUCHE</pattern>
+      <pattern>TOURNER LA TÊTE à GAUCHE</pattern>
       <template>
-        <srai>REGARDE A GAUCHE</srai>
+        <srai>REGARDE à GAUCHE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNE TA TÊTE A GAUCHE</pattern>
+      <pattern>TOURNE TA TÊTE à GAUCHE</pattern>
       <template>
-        <srai>REGARDE A GAUCHE</srai>
+        <srai>REGARDE à GAUCHE</srai>
       </template>
     </category>
     <category>
-      <pattern>TOURNER TA TÊTE A GAUCHE</pattern>
+      <pattern>TOURNER TA TÊTE à GAUCHE</pattern>
       <template>
-        <srai>REGARDE A GAUCHE</srai>
+        <srai>REGARDE à GAUCHE</srai>
       </template>
     </category>
     <category>
       <pattern>REGARDE AU MILIEU</pattern>
-      <template>Je regarde au milieu.
+      <template>Je REGARDE AU milieu.
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
     </category>
     <category>
@@ -825,7 +837,7 @@
       </template>
     </category>
     <category>
-      <pattern>VÊTEMENTS A DROITE</pattern>
+      <pattern>VÊTEMENTS à droite</pattern>
       <template>
         <oob>
           <mrl>
