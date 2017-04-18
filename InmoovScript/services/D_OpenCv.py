@@ -58,6 +58,8 @@ def openCvInit():
       errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
     isOpenCvActivated=0
   else:talkEvent(lang_startingOpenCv)
+  
+  opencv.removeFilters()
 
 
 def onOpenCVData(data):
