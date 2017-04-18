@@ -12,13 +12,19 @@ debug=0
 
 [TTS]
 MyvoiceTTS=MarySpeech
-; you can use MarySpeech or VoiceRss
+; you can use MarySpeech,VoiceRss,Polly ( paid amazon tts service )
+AWSAccessKeyId=XXX
+AWSSecretKey=XXX/YYY
 VoiceRssApi=XXX
 
 MyvoiceType=cmu-slt-hsmm
 ; Voices are automatic donwloaded
 ; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
 ; voiceRss use language to change the voice
+; amazon polly :
+; 1 - create account, https://aws.amazon.com/polly/details/
+; 2 - set your keys AWSAccessKeyId + AWSSecretKey
+; 3 - set your voice MyvoiceType
 
 MyLanguage=en
 ; en,fr,es
