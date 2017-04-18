@@ -98,12 +98,12 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
     
     head.rothead.enableAutoAttach(1)
     head.neck.enableAutoAttach(1)
-    head.jaw.enableAutoAttach(0)
+    head.jaw.enableAutoAttach(1)
     head.rothead.enableAutoDetach(0)
     head.neck.enableAutoDetach(0)
-    head.jaw.enableAutoDetach(0)
+    head.jaw.enableAutoDetach(1)
     head.jaw.attach()
-    head.jaw.setVelocity(50)
+    #head.jaw.setVelocity(50)
     head.rest()
     
 # ##############################################################################
