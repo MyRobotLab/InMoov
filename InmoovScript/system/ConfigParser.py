@@ -27,16 +27,24 @@ BasicConfig.read(RuningFolder+'Inmoov.config')
 #file patch
 configNeedUpdate=0
 try:
-    VoiceRssApi = BasicConfig.get('TTS', 'VoiceRssApi')
+  VoiceRssApi = BasicConfig.get('TTS', 'VoiceRssApi')
 except:
   BasicConfig.set('TTS', 'VoiceRssApi', 'xxx')
   configNeedUpdate=1
   pass
   
 try:
-    BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
+  BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
 except:
   BasicConfig.set('GENERAL', 'BetaVersion', 1)
+  configNeedUpdate=1
+  pass
+  
+try:
+  virtualInmoovAlwaysActivated=0
+  virtualInmoovAlwaysActivated = BasicConfig.get('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated')
+except:
+  BasicConfig.set('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated', 'False')
   configNeedUpdate=1
   pass
   
