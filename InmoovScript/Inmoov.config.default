@@ -7,8 +7,11 @@ ScriptType=RightSide
 ; NoArduino: vocal Only
 ; Full: Both side arduinos connected
 ; Virtual: virtual arduino and inmoov !
-
 debug=0
+
+[VIRTUAL_INMOOV]
+virtualInmoovAlwaysActivated=False
+;use real arduino + virtual inmoov
 
 [TTS]
 MyvoiceTTS=MarySpeech
@@ -22,7 +25,7 @@ MyvoiceType=cmu-slt-hsmm
 ; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
 ; voiceRss use language to change the voice
 ; amazon polly :
-; 1 - create account, https://aws.amazon.com/polly/details/
+; 1 - create a free account here, https://aws.amazon.com/polly/details/
 ; 2 - set your keys AWSAccessKeyId + AWSSecretKey
 ; 3 - set your voice MyvoiceType
 
