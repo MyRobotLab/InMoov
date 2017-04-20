@@ -175,6 +175,25 @@
         <oob><mrl><service>i01</service><method>detach</method></mrl></oob></template>
     </category>
     <category>
+      <category>
+      <pattern>DECONNECTE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>DÉTACHE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>DETACHE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
+    </category>
+    <category>
       <pattern>CONNECTE LE BRAS GAUCHE</pattern>
       <template>Connection de mon bras gauche.
         <oob><mrl><service>i01.leftArm</service><method>attach</method></mrl></oob></template>
