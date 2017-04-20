@@ -35,7 +35,7 @@ echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
 echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
 echo ------------------------------------------------------
 timeout 2 > NUL
-java -jar myrobotlab.jar -install
+java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly
 echo ------------------------------------------------------
 echo START MRL & INMOOV
 echo ------------------------------------------------------
