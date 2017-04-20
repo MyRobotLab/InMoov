@@ -35,6 +35,12 @@
       </template>
     </category>
     <category>
+      <pattern>METS TOI AU REPOS</pattern>
+      <template>
+        <srai>METS-TOI AU REPOS * </srai>
+      </template>
+    </category>
+    <category>
       <pattern>CONNECTE LA TÊTE</pattern>
       <template>Je connecte ma tête.
         <oob><mrl><service>i01.head</service><method>attach</method></mrl></oob></template>
@@ -173,6 +179,25 @@
       <pattern>DÉCONNECTE TOUT</pattern>
       <template>J'ai tout déconnecté.
         <oob><mrl><service>i01</service><method>detach</method></mrl></oob></template>
+    </category>
+    <category>
+      <category>
+      <pattern>DECONNECTE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>DÉTACHE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>DETACHE TOUT</pattern>
+      <template>
+        <srai>DÉCONNECTE TOUT</srai>
+      </template>
     </category>
     <category>
       <pattern>CONNECTE LE BRAS GAUCHE</pattern>
