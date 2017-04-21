@@ -94,6 +94,7 @@ RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
 RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
 RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackPoint.py")
 RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/trackHumans.py")
+RemoveFile(RuningFolder+"inmoovGestures/inmoovSkeleton/rollNeck.py")
 
   #clean up .default.config
 for root, subdirs, files in os.walk(RuningFolder):

@@ -44,6 +44,7 @@ try:
   virtualInmoovAlwaysActivated=0
   virtualInmoovAlwaysActivated = BasicConfig.get('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated')
 except:
+  BasicConfig.add_section('VIRTUAL_INMOOV')
   BasicConfig.set('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated', 'False')
   configNeedUpdate=1
   pass
@@ -54,7 +55,9 @@ try:
       BasicConfig.remove_option('VOCAL', 'EarInterpretEngine')
       configNeedUpdate=1
 except:
-  pass  
+  pass
+  
+
   
 if configNeedUpdate:
   with open(RuningFolder+'Inmoov.config', 'wb') as f:

@@ -8,7 +8,8 @@
 # ##############################################################################
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
-isHeadActivated=0  
+isHeadActivated=0
+
 #read current skeleton part config
 ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
 
@@ -39,10 +40,27 @@ except:
   isHeadActivated=0
   errorSpokenFunc('ConfigParserProblem','head.config')
   pass
-    
+ 
+#rollneck migration
+try:
+  tmprollneck = ThisSkeletonPartConfig.get('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck')
+except:
+  ThisSkeletonPartConfig.set('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck', 0)
+  ThisSkeletonPartConfig.set('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck', 180)
+  ThisSkeletonPartConfig.set('SERVO_REST_POSITION', 'rollneck', 90)
+  ThisSkeletonPartConfig.set('SERVO_INVERTED', 'rollneck', 0)
+  ThisSkeletonPartConfig.set('MINIMUM_MAP_INPUT', 'rollneck', 0)
+  ThisSkeletonPartConfig.set('MAXIMUM_MAP_INPUT', 'rollneck', 180)
+  ThisSkeletonPartConfig.set('MAX_VELOCITY', 'rollneck', -1)
+  ThisSkeletonPartConfig.set('SERVO_PIN', 'rollneck', 30)
+  ThisSkeletonPartConfig.set('MAIN', 'isRollNeckActivated', True)
   
-  
-  
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass 
+isRollNeckActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRollNeckActivated') 
+
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -57,6 +75,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
     head.eyeY.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeY')) 
     head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
     head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
+    head.rollNeck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck'))
     
     #velocity
     #head.jaw.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'jaw'))
@@ -66,44 +85,32 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
     #maxvelocity
     head.neck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
     head.rothead.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rothead'))
-    
-    #rest
+    head.rollNeck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollneck'))
+     
     head.jaw.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'))
     head.eyeX.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'))
     head.eyeY.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'))
     head.neck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'))
     head.rothead.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'))
+    head.rollNeck.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollneck'))
   
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'jaw'):head.jaw.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeX'):head.eyeX.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyeY'):head.eyeY.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'neck'):head.neck.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rothead'):head.rothead.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rollneck'):head.rollNeck.setInverted(True)
 
+    i01.startHead(MyLeftPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
+    rollneck=head.rollNeck
     
-    i01.startHead(MyLeftPort)
-        
-
+    head.rothead.enableAutoEnable(1)
+    head.neck.enableAutoEnable(1)
+    head.jaw.enableAutoEnable(1)
+    head.rothead.enableAutoDisable(0)
+    head.neck.enableAutoDisable(0)
+    head.jaw.enableAutoDisable(1)
     
-    head.detach()
-    
-    head.jaw.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'jaw'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'jaw'))
-    head.eyeX.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeX'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeX'))
-    head.eyeY.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyeY'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'eyeY'))
-    head.neck.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck'),100)
-    head.rothead.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rothead'),100)
-    head.attach()
-    
-    
-    
-    head.rothead.enableAutoAttach(1)
-    head.neck.enableAutoAttach(1)
-    head.jaw.enableAutoAttach(1)
-    head.rothead.enableAutoDetach(0)
-    head.neck.enableAutoDetach(0)
-    head.jaw.enableAutoDetach(1)
-    head.jaw.attach()
-    #head.jaw.setVelocity(50)
     head.rest()
     
 # ##############################################################################
