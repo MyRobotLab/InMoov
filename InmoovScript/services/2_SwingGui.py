@@ -7,9 +7,4 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-if LaunchSwingGui:
-  try:
-    SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
-    GUIService=Runtime.createAndStart("GUIService", "GUIService")
-  except:
-    pass
+if LaunchSwingGui:SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
