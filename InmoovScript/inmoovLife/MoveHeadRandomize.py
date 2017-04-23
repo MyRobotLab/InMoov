@@ -24,12 +24,8 @@ def MoveHeadStart():
 
   if RobotCanMoveHeadWhileSpeaking:
     if isHeadActivated:
-      head.neck.setAcceleration(20)
-      head.rothead.setAcceleration(20)
-      head.rothead.enableAutoDisable(0)
-      head.neck.enableAutoDisable(0)
-      head.rollNeck.enableAutoDisable(0)
-      head.rollNeck.setAcceleration(20)
+      head.setAcceleration(20)
+      head.enableAutoDisable(0) 
   else:
     MoveHeadTimer.stopClock()
     
@@ -37,9 +33,7 @@ def MoveHeadStop():
   
   if RobotCanMoveHeadWhileSpeaking:
     if isHeadActivated:
-      head.rothead.enableAutoDisable(1)
-      head.neck.enableAutoDisable(1)
-      head.rollNeck.enableAutoDisable(1)
+      head.enableAutoDisable(1)
       i01.head.rest()
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")

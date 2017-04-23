@@ -68,25 +68,9 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Sc
     
     i01.startLeftArm(MyLeftPort)
     
-
-    leftArm.detach()
+    leftArm.enableAutoEnable(1)
+    leftArm.enableAutoEnable(0)
     
-    leftArm.bicep.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'bicep'))
-    leftArm.shoulder.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'shoulder'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'shoulder'))
-    leftArm.rotate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotate'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rotate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
-    leftArm.omoplate.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'omoplate'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
-    
-    leftArm.attach()
-    
-    leftArm.bicep.enableAutoAttach(1)
-    leftArm.shoulder.enableAutoAttach(1)
-    leftArm.rotate.enableAutoAttach(1)
-    leftArm.omoplate.enableAutoAttach(1)
-    leftArm.bicep.enableAutoDetach(0)
-    leftArm.shoulder.enableAutoDetach(0)
-    leftArm.rotate.enableAutoDetach(0)
-    leftArm.omoplate.enableAutoDetach(0)
-      
     leftArm.rest()
 
   else:

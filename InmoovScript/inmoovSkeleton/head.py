@@ -43,9 +43,10 @@ except:
  
 #rollneck migration
 try:
-  tmprollneck = ThisSkeletonPartConfig.get('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck')
+  tmprollneck = ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'isRollNeckActivated')
 except:
   ThisSkeletonPartConfig.set('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck', 0)
+  ThisSkeletonPartConfig.add_section('ROLLNECKSERVO')
   ThisSkeletonPartConfig.set('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck', 180)
   ThisSkeletonPartConfig.set('SERVO_REST_POSITION', 'rollneck', 90)
   ThisSkeletonPartConfig.set('SERVO_INVERTED', 'rollneck', 0)
@@ -59,7 +60,8 @@ except:
     ThisSkeletonPartConfig.write(f)
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
   pass 
-isRollNeckActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRollNeckActivated') 
+isRollNeckActivated=ThisSkeletonPartConfig.getboolean('ROLLNECKSERVO', 'isRollNeckActivated') 
+RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 
 # ##############################################################################
 #                 SERVO FUNCTIONS
@@ -104,13 +106,26 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
     i01.startHead(MyLeftPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'neck'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyeY'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollneck'))
     rollneck=head.rollNeck
     
-    head.rothead.enableAutoEnable(1)
-    head.neck.enableAutoEnable(1)
-    head.jaw.enableAutoEnable(1)
+    #overide rollneck arduino
+    try:
+      RollNeckArduino=eval(RollNeckArduino)
+    except:
+      errorSpokenFunc('BAdrduinoChoosen',', Roll Neck')
+      isRollNeckActivated=0
+      pass  
+    
+    if isRollNeckActivated:
+      head.rollNeck.detach(left)
+      head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollNeck'))
+     
+    
+    
+    head.enableAutoEnable(1)
+    
     head.rothead.enableAutoDisable(0)
     head.neck.enableAutoDisable(0)
     head.jaw.enableAutoDisable(1)
-    
+    head.jaw.setVelocity(-1)
     head.rest()
     
 # ##############################################################################

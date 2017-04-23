@@ -86,34 +86,9 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or S
     i01.startLeftHand(MyLeftPort)
     
     
-    leftHand.detach()
-    
-    leftHand.thumb.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
-    leftHand.index.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
-    leftHand.majeure.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'majeure'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
-    leftHand.ringFinger.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'ringFinger'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
-    leftHand.pinky.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
-    leftHand.wrist.attach(left,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
-    
-    leftHand.attach()
+    leftHand.enableAutoEnable(1)
+    leftHand.enableAutoEnable(0)
 
-    
-    leftHand.thumb.enableAutoAttach(1)
-    leftHand.index.enableAutoAttach(1)
-    leftHand.majeure.enableAutoAttach(1)
-    leftHand.ringFinger.enableAutoAttach(1)
-    leftHand.pinky.enableAutoAttach(1)
-    leftHand.wrist.enableAutoAttach(1)
-    
-    leftHand.thumb.enableAutoDetach(0)
-    leftHand.index.enableAutoDetach(0)
-    leftHand.majeure.enableAutoDetach(0)
-    leftHand.ringFinger.enableAutoDetach(0)
-    leftHand.pinky.enableAutoDetach(0)
-    leftHand.wrist.enableAutoDetach(0)
-    
-    sleep(1)
-    #
     leftHand.rest()
     
   else:

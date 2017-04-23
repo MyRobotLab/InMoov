@@ -63,22 +63,11 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptT
     
     
     i01.startTorso(TorsoConnectedToArduinoPort)
-    torso.detach()
-    torso.topStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
-    torso.midStom.attach(TorsoConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
-    
-    torso.attach()
-    
-    torso.topStom.enableAutoAttach(1)
-    torso.midStom.enableAutoAttach(1)
-    torso.topStom.enableAutoDetach(0)
-    torso.midStom.enableAutoDetach(0)
-    torso.lowStom.enableAutoAttach(1)
-    torso.lowStom.enableAutoDetach(0)
+    torso.enableAutoEnable(1)
+    torso.enableAutoEnable(0)
   
     torso.rest()
-    
-    
+       
   else:
     #we force parameter if arduino is off
     istorsoActivated=0

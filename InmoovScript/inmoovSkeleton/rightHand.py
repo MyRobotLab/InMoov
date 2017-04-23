@@ -75,34 +75,9 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or
     
     i01.startRightHand(MyRightPort)
         
-    rightHand.detach()
-    
-    rightHand.thumb.enableAutoAttach(1)
-    rightHand.index.enableAutoAttach(1)
-    rightHand.majeure.enableAutoAttach(1)
-    rightHand.ringFinger.enableAutoAttach(1)
-    rightHand.pinky.enableAutoAttach(1)
-    rightHand.wrist.enableAutoAttach(1)
-    
-    rightHand.thumb.enableAutoDetach(0)
-    rightHand.index.enableAutoDetach(0)
-    rightHand.majeure.enableAutoDetach(0)
-    rightHand.ringFinger.enableAutoDetach(0)
-    rightHand.pinky.enableAutoDetach(0)
-    rightHand.wrist.enableAutoDetach(0)
-    
-    rightHand.thumb.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
-    rightHand.index.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'index'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
-    rightHand.majeure.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'majeure'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
-    rightHand.ringFinger.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'ringFinger'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'ringFinger'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
-    rightHand.pinky.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
-    rightHand.wrist.attach(right,ThisSkeletonPartConfig.getint('SERVO_PIN', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
-    
-    rightHand.attach()
-    
-  
-  
-    
+    rightHand.enableAutoEnable(1)
+    rightHand.enableAutoEnable(0)
+        
     rightHand.rest()
     
   else:
