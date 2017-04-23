@@ -34,7 +34,7 @@ except:
   pass
   
 try:
-  BetaVersion = BasicConfig.get('GENERAL', 'BetaVersion')
+  BetaVersion = BasicConfig.getboolean('GENERAL', 'BetaVersion')
 except:
   BasicConfig.set('GENERAL', 'BetaVersion', 1)
   configNeedUpdate=1
@@ -42,7 +42,7 @@ except:
   
 try:
   virtualInmoovAlwaysActivated=0
-  virtualInmoovAlwaysActivated = BasicConfig.get('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated')
+  virtualInmoovAlwaysActivated = BasicConfig.getboolean('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated')
 except:
   BasicConfig.add_section('VIRTUAL_INMOOV')
   BasicConfig.set('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated', 'False')

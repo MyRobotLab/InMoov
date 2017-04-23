@@ -76,6 +76,8 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
+sleep(1)
+if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
 
 ################################
 # INIT.5 - ear.addcmmands
@@ -108,8 +110,7 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovLife'):
 
 #create the custom script, only if not exist
 if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
-if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
-rest()
+
 
 ################################
 # INIT.7 - inmoov APPS - TODO - WIP

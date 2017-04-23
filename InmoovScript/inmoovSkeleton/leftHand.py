@@ -85,9 +85,9 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or S
 
     i01.startLeftHand(MyLeftPort)
     
-    
+    #leftHand.setVelocity(45.0, 45.0, 45.0, 45.0, 45.0, 45.0)
     leftHand.enableAutoEnable(1)
-    leftHand.enableAutoDisable(0)
+    leftHand.enableAutoDisable(1)
 
     leftHand.rest()
     

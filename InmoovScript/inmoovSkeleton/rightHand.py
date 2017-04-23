@@ -76,7 +76,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or
     i01.startRightHand(MyRightPort)
         
     rightHand.enableAutoEnable(1)
-    rightHand.enableAutoDisable(0)
+    rightHand.enableAutoDisable(1)
         
     rightHand.rest()
     

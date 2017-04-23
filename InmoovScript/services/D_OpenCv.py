@@ -51,7 +51,7 @@ def openCvInit():
   while not opencvStarted:
     sleep(1)
     timeout+=1
-    if timeout>5:break
+    if timeout>7:break
   
   if not opencvStarted:
     if ScriptType!="RightSide":
