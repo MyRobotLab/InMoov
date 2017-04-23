@@ -69,7 +69,7 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Sc
     i01.startLeftArm(MyLeftPort)
     
     leftArm.enableAutoEnable(1)
-    leftArm.enableAutoEnable(0)
+    leftArm.enableAutoDisable(0)
     
     leftArm.rest()
 

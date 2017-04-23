@@ -87,7 +87,7 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or S
     
     
     leftHand.enableAutoEnable(1)
-    leftHand.enableAutoEnable(0)
+    leftHand.enableAutoDisable(0)
 
     leftHand.rest()
     

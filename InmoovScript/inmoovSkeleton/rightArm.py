@@ -51,11 +51,6 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or 
     rightArm.rotate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
     rightArm.omoplate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
 
-    rightArm.bicep.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'))
-    rightArm.shoulder.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'shoulder'))
-    rightArm.rotate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rotate'))
-    rightArm.omoplate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'))
-    
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'):rightArm.bicep.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'):rightArm.shoulder.setInverted(True)
     if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'):rightArm.rotate.setInverted(True)
@@ -63,8 +58,15 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or 
 
     i01.startRightArm(MyRightPort)
     
+    
+    rightArm.bicep.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'))
+    rightArm.shoulder.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'shoulder'))
+    rightArm.rotate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rotate'))
+    rightArm.omoplate.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'omoplate'))
+    
+    
     rightArm.enableAutoEnable(1)
-    rightArm.enableAutoEnable(0)
+    rightArm.enableAutoDisable(0)
 
     
     rightArm.rest()

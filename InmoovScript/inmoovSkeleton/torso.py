@@ -64,7 +64,7 @@ if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptT
     
     i01.startTorso(TorsoConnectedToArduinoPort)
     torso.enableAutoEnable(1)
-    torso.enableAutoEnable(0)
+    torso.enableAutoDisable(0)
   
     torso.rest()
        
