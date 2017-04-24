@@ -11,7 +11,7 @@ def CheckVersion():
   #download remote information
   remoteVersion=""
   try:
-    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InmoovScript/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
+    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/Inmoov/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
     #read downloaded file
     BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
     BasicConfig.read(RuningFolder+'system/updater/updater.ini')
