@@ -56,8 +56,8 @@ if isEyeLidsActivated==1:
     eyelids.eyelidleft.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidleft'))
     eyelids.eyelidright.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidright'))
       
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidleft'):torso.eyelidleft.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'):torso.eyelidright.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidleft'):eyelids.eyelidleft.setInverted(True)
+    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'):eyelids.eyelidright.setInverted(True)
   
     i01.startEyelids(EyeLidsConnectedToArduinoPort)
     eyelids.eyelidleft.enableAutoEnable(1)
