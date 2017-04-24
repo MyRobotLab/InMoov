@@ -139,6 +139,7 @@ if CheckVersion() and isChatbotActivated:
   
 else:
   sleepModeWakeUp()
+  rest()
   
 
 if boot_green:    

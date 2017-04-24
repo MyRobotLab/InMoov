@@ -29,15 +29,11 @@ isKinectActivated=ThisServicePartConfig.getboolean('MAIN', 'isKinectActivated')
 # ##############################################################################
 
 
-i01.openni = Runtime.createAndStart("i01.openni", "OpenNi")
-openni=i01.openni
-python.subscribe(openni.getName(),"publishOpenNIData")
-
 def openNIInit():
   global KinectStarted  
   KinectStarted=0
   openni.capture()
-  #worky open cv camera detection
+  #worky open ni kinect detection
   timeout=0
   while not KinectStarted:
     sleep(1)
@@ -62,4 +58,8 @@ def onOpenNIData(data):
   if data and not KinectStarted:
     KinectStarted=1
 
-if isKinectActivated:openNIInit()
+if isKinectActivated:
+  i01.openni = Runtime.createAndStart("i01.openni", "OpenNi")
+  openni=i01.openni
+  python.subscribe(openni.getName(),"publishOpenNIData")
+  openNIInit()

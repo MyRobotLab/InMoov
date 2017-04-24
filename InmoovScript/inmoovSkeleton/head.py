@@ -54,7 +54,8 @@ except:
   ThisSkeletonPartConfig.set('MAXIMUM_MAP_INPUT', 'rollneck', 180)
   ThisSkeletonPartConfig.set('MAX_VELOCITY', 'rollneck', -1)
   ThisSkeletonPartConfig.set('SERVO_PIN', 'rollneck', 30)
-  ThisSkeletonPartConfig.set('MAIN', 'isRollNeckActivated', True)
+  ThisSkeletonPartConfig.set('ROLLNECKSERVO', 'isRollNeckActivated', True)
+  ThisSkeletonPartConfig.set('ROLLNECKSERVO', 'RollNeckArduino', "left")
   
   with open(ThisSkeletonPart+'.config', 'wb') as f:
     ThisSkeletonPartConfig.write(f)

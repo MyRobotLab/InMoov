@@ -1,0 +1,77 @@
+;----------------------------- TORSO CONFIGURATION ----------------------------------------
+[MAIN]
+isEyeLidsActivated=0
+EyeLidsConnectedToArduino=right
+;chose left or right existing and connected arduino
+
+EyeLidsLeftActivated=True
+EyeLidsRightActivated=False
+;EyeLidsLeftActivated : 1 servo control 2 eyelids
+;EyeLidsRightActivated+EyeLidsLeftActivated : 1 servo control 1 eyelid
+
+
+[SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
+eyelidleft=60
+eyelidright=60
+
+[SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
+eyelidleft=120
+eyelidright=120
+
+[SERVO_REST_POSITION]
+eyelidleft=90
+eyelidright=90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[SERVO_INVERTED]
+eyelidleft=False
+eyelidright=False
+
+[VELOCITY]
+eyelidleft=13
+eyelidright=13
+
+[MAX_VELOCITY]
+eyelidleft=-1
+eyelidright=-1
+
+[MINIMUM_MAP_INPUT]
+eyelidleft=0
+eyelidright=0
+
+[MAXIMUM_MAP_INPUT]
+eyelidleft=180
+eyelidright=180
+
+[SERVO_PIN]
+eyelidleft=22
+eyelidright=24
+
+[EXPERIMENTAL]
+autoAttach=False
+autoDetach=False
+
+;----------------------------------- END --------------------------------------------------
+
+

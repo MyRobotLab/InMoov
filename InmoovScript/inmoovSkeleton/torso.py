@@ -42,8 +42,8 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isTorsoActivated and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual"):
-  if LeftPortIsConnected:
+if isTorsoActivated:
+  if LeftPortIsConnected or RighPortIsConnected:
     talkEvent(lang_startingTorso)
     torso = Runtime.create("i01.torso","InMoovTorso")
         
