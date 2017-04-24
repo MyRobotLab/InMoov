@@ -133,13 +133,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
 # ##############################################################################    
     
     if MouthControlActivated and AudioSignalProcessing==False:
-      MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
-      #i01.startMouthControl(MyLeftPort)
+      #MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
+      i01.startMouthControl(MyLeftPort)
       print "software mouthcontrol activation"
-      MouthControl.setArduino(left)
-      MouthControl.setJaw(head.jaw)
-      MouthControl.startService()
-      MouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
+      #MouthControl.setArduino(left,26)
+      #MouthControl.setJaw(head.jaw)
+      #MouthControl.startService()
+      #MouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       talkEvent(lang_startingMouth)
 # ##############################################################################
 #                 mouth control based on audio signal processing
