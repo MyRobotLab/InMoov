@@ -26,5 +26,5 @@ if ScriptType=="LeftSide":talkEvent(lang_startingLeftOnly)
 if ScriptType=="RightSide":talkEvent(lang_startingRightOnly)
 if ScriptType=="Full":talkEvent(lang_startingFull)
 if ScriptType=="NoArduino":talkEvent(lang_startingNoArduino)
-if ScriptType=="Virtual":talkEvent(lang_startingVirtual)
+
 

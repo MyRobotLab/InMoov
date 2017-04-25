@@ -71,7 +71,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 #mrl too old dude, update it !
 #if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')    
 ################################
-# INIT.4 - skeleton loading
+# INIT.4 - skeleton loading & virtual skeleton
 ################################
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'inmoovSkeleton'):    
