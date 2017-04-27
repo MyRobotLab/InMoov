@@ -1,8 +1,8 @@
 def brooke2():
-  i01.attach()
+  i01.enable()
   fullspeed()
   gestureforlondon3()
   sleep(2)
-  i01.detach()
+  i01.disable()
   sleep(30)
   brooke3()
