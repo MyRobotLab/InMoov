@@ -15,7 +15,7 @@ RobotIsActualySpeaking=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
-RobotCanMoveRamdom=0
+RobotCanMoveBodyRamdom=0
 global MoveHeadRandom
 MoveHeadRandom=1
 global RobotIsSleeping
