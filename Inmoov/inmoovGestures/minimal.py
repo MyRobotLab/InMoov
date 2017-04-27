@@ -21,6 +21,6 @@ def fullspeed():
     rollneck.setSpeed(1.0)
     
 def detachAll():
-  i01.detach()
+  i01.disable()
   if isRollNeckActivated:
-    rollneck.detach()
+    rollneck.disable()
