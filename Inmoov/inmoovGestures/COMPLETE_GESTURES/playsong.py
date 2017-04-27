@@ -90,7 +90,7 @@ def playsong(data):
     madeby()
     relax()
     sleep(5)
-    i01.detach()  
+    i01.disable()  
 
   
    
