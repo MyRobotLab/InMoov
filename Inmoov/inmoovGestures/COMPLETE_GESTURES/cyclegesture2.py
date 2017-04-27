@@ -34,5 +34,5 @@ def cyclegesture2():
   madeby()
   relax()
   sleep(5)
-  i01.detach()
+  i01.disable()
 
