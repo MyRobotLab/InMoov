@@ -59,7 +59,7 @@ def sleepModeSleep():
     head.neck.setVelocity(60)
     head.neck.moveTo(10)
     sleep(5)
-    i01.detach()
+    i01.disable()
   switchOffAllNervo()
   StopNeopixelAnimation()
   sleep(2)
