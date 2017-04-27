@@ -43,7 +43,7 @@
     <category>
       <pattern>CONNECTE LA TÊTE</pattern>
       <template>Je connecte ma tête.
-        <oob><mrl><service>i01.head</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECT LA TÊTE</pattern>
@@ -54,12 +54,12 @@
     <category>
       <pattern>DÉCONNECTE LA TÊTE</pattern>
       <template>Je déconnecte ma tête.
-        <oob><mrl><service>i01.head</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE LES YEUX</pattern>
       <template>Mes yeux sont attachés.
-        <oob><mrl><service>i01.head.eyeY</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE TES YEUX</pattern>
@@ -88,12 +88,12 @@
     <category>
       <pattern>DÉCONNECTE LES YEUX</pattern>
       <template>Je déconnecte les moteurs de mes yeux.
-        <oob><mrl><service>i01.head.eyeY</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head.eyeY</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE MAIN DROITE</pattern>
       <template>Connection de ma main droite.
-        <oob><mrl><service>i01.rightHand</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE LA MAIN DROITE</pattern>
@@ -122,12 +122,12 @@
     <category>
       <pattern>DÉCONNECTE LA MAIN DROITE</pattern>
       <template>Je déconnecte ma main droite.
-        <oob><mrl><service>i01.rightHand</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE MAIN GAUCHE</pattern>
       <template>Je connecte ma main gauche.
-        <oob><mrl><service>i01.leftHand</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE TA MAIN GAUCHE</pattern>
@@ -156,12 +156,12 @@
     <category>
       <pattern>DÉCONNECTE LA MAIN GAUCHE</pattern>
       <template>Ma main gauche est déconnecte.
-        <oob><mrl><service>i01.leftHand</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>ATTACHES TOUT</pattern>
       <template>J'ai tout connecté.
-        <oob><mrl><service>i01</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECT TO</pattern>
@@ -178,7 +178,7 @@
     <category>
       <pattern>DÉCONNECTE TOUT</pattern>
       <template>J'ai tout déconnecté.
-        <oob><mrl><service>i01</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <category>
@@ -202,17 +202,17 @@
     <category>
       <pattern>CONNECTE LE BRAS GAUCHE</pattern>
       <template>Connection de mon bras gauche.
-        <oob><mrl><service>i01.leftArm</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>DÉCONNECTE LE BRAS GAUCHE</pattern>
       <template>Déconnection de mon bras gauche.
-        <oob><mrl><service>i01.leftArm</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE BRAS DROIT</pattern>
       <template>Connection de mon bras droit.
-        <oob><mrl><service>i01.rightArm</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE LE BRAS DROIT</pattern>
@@ -223,12 +223,12 @@
     <category>
       <pattern>DÉCONNECTE LE BRAS DROIT</pattern>
       <template>Déconnection de mon bras droit.
-        <oob><mrl><service>i01.rightArm</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE TORSE</pattern>
       <template>Connection de mon torse.
-        <oob><mrl><service>i01.torso</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE LE TORSE</pattern>
@@ -239,7 +239,7 @@
     <category>
       <pattern>DÉCONNECTE TORSE</pattern>
       <template>Déconnection de mon torse.
-        <oob><mrl><service>i01.torso</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>DÉCONNECTE LE TORSE</pattern>
@@ -250,22 +250,22 @@
     <category>
       <pattern>CONNECTE LA MÂCHOIRE</pattern>
       <template>Connection de ma mâchoire.
-        <oob><mrl><service>i01.head.jaw</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>DÉCONNECTE LA MÂCHOIRE</pattern>
       <template>Déconnection de ma mâchoire.
-        <oob><mrl><service>i01.head.jaw</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CONNECTE LA ROUE</pattern>
       <template>Je n'ai pas de roue a attacher.
-        <oob><mrl><service>forwardServo</service><method>attach</method></mrl><mrl><service>directionServo</service><method>attach</method></mrl></oob></template>
+        <oob><mrl><service>forwardServo</service><method>enable</method></mrl><mrl><service>directionServo</service><method>enable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>DÉCONNECTE LA ROUE</pattern>
       <template>Je n'ai pas de roue.
-        <oob><mrl><service>directionServo</service><method>detach</method></mrl><mrl><service>forwardServo</service><method>detach</method></mrl></oob></template>
+        <oob><mrl><service>directionServo</service><method>disable</method></mrl><mrl><service>forwardServo</service><method>disable</method></mrl></oob></template>
     </category>
     <category>
       <pattern>CHERCHE LES HUMAINS</pattern>
