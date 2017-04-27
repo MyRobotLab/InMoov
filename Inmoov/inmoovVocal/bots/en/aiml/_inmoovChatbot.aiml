@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: April 3, 2017 -->
+  <!-- Last modified: April 28, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -283,7 +283,7 @@
   <category>
     <pattern>DETACH ALL</pattern>
     <template>Detach All
-      <oob><mrl><service>i01</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DETACH EVERYTHING</pattern>
@@ -294,7 +294,7 @@
   <category>
     <pattern>ATTACH ALL</pattern>
     <template>Attaching all
-      <oob><mrl><service>i01</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH EVERYTHING</pattern>
@@ -305,7 +305,7 @@
   <category>
     <pattern>ATTACH RIGHT HAND</pattern>
     <template>Attaching my right hand
-      <oob><mrl><service>i01.rightHand</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR RIGHT HAND</pattern>
@@ -316,7 +316,7 @@
   <category>
     <pattern>DETACH RIGHT HAND</pattern>
     <template>Detaching my right hand
-      <oob><mrl><service>i01.rightHand</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT YOUR RIGHT HAND</pattern>
@@ -327,7 +327,7 @@
   <category>
     <pattern>ATTACH LEFT HAND</pattern>
     <template>Attaching my left hand
-      <oob><mrl><service>i01.leftHand</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR LEFT HAND</pattern>
@@ -338,7 +338,7 @@
   <category>
     <pattern>DETACH LEFT HAND</pattern>
     <template>Detaching my left hand
-      <oob><mrl><service>i01.leftHand</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT YOUR LEFT HAND</pattern>
@@ -349,7 +349,7 @@
   <category>
     <pattern>ATTACH HEAD</pattern>
     <template>Attaching my head
-      <oob><mrl><service>i01.head</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR HEAD</pattern>
@@ -360,7 +360,7 @@
   <category>
     <pattern>DETACH HEAD</pattern>
     <template>Detaching my head
-      <oob><mrl><service>i01.head</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT HEAD</pattern>
@@ -371,7 +371,7 @@
   <category>
     <pattern>ATTACH RIGHT ARM</pattern>
     <template>Attaching my right arm
-      <oob><mrl><service>i01.rightArm</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR RIGHT ARM</pattern>
@@ -382,7 +382,7 @@
   <category>
     <pattern>DETACH RIGHT ARM</pattern>
     <template>Detaching my right arm
-      <oob><mrl><service>i01.rightArm</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT RIGHT ARM</pattern>
@@ -393,7 +393,7 @@
   <category>
     <pattern>ATTACH LEFT ARM</pattern>
     <template>Attaching my left arm
-      <oob><mrl><service>i01.leftArm</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR LEFT ARM</pattern>
@@ -404,7 +404,7 @@
   <category>
     <pattern>DETACH LEFT ARM</pattern>
     <template>Detaching my left arm
-      <oob><mrl><service>i01.leftArm</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT LEFT ARM</pattern>
@@ -415,7 +415,7 @@
   <category>
     <pattern>ATTACH TORSO</pattern>
     <template>Attaching my torso
-      <oob><mrl><service>i01.torso</service><method>attach</method></mrl></oob></template>
+      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>ATTACH YOUR TORSO</pattern>
@@ -426,7 +426,7 @@
   <category>
     <pattern>DETACH TORSO</pattern>
     <template>Detaching my torso
-      <oob><mrl><service>i01.torso</service><method>detach</method></mrl></oob></template>
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
     <pattern>DISCONNECT TORSO</pattern>
