@@ -5,12 +5,12 @@ def relax():
   if (i01.eyesTracking.getOpenCV().capturing):
     global RobotCanMoveHeadWhileSpeaking
     RobotCanMoveHeadWhileSpeaking=0
-    i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
-    i01.setHandSpeed("right", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
-    i01.setArmSpeed("right", 0.75, 0.85, 0.65, 0.85)
-    i01.setArmSpeed("left", 0.95, 0.65, 0.75, 0.75)
+    i01.setHandVelocity("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
+    i01.setHandVelocity("right", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
+    i01.setArmVelocity("right", 0.75, 0.85, 0.65, 0.85)
+    i01.setArmVelocity("left", 0.95, 0.65, 0.75, 0.75)
     #i01.setHeadSpeed(0.85, 0.85)
-    i01.setTorsoSpeed(0.75, 0.55, 1.0)
+    i01.setTorsoVelocity(0.75, 0.55, 1.0)
     #i01.moveHead(79,100)
     i01.moveArm("left",5,84,28,12)
     i01.moveArm("right",5,82,28,12)
@@ -21,12 +21,12 @@ def relax():
   else:
     global RobotCanMoveHeadWhileSpeaking
     RobotCanMoveHeadWhileSpeaking=1
-    i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
-    i01.setHandSpeed("right", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
-    i01.setArmSpeed("right", 0.75, 0.85, 0.65, 0.85)
-    i01.setArmSpeed("left", 0.95, 0.65, 0.75, 0.75)
-    i01.setHeadSpeed(0.85, 0.85)
-    i01.setTorsoSpeed(0.75, 0.55, 1.0)
+    i01.setHandVelocity("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
+    i01.setHandVelocity("right", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
+    i01.setArmVelocity("right", 0.75, 0.85, 0.65, 0.85)
+    i01.setArmVelocity("left", 0.95, 0.65, 0.75, 0.75)
+    i01.setHeadVelocity(0.85, 0.85)
+    i01.setTorsoVelocity(0.75, 0.55, 1.0)
     i01.moveHead(79,100)
     i01.moveArm("left",5,84,28,12)
     i01.moveArm("right",5,82,28,12)
