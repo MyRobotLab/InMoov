@@ -58,7 +58,7 @@ def heard(data):
     forwardServo.moveTo(60)
     sleep(0.2)
     i01.mouth.speak("really")
-    forwardServo.detach()
+    forwardServo.disable()
     fullspeed()
     i01.moveHead(16,11)
     i01.moveArm("left",60,67,67,40)
@@ -347,8 +347,8 @@ def heard(data):
       i01.moveHead(70,80)
 
   if (data == "disconnect wheel"):
-      directionServo.detach()
-      forwardServo.detach()
+      directionServo.disable()
+      forwardServo.disable()
   if (data == "attach wheel"):
       directionServo.attach()
       forwardServo.attach()

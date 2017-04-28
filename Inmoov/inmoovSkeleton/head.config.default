@@ -47,13 +47,6 @@ MouthControlJawMax=100
 
 
 
-
-
-
-
-
-
-
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
 [AUDIOSIGNALPROCESSING]
@@ -104,9 +97,13 @@ neck=12
 rothead=13
 rollneck=30
 
-[EXPERIMENTAL]
-autoAttach=False
-autoDetach=False
+[SERVO_AUTO_DISABLE]
+jaw=True
+eyeX=True
+eyeY=True
+neck=True
+rothead=True
+rollneck=True
 
 ;----------------------------------- END --------------------------------------------------
 

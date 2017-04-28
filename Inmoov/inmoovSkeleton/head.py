@@ -61,6 +61,23 @@ except:
     ThisSkeletonPartConfig.write(f)
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
   pass 
+  
+try:
+  rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rothead', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rollneck', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'jaw', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'neck', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyeX', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyeY', 1)
+  
+  
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass 
 isRollNeckActivated=ThisSkeletonPartConfig.getboolean('ROLLNECKSERVO', 'isRollNeckActivated') 
 RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 
@@ -122,10 +139,18 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Scrip
     
     
     head.enableAutoEnable(1)
+  
+    rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
+    neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
+    rollneckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rollneck')
+    head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
+    head.neck.enableAutoDisable(neckEnableAutoDisable)
+    head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
+    head.jaw.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
+    head.eyeX.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX'))
+    head.eyeY.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY'))
     
-    head.rothead.enableAutoDisable(0)
-    head.neck.enableAutoDisable(0)
-    head.jaw.enableAutoDisable(1)
+    
     head.jaw.setVelocity(-1)
     head.rest()
     

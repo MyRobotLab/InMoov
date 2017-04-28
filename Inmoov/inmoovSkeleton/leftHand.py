@@ -28,7 +28,21 @@ except:
   errorSpokenFunc('ConfigParserProblem','lefthand.config')
   pass  
   
+try:
+  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'thumb', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'index', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'majeure', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'ringFinger', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'pinky', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'wrist', 1)   
   
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass    
   
 # ##############################################################################
 #                 SERVO FUNCTIONS
@@ -53,21 +67,13 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or S
     leftHand.pinky.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'pinky'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'pinky'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'pinky'))
     leftHand.wrist.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'wrist'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'wrist'))
     
-  
     leftHand.thumb.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
     leftHand.index.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
     leftHand.majeure.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
     leftHand.ringFinger.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
     leftHand.pinky.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
     leftHand.wrist.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
-    
-    leftHand.thumb.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'thumb'))
-    leftHand.index.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'index'))
-    leftHand.majeure.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'majeure'))
-    leftHand.ringFinger.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'ringFinger'))
-    leftHand.pinky.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'pinky'))
-    leftHand.wrist.setVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'wrist'))
-    
+     
     leftHand.thumb.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'thumb'))
     leftHand.index.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'index'))
     leftHand.majeure.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'majeure'))
@@ -75,19 +81,22 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or S
     leftHand.pinky.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'pinky'))
     leftHand.wrist.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'wrist'))
     
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'thumb'):leftHand.thumb.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'index'):leftHand.index.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'majeure'):leftHand.majeure.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'ringFinger'):leftHand.ringFinger.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'):leftHand.pinky.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'):leftHand.wrist.setInverted(True)
-    
-
+    leftHand.thumb.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'thumb'))
+    leftHand.index.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'index'))
+    leftHand.majeure.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'majeure'))
+    leftHand.ringFinger.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'ringFinger'))
+    leftHand.pinky.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'))
+    leftHand.wrist.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'))
+ 
     i01.startLeftHand(MyLeftPort)
     
-    #leftHand.setVelocity(45.0, 45.0, 45.0, 45.0, 45.0, 45.0)
     leftHand.enableAutoEnable(1)
-    leftHand.enableAutoDisable(1)
+    leftHand.thumb.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb'))
+    leftHand.index.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'index'))
+    leftHand.majeure.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'majeure'))
+    leftHand.ringFinger.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'ringFinger'))
+    leftHand.pinky.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'pinky'))
+    leftHand.wrist.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'wrist'))
 
     leftHand.rest()
     

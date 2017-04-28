@@ -40,6 +40,8 @@ ear.addCommand(u"cherche un humain", "python", "trackHumans")
 ear.addCommand(u"arrête de chercher", "python", "stopTracking")
 ear.addCommand(u"suis du regard ce point", "python", "trackPoint")
 ear.addCommand(u"arrête de suivre du regard", "python", "stopTracking")
+ear.addCommand(u"penche la tête à gauche", "python", "tiltHeadLeftSide")
+ear.addCommand(u"penche la tête à droite", "python","tiltHeadRightSide")
 
 # TORSO - inmoovGestures\minimalTorso.py
 ear.addCommand(u"détacher le torse", "i01.torso", "detach")

@@ -26,17 +26,6 @@ omoplate=10
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
 [SERVO_INVERTED]
@@ -69,9 +58,11 @@ rotate=180
 shoulder=180
 omoplate=180
 
-[EXPERIMENTAL]
-autoAttach=False
-autoDetach=False
+[SERVO_AUTO_DISABLE]
+bicep=True
+rotate=True
+shoulder=True
+omoplate=True
 
 ;----------------------------------- END --------------------------------------------------
 

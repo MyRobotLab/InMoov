@@ -1,7 +1,7 @@
 def comehere():
   fullspeed()
   rest()
-  neopixel.setAnimation("Larson Scanner", 0, 200, 0, 1)
+  PlayNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
 ##look around
   i01.setHeadSpeed(0.80, 0.80, 0.90, 0.90, 1.0)
   i01.moveHead(80,66,7,85,52)

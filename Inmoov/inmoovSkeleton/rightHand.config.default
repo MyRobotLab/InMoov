@@ -31,16 +31,6 @@ wrist=90
 
 
 
-
-
-
-
-
-
-
-
-
-
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
 [SERVO_INVERTED]
@@ -83,9 +73,13 @@ ringFinger=5
 pinky=6
 wrist=7
 
-[EXPERIMENTAL]
-autoAttach=False
-autoDetach=False
+[SERVO_AUTO_DISABLE]
+thumb=True
+index=True
+majeure=True
+ringFinger=True
+pinky=True
+wrist=True
 ;----------------------------------- END --------------------------------------------------
 
 

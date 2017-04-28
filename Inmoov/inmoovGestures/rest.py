@@ -25,3 +25,6 @@ def rest():
   
   if isTorsoActivated:
     i01.torso.rest()
+    
+  if isEyeLidsActivated:
+    i01.eyelids.rest()

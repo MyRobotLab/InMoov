@@ -34,7 +34,18 @@ except:
   errorSpokenFunc('ConfigParserProblem','eyelids . config')
   pass
     
+try:
+  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidleft')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyelidleft', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyelidright', 1)
   
+  
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass   
   
   
 # ##############################################################################
@@ -56,14 +67,16 @@ if isEyeLidsActivated==1:
     eyelids.eyelidleft.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidleft'))
     eyelids.eyelidright.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'eyelidright'))
       
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidleft'):eyelids.eyelidleft.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'):eyelids.eyelidright.setInverted(True)
+    eyelids.eyelidleft.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidleft'))
+    eyelids.eyelidright.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'))
   
-    i01.startEyelids(EyeLidsConnectedToArduinoPort)
+ 
+    i01.startEyelids(EyeLidsConnectedToArduinoPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
+    
     eyelids.eyelidleft.enableAutoEnable(1)
     eyelids.eyelidright.enableAutoEnable(1)
-    eyelids.eyelidleft.enableAutoDisable(0)
-    eyelids.eyelidright.enableAutoDisable(0)
+    eyelids.eyelidleft.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
+    eyelids.eyelidright.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
   
     eyelids.rest()
        

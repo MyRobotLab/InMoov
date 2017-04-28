@@ -28,6 +28,20 @@ except:
   errorSpokenFunc('ConfigParserProblem','leftarm.config')
   pass
   
+try:
+  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'bicep', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'shoulder', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rotate', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'omoplate', 1)  
+  
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass   
+  
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -57,19 +71,18 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or Sc
       errorSpokenFunc('ConfigParserProblem',ThisSkeletonPart)
       pass
       
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'):
-      leftArm.bicep.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'):
-      leftArm.shoulder.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'):
-      leftArm.rotate.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'):
-      leftArm.omoplate.setInverted(True)
+    leftArm.bicep.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'))
+    leftArm.shoulder.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'))
+    leftArm.rotate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'))
+    leftArm.omoplate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'))
     
     i01.startLeftArm(MyLeftPort)
     
     leftArm.enableAutoEnable(1)
-    leftArm.enableAutoDisable(0)
+    leftArm.bicep.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep'))
+    leftArm.shoulder.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'shoulder'))
+    leftArm.rotate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rotate'))
+    leftArm.omoplate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'omoplate'))
     
     leftArm.rest()
 

@@ -31,6 +31,20 @@ try:
 except:
   errorSpokenFunc('ConfigParserProblem','rightarm.config')
   pass  
+  
+try:
+  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'bicep', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'shoulder', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rotate', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'omoplate', 1)
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass    
+  
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -51,10 +65,10 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or 
     rightArm.rotate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rotate'))
     rightArm.omoplate.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'omoplate'))
 
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'):rightArm.bicep.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'):rightArm.shoulder.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'):rightArm.rotate.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'):rightArm.omoplate.setInverted(True)
+    rightArm.bicep.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'bicep'))
+    rightArm.shoulder.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'shoulder'))
+    rightArm.rotate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'))
+    rightArm.omoplate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'))
 
     i01.startRightArm(MyRightPort)
     
@@ -66,7 +80,11 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or 
     
     
     rightArm.enableAutoEnable(1)
-    rightArm.enableAutoDisable(0)
+    
+    rightArm.bicep.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep'))
+    rightArm.shoulder.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'shoulder'))
+    rightArm.rotate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rotate'))
+    rightArm.omoplate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'omoplate'))
 
     
     rightArm.rest()

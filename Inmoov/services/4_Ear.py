@@ -10,9 +10,6 @@
 i01.ear=Runtime.createAndStart("i01.ear", EarEngine)
 i01.startEar()
 ear = i01.ear
-sleep(0.1)
-ear.pauseListening()
-
 
 python.subscribe(ear.getName(),"recognized")
 chatBot=Runtime.create("chatBot", "ProgramAB")

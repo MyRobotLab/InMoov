@@ -43,6 +43,8 @@ ear.addCommand(u"search humans", "python", "trackHumans")
 ear.addCommand(u"quit search", "python", "stopTracking")
 ear.addCommand(u"track", "python", "trackPoint")
 ear.addCommand(u"freeze track", "python", "stopTracking")
+ear.addCommand(u"tilt head to the left", "python", "tiltHeadLeftSide")
+ear.addCommand(u"tilt head to the right", "python","tiltHeadRightSide")
 
 # TORSO - inmoovGestures\minimalTorso.py
 ear.addCommand("disconnect torso", "i01.torso", "detach")

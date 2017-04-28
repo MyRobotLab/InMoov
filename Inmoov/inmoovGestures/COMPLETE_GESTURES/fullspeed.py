@@ -1,11 +1,25 @@
-def fullspeed():
-  neopixel.setAnimation("Color Wipe", 200, 0, 0, 1)
+def fullSpeed():
+  PlayNeopixelAnimation("Color Wipe", 200, 0, 0, 1)
   sleep(1)
-  neopixel.setAnimation("Ironman", 0, 0, 255, 1)
-  i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
-  i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
-  i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
-  i01.setArmSpeed("right", 1.0, 1.0, 1.0, 1.0)
-  i01.setHeadSpeed(1.0, 1.0)
-  i01.setTorsoSpeed(1.0, 1.0, 1.0)
+  PlayNeopixelAnimation("Ironman", 0, 0, 255, 1)
+  if isRightHandActivated:
+    i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
+      
+  if isLeftHandActivated:
+    i01.setHandVelocity("left", -1, -1, -1, -1, -1, -1)
+      
+  if isRightArmActivated:
+    i01.setArmVelocity("right", -1, -1, -1, -1)
+    
+  if isLeftArmActivated:
+    i01.setArmVelocity("left", -1, -1, -1, -1)
+  
+  if isHeadActivated:
+    i01.setHeadVelocity(-1, -1, -1)
+  
+  if isTorsoActivated:
+    i01.setTorsoVelocity(-1, -1, -1)
+      
+  if isEyeLidsActivated:
+    i01.setEyelidsVelocity(-1,-1)
 

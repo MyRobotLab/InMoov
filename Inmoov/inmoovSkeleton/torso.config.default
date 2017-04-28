@@ -21,30 +21,11 @@ midStom=90
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
 
 [SERVO_INVERTED]
 topStom=False
 midStom=False
-
-[VELOCITY]
-topStom=13
-midStom=13
 
 [MAX_VELOCITY]
 topStom=-1
@@ -62,9 +43,9 @@ midStom=180
 topStom=27
 midStom=28
 
-[EXPERIMENTAL]
-autoAttach=False
-autoDetach=False
+[SERVO_AUTO_DISABLE]
+topStom=True
+midStom=True
 
 ;----------------------------------- END --------------------------------------------------
 

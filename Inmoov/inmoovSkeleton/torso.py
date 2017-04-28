@@ -34,10 +34,19 @@ except:
   isTorsoActivated=0
   TorsoConnectedToArduino=""
   pass
-    
+try:
+  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom')
+except:
+  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'topStom', 1)
+  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'midStom', 1)
+
   
-  
-  
+  with open(ThisSkeletonPart+'.config', 'wb') as f:
+    ThisSkeletonPartConfig.write(f)
+  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+  pass     
+   
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -57,14 +66,14 @@ if isTorsoActivated:
     torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
     torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
       
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'):torso.topStom.setInverted(True)
-    if ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'):torso.midStom.setInverted(True)
-    
-    
+    torso.topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
+    torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
+   
     
     i01.startTorso(TorsoConnectedToArduinoPort)
     torso.enableAutoEnable(1)
-    torso.enableAutoDisable(0)
+    torso.topStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
+    torso.midStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
   
     torso.rest()
        

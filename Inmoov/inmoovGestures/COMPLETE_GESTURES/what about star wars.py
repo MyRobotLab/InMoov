@@ -1,5 +1,5 @@
 def whataboutstarwars():
-  neopixel.setAnimation("Ironman", 255, 255, 255, 1)
+  PlayNeopixelAnimation("Ironman", 255, 255, 255, 1)
   sleep(3)
   neopixel.animationStop()
   global RobotCanMoveHeadWhileSpeaking

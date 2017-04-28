@@ -21,8 +21,6 @@ CheckFileExist(inmoovLifeConfigFile)
 inmoovLifeConfig = ConfigParser.ConfigParser()
 inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')
 
-AutolistenActivated=inmoovLifeConfig.getboolean('AUTOLISTEN', 'Activated') 
-AutolistenTimerValue=inmoovLifeConfig.getint('AUTOLISTEN', 'TimerValue') 
 HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
 HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
 global RobotCanMoveHeadWhileSpeaking

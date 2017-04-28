@@ -24,9 +24,6 @@ except:
   pass
 
 
-
-
-
 #vocal startup globalized so :
 i01.setMute(1)
 
@@ -82,7 +79,7 @@ def onEndSpeaking(text):
   global RobotCanMoveHeadWhileSpeaking
   RobotIsActualySpeaking=0
   if RobotIsStarted==1:
-    ear.resumeListening()
+    
     MoveHeadTimer.stopClock()
     if flash_when_speak:
       StopNeopixelAnimation()
@@ -105,7 +102,7 @@ def onStartSpeaking(text):
   
   global RobotIsActualySpeaking
   RobotIsActualySpeaking=1
-  ear.pauseListening()
+  
   if AudioSignalProcessing:
     try:
       
