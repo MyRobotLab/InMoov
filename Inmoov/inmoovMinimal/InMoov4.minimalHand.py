@@ -2,10 +2,7 @@
 #MRL version above 1.0.2000
 # this script is provided as a basic guide
 # most parts can be run by uncommenting them
-# InMoov now can be started in modular pieces
-
-# this will run with versions of MRL above 1695
-# a very minimal script for InMoov
+# InMoov now can be started in modular pieces through the skeleton.config
 # although this script is very short you can still
 # do voice control of a right hand or finger box
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
