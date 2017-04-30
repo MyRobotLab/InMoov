@@ -334,7 +334,7 @@
     <category>
       <pattern>GIVING</pattern>
       <template>Giving.
-        <oob><mrl><service>i01</service><method>giving</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>giving()</param></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
@@ -366,14 +366,14 @@
     <category>
       <pattern>LOOK AT THIS</pattern>
       <template>What do you have there?  I'm looking.
-        <oob><mrl><service>i01</service><method>lookAtThis</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
     <category>
       <pattern>VICTORY</pattern>
       <template>It's good to win.
-        <oob><mrl><service>i01</service><method>victory</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
@@ -398,14 +398,14 @@
     <category>
       <pattern>ARMS FRONT</pattern>
       <template>Holding my arms in front of me.
-        <oob><mrl><service>i01</service><method>armsFront</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
     <category>
       <pattern>DA VINCI</pattern>
       <template>This is the pose from Leonardo Da Vinci's drawings.
-        <oob><mrl><service>i01</service><method>daVinci</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
