@@ -331,7 +331,7 @@
     <category>
       <pattern>DONNE</pattern>
       <template>Je donne.
-        <oob><mrl><service>i01</service><method>giving</method></mrl></oob></template>
+	<oob><mrl><service>python</service><method>exec</method><param>giving()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>BAGARREUR</pattern>
@@ -341,13 +341,7 @@
           <li>Me déplacer comme un papillon et piquer comme une guêpe.</li>
           <li>Regarde comme je suis beau.</li>
         </random>
-        <oob>
-          <mrl>
-            <service>i01</service>
-            <method>fighter</method>
-          </mrl>
-        </oob>
-      </template>
+        <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>METS LES MAINS SÛR LES HANCHES</pattern>
@@ -357,12 +351,12 @@
     <category>
       <pattern>REGARDE CECI</pattern>
       <template>Qu'est ce que vous avez à me montrer.
-        <oob><mrl><service>i01</service><method>lookAtThis</method></mrl></oob></template>
+	<oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>VICTOIRE</pattern>
       <template>Je suis un gagnant.
-        <oob><mrl><service>i01</service><method>victory</method></mrl></oob></template>
+	<oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>METS TES BRAS EN L'AIR</pattern>
@@ -383,12 +377,12 @@
     <category>
       <pattern>BRAS EN AVANT</pattern>
       <template>Je mets mes bras en avant.
-        <oob><mrl><service>i01</service><method>armsFront</method></mrl></oob></template>
+	<oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>DA VINCI</pattern>
       <template>Ceci est la pose de Leonard Da Vinci.
-        <oob><mrl><service>i01</service><method>daVinci</method></mrl></oob></template>
+	<oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>DAVINCI</pattern>
