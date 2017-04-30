@@ -3,7 +3,7 @@
 # ##############################################################################
 
 def rest():
-  #fullspeed()
+  fullspeed()
   if isRightHandActivated:
     i01.rightHand.rest()
   

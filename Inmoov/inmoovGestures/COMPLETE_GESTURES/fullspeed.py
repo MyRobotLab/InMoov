@@ -22,4 +22,7 @@ def fullSpeed():
       
   if isEyeLidsActivated:
     i01.setEyelidsVelocity(-1,-1)
+    
+def fullspeed():
+  fullSpeed()
 
