@@ -74,8 +74,8 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 # INIT.4 - skeleton loading & virtual skeleton
 ################################
 #we launch Inmoov Skeleton
-for filename in os.listdir(RuningFolder+'inmoovSkeleton'):    
-  if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
+for filename in os.listdir(RuningFolder+'skeleton'):    
+  if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 sleep(1)
 if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
 
@@ -83,7 +83,7 @@ if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
 # INIT.5 - ear.addcmmands
 ################################
 #if chatbot loaded we do not load ear.addcommands
-for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
+for root, subdirs, files in os.walk(RuningFolder+'minimal'):
   for name in files:
     if name.split(".")[-1] == "py":
       execfile(os.path.join(root, name).encode('utf8'))
@@ -95,43 +95,32 @@ for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
 ################################
   
 #we launch Inmoov Gestures
-for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
+for root, subdirs, files in os.walk(RuningFolder+'gestures'):
   for name in files:
     if name.split(".")[-1] == "py":
       execfile(os.path.join(root, name))
       if DEBUG==1:print "debug inmoovGestures : ",os.path.join(root, name)
     
 #we launch Inmoov life
-for root, subdirs, files in os.walk(RuningFolder+'inmoovLife'):
+for root, subdirs, files in os.walk(RuningFolder+'life'):
   for name in sorted(files):
     if name.split(".")[-1] == "py":
       execfile(os.path.join(root, name))
       if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
 
 #create the custom script, only if not exist
-if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
-
-
-################################
-# INIT.7 - inmoov APPS - TODO - WIP
-################################
-
-#we launch Inmoov APPS - GAMES
-for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
-  for name in files:
-    if name.split(".")[-1] == "py":
-      execfile(os.path.join(root, name))
-      if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
+if not os.path.isfile(RuningFolder+'custom/Inmoov_custom.py'):shutil.move(RuningFolder+'custom/Inmoov_custom.py.default',RuningFolder+'custom/Inmoov_custom.py')
 
       
 ################################
-# INIT.8 - great, inmoov is alive
+# INIT.8 - yes there is no 7 :) great, inmoov is alive
 ################################
-#first init check
+
+#wip updater
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
-
+#first init check
 if CheckVersion() and isChatbotActivated:
   r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
   chatBot.getResponse("SYSTEM_NEW_VERSION")

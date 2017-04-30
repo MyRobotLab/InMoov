@@ -28,13 +28,13 @@ isChatbotActivated=ThisServicePartConfig.getboolean('MAIN', 'isChatbotActivated'
 Runtime.createAndStart("htmlFilter", "HtmlFilter")
 chatBot=Runtime.start("chatBot", "ProgramAB")
 if isChatbotActivated:
-  if (os.path.isdir(RuningFolder+'inmoovVocal/bots/'+MyLanguage+'/aiml')):
+  if (os.path.isdir(RuningFolder+'chatbot/bots/'+MyLanguage+'/aiml')):
     try:
       #waiting a fix we sould remove csv files
-      shutil.rmtree(RuningFolder+'inmoovVocal/bots/'+MyLanguage+'/aimlif')
+      shutil.rmtree(RuningFolder+'chatbot/bots/'+MyLanguage+'/aimlif')
     except: 
       pass
-    chatBot.setPath(RuningFolder+"inmoovVocal/")
+    chatBot.setPath(RuningFolder+"chatbot/")
     chatBot.cleanOutOfDateAimlIFFiles(MyLanguage)
     talkEvent(lang_chatbotLoading)
     chatBot.startSession("default",MyLanguage)

@@ -88,11 +88,8 @@ def RemoveFile(file):
   except:
     pass
   
-RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookinmiddle.py")
-RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookleftside.py")
-RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/lookrightside.py")
-RemoveFile(RuningFolder+"inmoovGestures/COMPLETE_GESTURES/googleMicAutostart.py")
-RemoveFile(RuningFolder+"inmoovSkeleton/rollNeck.py")
+
+RemoveFile(RuningFolder+"skeleton/rollNeck.py")
 
   #clean up .default.config
 for root, subdirs, files in os.walk(RuningFolder):
@@ -100,5 +97,3 @@ for root, subdirs, files in os.walk(RuningFolder):
     if name.split(".")[-1] == "default":
       os.remove(os.path.join(root, name))
       if DEBUG==1:print "removed .default : ",os.path.join(root, name)
-
-  
