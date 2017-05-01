@@ -6,18 +6,17 @@
 
 
 # GENERAL
-ear.addCommand(u"attacher tout", "i01", "attach")
-ear.addCommand(u"détacher tout", "python", "detachAll()")
+ear.addCommand(u"désactiver tout", "python", "disableAll()")
 ear.addCommand(u"repos", "python", "rest")
 
 # ARM((S) - inmoovGestures\minimalArm.py
-ear.addCommand(u"détacher le bras gauche", "i01.leftArm", "detach") #to remove soon
+ear.addCommand(u"détacher le bras gauche", "i01.leftArm", "disable")
 ear.addCommand(u"lève le biceps droit", "python", "rightbicepsraise")
 ear.addCommand(u"baisse le biceps droit", "python", "rightbicepslower")
 ear.addCommand(u"lève le biceps gauche", "python", "leftbicepsraise")
 ear.addCommand(u"baisse le biceps gauche", "python", "lefttbicepslower")
-ear.addCommand(u"bras devant", i01.getName(), "armsFront")
-ear.addCommand(u"da vinci", i01.getName(), "daVinci")
+ear.addCommand(u"bras devant", "python", "armsFront")
+ear.addCommand(u"da vinci", "python", "daVinci")
 ear.addCommand(u"omoplate", "python", "omoplate")
 
 # HAND(S) - inmoovGestures\minimalHand.py
@@ -31,8 +30,8 @@ ear.addCommand(u"ouvre la main gauche", "python", "lefthandopen")
 ear.addCommand(u"ferme la main gauche", "python", "lefthandclose")
 
 # HEAD - inmoovGestures\minimalHead.py
-ear.addCommand(u"détacher la tête", "i01.head", "detach")
-ear.addCommand(u"détacher les yeux", "i01.head.eyeY", "detach")
+ear.addCommand(u"détacher la tête", "i01.head", "disable")
+ear.addCommand(u"détacher les yeux", "i01.head.eyeY", "disable")
 ear.addCommand(u"regarde sur ta droite", "python", "lookrightside")
 ear.addCommand(u"regarde sur ta gauche", "python", "lookleftside")
 ear.addCommand(u"regarde au milieu", "python", "lookinmiddle")
@@ -44,6 +43,6 @@ ear.addCommand(u"penche la tête à gauche", "python", "tiltHeadLeftSide")
 ear.addCommand(u"penche la tête à droite", "python","tiltHeadRightSide")
 
 # TORSO - inmoovGestures\minimalTorso.py
-ear.addCommand(u"détacher le torse", "i01.torso", "detach")
+ear.addCommand(u"détacher le torse", "i01.torso", "disable")
 ear.addCommand(u"test torse", "python", "teststomach")
 

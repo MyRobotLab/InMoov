@@ -6,23 +6,21 @@
 
 
 # GENERAL
-ear.addCommand(u"conectar todo", "i01", "attach")
-ear.addCommand(u"desconectar todo", "python", "detachAll()")
+ear.addCommand(u"desconectar todo", "python", "disableAll()")
 ear.addCommand(u"descansar", "python", "rest")
 ear.addCommand(u"lista", "python", "rest")
 ear.addCommand(u"primero", "python", "rest")
 ear.addCommand(u"probar gestos", "python", "gestureTEST")
 
 # ARM((S) - inmoovGestures\ minimalArm.py
-ear.addCommand(u"conectar brazo izquierdo", "i01.leftArm", "attach") #to remove soon
-ear.addCommand(u"desconectar brazo izquierdo", "i01.leftArm", "detach") #to remove soon
+ear.addCommand(u"desconectar brazo izquierdo", "i01.leftArm", "disable")
 ear.addCommand(u"levanta tu brazo derecho", "python", "rightbicepsraise")
 ear.addCommand(u"baja tu brazo derecho", "python", "rightbicepslower")
 ear.addCommand(u"levanta tu brazo izquierdo", "python", "leftbicepsraise")
 ear.addCommand(u"baja tu brazo izquierdo", "python", "lefttbicepslower")
-ear.addCommand(u"brazos adelante", "i01.getName()", "armsFront")
-ear.addCommand(u"da vinci", "i01.getName()", "daVinci")
-ear.addCommand(u"davinci", "i01.getName()", "daVinci")
+ear.addCommand(u"brazos adelante", "python", "armsFront")
+ear.addCommand(u"da vinci", "python", "daVinci")
+ear.addCommand(u"davinci", "python", "daVinci")
 ear.addCommand(u"Omóplato", "python", "omoplate")
 
 # HAND(S) - inmoovGestures\ minimalHand.py
@@ -36,10 +34,8 @@ ear.addCommand(u"abre tu mano izquierda", "python", "lefthandopen")
 ear.addCommand(u"cierra tu mano izquierda", "python", "lefthandclose")
 
 # HEAD - inmoovGestures\ minimalHead.py
-ear.addCommand(u"Conectar la Cabeza", "i01.head", "attach")
-ear.addCommand(u"Desconectar la Cabeza", "i01.head", "detach")
-ear.addCommand(u"conectar los ojos", "i01.head.eyeY", "attach")
-ear.addCommand(u"desconectar los ojos", "i01.head.eyeY", "detach")
+ear.addCommand(u"Desconectar la Cabeza", "i01.head", "disable")
+ear.addCommand(u"desconectar los ojos", "i01.head.eyeY", "disable")
 ear.addCommand(u"Mira a la derecha", "python", "lookrightside")
 ear.addCommand(u"Mira a la izquierda", "python", "lookleftside")
 ear.addCommand(u"Mira al centro", "python", "lookinmiddle")
@@ -52,5 +48,5 @@ ear.addCommand(u"Mira al centro", "python", "lookinmiddle")
 #ear.addCommand(u"tilt head to the right", "python","tiltHeadRightSide")
 
 # TORSO - inmoovGestures\minimalTorso.py
-ear.addCommand("disconnect torso", "i01.torso", "detach")
+ear.addCommand("disconnect torso", "i01.torso", "disable")
 ear.addCommand("test your stomach", "python", "teststomach")
