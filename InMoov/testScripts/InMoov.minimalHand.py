@@ -34,8 +34,6 @@ i01 = Runtime.createAndStart("i01", "InMoov")
 i01.startEar()
 i01.startMouth()
 ##############
-right = Runtime.createAndStart("i01.right", "Arduino")
-right.connect(rightPort)
 i01.startRightHand(rightPort)
 # tweaking defaults settings of right hand
 i01.rightHand.thumb.setMaxVelocity(-1)
