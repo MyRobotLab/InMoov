@@ -10,7 +10,7 @@
 # ##############################################################################  
   
 #read current skeleton part config
-ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 ###############################################################################
 #                 webgui sync
@@ -26,7 +26,7 @@ try:
 
   isTorsoActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isTorsoActivated') 
   
-  if isTorsoActivated:
+  if isTorsoActivated or ScriptType=="Virtual":
     TorsoConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
 except:
@@ -51,8 +51,8 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isTorsoActivated:
-  if LeftPortIsConnected or RighPortIsConnected:
+if isTorsoActivated  or ScriptType=="Virtual":
+  if LeftPortIsConnected or RighPortIsConnected  or ScriptType=="Virtual":
     talkEvent(lang_startingTorso)
     torso = Runtime.create("i01.torso","InMoovTorso")
         

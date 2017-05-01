@@ -11,7 +11,7 @@
 isHeadActivated=0
 
 #read current skeleton part config
-ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 ###############################################################################
 #                 webgui sync
@@ -85,7 +85,7 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual"):
+if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
   if LeftPortIsConnected:
     talkEvent(lang_startingHead)
     head = Runtime.create("i01.head","InMoovHead")

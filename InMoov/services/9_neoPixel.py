@@ -24,7 +24,7 @@
 # ##############################################################################  
   
 #read current service part config based on file name
-ThisServicePart=inspect.getfile(inspect.currentframe()).replace('.py','')
+ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 ###############################################################################
 #                 webgui sync

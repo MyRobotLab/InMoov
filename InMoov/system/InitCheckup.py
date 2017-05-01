@@ -30,7 +30,7 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
 #inmoov.fr webgui
-execfile(RuningFolder+'/system/inmoov.fr.py')
+execfile(RuningFolder+'/system/inmoovGui.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')

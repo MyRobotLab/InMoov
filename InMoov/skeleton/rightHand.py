@@ -10,7 +10,7 @@
   
 #read current skeleton part config
 isRightHandActivated=0
-ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 ###############################################################################
 #                 webgui sync
@@ -50,7 +50,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full" or ScriptType=="Virtual"):
+if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") or ScriptType=="Virtual":
   if RightPortIsConnected:
     talkEvent(lang_startingRightHand)
     

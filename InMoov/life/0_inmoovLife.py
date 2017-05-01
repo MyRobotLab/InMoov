@@ -10,7 +10,7 @@
 # ##############################################################################  
 
 #read current skeleton part config
-inmoovLifeConfigFile=inspect.getfile(inspect.currentframe()).replace('.py','')
+inmoovLifeConfigFile=RuningFolder+'config/InMoovLife'
 
 ###############################################################################
 #                 webgui sync

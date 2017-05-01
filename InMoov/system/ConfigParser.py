@@ -4,7 +4,7 @@
 
 # ##############################################################################
 #                 webgui sync
-getInmoovFrParameter('config',RuningFolder+"Inmoov.config")
+getInmoovFrParameter('config',RuningFolder+'config/' + '_Inmoov.config')
 # ##############################################################################
 
 
@@ -15,14 +15,14 @@ def CheckFileExist(File):
     shutil.move(File+'.config.default',File+'.config')
     print "config file created : ",File+'.config'
 
-  
-CheckFileExist(RuningFolder + 'Inmoov')
+
+CheckFileExist(RuningFolder+'config/' + '_InMoov')
 LaunchSwingGui=True
 
 
    
 BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-BasicConfig.read(RuningFolder+'Inmoov.config')
+BasicConfig.read(RuningFolder+'config/' + '_Inmoov.config')
 
 #file patch
 configNeedUpdate=0

@@ -10,7 +10,7 @@
   
 #read current skeleton part config
 isLeftArmActivated=0
-ThisSkeletonPart=inspect.getfile(inspect.currentframe()).replace('.py','')
+ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
 ###############################################################################
 #                 webgui sync
@@ -46,7 +46,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual"):
+if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
   if LeftPortIsConnected==True:
     talkEvent(lang_startingLeftArm)
     
