@@ -1,4 +1,4 @@
-#file : InMoov4.minimalHand.py
+#file : InMoov.minimalHand.py
 #MRL version above 1.0.2000
 # this script is provided as a basic guide
 # most parts can be run by uncommenting them
