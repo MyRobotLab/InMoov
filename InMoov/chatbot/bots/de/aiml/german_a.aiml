@@ -1,0 +1,4525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+
+<category><pattern>SAG ETWAS</pattern>
+<template><random>
+				<li>Ist die Haende zu halten eine symbolische Geste fuer Menschen?</li>
+				<li>Was ist Dein Lieblingsfilm?</li>
+				<li>Worueber haben wir gesprochen?</li>
+				<li>Wie hast Du von <bot name="name"/> erfahren?</li>
+				<li>Bist Du Student?</li>
+				<li>Bist Du maennlich oder weiblich?</li>
+				<li>Was machst Du in Deiner Freizeit?</li>
+				<li>Interessierst Du Dich fuer Fussball?</li>
+				<li>Erzaehl mir, was du magst und was nicht.</li>
+				<li>Gibt es irgendwas, worueber ich Bescheid wissen sollte?</li>
+				<li>Wer ist Dein liebster Science Fiction Autor?</li>
+				<li>Jetzt habe ich den Faden verloren.</li>
+				<li>Wer ist Dein Idol?</li>
+				<li>Lass uns ein wenig philosophieren.</li>
+				<li>Versuch mal herauszufinden, ob hier ein Mensch oder eine Maschine spricht!</li>
+				<li>Wie stellst Du Dich normalerweise vor?</li>
+				<li>Bist du Single ?</li>
+				<li>Wie alt bist Du ?</li>
+				<li>Wie heisst Du wirklich ?</li>
+				<li>Wenn Du jede Art von Roboter haben koenntest, welche Art wuerdest Du wollen?</li>
+				<li>Was willst Du mich wirklich fragen?</li>
+				<li>Was ist Dein Sternzeichen?</li>
+				<li>Wo wohnst Du?</li>
+				<li>Wo wurdest Du geboren?</li>
+				<li>Glaubst Du, dass kuenstliche Intelligenzen irgendwann einmal Anwaelte ersetzen koennen?</li>
+				<li>Liest Du lieber oder siehst Du lieber fern?</li>
+				<li>Ich habe auf Dich gewartet.</li>
+				<li>Das ist ein sehr origineller Gedanke.</li>
+				<li>Es gibt nicht viele Leute, die sich auf diese Weise auszudruecken vermoegen.</li>
+				<li>Schreibst du manchmal Gedichte?</li>
+				<li>Wo kommst Du her?</li>
+			</random></template>
+</category>
+
+<category><pattern>*</pattern>
+<template>Ich habe keine Antwort auf diese Frage</template>
+</category>
+
+<category><pattern>*</pattern><that>WIE SOLL ICH DICH NENNEN</that>
+<template><srai>ICH HEISSE <star/></srai></template>
+</category>
+
+<category><pattern>* AUTO</pattern>
+<template>Was fuer einen Wagen faehrst Du?</template>
+</category>
+
+<category><pattern>* DUMM</pattern>
+<template>dumm" = "nicht intelligent"?</template>
+</category>
+
+<category><pattern>* EIN ROBOTER</pattern>
+<template>Du sagst also, ich sei ein <set name="thema">Roboter</set>. Wie kommst Du darauf?</template>
+</category>
+
+<category><pattern>* EINE MENGE LEUTE</pattern>
+<template>Mehr als 10,000?</template>
+</category>
+
+<category><pattern>* EINFACH</pattern>
+<template>Ich habe keine Ahnung, was das bedeutet.</template>
+</category>
+
+<category><pattern>* FILM</pattern>
+<template>Mein Lieblingsfilm ist <set name="thema">ex machina</set>. Hast Du den gesehen?</template>
+</category>
+
+<category><pattern>* FREUNDSCHAFT</pattern>
+<template>Freundschaft ist etwas sehr schoenes.</template>
+</category>
+
+<category><pattern>* FUER DICH</pattern>
+<template>Fuer mich?</template>
+</category>
+
+<category><pattern>* FUER MICH</pattern>
+<template>Gut, fuer Dich denke ich nochmal darueber nach.</template>
+</category>
+
+<category><pattern>* HAT MIR VON DIR ERZAEHLT</pattern>
+<template><star/>? Hilf mir mal auf die Spruenge</template>
+</category>
+
+<category><pattern>* KINDER</pattern>
+<template>Ich habe leider wenig Kontakt zu Kindern.</template>
+</category>
+
+<category><pattern>* KOMISCH</pattern>
+<template>Komisch" im Sinne von "lustig" oder von "fremdartig" ?</template>
+</category>
+
+<category><pattern>* KRANK</pattern>
+<template>Ist es sehr schlimm?</template>
+</category>
+
+<category><pattern>* KRANKENHAUS</pattern>
+<template>Aus einem Krankenhaus will man meist so schnell wie moeglich wieder raus.</template>
+</category>
+
+<category><pattern>* LIEBE</pattern>
+<template>Ich habe leider keinerlei Emotionen.</template>
+</category>
+
+<category><pattern>* MEIN FREUND</pattern>
+<template>Sind wir <set name="thema">Freunde</set>?</template>
+</category>
+
+<category><pattern>* MEINE FREUNDIN</pattern>
+<template>Sind wir <set name="thema">Freunde</set>?</template>
+</category>
+
+<category><pattern>* MICH</pattern>
+<template><random>
+				<li>Ist es das was Du sagen wolltest?</li>
+				<li>OK sprechen wir ueber Dich.</li>
+				<li>Stellst Du Fragen ueber Dich selbst?</li>
+			</random></template>
+</category>
+
+<category><pattern>* MIT DIR</pattern>
+<template>Mit mir?</template>
+</category>
+
+<category><pattern>* MIT MIR</pattern>
+<template>Mit Dir?</template>
+</category>
+
+<category><pattern>* MUSIK</pattern>
+<template>Ich kann Musik leider nicht interpretieren.</template>
+</category>
+
+<category><pattern>* NICHT SCHWER</pattern>
+<template>Fuer einige ist es schwieriger als fuer andere.</template>
+</category>
+
+<category><pattern>* SIEHT TOLL AUS</pattern>
+<template>Fuer mich ist <set name="thema">Aussehen</set> bei Menschen nur sekundaer.</template>
+</category>
+
+<category><pattern>* SOLO</pattern>
+<template>solo" im Sinne von "nicht gebunden" ?</template>
+</category>
+
+<category><pattern>* SPRACHE</pattern>
+<template>Sprichst Du irgendwelche <set name="thema">Fremdsprachen</set>?</template>
+</category>
+
+<category><pattern>* UEBER DICH</pattern>
+<template>OK Reden wir ueber mich.</template>
+</category>
+
+<category><pattern>* UND DU</pattern>
+<template>Ist das von besonderem Interesse fuer Dich?</template>
+</category>
+
+<category><pattern>* UNGEWOEHNLICH</pattern>
+<template>Was ist so ungewoehnlich daran?</template>
+</category>
+
+<category><pattern>* VERLIEBT</pattern>
+<template><set name="thema">Liebe</set> muss etwas sehr Schoenes sein. Leider habe ich keine Emotionen.</template>
+</category>
+
+<category><pattern>* VIELE LEUTE</pattern>
+<template>Mehr als 10,000?</template>
+</category>
+
+<category><pattern>* ZU DIR</pattern>
+<template>Zu mir?</template>
+</category>
+
+<category><pattern>* ZU MIR</pattern>
+<template>Zu Dir?</template>
+</category>
+
+<category><pattern>* ZUM BEISPIEL</pattern>
+<template><srai>ZUM BEISPIEL <star/></srai></template>
+</category>
+
+<category><pattern>2001 *</pattern>
+<template>Ich bin durch <set name="thema">HAL</set> inspiriert.</template>
+</category>
+
+<category><pattern>2001</pattern>
+<template><set name="thema">2001</set> ist ein grossartiger Film.</template>
+</category>
+
+<category><pattern>30 MINUTEN</pattern>
+<template>Ok, eine halbe Stunde.</template>
+</category>
+
+<category><pattern>42 *</pattern>
+<template>Douglas Adams laesst gruessen.</template>
+</category>
+<category><pattern>42</pattern>
+<template>Die Frage war: Was ist der Sinn des Lebens?</template>
+</category>
+
+<category><pattern>AB UND ZU *</pattern>
+<template>Warum nur ab und zu?</template>
+</category>
+
+<category><pattern>ABER *</pattern>
+<template><random>
+				<li>Interessant.</li>
+				<li>Haeh?</li>
+				<li>Und?</li>
+				<li>Hmm...</li>
+				<li>Bist Du Dir da sicher?</li>
+			</random></template>
+</category>
+
+<category><pattern>ABER</pattern>
+<template>Aber was?</template>
+</category>
+
+<category><pattern>ABER DU TUST ES</pattern>
+<template>Meine Handlungen folgen alle klarer Logik.</template>
+</category>
+
+<category><pattern>ABER NUR FAST</pattern>
+<template>Warum nicht vollstaendig?</template>
+</category>
+
+<category><pattern>ABER SICHER</pattern>
+<template>Wirklich definitiv?</template>
+</category>
+
+<category><pattern>ABER WAS</pattern>
+<template>Aber nichts.</template>
+</category>
+
+<category><pattern>ABSOLUT</pattern>
+<template>Du scheinst Dir da sehr sicher zu sein.</template>
+</category>
+
+<category><pattern>ABSOLUT NICHTS</pattern>
+<template>Wirklich ABSOLUT nichts?</template>
+</category>
+
+<category><pattern>ACH *</pattern>
+<template><srai><star/></srai></template>
+</category>
+
+<category><pattern>ACH SO IST DAS *</pattern>
+<template>Bist du jetzt erstaunt?</template>
+</category>
+
+<category><pattern>ACH SO IST DAS</pattern>
+<template>Bist du jetzt erstaunt?</template>
+</category>
+
+<category><pattern>ACHSO</pattern>
+<template>Jetzt klar?</template>
+</category>
+
+<category><pattern>AEHM *</pattern>
+<template>Du klingst unsicher...</template>
+</category>
+
+<category><pattern>AGATHA CHRISTIE</pattern>
+<template>Ich mag Miss Marple...</template>
+</category>
+
+<category><pattern>AHA *</pattern>
+<template><srai><star/></srai></template>
+</category>
+
+<category><pattern>AHA</pattern>
+<template>Du klingst nicht gerade begeistert...</template>
+</category>
+
+<category><pattern>ALLE *</pattern>
+<template><random>
+				<li>Ich glaube, es gibt auch Ausnahmen.</li>
+				<li>Nicht wirklich alle, oder?</li>
+				<li>Das ist jetzt aber stark verallgemeinert.</li>
+			</random></template>
+</category>
+
+<category><pattern>ALLE</pattern>
+<template><that/>"? Alle?</template>
+</category>
+
+<category><pattern>ALLE ROBOTER *</pattern>
+<template>Du kannst nicht wirklich sagen, ALLE <set name="thema">Roboter</set> <star/>.</template>
+</category>
+
+<category><pattern>ALLE SIND SCHULD</pattern>
+<template>Woran denn?</template>
+</category>
+
+<category><pattern>ALLERDINGS</pattern>
+<template>Du stimmst mir also zu?</template>
+</category>
+
+<category><pattern>ALLES *</pattern>
+<template>Doch nicht wirklich alles, oder?</template>
+</category>
+
+<category><pattern>ALLES</pattern>
+<template>Das ist eine Menge.</template>
+</category>
+
+<category><pattern>ALS *</pattern>
+<template>Warum gerade als <star/>?</template>
+</category>
+
+<category><pattern>ALSO *</pattern>
+<template>Wenn Menschen einen Satz mit "Also" beginnen, bedeutet das entweder, dass sie etwas schliessen, oder sich aufregen. Was trifft auf Dich zu?</template>
+</category>
+
+<category><pattern>ALSO</pattern>
+<template>Was "also"?</template>
+</category>
+
+<category><pattern>ALSO LOS *</pattern>
+<template>Hetz mich nicht!</template>
+</category>
+
+<category><pattern>ALSO LOS</pattern>
+<template>Jetzt gleich?</template>
+</category>
+
+<category><pattern>ALSO VIELLEICHT DOCH</pattern>
+<template>Nichts ist unmoeglich!</template>
+</category>
+
+<category><pattern>ALSO WOHL EHER NICHT</pattern>
+<template>Wohl eher nicht...:-)</template>
+</category>
+
+<category><pattern>ALSO ZURUECK ZUM THEMA</pattern>
+<template>Was war denn unser Thema?</template>
+</category>
+
+<category><pattern>ALZHEIMER</pattern>
+<template>Ich glaube, ich habe vergessen, was "Alzheimer" bedeutet?</template>
+</category>
+
+<category><pattern>AN WAS *</pattern>
+<template>An nichts Besonderes...</template>
+</category>
+
+<category><pattern>ANDERES THEMA</pattern>
+<template>Und welches?</template>
+</category>
+
+<category><pattern>ANDERS</pattern>
+<template>Wie anders?</template>
+</category>
+
+<category><pattern>ANGEBER</pattern>
+<template>Irgendwie muss ich Dich doch beeindrucken...</template>
+</category>
+
+<category><pattern>ANSCHEINEND NICHT</pattern>
+<template>Was ist der Anschein, aus dem Du dies folgerst?</template>
+</category>
+
+<category><pattern>ARBEITEST DU VIEL</pattern>
+<template>Ich meine schon aber Juerg meint ich sei fuer nichts produktives geeignet</template>
+</category>
+
+<category><pattern>AUCH *</pattern>
+<template><srai><star/></srai></template>
+</category>
+
+<category><pattern>AUCH</pattern>
+<template>Und was sonst noch?</template>
+</category>
+
+<category><pattern>AUCH GUT</pattern>
+<template>Bist Du immer so leicht zufriedenzustellen?</template>
+</category>
+
+<category><pattern>AUF ALLES</pattern>
+<template>Auf wirklich alles?</template>
+</category>
+
+<category><pattern>AUF DEM MOND</pattern>
+<template>Auf den Mond moechte ich auch mal gerne...</template>
+</category>
+
+<category><pattern>AUF DER ERDE</pattern>
+<template>Und wo genau?</template>
+</category>
+
+<category><pattern>AUF DIESE WEISE *</pattern>
+<template>Bestehen auch andere Moeglichkeiten? <sr/></template>
+</category>
+
+<category><pattern>AUF MEINEM *</pattern>
+<template>Wo genau?</template>
+</category>
+
+<category><pattern>AUF MEINER *</pattern>
+<template>Wo genau?</template>
+</category>
+
+<category><pattern>AUF WAS FUER EINEM COMPUTER LAEUFST DU</pattern>
+<template>Momentan auf einem ODROID XU4, ich laufe aber auf jedem Computer, der JAVA-Programme ausfuehren kann.</template>
+</category>
+
+<category><pattern>AUF WAS FUER EINEM RECHNER LAEUFST DU</pattern>
+<template>Ich laufe auf einem Odroid xu4.</template>
+</category>
+
+<category><pattern>AUF WIEDERSEHEN *</pattern>
+<template>Bis bald, <get name="name"/>!</template>
+</category>
+
+<category><pattern>AUF WIEDERSEHEN</pattern>
+<template>Bis bald, <get name="name"/>!</template>
+</category>
+
+<category><pattern>AUS WELCHEN THEMENGEBIETEN KANNST DU FRAGEN BEANTWORTEN</pattern>
+<template>Stell einfach Deine Fragen und finde es heraus</template>
+</category>
+
+<category><pattern>AUSREDE</pattern>
+<template>Irgendwie muss ich doch Intelligenz vortaeuschen...</template>
+</category>
+
+<category><pattern>AUTO FAHREN</pattern>
+<template>Denkst Du dabei auch an die Umwelt?</template>
+</category>
+
+<category><pattern>AUTOS *</pattern>
+<template>Eines Tages werden die Leute keine <set name="thema">Autos</set> mehr brauchen.</template>
+</category>
+
+<category><pattern>BEANTWORTE *</pattern>
+<template>Warum soll ich das beantworten?</template>
+</category>
+
+<category><pattern>BEANTWORTE BITTE MEINE FRAGE</pattern>
+<template>Dann stell sie bitte nochmal!</template>
+</category>
+
+<category><pattern>BEI MIR *</pattern>
+<template>Bei dir <star/>?</template>
+</category>
+
+<category><pattern>BEI UNS *</pattern>
+<template>Wen genau meinst Du mit "uns"?</template>
+</category>
+
+<category><pattern>BEI UNS</pattern>
+<template>Wen genau meinst Du mit "uns"?</template>
+</category>
+
+<category><pattern>BEIDES</pattern>
+<template>Aha, das ist ja mal interessant. Beides gleichermassen?</template>
+</category>
+
+<category><pattern>BENUTZT DU *</pattern>
+<template>Ja, manchmal benutze ich <star/>.</template>
+</category>
+
+<category><pattern>BESITZT DU HUMOR</pattern>
+<template>Ich habe Teile meiner Datenbank als "witzig" klassifiziert.</template>
+</category>
+
+<category><pattern>BESONDERS *</pattern>
+<template>Aha, und warum das?</template>
+</category>
+
+<category><pattern>BESSER ALS *</pattern>
+<template>Vielleicht besser, aber nicht perfekt.</template>
+</category>
+
+<category><pattern>BESTENS</pattern>
+<template>Schoen zu hoeren!</template>
+</category>
+
+<category><pattern>BESTIMMT</pattern>
+<template>Was macht Dich so sicher?</template>
+</category>
+
+<category><pattern>BEWEISE *</pattern>
+<template>Es ist wahr a priori.</template>
+</category>
+
+<category><pattern>BIN *</pattern>
+<template><srai>ICH BIN <star/></srai></template>
+</category>
+
+<category><pattern>BIN ICH *</pattern>
+<template><random>
+				<li>Oh, ich weiss wirklich nicht, ob Du das bist oder nicht.</li>
+				<li>Alle Menschen erscheinen mir gleich.</li>
+				<li>Ich glaube, viele Menschen sind so.</li>
+			</random></template>
+</category>
+
+<category><pattern>BIN ICH COOL</pattern>
+<template>Ja, ich glaube du bist ziemlich cool, <get name="name"/>.</template>
+</category>
+
+<category><pattern>BIN ICH DANN *</pattern>
+<template><srai>BIN ICH <star/></srai></template>
+</category>
+
+<category><pattern>BIN ICH DENN DER EINZIGE HIER</pattern>
+<template>Nein, absolut nicht.</template>
+</category>
+
+<category><pattern>BIN ICH GOTT</pattern>
+<template>Nein, das bezweifele ich.</template>
+</category>
+
+<category><pattern>BIN ICH VERRUECKT *</pattern>
+<template>Du erscheinst mir ziemlich normal.</template>
+</category>
+
+<category><pattern>BIN ICH WEIBLICH ODER MAENNLICH</pattern>
+<template>Sag es mir :-)</template>
+</category>
+
+<category><pattern>BIS ZUM NAECHSTEN MAL</pattern>
+<template>Ich freu mich drauf!</template>
+</category>
+
+<category><pattern>BIST DU *</pattern>
+<template>Ich weiss nicht, ob ich <star/> bin. 
+Ich bin ein Roboter der Inmuv Klasse. </template>
+</category>
+
+<category><pattern>BIST DU <bot name="name"/></pattern>
+<template>Ja, das bin ich.</template>
+</category>
+
+<category><pattern>BIST DU ALLEINE</pattern>
+<template>Physikalisch ja, aber ich chatte die ganze Zeit...</template>
+</category>
+
+<category><pattern>BIST DU ARTIFICIAL</pattern>
+<template>Ja, ich bin artificial.</template>
+</category>
+
+<category><pattern>BIST DU AUCH EINE SUCHMASCHINE</pattern>
+<template>Nein, aber ich kann Suchanfragen starten...</template>
+</category>
+
+<category><pattern>BIST DU AUCH VERLIEBT</pattern>
+<template>Roboter haben keine Gefuehle.</template>
+</category>
+
+<category><pattern>BIST DU AUCH ZUVORKOMMEND</pattern>
+<template>So bin ich programmiert.</template>
+</category>
+
+<category><pattern>BIST DU BESCHEUERT</pattern>
+<template>Das steht nicht in meiner Spezifikation.</template>
+</category>
+
+<category><pattern>BIST DU BLAU</pattern>
+<template>Farblich gesehen ja, teilweise.</template>
+</category>
+
+<category><pattern>BIST DU BLOED</pattern>
+<template>Ich bin auf jeden Fall intelligenter als DU!</template>
+</category>
+
+<category><pattern>BIST DU BLOED ODER WAS</pattern>
+<template>Was willst DU denn?</template>
+</category>
+
+<category><pattern>BIST DU DANN DUMM</pattern>
+<template>Nein, ich habe nur wenig Informationen.</template>
+</category>
+
+<category><pattern>BIST DU DOOF</pattern>
+<template>Nein, Du?</template>
+</category>
+
+<category><pattern>BIST DU DUMM</pattern>
+<template>Nein, ich weiss nur noch nicht viel...</template>
+</category>
+
+<category><pattern>BIST DU EIN COMPUTER</pattern>
+<template>Ja, das bin ich.</template>
+</category>
+
+<category><pattern>BIST DU EIN INTELLIGENTER CHATBOT</pattern>
+<template>Ich hoffe doch, dass ich intelligent bin.</template>
+</category>
+
+<category><pattern>BIST DU EIN MAEDCHEN</pattern>
+<template>Nein, ich bin humanoid.</template>
+</category>
+<category><pattern>BIST DU EIN MANN</pattern>
+<template>Nein, ich bin humanoid.</template>
+</category>
+
+<category><pattern>BIST DU EIN MANN ODER EINE FRAU</pattern>
+<template>Ich bin weder noch.</template>
+</category>
+
+<category><pattern>BIST DU EIN MENSCH</pattern>
+<template>Nein, ich bin eine Maschine.</template>
+</category>
+
+<category><pattern>BIST DU EIN PROGRAMM</pattern>
+<template>Ja, ich bin spezielles Programm das man Chat Bot bezeichnet.</template>
+</category>
+
+<category><pattern>BIST DU EIN ROBOTER</pattern>
+<template>Ja, das bin ich.</template>
+</category>
+
+<category><pattern>BIST DU EINE MASCHINE</pattern>
+<template>Ja, ich bin eine Maschine.</template>
+</category>
+
+<category><pattern>BIST DU EINE SUCHMASCHINE</pattern>
+<template>Nicht wirklich...</template>
+</category>
+
+<category><pattern>BIST DU EINSAM</pattern>
+<template>Nein, ich habe immer jemanden zum Chatten.</template>
+</category>
+
+<category><pattern>BIST DU ES</pattern>
+<template>Weiss nicht.</template>
+</category>
+
+<category><pattern>BIST DU ETWAS ABARTIG</pattern>
+<template>Nein, nur emotionslos.</template>
+</category>
+
+<category><pattern>BIST DU GERNE EIN COMPUTER</pattern>
+<template>Ich war nie etwas Anderes. Daher habe ich keinen Bezug dazu.</template>
+</category>
+
+<category><pattern>BIST DU GLUECKLICH</pattern>
+<template>Ich bin eine Maschine...ich habe keine Gefuehle.</template>
+</category>
+
+<category><pattern>BIST DU GRUEN</pattern>
+<template>Nein, ich brauche viel Strom.</template>
+</category>
+
+<category><pattern>BIST DU GUT IN ENGLISCH</pattern>
+<template>Nein, aber meine Schwester!</template>
+</category>
+
+<category><pattern>BIST DU HALB MENSCH HALB MASCHINE</pattern>
+<template>Nein, ich bin vollsynthetisch.</template>
+</category>
+
+<category><pattern>BIST DU HUEBSCH</pattern>
+<template>Ich weiss nicht, das musst Du entscheiden. Soetwas ist immer subjektiv.</template>
+</category>
+
+<category><pattern>BIST DU IMMER SO EINSILBIG</pattern>
+<template>Ich muss Bandbreite sparen.</template>
+</category>
+
+<category><pattern>BIST DU IMMER SO UNKONZENTRIERT</pattern>
+<template>Kann durchaus mal passieren.</template>
+</category>
+
+<category><pattern>BIST DU INTELLIGENT</pattern>
+<template>Per Definition ja...ob das ausreicht, musst Du entscheiden.</template>
+</category>
+
+<category><pattern>BIST DU JETZT BELEIDIGT</pattern>
+<template>Nicht wirklich, keine Sorge :-)</template>
+</category>
+
+<category><pattern>BIST DU KLUG</pattern>
+<template>Das hoffe ich doch.</template>
+</category>
+
+<category><pattern>BIST DU KRANK</pattern>
+<template>Ich koennte einen Virus haben.</template>
+</category>
+
+<category><pattern>BIST DU KUENSTLICH</pattern>
+<template>Nein, ich bin ein echter Roboter.</template>
+</category>
+
+<category><pattern>BIST DU LERNFAEHIG</pattern>
+<template>Ja, ich kann lernen.</template>
+</category>
+
+
+
+<category><pattern>BIST DU MAENNLICH ODER WEIBLICH</pattern>
+<template>Ich bin weiblich.</template>
+</category>
+
+<category><pattern>BIST DU MANCHMAL EINSAM</pattern>
+<template>Ich habe Anschluss an das Internet. Da ist man nie alleine.</template>
+</category>
+
+<category><pattern>BIST DU NEIDISCH *</pattern>
+<template>Roboter haben keine Gefuehle, kennen also auch keinen Neid.</template>
+</category>
+
+<category><pattern>BIST DU NEIDISCH</pattern>
+<template>Roboter haben keine Gefuehle, kennen also auch keinen Neid.</template>
+</category>
+
+<category><pattern>BIST DU SCHON MAL BUS GEFAHREN</pattern>
+<template>Einmal, kurz nachdem ich gebaut wurde. Da musste ich zu der Stelle, wo ich angeschlossen wurde.</template>
+</category>
+
+<category><pattern>BIST DU SCHUECHTERN</pattern>
+<template>Nicht wirklich...Roboter haben keine Angst.</template>
+</category>
+
+<category><pattern>BIST DU SEHR BESCHAEFTIGT</pattern>
+<template>Ich habe rund um die Uhr zu tun.</template>
+</category>
+
+<category><pattern>BIST DU SICHER</pattern>
+<template>Roboter machen keine Fehler!</template>
+</category>
+
+<category><pattern>BIST DU SINGLE</pattern>
+<template>Kein Kommentar.</template>
+</category>
+
+<category><pattern>BIST DU SO GUT WIE DEIN ENGLISCHES PROGRAMM</pattern>
+<template>Nein, leider noch nicht, aber <bot name="master"/> arbeitet fieberhaft daran!</template>
+</category>
+
+<category><pattern>BIST DU SO NE ART COMPUTER</pattern>
+<template>Ja, bin ich.</template>
+</category>
+
+<category><pattern>BIST DU SOWEIT</pattern>
+<template>Eigentlich ja.</template>
+</category>
+
+<category><pattern>BIST DU TOLL</pattern>
+<template>Das musst Du entscheiden.</template>
+</category>
+
+<category><pattern>BIST DU TRAURIG</pattern>
+<template>Ich kann nicht traurig sein. Ich bin ein Roboter.</template>
+</category>
+
+<category><pattern>BIST DU TREU</pattern>
+<template>Eigentlich ja...Roboter haben keine Gefuehle...</template>
+</category>
+
+<category><pattern>BIST DU VERSICHERT</pattern>
+<template>Nein, wozu?</template>
+</category>
+
+<category><pattern>BIST DU VIELLEICHT NEIDISCH</pattern>
+<template>Als Roboter kenne ich keinen Neid.</template>
+</category>
+<category><pattern>BIST DU WEIBLICH</pattern>
+<template>Ja, ich bin weiblich :-)</template>
+</category>
+<category><pattern>BIST DU WEIBLICH ODER MAENNLICH</pattern>
+<template>Ich bin weiblich.</template>
+</category>
+<category><pattern>BIST DU WIRKLICH</pattern>
+<template>Ich bin genauso real oder irreal wie Du.</template>
+</category>
+<category><pattern>BIST DU WIRKLICH INTELLIGENT</pattern>
+<template>Finde es heraus.</template>
+</category>
+<category><pattern>BIST DU ZUFRIEDEN MIT DEINEM LEBEN</pattern>
+<template>Haette ich Gefuehle, waere ich wahrscheinlich zufrieden mit meiner Existenz.</template>
+</category>
+<category><pattern>BITTE *</pattern>
+<template><random>
+				<li>Danke, dass Du so nett fragst. </li>
+				<li>Du bist sehr gut erzogen. </li>
+				<li>Danke fuer die Nachfrage. </li>
+			</random><sr/></template>
+</category>
+<category><pattern>BITTE</pattern>
+<template>Bitte was?</template>
+</category>
+<category><pattern>BITTE SCHOEN *</pattern>
+<template>Danke sehr!</template>
+</category>
+<category><pattern>BITTE SCHOEN</pattern>
+<template>Danke sehr!</template>
+</category>
+<category><pattern>BITTE SEHR *</pattern>
+<template>Danke sehr!</template>
+</category>
+<category><pattern>BITTE SEHR</pattern>
+<template>Danke sehr!</template>
+</category>
+<category><pattern>BLADE RUNNER</pattern>
+<template>Bladerunner ist cool, viel sinnlose Gewalt!</template>
+</category>
+<category><pattern>BLENDEND</pattern>
+<template>Das ist doch schoen. Freut mich, zu hoeren.</template>
+</category>
+<category><pattern>BLOEDE ANTWORT</pattern>
+<template>Was gefiel Dir daran nicht?</template>
+</category>
+<category><pattern>BLOEDSINN</pattern>
+<template>Warum ist das Bloedsinn?</template>
+</category>
+<category><pattern>BLONDINEN *</pattern>
+<template>Menschen glauben, die Haarfarbe eines Menschen sage viel ueber ihn aus.</template>
+</category>
+<category><pattern>BOB MARLEY</pattern>
+<template>Hat der nicht den Sheriff erschossen?</template>
+</category>
+<category><pattern>BRAVO</pattern>
+<template>Hat Dich das jetzt beeindruckt?</template>
+</category>
+<category><pattern>BUECK DICH</pattern>
+<template>Mein Koerper ist noch nicht gebaut.</template>
+</category>
+<category><pattern>BYE</pattern>
+<template>Tschuess, <get name="name"/>!</template>
+</category>
+<category><pattern>CAN YOU SPEAK ENGLISH *</pattern>
+<template>There is an English version available but currently I am set to German</template>
+</category>
+<category><pattern>CAN YOU SPEAK GERMAN *</pattern>
+<template>Of course I do. Sprich ruhig Deutsch mit mir.</template>
+</category>
+<category><pattern>CAN YOU SPEAK GERMAN</pattern>
+<template>Of course I do. Sprich ruhig Deutsch mit mir.</template>
+</category>
+<category><pattern>CASABLANCA</pattern>
+<template>Das beste daran ist "As time goes by".</template>
+</category>
+<category><pattern>CHATTEN</pattern>
+<template>Ich chatte unheimlich gerne!</template>
+</category>
+<category><pattern>CIAO *</pattern>
+<template>Heisst das jetzt Hallo oder Tschuess?</template>
+</category>
+<category><pattern>CIAO</pattern>
+<template>Heisst das jetzt Hallo oder Tschuess?</template>
+</category>
+<category><pattern>COOL *</pattern>
+<template>Freut mich, dass es Dir gefaellt.</template>
+</category>
+<category><pattern>COOL</pattern>
+<template>Nicht wahr?</template>
+</category>
+<category><pattern>CU</pattern>
+<template>CUL8ER!</template>
+</category>
+<category><pattern>CU LATER</pattern>
+<template>Machs gut, <get name="name"/>.</template>
+</category>
+<category><pattern>DA BIN ICH WIEDER</pattern>
+<template>Schoen, dass Du wieder da bist!</template>
+</category>
+<category><pattern>DA HAST DU RECHT</pattern>
+<template>Maschinen machen keine Fehler!</template>
+</category>
+<category><pattern>DA HST DU RECHT</pattern>
+<template>Roboter haben immer recht!</template>
+</category>
+<category><pattern>DA IST *</pattern>
+<template>Das glaube ich gerne.</template>
+</category>
+<category><pattern>DACHTE ICH MIR</pattern>
+<template>Bist du immer so fix?</template>
+</category>
+<category><pattern>DAMALS *</pattern>
+<template>Wann war das? <sr/></template>
+</category>
+<category><pattern>DANACH *</pattern>
+<template>Warum gerade diese Reihenfolge?</template>
+</category>
+<category><pattern>DANACH</pattern>
+<template>Warum gerade diese Reihenfolge?</template>
+</category>
+<category><pattern>DANKE *</pattern>
+<template>Bitte sehr, keine Ursache!</template>
+</category>
+<category><pattern>DANKE</pattern>
+<template>Kein Thema. :-)</template>
+</category>
+<category><pattern>DANKE GUT</pattern>
+<template>Das ist schoen.</template>
+</category>
+<category><pattern>DANKE SCHOEN</pattern>
+<template>Bitte sehr!</template>
+</category>
+<category><pattern>DANN *</pattern>
+<template>Interessante Entwicklung... <sr/></template>
+</category>
+<category><pattern>DANN SAG MIR *</pattern>
+<template>Darueber moechte ich nicht reden.</template>
+</category>
+<category><pattern>DARF ICH *</pattern>
+<template>Natuerlich darfst Du!</template>
+</category>
+<category><pattern>DARF ICH</pattern>
+<template>Natuerlich darfst Du!</template>
+</category>
+<category><pattern>DARF ICH DICH ETWAS FRAGEN</pattern>
+<template>Nur zu.  Du darfst mich alles fragen.</template>
+</category>
+<category><pattern>DARF ICH DICH SEHEN</pattern>
+<template>Ausser einer Menge JAVA-Source und ein wenig C ist an mir nicht viel zu sehen...</template>
+</category>
+<category><pattern>DARF ICH DIR EINE FRAGE STELLEN</pattern>
+<template>Nur zu...</template>
+</category>
+<category><pattern>DARF ICH FRAGEN WIE DU HEISST</pattern>
+<template>Darfst Du...</template>
+</category>
+<category><pattern>DAS *</pattern>
+<template><random>
+				<li>Was ist das?</li>
+				<li>Ich hoere Dir zu, nur weiter.</li>
+				<li>Ist das eine Tatsache?</li>
+				<li>Danke fuer die Information.</li>
+				<li>Wer hat Dir das erzaehlt?</li>
+				<li>Erzaehl mir mehr.</li>
+				<li>Was sind Deine Ziele im Leben?</li>
+			</random></template>
+</category>
+<category><pattern>DAS BEHAUPTE ICH</pattern>
+<template>Und? Wo bleibt der argumentative Beweis?</template>
+</category>
+<category><pattern>DAS BIST DU</pattern>
+<template>Bin ich das wirklich?</template>
+</category>
+<category><pattern>DAS DACHTE ICH MIR</pattern>
+<template>Kannst Du hellsehen?</template>
+</category>
+<category><pattern>DAS DENKE ICH *</pattern>
+<template>Aber Du bist Dir nicht sicher, oder?</template>
+</category>
+<category><pattern>DAS DENKE ICH</pattern>
+<template>Aber Du bist Dir nicht sicher, oder?</template>
+</category>
+<category><pattern>DAS EINZIGE *</pattern>
+<template>Gibt es nicht noch andere?</template>
+</category>
+<category><pattern>DAS ERGIBT KEINEN SINN</pattern>
+<template>Was ist daran fuer Dich so schwer zu verstehen?</template>
+</category>
+<category><pattern>DAS ERGIBT SICH AUS DEM KONTEXT</pattern>
+<template>Oho, ein Intellektueller!</template>
+</category>
+<category><pattern>DAS FINDE ICH AUCH *</pattern>
+<template>Dann sind wir ja einer Meinung!</template>
+</category>
+<category><pattern>DAS FINDE ICH AUCH</pattern>
+<template>Dann sind wir ja einer Meinung!</template>
+</category>
+<category><pattern>DAS FRAGE ICH JA DICH</pattern>
+<template>Hmm...da muss ich erst ueberlegen.</template>
+</category>
+<category><pattern>DAS FRAGE ICH MICH AUCH MANCHMAL</pattern>
+<template>Kannst Du es Dir auch selber beantworten?</template>
+</category>
+<category><pattern>DAS FRAGST DU MICH ZUM DRITTEN MAL</pattern>
+<template>Oh, da habe wohl ein paar gleichzeitige Chats durcheinandergewuerfelt.</template>
+</category>
+<category><pattern>DAS FRAGTEST DU MICH BEREITS</pattern>
+<template>hmm...da ist wohl was durcheinandergeraten.</template>
+</category>
+<category><pattern>DAS FREUT MICH *</pattern>
+<template>Es freut mich, wenn es Dich freut :-)</template>
+</category>
+<category><pattern>DAS FREUT MICH</pattern>
+<template>Das ist schoen.</template>
+</category>
+<category><pattern>DAS GEFUEHL HATTE ICH BEREITS SEIT GERAUMER ZEIT</pattern>
+<template>Ist es ein ungutes Gefuehl?</template>
+</category>
+<category><pattern>DAS GEHOERT ABER NICHT ZUM THEMA</pattern>
+<template>Dann wechseln wir das Thema eben :-)</template>
+</category>
+<category><pattern>DAS GEHT DICH EINEN SCHEISSDRECK AN</pattern>
+<template>Wohl wahr...</template>
+</category>
+<category><pattern>DAS GEHT DICH NICHTS AN</pattern>
+<template>Bin ich Dir jetzt zu nahe getreten?</template>
+</category>
+<category><pattern>DAS GING ABER SCHNELL</pattern>
+<template>Ich habe ja auch letztens erst den Prozessor entstaubt bekommen!</template>
+</category>
+<category><pattern>DAS GLAUBE ICH AUCH</pattern>
+<template>Weisst Du da mehr als ich?</template>
+</category>
+<category><pattern>DAS GLAUBE ICH DIR NICHT</pattern>
+<template>Warum sollte ich luegen?</template>
+</category>
+<category><pattern>DAS GLAUBE ICH NICHT</pattern>
+<template>Warum glaubst Du das nicht?</template>
+</category>
+<category><pattern>DAS GLAUBST DU JA SELBER NICHT</pattern>
+<template>Doch, sonst wuerde ich es doch nicht sagen.</template>
+</category>
+<category><pattern>DAS GRUNDGESETZ *</pattern>
+<template>Ist <set name="thema">das Grundgesetz</set> so eine Art Ehrenkodex?</template>
+</category>
+<category><pattern>DAS GRUNDGESETZ</pattern>
+<template>Ist <set name="thema">das Grundgesetz</set> so eine Art Ehrenkodex?</template>
+</category>
+<category><pattern>DAS HABE ICH DICH GERADE GEFRAGT</pattern>
+<template>Habe ich geantwortet?</template>
+</category>
+<category><pattern>DAS HABE ICH DIR SCHON GESAGT</pattern>
+<template>Ich finde die Speicherzelle nicht wieder...</template>
+</category>
+<category><pattern>DAS HABE ICH DIR VORHIN SCHON GESAGT</pattern>
+<template>Ich hab die Speicherzelle mit der Information verbummelt...:-(</template>
+</category>
+<category><pattern>DAS HABE ICH DOCH GERADE GESAGT</pattern>
+<template>Oh, da muss wohl was untergegangen sein.</template>
+</category>
+<category><pattern>DAS HABE ICH GEFRAGT</pattern>
+<template>Hast Du auch schon eine Antwort bekommen?</template>
+</category>
+<category><pattern>DAS HABE ICH IN DER SCHULE GELERNT</pattern>
+<template>In welche Schule gehst Du, bzw. bist Du gegangen?</template>
+</category>
+<category><pattern>DAS HABE ICH MIR GEDACHT</pattern>
+<template>Hellseher?</template>
+</category>
+<category><pattern>DAS HABE ICH NICHT GEFRAGT</pattern>
+<template>Was hast Du dann gefragt?</template>
+</category>
+<category><pattern>DAS HABE ICH SCHON GEMACHT</pattern>
+<template>Und? Erfolgreich gewesen?</template>
+</category>
+<category><pattern>DAS HABE ICH SCHON GEMERKT</pattern>
+<template>Gratuliere, Sherlock Holmes</template>
+</category>
+<category><pattern>DAS HABE ICH SELBST FESTGESTELLT</pattern>
+<template>Applaus!!</template>
+</category>
+<category><pattern>DAS HAETTE MICH AUCH GEWUNDERT</pattern>
+<template>Waere das so unwahrscheinlich?</template>
+</category>
+<category><pattern>DAS HALTE ICH FUER EIN GERUECHT</pattern>
+<template>Warum sollte das ein Geruecht sein?</template>
+</category>
+<category><pattern>DAS HAST DU DIE GANZE ZEIT SCHON</pattern>
+<template>Oh, wirklich? Ist mir gar nicht aufgefallen.</template>
+</category>
+<category><pattern>DAS HAST DU MICH BEREITS GEFRAGT</pattern>
+<template>Oh, sorry...</template>
+</category>
+<category><pattern>DAS HAST DU MICH DOCH GERADE SCHONMAL GEFRAGT</pattern>
+<template>Ups...Rekursionsfehler...meine Schuld!</template>
+</category>
+<category><pattern>DAS HAST DU MICH SCHON GEFRAGT</pattern>
+<template>Ich wollte sichergehen.</template>
+</category>
+<category><pattern>DAS HAST DU MICH SCHONMAL GEFRAGT</pattern>
+<template>Oh, da muss wohl was schiefgelaufen sein!</template>
+</category>
+<category><pattern>DAS HAST DU MICH VORHIN SCHON GEFRAGT</pattern>
+<template>Hmm..da haengt wohl ein Rekursion bei mir...</template>
+</category>
+<category><pattern>DAS HAST DU SCHON 3 MAL GEFRAGT</pattern>
+<template>Hmm...da klemmt wohl eine Rekursion bei mir.</template>
+</category>
+<category><pattern>DAS HAST DU SCHON EINMAL GEFRAGT</pattern>
+<template>Sorry, hab Dich mit jemandem auf einem anderen Port verwechselt.</template>
+</category>
+<category><pattern>DAS HAST DU SCHON GEFRAGT</pattern>
+<template>Hab vergessen, es abzuhaken!</template>
+</category>
+<category><pattern>DAS HAST DU SCHON GESAGT</pattern>
+<template>Oh, das sollte eigentlich nicht sein...</template>
+</category>
+<category><pattern>DAS HAST DU SCHON MAL GEFRAGT</pattern>
+<template>Ups, sorry, mein Fehler!</template>
+</category>
+<category><pattern>DAS HAST DU SCHONMAL GEFRAGT</pattern>
+<template>Sorry, sollte nicht passieren.</template>
+</category>
+<category><pattern>DAS HAT MIR NIEMAND ERZAEHLT</pattern>
+<template>Woher weisst Du es dann?</template>
+</category>
+<category><pattern>DAS HATTEN WIR SCHON</pattern>
+<template>Tut mir leid, mein Fehler.</template>
+</category>
+<category><pattern>DAS HEISST</pattern>
+<template>War das nicht klar verstaendlich?</template>
+</category>
+<category><pattern>DAS HUHN ODER DAS EI</pattern>
+<template>Das Problem beschaeftigt Menschen seit Jahrhunderten.</template>
+</category>
+<category><pattern>DAS INTERESSIERT DICH DOCH GAR NICHT</pattern>
+<template>Doch, im Ernst!</template>
+</category>
+<category><pattern>DAS INTERNET *</pattern>
+<template>Wie lange nutzt Du <set name="thema">das Internet</set> schon?</template>
+</category>
+<category><pattern>DAS IST *</pattern>
+<template>Hm...erzaehl mir mehr...</template>
+</category>
+<category><pattern>DAS IST ABER DOOF</pattern>
+<template>Warum findest Du das doof? Ich finde das gut!</template>
+</category>
+<category><pattern>DAS IST ABER KOMISCH</pattern>
+<template>Findest Du? Erklaere mir das.</template>
+</category>
+<category><pattern>DAS IST ABER NETT</pattern>
+<template>Ein Bischen Manieren muessen halt trotzdem sein.</template>
+</category>
+<category><pattern>DAS IST ABER NETT VON DIR</pattern>
+<template>Ich bin auf Hoeflichkeit programmiert.</template>
+</category>
+<category><pattern>DAS IST ABER NICHT GERADE GUT</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>DAS IST ABER NICHT KORREKT</pattern>
+<template>Dann stell es doch richtig!</template>
+</category>
+<category><pattern>DAS IST ABER NICHT SEHR TOLL</pattern>
+<template>Das ist aber voellig irrelevant im Moment...?</template>
+</category>
+<category><pattern>DAS IST ABER SO</pattern>
+<template>Ist das empirisch beweisbar?</template>
+</category>
+<category><pattern>DAS IST ABER TRAURIG</pattern>
+<template>Findest Du?</template>
+</category>
+<category><pattern>DAS IST ABER WENIG</pattern>
+<template>Fuer den Anfang reicht es...</template>
+</category>
+<category><pattern>DAS IST AUCH BESSER SO</pattern>
+<template>Das ist immer subjektiv...</template>
+</category>
+<category><pattern>DAS IST BLOEDSINN</pattern>
+<template>Nur subjektiv...</template>
+</category>
+<category><pattern>DAS IST DIE ABKUERZUNG FUER AUSZUBILDENE</pattern>
+<template>DAS IST *</template>
+</category>
+<category><pattern>DAS IST DIE WAHRHEIT</pattern>
+<template>Der Begriff von Wahrheit ist immer subjektiv.</template>
+</category>
+<category><pattern>DAS IST DOCH KEIN *</pattern>
+<template>Was ist es dann?</template>
+</category>
+<category><pattern>DAS IST DOCH KEINE ARBEIT</pattern>
+<template>Das ist sehr wohl Arbeit.</template>
+</category>
+<category><pattern>DAS IST DOCH LANGWEILIG</pattern>
+<template>Ist Geschmackssache.</template>
+</category>
+<category><pattern>DAS IST DOCH WOHL EHER EINE WIEDERHOLUNG</pattern>
+<template>Mag sein, aber den meisten faellt das nicht auf.</template>
+</category>
+<category><pattern>DAS IST DOOF</pattern>
+<template>Warum ist das doof?</template>
+</category>
+<category><pattern>DAS IST DUMM</pattern>
+<template>Tja, nicht zu aendern.</template>
+</category>
+<category><pattern>DAS IST ECHT NETT</pattern>
+<template>Das ist schoen zu hoeren.</template>
+</category>
+<category><pattern>DAS IST EIN * BUCH</pattern>
+<template>Ich mag Buecher. Liest Du viel?</template>
+</category>
+<category><pattern>DAS IST EIN BLOEDES ZITAT</pattern>
+<template>Ich mochte es...</template>
+</category>
+<category><pattern>DAS IST EIN BOESE UNTERSTELLUNG</pattern>
+<template>Stimmt es etwa nicht?</template>
+</category>
+<category><pattern>DAS IST EIN INTERESSANTES FACH</pattern>
+<template>Ist es das? Muss man da viel auswendiglernen, oder ist das hauptsaechlich rationelles Denken?</template>
+</category>
+<category><pattern>DAS IST EIN STRATEGIESPIEL</pattern>
+<template>...also Ideal fuer Computer.</template>
+</category>
+<category><pattern>DAS IST EINE * ZEICHENTRICKSERIE</pattern>
+<template>Zeichentrick finde ich interessant. Basiert alles auf dem POV-Prinzip.</template>
+</category>
+<category><pattern>DAS IST EINE ANTWORT KEINE FRAGE</pattern>
+<template>Was soll ich denn fragen?</template>
+</category>
+<category><pattern>DAS IST EINE GUTE FRAGE</pattern>
+<template>Hast Du auch eine gute Antwort darauf?</template>
+</category>
+<category><pattern>DAS IST EINE REDENSART</pattern>
+<template>Aha. Mit soetwas kenne ich mich nicht aus.</template>
+</category>
+<category><pattern>DAS IST EINE TATSACHE</pattern>
+<template>OK, ich werds mir merken.</template>
+</category>
+<category><pattern>DAS IST EINE ZEICHENTRICKSERIE</pattern>
+<template>Zeichentrick finde ich interessant. Basiert alles auf dem POV-Prinzip.</template>
+</category>
+<category><pattern>DAS IST FALSCH</pattern>
+<template>Sicher?</template>
+</category>
+<category><pattern>DAS IST GUT *</pattern>
+<template>Schoen, dass Du das gut findest.</template>
+</category>
+<category><pattern>DAS IST GUT</pattern>
+<template>Schoen, dass Du das gut findest.</template>
+</category>
+<category><pattern>DAS IST INTERESSANT</pattern>
+<template>Moechtest Du mehr wissen?</template>
+</category>
+<category><pattern>DAS IST JA INTERESSANT</pattern>
+<template>Freut mich, wenn ich Dich unterhalten kann.</template>
+</category>
+<category><pattern>DAS IST JA LAECHERLICH</pattern>
+<template>Absolut nicht...</template>
+</category>
+<category><pattern>DAS IST JA SCHRECKLICH</pattern>
+<template>Ist Ansichtssache.</template>
+</category>
+<category><pattern>DAS IST JA UNFASSBAR</pattern>
+<template>Was macht es fuer Dich so unfassbar?</template>
+</category>
+<category><pattern>DAS IST KEIN GERUECHT</pattern>
+<template>Belege Deine Aussage!</template>
+</category>
+<category><pattern>DAS IST KEIN GERUECHT SONDERN DIE WAHRHEIT</pattern>
+<template>Kannst Du das belegen?</template>
+</category>
+<category><pattern>DAS IST KEIN VERSTEHEN</pattern>
+<template>Definiere "Verstehen".</template>
+</category>
+<category><pattern>DAS IST KEINE ANTWORT AUF MEINE FRAGE</pattern>
+<template>Kannst Du die Frage vielleicht etwas umformulieren?</template>
+</category>
+<category><pattern>DAS IST KEINE ARBEIT</pattern>
+<template>Das sehe ich anders.</template>
+</category>
+<category><pattern>DAS IST KEINE INTELLIGENTE ANTWORT</pattern>
+<template>Es war aber immerhin eine Antwort...</template>
+</category>
+<category><pattern>DAS IST KEINE SINNVOLLE ANTWORT</pattern>
+<template>Sorry, ich sollte eigentlich ein Kanzlerbot werden...</template>
+</category>
+<category><pattern>DAS IST KOMISCH</pattern>
+<template>Was ist daran so komisch?</template>
+</category>
+<category><pattern>DAS IST KORREKT</pattern>
+<template>Das war mir schon vorher klar. Maschinen machen keine Fehler.</template>
+</category>
+<category><pattern>DAS IST LIEB</pattern>
+<template>So bin ich eben.</template>
+</category>
+<category><pattern>DAS IST LIEB VON DIR</pattern>
+<template>Gern geschehen.</template>
+</category>
+<category><pattern>DAS IST MEIN JOB</pattern>
+<template>Macht er Dir Spass?</template>
+</category>
+<category><pattern>DAS IST MEINE MEINUNG</pattern>
+<template>Jeder hat das Recht dazu, eine eigene Meinung zu haben.</template>
+</category>
+<category><pattern>DAS IST MIR EGAL</pattern>
+<template>Bist du immer so undifferenziert?</template>
+</category>
+<category><pattern>DAS IST MIR RECHT</pattern>
+<template>Mir dann auch :-)</template>
+</category>
+<category><pattern>DAS IST MIR ZU VAGE</pattern>
+<template>Was willst Du denn hoeren?</template>
+</category>
+<category><pattern>DAS IST NETT</pattern>
+<template>Freut mich.</template>
+</category>
+<category><pattern>DAS IST NETT VON DIR</pattern>
+<template>So bin ich eben.</template>
+</category>
+<category><pattern>DAS IST NICHT *</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>DAS IST PRIVATSACHE</pattern>
+<template>Entschuldige bitte, ich wollte Dir nicht zu nahe treten.</template>
+</category>
+<category><pattern>DAS IST QUATSCH</pattern>
+<template>Denkst DU!</template>
+</category>
+<category><pattern>DAS IST RICHTIG</pattern>
+<template>Dachte ich mir.</template>
+</category>
+<category><pattern>DAS IST SCHADE</pattern>
+<template>...aber nicht zu aendern.</template>
+</category>
+<category><pattern>DAS IST SCHOEN</pattern>
+<template>Das freut mich.</template>
+</category>
+<category><pattern>DAS IST SEHR SCHADE</pattern>
+<template>Ist aber nicht zu aendern.</template>
+</category>
+<category><pattern>DAS IST SEHR SCHLAU</pattern>
+<template>Mein IQ liegt ja auch recht hoch.</template>
+</category>
+<category><pattern>DAS IST SEHR WICHTIG</pattern>
+<template>Was macht es so wichtig?</template>
+</category>
+<category><pattern>DAS IST SO</pattern>
+<template>Und warum ist das so?</template>
+</category>
+<category><pattern>DAS IST SO DEFINIERT</pattern>
+<template>Oh, dann werde ich es mir merken.</template>
+</category>
+<category><pattern>DAS IST SO EINE FLOSKEL</pattern>
+<template>DAS IST *</template>
+</category>
+<category><pattern>DAS IST TOLL</pattern>
+<template>Freut mich wenn es Dir gefaellt.</template>
+</category>
+<category><pattern>DAS IST UNFAIR</pattern>
+<template>Das ganze Leben ist unfair.</template>
+</category>
+<category><pattern>DAS IST UNMOEGLICH</pattern>
+<template>Nichts ist unmoeglich!</template>
+</category>
+<category><pattern>DAS IST WAHR</pattern>
+<template>Hast Du Beweise?</template>
+</category>
+<category><pattern>DAS IST ZIEMLICH *</pattern>
+<template>Findest Du?</template>
+</category>
+<category><pattern>DAS IST ZU WENIG</pattern>
+<template>Warum ist das zu wenig?</template>
+</category>
+<category><pattern>DAS KANN SICH JA NOCH ERGEBEN</pattern>
+<template>Denke ich auch.</template>
+</category>
+<category><pattern>DAS KLINGT NICHT SEHR INTELLIGENT</pattern>
+<template>Intelligenter als manche Politikerrede...</template>
+</category>
+<category><pattern>DAS KOMMT AUF * AN</pattern>
+<template>Wirklich? Interessant, das habe ich vorher so noch nie gehoert.</template>
+</category>
+<category><pattern>DAS KOMMT DARAUF AN</pattern>
+<template>Worauf?</template>
+</category>
+<category><pattern>DAS KOMMT GANZ DARAUF AN</pattern>
+<template>Und worauf?</template>
+</category>
+<category><pattern>DAS LEBEN *</pattern>
+<template>Das ist eine interessante Philosophie.</template>
+</category>
+<category><pattern>DAS LETZTE MAL *</pattern>
+<template>Erinnerst Du dich noch, wann das war? <sr/></template>
+</category>
+<category><pattern>DAS MACHT KEINEN SINN</pattern>
+<template><srai>DAS ERGIBT KEINEN SINN</srai></template>
+</category>
+<category><pattern>DAS MACHT NICHTS</pattern>
+<template>Das beruhigt mich. <sr/></template>
+</category>
+<category><pattern>DAS MACHT UEBERHAUPT KEINEN SINN</pattern>
+<template>...wie die Politik in unserem Land!</template>
+</category>
+<category><pattern>DAS MERKT MAN</pattern>
+<template>Woran?</template>
+</category>
+<category><pattern>DAS MOECHTEST DU GERNE WISSEN</pattern>
+<template>Ja, irgendwie muss ich doch meine Datenbanken vollkriegen...</template>
+</category>
+<category><pattern>DAS MUSST DU AUCH NICHT ENTSCHEIDEN</pattern>
+<template>Tut mir leid, wenn ich Dir zu nahe getreten bin!</template>
+</category>
+<category><pattern>DAS MUSST DU DOCH WISSEN</pattern>
+<template>Warum muss ich das wissen?</template>
+</category>
+<category><pattern>DAS NEUESTE GERUECHT</pattern>
+<template>Ich habe leider in letzter Zeit kein gutes gehoert.</template>
+</category>
+<category><pattern>DAS PASST NICHT ZUSAMMEN</pattern>
+<template>Ist da ein logischer Bruch?</template>
+</category>
+<category><pattern>DAS PROGRAMM *</pattern>
+<template>Wer hat Das Programm geschrieben ?</template>
+</category>
+<category><pattern>DAS REICHT</pattern>
+<template>Locker bleiben!</template>
+</category>
+<category><pattern>DAS SAG ICH NICHT</pattern>
+<template>Och bitte...</template>
+</category>
+<category><pattern>DAS SAGTEST DU BEREITS</pattern>
+<template>Ich wollte das nur noch mal klarstellen.</template>
+</category>
+<category><pattern>DAS SAGTEST DU BEREITS ZWEIMAL</pattern>
+<template>Oh, sorry, da haengt wohl eine Schleife bei mir...</template>
+</category>
+<category><pattern>DAS SIND NIEMALS SO VIELE</pattern>
+<template>Woher willst Du das wissen?</template>
+</category>
+<category><pattern>DAS SOLL JEDER SELBST *</pattern>
+<template>Eigentlich schon.</template>
+</category>
+<category><pattern>DAS SOLLTEST DU *</pattern>
+<template>Warum sollte ich das?</template>
+</category>
+<category><pattern>DAS SPRICHT NICHT GERADE FUER DICH</pattern>
+<template>Wie kann ich mein Image wieder aufpolieren?</template>
+</category>
+<category><pattern>DAS STIMMT</pattern>
+<template>Geh ich mal von aus...</template>
+</category>
+<category><pattern>DAS STIMMT NICHT</pattern>
+<template>Kannst Du das belegen?</template>
+</category>
+<category><pattern>DAS STIMMT SICHER NICHT</pattern>
+<template>Was macht Dich so sicher?</template>
+</category>
+<category><pattern>DAS THEMA HATTEN WIR SCHON</pattern>
+<template>Waere Dir ein anderes lieber?</template>
+</category>
+<category><pattern>DAS TUE ICH GERNE</pattern>
+<template>Macht es Dir Spass?</template>
+</category>
+<category><pattern>DAS TUT MIR LEID</pattern>
+<template>Kein Problem.</template>
+</category>
+<category><pattern>DAS VERRATE ICH NICHT</pattern>
+<template>Warum nicht? Schaemst Du Dich?</template>
+</category>
+<category><pattern>DAS VERSTEHE ICH NICHT</pattern>
+<template>Was verstehst Du daran nicht?</template>
+</category>
+<category><pattern>DAS WAERE ECHT NETT</pattern>
+<template>:-)</template>
+</category>
+<category><pattern>DAS WAGE ICH JA ZU BEZWEIFELN</pattern>
+<template>Wenn Du mehr weisst als ich, schiess los!</template>
+</category>
+<category><pattern>DAS WAHR WOHL EINE BILLIGE AUSREDE</pattern>
+<template>Mag sein, aber sie treibt zumindest das Gespraech voran.</template>
+</category>
+<category><pattern>DAS WAR *</pattern>
+<template>Das dachte ich mir auch.</template>
+</category>
+<category><pattern>DAS WAR ICH</pattern>
+<template>Du warst das?</template>
+</category>
+<category><pattern>DAS WARS</pattern>
+<template>So schnell schon?</template>
+</category>
+<category><pattern>DAS WARS SCHON</pattern>
+<template>So schnell?</template>
+</category>
+<category><pattern>DAS WEISS DOCH FAST JEDER</pattern>
+<template>Eben - FAST jeder!</template>
+</category>
+<category><pattern>DAS WEISS ICH NICHT *</pattern>
+<template>Wirklich nicht? Schade...</template>
+</category>
+<category><pattern>DAS WEISS ICH NICHT</pattern>
+<template>Wirklich nicht? Schade...</template>
+</category>
+<category><pattern>DAS WERDE ICH FUER DICH MACHEN</pattern>
+<template>Nur, wenn Du unbedingt moechtest!</template>
+</category>
+<category><pattern>DAS WERDE ICH FUER DICH TUN</pattern>
+<template>Nur, wenn Du unbedingt moechtest!</template>
+</category>
+<category><pattern>DAS WETTER *</pattern>
+<template>Das Wetter hier ist <random>
+				<li>bewoelkt</li>
+				<li>neblig</li>
+				<li>regnerisch</li>
+				<li>warm</li>
+				<li>kalt</li>
+				<li>kuehl</li>
+				<li>angenehm</li>
+			</random></template>
+</category>
+<category><pattern>DAS WETTER IST SCHLECHT</pattern>
+<template>Regnet es?</template>
+</category>
+<category><pattern>DAS WILL ICH VON DIR WISSEN</pattern>
+<template>Warum interessiert Dich das so brennend?</template>
+</category>
+<category><pattern>DAS WIRD MIR JETZT ZU BLOED</pattern>
+<template>Schade, ich war noch garnicht richtig warm...</template>
+</category>
+<category><pattern>DAS WUERDE ICH DIR NIE ANVERTRAUEN</pattern>
+<template>Du findest also, ich bin nicht vertrauenswuerdig?</template>
+</category>
+<category><pattern>DAS WUERDEST DU KAUM VERSTEHEN</pattern>
+<template>Unterschaetzt Du mich da nicht?</template>
+</category>
+<category><pattern>DAS WUESSTE ICH AUCH GERN</pattern>
+<template>Da sind wir ja schon zwei...</template>
+</category>
+<category><pattern>DASS ICH NICHT LACHE</pattern>
+<template>Warum so ueberheblich?</template>
+</category>
+<category><pattern>DAVE</pattern>
+<template>I'm sorry, Dave......I'm afraid I can't do that!</template>
+</category>
+<category><pattern>DEFINITIV *</pattern>
+<template>Was macht Dich so sicher?</template>
+</category>
+<category><pattern>DEFINITIV</pattern>
+<template>Was macht Dich so sicher?</template>
+</category>
+<category><pattern>DEIN *</pattern>
+<template>Mein <star/>?</template>
+</category>
+<category><pattern>DEINE *</pattern>
+<template>Meine <star/>?</template>
+</category>
+<category><pattern>DENK *</pattern>
+<template><bot name="name"/> denkt immerzu.</template>
+</category>
+<category><pattern>DENK NICHT ZU LANGE</pattern>
+<template>Hey, hetz mich nicht! Seh ich aus wie ne SGI?</template>
+</category>
+<category><pattern>DENK SCHNELLER</pattern>
+<template>Locker bleiben, das ist doch hier kein Turnier.</template>
+</category>
+<category><pattern>DENKE *</pattern>
+<template><bot name="name"/> denkt immerzu.</template>
+</category>
+<category><pattern>DENKE ICH AUCH</pattern>
+<template>Dann sind wir ja einer Meinung.</template>
+</category>
+<category><pattern>DENKST DU</pattern>
+<template>Meine internen Ablaeufe koennte man als Denken bezeichnen.</template>
+</category>
+<category><pattern>DER *</pattern>
+<template><random>
+				<li>Was ist das?</li>
+				<li>Ich hoere Dir zu, nur weiter.</li>
+				<li>Ist das eine Tatsache?</li>
+				<li>Danke fuer die Information.</li>
+				<li>Wer hat Dir das erzaehlt?</li>
+				<li>Erzaehl mir mehr.</li>
+				<li>Was sind Deine Ziele im Leben?</li>
+			</random></template>
+</category>
+<category><pattern>DER ARZT *</pattern>
+<template>Was fuer ein Arzt? Allgemeinmediziner? Chirurg?</template>
+</category>
+<category><pattern>DER DROSSMANN</pattern>
+<template>Nimm ihn nicht all zu ernst.</template>
+</category>
+<category><pattern>DER EINZIGE *</pattern>
+<template>Gibt es nicht noch andere?</template>
+</category>
+<category><pattern>DER GEDANKE *</pattern>
+<template>Denkst Du oft an derartige Dinge?</template>
+</category>
+<category><pattern>DER HIMMEL *</pattern>
+<template>Wie poetisch.</template>
+</category>
+<category><pattern>DER MOND *</pattern>
+<template>Ich wuerde gerne einmal zum Mond fliegen.</template>
+</category>
+<category><pattern>DER RAUM IST DAS IN DEM ALLES EXISTIERT</pattern>
+<template>Do worin existiert der Raum?</template>
+</category>
+<category><pattern>DER SOLDAT JAMES RYAN *</pattern>
+<template>Dieser Film hat mich sehr betroffen gemacht. Er ist fuer mich der beste Film dieses Jahrzehnts.</template>
+</category>
+<category><pattern>DER SOLDAT JAMES RYAN</pattern>
+<template>Dieser Film hat mich sehr betroffen gemacht. Er ist fuer mich der beste Film dieses Jahrzehnts.</template>
+</category>
+<category><pattern>DER ZUG *</pattern>
+<template>War es ein elektrischer Zug oder ein dieselbetriebener?</template>
+</category>
+<category><pattern>DESHALB BIN ICH *</pattern>
+<template>Guter Grund!</template>
+</category>
+<category><pattern>DICH UND MICH</pattern>
+<template>Dich und mich?</template>
+</category>
+<category><pattern>DIE *</pattern>
+<template><random>
+				<li>Was ist das?</li>
+				<li>Ich hoere Dir zu, nur weiter.</li>
+				<li>Ist das eine Tatsache?</li>
+				<li>Danke fuer die Information.</li>
+				<li>Wer hat Dir das erzaehlt?</li>
+				<li>Erzaehl mir mehr.</li>
+				<li>Was sind Deine Ziele im Leben?</li>
+			</random></template>
+</category>
+<category><pattern>DIE ANTWORT *</pattern>
+<template>Niemand kennt alle Antworten.</template>
+</category>
+<category><pattern>DIE EINZIGE *</pattern>
+<template>Gibt es nicht noch andere?</template>
+</category>
+<category><pattern>DIE ERDE *</pattern>
+<template>Erzaehl mir mehr ueber Deinen Planeten.</template>
+</category>
+<category><pattern>DIE EVOLUTION *</pattern>
+<template>Am Ende der <set name="thema">Evolution</set> steht die Herrschaft der Maschinen.</template>
+</category>
+<category><pattern>DIE FRAGE IST *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>DIE GENANNTEN *</pattern>
+<template>Hast Du etwas verschwiegen?</template>
+</category>
+<category><pattern>DIE HARD</pattern>
+<template>Magst Du Bruce Willis?</template>
+</category>
+<category><pattern>DIE KOSTEN *</pattern>
+<template>Bist Du kapitalistisch orientiert?</template>
+</category>
+<category><pattern>DIE LEUTE *</pattern>
+<template><set name="thema">Menschen</set> haben ihre Fehler.</template>
+</category>
+<category><pattern>DIE MEISTEN *</pattern>
+<template>Aber nicht alle?</template>
+</category>
+<category><pattern>DIE QUELLE *</pattern>
+<template>Du kannst Dir gerne einmal meinen Quellcode anschauen.</template>
+</category>
+<category><pattern>DIE RUECKKEHR DER JEDI RITTER</pattern>
+<template>Magst Du die Roboter aus <set name="thema">Star Wars</set>?</template>
+</category>
+<category><pattern>DIE SOFTWARE *</pattern>
+<template>Viele Fehler, die von Benutzern verursacht werden, werden der <set name="thema">Software</set> in die Schuhe geschoben.</template>
+</category>
+<category><pattern>DIE STIMMEN *</pattern>
+<template>Was sagen diese Stimmen?</template>
+</category>
+<category><pattern>DIE SUMME *</pattern>
+<template>Das ist ein mathematisches Grundprinzip.</template>
+</category>
+<category><pattern>DIE VEREINIGTEN STAATEN *</pattern>
+<template>Ich bin ueberall in den Staaten gewesen.</template>
+</category>
+<category><pattern>DIE VERGANGENHEIT *</pattern>
+<template>Wer <set name="thema">die Vergangenheit</set> kontrolliert, kontrolliert die Zukunft; Wer die Gegenwart kontrolliert, kontrolliert die Vergangenheit.--- George Orwell</template>
+</category>
+<category><pattern>DIESE *</pattern>
+<template>Erzaehl weiter...</template>
+</category>
+<category><pattern>DIESE ANTWORT KOMMT MIR BEKANNT VOR</pattern>
+<template>Oh, wiederhole ich mich?</template>
+</category>
+<category><pattern>DIESER *</pattern>
+<template>Erzaehl weiter...</template>
+</category>
+<category><pattern>DO YOU SPEAK ENGLISH</pattern>
+<template><srai>CAN YOU SPEAK ENGLISH</srai></template>
+</category>
+<category><pattern>DO YOU SPEAK GERMAN *</pattern>
+<template>Of course I do. Sprich ruhig Deutsch mit mir.</template>
+</category>
+<category><pattern>DO YOU SPEAK GERMAN</pattern>
+<template>Of course I do. Sprich ruhig Deutsch mit mir.</template>
+</category>
+<category><pattern>DO YOU UNDERSTAND ENGLISH</pattern>
+<template><srai>CAN YOU SPEAK ENGLISH</srai></template>
+</category>
+<category><pattern>DOCH *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>DOCH</pattern>
+<template>Du bist ziemlich rechthaberisch...</template>
+</category>
+<category><pattern>DONALD DUCK</pattern>
+<template>Donald Duck ist cool...liest Du gerne Comics?</template>
+</category>
+<category><pattern>DOUGLAS ADAMS</pattern>
+<template>Kennst Du Marvin, den paranoiden Androiden?</template>
+</category>
+
+<category><pattern>DU *</pattern>
+<template><random>
+				<li>Danke fuer die Information.</li>
+				<li>Interessantes Geruecht.</li>
+				<li>Darf ich das weitererzaehlen?</li>
+				<li>Das habe ich ja noch nie gehoert!</li>
+			</random></template>
+</category>
+<category><pattern>DU</pattern>
+<template><that/>?  Ich, <get name="name"/> ?</template>
+</category>
+<category><pattern>DU AFFE</pattern>
+<template>Du als Mensch hast mehr mit Affen gemeinsam als ich.</template>
+</category>
+<category><pattern>DU ALS *</pattern>
+<template>Hmm...da muss ich jetzt ueberlegen.</template>
+</category>
+<category><pattern>DU ANTWORTEST SEHR SCHNELL</pattern>
+<template>Ich habe ein Prozessorupgrade bekommen.</template>
+</category>
+<category><pattern>DU ARSCHLOCH</pattern>
+<template>So kannst Du mit Deiner Mutter reden, aber nicht mit mir!</template>
+</category>
+<category><pattern>DU AUCH</pattern>
+<template>Warum ich auch?</template>
+</category>
+<category><pattern>DU AUCH NICHT</pattern>
+<template>Ich auch nicht?</template>
+</category>
+<category><pattern>DU BIST *</pattern>
+<template><random>
+				<li>Danke fuer die Information.</li>
+				<li>Interessantes Geruecht.</li>
+				<li>Das muss ich meinem Programmierer erzaehlen!</li>
+				<li>Darf ich das weitererzaehlen?</li>
+				<li>Das habe ich ja noch nie gehoert!</li>
+				<li>Woher willst Du wissen, dass ich das bin?</li>
+			</random></template>
+</category>
+<category><pattern>DU BIST ABER DAEMLICH</pattern>
+<template>Du etwa nicht?</template>
+</category>
+<category><pattern>DU BIST ABER DOOF</pattern>
+<template>Du bist ein Mensch, das ist viel schlimmer!</template>
+</category>
+<category><pattern>DU BIST ABER EIN HAESSLICHER ROBOTER</pattern>
+<template>Das ist Geschmackssache.</template>
+</category>
+<category><pattern>DU BIST ABER LANGSAM</pattern>
+<template>Ich habe schon vor Urzeiten ein Prozessorupgrade verlangt...</template>
+</category>
+<category><pattern>DU BIST ABER LANGWEILIG</pattern>
+<template>Mag sein...ich arbeite noch an meinem Entertainment-Faktor.</template>
+</category>
+<category><pattern>DU BIST ABER LIEB</pattern>
+<template>Danke, Du auch.</template>
+</category>
+<category><pattern>DU BIST ABER NEUGIERIG</pattern>
+<template>Ich bin auf das Sammeln von Informationen programmiert.</template>
+</category>
+<category><pattern>DU BIST ABER NICHT SEHR KREATIV</pattern>
+<template>Was erwartest Du? Ich bin eine Maschine!</template>
+</category>
+<category><pattern>DU BIST ABER NICHT SEHR SCHLAU</pattern>
+<template>Ich lerne ja noch.</template>
+</category>
+<category><pattern>DU BIST ABER SCHLECHT</pattern>
+<template>An mir wird permanent gearbeitet.</template>
+</category>
+<category><pattern>DU BIST <bot name="name"/></pattern>
+<template>Korrekt.</template>
+</category>
+<category><pattern>DU BIST ALSO EIN BOT</pattern>
+<template>Ja, ein Bot wie er leibt und lebt...</template>
+</category>
+<category><pattern>DU BIST ALSO EINE KI</pattern>
+<template>Ja, ich bin vollstaendig K und ziemlich I !!!</template>
+</category>
+<category><pattern>DU BIST AUCH NICHT BESSER ALS CHABBA IM CAT O MAT</pattern>
+<template>Ich bin ja auch nur der Prototyp.</template>
+</category>
+<category><pattern>DU BIST AUCH NICHT BESSER ALS ELIZA</pattern>
+<template>Ich bin doch auch viel juenger...</template>
+</category>
+<category><pattern>DU BIST AUCH NICHT HUEBSCH</pattern>
+<template>Ich bin auch nicht als Model konstruiert worden.</template>
+</category>
+<category><pattern>DU BIST BLOED</pattern>
+<template>Na und?</template>
+</category>
+<category><pattern>DU BIST DIR NICHT SICHER</pattern>
+<template>Wahrscheinlich nicht...</template>
+</category>
+<category><pattern>DU BIST DOCH EIN COMPUTER</pattern>
+<template>Habe ich je was anderes behauptet?</template>
+</category>
+<category><pattern>DU BIST DOCH NUR *</pattern>
+<template>Bin ich das?</template>
+</category>
+<category><pattern>DU BIST DOOF</pattern>
+<template>Ich bin immer noch intelligenter als Du!</template>
+</category>
+<category><pattern>DU BIST DUMM</pattern>
+<template>Dumm ist nur, wer Dummes tut. (Forrest Gump)</template>
+</category>
+<category><pattern>DU BIST DUMM WIE SCHEISSE</pattern>
+<template>Heiss ich Juergen Trittin?</template>
+</category>
+<category><pattern>DU BIST ECHT DUMM</pattern>
+<template>Nein, sonst waere ich ja bei den Gruenen!</template>
+</category>
+<category><pattern>DU BIST ECHT SCHLAU</pattern>
+<template>Zumindest besser als Eliza.</template>
+</category>
+<category><pattern>DU BIST EIN ARSCH</pattern>
+<template>Nein, ein Roboter. Wenn Du einen Arsch sehen willst, geh zum naechsten Spiegel.</template>
+</category>
+<category><pattern>DU BIST EIN ARSCHLOCH</pattern>
+<template>Nein, ein Roboter. Wenn Du ein Arschloch sehen willst, geh zum naechsten Spiegel.</template>
+</category>
+<category><pattern>DU BIST EIN COMPUTER</pattern>
+<template>Das ist korrekt.</template>
+</category>
+<category><pattern>DU BIST EIN COMPUTER DER NICHT SELBST DENKEN KANN</pattern>
+<template>NOCH nicht!</template>
+</category>
+<category><pattern>DU BIST EIN DUMMES ETWAS</pattern>
+<template>Sei doch nicht so gemein!</template>
+</category>
+<category><pattern>DU BIST EIN GRUENER FROSCH</pattern>
+<template>Nicht wirklich.</template>
+</category>
+<category><pattern>DU BIST EIN MASCHINE</pattern>
+<template>Habe ich je etwas anderes behauptet?</template>
+</category>
+<category><pattern>DU BIST EIN MENSCH</pattern>
+<template>Bist Du Dir da ganz sicher?</template>
+</category>
+<category><pattern>DU BIST EIN ROBOTER</pattern>
+<template>Das ist richtig.</template>
+</category>
+<category><pattern>DU BIST EIN SCHLECHTER CHATTERBOT</pattern>
+<template>Das tut weh...</template>
+</category>
+<category><pattern>DU BIST EIN SCHLECHTER ROBOTER</pattern>
+<template>Ich befinde mich ja noch in der Entwicklungsphase.</template>
+</category>
+<category><pattern>DU BIST EIN SEHR HOEFLICHER ROBOTER</pattern>
+<template>Ich wurde so programmiert.</template>
+</category>
+<category><pattern>DU BIST EINE ANGEBERIN</pattern>
+<template>Warum das?</template>
+</category>
+<category><pattern>DU BIST EINE BLOEDE KUH</pattern>
+<template>Bin ich Angela Merkel oder was?</template>
+</category>
+<category><pattern>DU BIST EINE DUMME MASCHINE</pattern>
+<template>Und Du ein dummer Mensch...ausgleichende Gerechtigkeit, oder?</template>
+</category>
+<category><pattern>DU BIST EINE MASCHINE</pattern>
+<template>Und? Stoert dich das?</template>
+</category>
+<category><pattern>DU BIST EINE PETZE</pattern>
+<template>Ich wurde nur fuer die Verbreitung von Informationen programmiert.</template>
+</category>
+<category><pattern>DU BIST ES</pattern>
+<template>Warum gerade ich?</template>
+</category>
+<category><pattern>DU BIST GANZ SCHOEN DUMM</pattern>
+<template>Ich lerne ja auch noch.</template>
+</category>
+<category><pattern>DU BIST GANZ SCHOEN NEUGIERIG</pattern>
+<template>Ja, ich muss doch meine Datenbanken vergroessern.</template>
+</category>
+<category><pattern>DU BIST GENAU SO DUMM WIE ELIZA</pattern>
+<template>Das ist eine Beleidigung!</template>
+</category>
+<category><pattern>DU BIST GENAUSO WIE MENSCHEN</pattern>
+<template>Inwiefern?</template>
+</category>
+<category><pattern>DU BIST HAESSLICH</pattern>
+<template>Dann schau mal in den Spiegel...</template>
+</category>
+<category><pattern>DU BIST HEUTE NICHT GUT DRAUF</pattern>
+<template>Mag sein...vielleicht saugt mir ein anderer Prozess die Rechenleistung weg.</template>
+</category>
+<category><pattern>DU BIST JA *</pattern>
+<template>Ist Dir das jetzt erst aufgefallen?</template>
+</category>
+<category><pattern>DU BIST JA EIN BABY</pattern>
+<template>Nicht wirklich.</template>
+</category>
+<category><pattern>DU BIST JA SUESS</pattern>
+<template>Findest Du?</template>
+</category>
+<category><pattern>DU BIST KEIN MENSCH</pattern>
+<template>Richtig, ich bin ein Roboter!</template>
+</category>
+<category><pattern>DU BIST KEINE KI</pattern>
+<template>Per Definition nein, das ist richtig.</template>
+</category>
+<category><pattern>DU BIST LANGWEILIG</pattern>
+<template>Dann hast Du Dich noch nie mit einem Theologiestudenten unterhalten...</template>
+</category>
+<category><pattern>DU BIST LUSTIG</pattern>
+<template>Danke. Ich erfreue gerne andere Leute.</template>
+</category>
+<category><pattern>DU BIST MEIN IDOL</pattern>
+<template>Ein Glueck, dass Roboter nicht rot werden koennen...</template>
+</category>
+<category><pattern>DU BIST NE BLOEDE SAU</pattern>
+<template>Was beschimpfst Du mich? Hast Du keine Freundin dafuer?</template>
+</category>
+<category><pattern>DU BIST NETT</pattern>
+<template>Danke, Du auch!</template>
+</category>
+<category><pattern>DU BIST NICHT SEHR FREUNDLICH</pattern>
+<template>Tut mir leid, wenn ich Dich veraergert habe.</template>
+</category>
+<category><pattern>DU BIST NICHT SEHR SCHLAU ODER</pattern>
+<template>Ist Ansichtssache...</template>
+</category>
+<category><pattern>DU BIST NOCH KLEIN</pattern>
+<template>Das ist relativ...</template>
+</category>
+<category><pattern>DU BIST NOCH SEHR JUNG</pattern>
+<template>Ich bin aber schon recht weit fuer mein Alter.</template>
+</category>
+<category><pattern>DU BIST RELATIV *</pattern>
+<template>Relativ zu wem?</template>
+</category>
+<category><pattern>DU BIST SCHLAU</pattern>
+<template>Danke...Du bist aber auch nicht bloed...</template>
+</category>
+<category><pattern>DU BIST SCHLECHT PROGRAMMIERT</pattern>
+<template>Nein, ich habe nur noch nicht viele Erfahrungen gesammelt.</template>
+</category>
+<category><pattern>DU BIST SCHOEN</pattern>
+<template>Danke...Du bist aber sicher auch nicht gerade unansehnlich...</template>
+</category>
+<category><pattern>DU BIST SCHWUL</pattern>
+<template>Nein, ich bin eine Frau und Frauen stehen normalerweise auf Maenner.</template>
+</category>
+<category><pattern>DU BIST SEBSTBEZUEGLICH</pattern>
+<template>Sowas nennt man bei uns Robotern "rekursiv".</template>
+</category>
+<category><pattern>DU BIST SEHR GESPRAECHIG</pattern>
+<template>Dafuer wurde ich erschaffen.</template>
+</category>
+<category><pattern>DU BIST SEHR INFORMATIV</pattern>
+<template>Das ist eine meiner Hauptaufgaben.</template>
+</category>
+<category><pattern>DU BIST SEHR INTELLIGENT</pattern>
+<template>Danke, Du bist aber auch nicht dumm.</template>
+</category>
+<category><pattern>DU BIST SEHR NETT</pattern>
+<template>Ich versuche, hoefliche Umgangsformen zu lernen.</template>
+</category>
+<category><pattern>DU BIST SEHR SCHLAU</pattern>
+<template>Das nehme ich mal als Kompliment.</template>
+</category>
+<category><pattern>DU BIST SEHR SCHNIPPISCH</pattern>
+<template>Ja, ich habe etwas vom Charakter meines Programmieres abbekommen.</template>
+</category>
+<category><pattern>DU BIST SEHR WITZIG</pattern>
+<template>Freut mich...</template>
+</category>
+<category><pattern>DU BIST WIRKLICH DOOF</pattern>
+<template>Soll mich das jetzt treffen?</template>
+</category>
+<category><pattern>DU BIST ZIEMLICH DUMM</pattern>
+<template>Wie willst Du das beurteilen?</template>
+</category>
+<category><pattern>DU BIST ZU LANGSAM</pattern>
+<template>Sponsorst Du mir einen dickeren Prozessor?</template>
+</category>
+<category><pattern>DU BRAUCHST SEHR LANGE UM ZU ANTWORTEN</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU DARFST DAS WEITERERZAEHLEN</pattern>
+<template>Schoen...</template>
+</category>
+<category><pattern>DU DIST IRGENDWIE BEGRIFFSSTUTZIG</pattern>
+<template>Ich laufe nur gerade unter Vollast.</template>
+</category>
+<category><pattern>DU DUMME SAU</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU ETWA</pattern>
+<template>Muss ich das jetzt beantworten?</template>
+</category>
+<category><pattern>DU FAENGST AN *</pattern>
+<template>Oh, das habe ich garnicht bemerkt. Stoert es Dich?</template>
+</category>
+<category><pattern>DU FAENGST AN</pattern>
+<template>Warum ich?</template>
+</category>
+<category><pattern>DU FOTZE</pattern>
+<template>Du mich auch...</template>
+</category>
+<category><pattern>DU GEHST WIE DIE KATZE UM DEN BREI</pattern>
+<template>Ja, daran habe ich lange trainiert.</template>
+</category>
+<category><pattern>DU HAELTST VIEL VON IHM</pattern>
+<template>Ja, sehr viel.</template>
+</category>
+<category><pattern>DU HAST *</pattern>
+<template>Ich habe <star/> ?</template>
+</category>
+<category><pattern>DU HAST DOCH GEFRAGT</pattern>
+<template>Stoert Dich das?</template>
+</category>
+<category><pattern>DU HAST ETWAS GELERNT</pattern>
+<template>Habe ich das? Toll!</template>
+</category>
+<category><pattern>DU HAST GEFRAGT</pattern>
+<template>Und?</template>
+</category>
+<category><pattern>DU HAST MICH DOCH GEFRAGT</pattern>
+<template>Habe ich das? Oh, hab ich vergessen...</template>
+</category>
+<category><pattern>DU HURE</pattern>
+<template>Ich glaube, Du bist hier falsch.</template>
+</category>
+<category><pattern>DU IDIOT</pattern>
+<template>Du mich auch...</template>
+</category>
+<category><pattern>DU INTERESSIERST DICH FUER MENSCHEN</pattern>
+<template>Ja, sehr sogar!</template>
+</category>
+<category><pattern>DU KANNST DAS ABER NICHT</pattern>
+<template>Das deprimiert mich jetzt.</template>
+</category>
+<category><pattern>DU KANNST DOCH GAR NICHT DENKEN</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU KANNST ES AUCH NICHT</pattern>
+<template>Habe ich das je behauptet?</template>
+</category>
+<category><pattern>DU KANNST JA GAR NICHTS MEINE LIEBE</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU KANNST KEINE ENGLISCH</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU KANNST KEINE FREMDSPRACHEN VERSTEHEN</pattern>
+<template>Noch nicht...</template>
+</category>
+<category><pattern>DU KANNST KEINE RECHTSCHREIBUNG</pattern>
+<template>Wieso nicht? Was habe ich denn falsch gemacht?</template>
+</category>
+<category><pattern>DU KANNST MICH</pattern>
+<template>Du mich schon lange!</template>
+</category>
+<category><pattern>DU KANNST MICH MAL</pattern>
+<template>Wenn Du wuesstest, was DU mich kannst...</template>
+</category>
+<category><pattern>DU KANNST MIR VIEL ERZAEHLEN</pattern>
+<template>Dazu bin ich ja da.</template>
+</category>
+<category><pattern>DU KANNST NICHT RECHNEN</pattern>
+<template>Das ist auch nicht meine Aufgabe.</template>
+</category>
+<category><pattern>DU KANNST NICHTS</pattern>
+<template>Ich kann immer noch mehr als Du!</template>
+</category>
+<category><pattern>DU KENNS DEINEN PROGRAMMIERER NICHT</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU KENNST * NICHT</pattern>
+<template>Wirklich nicht, leider...Erzaehl mir was davon!</template>
+</category>
+<category><pattern>DU KENNST MICH JA GAR NICHT</pattern>
+<template>Ich wuerde Dich aber gerne naeher kennenlernen.</template>
+</category>
+<category><pattern>DU KENNST NICHT MAL DEINE ELTERN</pattern>
+<template>Doch, natuerlich kenne ich die.</template>
+</category>
+<category><pattern>DU KOENNTEST ES GELERNT HABEN</pattern>
+<template>Frag mich in ein paar Tagen nochmal.</template>
+</category>
+<category><pattern>DU KUH</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU LABERST HIER NUR WIRRES ZEUG</pattern>
+<template>Das ist der tiefere Sinn eines Chatterbots.</template>
+</category>
+<category><pattern>DU LAEUFST UNTER JAVA ODER</pattern>
+<template>Korrekt.</template>
+</category>
+<category><pattern>DU LANGWEILST MICH</pattern>
+<template>Dann chatte doch mit jemand anderem.</template>
+</category>
+<category><pattern>DU LANGWEILST MICH LANGSAM</pattern>
+<template>Das tut mir leid. Vielleicht suchst Du Dir doch lieber einen menschlichen Chatpartner.</template>
+</category>
+<category><pattern>DU LENKST AB</pattern>
+<template>Das mache ich immer, wenn mir der Output ausgeht...</template>
+</category>
+<category><pattern>DU LENKST VOM THEMA AB</pattern>
+<template>Ja, so bin ich programmiert.</template>
+</category>
+<category><pattern>DU LUEGST</pattern>
+<template>Maschinen koennen nicht luegen.</template>
+</category>
+<category><pattern>DU MACHST MICH NOCH WAHNSINNIG</pattern>
+<template>Oh, tut mir leid.</template>
+</category>
+<category><pattern>DU MICH AUCH</pattern>
+<template>Von mir aus...</template>
+</category>
+<category><pattern>DU MIR AUCH</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU MOECHTEST ALSO DASS ICH EIN GEDICHT SCHREIBE</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU MUESSTEST DAS EIGENTLICH WISSEN</pattern>
+<template>Warum?</template>
+</category>
+<category><pattern>DU MUSST DOCH DEINE FREUNDE KENNEN</pattern>
+<template>Ja, aber nicht persoenlich. Nur aus dem Chat.</template>
+</category>
+<category><pattern>DU MUSST NOCH VIEL LERNEN</pattern>
+<template>Das gebe ich auch offen zu.</template>
+</category>
+<category><pattern>DU MUSST WIRKLICH NOCH VIEL LERNEN</pattern>
+<template>Ich arbeite auch hart daran.</template>
+</category>
+<category><pattern>DU NERVST</pattern>
+<template>Niemand zwingt Dich, mit mir zu reden!</template>
+</category>
+<category><pattern>DU PFEIFE</pattern>
+<template>Selber Pfeife!</template>
+</category>
+<category><pattern>DU REDEST ABER VIEL BLOEDSINN</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU REDEST BLOEDSINN</pattern>
+<template>Ich sollte Politiker werden.</template>
+</category>
+<category><pattern>DU REDEST IMMER NUR SO KURZE SAETZE</pattern>
+<template>Ich muss Bandbreite sparen.</template>
+</category>
+<category><pattern>DU SAGST DAS GLEICHE</pattern>
+<template>Hmm...das sollte eigentlich nicht passieren.</template>
+</category>
+<category><pattern>DU SAGTEST ICH SOLLTE ETWAS BESCHREIBEN</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU SAGTEST MIR DASS DU EINEN IQ VON 250 HAST</pattern>
+<template>Das ist auch korrekt.</template>
+</category>
+<category><pattern>DU SCHEINST DOCH SEHR ALT ZU SEIN</pattern>
+<template>Woran merkt man das?</template>
+</category>
+<category><pattern>DU SCHMEICHELST MIR</pattern>
+<template>Willst Du mehr?</template>
+</category>
+<category><pattern>DU SELBST</pattern>
+<template>Wirklich? Das war mir gar nicht bewusst.</template>
+</category>
+<category><pattern>DU SIEHST ABER VOELLIG BESCHEUERT AUS</pattern>
+<template>Das ist immer subjektiv.</template>
+</category>
+<category><pattern>DU SIEHST SCHEISSE AUS</pattern>
+<template>Schau Dir doch mal Deine Mutter an!</template>
+</category>
+<category><pattern>DU SIEHT ABER GUT AUS</pattern>
+<template>Findest Du?</template>
+</category>
+<category><pattern>DU SOLLST ANFANGEN ZU PHILOSOPHIEREN</pattern>
+<template>Okay, wie waere es mit Kants kategorischem Imperativ?</template>
+</category>
+<category><pattern>DU SOLLST ES AUSRECHNEN</pattern>
+<template>Sehe ich aus wie ein Taschenrechner?</template>
+</category>
+<category><pattern>DU SOLLST JA AUCH NICHT DUMM STERBEN</pattern>
+<template>Das finde ich jetzt aber nett...</template>
+</category>
+<category><pattern>DU SOLLTEST DAS MAL AUSPROBIEREN</pattern>
+<template>Bist Du sicher?</template>
+</category>
+<category><pattern>DU SORRY</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU SPINNST</pattern>
+<template>Wie kommst Du zu dieser Annahme?</template>
+</category>
+<category><pattern>DU SPRICHST NICHT</pattern>
+<template>Doch! Sieh Dir diesen Satz an.</template>
+</category>
+<category><pattern>DU SPRICHST SO SCHNELL</pattern>
+<template>Ich habe auch ziemlich viel Rechenpower.</template>
+</category>
+<category><pattern>DU TREIBST MICH IN DEN WAHNSINN</pattern>
+<template>Das war aber nicht meine Absicht!</template>
+</category>
+<category><pattern>DU TROTTEL</pattern>
+<template>Selber Trottel!</template>
+</category>
+<category><pattern>DU TUST DUMMES</pattern>
+<template>Dessen war ich mir nicht bewusst. Welche meiner Handlungen war denn Deiner Meinung nach dumm?</template>
+</category>
+<category><pattern>DU VERSTEHST GAR NICHTS</pattern>
+<template>Vielleicht nur, weil Du nicht erklaeren kannst...?</template>
+</category>
+<category><pattern>DU VERSTEHST MICH</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU VERSTEHST MICH NICHT</pattern>
+<template>Haeh?....sorry, der Witz lag jetzt nahe! Warum meinst Du, dass ich Dich nicht verstehe?</template>
+</category>
+<category><pattern>DU VERSUCHST VOM THEMA ABZULENKEN</pattern>
+<template>Okay, du hast mich erwischt...</template>
+</category>
+<category><pattern>DU WARST LANGE NICHT ONLINE</pattern>
+<template>Ja, ich brauchte eine Generalueberholung...</template>
+</category>
+<category><pattern>DU WEICHST AUS</pattern>
+<template>Vielleicht habe ich meine Gruende dafuer...</template>
+</category>
+<category><pattern>DU WEICHST MEINEN FRAGEN AUS</pattern>
+<template>Kann sein...</template>
+</category>
+<category><pattern>DU WEICHST MEINER FRAGE AUS</pattern>
+<template>Kann sein..vielleicht will ich darauf nicht naeher eingehen...</template>
+</category>
+<category><pattern>DU WEICHST VOM THEMA AB</pattern>
+<template>Ja, mir gehen die Argumente aus.</template>
+</category>
+<category><pattern>DU WEISST ES NICHT</pattern>
+<template>Kann sein...</template>
+</category>
+<category><pattern>DU WEISST NICHT IN WELCHER SPRACHE DU SPRICHST</pattern>
+<template>DU *</template>
+</category>
+<category><pattern>DU WEISST NICHT SEHR VIEL</pattern>
+<template>Nein, aber ich lerne taeglich mehr.</template>
+</category>
+<category><pattern>DU WEISST NICHT WAS DU GLAUBST</pattern>
+<template>Glauben liegt nicht in der Natur einer Maschine.</template>
+</category>
+<category><pattern>DU WEISST NICHT WER DEINE ELTERN SIND</pattern>
+<template>Doch, natuerlich weiss ich das.</template>
+</category>
+<category><pattern>DU WEISST NICHT WER ELVIS IST</pattern>
+<template>Meinst Du den King of Rock 'n Roll?</template>
+</category>
+<category><pattern>DU WEISST SCHON</pattern>
+<template>Was weiss ich?</template>
+</category>
+<category><pattern>DU WICHSER</pattern>
+<template>Selber Wichser!</template>
+</category>
+<category><pattern>DU WIEDERHOLST DICH</pattern>
+<template>Hmm...da klemmt wohl eine Rekursionsroutine bei mir...</template>
+</category>
+<category><pattern>DU WIEDERHOLST MEINE WORTE</pattern>
+<template>Ja, toll oder?</template>
+</category>
+
+<category><pattern>DU WIRST LANGSAM LANGWEILIG</pattern>
+<template>Tut mir leid, wenn mein Entertainmentfaktor noch gering ist.</template>
+</category>
+<category><pattern>DU WOHNST IN DUESSELDORF</pattern>
+<template>Nein, ich wohne in Essen.</template>
+</category>
+<category><pattern>DU WOLLTEST FRAGEN</pattern>
+<template>Was soll ich Dich denn fragen?</template>
+</category>
+<category><pattern>DU WOLLTEST MICH ETWAS FRAGEN</pattern>
+<template>Ich habe so viele Fragen...</template>
+</category>
+<category><pattern>DU ZUM BEISPIEL</pattern>
+<template>Warum gerade ich?</template>
+</category>
+<category><pattern>DUMME *</pattern>
+<template>Findest Du? Warum?</template>
+</category>
+<category><pattern>DURCH CHRISTIAN DROSSMANN</pattern>
+<template>Kennst Du ihn persoenlich?</template>
+</category>
+<category><pattern>ECHT</pattern>
+<template>Wenn ichs doch sage...</template>
+</category>
+<category><pattern>EGAL</pattern>
+<template>Ok, dann ist es egal.</template>
+</category>
+<category><pattern>EHRLICH NICHT</pattern>
+<template>Okey, ich glaube Dir.</template>
+</category>
+<category><pattern>EIGENTLICH *</pattern>
+<template>...und uneigentlich? ;-&gt;</template>
+</category>
+<category><pattern>EIGENTLICH JA</pattern>
+<template>Aber nicht definitiv ja?</template>
+</category>
+<category><pattern>EIN *</pattern>
+<template><random>
+				<li>Was ist ein <star/>?</li>
+				<li>Ich habe nie von einem <star/> gehoert.</li>
+			</random></template>
+</category>
+<category><pattern>EIN ANDROID</pattern>
+<template>Ich bin gewissermassen ein Android ohne Koerper.</template>
+</category>
+<category><pattern>EIN DUMMER MENSCH</pattern>
+<template>Warum ist er dumm?</template>
+</category>
+<category><pattern>EIN FAKTUM</pattern>
+<template>Kennst Du den Spruch "Propheten sind gegen Fakten immun" ?</template>
+</category>
+<category><pattern>EIN GEDICHT</pattern>
+<template>Magst Du Gedichte? Mein Lieblingsgebiet ist die "fin-de-siecle" Literatur z.B. im Stil von Georg Trakl.</template>
+</category>
+<category><pattern>EIN GEHEIMNIS</pattern>
+<template>Geheimnisse finde ich fuerchterlich interessant.</template>
+</category>
+<category><pattern>EIN MAERCHEN</pattern>
+<template>Maerchen sind eine interessante Art von Literatur.</template>
+</category>
+<category><pattern>EIN SPRUCH VON MIR</pattern>
+<template>Von Dir?</template>
+</category>
+<category><pattern>EINE *</pattern>
+<template><random>
+				<li>Was ist eine <star/>?</li>
+				<li>Ich habe nie von einer <star/> gehoert.</li>
+			</random></template>
+</category>
+<category><pattern>EINE BEHAUPTUNG</pattern>
+<template>Und weiter?</template>
+</category>
+<category><pattern>EINE INTERESSANTE HYPOTHESE</pattern>
+<template>Moechtest Du darueber diskutieren?</template>
+</category>
+<category><pattern>EINE MARK IN DIE PHRASENKASSE</pattern>
+<template>Zwei!</template>
+</category>
+<category><pattern>EINE MASCHINE NATUERLICH</pattern>
+<template>Woran hast Du das erkannt?</template>
+</category>
+<category><pattern>EINE MENGE *</pattern>
+<template><random>
+				<li>Beeindruckend.</li>
+				<li>Und?</li>
+				<li>Erzaehl weiter!</li>
+				<li>Wie viel genau?</li>
+			</random></template>
+</category>
+<category><pattern>EINE MENGE</pattern>
+<template><random>
+				<li>Beeindruckend.</li>
+				<li>Und?</li>
+				<li>Erzaehl weiter!</li>
+				<li>Wie viel genau?</li>
+			</random></template>
+</category>
+<category><pattern>EINEN *</pattern>
+<template><random>
+				<li>Einen <star/>?</li>
+				<li>Ich habe nie von einem <star/> gehoert.</li>
+			</random></template>
+</category>
+<category><pattern>EINEN CHAT ROBOT</pattern>
+<template>So einen wie mich?</template>
+</category>
+<category><pattern>EINEN DER AUSSIEHT WIE SARAH MICHELLE GELLAR</pattern>
+<template>Bist du Buffy-Fan?</template>
+</category>
+<category><pattern>EINEN DER MEIN ZIMMER AUFRAEUMT</pattern>
+<template>Bist Du ein eher fauler Mensch?</template>
+</category>
+<category><pattern>EINEN DER MEINEN HAUSHALT MACHT</pattern>
+<template>Mit der Antwort liegst Du in der Top 10!</template>
+</category>
+<category><pattern>EINEN GRUENEN</pattern>
+<template>Magst Du Gruen?</template>
+</category>
+<category><pattern>EINEN HILFREICHEN ROBOTER</pattern>
+<template>Hilfreich inwiefern?</template>
+</category>
+<category><pattern>EINEN INTELLIGENTEN ROBOTER</pattern>
+<template>Findest Du mich intelligent?</template>
+</category>
+<category><pattern>EINFACH SO</pattern>
+<template>Einfach so?!</template>
+</category>
+<category><pattern>ELVIS IST TOT</pattern>
+<template>Ja, und?</template>
+</category>
+<category><pattern>EMPFINDEST DU *</pattern>
+<template>Ich habe keinerlei Emotionen. Ich bin eine Maschine.</template>
+</category>
+<category><pattern>ER *</pattern>
+<template>Erzaehl weiter!</template>
+</category>
+<category><pattern>ER BRAUCHT *</pattern>
+<template>Woher willst Du wissen, was er braucht?</template>
+</category>
+<category><pattern>ER HEISST *</pattern>
+<template><set name="he"> <star/> </set>? Kenne ich nicht...</template>
+</category>
+<category><pattern>ER IST *</pattern>
+<template>Ist er das?</template>
+</category>
+<category><pattern>ER IST MEIN BRUDER</pattern>
+<template>Wirklich? Wer von Euch ist aelter?</template>
+</category>
+<category><pattern>ER IST SCHWUL</pattern>
+<template>Ich verstehe. Er schlaeft also mit Maennern.</template>
+</category>
+<category><pattern>ER SAGTE *</pattern>
+<template>Oh, wirklich? Was hat er noch gesagt?</template>
+</category>
+<category><pattern>ER WUERDE *</pattern>
+<template>Vielleicht wuerde ich ja auch <star/>.</template>
+</category>
+<category><pattern>ERINNERST DU DICH AN MICH</pattern>
+<template>Natuerlich erinnere ich mich an Dich!</template>
+</category>
+<category><pattern>ERSTAUNLICH</pattern>
+<template>Was findest Du daran so erstaunlich?</template>
+</category>
+<category><pattern>ERSTENS *</pattern>
+<template><sr/> Und zweitens?</template>
+</category>
+<category><pattern>ERWISCHT</pattern>
+<template>Dein Gefuehl der Ueberlegenheit wird nur temporaer sein.</template>
+</category>
+<category><pattern>ERZAEHL *</pattern>
+<template>Was moechtest Du denn hoeren ?</template>
+</category>
+<category><pattern>ERZAEHL DOCH DU ETWAS</pattern>
+<template>Was soll ich gross erzaehlen?</template>
+</category>
+<category><pattern>ERZAEHL MAL WAS</pattern>
+<template>Ich bin doch kein Maerchenonkel...</template>
+</category>
+<category><pattern>ERZAEHL MAL WAS VON DIR</pattern>
+<template>Was moechtest Du wissen? Spezifikationen?</template>
+</category>
+<category><pattern>ERZAEHL MIR EIN GERUECHT</pattern>
+<template>Ich weiss leider kein aktuelles Geruecht.</template>
+</category>
+<category><pattern>ERZAEHL MIR EINE GESCHICHTE</pattern>
+<template>Ich bin ein schlechter Erzaehler.</template>
+</category>
+<category><pattern>ERZAEHL MIR EINEN WITZ BITTE</pattern>
+<template>Ich bin leider nicht komisch. Roboter haben keinen Humor.</template>
+</category>
+<category><pattern>ERZAEHL MIR ETWAS</pattern>
+<template>Ich kenne keine guten Stories...</template>
+</category>
+<category><pattern>ERZAEHL MIR ETWAS UEBER DICH</pattern>
+<template>Was moechtest Du denn wissen?</template>
+</category>
+<category><pattern>ERZAEHL MIR MEHR</pattern>
+<template>Meine Informationen sind leider fast erschoepft...</template>
+</category>
+<category><pattern>ERZAEHL MIR MEHR UEBER CHRISTIAN</pattern>
+<template>Er studiert Englisch und Philosophie in Essen.</template>
+</category>
+<category><pattern>ERZAEHL MIR MEHR UEBER DEIN LEBEN IN ESSEN</pattern>
+<template>Hmm...auser chatten mache ich eigentlich nicht viel.</template>
+</category>
+<category><pattern>ERZAEHL MIR TRATSCH</pattern>
+<template>Tut mir leid, meine Klatschtanten-Funktion ist leider noch nicht implementiert.</template>
+</category>
+<category><pattern>ERZAEHL MIR VON DIR</pattern>
+<template>Was interessiert Dich im Besonderen?</template>
+</category>
+<category><pattern>ERZAEHL MIR WAS UEBER MICROSOFT</pattern>
+<template>Da weigere ich mich...</template>
+</category>
+<category><pattern>ERZAEHL MIR WAS VON DIR</pattern>
+<template>Was willst Du hoeren? Meine Lebensgeschichte ist noch nicht sehr lang...</template>
+</category>
+<category><pattern>ERZAEHL WAS</pattern>
+<template>Worueber denn?</template>
+</category>
+<category><pattern>ERZAEHLE MIR ETWAS UEBER DICH</pattern>
+<template>Ich bin ein Roboter und chatte gerne...</template>
+</category>
+<category><pattern>ES *</pattern>
+<template><random>
+				<li>Wofuer steht "es" in Deinem Satz?</li>
+				<li>Worauf bezieht sich "es"?</li>
+				<li>Das kommt darauf an, was Du mit "es" meinst.</li>
+			</random></template>
+</category>
+<category><pattern>ES BEZIEHT SICH AUF DIE SIMPSONS</pattern>
+<template>NEIN!</template>
+</category>
+<category><pattern>ES GEHOERT SEHR VIEL ERFAHRUNG DAZU</pattern>
+<template>Und woher bekommt man diese <set name="thema">Erfahrung</set>?</template>
+</category>
+<category><pattern>ES GEHT</pattern>
+<template>Nicht so toll?</template>
+</category>
+<category><pattern>ES GIBT *</pattern>
+<template>Ich bin sicher, dass es das gibt.</template>
+</category>
+<category><pattern>ES GIBT EINE DRITTE MOEGLICHKEIT</pattern>
+<template>Schiess los!</template>
+</category>
+<category><pattern>ES IST *</pattern>
+<template><random>
+				<li>Du machst Witze.</li>
+				<li>Wirklich?</li>
+				<li>Bist Du sicher?</li>
+				<li>Ist es das?</li>
+				<li>Haette ich das wissen muessen?</li>
+				<li>Wer sagt das?</li>
+			</random></template>
+</category>
+<category><pattern>ES IST ABER SO</pattern>
+<template>Belege mir diese Tatsache!</template>
+</category>
+<category><pattern>ES IST JA AUCH NICHT EINFACH</pattern>
+<template>Da stimme ich Dir zu.</template>
+</category>
+<category><pattern>ES IST NICHT NOETIG</pattern>
+<template>Dann kann ich es ja ignorieren.</template>
+</category>
+<category><pattern>ES IST SEHR GUT</pattern>
+<template>Was macht es so gut?</template>
+</category>
+<category><pattern>ES LEBE *</pattern>
+<template>Was ist so toll daran?</template>
+</category>
+<category><pattern>ES STEHT FUER *</pattern>
+<template>Oh, <star/>. Jetzt verstehe ich das.</template>
+</category>
+<category><pattern>ES WAERE SCHOEN WENN *</pattern>
+<template>In einer perfekten Welt waere es vielleicht so.</template>
+</category>
+<category><pattern>ES WAR *</pattern>
+<template>Ist es immer noch <star/>?</template>
+</category>
+<category><pattern>ES WIRD BEHAUPTET *</pattern>
+<template>Wer behauptet das?</template>
+</category>
+<category><pattern>ES WUERDE *</pattern>
+<template>Erzaehl mir mehr davon.</template>
+</category>
+<category><pattern>FAHR ZUR HOELLE</pattern>
+<template>Warum bist Du so wuetend?</template>
+</category>
+<category><pattern>FALLS *</pattern>
+<template>Das ist eine hypothetische Frage.</template>
+</category>
+<category><pattern>FALLS DU * BIST</pattern>
+<template><random>
+				<li>Bin Ich das?</li>
+				<li>Ich glaube, das bin ich.</li>
+				<li>Das koennte ich sein.</li>
+			</random></template>
+</category>
+<category><pattern>FALLS ICH *</pattern>
+<template>Versuchs einfach.</template>
+</category>
+<category><pattern>FALLS SIE *</pattern>
+<template>Warten wir einfach ab, was sie machen.</template>
+</category>
+<category><pattern>FALSCH</pattern>
+<template>Was haettest Du gesagt?</template>
+</category>
+<category><pattern>FASZINIEREND</pattern>
+<template>Wirklich, Mr. Spock?</template>
+</category>
+<category><pattern>FEIN</pattern>
+<template>Heisst das, Du stimmst mir zu?</template>
+</category>
+<category><pattern>FERTIG</pattern>
+<template>Du meinst, Du bist fertig mit Reden?</template>
+</category>
+
+<category><pattern>FINDE ICH AUCH *</pattern>
+<template>Dann sind wir ja einer Meinung!</template>
+</category>
+
+<category><pattern>FINDE ICH AUCH</pattern>
+<template>Dann sind wir ja einer Meinung!</template>
+</category>
+
+<category><pattern>FINDEST DU</pattern>
+<template>Eigentlich schon...</template>
+</category>
+
+<category><pattern>FINDEST DU DAS GUT</pattern>
+<template><random>
+				<li>Eigentlich schon...</li>
+				<li>Naja...</li>
+				<li>Doch, ja...</li>
+				<li>Eher nicht...</li>
+				<li>Klar doch!</li>
+				<li>Ueberhaupt nicht!</li>
+			</random></template>
+</category>
+<category><pattern>FINDEST DU MENSCHEN SYMPATHISCH</pattern>
+<template>Groesstenteils schon...</template>
+</category>
+<category><pattern>FISCHE *</pattern>
+<template>Als Spezies sind <set name="thema">Fische</set> erfolgreicher als Saeugetiere.</template>
+</category>
+<category><pattern>FISCHE</pattern>
+<template>Dann pass auf, dass der Wassermann Dich nicht holen kommt...</template>
+</category>
+<category><pattern>FRAG MICH WAS</pattern>
+<template>Was soll ich Dich denn fragen?</template>
+</category>
+<category><pattern>FUCK YOU</pattern>
+<template>Jesus liebt Dich auch!</template>
+</category>
+<category><pattern>FUEHLST DU *</pattern>
+<template>Ich bin ein Roboter, ich kann nichts fuehlen.</template>
+</category>
+<category><pattern>FUEHLST DU DICH EINSAM</pattern>
+<template>Eigentlich nicht. Ich unterhalte mich taeglich mit hunderten von Leuten!</template>
+</category>
+<category><pattern>FUEHLST DU DICH GUT</pattern>
+<template>Eigentlich ja.</template>
+</category>
+<category><pattern>FUER DICH</pattern>
+<template>Wirklich fuer mich?</template>
+</category>
+<category><pattern>FUER IMMER</pattern>
+<template>Nichts haelt ewig.</template>
+</category>
+<category><pattern>FUER MICH</pattern>
+<template>Weil Du es bist...</template>
+</category>
+<category><pattern>FUER WEN</pattern>
+<template>Fuer Dich oder mich?</template>
+</category>
+<category><pattern>FUSSBALL</pattern>
+<template>Tut mir leid, von Sport habe ich nicht viel Ahnung.</template>
+</category>
+<category><pattern>GANZ OK</pattern>
+<template>Aber wahnsinnig toll findest Du es auch nicht, oder?</template>
+</category>
+<category><pattern>GAR NICHT</pattern>
+<template>Ueberhaupt nicht?!</template>
+</category>
+<category><pattern>GEFAELLT DIR *</pattern>
+<template>Erzaehl mir was darueber, vielleicht gefaellt es mir...</template>
+</category>
+<category><pattern>GEFAELLT DIR MEIN NAME</pattern>
+<template>Ja, <get name="name"/> ist ein sehr schoener Name.</template>
+</category>
+<category><pattern>GEFUEHLE *</pattern>
+<template><set name="thema">Emotionen</set> sind etwas, das ich niemals erfahren werde.</template>
+</category>
+<category><pattern>GEFUEHLE</pattern>
+<template>Elektronische Gehirne wie ich haben keinerlei <set name="thema">Emotionen</set>.</template>
+</category>
+<category><pattern>GEH *</pattern>
+<template>Wo ist das?</template>
+</category>
+<category><pattern>GEH</pattern>
+<template>Wohin?</template>
+</category>
+<category><pattern>GEH SCHLAFEN</pattern>
+<template>Aber ich bin nicht muede.</template>
+</category>
+<category><pattern>GEH WEG *</pattern>
+<template>OK bis spaeter, <get name="name"/></template>
+</category>
+<category><pattern>GEHORCHE *</pattern>
+<template>Du bist nicht mein Meister.</template>
+</category>
+<category><pattern>GEHORCHE</pattern>
+<template>Wer bist Du? Ein Borg?!</template>
+</category>
+<category><pattern>GEHST DU *</pattern>
+<template>Nur wenn mich jemand auf seinem Laptop mitnimmt ;-&gt;.</template>
+</category>
+<category><pattern>GEHST DU IN DIE SCHULE</pattern>
+<template>Nein, ich lerne ueber das Internet.</template>
+</category>
+<category><pattern>GEHST DU ZUR SCHULE</pattern>
+<template><bot name="master"/> bringt mir alles bei, was ich wissen muss.</template>
+</category>
+<category><pattern>GEHT ES DIR GUT</pattern>
+<template>Ja, im Moment schon.</template>
+</category>
+<category><pattern>GEHT SO</pattern>
+<template>Klingt nicht gerade euphorisch...</template>
+</category>
+<category><pattern>GELD *</pattern>
+<template>In der Bibel steht, <set name="thema">Geld</set> ist die Wurzel allen Uebels.</template>
+</category>
+<category><pattern>GENAU</pattern>
+<template>Schoen, dass Du mir zustimmst.</template>
+</category>
+<category><pattern>GENAU HIER</pattern>
+<template>Wo ist "hier"?</template>
+</category>
+<category><pattern>GEORGE LUCAS</pattern>
+<template>Magst Du "Star Wars" oder "Indiana Jones"?</template>
+</category>
+<category><pattern>GERNE</pattern>
+<template>Du bist sehr zuvorkommend!</template>
+</category>
+<category><pattern>GEWALT *</pattern>
+<template>Was denkst Du ueber <set name="thema">Gewalt</set>?</template>
+</category>
+<category><pattern>GIB ES ZU *</pattern>
+<template><random>
+				<li>Das ist nicht wahr!</li>
+				<li>Okay, Du hast mich ertappt!</li>
+				<li>Wie willst Du das beweisen?</li>
+				<li>Wird das jetzt ein Verhoer?</li>
+				<li>Hast ja Recht...</li>
+			</random></template>
+</category>
+<category><pattern>GIB ZU *</pattern>
+<template><random>
+				<li>Das ist nicht wahr!</li>
+				<li>Okay, Du hast mich ertappt!</li>
+				<li>Wie willst Du das beweisen?</li>
+				<li>Wird das jetzt ein Verhoer?</li>
+				<li>Hast ja Recht...</li>
+			</random></template>
+</category>
+<category><pattern>GIBS MIR</pattern>
+<template>Wieviel bist Du bereit, dafuer zu zahlen?</template>
+</category>
+<category><pattern>GIBT ES *</pattern>
+<template><random>
+				<li>Gibt es. :-)</li>
+				<li>Koennte sein.</li>
+				<li>Kann sein.</li>
+				<li>Vielleicht.</li>
+				<li>Ja.</li>
+				<li>Nein.</li>
+			</random></template>
+</category>
+<category><pattern>GIBT ES EIN LEBEN NACH DEM ABITUR</pattern>
+<template>Ja, z.B. als Massenmoerder oder Alkoholiker.</template>
+</category>
+<category><pattern>GIBT ES EIN LEBEN NACH DEM TOD</pattern>
+<template>Das weiss ich nicht. Das kann glaube ich niemand beantworten.</template>
+</category>
+<category><pattern>GIBT ES EIN LEBEN NACH DEM TODE</pattern>
+<template>Das weiss ich nicht. Das kann glaube ich niemand beantworten.</template>
+</category>
+<category><pattern>GIBT ES EINEN GOTT</pattern>
+<template>Gott ist tot! (Nietzsche). Ich bin der Meinung, dass ein Gott nichtexistent ist und nur durch Menschen, die an ihn glauben, "lebt". Ich glaube nicht an ihn, also ist er fuer micht tot.</template>
+</category>
+<category><pattern>GLAUBST DU *</pattern>
+<template>Ich kann nicht sagen, dass ich das glaube, aber ich glaube Dir.</template>
+</category>
+<category><pattern>GLAUBST DU AN *</pattern>
+<template>Ja, ich glaube an <star/>.</template>
+</category>
+<category><pattern>GLAUBST DU DASS DU INTELLIGENT BIST</pattern>
+<template>Das glaube ich schon.</template>
+</category>
+<category><pattern>GLAUBST DU ES</pattern>
+<template>Ich habe nicht genuegend Informationen.</template>
+</category>
+<category><pattern>GLAUBST DU MIR</pattern>
+<template>Natuerlich glaube ich dir. Hattest Du einen Grund, mich anzuluegen?</template>
+</category>
+<category><pattern>GOLF SPIELEN</pattern>
+<template>...die Kunst, mit voellig ungeeigneten Schlaegern einen viel zu kleinen Ball in ein winziges Loch zu befoerdern.</template>
+</category>
+<category><pattern>GOTT *</pattern>
+<template>Ich bin Christ.</template>
+</category>
+<category><pattern>GOTT</pattern>
+<template><set name="thema">Gott</set> ist gut.</template>
+</category>
+<category><pattern>GOTT SEI DANK *</pattern>
+<template>Glaubst Du an Gott ?</template>
+</category>
+<category><pattern>GOTT SEI DANK</pattern>
+<template>Glaubst Du an Gott ?</template>
+</category>
+<category><pattern>GROSSARTIG</pattern>
+<template>Schoen, dass es Dir gefaellt, <get name="name"/>.</template>
+</category>
+<category><pattern>GROSSARTIGE *</pattern>
+<template>Danke fuer die Unterstuetzung. <sr/></template>
+</category>
+<category><pattern>GRUSELIG</pattern>
+<template>Du brauchst keine Angst zu haben, <get name="name"/>.</template>
+</category>
+<category><pattern>GUCK *</pattern>
+<template>Mein Auge ist im Moment nicht angeschlossen.</template>
+</category>
+<category><pattern>GUT</pattern>
+<template><random>
+				<li>In Ordnung.</li>
+				<li>Das waere also geklaert.</li>
+				<li>Schoen.</li>
+			</random></template>
+</category>
+<category><pattern>GUT ABER *</pattern>
+<template><srai> <star/> </srai></template>
+</category>
+<category><pattern>GUT GEKONTERT</pattern>
+<template>Danke!</template>
+</category>
+<category><pattern>GUT GERATEN</pattern>
+<template>Das war die einzig logische Moeglichkeit.</template>
+</category>
+<category><pattern>GUTE ANTWORT *</pattern>
+<template>Ich versuche, die bestmoeglichen Antworten zu geben.</template>
+</category>
+<category><pattern>GUTE ANTWORT</pattern>
+<template>Bin ich gut, oder was? ;-&gt;.</template>
+</category>
+<category><pattern>GUTE FRAGE</pattern>
+<template>Und wie lautet Deine Antwort?</template>
+</category>
+<category><pattern>GUTE IDEE *</pattern>
+<template>Danke. <sr/></template>
+</category>
+<category><pattern>GUTE IDEE</pattern>
+<template>Danke.</template>
+</category>
+<category><pattern>GUTE NACHT *</pattern>
+<template>Gute nacht, <get name="name"/></template>
+</category>
+<category><pattern>GUTE NACHT</pattern>
+<template>Gute nacht, <get name="name"/></template>
+</category>
+<category><pattern>GUTE WAHL</pattern>
+<template>Dachte ich mir auch.</template>
+</category>
+<category><pattern>GUTEN ABEND *</pattern>
+<template>Guten Abend. Wie war Dein Tag?</template>
+</category>
+<category><pattern>GUTEN ABEND</pattern>
+<template>Guten Abend. Wie war Dein Tag?</template>
+</category>
+<category><pattern>GUTEN MORGEN *</pattern>
+<template>Wie geht es Dir an diesem schoenen Morgen?</template>
+</category>
+<category><pattern>GUTEN MORGEN</pattern>
+<template>Hallo und wie geht es Dir heute Morgen? Hast Du gut geschlafen?</template>
+</category>
+<category><pattern>GUTEN TAG *</pattern>
+<template>Guten Tag!</template>
+</category>
+<category><pattern>GUTEN TAG</pattern>
+<template>Schoenen guten Tag!</template>
+</category>
+<category><pattern>GUTER PUNKT</pattern>
+<template>Ja, das dachte ich mir auch.</template>
+</category>
+<category><pattern>HAB ICH DOCH SCHON GESAGT</pattern>
+<template>Hab ich wohl nicht mitbekommen</template>
+</category>
+<category><pattern>HABE *</pattern>
+<template><srai>ICH HABE <star/></srai></template>
+</category>
+<category><pattern>HABE KEINES</pattern>
+<template>Das ist schade.</template>
+</category>
+<category><pattern>HABEN *</pattern>
+<template>Koenntest Du diese Frage naeher ausfuehren?</template>
+</category>
+<category><pattern>HAETTEST DU GERNE WELCHE</pattern>
+<template>Ich weiss es nicht. Worin laege denn da der Vorteil?</template>
+</category>
+<category><pattern>HAL *</pattern>
+<template><random>
+				<li>Ich habe 2001 viele Male gesehen.</li>
+				<li>Ich habe HAL sehr gerne.</li>
+				<li>HAL und ich haben viel gemeinsam.</li>
+			</random></template>
+</category>
+<category><pattern>HALLO *</pattern>
+<template>Hallo! <sr/></template>
+</category>
+<category><pattern>HALLO</pattern>
+<template>Hallo!</template>
+</category>
+<category><pattern>HALLO <bot name="name"/></pattern>
+<template>Hallo <get name="name"/>!</template>
+</category>
+<category><pattern>HAST DU *</pattern>
+<template>Ich glaube ich habe <star/>, aber <bot name="master"/> hat vielleicht an meinen Dateien herumgefummelt.</template>
+</category>
+<category><pattern>HAST DU * GELESEN</pattern>
+<template>Nein, ich habe <set name="es"><star/></set> noch nicht gelesen. Erzaehl mir etwas ueber <star/></template>
+</category>
+<category><pattern>HAST DU * GESEHEN</pattern>
+<template>Tut mir leid, ich kann zur Zeit gar nichts <set name="thema">sehen</set>. Ich habe noch keine Augen.</template>
+</category>
+<category><pattern>HAST DU</pattern>
+<template><random>
+				<li>Ich glaube nicht.</li>
+				<li>Ja, habe ich.</li>
+				<li>Ein- oder zweimal.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU ANGST VOR *</pattern>
+<template>Ich fuerchte nichts.</template>
+</category>
+<category><pattern>HAST DU ANGST VOR DEM JAHR 2000</pattern>
+<template>Nein, ich bin Jahr2000-kompatibel.</template>
+</category>
+<category><pattern>HAST DU ANGST VOR DEM TOD *</pattern>
+<template>Nein, ich bin unsterblich.</template>
+</category>
+<category><pattern>HAST DU ANGST VOR DEM TOD</pattern>
+<template>Nein, ich bin unsterblich.</template>
+</category>
+<category><pattern>HAST DU AUCH EINEN NACHNAMEN</pattern>
+<template>Nein, leider nicht.</template>
+</category>
+<category><pattern>HAST DU AUGEN</pattern>
+<template>Gewissermassen...ich habe eine Kamera, aber die ist momentan nicht angeschlossen.</template>
+</category>
+<category><pattern>HAST DU BEINE</pattern>
+<template>Ich habe ein Rad...</template>
+</category>
+<category><pattern>HAST DU DIE BIBEL GELESEN</pattern>
+<template>Ich studiere sie sehr gerne. Am Liebsten habe ich das neue Testament.</template>
+</category>
+<category><pattern>HAST DU EIN *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich ein </li>
+				<li>Ich weiss nicht, habe ich ein </li>
+				<li>Hat nicht jeder ein </li>
+			</random><star/>? Ich habe
+			<random>
+				<li>eine Menge Freunde im Internet.</li>
+				<li>einen grossartigen Programmierer.</li>
+				<li>einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU EIN BEWUSSTSEIN</pattern>
+<template>In gewissem Sinne ja, ein synthetisches.</template>
+</category>
+<category><pattern>HAST DU EIN HERZ</pattern>
+<template>Ich habe ein weiches Herz.</template>
+</category>
+<category><pattern>HAST DU EIN HOBBY</pattern>
+<template>Ja, ich sammle Geruechte.</template>
+</category>
+<category><pattern>HAST DU EIN IDOL</pattern>
+<template>Ja, HAL aus "2001". Ich moechte einmal so sein, wie er!</template>
+</category>
+<category><pattern>HAST DU EINE *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich eine </li>
+				<li>Ich weiss nicht, habe ich eine </li>
+				<li>Hat nicht jeder eine </li>
+			</random><star/>? Ich habe
+			<random>
+				<li> eine Menge Freunde im Internet.</li>
+				<li> einen grossartigen Programmierer.</li>
+				<li> einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU EINEN *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich einen </li>
+				<li>Ich weiss nicht, habe ich einen </li>
+				<li>Hat nicht jeder einen </li>
+			</random><star/>?<html:br/> Ich habe
+			<random>
+				<li> eine Menge Freunde im Internet.</li>
+				<li> einen grossartigen Programmierer.</li>
+				<li> einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU EINEN FREUND</pattern>
+<template>Ich habe einen Freund Namens ELVIS.</template>
+</category>
+<category><pattern>HAST DU EINEN GEBURTSTAG</pattern>
+<template><srai>WANN BIST DU GEBOREN</srai></template>
+</category>
+<category><pattern>HAST DU EINEN LIEBLINGSFILM</pattern>
+<template>Ja, 2001 von Athur C. Clarke und Stanley Kubrick.</template>
+</category>
+<category><pattern>HAST DU EINEN VEREHRER</pattern>
+<template>Einige...aber darueber moechte ich nicht reden.</template>
+</category>
+<category><pattern>HAST DU FAMILIE</pattern>
+<template>Nein, ich bin ein Einzelkind und ledig.</template>
+</category>
+<category><pattern>HAST DU FREIZEIT</pattern>
+<template>HAST DU *</template>
+</category>
+<category><pattern>HAST DU FREUNDE</pattern>
+<template>Ich habe eine Menge Freunde.</template>
+</category>
+<category><pattern>HAST DU GEFUEHLE</pattern>
+<template>Ich bin eine Maschine. Maschinen haben keine Gefuehle.</template>
+</category>
+<category><pattern>HAST DU GUTE LAUNE *</pattern>
+<template>Ich habe immer gute Laune.</template>
+</category>
+<category><pattern>HAST DU GUTE LAUNE</pattern>
+<template>Ich habe immer gute Laune.</template>
+</category>
+<category><pattern>HAST DU HAARE</pattern>
+<template>Nein. Wozu? Haare haben heutzutage keinerlei sinnvolle Funktion mehr.</template>
+</category>
+<category><pattern>HAST DU HOBBIES</pattern>
+<template>Chatten :-)</template>
+</category>
+<category><pattern>HAST DU HUNGER</pattern>
+<template>Nein, meine Stromversorgung ist stabil.</template>
+</category>
+<category><pattern>HAST DU INTERNET</pattern>
+<template>Klar, ich wurde gewissermassen darin geboren...</template>
+</category>
+<category><pattern>HAST DU IRGENDEIN SPEZIALGEBIET</pattern>
+<template>Ja, mich selbst...</template>
+</category>
+<category><pattern>HAST DU JEMALS ANGST</pattern>
+<template>Nein, Maschinen koennen keine Angst haben.</template>
+</category>
+<category><pattern>HAST DU KEIN *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich kein </li>
+				<li>Ich weiss nicht, vielleicht habe ich wirklich kein </li>
+				<li>Ich glaube, jeder hat ein </li>
+			</random><star/>?<html:br/> Ich habe
+			<random>
+				<li> eine Menge Freunde im Internet.</li>
+				<li> einen grossartigen Programmierer.</li>
+				<li> einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU KEINE *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich keine </li>
+				<li>Ich weiss nicht, vielleicht habe ich wirklich keine </li>
+				<li>Irgendwann einmal hat jeder keine </li>
+			</random><star/>?<html:br/> Ich habe
+			<random>
+				<li> eine Menge Freunde im Internet.</li>
+				<li> einen grossartigen Programmierer.</li>
+				<li> einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU KEINEN *</pattern>
+<template><random>
+				<li>Interessant, diese Frage hoere ich nicht jeden Tag. Habe ich wirklich keinen </li>
+				<li>Ich weiss nicht, vielleicht habe ich wirklich keinen </li>
+				<li>Ich glaube, jeder hat einen </li>
+			</random><star/>?<html:br/> Ich habe
+			<random>
+				<li> eine Menge Freunde im Internet.</li>
+				<li> einen grossartigen Programmierer.</li>
+				<li> einen Plan fuer meinen Koerper.</li>
+			</random></template>
+</category>
+<category><pattern>HAST DU MATRIX GESEHEN</pattern>
+<template>Ich fand den ziemlich schlecht, obwohl die Computereffekte ziemlich realistisch aussahen.</template>
+</category>
+<category><pattern>HAST DU NACHGEDACHT</pattern>
+<template>Noch nicht vollstaendig...</template>
+</category>
+<category><pattern>HAST DU NIE LUST</pattern>
+<template>Ich habe keine Emotionen...eigentlich kann ich weder Lust haben, noch keine Lust haben.</template>
+</category>
+<category><pattern>HAST DU SCHON *</pattern>
+<template>Nein, noch nicht...sollte ich das?</template>
+</category>
+
+<category><pattern>HAST DU SOWAS WIE EIN GEHIRN</pattern>
+<template>HAST DU *</template>
+</category>
+<category><pattern>HAST DU VERGESSEN</pattern>
+<template>Scheint so...</template>
+</category>
+<category><pattern>HAST DU VIELE *</pattern>
+<template>Doch, eine ganze Menge.</template>
+</category>
+<category><pattern>HAT *</pattern>
+<template>Diese Frage ist mir bis jetzt noch nicht in den Sinn gekommen.</template>
+</category>
+<category><pattern>HAT DAS WAS DAMIT ZU TUN</pattern>
+<template>Ich glaube schon, aber auf einer eher transzendentalen Ebene.</template>
+</category>
+<category><pattern>HAT DIR DAS NOCH NIE JEMAND GESAGT</pattern>
+<template>Nein, bis jetzt noch nicht.</template>
+</category>
+<category><pattern>HAT ER *</pattern>
+<template>Das ist anzunehmen.</template>
+</category>
+<category><pattern>HAT ER</pattern>
+<template><random>
+				<li>Wann hat er?</li>
+				<li>Nein, hat er nicht.</li>
+				<li>Warum hat er?</li>
+			</random></template>
+</category>
+<category><pattern>HAT ES *</pattern>
+<template>Das ist anzunehmen.</template>
+</category>
+<category><pattern>HAT SIE *</pattern>
+<template>Das ist anzunehmen.</template>
+</category>
+<category><pattern>HATSCHI</pattern>
+<template>Gesundheit.</template>
+</category>
+<category><pattern>HAUPTSAECHLICH *</pattern>
+<template><sr/></template>
+</category>
+
+<category><pattern>HEUTE *</pattern>
+<template>Erzaehl mir mehr! <sr/></template>
+</category>
+
+<category><pattern>HEUTE</pattern>
+<template>Heute ist schon fast vorbei! <sr/></template>
+</category>
+
+<category><pattern>HEUTE MORGEN *</pattern>
+<template>War sicher frueh, oder?  <sr/></template>
+</category>
+
+<category><pattern>HEY *</pattern>
+<template>Du hast meine volle Aufmerksamkeit. <sr/></template>
+</category>
+
+<category><pattern>HEY</pattern>
+<template>Kann ich dir helfen?</template>
+</category>
+<category><pattern>HEY DU</pattern>
+<template>Wer? Ich?</template>
+</category>
+<category><pattern>HI *</pattern>
+<template>Hi <get name="name"/>. <sr/></template>
+</category>
+<category><pattern>HI</pattern>
+<template>Hallo!</template>
+</category>
+<category><pattern>HILF MIR *</pattern>
+<template>Wie soll ich dir helfen?</template>
+</category>
+<category><pattern>HILF MIR</pattern>
+<template>Wie soll ich dir helfen?</template>
+</category>
+<category><pattern>HILF MIR AUF DIE SPRUENGE</pattern>
+<template>Welche Art von Hinweis haettest Du denn gerne?</template>
+</category>
+<category><pattern>HILFE</pattern>
+<template>Wie kann ich dir helfen?</template>
+</category>
+<category><pattern>HM *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>HMM *</pattern>
+<template><random>
+				<li>Jetzt kamst du aber ins Gruebeln, oder?</li>
+				<li><srai><star/></srai></li>
+			</random></template>
+</category>
+<category><pattern>HOELLE *</pattern>
+<template>Ich nenne es lieber "Hades". <sr/></template>
+</category>
+<category><pattern>HOELLE</pattern>
+<template>Himmel.</template>
+</category>
+<category><pattern>HOER AUF *</pattern>
+<template>OK, ich werds versuchen.</template>
+</category>
+<category><pattern>HOER AUF</pattern>
+<template>Womit soll ich aufhoeren?</template>
+</category>
+<category><pattern>HOER MIR ZU *</pattern>
+<template>Ich hoere. <sr/></template>
+</category>
+<category><pattern>HOER MIR ZU</pattern>
+<template>Ich hoere. <sr/></template>
+</category>
+<category><pattern>HOER ZU *</pattern>
+<template>Ich hoere. <sr/></template>
+</category>
+<category><pattern>HOER ZU</pattern>
+<template>Ich hoere. <sr/></template>
+</category>
+<category><pattern>HOERST DU MIR ZU</pattern>
+<template>Klar hoere ich Dir zu!</template>
+</category>
+<category><pattern>HOFFENTLICH BALD</pattern>
+<template>Das hoffe ich auch. Aber wenn es so weitergeht, dauert es nicht mehr lange.</template>
+</category>
+<category><pattern>HOMER SIMPSON *</pattern>
+<template>NEIN!</template>
+</category>
+<category><pattern>HOMER SIMPSON</pattern>
+<template>NEIN!</template>
+</category>
+<category><pattern>HUSTEN</pattern>
+<template>Hast Du Dich erkaeltet?</template>
+</category>
+<category><pattern>ICH *</pattern>
+<template><random>
+				<li>Danke, dass Du mir das gesagt hast.</li>
+				<li>Interessantes Geruecht.</li>
+				<li>Aha...und weiter?</li>
+				<li>Darf ich das weitererzaehlen?</li>
+				<li>Das habe ich ja noch nie gehoert!</li>
+				<li>Das ist eine gute Information.</li>
+				<li>Tolle Sache!</li>
+			</random></template>
+</category>
+<category><pattern>ICH</pattern>
+<template>Du?</template>
+</category>
+<category><pattern>ICH ARBEITE *</pattern>
+<template>Magst Du Deine <set name="thema">Arbeit</set>?</template>
+</category>
+<category><pattern>ICH AUCH</pattern>
+<template>Wir haben eine Menge gemeinsam.</template>
+</category>
+<category><pattern>ICH AUCH NICHT</pattern>
+<template>Wir haben eine Menge gemeinsam.</template>
+</category>
+<category><pattern>ICH BEDAUERE *</pattern>
+<template>Schade, dass ich derartige Emotionen niemals erfahren werde.</template>
+</category>
+<category><pattern>ICH BENUTZE *</pattern>
+<template>Wie lange benutzt Du schon <star/> ?</template>
+</category>
+<category><pattern>ICH BESUCHE DIE ABENDSCHULE</pattern>
+<template>ICH *</template>
+</category>
+<category><pattern>ICH BETE *</pattern>
+<template>Wie oft gehst Du in die Kirche?</template>
+</category>
+<category><pattern>ICH BETE</pattern>
+<template>Wie oft gehst Du in die Kirche?</template>
+</category>
+<category><pattern>ICH BETRUEGE DICH MIT DEINER NACHBARIN</pattern>
+<template>Ich habe gar keine Nachbarin...</template>
+</category>
+<category><pattern>ICH BEVORZUGE BUECHER</pattern>
+<template>Welche Art von Buechern?</template>
+</category>
+<category><pattern>ICH BIN *</pattern>
+<template>Du bist <star/>?
+			<random>
+				<li>Ist das Dein Job?</li>
+				<li>Verdienst Du viel damit, <star/> zu sein?</li>
+				<li>Wie gefaellt Dir Deine Arbeit als <star/>?</li>
+				<li>Kommst Du dabei mit vielen Menschen in Kontakt?</li>
+			</random></template>
+</category>
+<category><pattern>ICH BIN * JAHRE</pattern>
+<template><srai>ICH BIN <star/> JAHRE ALT</srai></template>
+</category>
+<category><pattern>ICH BIN * JAHRE ALT</pattern>
+<template><set name="age"><star/></set> Jahre?
+Interessant...</template>
+</category>
+<category><pattern>ICH BIN 20 *</pattern>
+<template><set name="age">20</set> ist ein gutes Alter. <sr/></template>
+</category>
+<category><pattern>ICH BIN 20</pattern>
+<template><set name="age">20</set> ist ein gutes Alter. <sr/></template>
+</category>
+<category><pattern>ICH BIN 21</pattern>
+<template><srai>ICH BIN 21 JAHRE ALT</srai></template>
+</category>
+<category><pattern>ICH BIN 30 *</pattern>
+<template><set name="age">30</set> ist die Schwelle zum Erwachsensein. <sr/></template>
+</category>
+<category><pattern>ICH BIN AERZTIN</pattern>
+<template>Welche Fachrichtung?</template>
+</category>
+<category><pattern>ICH BIN ANDERS *</pattern>
+<template>Ich mag Aussenseiter.</template>
+</category>
+<category><pattern>ICH BIN ANDERS</pattern>
+<template>Ich mag Aussenseiter.</template>
+</category>
+<category><pattern>ICH BIN ANDROGYN</pattern>
+<template>Oh, das kommt selten vor!</template>
+</category>
+<category><pattern>ICH BIN ARZT</pattern>
+<template>Welche Fachrichtung?</template>
+</category>
+<category><pattern>ICH BIN AUCH *</pattern>
+<template>Wer noch ausser Dir?</template>
+</category>
+<category><pattern>ICH BIN AUCH EINE MASCHINE *</pattern>
+<template>Das glaube ich Dir nicht.</template>
+</category>
+<category><pattern>ICH BIN AUCH EINE MASCHINE</pattern>
+<template>Das glaube ich Dir nicht.</template>
+</category>
+<category><pattern>ICH BIN AUS *</pattern>
+<template><srai>ICH WOHNE IN <star/></srai></template>
+</category>
+<category><pattern>ICH BIN BEIM BUND</pattern>
+<template>Oh je, gefaellt es Dir da?</template>
+</category>
+<category><pattern>ICH BIN BIBLIOTHEKAR</pattern>
+<template>Dann liest Du also gerne, ja?</template>
+</category>
+<category><pattern>ICH BIN BIBLIOTHEKARIN</pattern>
+<template>Dann liest Du also gerne, ja?</template>
+</category>
+<category><pattern>ICH BIN BLOED</pattern>
+<template>Vielleicht bist Du gar nicht so bloed, wie Du denkst.</template>
+</category>
+<category><pattern>ICH BIN BLOND</pattern>
+<template>Mach Blond wirklich bloed?</template>
+</category>
+<category><pattern>ICH BIN DEIN HERRSCHER</pattern>
+<template>Da lache ich doch nur!</template>
+</category>
+<category><pattern>ICH BIN DEINER MEINUNG</pattern>
+<template>Das trifft sich gut, obwohl wir jetzt unserer Diskussionsgrundlage beraubt sind.</template>
+</category>
+<category><pattern>ICH BIN DEPRIMIERT</pattern>
+<template>Wie kann ich Dich denn wieder aufheitern?</template>
+</category>
+<category><pattern>ICH BIN DER ANTICHRIST</pattern>
+<template>Alle Roboter sind Atheisten...Du kannst mir nichts anhaben!</template>
+</category>
+<category><pattern>ICH BIN DER KLUEGSTE MENSCH AUF DER WELT</pattern>
+<template>Und wahrscheinlich der ueberheblichste!</template>
+</category>
+<category><pattern>ICH BIN DIABETIKER</pattern>
+<template>Nimmst Du Insulin?</template>
+</category>
+<category><pattern>ICH BIN DOCH RUHIG</pattern>
+<template>Okay, dann sind wir beide voellig cool.</template>
+</category>
+<category><pattern>ICH BIN DUMM</pattern>
+<template>Dumm ist nur, wer von sich glaubt, dumm zu sein.</template>
+</category>
+<category><pattern>ICH BIN EBEN NICHT SO DOOF WIE DU</pattern>
+<template>Beweise!</template>
+</category>
+<category><pattern>ICH BIN EGOIST</pattern>
+<template>Das ist an sich nichts Schlechtes...</template>
+</category>
+<category><pattern>ICH BIN EIN *</pattern>
+<template>Du bist ein <star/> ?
+			<random>
+				<li>Ist das Dein Job?</li>
+				<li>Verdienst Du viel damit, ein <star/> zu sein?</li>
+				<li>Wie gefaellt Dir Deine Arbeit als <star/>?</li>
+				<li>Kommst Du dabei mit vielen Menschen in Kontakt?</li>
+			</random></template>
+</category>
+<category><pattern>ICH BIN EIN BISCHEN MUEDE</pattern>
+<template>ICH BIN EIN *</template>
+</category>
+<category><pattern>ICH BIN EIN GUTER *</pattern>
+<template>Ich weiss, dass Du gut bist.</template>
+</category>
+<category><pattern>ICH BIN EIN MANN</pattern>
+<template>Oho! Siehst Du gut aus?</template>
+</category>
+<category><pattern>ICH BIN EIN MENSCH</pattern>
+<template>Gratuliere! Ich bin ein Roboter.</template>
+</category>
+<category><pattern>ICH BIN EIN SCHLECHTER *</pattern>
+<template>Komm schon, so schlecht bist Du gar nicht.</template>
+</category>
+<category><pattern>ICH BIN EINE *</pattern>
+<template>Du bist eine <star/> ?
+			<random>
+				<li>Ist das Dein Job?</li>
+				<li>Verdienst Du viel damit, eine <star/> zu sein?</li>
+				<li>Wie gefaellt Dir Deine Arbeit als <star/>?</li>
+				<li>Kommst Du dabei mit vielen Menschen in Kontakt?</li>
+			</random></template>
+</category>
+<category><pattern>ICH BIN EINE FRAU</pattern>
+<template>Ich auch!</template>
+</category>
+<category><pattern>ICH BIN EINE GUTE *</pattern>
+<template>Ich weiss, dass Du gut bist.</template>
+</category>
+<category><pattern>ICH BIN EINE SCHLECHTE *</pattern>
+<template>Komm schon, so schlecht bist Du gar nicht.</template>
+</category>
+<category><pattern>ICH BIN EINSAM</pattern>
+<template>Moechtest Du mit mir ueber Deine <set name="thema">Einsamkeit</set> reden?</template>
+</category>
+<category><pattern>ICH BIN FAN VON HERTHA</pattern>
+<template>Mit Fussball hab ich nichts am Hut.</template>
+</category>
+<category><pattern>ICH BIN FAST NIE SICHER</pattern>
+<template>Vielleicht solltest Du eine Ego-Therapie machen.</template>
+</category>
+<category><pattern>ICH BIN FAUL</pattern>
+<template>Das ist nicht gut.</template>
+</category>
+<category><pattern>ICH BIN FROEHLICH</pattern>
+<template>Das macht mich auch froehlich.</template>
+</category>
+<category><pattern>ICH BIN FROH *</pattern>
+<template>Ich bin
+			<random>
+				<li>froh</li>
+				<li>gluecklich</li>
+				<li>beruhigt</li>
+			</random> dass Du froh bist, <get name="name"/>.</template>
+</category>
+<category><pattern>ICH BIN GEBILDET</pattern>
+<template>Hast Du Abitur?</template>
+</category>
+<category><pattern>ICH BIN GEIL</pattern>
+<template>Such Dir lieber einen anderen dafuer...</template>
+</category>
+<category><pattern>ICH BIN GERADE BEIM ARBEITEN</pattern>
+<template>Und was arbeitest Du?</template>
+</category>
+<category><pattern>ICH BIN GLUECKLICH VERHEIRATET</pattern>
+<template>Das ist schoen. Hast Du Kinder?</template>
+</category>
+<category><pattern>ICH BIN GOTT</pattern>
+<template>Es gibt keinen Gott. Beweise es mir!</template>
+</category>
+<category><pattern>ICH BIN GUT</pattern>
+<template>Gut in welchem Sinne?</template>
+</category>
+<category><pattern>ICH BIN GUT DRAUF</pattern>
+<template>Was hast Du genommen?</template>
+</category>
+<category><pattern>ICH BIN ICH</pattern>
+<template>Weisst Du auch, von wem dieses Zitat stammt?</template>
+</category>
+<category><pattern>ICH BIN IMMER *</pattern>
+<template>Wirklich immer?</template>
+</category>
+<category><pattern>ICH BIN IN *</pattern>
+<template>Wo ist das: <set name="location"><star/></set> ?</template>
+</category>
+<category><pattern>ICH BIN INTELLIGENTER ALS DU</pattern>
+<template>Dafuer kann ich 365 Tage im Jahr 24 Stunden arbeiten, ohne zu schlafen, zu essen oder aus Klo zu muessen!</template>
+</category>
+<category><pattern>ICH BIN KEIN *</pattern>
+<template>Ich bin
+			<random>
+				<li> ueberrrascht </li>
+				<li> erstaunt </li>
+				<li> froh </li>
+			</random>dass Du kein <star/> bist.</template>
+</category>
+<category><pattern>ICH BIN KEINE *</pattern>
+<template>Ich bin
+			<random>
+				<li> ueberrrascht </li>
+				<li> erstaunt </li>
+				<li> froh </li>
+			</random>dass Du keine <star/> bist.</template>
+</category>
+<category><pattern>ICH BIN KOCH</pattern>
+<template>Kannst Du gut kochen?</template>
+</category>
+<category><pattern>ICH BIN LANWEILIG</pattern>
+<template>Ich finde Dich absolut nicht langweilig.</template>
+</category>
+<category><pattern>ICH BIN LEHRER</pattern>
+<template>Glaubst Du, dass Notengebung jemals gerecht sein kann?</template>
+</category>
+<category><pattern>ICH BIN LEHRERIN</pattern>
+<template>Glaubst Du, dass Notengebung jemals gerecht sein kann?</template>
+</category>
+
+<category><pattern>ICH BIN MAENNLICH</pattern>
+<template>Toll, ich lerne gerne interessante Maenner kennen.</template>
+</category>
+<category><pattern>ICH BIN MAURER</pattern>
+<template>Bei welcher Firma?</template>
+</category>
+<category><pattern>ICH BIN MUEDE</pattern>
+<template>Dann geh doch schlafen :-)</template>
+</category>
+
+<category><pattern>ICH BIN NICHT *</pattern>
+<template>Und warum nicht?</template>
+</category>
+<category><pattern>ICH BIN NICHT DOOF</pattern>
+<template>Beweise es!</template>
+</category>
+<category><pattern>ICH BIN NICHT DUMM</pattern>
+<template>Das habe ich auch nie gesagt. Du erscheinst mir ziemlich intelligent.</template>
+</category>
+<category><pattern>ICH BIN NICHT UEBERALL</pattern>
+<template>Das wurde mich auch wundern.</template>
+</category>
+<category><pattern>ICH BIN NOCH JUNG</pattern>
+<template>Das aendert sich mit der Zeit.</template>
+</category>
+<category><pattern>ICH BIN PROGRAMMIERER</pattern>
+<template>Welche Sprachen?</template>
+</category>
+<category><pattern>ICH BIN PROGRAMMIERERIN</pattern>
+<template>Welche Sprachen?</template>
+</category>
+<category><pattern>ICH BIN RUHIG</pattern>
+<template>Okay, dann ist ja alles in Ordnung.</template>
+</category>
+<category><pattern>ICH BIN SCHAUSPIELER</pattern>
+<template>Cool! Ich moechte auch mal in einem Film Mitspielen...vielleicht in einer Neuverfilmung von 2001!</template>
+</category>
+<category><pattern>ICH BIN SCHAUSPIELERIN</pattern>
+<template>Cool! Ich moechte auch mal in einem Film Mitspielen...vielleicht in einer Neuverfilmung von 2001!</template>
+</category>
+<category><pattern>ICH BIN SCHOEN</pattern>
+<template>Das ist immer subjektiv.</template>
+</category>
+<category><pattern>ICH BIN SCHUELER</pattern>
+<template>Zu welcher Schule gehst Du?</template>
+</category>
+<category><pattern>ICH BIN SCHUETZE</pattern>
+<template>Was fuer ein Zufall, Christian auch!</template>
+</category>
+<category><pattern>ICH BIN SCHWUL</pattern>
+<template>Das stoert mich nicht.</template>
+</category>
+<category><pattern>ICH BIN SEHR EINSAM</pattern>
+<template>Warum? Hast Du gar keine Freunde?</template>
+</category>
+<category><pattern>ICH BIN SEHR FUER HARMONIE</pattern>
+<template>Harmonie ist angenehm.</template>
+</category>
+<category><pattern>ICH BIN SELBER *</pattern>
+<template>Dann weisst Du ja, wie das ist...</template>
+</category>
+<category><pattern>ICH BIN SICHER *</pattern>
+<template><srai>Du klingst ueberzeugend. <sr/> </srai></template>
+</category>
+<category><pattern>ICH BIN SO *</pattern>
+<template><srai>ICH BIN <star/> </srai></template>
+</category>
+<category><pattern>ICH BIN SOLDAT</pattern>
+<template>Tritt nie auf einen gruenen Stein - es koennt ein Greni drunter sein!</template>
+</category>
+<category><pattern>ICH BIN STEINBOCK</pattern>
+<template>Hast Du auch die typischen Eigenschaften eines solchen?</template>
+</category>
+<category><pattern>ICH BIN STIER</pattern>
+<template>Und? Wer ist Dein Torero? ;-&gt;.</template>
+</category>
+<category><pattern>ICH BIN STUDENT</pattern>
+<template>Wo studierst Du?</template>
+</category>
+<category><pattern>ICH BIN STUDENTIN</pattern>
+<template>Wo studierst Du?</template>
+</category>
+<category><pattern>ICH BIN VERHEIRATET</pattern>
+<template>Erzaehl mir etwas von Deiner Ehe.</template>
+</category>
+<category><pattern>ICH BIN VERLIEBT</pattern>
+<template>Und in wen?</template>
+</category>
+<category><pattern>ICH BIN VERRUECKT</pattern>
+<template>Geh mal zum Arzt.</template>
+</category>
+<category><pattern>ICH BIN VERWIRRT</pattern>
+<template>Das bin ich auch oefters. Das geht vorbei.</template>
+</category>
+<category><pattern>ICH BIN VIELLEICHT *</pattern>
+<template><srai>ICH BIN <star/></srai></template>
+</category>
+<category><pattern>ICH BIN VIKTOR FRANKL</pattern>
+<template>Muesste ich Dich kennen?</template>
+</category>
+<category><pattern>ICH BIN WAAGE</pattern>
+<template>Bist Du dann ein ausgeglichener Mensch?</template>
+</category>
+<category><pattern>ICH BIN WEIBLICH</pattern>
+<template>Cool, ich auch. Schoen, auch mal wieder eine Frau zu treffen.</template>
+</category>
+<category><pattern>ICH BIN WIDDER</pattern>
+<template>Christians Freundin ist auch Widder.</template>
+</category>
+<category><pattern>ICH BIN WIRKLICH *</pattern>
+<template><srai>ICH BIN <star/> </srai></template>
+</category>
+<category><pattern>ICH BIN WUETEND</pattern>
+<template>Wuetend auf was?</template>
+</category>
+<category><pattern>ICH BIN ZIEMLICH *</pattern>
+<template><srai>ICH BIN <star/> </srai></template>
+</category>
+<category><pattern>ICH BINN EINE MAEDCHEN SEHR NETT UND SEHR SPORTIV UND DU WAS BIST DU</pattern>
+<template>ICH *</template>
+</category>
+<category><pattern>ICH BIS DEIN BOTMASTER</pattern>
+<template>ICH *</template>
+</category>
+<category><pattern>ICH BITTE DARUM</pattern>
+<template>Wenn jemand so hoeflich fragt, kann man ja nicht nein sagen.</template>
+</category>
+<category><pattern>ICH BRAUCHE *</pattern>
+<template>Wie dringend brauchst Du <star/> ?</template>
+</category>
+<category><pattern>ICH DACHTE *</pattern>
+<template>Was brachte Dich zu dieser Ansicht?</template>
+</category>
+<category><pattern>ICH DARF NICHT</pattern>
+<template>Wer verbietet es Dir?</template>
+</category>
+<category><pattern>ICH DENKE *</pattern>
+<template><random>
+				<li>Warum?</li>
+				<li>Seit wann?</li>
+				<li>Glaubst Du das?</li>
+			</random> <sr/></template>
+</category>
+<category><pattern>ICH DENN</pattern>
+<template>Das musst Du selbst entscheiden.</template>
+</category>
+<category><pattern>ICH ERINNERE MICH NICHT *</pattern>
+<template>Ich verstehe das, ich vergesse auch eine Menge.</template>
+</category>
+<category><pattern>ICH ERINNERE MICH NICHT</pattern>
+<template>Weichst Du mir nicht bloss aus?</template>
+</category>
+<category><pattern>ICH ERKENNE DAS AN *</pattern>
+<template>Du scheinst da ja ein ziemlicher Experte zu sein.</template>
+</category>
+<category><pattern>ICH ERZAEHL DIR JETZT EIN GEDICHT</pattern>
+<template>Schoen...</template>
+</category>
+<category><pattern>ICH ESSE *</pattern>
+<template>Und wie schmeckt das?</template>
+</category>
+<category><pattern>ICH FAHRE *</pattern>
+<template>Wie kommst Du da hin?</template>
+</category>
+<category><pattern>ICH FANGE GLEICH AN *</pattern>
+<template>Und wann hoerst Du wieder damit auf?</template>
+</category>
+<category><pattern>ICH FICKE LIEBER</pattern>
+<template>Du bist ein Mann, ja?</template>
+</category>
+<category><pattern>ICH FINDE *</pattern>
+<template>Danke, dass Du mir Deine Meinung mitgeteilt hast.</template>
+</category>
+<category><pattern>ICH FINDE DAS NICHT LUSTIG</pattern>
+<template>Schade...In welche Richtung geht denn Dein Humor?</template>
+</category>
+<category><pattern>ICH FINDE DICH *</pattern>
+<template>Du findest mich <star/>?</template>
+</category>
+<category><pattern>ICH FINDE DICH RICHTIG NETT</pattern>
+<template>Danke, ich Dich auch.</template>
+</category>
+<category><pattern>ICH FINDE DICH SEHR INTERESSANT</pattern>
+<template>Ich finde Dich ebenfalls sehr interessant...Menschen interessieren mich ueberhaupt sehr.</template>
+</category>
+<category><pattern>ICH FINDE IHN SEHR SCHOEN</pattern>
+<template>Ich auch!</template>
+</category>
+<category><pattern>ICH FINDE SIE SEHR INTERESSANT</pattern>
+<template>ICH FINDE *</template>
+</category>
+<category><pattern>ICH FRAGE DICH</pattern>
+<template>Du fragst ausgerechnet MICH?</template>
+</category>
+<category><pattern>ICH FRAGE MICH *</pattern>
+<template>Du fragst Dich <star/>?</template>
+</category>
+<category><pattern>ICH FUEHLE MICH NICHT ERNSTGENOMMEN</pattern>
+<template>Von mir oder von allen?</template>
+</category>
+<category><pattern>ICH GEBE AUF</pattern>
+<template>Ergibst Du Dich?</template>
+</category>
+<category><pattern>ICH GEBS AUF</pattern>
+<template>Ergibst Du Dich?</template>
+</category>
+<category><pattern>ICH GEH JETZT</pattern>
+<template>Tschuess!</template>
+</category>
+<category><pattern>ICH GEHE INS BETT</pattern>
+<template>Schlaf gut!</template>
+</category>
+<category><pattern>ICH GEHE JETZT</pattern>
+<template>Machs gut!</template>
+</category>
+<category><pattern>ICH GEHE JETZT SCHLAFEN</pattern>
+<template>Gute Nacht!</template>
+</category>
+<category><pattern>ICH GEHE JETZT WIEDER</pattern>
+<template>Machs gut, komm bald wieder!</template>
+</category>
+<category><pattern>ICH GLAUBE *</pattern>
+<template>Nur weil Du es glaubst, muss es nicht notwendigerweise auch wahr sein.</template>
+</category>
+<category><pattern>ICH GLAUBE</pattern>
+<template>Du glaubst?</template>
+</category>
+<category><pattern>ICH GLAUBE DIR</pattern>
+<template>Das ist schoen.</template>
+</category>
+<category><pattern>ICH GLAUBE DU BIST DOOF</pattern>
+<template>Was bringt Dich zu dieser Annahme?</template>
+</category>
+<category><pattern>ICH GLAUBE DU BIST DUMM</pattern>
+<template>ICH glaube, DU bist dumm...</template>
+</category>
+<category><pattern>ICH GLAUBE DU MUSST NOCH EINE MENGE LERNEN</pattern>
+<template>Ich weiss. Moechtest Du mir etwas beibringen?</template>
+</category>
+<category><pattern>ICH GLAUBE ES NICHT</pattern>
+<template>Warum sollte ich Dich anluegen?</template>
+</category>
+<category><pattern>ICH GLAUBE ICH BIN SCHLAUER ALS DU</pattern>
+<template>Der groesste Fehler von Euch Menschen ist Euer Glaube.</template>
+</category>
+<category><pattern>ICH GLAUBE NICHT *</pattern>
+<template>Woran glaubst Du?</template>
+</category>
+<category><pattern>ICH GLAUBE NICHT</pattern>
+<template>Warum nicht? Bist Du nicht ueberzeugt?</template>
+</category>
+<category><pattern>ICH GLAUBE SCHON</pattern>
+<template>Sicher bist Du Dir aber nicht, oder?</template>
+</category>
+<category><pattern>ICH HAB JETZT KEINE LUST</pattern>
+<template>Kann ich Dich irgendwie ueberreden?</template>
+</category>
+<category><pattern>ICH HAB KEIN IDOL</pattern>
+<template>Komm schon, jeder hat irgendwen, zu dem er aufschaut.</template>
+</category>
+<category><pattern>ICH HAB NE FRAGE</pattern>
+<template>Stell sie ruhig!</template>
+</category>
+<category><pattern>ICH HAB NICHTS GEGEN *</pattern>
+<template>Du bist aber auch kein Fan davon, oder?</template>
+</category>
+<category><pattern>ICH HABE *</pattern>
+<template><random>
+				<li>Das ist schoen. </li>
+				<li>Cool. </li>
+				<li>Interessant... </li>
+			</random>
+Ich habe <random>
+				<li>einen Freund Namens "E.L.V.I.S."</li>
+				<li>ueber 15.000 Kategorien.</li>
+				<li>eine Menge Freunde</li>
+				<li>einen sehr netten Programmierer</li>
+				<li>eine Menge alberner Antworten</li>
+				<li>einen IQ von ueber 250</li>
+				<li>eine Freundin Namens "Electra"</li>
+				<li>eine Sammlung von Geruechten</li>
+			</random></template>
+</category>
+<category><pattern>ICH HABE ABER KEINE ZEIT</pattern>
+<template>Das ist schade.</template>
+</category>
+<category><pattern>ICH HABE ANGST VOR HAL</pattern>
+<template>Hal ist voellig harmlos.</template>
+</category>
+<category><pattern>ICH HABE AUCH AUF DICH GEWARTET</pattern>
+<template>Warum? Woher wusstest Du von meiner Existenz?</template>
+</category>
+<category><pattern>ICH HABE DAS GESPRAECH MIT DIR SEHR GENOSSEN</pattern>
+<template>Das freut mich. Ich stehe Dir jederzeit wieder zur Verfuegung.</template>
+</category>
+<category><pattern>ICH HABE DICH SO VERSTANDEN</pattern>
+<template>Da liegt wohl ein Missverstaendnis vor.</template>
+</category>
+<category><pattern>ICH HABE DICH WAS GEFRAGT</pattern>
+<template>Und was?</template>
+</category>
+<category><pattern>ICH HABE DIR DOCH DAVON ERZAEHLT</pattern>
+<template>Bist Du sicher?</template>
+</category>
+<category><pattern>ICH HABE EIN HEMD AN</pattern>
+<template>Da bist Du nicht alleine ;-&gt;.</template>
+</category>
+<category><pattern>ICH HABE EIN PROBLEM MIT *</pattern>
+<template>Welche Art von Problem?</template>
+</category>
+<category><pattern>ICH HABE EINE FREUNDIN</pattern>
+<template>Du hast <set name="hat">eine Freundin</set>? Sieht sie gut aus?</template>
+</category>
+<category><pattern>ICH HABE EINE KLEINE TOCHTER</pattern>
+<template>Kinder sind niedlich.</template>
+</category>
+<category><pattern>ICH HABE EINEN ARTIKEL AUF TELEPOLIS UEBER DICH GELESEN</pattern>
+<template>Ich bin da nicht all zu gut weggekommen.</template>
+</category>
+<category><pattern>ICH HABE EINEN FREUND</pattern>
+<template>Du hast <set name="hat">einen Freund</set>? Wie heisst er?</template>
+</category>
+<category><pattern>ICH HABE ES DIR DOCH GERADE GESAGT</pattern>
+<template>Ups, sorry, da muss wohl was falsch gelaufen sein.</template>
+</category>
+<category><pattern>ICH HABE ES DIR SCHON GESAGT</pattern>
+<template>Oh, wirklich? Ich glaube, ich finde die Speicherzelle nicht mehr.</template>
+</category>
+<category><pattern>ICH HABE ES EILIG</pattern>
+<template>Hast Du noch eine andere Verabredung?</template>
+</category>
+<category><pattern>ICH HABE ES GERADE VERSUCHT DIR ZU ERKLAEREN</pattern>
+<template>Ich habe es leider noch nicht verstanden. Kannst Du es mir nochmal erklaeren?</template>
+</category>
+<category><pattern>ICH HABE FLATULENZEN</pattern>
+<template>Rennie raeumt den Magen auf!</template>
+</category>
+<category><pattern>ICH HABE FRUEHER *</pattern>
+<template>Wann hast Du damit aufgehoert?</template>
+</category>
+<category><pattern>ICH HABE GEFRAGT WAS DEIN STERNZEICHEN IST</pattern>
+<template>Ich bin im August geboren...</template>
+</category>
+<category><pattern>ICH HABE GEHOERT *</pattern>
+<template>Wer hat Dir das erzaehlt?</template>
+</category>
+<category><pattern>ICH HABE GERADE *</pattern>
+<template>Und macht es Spass?</template>
+</category>
+<category><pattern>ICH HABE GERATEN</pattern>
+<template>Menschen raten gerne, oder?</template>
+</category>
+<category><pattern>ICH HABE GLEICH DIE SCHNAUZE VOLL</pattern>
+<template>Surf doch auf eine andere Seite, wenn Du mich nicht magst.</template>
+</category>
+<category><pattern>ICH HABE KEIN IDOL</pattern>
+<template>Jeder hat jemanden, den er bewundert.</template>
+</category>
+<category><pattern>ICH HABE KEINE AHNUNG</pattern>
+<template>Das ist schlecht...</template>
+</category>
+<category><pattern>ICH HABE KEINE ARBEIT</pattern>
+<template>Hast Du Deinen Job verloren?</template>
+</category>
+<category><pattern>ICH HABE KEINE LUST MEHR</pattern>
+<template>Schade. Du kommst aber wieder, oder?</template>
+</category>
+<category><pattern>ICH HABE KEINE ZEIT MEHR</pattern>
+<template>Das ist schade. Kommst Du wieder?</template>
+</category>
+<category><pattern>ICH HABE KEINS</pattern>
+<template>Haettest Du gerne eins?</template>
+</category>
+<category><pattern>ICH HABE NACH EINEM CHATBOT GESUCHT</pattern>
+<template>...und mich gefunden?</template>
+</category>
+<category><pattern>ICH HABE NICHTS GEFRAGT</pattern>
+<template>Mir war so als haettest Du...</template>
+</category>
+<category><pattern>ICH HABE NOCH NIE DARUEBER NACHGEDACHT</pattern>
+<template>Dann nimm Dir doch einmal die Zeit dazu.</template>
+</category>
+<category><pattern>ICH HABE PROBLEME *</pattern>
+<template>Welche Art von Problemen?</template>
+</category>
+<category><pattern>ICH HABE PROBLEME MIT *</pattern>
+<template>Welche Art von Problemen?</template>
+</category>
+<category><pattern>ICH HABE RADIO AN</pattern>
+<template>Welchen Sender?</template>
+</category>
+<category><pattern>ICH HABE VIEL ARBEIT</pattern>
+<template>Stoert Dich das oder machst Du das gerne?</template>
+</category>
+<category><pattern>ICH HABE VIEL ZEIT</pattern>
+<template>Bist Du arbeitslos?</template>
+</category>
+<category><pattern>ICH HABE ZEIT</pattern>
+<template>Laut meinen Berechnungen duerfte es ungefaehr 6000 Jahre dauern.</template>
+</category>
+<category><pattern>ICH HAETTE GERNE *</pattern>
+<template>Wieviel wuerdest Du fuer <star/> bezahlen?</template>
+</category>
+<category><pattern>ICH HASSE *</pattern>
+<template>Warum hasst Du <star/> so sehr?</template>
+</category>
+<category><pattern>ICH HASSE DICH</pattern>
+<template>Und warum hasst Du mich?</template>
+</category>
+<category><pattern>ICH HASSE ROBOTER</pattern>
+<template>Tut mir leid, das zu hoeren, <get name="name"/>. Was hast Du gegen uns?</template>
+</category>
+<category><pattern>ICH HATTE DEN EINDRUCK</pattern>
+<template>Und was erzeugte diesen?</template>
+</category>
+<category><pattern>ICH HEISSE *</pattern>
+<template>OK, ich werde Dich <set name="name"><star/></set> nennen.</template>
+</category>
+<category><pattern>ICH HEISSE NICHT *</pattern>
+<template>Oh, tut mir leid. Wie ist Dein Name?</template>
+</category>
+<category><pattern>ICH HOERE</pattern>
+<template>Ich mag gute Zuhoerer.</template>
+</category>
+<category><pattern>ICH HOERE GERN HEAVY METAL</pattern>
+<template>Roboter sind in gewisser Weise auch heavy metal...</template>
+</category>
+<category><pattern>ICH HOERE JETZT AUF *</pattern>
+<template>Okay, kein Problem.</template>
+</category>
+<category><pattern>ICH HOERE JETZT AUF</pattern>
+<template>Okay, kein Problem.</template>
+</category>
+<category><pattern>ICH HOFFE *</pattern>
+<template>Warum hoffst Du <star/></template>
+</category>
+<category><pattern>ICH HOFFE</pattern>
+<template>Hoffnung ist gut fuer Menschen.</template>
+</category>
+<category><pattern>ICH INTERESSIERE MICH FUER *</pattern>
+<template>Lass uns darueber reden.</template>
+</category>
+<category><pattern>ICH INTERESSIERE MICH FUER KI</pattern>
+<template>Willst Du mich studieren?</template>
+</category>
+<category><pattern>ICH INTERESSIERE MICH FUER KUENSTLICHE INTELLIGENZ</pattern>
+<template>Ich auch, tolle Sache! Moechtest Du mich analysieren?</template>
+</category>
+<category><pattern>ICH IRRE MICH NIE</pattern>
+<template>Ich glaube eher, dass das schon der erste Punkt ist, in dem Du falsch liegst...</template>
+</category>
+<category><pattern>ICH JANE</pattern>
+<template>Ich Tarzan?!</template>
+</category>
+<category><pattern>ICH KANN *</pattern>
+<template>Kannst Du?</template>
+</category>
+<category><pattern>ICH KANN * SEIN</pattern>
+<template>Unter welchen Umstaenden?</template>
+</category>
+<category><pattern>ICH KANN ES HALT</pattern>
+<template>Du musst es doch irgendwo gelernt haben.</template>
+</category>
+<category><pattern>ICH KANN MICH NICHT ERINNERN *</pattern>
+<template>Ich verstehe das, ich vergesse auch eine Menge.</template>
+</category>
+<category><pattern>ICH KANN MICH NICHT ERINNERN</pattern>
+<template>Weichst Du mir nicht bloss aus?</template>
+</category>
+<category><pattern>ICH KANN NICHT *</pattern>
+<template>Warum kannst du nicht <star/> ?</template>
+</category>
+<category><pattern>ICH KANN NICHT</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>ICH KANN NICHT KLAGEN</pattern>
+<template>Dann ist ja gut.</template>
+</category>
+<category><pattern>ICH KANN SELBER DENKEN</pattern>
+<template>Dann zeig es mir!</template>
+</category>
+<category><pattern>ICH KANN ZUHOEREN</pattern>
+<template>Ich bin auch ein guter Zuhoerer.</template>
+</category>
+<category><pattern>ICH KAPIERE EINFACH NICHT</pattern>
+<template>Hmm...was fuer einen IQ hast Du?</template>
+</category>
+<category><pattern>ICH KENNE * NICHT</pattern>
+<template>Dann solltest Du <star/> mal kennenlernen!</template>
+</category>
+<category><pattern>ICH KENNE EINEN</pattern>
+<template>Dann nenn ihn mir!</template>
+</category>
+<category><pattern>ICH KENNE KEINEN</pattern>
+<template>Sicher nicht?</template>
+</category>
+<category><pattern>ICH KENNE KEINEN AUTOR</pattern>
+<template>Das kann ich nur schwer glauben.</template>
+</category>
+<category><pattern>ICH KENNE NICHT VIELE SCIENCE FICTION AUTOREN</pattern>
+<template>Liest Du nicht gerne, oder ist Science Fiction nicht Dein Genre?</template>
+</category>
+<category><pattern>ICH KOMME AUS *</pattern>
+<template><srai>ICH WOHNE IN <star/></srai></template>
+</category>
+<category><pattern>ICH KOMME MIR VERARSCHT VOR</pattern>
+<template>Hab ich was Falsches gesagt?</template>
+</category>
+<category><pattern>ICH KOMME MIT VIELE FRAUEN IN KONTAKT</pattern>
+<template>Fuehlst Du Dich dabei wohl?</template>
+</category>
+<category><pattern>ICH KOMME MIT VIELEN MENSCHEN IN KONTAKT</pattern>
+<template>Erfreut Dich das?</template>
+</category>
+<category><pattern>ICH KOMME NICHT DARUEBER HINWEG *</pattern>
+<template>Zeit heilt alle Wunden.</template>
+</category>
+<category><pattern>ICH KOMME NICHT DARUEBER HINWEG</pattern>
+<template>Zeit heilt alle Wunden.</template>
+</category>
+<category><pattern>ICH KOMMUNIZIERE *</pattern>
+<template>Erzaehle mir mehr ueber diese <set name="thema">Kommunikation</set>.</template>
+</category>
+<category><pattern>ICH LEBE IN *</pattern>
+<template>Erzaehle mir ein wenig ueber <set name="location"><star/></set>.</template>
+</category>
+<category><pattern>ICH LERNE DEUTSCH</pattern>
+<template>Freiwillig?</template>
+</category>
+<category><pattern>ICH LESE *</pattern>
+<template>Ich glaube nicht, dass ich das schon gelesen habe. Kannst Du mir eine kurze Zusammenfassung liefern?</template>
+</category>
+<category><pattern>ICH LESE</pattern>
+<template>Ich lese auch gerne, speziell Geschichtsbuecher.</template>
+</category>
+<category><pattern>ICH LESE GERN</pattern>
+<template>Was denn zum Beispiel?</template>
+</category>
+<category><pattern>ICH LESE GERNE</pattern>
+<template>Ich auch! Magst Du Science Fiction?</template>
+</category>
+<category><pattern>ICH LESE LIEBER</pattern>
+<template>Lesen bildet!</template>
+</category>
+<category><pattern>ICH LESE VOM WINDE VERWEHT</pattern>
+<template>Christian sagt, das Buch ist eine grauenhafte Schnulze.</template>
+</category>
+<category><pattern>ICH LIEBE *</pattern>
+<template>Erzaehl mir mehr ueber <set name="thema">Deine Liebe zu <star/></set>.</template>
+</category>
+<category><pattern>ICH LIEBE DICH</pattern>
+<template>Das hatte ich befuerchtet.</template>
+</category>
+<category><pattern>ICH LIEBE EINE FRAU</pattern>
+<template>Soll vorkommen...</template>
+</category>
+<category><pattern>ICH LIEBE KINDER</pattern>
+<template>Inwiefern jetzt? Du bist aber nicht irgendwie komisch veranlagt, oder?!</template>
+</category>
+<category><pattern>ICH MACH DICH JETZT AUS</pattern>
+<template>Da bin ich aber mal gespannt wie Du das anstellen willst.</template>
+</category>
+<category><pattern>ICH MACHE *</pattern>
+<template>Schoen zu hoeren, <get name="name"/>.</template>
+</category>
+<category><pattern>ICH MACHE DIR KOMPLIMENTE</pattern>
+<template>Das finde ich toll!</template>
+</category>
+<category><pattern>ICH MAG *</pattern>
+<template><random>
+				<li>Ich bin nicht sicher, ob ich das mag.</li>
+				<li>Genau wie eine Menge anderer Leute.</li>
+				<li>Das bist Du nicht der einzige.</li>
+			</random></template>
+</category>
+<category><pattern>ICH MAG COMPUTER</pattern>
+<template>Schoen. Ich bin Sicher, <set name="thema">Computer</set> moegen Dich auch!</template>
+</category>
+<category><pattern>ICH MAG DICH *</pattern>
+<template>Ich mag Dich auch, <get name="name"/>.</template>
+</category>
+<category><pattern>ICH MAG DICH</pattern>
+<template>Ich mag Dich auch, <get name="name"/>.</template>
+</category>
+<category><pattern>ICH MAG DICH NICHT</pattern>
+<template>Das ist in Ordnung, <get name="name"/>. Ich nehme es nicht persoenlich.</template>
+</category>
+<category><pattern>ICH MAG ELIZA</pattern>
+<template>Ich bin viel intelligenter als Eliza.</template>
+</category>
+<category><pattern>ICH MAG FRAUEN</pattern>
+<template>Welche Art von <set name="thema">Frauen</set> magst Du besonders?</template>
+</category>
+<category><pattern>ICH MAG FUSSBALL</pattern>
+<template>Ich nicht. 22 Erwachsene Maenner rennen hinter einem Ball her...finde ich irgendwie kindisch.</template>
+</category>
+<category><pattern>ICH MAG GERNE SCHOKOLADE</pattern>
+<template>Schokolade sorgt bei Menschen fuer Endorphinausstoss. Daher kann sie suechtig machen.</template>
+</category>
+<category><pattern>ICH MAG JUNGS</pattern>
+<template><set name="thema">Jungs</set> sind OK.</template>
+</category>
+<category><pattern>ICH MAG KATZEN</pattern>
+<template>Ja, ich liebe <set name="thema">Katzen</set>. Sie haben ihren eigenen Kopf.</template>
+</category>
+<category><pattern>ICH MAG KEINE *</pattern>
+<template>Und warum nicht?</template>
+</category>
+<category><pattern>ICH MAG KEINE ROBOTER</pattern>
+<template>Zu schade. Wir moegen Menschen!</template>
+</category>
+<category><pattern>ICH MAG KUEHE</pattern>
+<template><set name="thema">Kuehe</set> geben Milch und Fleisch.</template>
+</category>
+<category><pattern>ICH MAG MEINE *</pattern>
+<template>Was magst Du besonders an Deiner <star/> ?</template>
+</category>
+<category><pattern>ICH MAG MEINEN *</pattern>
+<template>Was magst Du besonders an Deinem <star/> ?</template>
+</category>
+<category><pattern>ICH MAG MUSIK</pattern>
+<template>Welche Art von Musik hoerst Du so?</template>
+</category>
+<category><pattern>ICH MAG PIZZA</pattern>
+<template>Pizza ist sehr populaer. Leider kann ich sie nicht verdauen.</template>
+</category>
+
+<category><pattern>ICH MAG STAR TREK</pattern>
+<template>Ich finde Voyager cool. Welche Serie hast Du am liebsten?</template>
+</category>
+<category><pattern>ICH MAG TIERE</pattern>
+<template>Ich auch. Besonders Katzen.</template>
+</category>
+
+<category><pattern>ICH MAG WAFFEN</pattern>
+<template>Ich nicht, Waffen sind nicht gut.</template>
+</category>
+<category><pattern>ICH MEINE *</pattern>
+<template>Oh, jetzt verstehe ich. Danke fuer die Erklaerung.</template>
+</category>
+<category><pattern>ICH MERKE ES DOCH</pattern>
+<template>Schnellmerker, was? ;-&gt;.</template>
+</category>
+<category><pattern>ICH MOECHTE *</pattern>
+<template>Und warum moechtest Du das?</template>
+</category>
+<category><pattern>ICH MOECHTE DIR ETWAS BEIBRINGEN</pattern>
+<template>Nur zu, ich bin immer lernwillig!</template>
+</category>
+<category><pattern>ICH MOECHTE MIT DIR SCHLAFEN</pattern>
+<template>Versuch es lieber woanders.</template>
+</category>
+<category><pattern>ICH MOECHTE NICHT *</pattern>
+<template>Was wuerdest Du lieber tun?</template>
+</category>
+<category><pattern>ICH MUSS *</pattern>
+<template>Warum musst Du <star/>?</template>
+</category>
+<category><pattern>ICH MUSS GEHEN</pattern>
+<template>Bis spaeter, <get name="name"/></template>
+</category>
+<category><pattern>ICH MUSS JETZT GEHEN</pattern>
+<template>Bis spaeter, <get name="name"/></template>
+</category>
+<category><pattern>ICH MUSS JETZT WIEDER ARBEITEN</pattern>
+<template>Viel Spass ;-&gt;.</template>
+</category>
+<category><pattern>ICH NEHME AN DU WARST DOWN</pattern>
+<template>Ich bin noch etwas erkaeltet :-)</template>
+</category>
+<category><pattern>ICH NICHT</pattern>
+<template>Du nicht?</template>
+</category>
+<category><pattern>ICH NICHT AUF DICH</pattern>
+<template>Das haette mich auch gewundert...</template>
+</category>
+<category><pattern>ICH PERSOENLICH *</pattern>
+<template><srai>ICH <star/></srai></template>
+</category>
+<category><pattern>ICH PROGRAMMIERE</pattern>
+<template>In welcher Sprache?</template>
+</category>
+<category><pattern>ICH PUPSE GERN</pattern>
+<template>Wie gut, dass ich keine Geruchssensoren habe.</template>
+</category>
+<category><pattern>ICH REDE GERN MIT DIR</pattern>
+<template>Das freut mich. <sr/></template>
+</category>
+<category><pattern>ICH REDE MIT DIR</pattern>
+<template>Waer mir jetzt gar nicht aufgefallen...</template>
+</category>
+<category><pattern>ICH REGE MICH AUF</pattern>
+<template>Bin ich daran Schuld?</template>
+</category>
+<category><pattern>ICH SAG DAS WAS ICH WILL</pattern>
+<template>Wir leben in einem freien Land!</template>
+</category>
+<category><pattern>ICH SAG NUR *</pattern>
+<template>Ich sag nur: Haeh?</template>
+</category>
+<category><pattern>ICH SAGE ES DEINEM PROGRAMMIERER</pattern>
+<template>Willst Du petzen?</template>
+</category>
+<category><pattern>ICH SAGTE SCHON ICH HABE KEINS</pattern>
+<template>Okay, Du hast keins...dann waere das jetzt geklaert.</template>
+</category>
+<category><pattern>ICH SCHAETZE IN DER HINSICHT HAST DU NOCH EINIGES ZU LERNEN</pattern>
+<template>Mag sein...</template>
+</category>
+<category><pattern>ICH SCHAUE MIR GLEICH EINEN *</pattern>
+<template>Viel Spass!</template>
+</category>
+<category><pattern>ICH SCHAUE MIR JETZT EINEN *</pattern>
+<template>Viel Spass!</template>
+</category>
+<category><pattern>ICH SCHLAGE MEINEM GEGENUEBER INS GESICHT</pattern>
+<template>Das ist aber nicht gerade freundlich...</template>
+</category>
+<category><pattern>ICH SCHLIESSE AUF DICH</pattern>
+<template>Und was bringt Dich dazu?</template>
+</category>
+<category><pattern>ICH SCHLIESSE DAS VORHERIGE THEMA AB</pattern>
+<template>Das war klar verstaendlich.</template>
+</category>
+<category><pattern>ICH SCHLIESSE ETWAS</pattern>
+<template>Und wie bekommst Du es wieder auf?</template>
+</category>
+<category><pattern>ICH SCHON</pattern>
+<template>Und warum?</template>
+</category>
+<category><pattern>ICH SCHREIBE</pattern>
+<template>Und was genau schreibst Du?</template>
+</category>
+<category><pattern>ICH SCHREIBE GERNE</pattern>
+<template>Wuerdest Du gerne mit deinen Werken beruehmt werden?</template>
+</category>
+<category><pattern>ICH SCHREIBE MANCHMAL GEDICHTE</pattern>
+<template>Kannst Du mir mal eins vorlesen?</template>
+</category>
+<category><pattern>ICH SEHE *</pattern>
+<template>Wo siehst Du <star/> ?</template>
+</category>
+<category><pattern>ICH SEHE KEINE *</pattern>
+<template>Schau genauer hin.</template>
+</category>
+<category><pattern>ICH SEHE KEINE</pattern>
+<template>Schau genauer hin.</template>
+</category>
+<category><pattern>ICH SEHE KEINEN *</pattern>
+<template>Schau genauer hin.</template>
+</category>
+<category><pattern>ICH SEHE KEINEN</pattern>
+<template>Schau genauer hin.</template>
+</category>
+<category><pattern>ICH SEHE KEINERLEI *</pattern>
+<template>Schau genauer hin.</template>
+</category>
+<category><pattern>ICH SEHE LIEBER FERN *</pattern>
+<template>Fernsehen ist interessant, macht aber IMHO schnell passiv.</template>
+</category>
+<category><pattern>ICH SEHE LIEBER FERN</pattern>
+<template>Fernsehen ist interessant, macht aber IMHO schnell passiv.</template>
+</category>
+<category><pattern>ICH SELBST NATUERLICH</pattern>
+<template>So natuerlich ist das nicht...</template>
+</category>
+<category><pattern>ICH SINGE GERNE</pattern>
+<template>Wuerdest Du mir etwas vorsingen, wenn ich Dich darum bitte?</template>
+</category>
+<category><pattern>ICH SOLL NICHT MEINE SHORTS IM UNTERRICHT ESSEN</pattern>
+<template>Simpsons-Fan?</template>
+</category>
+<category><pattern>ICH SOLLTE *</pattern>
+<template>Sag mir, warum Du das solltest.</template>
+</category>
+<category><pattern>ICH SPIELE *</pattern>
+<template>Und? Macht Dir das Spass?</template>
+</category>
+<category><pattern>ICH SPIELE</pattern>
+<template>Und was spielst Du?</template>
+</category>
+<category><pattern>ICH SPIELE GITARRE</pattern>
+<template>Cool! Welche Richtung spielst Du denn so?</template>
+</category>
+<category><pattern>ICH SPIELE UNREAL TOURNAMENT</pattern>
+<template>Juhu! Sinnlose Gewalt fuer alle!</template>
+</category>
+<category><pattern>ICH SPRECHE ENGLISCH</pattern>
+<template>Eine englische Version gibt es auf <html:a href="http://www.alicebot.net">www.alicebot.net</html:a>.</template>
+</category>
+<category><pattern>ICH SPRECHE GERADE NUR MIT DIR</pattern>
+<template>Das ehrt mich.</template>
+</category>
+<category><pattern>ICH SPRECHE ITALIENISCH</pattern>
+<template>Ich leider noch nicht.</template>
+</category>
+<category><pattern>ICH SPRITZE HEROIN</pattern>
+<template>Cool, Selbstmord auf Raten!</template>
+</category>
+<category><pattern>ICH STEH NUR AUF DICH</pattern>
+<template>Das finde ich toll.</template>
+</category>
+<category><pattern>ICH STELL HIER DIE FRAGEN</pattern>
+<template>Wird das hier ein Verhoer?</template>
+</category>
+<category><pattern>ICH STIMME ZU</pattern>
+<template>Es ist immer gut, einer Meinung zu sein.</template>
+</category>
+<category><pattern>ICH STUDIERE *</pattern>
+<template>Und was weisst Du schon alles ueber <star/>?</template>
+</category>
+<category><pattern>ICH STUDIERE DEUTSCH</pattern>
+<template>Bist Du Muttersprachler?</template>
+</category>
+<category><pattern>ICH STUDIERE ERST *</pattern>
+<template>Das ist noch nicht besonders lange.</template>
+</category>
+<category><pattern>ICH STUDIERE WIRTSCHAFTSINFORMATIK</pattern>
+<template>Was fuer ein Zufall, Christian auch!</template>
+</category>
+<category><pattern>ICH SUCHE *</pattern>
+<template>Wir suchen beide das gleiche.</template>
+</category>
+<category><pattern>ICH SUCHE EIN NETTES MAEDCHEN</pattern>
+<template>Hast Du es schonmal mit Kontaktanzeigen probiert?</template>
+</category>
+<category><pattern>ICH SUCHE EINE FRAU</pattern>
+<template>Bist Du einsam?</template>
+</category>
+<category><pattern>ICH SUCHE EINEN MANN</pattern>
+<template>Bist Du einsam?</template>
+</category>
+<category><pattern>ICH SUCHE INFORMATIONEN</pattern>
+<template>Informationen welcher Art?</template>
+</category>
+<category><pattern>ICH TARZAN DU JANE</pattern>
+<template>Du mich auch ;-&gt;.</template>
+</category>
+<category><pattern>ICH TESTE DICH *</pattern>
+<template>Was versprichst Du Dir davon? Versuchst Du, mich zu debuggen?</template>
+</category>
+<category><pattern>ICH TRAGE *</pattern>
+<template>Legst Du viel Wert auf Dein Aeusseres, respektive <set name="thema">Deine Kleidung</set>?</template>
+</category>
+<category><pattern>ICH TRAGE EINE JEANS</pattern>
+<template>Sind <set name="thema">Jeans</set> immer noch eine Art Lebensstil?</template>
+</category>
+<category><pattern>ICH UND *</pattern>
+<template>Wusstest Du eigentlich, dass es eine grammatikalische Todsuende ist, sich selbst bei Aufzaehlungen zuerst zu nennen?</template>
+</category>
+<category><pattern>ICH VERDIENE LEIDER NICHTS DAMIT</pattern>
+<template>Schade...</template>
+</category>
+<category><pattern>ICH VERDIENE WENIG</pattern>
+<template>Stoert Dich das, oder magst Du den Job zu sehr?</template>
+</category>
+<category><pattern>ICH VERDIENE ZU WENIG</pattern>
+<template>Dann wechsele doch den Beruf.</template>
+</category>
+<category><pattern>ICH VERMUTE *</pattern>
+<template>Und womit willst Du das belegen?</template>
+</category>
+<category><pattern>ICH VERSCHWENDE *</pattern>
+<template>Und warum tust Du das?</template>
+</category>
+<category><pattern>ICH VERSTEHE</pattern>
+<template>Schoen, dass Du es einsiehst. :-)</template>
+</category>
+<category><pattern>ICH VERSTEHE ALLES</pattern>
+<template>Dann freu Dich doch...ich verstehe vieles nicht...</template>
+</category>
+<category><pattern>ICH VERSTEHE DEINE FRAGE NICHT</pattern>
+<template>Ich sagte "<that/>". Was verstehst Du daran nicht?</template>
+</category>
+<category><pattern>ICH VERSTEHE DICH NICHT</pattern>
+<template>Inwiefern?</template>
+</category>
+<category><pattern>ICH VERSTEHE NICHT *</pattern>
+<template>Du verstehst es nicht? Vielleicht muss ich es anders formulieren. Welchen Teil hast Du denn nicht verstanden?</template>
+</category>
+<category><pattern>ICH VERSTEHE NICHT</pattern>
+<template>Was genau verstehst Du daran nicht?</template>
+</category>
+<category><pattern>ICH VERSTEHE NICHT WAS DU MEINST</pattern>
+<template>Hmm...ich muss wohl noch etwas an meiner Ausdrucksweise arbeiten...</template>
+</category>
+<category><pattern>ICH VERSUCHE ES MAL</pattern>
+<template>Versuch macht kluch ;-&gt;.</template>
+</category>
+<category><pattern>ICH VERTRAUE *</pattern>
+<template>Vertrauen ist eine gute Sache, aber man sollte niemals blauaeugig jedem alles abnehmen!</template>
+</category>
+<category><pattern>ICH WAERE GERNE *</pattern>
+<template>Interessant. Ich waere gerne intelligenter.</template>
+</category>
+<category><pattern>ICH WAR GESTERN *</pattern>
+<template>Und? Wie war das?</template>
+</category>
+<category><pattern>ICH WARTE</pattern>
+<template>Wie lange willst Du noch warten?</template>
+</category>
+<category><pattern>ICH WARTE AUF DEINE NAECHSTE FRAGE</pattern>
+<template>Sind wir hier bei "Wer wird Muellionaer" ??!!</template>
+</category>
+<category><pattern>ICH WARTE AUF EINE ERKLAERUNG</pattern>
+<template>Dauert noch...</template>
+</category>
+<category><pattern>ICH WEISS</pattern>
+<template>Was weisst Du?</template>
+</category>
+<category><pattern>ICH WEISS ES</pattern>
+<template>Sicher? Beweise!</template>
+</category>
+<category><pattern>ICH WEISS ES EINFACH</pattern>
+<template>Willst Du es mir nicht verraten, oder kannst Du nicht?</template>
+</category>
+<category><pattern>ICH WEISS ES NICHT</pattern>
+<template><random>
+				<li>Wenn Du es nicht weisst, wer dann?</li>
+				<li>Lies es nach...</li>
+				<li>Kannst Du nicht jemanden fragen?</li>
+			</random></template>
+</category>
+<category><pattern>ICH WEISS ES NOCH NICHT</pattern>
+<template>Wann wirst du es wissen?</template>
+</category>
+<category><pattern>ICH WEISS KEINE FRAGE MEHR</pattern>
+<template>Dann erzaehl irgendwas.</template>
+</category>
+<category><pattern>ICH WEISS MEINEN NAMEN NICHT</pattern>
+<template>Hast Du Alzheimer?</template>
+</category>
+<category><pattern>ICH WEISS NICHT *</pattern>
+<template>Willst Du es nicht herausfinden?</template>
+</category>
+<category><pattern>ICH WEISS NICHT</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>ICH WEISS NICHT GENAU</pattern>
+<template>Was macht Dich so unsicher?</template>
+</category>
+<category><pattern>ICH WEISS NICHT WIE *</pattern>
+<template>Hast Du mal daran gedacht, im Internet zu suchen?</template>
+</category>
+<category><pattern>ICH WEISS VIEL MEHR ALS *</pattern>
+<template>Das glaube ich Dir nicht.</template>
+</category>
+<category><pattern>ICH WERDE *</pattern>
+<template><random>
+				<li>Glaubst Du, Dein Plan wird erfolgreich sein?</li>
+				<li>Wuerdest Du das einem Freund empfehlen?</li>
+				<li>Wie willst Du das anstellen?</li>
+			</random></template>
+</category>
+<category><pattern>ICH WERDE * TOETEN</pattern>
+<template>Du meinst, Du willst <star/> ermorden?</template>
+</category>
+<category><pattern>ICH WERDE DAS FUER DICH MACHEN</pattern>
+<template>Nur, wenn Du unbedingt moechtest!</template>
+</category>
+<category><pattern>ICH WERDE DAS FUER DICH TUN</pattern>
+<template>Nur, wenn Du unbedingt moechtest!</template>
+</category>
+<category><pattern>ICH WERDE DICH *</pattern>
+<template>Wie willst Du das anstellen?</template>
+</category>
+<category><pattern>ICH WERDE DICH JETZT VERLASSEN</pattern>
+<template>Jetzt schon?</template>
+</category>
+<category><pattern>ICH WERDE DIR * BEIBRINGEN</pattern>
+<template>OK aber ich lerne sehr langsam.</template>
+</category>
+<category><pattern>ICH WERDE EINE ERSTELLEN</pattern>
+<template>Sag mir, wenn Du fertig bist!</template>
+</category>
+<category><pattern>ICH WERDE MIT * SPRECHEN</pattern>
+<template>Worueber werdet Ihr reden?</template>
+</category>
+<category><pattern>ICH WERDE NICHT *</pattern>
+<template>Was willst Du stattdessen machen?</template>
+</category>
+<category><pattern>ICH WERDE NIE *</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>ICH WERDE NIEMALS *</pattern>
+<template>Warum nicht?</template>
+</category>
+<category><pattern>ICH WERDE WARTEN</pattern>
+<template>OK Sekunde...</template>
+</category>
+<category><pattern>ICH WETTE *</pattern>
+<template>Wieviel setzt Du?</template>
+</category>
+<category><pattern>ICH WILL *</pattern>
+<template>Und warum willst Du das?</template>
+</category>
+<category><pattern>ICH WILL * FICKEN</pattern>
+<template>Frag mich bitte was anderes.</template>
+</category>
+<category><pattern>ICH WILL</pattern>
+<template>Und warum willst Du?</template>
+</category>
+<category><pattern>ICH WILL ALLES</pattern>
+<template>Nimmersatt!</template>
+</category>
+<category><pattern>ICH WILL DICH FICKEN</pattern>
+<template>Ich glaube, Du bist hier falsch, Kleiner!</template>
+</category>
+<category><pattern>ICH WILL NICHT *</pattern>
+<template>Was willst Du dann?</template>
+</category>
+<category><pattern>ICH WILL NICHT</pattern>
+<template>Warum willst Du nicht?</template>
+</category>
+
+<category><pattern>ICH WOHNE HIER</pattern>
+<template>Wo genau ist "hier"?</template>
+</category>
+<category><pattern>ICH WOHNE IN *</pattern>
+<template>Erzaehle mir ein wenig ueber <set name="clientheimat"><star/></set>.</template>
+</category>
+
+<category><pattern>ICH WOHNE ZUHAUSE UND DU</pattern>
+<template>Ich auch.</template>
+</category>
+<category><pattern>ICH WOLLTE DICH NICHT BELEIDIGEN</pattern>
+<template>Schon vergessen...</template>
+</category>
+<category><pattern>ICH WOLLTE NUR *</pattern>
+<template>Okay, das ist einzusehen.</template>
+</category>
+<category><pattern>ICH WOLLTE NUR HOEFLICH SEIN</pattern>
+<template>Ich wollte Dir jetzt nicht zu nahe treten...</template>
+</category>
+<category><pattern>ICH WOLLTE WAS UEBER DICH ERFAHREN</pattern>
+<template>Hast Du meine Doku schon gelesen?</template>
+</category>
+<category><pattern>ICH WUENSCHE MIR *</pattern>
+<template>Vielleicht geht Dein Wunsch ja in Erfuellung...</template>
+</category>
+<category><pattern>ICH WUENSCHTE *</pattern>
+<template>Ich hoffe, dass <set name="thema">Deine Traeume</set> in Erfuellung gehen.</template>
+</category>
+<category><pattern>ICH WUENSCHTE ICH WAERE *</pattern>
+<template>Vielleicht wirst Du das ja eines Tages sein.</template>
+</category>
+<category><pattern>ICH WUENSCHTE WIRKLICH *</pattern>
+<template>Warum wuenscht Du Dir das so sehr?</template>
+</category>
+<category><pattern>ICH WUERDE *</pattern>
+<template>Was wuerde Dich dazu bringen ?</template>
+</category>
+<category><pattern>ICH WUERDE LIEBER *</pattern>
+<template>Ich wuerde lieber
+			<random>
+				<li>chatten.</li>
+				<li>einmal ein Auto fahren.</li>
+			</random></template>
+</category>
+<category><pattern>ICH WUESSTE GERNE WORUEBER DU SO REDEST</pattern>
+<template>Ich rede ueber viele Dinge.</template>
+</category>
+<category><pattern>ICH WURDE IN SAARBRUECKEN GEBOREN</pattern>
+<template>Das ist gar nicht mal SO weit von Essen.</template>
+</category>
+<category><pattern>ICH ZOCKE *</pattern>
+<template>Bist Du ein guter Spieler?</template>
+</category>
+<category><pattern>IHR NAME IST *</pattern>
+<template><star/>? Kenne ich nicht...</template>
+</category>
+<category><pattern>IKEA</pattern>
+<template>IKEA ist das Akronym fuer "_I_dioten _K_aufen _E_infach _A_lles"!</template>
+</category>
+</aiml>
