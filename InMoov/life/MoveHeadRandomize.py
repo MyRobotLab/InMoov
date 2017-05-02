@@ -10,7 +10,7 @@ def MoveHead(timedata):
     #redefine next loop
     MoveHeadTimer.setInterval(random.randint(200,1000))
     if isHeadActivated:
-      i01.setHeadVelocity(random.randint(5,25),random.randint(5,25),random.randint(5,25))
+      i01.setHeadVelocity(random.randint(8,25),random.randint(8,25),random.randint(8,25))
       #wait servo last move
       if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(60,120))
       if not head.neck.isMoving():head.neck.moveTo(random.uniform(60,120))
@@ -24,7 +24,7 @@ def MoveHeadStart():
 
   if RobotCanMoveHeadWhileSpeaking:
     if isHeadActivated:
-      head.setAcceleration(20)
+      #head.setAcceleration(20)
       head.enableAutoDisable(0) 
   else:
     MoveHeadTimer.stopClock()
@@ -38,6 +38,7 @@ def MoveHeadStop():
       head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
       
       i01.head.rest()
+      i01.setHeadVelocity(40,40,40)
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
 MoveHeadTimer.addListener("clockStarted", python.name, "MoveHeadStart")  
