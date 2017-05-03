@@ -13,7 +13,6 @@ webgui.autoStartBrowser(False)
 webgui.startService()
 # Then start the browsers and show the WebkitSpeechRecognition service named i01.ear
 sleep(2)
-webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 
 # As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
 # webgui = Runtime.createAndStart("webgui","WebGui")
@@ -32,6 +31,7 @@ mouth.setVoice(voiceType)
 # starting parts
 i01 = Runtime.createAndStart("i01", "InMoov")
 i01.startEar()
+webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
 i01.startMouth()
 ##############
 i01.startRightHand(rightPort)
