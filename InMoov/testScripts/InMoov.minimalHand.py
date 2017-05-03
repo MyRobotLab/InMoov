@@ -7,16 +7,6 @@
 # do voice control of a right hand or finger box
 # It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
 
-# Start the webgui service without starting the browser
-webgui = Runtime.create("WebGui","WebGui")
-webgui.autoStartBrowser(False)
-webgui.startService()
-# Then start the browsers and show the WebkitSpeechRecognition service named i01.ear
-sleep(2)
-
-# As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
-# webgui = Runtime.createAndStart("webgui","WebGui")
-
 # Change to the port that you use
 rightPort = "COM7"
 
@@ -31,7 +21,14 @@ mouth.setVoice(voiceType)
 # starting parts
 i01 = Runtime.createAndStart("i01", "InMoov")
 i01.startEar()
+# Start the webgui service without starting the browser
+webgui = Runtime.create("WebGui","WebGui")
+webgui.autoStartBrowser(False)
+webgui.startService()
+# Then start the browsers and show the WebkitSpeechRecognition service named i01.ear
 webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
+# As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
+# webgui = Runtime.createAndStart("webgui","WebGui")
 i01.startMouth()
 ##############
 i01.startRightHand(rightPort)
