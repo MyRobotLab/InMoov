@@ -17,6 +17,7 @@ Voice="cmu-slt-hsmm" # Default female for MarySpeech
 voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
 mouth.setVoice(voiceType)
+#i01.mouth.installComponentsAcceptLicense(Voice)
 ##############
 # starting parts
 i01 = Runtime.createAndStart("i01", "InMoov")
