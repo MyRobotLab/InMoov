@@ -596,6 +596,14 @@
   </topic>
   <topic name="GESTURES">
     <category>
+      <pattern>GRAB DELICATELY</pattern>
+      <template>
+        <srai>DELICATE GRAB</srai>
+      </template>
+    </category>
+  </topic>
+  <topic name="GESTURES">
+    <category>
       <pattern>RELEASE DELICATE</pattern>
       <template>Release delicate.
         <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
