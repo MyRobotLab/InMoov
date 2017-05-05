@@ -150,6 +150,7 @@ def setRobotLanguage():
       if tmplanguage=="cn":tmplanguage="zh-cn"
       if tmplanguage=="de":tmplanguage="de-de"
       if tmplanguage=="jp":tmplanguage="jp-jp"
+      if tmplanguage=="nl":tmplanguage="nl-nl"
       #mouth.setRate(-2)
   except:
     pass
