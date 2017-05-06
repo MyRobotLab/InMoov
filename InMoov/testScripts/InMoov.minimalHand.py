@@ -19,8 +19,12 @@ mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(voiceType)
 #i01.mouth.installComponentsAcceptLicense(Voice)
 ##############
-# starting parts
 i01 = Runtime.createAndStart("i01", "InMoov")
+#Force the Arduino to connect(To fix)
+right = Runtime.createAndStart("i01.right", "Arduino")
+right.connect(rightPort)
+##############
+# starting parts
 i01.startEar()
 # Start the webgui service without starting the browser
 webgui = Runtime.create("WebGui","WebGui")
@@ -78,4 +82,4 @@ def handopen():
 def handclose():
   i01.setHandVelocity("right", -1.0, -1.0, -1.0, -1.0, -1.0, -1.0)
   i01.moveHand("right",180,180,180,180,180,180)
-  i01.mouth.speak("a nice and wide open hand that is")
+  i01.mouth.speak("i01.mouth.speak("a nice and closed hand that is")
