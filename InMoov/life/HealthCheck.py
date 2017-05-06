@@ -9,18 +9,25 @@
 HealthCheck = Runtime.start("HealthCheck","Clock")
 HealthCheck.setInterval(60000)
 
+batterieLevel=100
+errorBat=1
 try:
+  if Runtime.getBatteryLevel():
     batterieLevel = Runtime.getBatteryLevel()
     print "battery :",batterieLevel
-    
+    errorBat=0
 except:
   pass
+
 
 def HealthCheck_def(timedata):
   global batterieLevel
 
-  if batterieLevel:batterieLevel = Runtime.getBatteryLevel()
- 
+  if not errorBat:
+    if Runtime.getBatteryLevel():batterieLevel = Runtime.getBatteryLevel()
+  i01.setBatteryLevel(int(batterieLevel))
+  print "battery :",batterieLevel
+  
   if RobotIsErrorMode==1:
     if error_red:
       PlayNeopixelAnimation("Flash Random", 255, 0, 0, 5)
