@@ -17,7 +17,6 @@ voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
 mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(voiceType)
-#i01.mouth.installComponentsAcceptLicense(Voice)
 ##############
 i01 = Runtime.createAndStart("i01", "InMoov")
 #Force the Arduino to connect(To fix)
