@@ -104,38 +104,3 @@ def handclose():
 
 #set the hand to relax() at launch
 relax() 
-
-i01.rightHand.wrist.map(0,180,30,135)
-#################
-i01.rightHand.enableAutoDisable(True)
-i01.rightHand.enableAutoEnable(True)
-#################
-# verbal commands
-ear = i01.ear
-
-ear.addCommand("attach your right hand", "i01.rightHand", "enable")
-ear.addCommand("disconnect your right hand", "i01.rightHand", "disable")
-ear.addCommand("rest", i01.getName(), "rest")
-ear.addCommand("open your hand", "python", "handopen")
-ear.addCommand("close your hand", "python", "handclose")
-ear.addCommand("capture gesture", ear.getName(), "captureGesture")
-ear.addCommand("manual", ear.getName(), "lockOutAllGrammarExcept", "voice control")
-ear.addCommand("voice control", ear.getName(), "clearLock")
-
-# Confirmations and Negations are not supported yet in WebkitSpeechRecognition
-# So commands will execute immediatley
-ear.addComfirmations("yes","correct","yeah","ya")
-ear.addNegations("no","wrong","nope","nah")
-
-ear.startListening()
-
-
-def handopen():
-  i01.setHandVelocity("right", -1.0, -1.0, -1.0, -1.0, -1.0, -1.0)
-  i01.moveHand("right",0,0,0,0,0,0)
-  i01.mouth.speak("ok I open my hand")
-
-def handclose():
-  i01.setHandVelocity("right", -1.0, -1.0, -1.0, -1.0, -1.0, -1.0)
-  i01.moveHand("right",180,180,180,180,180,180)
-  i01.mouth.speak("i01.mouth.speak("a nice and closed hand that is")
