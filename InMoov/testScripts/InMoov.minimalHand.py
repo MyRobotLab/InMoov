@@ -39,18 +39,21 @@ i01.startMouth()
 ##############
 rightHand = Runtime.create("i01.rightHand","InMoovHand")
 # tweaking defaults settings of right hand
+#Velocity
 rightHand.thumb.setMaxVelocity(-1)
 rightHand.index.setMaxVelocity(-1)
 rightHand.majeure.setMaxVelocity(-1)
 rightHand.ringFinger.setMaxVelocity(-1)
 rightHand.pinky.setMaxVelocity(-1)
 rightHand.wrist.setMaxVelocity(-1)
+#Mapping
 rightHand.thumb.map(0,180,64,135)
 rightHand.index.map(0,180,42,160)
 rightHand.majeure.map(0,180,35,165)
 rightHand.ringFinger.map(0,180,40,140)
 rightHand.pinky.map(0,180,45,130)
 rightHand.wrist.map(0,180,30,135)
+#Rest position
 rightHand.thumb.setRest(0)
 rightHand.index.setRest(0)
 rightHand.majeure.setRest(0)
