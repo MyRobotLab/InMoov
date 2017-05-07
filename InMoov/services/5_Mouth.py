@@ -141,19 +141,23 @@ def setRobotLanguage():
   global LanguageError
   LanguageError=0
   tmplanguage=MyLanguage
+  if MyvoiceTTS=="VoiceRss" or MyvoiceTTS=="Polly":
+    if tmplanguage=="fr":tmplanguage="fr-fr"
+    if tmplanguage=="en":tmplanguage="en-us"
+    if tmplanguage=="es":tmplanguage="es-es"
+    if tmplanguage=="de":tmplanguage="de-de"
+    if tmplanguage=="nl":tmplanguage="nl-nl"
+  
   try:
-    if MyvoiceTTS=="VoiceRss":
-      i01.mouth.setKey(VoiceRssApi)
-      if tmplanguage=="fr":tmplanguage="fr-fr"
-      if tmplanguage=="en":tmplanguage="en-us"
-      if tmplanguage=="es":tmplanguage="es-es"
-      if tmplanguage=="cn":tmplanguage="zh-cn"
-      if tmplanguage=="de":tmplanguage="de-de"
-      if tmplanguage=="jp":tmplanguage="jp-jp"
-      if tmplanguage=="nl":tmplanguage="nl-nl"
-      #mouth.setRate(-2)
+    if MyvoiceTTS=="VoiceRss":i01.mouth.setKey(VoiceRssApi)
   except:
     pass
+    
+  try:  
+    if MyvoiceTTS=="Polly":i01.mouth.setKey(awsaccesskeyid,awssecretkey)
+  except:
+    pass
+
   
   try:
     if MyvoiceTTS=="MarySpeech" and MyLanguage=="en":
@@ -184,7 +188,7 @@ def setCustomVoice():
   global VoiceError
   VoiceError=0
   try:
-    mouth.setVoice(MyvoiceType)
+    mouth.setVoice(unicode(MyvoiceType,'utf-8'))
   except:
     errorSpokenFunc('MyvoiceType')
     VoiceError=1

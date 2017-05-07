@@ -74,6 +74,8 @@ try:
   MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
   VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
   MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
+  awsaccesskeyid=BasicConfig.get('TTS', 'awsaccesskeyid')
+  awssecretkey=BasicConfig.get('TTS', 'awssecretkey')
   if MyvoiceType[0]=="[":
     MyvoiceType=MyvoiceType.split(']', 1 )[1]
   DEBUG=BasicConfig.getboolean('MAIN', 'debug')
