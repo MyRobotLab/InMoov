@@ -26,7 +26,7 @@
       <fileset dir="tools"/>
     </copy>
     <copy file="start_inmoov.sh" todir="${build}" />
-    <copy file="START_INMOOV.BAT" todir="${build}" />
+    <copy file="START_INMOOV.bat" todir="${build}" />
     <copy file="README.md" todir="${build}" />
 
     <zip destfile="${dist}/inmoov.zip" basedir="${build}" />
