@@ -88,7 +88,7 @@ if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or 
     leftHand.pinky.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'))
     leftHand.wrist.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'))
  
-    i01.startLeftHand(MyLeftPort)
+    i01.startLeftHand(MyLeftPort,BoardTypeMyLeftPort)
     
     leftHand.enableAutoEnable(1)
     leftHand.thumb.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb'))

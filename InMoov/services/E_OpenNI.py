@@ -47,6 +47,8 @@ def openNIInit():
   else:
     talkEvent(lang_startingOpenNi)
     i01.startOpenNI()
+    openni.stopCapture()
+    
   
  
 

@@ -87,7 +87,7 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") o
     rightHand.pinky.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'pinky'))
     rightHand.wrist.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'))
     
-    i01.startRightHand(MyRightPort)
+    i01.startRightHand(MyRightPort,BoardTypeMyRightPort)
         
     rightHand.enableAutoEnable(1)
     

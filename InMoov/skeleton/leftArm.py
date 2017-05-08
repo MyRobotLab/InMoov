@@ -76,7 +76,7 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or 
     leftArm.rotate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'))
     leftArm.omoplate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'))
     
-    i01.startLeftArm(MyLeftPort)
+    i01.startLeftArm(MyLeftPort,BoardTypeMyLeftPort)
     
     leftArm.enableAutoEnable(1)
     leftArm.bicep.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep'))

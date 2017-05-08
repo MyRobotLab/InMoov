@@ -29,6 +29,7 @@ try:
   if isTorsoActivated or ScriptType=="Virtual":
     TorsoConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
     TorsoConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino'))
+    TorsoConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'TorsoConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
   errorSpokenFunc('ConfigParserProblem','torso.config')
   isTorsoActivated=0
@@ -70,7 +71,7 @@ if isTorsoActivated  or ScriptType=="Virtual":
     torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
    
     
-    i01.startTorso(TorsoConnectedToArduinoPort)
+    i01.startTorso(TorsoConnectedToArduinoPort,TorsoConnectedToArduinoPortBoardType)
     torso.enableAutoEnable(1)
     torso.topStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
     torso.midStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))

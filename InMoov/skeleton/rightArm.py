@@ -70,7 +70,7 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
     rightArm.rotate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'rotate'))
     rightArm.omoplate.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'omoplate'))
 
-    i01.startRightArm(MyRightPort)
+    i01.startRightArm(MyRightPort,BoardTypeMyRightPort)
     
     
     rightArm.bicep.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'bicep'))

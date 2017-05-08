@@ -76,7 +76,7 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 #we launch Inmoov Skeleton
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
-sleep(1)
+
 if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
 
 ################################
@@ -120,20 +120,17 @@ if not os.path.isfile(RuningFolder+'custom/Inmoov_custom.py'):shutil.move(Runing
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
-#first init check
-if CheckVersion() and isChatbotActivated:
-  r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
-  chatBot.getResponse("SYSTEM_NEW_VERSION")
-#  
-  
-else:
-  sleepModeWakeUp()
-  rest()
-  
-
 if boot_green:    
   PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
   StopNeopixelAnimation()
   sleep(1)
   PlayNeopixelAnimation("Flash Random", 0, 255, 50, 10)
+sleep(1)
+#first init check
+if CheckVersion() and isChatbotActivated:
+  r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
+  chatBot.getResponse("SYSTEM_NEW_VERSION")
+  
+else:
+  sleepModeWakeUp()

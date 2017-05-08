@@ -29,6 +29,7 @@ try:
   if isEyeLidsActivated:
     EyeLidsConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
+    EyeLidsConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
   isEyeLidsActivated=0
   errorSpokenFunc('ConfigParserProblem','eyelids . config')
@@ -71,7 +72,7 @@ if isEyeLidsActivated==1:
     eyelids.eyelidright.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'))
   
  
-    i01.startEyelids(EyeLidsConnectedToArduinoPort,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
+    i01.startEyelids(EyeLidsConnectedToArduinoPort,EyeLidsConnectedToArduinoPortBoardType,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
     
     eyelids.eyelidleft.enableAutoEnable(1)
     eyelids.eyelidright.enableAutoEnable(1)

@@ -7,15 +7,37 @@
 # ARDUINO RELATED FUNCTIONS
 # ##############################################################################
 
+#parse config
+ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart+'.config')
+MyRightPort=ThisServicePartConfig.get('MAIN', 'MyRightPort')
+MyLeftPort=ThisServicePartConfig.get('MAIN', 'MyLeftPort')
+BoardTypeMyRightPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyRightPort')
+BoardTypeMyLeftPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyLeftPort')
+ForceArduinoIsConnected=ThisServicePartConfig.getboolean('MAIN', 'ForceArduinoIsConnected')
 
   
   
 #function to check arduino & mrlcomm
 def CheckArduinos(Card,Port,slave=0):
-  #A RX/TX connection don't return 'arduino is connected', only mrlcomm version
+  
+  #serial
   if slave!=0:
     Card.connect(slave,Port)
     sleep(1)
+    for i in range(0,3):
+      if not Card.isConnected():
+        Card.disconnect()
+        sleep(0.1)
+        Card.connect(slave,Port)
+        sleep(0.5)
+      else:
+        break
+        
+  #usb
   else:
     Card.connect(Port)
     sleep(1)
@@ -31,32 +53,14 @@ def CheckArduinos(Card,Port,slave=0):
   if ForceArduinoIsConnected:return True
   else:
   
-    
-    if slave==0:
-      if Card.isConnected():
-        print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
-        if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BadMrlcommVersion',Port)
-        else:
-          print "Arduino ",Port," OK"
-          return True
-      else:
-        errorSpokenFunc('ArduinoNotConnected',Port)
-        return False
-        
-    if slave!=0:
+    #mrlcomm check
+    if Card.isConnected():
       print "Mrlcomm version : ",Card.getBoardInfo().version," ( requiered ",MRLCOMM_VERSION," )"
-      if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('NeopixelNoWorky',Port)
+      if Card.getBoardInfo().version!=MRLCOMM_VERSION:errorSpokenFunc('BadMrlcommVersion',Port)
       else:
-        print "Slave Arduino ",Port," OK"
+        print "Arduino ",Port," OK"
         return True
-      
-
-        
-
-  
-  
-
-
-
-    
-
+    else:
+      #bouuuuuhhhh
+      errorSpokenFunc('ArduinoNotConnected',Port)
+      return False
