@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
   <!-- File: gesturesFrench.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: April 28, 2017 -->
-  <!--  by Gael Langevin -->
+  <!-- Last modified: May 8, 2017 -->
+  <!-- by Anthony Gallot -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -180,8 +180,7 @@
       <template>J'ai tout déconnecté.
         <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
     </category>
-    <category>
-      <category>
+     <category>
       <pattern>DECONNECTE TOUT</pattern>
       <template>
         <srai>DÉCONNECTE TOUT</srai>
@@ -1245,7 +1244,6 @@
       <template>
         <srai>STOP MODE DE VIE ALÉATOIRE</srai>
       </template>
-    </category>
     </category>
   </topic>
 </aiml>
