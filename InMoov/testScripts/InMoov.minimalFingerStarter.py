@@ -13,10 +13,9 @@ rightPort = "COM9"
 #to tweak the default voice
 Voice="cmu-bdl-hsmm" #Male US voice 
 #Voice="cmu-slt-hsmm" #Default female for MarySpeech
-voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
-mouth.installComponentsAcceptLicense(Voice)
-mouth.setVoice(voiceType)
+#mouth.installComponentsAcceptLicense(Voice)
+mouth.setVoice(Voice)
 ##############
 # starting InMoov service
 i01 = Runtime.create("i01", "InMoov")
