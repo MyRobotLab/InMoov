@@ -69,7 +69,7 @@
   <category>
     <pattern>TRANSLATE * TO *</pattern>
     <template>
-      <srai>TRANSLATE IN <star index="1" /> en <star index="2" /></srai>
+      <srai>TRANSLATE <star index="1" /> IN <star index="2" /></srai>
     </template>
   </category>
   <!-- returns the function  -->
@@ -91,8 +91,10 @@
       I seem to have trouble connecting myself to the server .
     </template>
   </category>
-  <category>
-    <pattern>STOP TRANSLATE</pattern>
+   <!-- We use topic to seal the discussion -->
+  <topic name="TRANSLATOR">
+   <category>
+    <pattern># STOP TRANSLATE #</pattern>
     <template>
       <think>
         <set name="topic">GESTURES</set>
@@ -103,10 +105,8 @@
       <li>Okay, I will stop translating, it was nice speaking that language</li>
     </template>
   </category>
-  <!-- We use topic to seal the discussion -->
-  <topic name="TRANSLATOR">
     <category>
-      <pattern>*</pattern>
+      <pattern>#</pattern>
       <template>
         <oob>
           <mrl>
