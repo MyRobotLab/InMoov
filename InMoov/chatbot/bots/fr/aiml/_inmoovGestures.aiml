@@ -2,9 +2,9 @@
 <aiml>
   <!-- File: gesturesFrench.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: May 8, 2017 -->
-  <!-- by Anthony Gallot -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- Last modified: May11, 2017 -->
+  <!-- by Gael Langevin -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
@@ -901,7 +901,7 @@
       </template>
     </category>
     <category>
-      <pattern>FAIRE LES MAINS</pattern>
+      <pattern>SERRE LES MAINS</pattern>
       <template>
         <srai>SERRE LA MAIN</srai>
       </template>
@@ -981,8 +981,8 @@
       </template>
     </category>
     <category>
-      <pattern>APPROACH</pattern>
-      <template>APPROACH
+      <pattern>APPROCHE</pattern>
+      <template>APPROCHE
         <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
     </category>
     <category>
@@ -996,7 +996,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>CRÉATIONS EN FRANÇAIS</pattern>
+      <pattern>CRÉATION EN FRANÇAIS</pattern>
       <template>.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
     </category>
