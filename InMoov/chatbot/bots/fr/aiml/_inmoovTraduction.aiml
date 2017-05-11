@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: traduction.aiml -->
+  <!-- Author: Gael Langevin -->
+  <!-- Last modified: October 19, 2016 -->
+  <!--  -->
+  <!-- This AIML file is part of the INMOOVSUPER 0.0.1 chat bot knowledge base. -->
+  <!--  -->
+  <!-- The INMOOVFRENCH brain is Copyright &copy; 2016 by Inmoov and Myrobotlab community. -->
+  <!--  -->
+  <!-- The INMOOVSUPER brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!--  -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <topic name="TRADUCTION">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>translateTextFR("<star index="1" />","<get name="languetraduction" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>TRADUCTION EN *</pattern>
+    <template>
+      <think>
+        <set name="topic">TRADUCTION</set>
+      </think>
+      <think>
+        <set name="languetraduction">
+          <star />
+        </set>
+      </think>
+      <li>
+        Traduction en <star />, DIS moi : stop traduction, et j'arrête de traduire
+      </li>
+    </template>
+  </category>
+  <category>
+    <pattern>TRADUIT VERS *</pattern>
+    <template>
+      <srai>TRADUCTION EN <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRADUIT *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateTextFR("<star index="1" />","<get name="languetraduction" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>TRADUIT * EN *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateTextFR("<star index="1" />","<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>TRANSLATE * TO *</pattern>
+    <template>
+      <srai>TRANSLATE IN <star index="1" /> EN <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_1</pattern>
+    <template>Désolé il y a un problème de communication avec le server azure, verifiez votre cle et identifiant !</template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_2 *</pattern>
+    <template>Je ne connais pas cette langue <star index="1" />, ou la syntax dans le fichier azure est incorrect !</template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_3</pattern>
+    <template>J ai un problème de connection au server .</template>
+  </category>
+  <category>
+    <pattern>STOP TRADUCTION</pattern>
+    <template>
+      <think>
+        <set name="topic">GESTURES</set>
+      </think>
+      <think>
+        <set name="languetraduction">fr</set>
+      </think>
+      <random>
+        <li>D'accord, j'arrête la traduction, j'aimais bien cette langue</li>
+        <li>J'arrête de traduire, cette langue était bien pourtant</li>
+      </random>
+    </template>
+  </category>
+</aiml>
