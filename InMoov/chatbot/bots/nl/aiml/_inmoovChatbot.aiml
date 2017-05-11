@@ -71,7 +71,7 @@
     </category>
 	
     <category>
-      <pattern># YES #</pattern>
+      <pattern># ja #</pattern>
       <that># als mijn naam is #</that>
       <template>
         <random>
@@ -82,12 +82,12 @@
 			Zeer mooie naam, <get name="tmpname" /> is geweldig.
 			</li>
         </random>
-	Ik moet je kennen, ik luister, mag ik je naam hebben ?
+	Ik moet je kennen, ik luister, Mag ik je naam weten ?
 	<think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
 	
     <category>
-      <pattern># YES #</pattern>
+      <pattern># ja #</pattern>
       <that># als je naam #</that>
       <template>
         <random>
@@ -115,7 +115,7 @@
     </category>
 	
     <category>
-      <pattern># NO #</pattern>
+      <pattern># nee #</pattern>
       <that># als mijn naam is #</that>
       <template>
 	We starten opnieuw.
@@ -124,7 +124,7 @@
     </category>
 	
     <category>
-      <pattern># NO #</pattern>
+      <pattern># nee #</pattern>
       <that># als je naam #</that>
       <template>
 	We starten opnieuw.
