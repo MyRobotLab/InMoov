@@ -40,7 +40,11 @@ if isChatbotActivated:
     chatBot.startSession("default",MyLanguage)
     talkEvent(lang_chatbotActivated)
     chatBot.addTextListener(htmlFilter)
-    htmlFilter.addListener("publishText", python.name, "talk") 
+    htmlFilter.addListener("publishText", python.name, "talk")
+    chatBot.setPredicate("default","topic","default")
+    chatBot.setPredicate("default","questionfirstinit","")
+    chatBot.setPredicate("default","tmpname","")
+    chatBot.savePredicates()
   else:
     errorSpokenFunc('lang_ChatbotError')
 

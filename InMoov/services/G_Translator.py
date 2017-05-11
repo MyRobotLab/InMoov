@@ -10,12 +10,13 @@ ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
-UseMaleVoice=ThisServicePartConfig.get('MAIN', 'UseMaleVoice')
+UseMaleVoice=ThisServicePartConfig.getboolean('MAIN', 'UseMaleVoice')
 apikey=ThisServicePartConfig.get('MAIN', 'apikey')
 
 AzureTranslator=Runtime.createAndStart("AzureTranslator", "AzureTranslator")
 #initiate azure
-AzureTranslator.setCredentials(apikey)
+
+if apikey!="":AzureTranslator.setCredentials(apikey)
 
 
 #Origin language 
@@ -86,7 +87,7 @@ en_languages = {
   'english' : 'en',
   'anglais' : 'en',
   'french' : 'fr',
-  'francais' : 'fr',
+  'français' : 'fr',
   'german' : 'de',
   'allemand' : 'de',
   'italian' : 'it',
@@ -100,7 +101,7 @@ en_languages = {
   'swedish' : 'sv',
   'suédois' : 'sv',
   'japonese' : 'ja',
-  'Japonais' : 'ja',
+  'japonais' : 'ja',
   'portuguese' : 'pt',
   'portuguais' : 'pt',
   'turkish' : 'tr',
@@ -112,45 +113,50 @@ en_languages = {
   
 }
 
+if UseMaleVoice:
+  ttsVoiceGender=male_languages
+else:
+  ttsVoiceGender=female_languages
+
 def translateText(text,language):
   
-  
-  RealLang="0"
-  
-  try:
-    RealLang=en_languages[language]
-  except: 
-    inmoovSuper.getResponse("AZURE_ERROR_2 "+language)
-  print RealLang
-  
-  try:
-    AzureTranslator.detectLanguage(text)
-  except:
-    inmoovSuper.getResponse("AZURE_ERROR_1")
+  if MyvoiceTTS=="Polly":
     RealLang="0"
-  
-  if RealLang!="0":
-    AzureTranslator.toLanguage(RealLang)
-    sleep(0.1)
-    t_text=AzureTranslator.translate(text)
     
-    #small trick to prevent connection timeout :)
-    i=0
-    while 'Cannot find an active Azure Market Place' in t_text and i<50: 
-      print(i,t_text)
-      i += 1 
-      sleep(0.2)
+    try:
+      RealLang=en_languages[language]
+    except: 
+      chatBot.getResponse("AZURE_ERROR_2 "+language)
+    print RealLang
+    
+    try:
       AzureTranslator.detectLanguage(text)
-      t_text=AzureTranslator.translate(text+" ")
+    except:
+      chatBot.getResponse("AZURE_ERROR_1")
+      RealLang="0"
     
-    
-    if 'Cannot find an active Azure Market Place' in t_text:
-      inmoovSuper.getResponse("AZURE_ERROR_3")
-    else:
-      mouth.setVoice(male_languages[RealLang])  
-      print t_text
-      talk(t_text)
-      mouth.setVoice(MyvoiceType)
-
+    if RealLang!="0":
+      AzureTranslator.toLanguage(RealLang)
+      sleep(0.1)
+      t_text=AzureTranslator.translate(text)
+      
+      #small trick to prevent connection timeout :)
+      i=0
+      while 'Cannot find an active Azure Market Place' in t_text and i<50: 
+        print(i,t_text)
+        i += 1 
+        sleep(0.2)
+        AzureTranslator.detectLanguage(text)
+        t_text=AzureTranslator.translate(text+" ")
       
       
+      if 'Cannot find an active Azure Market Place' in t_text:
+        chatBot.getResponse("AZURE_ERROR_3")
+      else:
+        mouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
+        print t_text
+        talkBlocking(t_text)
+        mouth.setVoice(unicode(MyvoiceType,'utf-8'))
+        
+  else:
+    talk(lang_PollyNeeded)

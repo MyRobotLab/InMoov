@@ -18,13 +18,28 @@
   <!--  -->
   <topic name="TRADUCTION">
     <category>
-      <pattern>*</pattern>
+        <pattern># STOP TRADUCTION #</pattern>
+        <template>
+          <think>
+            <set name="topic"></set>
+          </think>
+          <think>
+            <set name="languetraduction">fr</set>
+          </think>
+          <random>
+            <li>D'accord, j'arrête la traduction, j'aimais bien cette langue</li>
+            <li>J'arrête de traduire, cette langue était bien pourtant</li>
+          </random>
+        </template>
+      </category> 
+ <category>
+      <pattern>#</pattern>
       <template>
         <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>translateTextFR("<star index="1" />","<get name="languetraduction" />")</param>
+            <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
           </mrl>
         </oob>
       </template>
@@ -59,7 +74,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>translateTextFR("<star index="1" />","<get name="languetraduction" />")</param>
+          <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
         </mrl>
       </oob>
     </template>
@@ -71,20 +86,14 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>translateTextFR("<star index="1" />","<star index="2" />")</param>
+          <param>translateText("<star index="1" />","<star index="2" />")</param>
         </mrl>
       </oob>
     </template>
   </category>
   <category>
-    <pattern>TRANSLATE * TO *</pattern>
-    <template>
-      <srai>TRANSLATE IN <star index="1" /> EN <star index="2" /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>AZURE_ERROR_1</pattern>
-    <template>Désolé il y a un problème de communication avec le server azure, verifiez votre cle et identifiant !</template>
+    <template>Désolé il y a un problème de communication avec le serveur azure, verifiez votre cle et identifiant !</template>
   </category>
   <category>
     <pattern>AZURE_ERROR_2 *</pattern>
@@ -93,20 +102,5 @@
   <category>
     <pattern>AZURE_ERROR_3</pattern>
     <template>J ai un problème de connection au server .</template>
-  </category>
-  <category>
-    <pattern>STOP TRADUCTION</pattern>
-    <template>
-      <think>
-        <set name="topic">GESTURES</set>
-      </think>
-      <think>
-        <set name="languetraduction">fr</set>
-      </think>
-      <random>
-        <li>D'accord, j'arrête la traduction, j'aimais bien cette langue</li>
-        <li>J'arrête de traduire, cette langue était bien pourtant</li>
-      </random>
-    </template>
   </category>
 </aiml>
