@@ -8,7 +8,7 @@
 version='0.3.5'
 
 # this will run with versions of MRL above :
-mrlCompatible='2066'
+mrlCompatible='2161'
 
 # ###################################################################################
 # This is a very minimal script for Inmoov
