@@ -78,7 +78,47 @@ female_languages = {
   'pl' : 'Ewa',
 }
 
+#Mary tts voice name map 
+male_languagesMary = { 
+  'da' : 'dfki-pavoque-neutral-hsmm',
+  'nl' : 'dfki-pavoque-neutral-hsmm',
+  'en' : 'cmu-bdl-hsmm',
+  'fr' : 'upmc-pierre-hsmm',
+  'de' : 'dfki-pavoque-neutral-hsmm',
+  'it' : 'istc-lucia-hsmm',
+  'is' : 'dfki-pavoque-neutral-hsmm',
+  'no' : 'dfki-pavoque-neutral-hsmm',
+  'pt' : 'istc-lucia-hsmm',
+  'ru' : 'cmu-bdl-hsmm',
+  'es' : 'istc-lucia-hsmm',
+  'sv' : 'cmu-bdl-hsmm',
+  'tr' : 'dfki-ot-hsmm',
+  'ro' : 'cmu-bdl-hsmm',
+  'ja' : 'cmu-bdl-hsmm',
+  'pl' : 'cmu-bdl-hsmm',
+}
+
+female_languagesMary = { 
+  'da' : 'cmu-bdl-hsmm',
+  'nl' : 'dfki-pavoque-neutral-hsmm',
+  'en' : 'cmu-slt-hsmm',
+  'fr' : 'upmc-jessica-hsmm',
+  'de' : 'bits1-hsmm',
+  'it' : 'istc-lucia-hsmm',
+  'is' : 'cmu-bdl-hsmm',
+  'no' : 'cmu-bdl-hsmm',
+  'pt' : 'istc-lucia-hsmm',
+  'ru' : 'cmu-bdl-hsmm',
+  'es' : 'istc-lucia-hsmm',
+  'sv' : 'cmu-bdl-hsmm',
+  'tr' : 'dfki-ot-hsmm',
+  'ro' : 'cmu-bdl-hsmm',
+  'ja' : 'cmu-bdl-hsmm',
+  'pl' : 'cmu-bdl-hsmm',
+}
+
 #Translate to :
+#TODO ADD TRANSLATED KEYWORDS
 en_languages = {
   'danish' : 'da',
   'danois' : 'da',
@@ -113,14 +153,70 @@ en_languages = {
   
 }
 
+global translatorDegraded
+translatorDegraded=0
+if MyvoiceTTS=="MarySpeech":
+  translatorDegraded=1
+  male_languages=male_languagesMary
+  female_languages=female_languagesMary
+  
 if UseMaleVoice:
   ttsVoiceGender=male_languages
 else:
   ttsVoiceGender=female_languages
 
 def translateText(text,language):
+  global translatorDegraded
+  needArestart=0
+  needAdownloadTalk=1
+  if translatorDegraded:
+    translatorDegraded=0
+    talkBlocking(lang_MaryTranslator)
   
-  if MyvoiceTTS=="Polly":
+  if MyvoiceTTS=="MarySpeech":  
+    if not CheckMaryTTSVoice("dfki-pavoque-neutral-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)
+      mouth.installComponentsAcceptLicense("dfki-pavoque-neutral-hsmm")
+      needArestart=1
+    if not CheckMaryTTSVoice("upmc-jessica-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)      
+      mouth.installComponentsAcceptLicense("upmc-jessica-hsmm")  
+      needArestart=1
+    if not CheckMaryTTSVoice("upmc-pierre-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)
+      mouth.installComponentsAcceptLicense("upmc-pierre-hsmm") 
+      needArestart=1
+    if not CheckMaryTTSVoice("istc-lucia-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)
+      mouth.installComponentsAcceptLicense("istc-lucia-hsmm") 
+      needArestart=1
+    if not CheckMaryTTSVoice("dfki-ot-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)
+      mouth.installComponentsAcceptLicense("dfki-ot-hsmm")
+      needArestart=1
+    if not CheckMaryTTSVoice("bits1-hsmm"):
+      if needAdownloadTalk:
+        needAdownloadTalk=0
+        talkBlocking(lang_MaryDownloadAll)
+      mouth.installComponentsAcceptLicense("bits1-hsmm")
+      needArestart=1
+    
+    if needArestart:
+      errorSpokenFunc('VoiceDownloaded')
+      sleep(4)
+      runtime.exit()
+    
+  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech":
     RealLang="0"
     
     try:
