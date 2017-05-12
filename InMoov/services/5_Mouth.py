@@ -81,6 +81,7 @@ def onEndSpeaking(text):
   if RobotIsStarted==1:
     
     MoveHeadTimer.stopClock()
+    MoveEyesTimer.stopClock()
     if flash_when_speak:
       StopNeopixelAnimation()
     
@@ -112,9 +113,9 @@ def onStartSpeaking(text):
       print "onStartSpeaking error"
       pass
   if RobotIsStarted:
-    MoveHeadTimer.startClock()
-    if flash_when_speak:    
-      PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+    if random.randint(0,1)==1:MoveHeadTimer.startClock()
+    if random.randint(0,1)==1:MoveEyesTimer.startClock()
+    if flash_when_speak:PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
 
 

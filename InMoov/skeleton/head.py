@@ -143,12 +143,14 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
     neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
     rollneckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rollneck')
+    eyeXEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX')
+    eyeYEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY')
     head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
     head.neck.enableAutoDisable(neckEnableAutoDisable)
     head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
     head.jaw.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
-    head.eyeX.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX'))
-    head.eyeY.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY'))
+    head.eyeX.enableAutoDisable(eyeXEnableAutoDisable)
+    head.eyeY.enableAutoDisable(eyeYEnableAutoDisable)
     
     
     head.jaw.setVelocity(-1)

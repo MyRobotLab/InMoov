@@ -16,8 +16,10 @@ global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
 RobotCanMoveBodyRamdom=0
-global MoveHeadRandom
-MoveHeadRandom=1
+global RobotCanMoveHeadWhileSpeaking
+RobotCanMoveHeadWhileSpeaking=1
+global RobotCanMoveEyesRandom
+RobotCanMoveEyesRandom=1
 global RobotIsSleeping
 RobotIsSleeping=0
 global RobotneedUpdate
