@@ -1,8 +1,8 @@
 def studyball():
   global MoveBodyRandom
   MoveBodyRandom=0
-  global MoveHeadRandom
-  MoveHeadRandom=0
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=0
   ##keepball():
   sleep(3)
   i01.setHandSpeed("left", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
@@ -79,5 +79,6 @@ def studyball():
   i01.mouth.speakBlocking("I think it is a ball")
   #i01.mouth.speakBlocking("you need to set the point")
   fullspeed()
+  RobotCanMoveHeadWhileSpeaking=1
   i01.headTracking.startLKTracking()
   i01.eyesTracking.startLKTracking()

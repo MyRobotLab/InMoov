@@ -1,6 +1,6 @@
 def No(data):
-  global MoveHeadRandom
-  MoveHeadRandom=0
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=0
   # WE MOVE THE ROTHEAD OR PISTONMOD
   if IsInmoovArduino==1:
     if random.randint(0,1)==1:
@@ -26,3 +26,4 @@ def No(data):
       sleep(1)
       rollneck.moveTo(90)
       i01.head.jaw.rest()
+  RobotCanMoveHeadWhileSpeaking=1

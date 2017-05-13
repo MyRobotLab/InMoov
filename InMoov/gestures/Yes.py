@@ -1,6 +1,6 @@
 def Yes(data):
-  global MoveHeadRandom
-  MoveHeadRandom=0
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=0
   if IsInmoovArduino==1:
     #i01.attach()
     i01.setHeadSpeed(0.3, 0.3)
@@ -25,3 +25,4 @@ def Yes(data):
     i01.moveHead(90,90)
   if IsInmoovArduino==1:
     i01.head.jaw.rest()
+  RobotCanMoveHeadWhileSpeaking=1

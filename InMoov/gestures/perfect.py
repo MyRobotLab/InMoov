@@ -1,8 +1,8 @@
 def perfect():
   global MoveBodyRandom
   MoveBodyRandom=0
-  global MoveHeadRandom
-  MoveHeadRandom=1
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=1
   i01.setHandSpeed("left", 0.80, 0.80, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 0.95, 0.95, 0.95, 1.0)
@@ -15,4 +15,5 @@ def perfect():
   i01.moveHand("right",86,51,133,162,153,180)
   sleep(1)
   i01.mouth.speak("it is perfect")
+  RobotCanMoveHeadWhileSpeaking=1
 

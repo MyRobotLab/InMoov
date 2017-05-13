@@ -1,11 +1,11 @@
 def VieAleatoire():
   global MoveBodyRandom
-  global MoveHeadRandom
+  global RobotCanMoveHeadWhileSpeaking
   MoveBodyRandomize()
-  MoveHeadRandomize()
+  RobotCanMoveHeadWhileSpeakingize()
   MoveHeadTimer.startClock()
   MoveBodyTimer.startClock()
   MoveBodyRandom=1
-  MoveHeadRandom=1
+  RobotCanMoveHeadWhileSpeaking=1
 
   

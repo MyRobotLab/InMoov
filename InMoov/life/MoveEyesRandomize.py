@@ -5,8 +5,8 @@
 MoveEyesTimer = Runtime.start("MoveEyesTimer","Clock")
 
 def MoveEyes(timedata):
-
-  if RobotCanMoveEyesRandom:
+  
+  if RobotCanMoveEyesRandom and eyesTrackingisIdle and headTrackingisIdle:
     #redefine next loop
     MoveEyesTimer.setInterval(random.randint(200,1000))
     if isHeadActivated:
@@ -22,7 +22,7 @@ def MoveEyes(timedata):
 def MoveEyesStart():
   print "MoveEyesStart"
 
-  if RobotCanMoveEyesRandom:
+  if RobotCanMoveEyesRandom and eyesTrackingisIdle and headTrackingisIdle:
     if isHeadActivated:
         #head.setAcceleration(20)
       head.eyeX.enableAutoDisable(0)
@@ -32,7 +32,7 @@ def MoveEyesStart():
     
 def MoveEyesStop():
   
-  if RobotCanMoveEyesRandom:
+  if RobotCanMoveEyesRandom and eyesTrackingisIdle and headTrackingisIdle:
     if isHeadActivated:
       head.eyeX.enableAutoDisable(eyeXEnableAutoDisable)
       head.eyeY.enableAutoDisable(eyeYEnableAutoDisable)
