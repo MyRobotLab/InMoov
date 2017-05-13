@@ -113,6 +113,10 @@ def onStartSpeaking(text):
       print "onStartSpeaking error"
       pass
   if RobotIsStarted:
+
+    if 'oui' in text or 'yes' in text or 'ja' in text:Yes()
+    if 'non' in text or 'no' in text or 'nicht' in text or 'neen' in text:No()
+
     if random.randint(0,1)==1:MoveHeadTimer.startClock()
     if random.randint(0,1)==1:MoveEyesTimer.startClock()
     if flash_when_speak:PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
