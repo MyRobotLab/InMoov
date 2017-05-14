@@ -117,6 +117,46 @@ female_languagesMary = {
   'pl' : 'cmu-bdl-hsmm',
 }
 
+
+#experimental natural voices 
+male_languagesNatural = { 
+  'da' : 'Erik',
+  'nl' : 'Klaus',
+  'en' : 'Ryan',
+  'fr' : 'Bruno',
+  'de' : 'Klaus',
+  'it' : 'Vittorio',
+  'is' : 'Erik',
+  'no' : 'Erik',
+  'pt' : 'Celia ',
+  'ru' : 'Ryan',
+  'es' : 'Alberto',
+  'sv' : 'Erik',
+  'tr' : 'Ryan',
+  'ro' : 'Ryan',
+  'ja' : 'Sakura',
+  'pl' : 'Ryan',
+}
+
+female_languagesNatural = { 
+  'da' : 'Emma',
+  'nl' : 'Klaus',
+  'en' : 'Crystal',
+  'fr' : 'Louise',
+  'de' : 'Klaus',
+  'it' : 'Chiara',
+  'is' : 'Emma',
+  'no' : 'Emma',
+  'pt' : 'Celia',
+  'ru' : 'Ryan',
+  'es' : 'Rosa',
+  'sv' : 'Emma',
+  'tr' : 'Ryan',
+  'ro' : 'Ryan',
+  'ja' : 'Sakura',
+  'pl' : 'Ryan',
+}
+
 #Translate to :
 #TODO ADD TRANSLATED KEYWORDS
 en_languages = {
@@ -159,6 +199,11 @@ if MyvoiceTTS=="MarySpeech":
   translatorDegraded=1
   male_languages=male_languagesMary
   female_languages=female_languagesMary
+  
+if MyvoiceTTS=="NaturalReaderSpeech":
+  translatorDegraded=0
+  male_languages=male_languagesNatural
+  female_languages=female_languagesNatural
   
 if UseMaleVoice:
   ttsVoiceGender=male_languages
@@ -216,7 +261,7 @@ def translateText(text,language):
       sleep(4)
       runtime.exit()
     
-  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech":
+  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech" or MyvoiceTTS=="NaturalReaderSpeech":
     RealLang="0"
     
     try:
