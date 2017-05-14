@@ -41,6 +41,7 @@
 		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?
 	</template>
   </category>
+
   
   <topic name="firstinit">
   
@@ -245,7 +246,13 @@
       </li>
     </template>
   </category>
-
+  
+     <category>
+    <pattern>SHUTDOWN</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+  </category>
   
   <category>
     <pattern>WHAT IS THE TOPIC</pattern>

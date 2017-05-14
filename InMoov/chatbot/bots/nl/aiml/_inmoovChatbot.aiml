@@ -246,6 +246,12 @@
     </template>
   </category>
 
+    <category>
+    <pattern>afsluiten</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+    </category>
   
   <category>
     <pattern>WAT IS HET TOPIC</pattern>

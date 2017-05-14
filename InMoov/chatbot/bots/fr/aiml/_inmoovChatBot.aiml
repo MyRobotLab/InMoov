@@ -185,6 +185,12 @@
       <srai>DEBOUT</srai>
     </template>
   </category>
+   <category>
+    <pattern>EXTINCTION</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+  </category>
   <category>
     <pattern>GESTURES</pattern>
     <template>Démarrage du topic gestuelle.
