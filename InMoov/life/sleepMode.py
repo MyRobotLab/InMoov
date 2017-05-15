@@ -81,7 +81,7 @@ def welcomeMessage():
     else:
       chatBot.getResponse("WAKE_UP")
   else:
-    talkEvent(lang_ready)
+    talk(lang_ready)
   RobotIsStarted=1
     
 def humanDetected():    

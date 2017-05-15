@@ -1,8 +1,15 @@
 # ##############################################################################
 #                 VIRTUAL INMOOV SERVICE
 # ##############################################################################
+global virtualInmoovActivated
+virtualInmoovActivated=False
+if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:
+  if os.path.isdir(RuningFolder+'/jm3') and runtime.is64bit:
+    global virtualInmoovActivated
+    virtualInmoovActivated=True
+  else:
+    errorSpokenFunc("lang_VinmooovNoWorky")
 
-if ScriptType=="Virtual":talkEvent(lang_startingVirtual)
 
 #virtual inmoov
 i01.VinmoovMonitorActivated=1

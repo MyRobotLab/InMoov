@@ -60,6 +60,9 @@ def errorSpokenFunc(errorType,param="0"):
   if errorType=="lang_VoiceRssNoWorky":  
     errorSpokenAlert=lang_VoiceRssNoWorky
     
+  if errorType=="lang_VinmooovNoWorky":  
+    errorSpokenAlert=lang_VinmooovNoWorky
+    
     
     
     

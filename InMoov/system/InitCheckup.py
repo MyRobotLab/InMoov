@@ -77,7 +77,9 @@ for filename in sorted(os.listdir(RuningFolder+'services')):
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
-if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
+if virtualInmoovActivated:
+  talkEvent(lang_startingVirtual)
+  i01.startVinMoov()
 
 ################################
 # INIT.5 - ear.addcmmands
