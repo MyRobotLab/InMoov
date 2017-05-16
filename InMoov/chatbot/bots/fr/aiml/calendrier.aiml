@@ -68,24 +68,23 @@
   </category>
   <category>
     <pattern>DONNER LA DATE</pattern>
-    <template>Aujourd'hui nous sommes le <date format="%d %B, %Y" jformat="dd MMMMMMMMM, YYYY" /></template>
+    <template>Aujourd'hui nous sommes le <date format="%d %B, %Y" jformat="dd MMMMMMMMM , YYYY" /></template>
   </category>
   <category>
     <pattern>DATE ET HEURE</pattern>
     <template>La date et l'heure sont <date /></template>
   </category>
   <category>
-    <pattern>COMBIEN DE JOUR AVANT NOËL</pattern>
+    <pattern>COMBIEN DE JOURS AVANT NOËL</pattern>
     <template>
+    Il reste,
       <interval>
-        <jformat>MMMMMMMMM dd</jformat>
-        <style>jours</style>
-        <from>
-          <date jformat="MMMMMMMMM dd" />
-        </from>
-        <to>25 Decembre</to>
+        <jformat>dd MM</jformat>
+        <style>days</style>
+        <from><date jformat="dd MM" /></from>
+        <to>25 12</to>
       </interval>
-jours avant noël.</template>
+jours avant noël, ho ho ho.</template>
   </category>
   <!-- srai -->
   <category>
@@ -133,6 +132,7 @@ jours avant noël.</template>
   <category>
     <pattern>QUEL JOUR SOMMES NOUS</pattern>
     <template>
+      <srai>JOUR</srai>, 
       <srai>DONNER LA DATE</srai>
     </template>
   </category>
@@ -172,13 +172,7 @@ jours avant noël.</template>
       <srai>DONNER L HEURE</srai>
     </template>
   </category>
-  <category>
-    <pattern>QUEL JOUR SOMMES NOUS</pattern>
-    <template>
-      <srai>JOUR</srai>
-    </template>
-  </category>
-  <category>
+ <category>
     <pattern>ON EST QUOI AUJOURD HUI</pattern>
     <template>
       <srai>JOUR</srai>
@@ -255,7 +249,7 @@ jours avant noël.</template>
   <category>
     <pattern>COMBIEN DE TEMPS AVANT NOËL</pattern>
     <template>
-      <srai>COMBIEN DE JOUR AVANT NOËL</srai>
+      <srai>COMBIEN DE JOURS AVANT NOËL</srai>
     </template>
   </category>
 </aiml>
