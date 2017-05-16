@@ -31,6 +31,24 @@ try:
   HowManyPollsBySecond=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'HowManyPollsBySecond')
   MouthControlJawMin=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMin')
   MouthControlJawMax=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMax')
+  
+  try:
+    MouthControlJawTweak=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlJawTweak')
+  except:
+    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawTweak', False)
+    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytime', 1) 
+    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytimestop', 1) 
+    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytimeletter', 1) 
+    
+    with open(ThisSkeletonPart+'.config', 'wb') as f:
+      ThisSkeletonPartConfig.write(f)
+    ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
+    pass   
+    
+  MouthControlJawTweak=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlJawTweak')
+  MouthControlJawdelaytime=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawdelaytime')
+  MouthControlJawdelaytimestop=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawdelaytimestop')
+  MouthControlJawdelaytimeletter=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawdelaytimeletter')
   jawMIN=ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw')
   jawMAX=ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')
   neckRest=ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'neck')
@@ -165,10 +183,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       i01.startMouthControl(MyLeftPort)
       i01.mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       print "software mouthcontrol activation"
-      #MouthControl.setArduino(left,26)
-      #MouthControl.setJaw(head.jaw)
-      #MouthControl.startService()
-      #MouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
+      if MouthControlJawTweak:i01.mouthControl.setDelays(MouthControlJawdelaytime, MouthControlJawdelaytimestop, MouthControlJawdelaytimeletter)
       talkEvent(lang_startingMouth)
 # ##############################################################################
 #                 mouth control based on audio signal processing
