@@ -22,7 +22,49 @@
   </category>
   <category>
     <pattern>DONNER L HEURE</pattern>
-    <template>Il est exactement <date format="%I:%M %p" jformat="h:mm a" /></template>
+   <template>
+      <think><set name="heurequestion"> <date jformat="H"/></set></think>
+      Il est
+      <date jformat="H:mm"/>
+      .
+      <condition>
+        <li name="heurequestion" value="0">et oui, on est déja demain</li>
+        <li name="heurequestion" value="1">il commence à se faire tard d'ailleurs.</li>
+        <li name="heurequestion" value="2">il serait peut etre temps qu'on ailles recharger nos batteries , non ?</li>
+        <li name="heurequestion" value="3">il serait peut etre temps qu'on ailles recharger nos batteries , non ?</li>
+        <li name="heurequestion" value="4">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
+        <li name="heurequestion" value="5">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
+        <li name="heurequestion" value="6">Il est pas un peu tôt pour me réveiller ?</li>
+        <li name="heurequestion" value="7">déja debout, dis donc, tu es bien matinal.</li>
+        <li name="heurequestion" value="8">déja debout, dis donc, tu es bien matinal.</li>
+        <li name="heurequestion" value="9">tient tu fais pas la grasse mat aujourd'hui.</li>
+        <li name="heurequestion" value="10">quand je dis 10 heures, je parle pas du site de musique en ligne.</li>
+        <li name="heurequestion" value="11">il est l'heure de faire à manger</li>
+        <li name="heurequestion" value="12">dans 7 heures c'est l'apero.</li>
+        <li name="heurequestion" value="13">le JT à deja commencé, il y a un reportage sur les robot.</li>
+        <li name="heurequestion" value="14">l'heure de la sieste.</li>
+        <li name="heurequestion" value="15">enfin cela dépend du pays, sans parler de la relativité.</li>
+        <li name="heurequestion" value="16">pense à donner un gouté aux enfants.</li>
+        <li name="heurequestion" value="17">C'est bientôt l'heure de l'apéro en tous cas.</li>
+        <li name="heurequestion" value="18">c est l'heure de quoi déja?</li>
+        <li name="heurequestion" value="19">C'est l'heure de l'apéro, fais péter les morito.</li>
+        <li name="heurequestion" value="20">Il serait peut etre temps de passer à table.</li>
+        <li name="heurequestion" value="21">T'a encore loupé le film, il est déja commencé.</li>
+        <li name="heurequestion" value="22">fais toi un petit café, vu ta tête tu en as besoin.</li>
+        <li name="heurequestion" value="23">demain tu va encore avoir du mal à te lever.</li>
+        </condition>
+          <random>
+            <li>D'apres la position du soleil par rapport à la terre</li>
+            <li>C'est bien la peine d'être doté d'une intelligence artificielle si c'est pour répondre à ce genre de question à la con. </li>
+            <li>Ais-je l'air d'une horloge ?</li>
+            <li>La prochaine fois tu peux dire s'il te plait, je ne suis pas ta montre</li>
+            <li>comme hier à la même heure</li>
+            <li>c'est une montre que tu aurais du fabriquer, pas un robot.</li>
+            <li>La prochaine fois tu peux dire s'il te plait, je ne suis pas ta montre</li>
+            <li>C'est une bonne heure pour faire du code</li>
+          </random>
+ 
+    </template>
   </category>
   <category>
     <pattern>DONNER LA DATE</pattern>
