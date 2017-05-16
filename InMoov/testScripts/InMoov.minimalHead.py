@@ -81,6 +81,7 @@ i01.startEyelids(rightPort)
 i01.head.rollNeck.attach(right,12)
 i01.eyelids.eyelidleft.attach(right,22)
 i01.eyelids.eyelidright.attach(right,24)
+#i01.eyelids.blink(False)
 #################
 i01.head.enableAutoDisable(False)
 i01.head.enableAutoEnable(True)
