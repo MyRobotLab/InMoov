@@ -8,7 +8,7 @@ ScriptType=Virtual
 ; NoArduino: vocal Only
 ; Full: Both side arduinos connected
 ; Virtual: virtual arduino and inmoov !
-debug=0
+debug=False
 
 [VIRTUAL_INMOOV]
 virtualInmoovAlwaysActivated=False
@@ -45,16 +45,16 @@ VoiceRssApi=XXX
 EarEngine=WebkitSpeechRecognition
 ;WebkitSpeechRecognition or Sphinx
 
-IsMute=0
+IsMute=False
 ;talk about starting actions
 
 [GENERAL]
-LoadingPicture=0
-StartupSound=1
-IuseLinux=0
+LoadingPicture=False
+StartupSound=True
+IuseLinux=False
 ;some things dont work on mac and linux like marytts voice automatic download
-LaunchSwingGui=1
+LaunchSwingGui=True
 ;usefull to speedup the system sometime
-betaversion = 1
+betaversion = True
 ;develop branch updates
 ;----------------------------------- END --------------------------------------------------
