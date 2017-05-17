@@ -9,7 +9,7 @@
 
 
 def sleepModeWakeUp():
-  
+  ear.setAutoListen(True)
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock()
@@ -47,7 +47,7 @@ def sleepModeWakeUp():
 
 
 def sleepModeSleep():
-  
+  ear.setAutoListen(False)
   global RobotIsSleeping
   ImageDisplay.exitFS()
   ImageDisplay.closeAll()

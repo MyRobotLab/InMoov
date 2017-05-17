@@ -10,7 +10,7 @@
 i01.ear=Runtime.createAndStart("i01.ear", EarEngine)
 i01.startEar()
 ear = i01.ear
-
+ear.setAutoListen(True)
 
 # Start the webgui service without starting the browser
 webgui = Runtime.create("WebGui","WebGui")
