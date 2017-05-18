@@ -1100,5 +1100,164 @@
         <srai>STOP MODE DE VIE ALÉATOIRE</srai>
       </template>
     </category>
-
+    
+    <!-- deprecated ( enable is automatic ) -->
+    
+    <category>
+     <pattern>CONNECTE LA TÊTE</pattern>
+      <template>Je connecte ma tête.
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+    <pattern>CONNECTE LES YEUX</pattern>
+      <template>Mes yeux sont attachés.
+        <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECTE TES YEUX</pattern>
+      <template>
+        <srai>CONNECTE LES YEUX</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT * YEUX</pattern>
+      <template>
+        <srai>CONNECTE LES YEUX</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT YEUX</pattern>
+      <template>
+        <srai>CONNECTE LES YEUX</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT LISIEUX</pattern>
+      <template>
+        <srai>CONNECTE LES YEUX</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>CONNECTE MAIN DROITE</pattern>
+      <template>Connection de ma main droite.
+        <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECTE LA MAIN DROITE</pattern>
+      <template>
+        <srai>CONNECTE MAIN DROITE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECTE TA MAIN DROITE</pattern>
+      <template>
+        <srai>CONNECTE MAIN DROITE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT MAIN DROITE</pattern>
+      <template>
+        <srai>CONNECTE MAIN DROITE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT LA MAIN DROITE</pattern>
+      <template>
+        <srai>CONNECTE MAIN DROITE</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>CONNECTE MAIN GAUCHE</pattern>
+      <template>Je connecte ma main gauche.
+        <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECTE TA MAIN GAUCHE</pattern>
+      <template>
+        <srai>CONNECTE MAIN GAUCHE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECTE LA MAIN GAUCHE</pattern>
+      <template>
+        <srai>CONNECTE MAIN GAUCHE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT MAIN GAUCHE</pattern>
+      <template>
+        <srai>CONNECTE MAIN GAUCHE</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECT LA MAIN GAUCHE</pattern>
+      <template>
+        <srai>CONNECTE MAIN GAUCHE</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>ATTACHES TOUT</pattern>
+      <template>J'ai tout connecté.
+        <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECT TO</pattern>
+      <template>
+        <srai>ATTACHES TOUT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>CONNECTE TOUT</pattern>
+      <template>
+        <srai>ATTACHES TOUT</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>CONNECTE LE BRAS GAUCHE</pattern>
+      <template>Connection de mon bras gauche.
+        <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+    <pattern>CONNECTE BRAS DROIT</pattern>
+      <template>Connection de mon bras droit.
+        <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECTE LE BRAS DROIT</pattern>
+      <template>
+        <srai>CONNECTE BRAS DROIT</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>CONNECTE TORSE</pattern>
+      <template>Connection de mon torse.
+        <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>CONNECTE LE TORSE</pattern>
+      <template>
+        <srai>CONNECTE TORSE</srai>
+      </template>
+    </category>
+    <category>
+    <pattern>CONNECTE LA MÂCHOIRE</pattern>
+      <template>Connection de ma mâchoire.
+        <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+    <pattern>CONNECTE LA ROUE</pattern>
+      <template>Je n'ai pas de roue a attacher.
+        <oob><mrl><service>forwardServo</service><method>enable</method></mrl><mrl><service>directionServo</service><method>enable</method></mrl></oob></template>
+    </category>
+    <category>
+    <pattern>CONNECTE LE CAPTEUR</pattern>
+      <template>Je démarre mon capteur P.I.R.
+        <oob><mrl><service>i01</service><method>startPIR</method></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>DÉCONNECTE LE CAPTEUR</pattern>
+      <template>Je déconnecte mon capteur P.I.R.
+        <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
+    </category>
+    
 </aiml>
