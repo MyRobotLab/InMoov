@@ -2,8 +2,7 @@ def whataboutstarwars():
   PlayNeopixelAnimation("Ironman", 255, 255, 255, 1)
   sleep(3)
   StopNeopixelAnimation()
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.disableRobotCanMoveHeadRandom(30)
   x = (random.randint(1, 3))
   if x == 1:
       fullspeed()

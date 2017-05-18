@@ -1,9 +1,5 @@
 def VieAleatoireStop():
-  MoveHeadTimer.stopClock()
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
-  MoveBodyTimer.stopClock()
-  global MoveBodyRandom
-  MoveBodyRandom=0
+  i01.RobotCanMoveEyesRandom=0
+  i01.RobotCanMoveHeadRandom=0
 
   

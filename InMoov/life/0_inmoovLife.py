@@ -23,6 +23,6 @@ inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')
 
 HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
 HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
-global RobotCanMoveHeadWhileSpeaking
-RobotCanMoveHeadWhileSpeaking=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
+
+i01.RobotCanMoveHeadRandom=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
   

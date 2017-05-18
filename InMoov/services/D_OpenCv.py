@@ -76,14 +76,6 @@ def onOpenCVData(data):
   if data and not opencvStarted:
     opencvStarted=1
   global FaceDetected
-  global eyesTrackingisIdle
-  global headTrackingisIdle
-  try:
-    eyesTrackingisIdle=i01.eyesTracking.isIdle()
-    headTrackingisIdle=i01.headTracking.isIdle()
-  except:
-    pass
-  
 
 if isOpenCvActivated:openCvInit()
   

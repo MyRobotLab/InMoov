@@ -1,6 +1,5 @@
 def No():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.disableRobotCanMoveHeadRandom(30)
   # WE MOVE THE ROTHEAD OR PISTONMOD
   if isHeadActivated==1:
     i01.setHeadVelocity(40,40,40)
@@ -24,4 +23,4 @@ def No():
       rollneck.moveTo(120)
       sleep(1)
       rollneck.moveTo(90)
-  RobotCanMoveHeadWhileSpeaking=1
+  

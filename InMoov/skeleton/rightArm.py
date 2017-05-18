@@ -50,6 +50,7 @@ except:
 # ##############################################################################
 
 if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  or ScriptType=="Virtual":
+  isRightArmActivated=1
   if RightPortIsConnected:
     talkEvent(lang_startingRightArm)
     rightArm = Runtime.create("i01.rightArm", "InMoovArm")

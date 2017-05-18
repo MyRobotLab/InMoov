@@ -10,16 +10,10 @@
 
 global RobotIsStarted
 RobotIsStarted=0
-global RobotIsActualySpeaking
-RobotIsActualySpeaking=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
 RobotCanMoveBodyRamdom=0
-global RobotCanMoveHeadWhileSpeaking
-RobotCanMoveHeadWhileSpeaking=1
-global RobotCanMoveEyesRandom
-RobotCanMoveEyesRandom=1
 global RobotIsSleeping
 RobotIsSleeping=0
 global RobotneedUpdate

@@ -1,6 +1,6 @@
 def facerecognizer():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+    
+  i01.disableRobotRandom(30)
   if (i01.eyesTracking.getOpenCV().capturing):
     i01.headTracking.stopTracking()
     i01.eyesTracking.stopTracking()

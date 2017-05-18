@@ -104,6 +104,7 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 # ##############################################################################
 
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isHeadActivated=1
   if LeftPortIsConnected:
     talkEvent(lang_startingHead)
     head = Runtime.create("i01.head","InMoovHead")

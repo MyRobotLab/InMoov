@@ -49,6 +49,7 @@ except:
 # ##############################################################################
 
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isLeftHandActivated=1
   if LeftPortIsConnected:
     talkEvent(lang_startingLeftHand)
     

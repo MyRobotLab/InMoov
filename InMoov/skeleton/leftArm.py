@@ -47,6 +47,7 @@ except:
 # ##############################################################################
 
 if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
+  isLeftArmActivated=1
   if LeftPortIsConnected==True:
     talkEvent(lang_startingLeftArm)
     

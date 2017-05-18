@@ -1,6 +1,5 @@
 def Yes():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.disableRobotCanMoveHeadRandom(30)
   
   if isHeadActivated==1:
     i01.setHeadVelocity(40,40,40)
@@ -18,4 +17,4 @@ def Yes():
     sleep(0.5)
     i01.moveHead(90,90)
 
-  RobotCanMoveHeadWhileSpeaking=1
+  

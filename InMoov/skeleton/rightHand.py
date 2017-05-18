@@ -51,6 +51,7 @@ except:
 # ##############################################################################
 
 if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") or ScriptType=="Virtual":
+  isRightHandActivated=1
   if RightPortIsConnected:
     talkEvent(lang_startingRightHand)
     
