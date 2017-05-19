@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File:translator-->
+  <!-- Author: Gael Langevin -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <!-- Commande + SRAI to get the robot in translate mode  -->
+  <category>
+    <pattern>TRANSLATION IN *</pattern>
+    <template>
+      <think>
+        <set name="topic">TRANSLATOR</set>
+      </think>
+      <think>
+        <set name="languetraduction">
+          <star />
+        </set>
+      </think>
+      <li>
+        Translating in <star />, tell me : stop translate, and I will stop
+      </li>
+    </template>
+  </category>
+  <category>
+    <pattern>TRANSLATION TO *</pattern>
+    <template>
+      <srai>TRANSLATION IN <star index="1" /></srai>
+    </template>
+  </category>
+  <!-- End translate mode -->
+  <!-- Commande to launch translation of a phrase -->
+  <category>
+    <pattern>TRANSLATE *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <!-- End translation phrase -->
+  <!-- Commande to launch a phrase to traduction + SRAI  -->
+  <category>
+    <pattern>TRANSLATE * IN *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1" />","<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>TRANSLATE * TO *</pattern>
+    <template>
+      <srai>TRANSLATE <star index="1" /> IN <star index="2" /></srai>
+    </template>
+  </category>
+  <!-- returns the function  -->
+  <category>
+    <pattern>AZURE_ERROR_1</pattern>
+    <template>
+      Sorry there is a probleme of communication with the azure server, try again and check the key !
+    </template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_2 *</pattern>
+    <template>
+      I don't know this language <star index="1" />, or the syntax in the azure file is incorrect !
+    </template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_3</pattern>
+    <template>
+      I seem to have trouble connecting myself to the server .
+    </template>
+  </category>
+   <!-- We use topic to seal the discussion -->
+  <topic name="TRANSLATOR">
+   <category>
+    <pattern># STOP TRANSLATE #</pattern>
+    <template>
+      <think>
+        <set name="topic">GESTURES</set>
+      </think>
+      <think>
+        <set name="languetraduction">en</set>
+      </think>
+      <li>Okay, I will stop translating, it was nice speaking that language</li>
+    </template>
+  </category>
+    <category>
+      <pattern>#</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+  </topic>
+</aiml>

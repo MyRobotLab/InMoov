@@ -35,16 +35,16 @@ echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
 echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
 echo ------------------------------------------------------
 timeout 2 > NUL
-java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB
+java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
 echo ------------------------------------------------------
 echo START MRL & INMOOV
 echo ------------------------------------------------------
 cls
-if not exist %cd%\Inmoov\Inmoov.py (
-    echo ERROR : %cd%\Inmoov\Inmoov.py DOES NOT EXIST
-    echo PLEASE PUT SCRIPT AND FOLDERS INSIDE Inmoov FOLDER
+if not exist %cd%\Inmoov\InMoov.py (
+    echo ERROR : %cd%\InMoov\InMoov.py DOES NOT EXIST
+    echo PLEASE PUT SCRIPT AND FOLDERS INSIDE InMoov FOLDER
     timeout 10 > NUL
 ) else (
-java -jar myrobotlab.jar -invoke python execFile %cd%/Inmoov/Inmoov.py -service python Python
+java -jar myrobotlab.jar -invoke python execFile %cd%/InMoov/InMoov.py -service python Python
 )
 

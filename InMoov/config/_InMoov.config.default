@@ -1,0 +1,60 @@
+;----------------------------- BASIC CONFIGURATION ----------------------------------------
+
+[MAIN]
+ScriptType=Virtual
+; RightSide: Also called FINGERSTARTER : connect one arduino ( called right ) to use FingerStarter + inmoov right side
+; LeftSide: connect one arduino ( called left) to use head / inmoov left side
+; setup your com ports inside service_6_Arduino.config
+; NoArduino: vocal Only
+; Full: Both side arduinos connected
+; Virtual: virtual arduino and inmoov !
+debug=False
+
+[VIRTUAL_INMOOV]
+virtualInmoovAlwaysActivated=False
+;use real arduino + virtual inmoov
+
+[TTS]
+MyLanguage=en
+; en,fr,es,de,nl
+
+MyvoiceTTS=MarySpeech
+; you can use MarySpeech,Polly,VoiceRss 
+
+MyvoiceType=cmu-bdl-hsmm
+; Voices are automatic donwloaded
+; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
+
+; amazon polly :  https://github.com/MyRobotLab/inmoov/wiki/POLLY-TTS
+
+AWSAccessKeyId=XXX
+AWSSecretKey=XXX/YYY
+
+; voiceRss use language only cant change the voice
+VoiceRssApi=XXX
+
+;----------------------------------- END --------------------------------------------------
+
+
+
+;----------------------------- ADVANCED & OPTIONAL CONFIGURATION -------------------------------------
+
+
+[VOCAL]
+
+EarEngine=WebkitSpeechRecognition
+;WebkitSpeechRecognition or Sphinx
+
+IsMute=False
+;talk about starting actions
+
+[GENERAL]
+LoadingPicture=False
+StartupSound=True
+IuseLinux=False
+;some things dont work on mac and linux like marytts voice automatic download
+LaunchSwingGui=True
+;usefull to speedup the system sometime
+betaversion = True
+;develop branch updates
+;----------------------------------- END --------------------------------------------------

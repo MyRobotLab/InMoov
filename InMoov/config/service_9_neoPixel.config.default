@@ -1,0 +1,20 @@
+;----------------------------- NEOPIXEL RX/TX CONFIG ----------------------------------------
+[MAIN]
+isNeopixelActivated=False
+NeopixelMaster=left
+;NeopixelMaster= right / left
+NeopixelMasterPort=Serial2
+;NeopixelMasterPort= COMx for usb / Serialx for rx-tx ( Serial is case sensitive )
+[NEOPIXEL]
+pin=2
+numberOfPixel=16
+
+;Background neopixel reactions
+[BASIC_REACTIONS]
+boot_green=True
+downloadSomething_blue=True
+error_red=True
+flash_when_speak = True
+;----------------------------------- END --------------------------------------------------
+
+

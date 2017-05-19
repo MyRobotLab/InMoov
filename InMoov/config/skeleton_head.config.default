@@ -1,0 +1,115 @@
+;----------------------------- HEAD CONFIGURATION ----------------------------------------
+
+[MAIN]
+isHeadActivated=False
+
+[ROLLNECKSERVO]
+isrollneckactivated = True
+RollNeckArduino=left
+;RollNeckArduino=left or right
+
+[SERVO_MINIMUM_MAP_OUTPUT]
+;your servo minimal limits
+jaw=10
+eyeX=60
+eyeY=50
+neck=20
+rothead=30
+rollneck=20
+
+[SERVO_MAXIMUM_MAP_OUTPUT]
+;your servo maximal limits
+jaw=25
+eyeX=100
+eyeY=100
+neck=160
+rothead=150
+rollneck=170
+
+[SERVO_REST_POSITION]
+jaw=0
+eyeX=90
+eyeY=90
+neck=90
+rothead=90
+rollneck=90
+
+;robot move the jaw while speaking
+[MOUTHCONTROL]
+MouthControlActivated=True
+;How much the jaw move ( after map )
+MouthControlJawMin=0
+MouthControlJawMax=100
+
+MouthControlJawTweak=False
+MouthControlJawdelaytime=1
+MouthControlJawdelaytimestop=1
+MouthControlJawdelaytimeletter=1
+
+
+
+
+
+
+
+;----------------------------------- ADVANCED CONFIGURATION --------------------------------------------------
+
+[AUDIOSIGNALPROCESSING]
+;this is optional direct mouthcontrol
+AudioSignalProcessing=False
+;analog pin range are 14-18 on uno, 54-70 on mega
+AnalogPin=59
+HowManyPollsBySecond=50
+sensibility=20
+
+[SERVO_INVERTED]
+jaw=False
+eyeX=False
+eyeY=False
+neck=False
+rothead=False
+rollneck=False
+
+[MINIMUM_MAP_INPUT]
+jaw=0
+eyeX=0
+eyeY=0
+neck=0
+rothead=0
+rollneck=0
+
+[MAXIMUM_MAP_INPUT]
+jaw=180
+eyeX=180
+eyeY=180
+neck=180
+rothead=180
+rollneck=180
+
+[MAX_VELOCITY]
+neck=-1
+rothead=-1
+jaw=-1
+eyeX=-1
+eyeY=-1
+rollneck=-1
+
+[SERVO_PIN]
+jaw=26
+eyeX=22
+eyeY=24
+neck=12
+rothead=13
+rollneck=30
+
+[SERVO_AUTO_DISABLE]
+jaw=True
+eyeX=True
+eyeY=True
+neck=True
+rothead=True
+rollneck=True
+
+;----------------------------------- END --------------------------------------------------
+
+

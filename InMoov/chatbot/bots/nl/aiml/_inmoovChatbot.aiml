@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: chatBot.aiml -->
+  <!-- Author: Gael Langevin -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: May 5, 2017 -->
+  <!-- This inmoovNetherland brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  
+     <!-- initialisation  -->
+	 <!-- updater  -->
+	 <!-- gesture  -->
+  
+  
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+   <!-- initialisaion  -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+		Hallo, dit is mijn eerste initialisatie. Ik heb wat informatie nodig, ik luister, wat is mijn naam ?
+	</template>
+  </category>
+  
+  <topic name="firstinit">
+  
+    <category>
+      <pattern>#</pattern>
+      <that># wat is mijn naam #</that>
+      <template>
+        <set name="questionfirstinit">als mijn naam is <star /> , zeg ja, of nee</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># Mag ik je naam weten #</that>
+      <template>
+        <set name="questionfirstinit">als je naam is <star /> , zeg ja, of nee</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># ja #</pattern>
+      <that># als mijn naam is #</that>
+      <template>
+        <random>
+			<li>
+			Ik vind deze naam leuk , <get name="tmpname" />.
+			</li>
+			<li>
+			Zeer mooie naam, <get name="tmpname" /> is geweldig.
+			</li>
+        </random>
+	Ik moet je kennen, ik luister, Mag ik je naam weten ?
+	<think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+	
+    <category>
+      <pattern># ja #</pattern>
+      <that># als je naam #</that>
+      <template>
+        <random>
+		<li>
+			Nu ken ik jou, <get name="tmpname" />. ik ben blij.
+		</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># nee #</pattern>
+      <that># als mijn naam is #</that>
+      <template>
+	We starten opnieuw.
+  Ik luister. wat is mijn naam ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern># nee #</pattern>
+      <that># als je naam #</that>
+      <template>
+	We starten opnieuw.
+  Ik luister. Mag ik je naam weten ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># zeg ja, of nee #</that>
+      <template>
+        <random>
+          <li>
+	Gelieve mijn vraag te beantwoorden, het is belangrijk
+	</li>
+          <li>
+	ik herhaal.
+	</li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  
+  <!-- updater  -->
+  
+  <category>
+    <pattern>SYSTEM_NEW_VERSION</pattern>
+    <template>
+       <think><set name="topic">updater</set></think>
+	   Alert, nieuwe Inmoov besturingssysteem versie beschikbaar, als u dat wenst, kan ik het bijwerken, ja of nee
+	   </template>
+  </category>
+  
+  <topic name="updater">
+  
+	
+    <category>
+      <pattern># YES #</pattern>
+      <that># zeg ja #</that>
+      <template>
+       <think>
+         <set name="topic">default</set>
+        </think>
+			<li>
+			Begin de download, wacht alstublieft.
+			</li>
+	<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob>		
+	</template>
+    </category>
+	
+     <category>
+      <pattern># NO #</pattern>
+      <that># zeg ja #</that>
+      <template>
+	  <think>
+         <set name="topic">default</set>
+        </think>
+	Oké, zoals je wil, misschien de volgende keer
+		<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob>	
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># zeg ja #</that>
+      <template>Gelieve mijn vraag te stellen, het is belangrijk, ja of nee zeggen</template>
+    </category>
+		
+  </topic>
+  
+    <category>
+    <pattern>* SYSTEM_PERCENT</pattern>
+    <template>
+      <li>
+        <star /> procent.
+      </li>
+    </template>
+  </category>
+  
+  
+      <category>
+    <pattern>SYSTEM_DOWNLOAD_OK</pattern>
+    <template>
+      <li>
+       Download ok, ik zal afsluiten. Herstart me alsjeblieft opnieuw.
+      </li>
+    </template>
+  </category>
+  
+    <!-- end updater  -->
+  
+	<!-- gesture  -->
+  
+  
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+      <li>
+        <random>
+          <li>Ik ben klaar en luisterend.</li>
+          <li>Wat kan ik voor je doen.</li>
+          <li>Hoe kan ik u helpen.</li>
+        </random>
+      </li>
+    </template>
+  </category>
+
+    <category>
+    <pattern>afsluiten</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+    </category>
+  
+  <category>
+    <pattern>WAT IS HET TOPIC</pattern>
+    <template>Het onderwerp is
+      <get name="topic" /></template>
+  </category>
+  <category>
+    <pattern>BOOT UP MODE</pattern>
+    <template>Invoeren in het opstartonderwerp.
+      <think><set name="topic">BOOTUP</set></think></template>
+  </category>
+  <category>
+    <pattern>GEBAREN</pattern>
+    <template>Invoeren in het gebaaronderwerp.
+      <think><set name="topic">GEBAREN</set></think></template>
+  </category>
+  <category>
+    <pattern>GEBAREN *</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GEBAREN</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* GEBAREN *</pattern>
+    <template>
+      <srai>GEBAREN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ALLES ALLEN</pattern>
+    <template>alles allen
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>DETACHT ALLES</pattern>
+    <template>
+      <srai>ALLES ALLEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD ALLES AAN</pattern>
+    <template>Alles bevestigen
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>AANVULLEN ALLES</pattern>
+    <template>
+      <srai>HOUD ALLES AAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE RECHTERHAND VAST</pattern>
+    <template>Bevestig mijn rechterhand
+      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE RECHTERHAND VAST</pattern>
+    <template>
+      <srai>HOUD DE RECHTERHAND VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOGSTE HAND AANVULLEN</pattern>
+    <template>Het verwijderen van mijn rechterhand
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTBIND JOUW RECHTE HAND</pattern>
+    <template>
+      <srai>HOOGSTE HAND AANVULLEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKERHAND VAST</pattern>
+    <template>Bevestig mijn linkerhand
+      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKERHAND VAST</pattern>
+    <template>
+      <srai>HOUD DE LINKERHAND VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN LINK HAND</pattern>
+    <template>Verwijderen van mijn linkerhand
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTWERP JOU LEFT HAND</pattern>
+    <template>
+      <srai>BINNEN LINK HAND</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOFDSTUK</pattern>
+    <template>Mijn hoofd bevestigen
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE HOOFD VAST</pattern>
+    <template>
+      <srai>HOOFDSTUK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOOFDDEKEN</pattern>
+    <template>Afscheiding van mijn hoofd
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONDERNEMEN HOOFD</pattern>
+    <template>
+      <srai>HOOFDDEKEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE RECHTERARM VAST</pattern>
+    <template>Bevestig mijn rechterarm
+      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE RECHTERARM VAST</pattern>
+    <template>
+      <srai>HOUD DE RECHTERARM VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LET OP RECHTS ARM</pattern>
+    <template>Verwijderen van mijn rechterarm
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HAAL DE RECHTERARM AF</pattern>
+    <template>
+      <srai>LET OP RECHTS ARM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE LINKER ARM VAST</pattern>
+    <template>Bevestig mijn linkerarm
+      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE LINKER ARM VAST</pattern>
+    <template>
+      <srai>HOUD DE LINKER ARM VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN LINKS ARM</pattern>
+    <template>Verwijderen van mijn linkerarm
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONTWERP LEFT ARM</pattern>
+    <template>
+      <srai>BINNEN LINKS ARM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOUD DE ROMP VAST</pattern>
+    <template>Mijn romp bevestigen
+      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>HOUD JE ROMP VAST</pattern>
+    <template>
+      <srai>HOUD DE ROMP VAST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BINNEN ROMP</pattern>
+    <template>Het losmaken van mijn romp
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ONDERNEMEN ROMP</pattern>
+    <template>
+      <srai>BINNEN ROMP</srai>
+    </template>
+  </category>
+</aiml>
