@@ -7,7 +7,7 @@ def No():
     if random.randint(0,1)==1:
       #i01.attach()
       i01.moveHead(80,130)
-      sleep(0.8)
+      sleep(0.5)
       i01.moveHead(80,50)
       sleep(0.8)
       i01.moveHead(81,130)
