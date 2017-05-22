@@ -38,10 +38,6 @@ def openCvInit():
   if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
   opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
-  opencv.addFilter("PyramidDown")
-  opencv.addFilter("Gray")
-  opencv.addFilter("FaceDetect")
-  opencv.setDisplayFilter("FaceDetect")
   opencv.capture()
   #worky open cv camera detection
   timeout=0
@@ -57,6 +53,6 @@ def openCvInit():
   else:talkEvent(lang_startingOpenCv)
   
   opencv.removeFilters()
-  #opencv.stopCapture()
+  opencv.stopCapture()
   
 if isOpenCvActivated:openCvInit()
