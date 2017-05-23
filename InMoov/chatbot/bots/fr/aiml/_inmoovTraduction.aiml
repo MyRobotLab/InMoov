@@ -2,8 +2,8 @@
 <aiml>
   <!-- File: traduction.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: October 19, 2016 -->
-  <!--  -->
+  <!-- Last modified: May 21, 2017 -->
+  <!-- Anthony Gallot -->
   <!-- This AIML file is part of the INMOOVSUPER 0.0.1 chat bot knowledge base. -->
   <!--  -->
   <!-- The INMOOVFRENCH brain is Copyright &copy; 2016 by Inmoov and Myrobotlab community. -->
@@ -89,6 +89,12 @@
           <param>translateText("<star index="1" />","<star index="2" />")</param>
         </mrl>
       </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>TRADUIS * EN *</pattern>
+    <template>
+      <srai>TRADUIT <star index="1" /> EN <star index="2" /></srai>
     </template>
   </category>
   <category>

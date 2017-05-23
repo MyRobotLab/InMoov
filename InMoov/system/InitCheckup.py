@@ -88,8 +88,11 @@ if virtualInmoovActivated:
 for root, subdirs, files in os.walk(RuningFolder+'minimal'):
   for name in files:
     if name.split(".")[-1] == "py":
-      execfile(os.path.join(root, name).encode('utf8'))
-      if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)    
+      if (isChatbotActivated and name.split(".")[0][:11] == "earCommands"):
+        print name.split(".")[0]," not loaded because chatbot is activated"
+      else:  
+        execfile(os.path.join(root, name).encode('utf8'))
+        if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)    
 
 
 ################################
