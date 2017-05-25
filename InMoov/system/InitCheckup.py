@@ -56,7 +56,7 @@ if LoadingPicture:
 # INIT.2 - mrl core updater
 ################################
 
-#execfile(RuningFolder+'/system/updater/mrl_updater.py')
+execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 ################################
 # INIT.3 - services call

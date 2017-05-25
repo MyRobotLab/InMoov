@@ -16,7 +16,7 @@ echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
 echo .
 move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar
-if not exist %cd%\repo.json (
+if exist %cd%\mrlNeedReinstall (
 RMDIR /S /Q .myrobotlab
 RMDIR /S /Q haarcascades
 RMDIR /S /Q hogcascades
@@ -29,6 +29,7 @@ RMDIR /S /Q tessdata
 del ivychain.xml
 del myrobotlab.log
 del repo.json
+del mrlNeedReinstall
 )
 echo ------------------------------------------------------
 echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
