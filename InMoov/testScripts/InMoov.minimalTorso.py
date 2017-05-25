@@ -15,7 +15,7 @@ Voice="cmu-bdl-hsmm" #Male US voice
 #Voice="cmu-slt-hsmm" #Default female for MarySpeech
 voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
-mouth.installComponentsAcceptLicense(Voice)
+#mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(voiceType)
 ##############
 # starting InMoov service
