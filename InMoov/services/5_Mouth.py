@@ -178,7 +178,7 @@ def checkAndDownloadVoice():
       if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
-        runtime.exit()
+        killRuntime()
       else:
         errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
         

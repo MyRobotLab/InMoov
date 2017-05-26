@@ -9,7 +9,7 @@
 
 if LaunchSwingGui:
   SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
-  SwingGui.closeTimeout=10
+  SwingGui.closeTimeout=8
 python.subscribe(runtime.getName(),"publishShutdown")
 
 def onShutdown(data):

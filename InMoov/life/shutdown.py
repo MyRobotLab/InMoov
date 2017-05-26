@@ -13,9 +13,7 @@ def shutdown():
   i01.halfSpeed()
   i01.rest()
   sleep(7)
-  if opencvStarted:opencv.stopCapture()
+  if isOpenCvActivated:opencv.stopCapture()
   i01.disable()
   switchOffAllNervo()
-  SwingGui.closeTimeout=0
-  #cli.stopService()
-  runtime.shutdown()
+  killRuntime()

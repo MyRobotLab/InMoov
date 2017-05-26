@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*- 
+def killRuntime():
+  subprocess.call("taskkill /IM java.exe /F")
+  subprocess.call("taskkill /IM javaw.exe /F")
+  runtime.shutdown()
+
 def CheckIfRobotCanLaunchAPPS(Needs):
   for modules in Needs:
     if not modules:

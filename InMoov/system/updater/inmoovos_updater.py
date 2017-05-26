@@ -11,7 +11,7 @@ def CheckVersion():
   #download remote information
   remoteVersion=""
   try:
-    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/Inmoov/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
+    urlretrieve("https://raw.githubusercontent.com/MyRobotLab/inmoov/"+branch+"/InMoov/system/updater/updater.ini", RuningFolder+'system/updater/updater.ini')
     #read downloaded file
     BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
     BasicConfig.read(RuningFolder+'system/updater/updater.ini')
@@ -63,13 +63,14 @@ def updateMe():
     r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_1024-600.jpg',1)
     sleep(2)
     talkDownloadPercent.startClock()
-    urlretrieve(target, RuningFolder+'system/updater/myrobotlab-'+branch+".jar",reporthook=dlProgress)
+    urlretrieve(target, RuningFolder+'myrobotlab-'+branch+".jar",reporthook=dlProgress)
     sleep(2)
     talkDownloadPercent.stopClock()
     chatBot.getResponse("SYSTEM_DOWNLOAD_OK")
-    StopNeopixelAnimation()
     sleep(3)
-    runtime.exit()
+    open("mrlNeedReinstall", 'a').close()
+    RemoveFile(RuningFolder+'system/updater/currentMrlVersion.ini')
+    shutdown()
 
 def dontUpdateMe():
   
