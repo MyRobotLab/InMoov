@@ -25,13 +25,25 @@ isOpenCvActivated=ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated')
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
+try:
+  streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+except:
+  ThisServicePartConfig.set('MAIN','streamerEnabled',False)
+  with open(ThisServicePart+'.config', 'wb') as f:
+    ThisServicePartConfig.write(f)
+  ThisServicePartConfig.read(ThisServicePart+'.config')
+  pass
+streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
 
 
-i01.opencv = Runtime.createAndStart("i01.opencv", "OpenCV")
+i01.opencv = Runtime.create("i01.opencv", "OpenCV")
 opencv=i01.opencv
+opencv.streamerEnabled=streamerEnabled
+i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():
   global isOpenCvActivated
