@@ -60,7 +60,7 @@ def updateMe():
     RobotneedUpdate=0
     print "start"
     PlayNeopixelAnimation("Theater Chase", 0, 0, 255, 5)
-    r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_1024-600.jpg',1)
+    displayPic(RuningFolder+'system/pictures/update_1024-600.jpg')
     sleep(2)
     talkDownloadPercent.startClock()
     urlretrieve(target, RuningFolder+'myrobotlab-'+branch+".jar",reporthook=dlProgress)

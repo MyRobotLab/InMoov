@@ -46,12 +46,6 @@ execfile(RuningFolder+'/system/languagePack.py')
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
 
-
-
-ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")
-if LoadingPicture:
-  r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/loading_1024-600.jpg',1)
-
 ################################
 # INIT.2 - mrl core updater
 ################################
@@ -134,7 +128,7 @@ if boot_green:
 sleep(1)
 #first init check
 if CheckVersion() and isChatbotActivated:
-  r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
+  displayPic(RuningFolder+'system/pictures/update_available_1024-600.jpg')
   chatBot.getResponse("SYSTEM_NEW_VERSION")
   
 else:

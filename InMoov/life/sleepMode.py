@@ -19,7 +19,7 @@ def sleepModeWakeUp():
     ImageDisplay.exitFS()
     ImageDisplay.closeAll()
     
-    if LoadingPicture:r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/loading_1024-600.jpg',1)
+    displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
     
     rdmWakup=random.randint(1,3)
     if rdmWakup==1:
@@ -53,7 +53,7 @@ def sleepModeSleep():
   ImageDisplay.closeAll()
     
   #display sleeping robot on screen
-  r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/sleeping_1024-600.jpg',1)
+  displayPic(RuningFolder+'/system/pictures/sleeping_1024-600.jpg')
   #head down
   if isHeadActivated:
     head.neck.setVelocity(60)
