@@ -8,8 +8,8 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: April 28, 2017 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- Last modified: May 29, 2017 -->
+  <!-- This inmoovRussian brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
@@ -50,7 +50,7 @@
       <pattern>#</pattern>
       <that># what is my name #</that>
       <template>
-        <set name="questionfirstinit">if my name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">Если меня зовут <star /> , скажи да или нет</set>
         <think>
           <set name="tmpname">
             <star />
