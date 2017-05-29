@@ -3,16 +3,6 @@
 # ##############################################################################
 
 ################################
-# INIT.0
-################################
-
-print "MRL version : ",runtime.getVersion()[-4:]
-print "Inmoov version : ",version
-print "Starting..."
-
-
-
-################################
 # INIT.1 - system dependencies & language pack
 ################################
 #subconsciousMouth for diagnose
@@ -37,7 +27,7 @@ execfile(RuningFolder+'/system/ConfigParser.py')
 if DEBUG:
   runtime.setLogLevel("INFO")
 else:
-  runtime.setLogLevel("WARN")
+  runtime.setLogLevel("ERROR")
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
