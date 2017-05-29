@@ -48,7 +48,7 @@
   
     <category>
       <pattern>#</pattern>
-      <that># what is my name #</that>
+      <that># я слушаю, как меня зовут #</that>
       <template>
         <set name="questionfirstinit">Если меня зовут <star /> , скажи да или нет</set>
         <think>
@@ -61,9 +61,9 @@
 	
     <category>
       <pattern>#</pattern>
-      <that># may I have your name #</that>
+      <that># могу ли я узнать ваше имя #</that>
       <template>
-        <set name="questionfirstinit">if your name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">Если ваше имя <star /> , скажи да или нет</set>
         <think>
           <set name="tmpname">
             <star />
@@ -73,28 +73,28 @@
     </category>
 	
     <category>
-      <pattern># YES #</pattern>
-      <that># if my name is #</that>
+      <pattern># да #</pattern>
+      <that># Если меня зовут #</that>
       <template>
         <random>
 			<li>
-			I like this name , <get name="tmpname" />.
+			Мне нравится это имя , <get name="tmpname" />.
 			</li>
 			<li>
-			Very nice name, <get name="tmpname" /> is great.
+			Очень красивое имя, <get name="tmpname" /> отлично.
 			</li>
         </random>
-	I need to know you, I am listening, may I have your name ?
+	Мне нужно знать вас, я слушаю, могу ли я узнать ваше имя ?
 	<think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
 	
     <category>
-      <pattern># YES #</pattern>
-      <that># if your name #</that>
+      <pattern># да #</pattern>
+      <that># Если ваше имя #</that>
       <template>
         <random>
 		<li>
-			Now I know you, <get name="tmpname" />. I am glad.
+			Теперь я тебя знаю, <get name="tmpname" />. я рад.
 		</li>
         </random>
 		
@@ -117,33 +117,31 @@
     </category>
 	
     <category>
-      <pattern># NO #</pattern>
-      <that># if my name is #</that>
+      <pattern># нет #</pattern>
+      <that># Если меня зовут #</that>
       <template>
-	We restart.
-	I am listening. what is my name ?
+    я слушаю, как меня зовут ?
     </template>
     </category>
 	
     <category>
-      <pattern># NO #</pattern>
-      <that># if your name #</that>
+      <pattern># нет #</pattern>
+      <that># Если ваше имя #</that>
       <template>
-	We restart.
-	I am listening. may I have your name ?
+    могу ли я узнать ваше имя ?
     </template>
     </category>
 	
     <category>
       <pattern>#</pattern>
-      <that># say yes, or no #</that>
+      <that># скажи да или нет #</that>
       <template>
         <random>
           <li>
-	Please, answer my question, it is important
+	Пожалуйста, ответьте на мой вопрос, это важно
 	</li>
           <li>
-	I repeat.
+  я повторяю.
 	</li>
         </random>
         <get name="questionfirstinit" />
@@ -398,7 +396,7 @@
     <template>
       <li>
         <random>
-          <li>I am ready and listening.</li>
+          <li>Я готов и слушаю.</li>
           <li>What can I do for you.</li>
           <li>How can I help you.</li>
         </random>
