@@ -29,7 +29,7 @@ if str(now.year)!=str(runtime.getVersion()[:4]):
       SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
     except:
       pass
-    displayPic(RuningFolder+'system/pictures/update_1024-600.jpg')
+
     #update version
     currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
     with open(iniFile, 'w') as configfile:
@@ -39,6 +39,4 @@ if str(now.year)!=str(runtime.getVersion()[:4]):
     open("mrlNeedReinstall", 'a').close()
     errorSpokenFunc('lang_newMRL')
     sleep(4)
-    ImageDisplay.exitFS()
-    ImageDisplay.closeAll()
     killRuntime()
