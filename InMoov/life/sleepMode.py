@@ -14,7 +14,7 @@ def sleepModeWakeUp():
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock()
   
-  if RobotIsStarted:
+  if i01.RobotIsStarted:
     
     ImageDisplay.exitFS()
     ImageDisplay.closeAll()
@@ -39,21 +39,18 @@ def sleepModeWakeUp():
   else:
     if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
-  
-  global RobotIsSleeping
-  RobotIsSleeping=0
+  i01.RobotIsSleeping=0
   StopNeopixelAnimation()
 
 
 
 def sleepModeSleep():
   ear.setAutoListen(False)
-  global RobotIsSleeping
   ImageDisplay.exitFS()
   ImageDisplay.closeAll()
     
   #display sleeping robot on screen
-  displayPic(RuningFolder+'/system/pictures/sleeping_1024-600.jpg')
+  displayPic(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
   #head down
   if isHeadActivated:
     head.neck.setVelocity(60)
@@ -65,14 +62,13 @@ def sleepModeSleep():
   sleep(2)
   PlayNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
   
-  RobotIsSleeping=1
+  i01.RobotIsSleeping=1
   #restart pir poling
   if isPirActivated:
     PirControlerArduino.enablePin(PirPin,1)
     
     
 def welcomeMessage():
-  global RobotIsStarted
   
   if isChatbotActivated:
     if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
@@ -82,7 +78,7 @@ def welcomeMessage():
       chatBot.getResponse("WAKE_UP")
   else:
     talk(lang_ready)
-  RobotIsStarted=1
+  i01.RobotIsStarted=1
     
 def humanDetected():    
   global SleepTimerAction    
@@ -94,7 +90,7 @@ def humanDetected():
 def SleepTimerRoutine(timedata):
   global pirTimerStarted
   print "started"    
-  if pirTimerStarted and not RobotIsSleeping:
+  if pirTimerStarted and not i01.RobotIsSleeping:
     PlayNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call

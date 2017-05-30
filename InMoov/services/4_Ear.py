@@ -36,7 +36,7 @@ def onRecognized(text):
 
   if DEBUG==1:
     print "onRecognized : ",text,RobotneedUpdate
-  if isChatbotActivated and RobotIsStarted and not RobotIsSleeping:
+  if isChatbotActivated and i01.RobotIsStarted and not i01.RobotIsSleeping:
     chatBot.getResponse(text.replace("'", " ").replace("-", " "))
   
 

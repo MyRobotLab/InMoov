@@ -3,7 +3,6 @@ def CheckVersion():
   global RobotneedUpdate
   global target
   global branch
-  global RobotIsStarted
   
   branch="master"
   if BetaVersion:branch="develop"
@@ -30,7 +29,7 @@ def CheckVersion():
   else:
     print "need update"
     RobotneedUpdate=1
-    RobotIsStarted=1
+    i01.RobotIsStarted=1
     return True
     
 

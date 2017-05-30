@@ -47,11 +47,11 @@ def publishPinPir(pins):
     
     #human detected
     if pins[pin].value>0:
-      if not RobotIsSleeping and RobotIsStarted:
+      if not i01.RobotIsSleeping and i01.RobotIsStarted:
         humanDetected()
       
       #wakeup action
-      if RobotIsSleeping:
+      if i01.RobotIsSleeping:
         PirControlerArduino.disablePin(PirPin)
         sleepModeWakeUp()
 

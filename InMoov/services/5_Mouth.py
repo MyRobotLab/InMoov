@@ -76,7 +76,7 @@ def talkEvent(data):
 #stop autolisten
 def onEndSpeaking(text):
 
-  if RobotIsStarted==1:
+  if i01.RobotIsStarted:
     
     MoveHeadTimer.stopClock()
     MoveEyesTimer.stopClock()
@@ -106,7 +106,7 @@ def onStartSpeaking(text):
     except:
       print "onStartSpeaking error"
       pass
-  if RobotIsStarted:
+  if i01.RobotIsStarted:
 
     if 'oui' in text or 'yes' in text or 'ja' in text:Yes()
     if 'non' in text or 'no' in text or 'nicht' in text or 'neen' in text:No()

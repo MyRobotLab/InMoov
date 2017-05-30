@@ -8,14 +8,10 @@
 # you can read them in your script
 # DONT CHANGE VARS HERE THEY ARE DYNAMICAL , IT IS A DECLARATION PART
 
-global RobotIsStarted
-RobotIsStarted=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
 RobotCanMoveBodyRamdom=0
-global RobotIsSleeping
-RobotIsSleeping=0
 global RobotneedUpdate
 RobotneedUpdate=0
 global batterieLevel
