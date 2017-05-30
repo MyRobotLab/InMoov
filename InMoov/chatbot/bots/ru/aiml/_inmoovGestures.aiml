@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: gestures.aiml -->
-  <!-- Author: Gael Langevin -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: May 29, 2017 -->
-  <!-- This inmoovRussian brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
+ 
+  
+   <!-- Файл: gestures.aiml -->
+   <!-- Автор: Гаэль Ланжевен -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний  ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменение: Гаэль Ланжевен -->
+   <!-- Последнее изменение: 29 мая 2017 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
   
   <!-- <topic name="GESTURES">  -->
   
     <category>
-      <pattern>ОТДЫХ</pattern>
+      <pattern>СОН</pattern>
       <template>
         <random>
-          <li>А, расслабляющий.</li>
-          <li>Отдыхать</li>
+          <li>Я, ухожу в режим.</li>
+          <li>Сон</li>
         </random>
         <oob>
           <mrl>
@@ -36,360 +38,360 @@
 
 
     <category>
-      <pattern>НАПРАВЛЯЮЩЕЕ ГОЛОВКУ</pattern>
-      <template>Я прилагаю свою голову.
+      <pattern>ПОДКЛЮЧИ ГОЛОВУ</pattern>
+      <template>Я загрузил управление головы.
         <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ОТКЛЮЧИТЬ ГОЛОВУ</pattern>
-      <template>Я отключаю свою голову.
+      <pattern>ОТКЛЮЧИ ГОЛОВУ</pattern>
+      <template>Я отключаю управление головы.
         <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH EYES</pattern>
-      <template>My eyes are now attached.
+      <pattern>ПОДКЛЮЧИ ГЛАЗА</pattern>             
+      <template>Теперь мои глаза работают.         
         <oob><mrl><service>i01.head.eyeY</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT EYES</pattern>
-      <template>Disconnecting my eye servos
+      <pattern>ОТКЛЮЧИ ГЛАЗА</pattern>            
+      <template>Теперь мои глаза отключены.     
         <oob><mrl><service>i01.head.eyeY</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH RIGHT HAND</pattern>
-      <template>Connecting my right hand.
+      <pattern>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</pattern>        
+      <template>Теперь моя правая кисть работает.      
         <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACHED RIGHT HAND</pattern>
+      <pattern>ПОДКЛЮЧИТЬ ПРАВУЮ КИСТЬ</pattern>    
       <template>
-        <srai>ATTACH RIGHT HAND</srai>
+        <srai>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</srai>            
       </template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT RIGHT HAND</pattern>
-      <template>Detaching my right hand.
+      <pattern>ОТСОЕДЕНИ ПРАВУЮ КИСТЬ</pattern>        
+      <template>Отсоеденил правую кисть.             
         <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH LEFT HAND</pattern>
-      <template>Connecting my left hand.
+      <pattern>ПОДКЛЮЧИТЬ ЛЕВУЮ КИСТЬ</pattern>          
+      <template>Теперь моя левая кисть работает.              
         <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT LEFT HAND</pattern>
-      <template>Detaching my left hand.
+      <pattern>ОТСОЕДЕНИ ЛЕВУЮ КИСТЬ</pattern>        
+      <template>Отсоеденил левую кисть.              
         <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH EVERYTHING</pattern>
-      <template>I'm connecting all servos now.
+      <pattern>ПОДКЛЮЧИТЬ ПИТАНИЕ</pattern>           
+      <template>Питание включено.       
         <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT EVERYTHING</pattern>
-      <template>I'm detaching everything now.
+      <pattern>ОТКЛЮЧИТЬ ПИТАНИЕ</pattern>     
+      <template>Питание отключено.   
         <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH LEFT ARM</pattern>
-      <template>Connecting my left arm.
+      <pattern>ПОДКЛЮЧИ ЛЕВОЕ ПЛЕЧО</pattern>      
+      <template>Теперь мое левое плечо работает.      
         <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT LEFT ARM</pattern>
-      <template>Detaching my left arm.
+      <pattern>ОТКЛЮЧИ ЛЕВОЕ ПЛЕЧО</pattern>   
+      <template>Отключил левое плечо.       
         <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT YOUR LEFT ARM</pattern>
+      <pattern>ОТКЛЮЧИ СВОЁ ЛЕВОЕ ПЛЕЧО</pattern>  
       <template>
-        <srai>DISCONNECT LEFT ARM</srai>
+        <srai>ОТКЛЮЧИ ЛЕВОЕ ПЛЕЧО</srai>           
       </template>
     </category>
 
 
     <category>
-      <pattern>DETACH YOUR LEFT ARM</pattern>
+      <pattern>ОТСОЕДЕНИ СВОЁ ЛЕВОЕ ПЛЕЧО</pattern>      
       <template>
-        <srai>DISCONNECT LEFT ARM</srai>
+        <srai>ОТКЛЮЧИ ЛЕВОЕ ПЛЕЧО</srai>           
       </template>
     </category>
 
 
     <category>
-      <pattern>ATTACH RIGHT ARM</pattern>
-      <template>Connect my right arm.
+      <pattern>ПОДКЛЮЧИ ПРАВОЕ ПЛЕЧО</pattern>         
+      <template>Теперь мое правое плечо работает.          
         <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACHED RIGHT ARM</pattern>
+      <pattern>ПОДКЛЮЧИТЬ ПРАВОЕ ПЛЕЧО</pattern>     
       <template>
-        <srai>ATTACH RIGHT ARM</srai>
+        <srai>ПОДКЛЮЧИ ПРАВОЕ ПЛЕЧО</srai>        
       </template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT RIGHT ARM</pattern>
-      <template>Detach right arm.
+      <pattern>ОТКЛЮЧИ ПРАВОЕ ПЛЕЧО</pattern>   
+      <template>Отключил правое плечо.             
         <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT YOUR RIGHT ARM</pattern>
+      <pattern>ОТКЛЮЧИ СВОЁ ПРАВОЕ ПЛЕЧО</pattern> 
       <template>
-        <srai>DISCONNECT RIGHT ARM</srai>
+        <srai>ОТКЛЮЧИ ПРАВОЕ ПЛЕЧО</srai>          
       </template>
     </category>
 
 
     <category>
-      <pattern>DETACH YOUR RIGHT ARM</pattern>
+      <pattern>ОТСОЕДЕНИ СВОЁ ПРАВОЕ ПЛЕЧО</pattern>   
       <template>
-        <srai>DISCONNECT RIGHT ARM</srai>
+        <srai>ОТКЛЮЧИ ПРАВОЕ ПЛЕЧО</srai>         
       </template>
     </category>
 
 
     <category>
-      <pattern>ATTACH TORSO</pattern>
-      <template>Connecting the servo in my torso.
+      <pattern>ПОДКЛЮЧИ ТОРС</pattern>             
+      <template>Подключение сервопривода в моем торсе.
         <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACHED OR SO</pattern>
+      <pattern>ПОДКЛЮЧИТЬ ТОРС</pattern>   
       <template>
-        <srai>ATTACH TORSO</srai>
+        <srai>ПОДКЛЮЧИ ТОРС</srai>         
       </template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT TORSO</pattern>
-      <template>Detaching the servo in my torso.
+      <pattern>ОТКЛЮЧИ ТОРС</pattern>      
+      <template>Отключение сервопривода в моем торсе.
         <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT OR SO</pattern>
+      <pattern>ОТКЛЮЧИТЬ ТОРС</pattern>        
       <template>
-        <srai>DISCONNECT TORSO</srai>
+        <srai>ОТКЛЮЧИ ТОРС</srai>            
       </template>
     </category>
 
 
     <category>
-      <pattern>ATTACH JAW</pattern>
-      <template>Connecting my jaw.
+      <pattern>ПОДКЛЮЧИТЬ ЧЕЛЮСТЬ</pattern>            
+      <template>Подключение сервопривода челюсти.
         <oob><mrl><service>i01.head.jaw</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT JAW</pattern>
-      <template>Detaching my jaw servo.
+      <pattern>ОТКЛЮЧИТЬ ЧЕЛЮСТЬ</pattern>      
+      <template>Отключение сервопривода челюсти.
         <oob><mrl><service>i01.head.jaw</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ATTACH WHEEL</pattern>
-      <template>I don't have a wheel to attach, sorry.
+      <pattern>ПОДКЛЮЧИТЬ КОЛЕСО</pattern>                
+      <template>Извините, у меня нет колеса.
         <oob><mrl><service>forwardServo</service><method>enable</method></mrl><mrl><service>directionServo</service><method>enable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT WHEEL</pattern>
-      <template>I don't have a wheel.
+      <pattern>ОТКЛЮЧИТЬ КОЛЕСО</pattern>       
+      <template>У меня нет колеса.
         <oob><mrl><service>directionServo</service><method>disable</method></mrl><mrl><service>forwardServo</service><method>disable</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SEARCH HUMANS</pattern>
-      <template>I'm looking for faces.
+      <pattern>НАЙДИ ЧЕЛОВЕКА</pattern>    
+      <template>Я ищу лица.
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>QUIT SEARCH</pattern>
-      <template>Stopping my search.
+      <pattern>ПРЕКРАТИ ПОИСК</pattern>   
+      <template>Я остановил поиск.
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TRACK</pattern>
-      <template>Following the point.
+      <pattern>СЛЕДИ</pattern>        
+      <template>Слежу за точкой.
         <oob><mrl><service>python</service><method>exec</method><param>trackPoint()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FREEZE TRACK</pattern>
-      <template>Stopping my tracking
+      <pattern>ЗАБЛОКИРОВАТЬ СЛЕЖЕНИЕ</pattern>  
+      <template>Остановка моего отслеживания.
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>STOP YOUR TRACKING</pattern>
+      <pattern>ОСТАНОВИ ОТСЛЕЖИВАНИЕ</pattern> 
       <template>
-        <srai>FREEZE TRACK</srai>
+        <srai>ЗАБЛОКИРОВАТЬ СЛЕЖЕНИЕ</srai>         
       </template>
     </category>
 
 
     <category>
-      <pattern>ATTACH SENSOR</pattern>
-      <template>Starting the P.I.R sensor.
+      <pattern>ПОДКЛЮЧИ СЕНСОР</pattern>    
+      <template>Запуск пир датчика.
         <oob><mrl><service>i01</service><method>startPIR</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DISCONNECT SENSOR</pattern>
-      <template>Stopping the P.I.R sensor.
+      <pattern>ОТКЛЮЧИ СЕНСОР</pattern>  ///Отключить сенсор
+      <template>Остановка пир датчика.
         <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OPEN HAND</pattern>
-      <template>Opening my hand.
+      <pattern>РАСКРЫТЬ КИСТЬ</pattern>  
+      <template>Разжимаю кисть.
         <oob><mrl><service>python</service><method>exec</method><param>handopen()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CLOSE HAND</pattern>
-      <template>Closing my hand.
+      <pattern>СЖАТЬ КИСТЬ</pattern>   
+      <template>Сжал кисть.
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
     </category>
     
         <category>
-      <pattern>CLOSE HANDS</pattern>
-      <template>Closing my hands.
+      <pattern>СЖАТЬ КИСТИ</pattern>  
+      <template>Сжал кисти.
         <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
     </category>
 
         <category>
-      <pattern>OPEN HANDS</pattern>
-      <template>Opening my hands.
+      <pattern>РАСКРЫТЬ КИСТИ</pattern> 
+      <template>Раскрыл кисти.
         <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CAMERA ON</pattern>
-      <template>I turn my camera on.
+      <pattern>ВКЛЮЧИТЬ КАМЕРУ</pattern>    
+      <template>Я включаю камеру.
         <oob><mrl><service>i01</service><method>cameraOn</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OFF CAMERA</pattern>
-      <template>Turning my camera off.
+      <pattern>ВЫКЛЮЧИТЬ КАМЕРУ</pattern>        
+      <template>Выключение камеры.
         <oob><mrl><service>i01</service><method>cameraOff</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CAMERA OFF</pattern>
+      <pattern>КАМЕРУ ВЫКЛЮЧИТЬ</pattern>  
       <template>
-        <srai>OFF CAMERA</srai>
+        <srai>ВЫКЛЮЧИТЬ КАМЕРУ</srai>      
       </template>
     </category>
 
 
     <category>
-      <pattern>CAPTURE GESTURE</pattern>
-      <template>I am capturing this gesture.
+      <pattern>ЗАХВАТИТЬ ЖЕСТ</pattern>       
+      <template>Я фиксирую этот жест.
         <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GIVING</pattern>
-      <template>Giving.
+      <pattern>ПРИСВОИТЬ</pattern> 
+      <template>Присвоил.
         <oob><mrl><service>python</service><method>exec</method><param>giving()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FIGHTER</pattern>
+      <pattern>БОКСЁР</pattern> 
       <template>
         <random>
-          <li>I can pose like a boxer</li>
-          <li>Move like a butterfly, sting like a bee.</li>
-          <li>Bring it on.</li>
+          <li>Я могу позировать как боксер.</li> 
+          <li>Порхай как бабочка, жаль как пчела.</li>
+          <li>Давай.</li>
         </random>
         <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FIST HIPS</pattern>
-      <template>Putting my fists on my hips.
+      <pattern>КУЛАКИ НА БЁДРА</pattern>
+      <template>Опираю свои кулаки на бедра.
         <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>LOOK AT THIS</pattern>
-      <template>What do you have there?  I'm looking.
+      <pattern>ПОСМОТРИ НА ЭТО</pattern>               
+      <template>Что у вас там? Я ищу.
         <oob><mrl><service>python</service><method>exec</method><param>lookAtThis()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>VICTORY</pattern>
-      <template>It's good to win.
+      <pattern>ПОБЕДА</pattern>
+      <template>Хорошая победа.
         <oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ARMS UP</pattern>
+      <pattern>РУКИ ВВЕРХ</pattern> 
       <template>
         <random>
-          <li>I've got my arms up.</li>
-          <li>Don't shoot!</li>
+          <li>Я поднял руки.</li> 
+          <li>Не стрелять!</li>        
         </random>
         <oob>
           <mrl>
@@ -403,354 +405,354 @@
 
 
     <category>
-      <pattern>ARMS FRONT</pattern>
-      <template>Holding my arms in front of me.
+      <pattern>РУКИ ВПЕРЁД</pattern>
+      <template>Держу руки перед собой.
         <oob><mrl><service>python</service><method>exec</method><param>armsFront()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DA VINCI</pattern>
-      <template>This is the pose from Leonardo Da Vinci's drawings.
+      <pattern>ДА ВИНЧИ</pattern> 
+      <template>Это поза рисующего Леонардо Да Винчи.
         <oob><mrl><service>python</service><method>exec</method><param>daVinci()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DAVINCI</pattern>
+      <pattern>ДАВИНЧИ</pattern> 
       <template>
-        <srai>DA VINCI</srai>
+        <srai>ДА ВИНЧИ</srai>   
       </template>
     </category>
 
 
     <category>
-      <pattern>MANUAL</pattern>
-      <template>Okay I don't listen anymore, to unlock me you need to say voice control.
+      <pattern>РУЧНОЕ УПРАВЛЕНИЕ</pattern>  /// Ручное управление
+      <template>Ладно, я больше не слушаю, чтобы разблокировать меня, нужно сказать,"Включить голосовое управление".
         <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>VOICE CONTROL</pattern>
-      <template>I'm listening.
+      <pattern>ВКЛЮЧИТЬ ГОЛОСОВОЕ УПРАВЛЕНИЕ</pattern>
+      <template>Я слушаю.
         <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>STOP LISTENING</pattern>
-      <template>I'm not going to listen to you.
+      <pattern>ОТКЛЮЧИТЬ ПРОСЛУШИВАНИЕ</pattern>   
+      <template>Я не собираюсь слушать тебя.
         <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FULL SPEED</pattern>
-      <template>Servos are set to full speed now.
+      <pattern>МАКСИМАЛЬНАЯ СКОРОСТЬ</pattern>               
+      <template>Теперь сервоприводы настроены на максимальную скорость.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GRAB THE BOTTLE</pattern>
-      <template>Let me take that bottle.
+      <pattern>ВОЗЬМИ БУТЫЛКУ</pattern>
+      <template>Позволь мне взять эту бутылку.
         <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TAKE THE GLASS</pattern>
-      <template>Give me that glass.
+      <pattern>ВОЗЬМИ СТАКАН</pattern>
+      <template>Дай мне стакан.
         <oob><mrl><service>python</service><method>exec</method><param>grabtheglass()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>POOR BOTTLE</pattern>
-      <template>Here, I can pour you a drink.
+      <pattern>НАЛЕЙ ИЗ БУТЫЛКИ</pattern>          
+      <template>Я могу предложить тебе выпить.
         <oob><mrl><service>python</service><method>exec</method><param>poorbottle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GIVE THE BOTTLE</pattern>
-      <template>Here's the bottle.
+      <pattern>ДАЙ БУТЫЛКУ</pattern>    
+      <template>Вот бутылка.
         <oob><mrl><service>python</service><method>exec</method><param>givethebottle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GIVE THE GLASS</pattern>
-      <template>Take the glass from me.
+      <pattern>ДАЙ СТАКАН</pattern>    
+      <template>Возьми свой стакан.
         <oob><mrl><service>python</service><method>exec</method><param>givetheglass()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TAKE THE BALL</pattern>
-      <template>Taking the ball.
+      <pattern>ВОЗЬМИ МЯЧ</pattern>   
+      <template>Держу мяч.
         <oob><mrl><service>python</service><method>exec</method><param>takeball()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>REACH THE BALL</pattern>
-      <template>REACH THE BALL
+      <pattern>ДОСТАНЬ МЯЧ</pattern>   
+      <template>Достал мяч.
         <oob><mrl><service>python</service><method>exec</method><param>getball()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>KEEP THE BALL</pattern>
-      <template>KEEP THE BALL
+      <pattern>ДЕРЖИ МЯЧ</pattern>
+      <template>Держу мяч.
         <oob><mrl><service>python</service><method>exec</method><param>keepball()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>APPROACH THE LEFT HAND</pattern>
-      <template>APPROACH THE LEFT HAND
+      <pattern>ПРИЖАТЬ ЛЕВУЮ КИСТЬ</pattern>
+      <template>Прижал левую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>USE THE LEFT HAND</pattern>
-      <template>USE THE LEFT HAND
+      <pattern>ИСПОЛЬЗУЙ ЛЕВУЮ РУКУ</pattern>     
+      <template>Использую левую руку.
         <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MORE</pattern>
-      <template>MORE
+      <pattern>БОЛЬШЕ</pattern>  
+      <template>Больше.
         <oob><mrl><service>python</service><method>exec</method><param>more()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>HAND DOWN</pattern>
-      <template>HAND DOWN
+      <pattern>КИСТИ ВНИЗ</pattern>  
+      <template>Кисти вниз.
         <oob><mrl><service>python</service><method>exec</method><param>handdown()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>IS IT A BALL</pattern>
-      <template>IS IT A BALL
+      <pattern>ЭТО ШАР</pattern>   
+      <template>Это шар.          
         <oob><mrl><service>python</service><method>exec</method><param>isitaball()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PUT IT DOWN</pattern>
-      <template>Putting it down.
+      <pattern>ПОЛОЖИ ВНИЗ</pattern> 
+      <template>Положил вниз.
         <oob><mrl><service>python</service><method>exec</method><param>putitdown()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DROP IT</pattern>
-      <template>Dropping.
+      <pattern>БРОСЬ ЭТО</pattern>  
+      <template>Бросил.
         <oob><mrl><service>python</service><method>exec</method><param>dropit()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>REMOVE YOUR LEFT ARM</pattern>
-      <template>Removing my left arm.
+      <pattern>УБЕРИ ЛЕВУЮ РУКУ</pattern> 
+      <template>Убрал левую руку.
         <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>RELAX</pattern>
-      <template>Relax.
+      <pattern>ОТДЫХАЙ</pattern>   
+      <template>Отдыхаю.
         <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>WHAT IS IT</pattern>
-      <template>Let me check.
+      <pattern>ЧТО ЭТО</pattern> 
+      <template>Дай мне проверить.
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PERFECT</pattern>
-      <template>Perfect.
+      <pattern>ИДЕАЛЬНО</pattern>  
+      <template>Идеально.
         <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DELICATE GRAB</pattern>
-      <template>Delicate grab.
+      <pattern>ВОЗЬМИ АККУРАТНО</pattern> 
+      <template>Взял аккуратно.
         <oob><mrl><service>python</service><method>exec</method><param>delicategrab()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DELICATE GRABING</pattern>
+      <pattern>АККУРАТНО ВОЗЬМИ</pattern>  
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>ВОЗЬМИ АККУРАТНО</srai>    
       </template>
     </category>
 
 
     <category>
-      <pattern>GRAB THIS DELICATELY</pattern>
+      <pattern>АККУРАТНЕНЬКО ВОЗЬМИ</pattern> 
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>ВОЗЬМИ АККУРАТНО</srai>      
       </template>
     </category>
 
 
     <category>
-      <pattern>GRAB DELICATELY</pattern>
+      <pattern>ВОЗЬМИ ОЧЕНЬ АККУРАТНО</pattern> 
       <template>
-        <srai>DELICATE GRAB</srai>
+        <srai>ВОЗЬМИ АККУРАТНО</srai>   
       </template>
     </category>
 
 
     <category>
-      <pattern>RELEASE DELICATE</pattern>
-      <template>Release delicate.
+      <pattern>ОТПУСТИ АККУРАТНО</pattern>
+      <template>Отпустил аккуратно. 
         <oob><mrl><service>python</service><method>exec</method><param>releasedelicate()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OPEN YOUR RIGHT HAND</pattern>
-      <template>Opening my right hand.
+      <pattern>РАЗОЖМИ СВОЮ ПРАВУЮ КИСТЬ</pattern> 
+      <template>Разжал правую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>openrighthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OPEN YOUR LEFT HAND</pattern>
-      <template>Opening my left hand.
+      <pattern>РАЗОЖМИ СВОЮ ЛЕВУЮ КИСТЬ</pattern> 
+      <template>Разжал левую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>openlefthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CLOSE YOUR RIGHT HAND</pattern>
-      <template>Closing my right hand.
+      <pattern>СОЖМИ СВОЮ ПРАВУЮ КИСТЬ</pattern> 
+      <template>Сжал правую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>closerighthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CLOSE YOUR LEFT HAND</pattern>
-      <template>Closing my left hand.
+      <pattern>СОЖМИ СВОЮ ЛЕВУЮ КИСТЬ</pattern>   
+      <template>Сжал левую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>closelefthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SLOWLY CLOSE YOUR RIGHT HAND</pattern>
-      <template>Slowly closing my right hand.
+      <pattern>МЕДЛЕННО СЖИМАЙ ПРАВУЮ КИСТЬ</pattern>
+      <template>Медленно сжал правую кисть.
         <oob><mrl><service>python</service><method>exec</method><param>slowlycloserighthand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SURRENDER</pattern>
-      <template>Surrender.
+      <pattern>ПОДЧИНИСЬ</pattern> 
+      <template>Подчинился.
         <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PICTURE ON THE RIGHT SIDE</pattern>
-      <template>Picture on the right side.
+      <pattern>ПОКАЖИ ИЗОБРАЖЕНИЕ С ПРАВОЙ КАМЕРЫ</pattern> 
+      <template>Изображение с правой камеры.
         <oob><mrl><service>python</service><method>exec</method><param>picturerightside()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PICTURE ON THE LEFT SIDE</pattern>
-      <template>Picture on the left side.
+      <pattern>ПОКАЖИ ИЗОБРАЖЕНИЕ С ЛЕВОЙ КАМЕРЫ</pattern> 
+      <template>Изображение с левой камеры.
         <oob><mrl><service>python</service><method>exec</method><param>pictureleftside()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PICTURE ON BOTH SIDES</pattern>
-      <template>Picture on both sides.
+      <pattern>ПОКАЖИ ИЗОБРАЖЕНИЕ С ДВУХ КАМЕР</pattern> 
+      <template>Изображение с двух камер.
         <oob><mrl><service>python</service><method>exec</method><param>picturebothside()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>LOOK ON YOUR RIGHT SIDE</pattern>
-      <template>Looking on my right side.
+      <pattern>ПОСМОТРИ НАПРАВО</pattern>
+      <template>Смотрю направо.
         <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>LOOK ON YOUR LEFT SIDE</pattern>
-      <template>Looking on my left side.
+      <pattern>ПОСМОТРИ НАЛЕВО</pattern> 
+      <template>Смотрю налево.
         <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>LOOK IN THE MIDDLE</pattern>
-      <template>Looking in the middle.
+      <pattern>ПОСМОТРИ ПРЯМО</pattern>    
+      <template>Смотрю прямо.
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>BEFORE HAPPY</pattern>
-      <template>BEFORE HAPPY
+      <pattern>ПРЕДПРАЗДНИЧНЫЙ ДЕНЬ</pattern> 
+      <template>Предпраздничный день.
         <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>HAPPY BIRTHDAY</pattern>
-      <template>Happy birthday.
+      <pattern>С ДНЕМ РОЖДЕНИЯ</pattern>
+      <template>С днём рождения.
         <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PHOTO</pattern>
-      <template>Photo.
+      <pattern>ФОТО</pattern> 
+      <template>Фото.
         <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ABOUT</pattern>
-      <template>ABOUT
+      <pattern>ОБ АВТОРЕ</pattern> ///об
+      <template>Об авторе.
         <oob><mrl><service>python</service><method>exec</method><param>about()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>POWER DOWN</pattern>
-      <template>Power down.
+      <pattern>ОТКЛЮЧИТЬ ПИТАНИЕ</pattern>  
+      <template>Питание выключено.
         <oob><mrl><service>python</service><method>exec</method><param>power_down()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>POWER UP</pattern>
-      <template>Power up.
+      <pattern>ВКЛЮЧИТЬ ПИТАНИЕ</pattern> 
+      <template>Питание включено.
         <oob><mrl><service>python</service><method>exec</method><param>power_up()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>HOW MANY MOTORS DO YOU HAVE</pattern>
+      <pattern>СКОЛЬКО У ТЕБЯ МОТОРОВ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -764,80 +766,79 @@
 
 
     <category>
-      <pattern>HOW MANY FINGERS DO YOU HAVE</pattern>
-      <template>Let see how many fingers do I have.
+      <pattern>HСКОЛЬКО У ТЕБЯ ПАЛЬЦЕВ</pattern> 
+      <template>Посмотрите, сколько пальцев у меня есть.
         <oob><mrl><service>python</service><method>exec</method><param>howmanyfingersdoihave()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>WHO'S THERE</pattern>
-      <template>WHO'S THERE
+      <pattern>КТО ЗДЕСЬ</pattern>
+      <template>Кто здесь.
         <oob><mrl><service>python</service><method>exec</method><param>welcome()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>START GESTURE</pattern>
-      <template>START GESTURE
+      <pattern>ВКЛЮЧИТЬ ЖЕСТЫ</pattern>
+      <template>Включил жесты.
         <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OFF GESTURE</pattern>
-      <template>OFF GESTURE
+      <pattern>ОТКЛЮЧИТЬ ЖЕСТЫ</pattern>
+      <template>Отключил жесты.
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 1</pattern>
-      <template>CYCLE GESTURE ONE
+      <pattern>ДВИЖЕНИЕ НОМЕР 1</pattern>
+      <template>Первый цикл жестов.
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER ONE</pattern>
+      <pattern>ДВИЖЕНИЕ НОМЕР ОДИН</pattern> 
       <template>
-        <srai>MOVEMENT NUMBER 1</srai>
-      </template>
+        <srai>ДВИЖЕНИЕ НОМЕР 1</srai>       
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 2</pattern>
-      <template>CYCLE GESTURE TWO
+      <pattern>ДВИЖЕНИЕ НОМЕР 2</pattern>   
+      <template>Второй цикл жестов.
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture2()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER TWO</pattern>
+      <pattern>ДВИЖЕНИЕ НОМЕР ДВА</pattern>  
       <template>
-        <srai>MOVEMENT NUMBER 2</srai>
+        <srai>ДВИЖЕНИЕ НОМЕР 2</srai>       
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 3</pattern>
-      <template>CYCLE GESTURE THREE
+      <pattern>ДВИЖЕНИЕ НОМЕР 3</pattern>    
+      <template>Третий цикл жестов.
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture3()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER THREE</pattern>
+      <pattern>ДВИЖЕНИЕ НОМЕР ТРИ</pattern> 
       <template>
-        <srai>MOVEMENT NUMBER 3</srai>
+        <srai>ДВИЖЕНИЕ НОМЕР 3</srai>          
       </template>
     </category>
 
 
     <category>
-      <pattern>REPEAT MOVEMENT FOR LONDON</pattern>
+      <pattern>ПОВТОРНОЕ ДВИЖЕНИЕ ДЛЯ ЛОНДОНА</pattern> 
       <template>
         <oob>
           <mrl>
@@ -851,7 +852,7 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER 2</pattern>
+      <pattern>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР 2</pattern> 
       <template>
         <oob>
           <mrl>
@@ -865,15 +866,15 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER TWO</pattern>
+      <pattern>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР ДВА</pattern> 
       <template>
-        <srai>MOVEMENT FOR LONDON NUMBER 2</srai>
+        <srai>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР 2</srai>  
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER 3</pattern>
+      <pattern>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР 3</pattern>  
       <template>
         <oob>
           <mrl>
@@ -887,16 +888,16 @@
 
 
     <category>
-      <pattern>MOVEMENT FOR LONDON NUMBER THREE</pattern>
+      <pattern>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР ТРИ</pattern>  
       <template>
-        <srai>MOVEMENT FOR LONDON NUMBER 3</srai>
+        <srai>ДВИЖЕНИЕ ДЛЯ ЛОНДОНА НОМЕР 3</srai>   
       </template>
     </category>
 
 
     <category>
-      <pattern>MOVEMENT NUMBER 4</pattern>
-      <template>
+      <pattern>ДВИЖЕНИЕ НОМЕР 4</pattern>  
+      <template>Четвёртый цикл жестов.
         <oob>
           <mrl>
             <service>python</service>
@@ -909,23 +910,16 @@
 
 
     <category>
-      <pattern>MOVEMENT NUMBER FOUR</pattern>
+      <pattern>ДВИЖЕНИЕ НОМЕР ЧЕТЫРЕ</pattern> 
       <template>
-        <srai>MOVEMENT NUMBER 4</srai>
+        <srai>ДВИЖЕНИЕ НОМЕР 4</srai>       
       </template>
     </category>
 
-
+	
+	
     <category>
-      <pattern>MOVEMENT NUMBER FOR</pattern>
-      <template>
-        <srai>MOVEMENT NUMBER 4</srai>
-      </template>
-    </category>
-
-
-    <category>
-      <pattern>RIGHT CLOTHES</pattern>
+      <pattern>ПРАВИЛЬНАЯ ОДЕЖДА</pattern>       
       <template>
         <oob>
           <mrl>
@@ -939,7 +933,7 @@
 
 
     <category>
-      <pattern>RELEASE YOUR CLOTHES</pattern>
+      <pattern>ВЫБЕРИ СВОЮ ОДЕЖДУ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -953,85 +947,85 @@
 
 
     <category>
-      <pattern>SHOW YOUR MUSCLES</pattern>
-      <template>Let me show you my muscles.
+      <pattern>ПОКАЖИ СВОИ МУСКУЛЫ</pattern>  
+      <template>Позвольте мне показать вам мои мускулы.
         <oob><mrl><service>python</service><method>exec</method><param>muscle()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHAKE HAND</pattern>
-      <template>Shall we shake hand.
+      <pattern>ПОЖМИ РУКУ</pattern>  
+      <template>пожимаю руку.
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHAKE HANDS</pattern>
+      <pattern>ПОЖМИ РУКИ</pattern> 
       <template>
-        <srai>SHAKE HAND</srai>
+        <srai>ПОЖМИ РУКУ</srai>   
       </template>
     </category>
 
 
     <category>
-      <pattern>UNHAPPY</pattern>
-      <template>UNHAPPY
+      <pattern>НЕУДАЧНО</pattern>   
+      <template>Неудачно.
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TAKE THIS</pattern>
-      <template>Taking this object.
+      <pattern>ВОЗЬМИ ЭТО</pattern>  
+      <template>Беру этот объект.
         <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ROCK PAPER SCISSORS</pattern>
-      <template>Rock paper scissors.
+      <pattern>КАМЕНЬ НОЖНИЦЫ БУМАГА</pattern>  
+      <template>Камень ножницы бумага.
         <oob><mrl><service>python</service><method>exec</method><param>rockpaperscissors()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>READY</pattern>
-      <template>Ready.
+      <pattern>ГОТОВ</pattern>  
+      <template>Готов.
         <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>ROCK</pattern>
-      <template>Rock.
+      <pattern>КАМЕНЬ</pattern>  
+      <template>Камень.
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PAPER</pattern>
-      <template>Paper.
+      <pattern>БУМАГА</pattern>  
+      <template>Бумага.
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SCISSORS</pattern>
-      <template>Scissors.
+      <pattern>НОЖНИЦЫ</pattern>  
+      <template>Ножницы.
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>THAT WAS FUN</pattern>
-      <template>That was fun.
+      <pattern>ЭТО БЫЛО ВЕСЕЛО</pattern>  
+      <template>Это было весело.
         <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>GUESS WHAT</pattern>
+      <pattern>УГАДАЙ ЧТО</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1045,21 +1039,21 @@
 
 
     <category>
-      <pattern>FINGER RIGHT</pattern>
-      <template>Finger right.
+      <pattern>ПРАВЫЕ ПАЛЬЦЫ</pattern> 
+      <template>Правые пальцы.
         <oob><mrl><service>python</service><method>exec</method><param>fingerright()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>FINGER LEFT</pattern>
-      <template>Finger left.
+      <pattern>ЛЕВЫЕ ПАЛЬЦЫ</pattern> 
+      <template>Левые пальцы.
         <oob><mrl><service>python</service><method>exec</method><param>fingerleft()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>COME HERE</pattern>
+      <pattern>ИДИ СЮДА</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1073,42 +1067,42 @@
 
 
     <category>
-      <pattern>APPROACH</pattern>
-      <template>APPROACH
+      <pattern>ПОДОЙДИ</pattern> 
+      <template>Подхожу.
         <oob><mrl><service>python</service><method>exec</method><param>approach()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>BRAKE</pattern>
-      <template>Shall I brake this.
+      <pattern>ТОРМОЗИ</pattern>    
+      <template>Останавливаюсь.
         <oob><mrl><service>python</service><method>exec</method><param>brake()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MADE BY</pattern>
-      <template>MADE BY
+      <pattern>СДЕЛАЛ</pattern> 
+      <template>Сделал.
         <oob><mrl><service>python</service><method>exec</method><param>madeby()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>MADE BY IN FRENCH</pattern>
-      <template>Made by in french.
+      <pattern>СДЕЛАН ВО ФРАНЦИИ</pattern> 
+      <template>Сделан во Франции.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>TEST</pattern>
-      <template>TEST
+      <pattern>ТЕСТ</pattern>  
+      <template>Тестирование.
         <oob><mrl><service>python</service><method>exec</method><param>test1()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PHONE HOME</pattern>
+      <pattern>ДОМАШНИЙ ТЕЛЕФОН</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1122,15 +1116,15 @@
 
 
     <category>
-      <pattern>WHERE ARE YOU FROM</pattern>
+      <pattern>ДАЙ МНЕ СВОЙ ТЕЛЕФОН</pattern>  
       <template>
-        <srai>PHONE HOME</srai>
+        <srai>ДОМАШНИЙ ТЕЛЕФОН</srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>HOW DO YOU FEEL</pattern>
+      <pattern>КАК ВЫ СЕБЯ ЧУВСТВУЕТЕ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1144,7 +1138,7 @@
 
 
     <category>
-      <pattern>PLAY YOUR SONG</pattern>
+      <pattern>ПРОИГРАТЬ ПЕСНЮ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1158,35 +1152,35 @@
 
 
     <category>
-      <pattern>QUIT YOUR ACTION</pattern>
-      <template>Quitting my action.
+      <pattern>ОСТАНОВИТЬ ДЕЙСТВИЯ</pattern>  
+      <template>Останавливаю действия.
         <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>CARRY THE BABY</pattern>
-      <template>Carry baby.
+      <pattern>НЕСИ РЕБЁНКА</pattern>  
+      <template>Несу ребенка.
         <oob><mrl><service>python</service><method>exec</method><param>carrybaby()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SYSTEM CHECK</pattern>
-      <template>System check.
+      <pattern>ПРОВЕРКА СИСТЕМЫ</pattern>  
+      <template>Проверка системы.
         <oob><mrl><service>python</service><method>exec</method><param>systemcheck()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>DEMONSTRATE YOUR BALANCE</pattern>
-      <template>I will demonstrate my balance.
+      <pattern>ПОКАЖИ РАВНОВЕСИЕ</pattern> 
+      <template>Я продемонстрирую свой баланс.
         <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>WHAT ABOUT STAR WARS</pattern>
+      <pattern>КАК В ЗВЕЗДНЫХ ВОЙНАХ</pattern>
       <template>
         <oob>
           <mrl>
@@ -1200,7 +1194,7 @@
 
 
     <category>
-      <pattern>CAN YOU GIVE ME THE TIME</pattern>
+      <pattern>МОЖЕТ БЫТЬ, ЭТО МОЁ ВРЕМЯ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1214,7 +1208,7 @@
 
 
     <category>
-      <pattern>ALESSANDRO</pattern>
+      <pattern>АЛЕКСАНДР</pattern>      
       <template>
         <oob>
           <mrl>
@@ -1228,7 +1222,7 @@
 
 
     <category>
-      <pattern>NO WORRY</pattern>
+      <pattern>НЕ ВОЛНУЙСЯ</pattern> 
       <template>
         <oob>
           <mrl>
@@ -1242,11 +1236,11 @@
 
 
     <category>
-      <pattern>BATTERY LEVEL</pattern>
+      <pattern>УРОВЕНЬ БАТАРЕИ</pattern> 
       <template>
         <random>
-          <li>Battery level is</li>
-          <li>Currently the battery is</li>
+          <li>Уровень заряда батареи.</li>
+          <li>В настоящее время аккумулятор.</li> 
         </random>
         <oob>
           <mrl>
@@ -1260,86 +1254,106 @@
 
 
     <category>
-      <pattern>START FACE RECOGNIZER</pattern>
-      <template>I'm starting face recognizer<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+      <pattern>ВКЛЮЧИТЬ РАСПОЗНАВАНИЕ ЛИЦА</pattern>  
+      <template>Я начинаю распознавать лица.
+	  <oob>
+	   <mrl>
+	    <service>python</service>
+	     <method>exec</method>
+	     <param>facerecognizer()</param>
+	    </mrl>
+	   </oob>
+	  </template>
     </category>
 
 
     <category>
-      <pattern>FACE RECOGNIZER</pattern>
+      <pattern>ЛИЦО РАСПОЗНАТЬ</pattern> 
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>ВКЛЮЧИТЬ РАСПОЗНАВАНИЕ ЛИЦА</srai> 
       </template>
     </category>
 
 
     <category>
-      <pattern>FACE RECOGNITION</pattern>
+      <pattern>РАСПОЗНАТЬ ЛИЦО</pattern> 
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>ВКЛЮЧИТЬ РАСПОЗНАВАНИЕ ЛИЦА</srai> 
       </template>
     </category>
 
 
     <category>
-      <pattern>STOP FACE RECOGNIZER</pattern>
-      <template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+      <pattern>ОСТАНОВИ РАСПОЗНАВАНИЕ ЛИЦА</pattern> 
+      <template>Я прекращаю распознавание лица.
+	   <oob>
+	    <mrl>
+	     <service>python</service>
+	     <method>exec</method>
+	     <param>stopfacerecognizer()</param>
+	    </mrl>
+	   </oob>
+	  </template>
     </category>
 
 
     <category>
-      <pattern>MAKE A SIGNATURE</pattern>
-      <template>Okay give the paper - I will do that for you <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
+      <pattern>ДАЙ АВТОГРАФ</pattern>                        
+      <template>Хорошо, дайте бумагу - я сделаю это для вас.
+	  <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PLAY UTUBE</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+      <pattern>ОТКРЫТЬ ЮТУБ</pattern> 
+      <template>Хорошо.
+	  <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PLAY UTUB</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
+      <pattern>ОТКРЫТЬ ЙУТУБ</pattern>     
+      <template>Хорошо.
+	  <oob><mrl><service>python</service><method>exec</method><param>PlayUtub()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>PLAY YOU TUBE</pattern>
+      <pattern>ВКЛЮЧИ ЮТУБ</pattern>  
       <template>
-        <srai>PLAY UTUB</srai>
+        <srai>ОТКРЫТЬ ЮТУБ</srai>          
       </template>
     </category>
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF A *</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
+      <pattern>ПОКАЗАТЬ ИЗОБРАЖЕНИЕ *</pattern> 
+      <template>Хорошо <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF THE *</pattern>
+      <pattern>ПОКАЖИ ИЗОБРАЖЕНИЕ *</pattern> 
       <template>
-        <srai>SHOW ME A PICTURE OF A * </srai>
+        <srai>ПОКАЗАТЬ ИЗОБРАЖЕНИЕ * </srai>
       </template>
     </category>
 
 
     <category>
-      <pattern>FIX THE MICROPHONE</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
+      <pattern>ВКЛЮЧИ МИКРОФОН</pattern>
+      <template>Хорошо.
+	  <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>OPEN FACEBOOK</pattern>
+      <pattern>ОТКРОЙ ФЕЙСБУК</pattern> 
       <template>
         <random>
-          <li>Launching facebook </li>
-          <li>Getting facebook started </li>
-          <li>Right away, sir! </li>
+          <li>Запускаю Фейсбук.</li> 
+          <li>Начинаю работать с Фейсбуком. </li> 
+          <li>Я готов,сэр! </li>  
         </random>
         <oob>
           <mrl>
@@ -1353,12 +1367,12 @@
 
 
     <category>
-      <pattern>ROBOT RESEARCH *</pattern>
+      <pattern>ЗАПУСТИ ПОИСК В НЕТЕ *</pattern> 
       <template>
         <random>
-          <li>Launching browser </li>
-          <li>Searching for you! </li>
-          <li>Looking on the net! </li>
+          <li>Запускаю браузер. </li>  
+          <li>Браузер запущен! </li>  
+          <li>Можно работать в сети! </li> 
         </random>
         <oob>
           <mrl>
@@ -1372,45 +1386,45 @@
 
 
     <category>
-      <pattern>ROBOTIC RESEARCH *</pattern>
-      <template>I will do that
+      <pattern>ЗАПУСТИ ИНТЕРНЕТ *</pattern> 
+      <template>Я сделаю это.
         <oob><mrl><service>python</service><method>exec</method><param>inmoovsearch("<star />")</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>YOUTUBE *</pattern>
-      <template>Lets play
+      <pattern>ЮТУБ *</pattern>  
+      <template>Открываю.
         <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://www.youtube.com/results?search_query=<star />")</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>RANDOM PAUSE</pattern>
-      <template>Thanks
+      <pattern>ПАУЗА</pattern> 
+      <template>Благодарю.
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoire()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>RANDOM LIFE</pattern>
+      <pattern>ДЛИТЕЛЬНАЯ ПАУЗА</pattern>
       <template>
-        <srai>RANDOM PAUSE</srai>
+        <srai>ПАУЗА</srai> 
       </template>
     </category>
 
 
     <category>
-      <pattern>STOP RANDOM PAUSE</pattern>
-      <template>Okay
+      <pattern>ОТКЛЮЧИ ПАУЗУ</pattern> 
+      <template>Хорошо.
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
     </category>
 
 
     <category>
-      <pattern>STOP RANDOM LIFE</pattern>
+      <pattern>ОТКЛЮЧИ ДЛИТЕЛЬНУЮ ПАУЗУ</pattern>  
       <template>
-        <srai>STOP RANDOM PAUSE</srai>
+        <srai>ОТКЛЮЧИ ПАУЗУ</srai>
       </template>
     </category>
 
