@@ -8,6 +8,7 @@
 
 
 def shutdown():
+  switchOnAllNervo()
   talk(lang_shutDown)
   StopNeopixelAnimation()
   i01.halfSpeed()

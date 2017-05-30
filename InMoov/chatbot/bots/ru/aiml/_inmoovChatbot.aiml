@@ -9,8 +9,8 @@
    <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
    <!-- публичная лицензия, опубликованная Free Software Foundation. -->
    <!-- -->
-   <!-- изменение: Gael Langevin -->
-   <!-- Последнее изменение: 30 мая 2017 г. -->
+   <!-- изменение: Anthony G -->
+   <!-- Последнее изменение: 31 мая 2017 г. -->
    <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
    <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
    <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
@@ -22,9 +22,9 @@
     <!-- погода -->
     <!-- жесты -->
 
-
+    <!-- command used by system -->
     <category>
-    <pattern>ПОГОВОРИМ *</pattern>
+    <pattern>SAY *</pattern>
     <template>
       <star />
     </template>
@@ -40,7 +40,7 @@
       <think>
         <set name="topic">firstinit</set>    
       </think>
-		Привет, Это моя первая инициализация. Мне нужна информация, скажи как меня зовут ? Я слушаю
+		Привет, Это моя первая инициализация. Мне нужна информация , Я слушаю, скажи как меня зовут ? 
 	</template>
   </category>
 
@@ -49,9 +49,9 @@
   
     <category>
       <pattern>#</pattern>
-      <that># Как меня зовут #</that>        
+      <that># скажи как меня зовут #</that>        
       <template>
-        <set name="questionfirstinit"> Меня зовут <star /> , скажи да или нет. </set>
+        <set name="questionfirstinit">Меня зовут <star /> , скажите да или нет. </set>
         <think>
           <set name="tmpname">
             <star />
@@ -62,9 +62,9 @@
 	
     <category>
       <pattern>#</pattern>
-      <that># Можно узнать ваше имя #</that>                  
+      <that># нужно узнать твоё имя #</that>                  
       <template>
-        <set name="questionfirstinit"> Ваше имя <star /> , скажите да или нет. </set>     
+        <set name="questionfirstinit">твоё имя <star /> , скажите да или нет. </set>     
         <think>
           <set name="tmpname">
             <star />
@@ -85,17 +85,17 @@
 			Очень красивое имя, <get name="tmpname" /> отлично.                                  
 			</li>
         </random>
-	     Мне нужно узнать твоё имя, я слушаю?                                   
+	     Мне нужно узнать твоё имя , я слушаю ?                                   
 	<think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
 	
     <category>
       <pattern># ДА #</pattern>                                                                 
-      <that># Тебя зовут #</that>                                                              
+      <that># твоё имя #</that>                                                              
       <template>
         <random>
 		<li>
-			Теперь я знаю тебя, <get name="tmpname" />. Я рад.                                
+			Теперь я знаю тебя , <get name="tmpname" />. Я рад.                                
 		</li>
         </random>
 		
@@ -121,25 +121,25 @@
       <pattern># НЕТ #</pattern>                                                                   
       <that># Меня зовут #</that>                                                               
       <template>
-	    Я переспрашиваю. Я слушаю. как меня зовут ?                                                             
+	    Я переспрашиваю. Я слушаю. скажи как меня зовут ?                                                             
     </template>
     </category>
 	
     <category>
       <pattern># НЕТ #</pattern>                                                                    
-      <that># Тебя зовут #</that>                                                               
+      <that># твоё имя #</that>                                                               
       <template>
-	  Я переспрашиваю.Я слушаю. можно узнать твоё имя ?                                                       
+	  Я переспрашиваю. Я слушаю. нужно узнать твоё имя ?                                                       
     </template>
     </category>
 	
     <category>
       <pattern>#</pattern>
-      <that># Скажи да или нет #</that>                                                             
+      <that># скажите да или нет #</that>                                                             
       <template>
         <random>
           <li>
-	     Пожалуйста, ответьте на мой вопрос, это важно.                                                
+	     Пожалуйста, ответьте на мой вопрос , это важно.                                                
 	      </li>
           <li>
 	     Я повторяю.                                                                                   
