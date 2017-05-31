@@ -1,4 +1,5 @@
 def iloveyou():
+  fullspeed()
   i01.moveHead(116,80)
   i01.moveArm("left",85,93,42,16)
   i01.moveArm("right",87,93,37,18)
