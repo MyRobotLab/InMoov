@@ -32,7 +32,6 @@ def hello():
       i01.setArmSpeed("right", 0.65, 1.0, 1.0, 1.0)
       i01.setHeadSpeed(0.65, 0.75)
       i01.moveHead(83,70)
-      #i01.mouth.speakBlocking("hello, my name is inmov")
       i01.moveArm("left",78,48,37,11)
       i01.moveArm("right",57,145,50,68)
       i01.moveHand("left",100,90,85,80,71,15)
@@ -54,5 +53,5 @@ def hello():
       i01.moveArm("right",5,82,28,15)
       i01.moveHand("left",42,58,42,55,71,35)
       i01.moveHand("right",81,50,82,60,105,113)
-      ear.resumeListening()
+      rest()
 
