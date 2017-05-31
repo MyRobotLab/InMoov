@@ -1452,14 +1452,14 @@
     
     <category>
       <pattern>YOU DID GREAT</pattern>
-      <template>Always perfect
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>SHOW YOUR BACK</pattern>
       <template>You know I don't like to show my back because it is not finished
-        <oob><mrl><service>python</service><method>exec</method><param>no()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>passiveanswer()</param></mrl></oob></template>
     </category>
     
     <category>
@@ -1494,7 +1494,7 @@
 
     <category>
       <pattern>NICE</pattern>
-      <template>I know.
+      <template>
         <random>
           <li>I know </li>
           <li>yes, indeed </li>
@@ -1599,7 +1599,7 @@
           <li>It doesn't matter </li>
           <li>It's okay </li>
         </random>
-        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob>
       </template>
     </category>
     
