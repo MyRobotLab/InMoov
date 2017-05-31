@@ -53,5 +53,6 @@ def hello():
       i01.moveArm("right",5,82,28,15)
       i01.moveHand("left",42,58,42,55,71,35)
       i01.moveHand("right",81,50,82,60,105,113)
-      rest()
+      sleep(2)
+      relax()
 
