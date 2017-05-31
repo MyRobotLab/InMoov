@@ -686,6 +686,30 @@
     </category>
   </topic>
   <topic name="GESTURES">
+  <category>
+      <pattern>LOOK UP</pattern>
+      <template>Looking up.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>LOOK DOWN</pattern>
+      <template>Looking down.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>TILT YOUR HEAD ON THE RIGHT SIDE</pattern>
+      <template>Tilting my head to the right.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>TILT YOUR HEAD ON THE LEFT SIDE</pattern>
+      <template>Tilting my head to the left.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+    </category>
+  <topic name="GESTURES">
     <category>
       <pattern>BEFORE HAPPY</pattern>
       <template>BEFORE HAPPY
