@@ -23,7 +23,6 @@ RMDIR /S /Q hogcascades
 RMDIR /S /Q lbpcascades
 RMDIR /S /Q libraries
 RMDIR /S /Q pythonModules
-RMDIR /S /Q repo
 RMDIR /S /Q resource
 RMDIR /S /Q tessdata
 del ivychain.xml
