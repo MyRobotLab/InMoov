@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: Avril 28, 2017 -->
+  <!-- Last modified: May 31, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -1476,13 +1476,13 @@
     
     <category>
       <pattern>I KNOW BUT SHOW IT ANYWAY</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>SORRY I FORGOT</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
     </category>
 
@@ -1517,7 +1517,7 @@
     
     <category>
       <pattern>THANK YOU</pattern>
-      <template>.
+      <template>
         <random>
           <li>You are welcome </li>
           <li>My pleasure </li>
@@ -1528,7 +1528,7 @@
 
     <category>
       <pattern>THANKS</pattern>
-      <template>.
+      <template>
         <random>
           <li>It's okay </li>
           <li>Sure </li>
@@ -1540,7 +1540,7 @@
 
     <category>
       <pattern>LOOK AT PEOPLE</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
     </category>
     
@@ -1557,25 +1557,25 @@
     
     <category>
       <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>DO YOU SPEAK INDI</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>WHERE ARE YOU FROM</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>phonehome()</param></mrl></oob></template>
     </category>
     
@@ -1622,13 +1622,13 @@
     
     <category>
       <pattern>HOW DO YOU DO</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
     </category>
     
     <category>
       <pattern>I LOVE YOU</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
     </category>
     
@@ -1646,7 +1646,7 @@
     
     <category>
       <pattern>WHAT IS THIS COLOR</pattern>
-      <template>.
+      <template>
         <oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
     </category>
     
