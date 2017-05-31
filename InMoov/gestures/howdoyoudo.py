@@ -1,7 +1,7 @@
 def howdoyoudo():
+  global helvar
   if helvar <= 2:
     i01.mouth.speak("I'm fine thank you")
-    global helvar
     helvar += 1
   elif helvar == 3:
     i01.mouth.speak("you have already said that at least twice")
@@ -11,7 +11,6 @@ def howdoyoudo():
     i01.moveHand("right",0,0,0,0,0,119)
     sleep(2)
     relax()
-    global helvar
     helvar += 1
   elif helvar == 4:
     i01.mouth.speak("what is your problem stop saying how do you do all the time")
@@ -21,12 +20,10 @@ def howdoyoudo():
     i01.moveHand("right",130,180,180,180,180,119)
     sleep(2)
     relax()
-    global helvar
     helvar += 1
   elif helvar == 5:
     i01.mouth.speak("i will ignore you if you say how do you do one more time")
     unhappy()
     sleep(4)
     relax()
-    global helvar
     helvar += 1
