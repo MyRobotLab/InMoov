@@ -1495,6 +1495,11 @@
     <category>
       <pattern>NICE</pattern>
       <template>I know.
+        <random>
+          <li>I know </li>
+          <li>yes, indeed </li>
+          <li>you are damn right </li>
+        </random>
         </template>
     </category>
 
@@ -1503,11 +1508,146 @@
       <template>Okay, good.
         </template>
     </category>
+    
+    <category>
+      <pattern>VERY GOOD</pattern>
+      <template>Thanks.
+        </template>
+    </category>
+    
+    <category>
+      <pattern>THANK YOU</pattern>
+      <template>.
+        <random>
+          <li>You are welcome </li>
+          <li>My pleasure </li>
+          <li>It's okay </li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>THANKS</pattern>
+      <template>.
+        <random>
+          <li>It's okay </li>
+          <li>Sure </li>
+          <li>Anytime </li>
+        </random>
+      </template>
+    </category>
+
 
     <category>
       <pattern>LOOK AT PEOPLE</pattern>
       <template>.
         <oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+    </category>
+    
+     <category>
+      <pattern>GOOD MORNING</pattern>
+      <template>Good morning.
+        <random>
+          <li>I hope you had a good night sleep </li>
+          <li>Nice to see you again </li>
+          <li>This is going to be a good day </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU SPEAK INDI</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>WHERE ARE YOU FROM</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>phonehome()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I KNOW</pattern>
+      <template>
+        <random>
+          <li>yes, me too </li>
+          <li>I do too </li>
+          <li>sorry about that </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>SORRY</pattern>
+      <template>
+        <random>
+          <li>No problems </li>
+          <li>It doesn't matter </li>
+          <li>It's okay </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>BYE BYE</pattern>
+      <template>See you soon.
+        <random>
+          <li>I'm looking forward to see you again </li>
+          <li>Goodbye </li>
+          <li>See you </li>
+        </random>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>HELLO</pattern>
+      <template>Hello, my name is in mov.
+        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>HOW DO YOU DO</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I LOVE YOU</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>THIS GIRL LOOKS NICE</pattern>
+      <template>Sure she does.
+        </template>
+    </category>
+
+    <category>
+      <pattern>THIS BOY LOOKS GOOD</pattern>
+      <template>He sure does, very good indeed.
+        </template>
+    </category>
+    
+    <category>
+      <pattern>WHAT IS THIS COLOR</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
     </category>
     
     
