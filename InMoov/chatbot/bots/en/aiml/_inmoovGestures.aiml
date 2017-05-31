@@ -1437,5 +1437,79 @@
         <srai>STOP RANDOM PAUSE</srai>
       </template>
     </category>
+    
+    <category>
+      <pattern>HI THERE</pattern>
+      <template>Hello
+        <oob><mrl><service>python</service><method>exec</method><param>lookaroundyou()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>ARE YOU ALRIGHT</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>YOU DID GREAT</pattern>
+      <template>Always perfect
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>SHOW YOUR BACK</pattern>
+      <template>You know I don't like to show my back because it is not finished
+        <oob><mrl><service>python</service><method>exec</method><param>no()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>NOT TRUE IT IS FINISHED</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>notTrue()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>IT'S AN OBJECT</pattern>
+      <template>Definition of an object, anything that is visible or tangible and relatively stable in form.
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I KNOW BUT SHOW IT ANYWAY</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>SORRY I FORGOT</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>IT'S OKAY</pattern>
+      <template>Good.
+        </template>
+    </category>
+
+    <category>
+      <pattern>NICE</pattern>
+      <template>I know.
+        </template>
+    </category>
+
+    <category>
+      <pattern>VERY GOOD THANK YOU</pattern>
+      <template>Okay, good.
+        </template>
+    </category>
+
+    <category>
+      <pattern>LOOK AT PEOPLE</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+    </category>
+    
+    
 
 </aiml>
