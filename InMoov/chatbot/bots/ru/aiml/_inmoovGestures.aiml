@@ -9,7 +9,7 @@
    <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
    <!-- публичная лицензия, опубликованная Free Software Foundation. -->
    <!-- -->
-   <!-- изменение: Энтони Галлот -->
+   <!-- изменение: Гаэль Ланжевин -->
    <!-- Последнее изменение: 31 мая 2017 г. -->
    <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
    <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
@@ -706,6 +706,30 @@
       <pattern>ПОСМОТРИ ПРЯМО</pattern>    
       <template>Смотрю прямо.
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>ПОГЛЯДИ</pattern>
+      <template>Глядя вверх.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>ПОСМОТРЕТЬ</pattern>
+      <template>Глядя вниз.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>НАЙДИТЕ СВОЮ ГОЛОВКУ НА ПРАВОЙ СТОРОНЕ</pattern>
+      <template>Наклоните голову направо.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>НАПРАВЛЯЙТЕ ВАШУ ГОЛОВУ НА ЛЕВОЙ СТОРОНЕ</pattern>
+      <template>Наклонение головы влево.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
     </category>
 
 
