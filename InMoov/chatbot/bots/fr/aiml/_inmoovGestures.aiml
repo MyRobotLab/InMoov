@@ -2,8 +2,8 @@
 <aiml>
   <!-- File: gesturesFrench.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: May11, 2017 -->
-  <!-- by Gael Langevin -->
+  <!-- Last modified: May 31, 2017 -->
+  <!-- by Anthony Gallot : accents -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -549,14 +549,14 @@
     </category>
 
     <category>
-      <pattern>PENCHE LA TETE A DROITE</pattern>
-      <template>Je penche ma tete a droite.
+      <pattern>PENCHE LA TÊTE A DROITE</pattern>
+      <template>Je penche ma TÊTE a droite.
         <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
     </category>
 
     <category>
-      <pattern>PENCHE TA TETE A GAUCHE</pattern>
-      <template>je penche ma tete a gauche.
+      <pattern>PENCHE TA TÊTE A GAUCHE</pattern>
+      <template>je penche ma TÊTE a gauche.
         <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
     </category>
     <category>
