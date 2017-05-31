@@ -1574,12 +1574,6 @@
     </category>
     
     <category>
-      <pattern>WHERE ARE YOU FROM</pattern>
-      <template>
-        <oob><mrl><service>python</service><method>exec</method><param>phonehome()</param></mrl></oob></template>
-    </category>
-    
-    <category>
       <pattern>I KNOW</pattern>
       <template>
         <random>
@@ -1605,11 +1599,11 @@
     
     <category>
       <pattern>BYE BYE</pattern>
-      <template>See you soon.
+      <template>
         <random>
           <li>I'm looking forward to see you again </li>
           <li>Goodbye </li>
-          <li>See you </li>
+          <li>See you soon</li>
         </random>
       </template>
     </category>
@@ -1628,7 +1622,7 @@
     
     <category>
       <pattern>I LOVE YOU</pattern>
-      <template>
+      <template>I love you too.
         <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
     </category>
     
