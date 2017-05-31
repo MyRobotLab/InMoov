@@ -20,6 +20,18 @@ def lookinmiddle():
   i01.setHeadVelocity(60, 60)
   i01.moveHead(85,90)
   
+def lookup():
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=0
+  i01.setHeadVelocity(60, 60)
+  i01.moveHead(175,90)
+
+def lookdown():
+  global RobotCanMoveHeadWhileSpeaking
+  RobotCanMoveHeadWhileSpeaking=0
+  i01.setHeadVelocity(60, 60)
+  i01.moveHead(10,90)  
+  
 def tiltHeadLeftSide():
   global RobotCanMoveHeadWhileSpeaking
   RobotCanMoveHeadWhileSpeaking=0
