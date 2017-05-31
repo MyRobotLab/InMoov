@@ -538,9 +538,26 @@
     </category>
     <category>
       <pattern>REGARDE EN HAUT</pattern>
-      <template>
-        <srai>REGARDE LE CIEL</srai>
-      </template>
+      <template>Je regarde en haut.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>REGARDE EN BAS</pattern>
+      <template>Je regarde en bas.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE LA TETE A DROITE</pattern>
+      <template>Je penche ma tete a droite.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE TA TETE A GAUCHE</pattern>
+      <template>je penche ma tete a gauche.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>BEFORE HAPPY</pattern>
