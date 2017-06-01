@@ -12,6 +12,4 @@ ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")
 def displayPic(pic):
   if not virtualInmoovAlwaysActivated and not ScriptType=="Virtual":
     r=ImageDisplay.displayFullScreen(pic)
-
-if LoadingPicture:displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
   

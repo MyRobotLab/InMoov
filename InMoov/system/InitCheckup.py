@@ -50,10 +50,11 @@ execfile(RuningFolder+'/system/updater/mrl_updater.py')
 for filename in sorted(os.listdir(RuningFolder+'services')):    
   if os.path.splitext(filename)[1] == ".py":
     execfile(RuningFolder+'services/'+filename.encode('utf8'))
-    print filename
-
+    if DEBUG==1:print filename
+if LoadingPicture:displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
 #mrl too old dude, update it !
-#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')    
+#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')   
+ 
 ################################
 # INIT.4 - skeleton loading & virtual skeleton
 ################################

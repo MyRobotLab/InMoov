@@ -36,6 +36,10 @@ def sleepModeWakeUp():
     if isHeadActivated:
       head.neck.setVelocity(50)
       head.neck.rest()
+    if isEyeLidsActivated:
+      eyelids.eyelidleft.moveTo(0)
+      eyelids.eyelidright.moveTo(0)
+      eyelids.autoBlink(True)
   else:
     if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
@@ -52,11 +56,15 @@ def sleepModeSleep():
   #display sleeping robot on screen
   displayPic(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
   #head down
+  if isEyeLidsActivated:
+    eyelids.autoBlink(False)
+    eyelids.eyelidleft.moveTo(180)
+    eyelids.eyelidright.moveTo(180)
   if isHeadActivated:
     head.neck.setVelocity(60)
     head.neck.moveTo(10)
     sleep(5)
-    i01.disable()
+  i01.disable()
   switchOffAllNervo()
   StopNeopixelAnimation()
   sleep(2)

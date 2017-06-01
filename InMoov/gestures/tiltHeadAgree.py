@@ -1,6 +1,5 @@
 def tiltHeadAgree():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.disableRobotCanMoveHeadRandom(15)
   i01.setHeadVelocity(60, 60, 70)
   i01.moveHead(80,90,180)
   sleep(0.8)

@@ -53,7 +53,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isEyeLidsActivated==1:
+if isEyeLidsActivated:
   if LeftPortIsConnected or RighPortIsConnected:
     talkEvent(lang_startingEyeLids)
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
