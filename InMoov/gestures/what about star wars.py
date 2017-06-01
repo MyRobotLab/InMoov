@@ -16,7 +16,7 @@ def whataboutstarwars():
       sleep(1)
       i01.moveHead(90,90,87,80,100)
       sleep(0.5)
-      i01.moveHead(90,90,87,80,70)
+      i01.moveHead(90,90,87,80,0)
       sleep(1)
       relax()
   if x == 2:
