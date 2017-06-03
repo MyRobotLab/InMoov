@@ -1644,6 +1644,47 @@
         <oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
     </category>
     
+            <category>
+      <pattern>GUESS WHO IS HERE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>missedYou()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>GUESS WHO'S HERE</pattern>
+      <template>
+        <srai>GUESS WHO IS HERE</srai>
+      </template>
+    </category>
+  
+    <category>
+        <pattern># YES #</pattern>
+        <that># Shall we give a hug #</that>
+        <template>Great.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouYes()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+    
+      <category>
+        <pattern># NO #</pattern>
+        <that># Shall we give a hug #</that>
+        <template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouNo()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+    
     
 
 </aiml>
