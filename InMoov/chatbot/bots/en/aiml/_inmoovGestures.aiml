@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: chatBot.aiml -->
+  <!-- File: Gestures.aiml -->
   <!-- Author: Gael Langevin -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: May 31, 2017 -->
+  <!-- Last modified: June 04, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -1308,6 +1308,27 @@
     <category>
       <pattern>STOP FACE RECOGNIZER</pattern>
       <template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern> STOP FACE RECOGNITION</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern> FACE RECOGNIZER STOP</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern> FREEZE FACE RECOGNIZER</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
     </category>
 
 
