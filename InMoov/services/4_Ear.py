@@ -29,11 +29,12 @@ chatBot=Runtime.create("chatBot", "ProgramAB")
 
 # this function catch the ear listening
 isChatbotActivated=0
-
+global lastRecognized
+lastRecognized=""
 def onRecognized(text):
   #RobotneedUpdate : fix about first question do you want to update
-  
-
+  global lastRecognized
+  lastRecognized=text
   if DEBUG==1:
     print "onRecognized : ",text,RobotneedUpdate
   if isChatbotActivated and i01.RobotIsStarted and not i01.RobotIsSleeping:
