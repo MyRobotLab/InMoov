@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: gesturesFrench.aiml -->
+  <!-- Author: Gael Langevin, Anthony Gallot -->
+  <!-- Last modified: Jun 6, 2017 -->
+  <!-- by Anthony Gallot : initial -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+
+<!-- kids game 1 -->  
+    <category>
+    <pattern>JOUER AUX MOTS</pattern>
+    <template>
+	<think><set name="topic">playwordsgame</set></think>
+	<random>
+		<li>
+		Chouette ! J'aime apprendre avec toi. Quel mot veux-tu apprendre ?
+		</li>  
+		<li>
+		Je connais plein de mots tu sais ? Va zi , essayes !
+		</li>  
+		<li>
+		Je connais presque tous les mots du monde ! Normal, je suis un robot. ALLons zi.
+		</li> 
+	</random>
+	<li>
+	Dis moi , STOP JEUX ! pour arrêter
+	</li>
+	
+    </template>
+  </category>
+  
+	<category>
+    <pattern>jouer au jeu démo</pattern>
+    <template>
+	<srai>># JOUER AUX MOTS #</srai>
+    </template>
+	</category>
+  
+  <topic name="playwordsgame">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayWithWords("<star index="1" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>  
+  </topic>
+    
+<!-- end kids game 1 --> 
+
+
+	<category>
+    <pattern>TOP JEUX</pattern>
+    <template>
+	<srai>STOP JEUX</srai>
+    </template>
+	</category>
+	
+	<category>
+    <pattern>STOP JE</pattern>
+    <template>
+	<srai>STOP JEUX</srai>
+    </template>
+	</category>
+    
+   <category>
+    <pattern>STOP JEUX</pattern>
+    <template>
+	<think><set name="topic">default</set></think>
+    <li>
+    A bientôt, j'aime jouer !
+    </li>  
+    </template>
+	</category>
+
+    
+</aiml>
