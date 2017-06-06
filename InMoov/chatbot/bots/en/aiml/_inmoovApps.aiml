@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: gesturesFrench.aiml -->
+  <!-- Author: Gael Langevin, Anthony Gallot -->
+  <!-- Last modified: Jun 6, 2017 -->
+  <!-- by Anthony Gallot : initial -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+
+<!-- kids game 1 -->  
+    <category>
+    <pattern>Play the words game</pattern>
+    <template>
+	<think><set name="topic">playwordsgame</set></think>
+	<random>
+		<li>
+		Owl ! I love learning with you. What word do you want to learn ?
+		</li>  
+		<li>
+		I know a lot of words you know? Go ahead, try!
+		</li>  
+		<li>
+		I know almost every word in the world! Normal, I'm a robot. Let's go.
+		</li> 
+	</random>
+	<li>
+	Tell me, stop playing, to stop the game
+	</li>
+	
+    </template>
+  </category>
+
+  
+  <topic name="playwordsgame">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayWithWords("<star index="1" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>  
+  </topic>
+    
+<!-- end kids game 1 --> 
+
+    
+   <category>
+    <pattern>stop playing</pattern>
+    <template>
+	<think><set name="topic">default</set></think>
+    <li>
+    See you soon, I like to play!
+    </li>  
+    </template>
+	</category>
+
+    
+</aiml>
