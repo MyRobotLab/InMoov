@@ -10,8 +10,6 @@
 
 global RobotIsErrorMode
 RobotIsErrorMode=0
-global RobotCanMoveBodyRamdom
-RobotCanMoveBodyRamdom=0
 global RobotneedUpdate
 RobotneedUpdate=0
 global batterieLevel

@@ -1,7 +1,5 @@
 def perfect():
-  global MoveBodyRandom
-  MoveBodyRandom=0
-  i01.disableRobotCanMoveHeadRandom(30)  
+  i01.disableRobotRandom(30)  
   i01.setHandSpeed("left", 0.80, 0.80, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 0.95, 0.95, 0.95, 1.0)
