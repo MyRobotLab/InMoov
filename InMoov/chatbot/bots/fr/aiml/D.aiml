@@ -963,6 +963,24 @@
     <template>Je suis supposé dire quoi?</template>
   </category>
   <category>
+    <pattern>DIS * à *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+    <category>
+    <pattern>DIS * a *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+   <category>
+   <pattern>DIS *</pattern>
+   <template>
+    <srai>SAY <star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>DIS LA LUI</pattern>
     <template>Ok, J archive.</template>
   </category>

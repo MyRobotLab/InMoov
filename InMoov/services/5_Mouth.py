@@ -95,7 +95,7 @@ def onEndSpeaking(text):
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
-      head.jaw.setVelocity(20)
+      head.jaw.setVelocity(30)
       head.jaw.moveTo(0)
       #head.jaw.setVelocity(200)
       #head.jaw.moveTo(0)
