@@ -802,15 +802,22 @@
 
 
     <category>
-      <pattern>START GESTURE</pattern>
-      <template>START GESTURE
+      <pattern>START KINECT</pattern>
+      <template>START KINECT
         <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>* KINECT *</pattern>
+      <template>
+        <srai>START KINECT</srai>
+      </template>
     </category>
 
 
     <category>
-      <pattern>OFF GESTURE</pattern>
-      <template>OFF GESTURE
+      <pattern>OFF KINECT</pattern>
+      <template>OFF KINECT
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
 
