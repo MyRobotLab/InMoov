@@ -3,7 +3,7 @@
   <!-- File: gesturesFrench.aiml -->
   <!-- Author: Gael Langevin -->
   <!-- Last modified: May 31, 2017 -->
-  <!-- by Anthony Gallot : accents -->
+  <!-- by Anthony Gallot : phonehome -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -890,9 +890,15 @@
       </template>
     </category>
     <category>
-      <pattern>D'OU VIENS tu</pattern>
+      <pattern>D Où VIENS tu</pattern>
       <template>
-        <srai>PHONE HOME</srai>
+         <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob>
       </template>
     </category>
     <category>
@@ -940,7 +946,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>A PROPOS DE STAR WARS</pattern>
+      <pattern>à PROPOS DE STAR WARS</pattern>
       <template>
         <oob>
           <mrl>
@@ -952,7 +958,7 @@
       </template>
     </category>
     <category>
-      <pattern>DONNE moi L'HEURE</pattern>
+      <pattern>DONNE moi L HEURE</pattern>
       <template>
         <oob>
           <mrl>
