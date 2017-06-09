@@ -27,6 +27,10 @@ def MoveRandom(timedata):
     else:
       i01.RobotCanMoveHeadRandom=True
       if not MoveHeadTimer.isClockRunning:MoveHeadTimer.startClock()
+      
+  if random.randint(0,3)==3:
+    i01.disableRobotRandom(20)
+    chatBot.getResponse("RANDOM")
 
 def MoveRandomStart():
   MoveBodyTimer.startClock()

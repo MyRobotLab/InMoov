@@ -1,4 +1,5 @@
 def whataboutstarwars():
+  i01.disableRobotRandom(30)
   PlayNeopixelAnimation("Ironman", 255, 255, 255, 1)
   sleep(3)
   StopNeopixelAnimation()
