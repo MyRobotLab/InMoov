@@ -68,7 +68,7 @@ def errorSpokenFunc(errorType,param="0"):
     
   
     
-  print errorSpokenAlert
+  print errorSpokenAlert.decode('utf-8')
   subconsciousMouth.speakBlocking(unicode(errorSpokenAlert,'utf-8'))
   
   

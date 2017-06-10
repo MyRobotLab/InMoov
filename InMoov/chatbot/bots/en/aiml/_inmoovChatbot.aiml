@@ -93,9 +93,8 @@
       <that># if your name #</that>
       <template>
         <random>
-		<li>
-			Now I know you, <get name="tmpname" />. I am glad.
-		</li>
+        <li>I am glad to know you, <get name="tmpname" />.</li>
+        <li>Nice to meet you, <get name="tmpname" />.</li>
         </random>
 		
         <think>
@@ -236,7 +235,7 @@
   
   <!-- default town -->
    <category>
-    <pattern># weather</pattern>
+    <pattern># forecast</pattern>
     <template>
       <oob>
         <mrl>
@@ -249,25 +248,25 @@
   </category>
   
    <category>
-    <pattern>what is the weather</pattern>
+    <pattern>what is the forecast</pattern>
     <template>
-     <srai># weather in</srai>
+     <srai># forecast in</srai>
     </template>
   </category>
   
   <!-- free town -->
   
   <category>
-    <pattern>what is the weather in *</pattern>
+    <pattern>what is the forecast in *</pattern>
     <template>
-      <srai># weather in <star/></srai>
+      <srai># forecast in <star/></srai>
     </template>
   </category>
   
 
   
     <category>
-    <pattern># weather in *</pattern>
+    <pattern># forecast in *</pattern>
     <template>
       <oob>
         <mrl>
@@ -286,12 +285,12 @@
     <template>
      <think><set name="meteo"> <star index="3"/></set></think>
                 <random>
-                <li>Today at <star index="2"/>, </li>
-                <li>About weather in <star index="2"/>, </li>
+                <li>Today in <star index="2"/>, </li>
+                <li>About the forecast in <star index="2"/>, </li>
                 </random>
                 <random>
                 <li>There is, </li>
-                <li>I can say, it is, </li>
+                <li>I shall say, it is, </li>
                 </random>
                 
                 <condition>
@@ -371,18 +370,18 @@
                 </condition>
           
                 <random>
-                <li>About temperature, </li>
-                <li>If I look at my thermometer, oh where is it. oops , </li>
+                <li>About the temperature, </li>
+                <li>My thermometer shows , </li>
                 </random>
                  <random>
-                <li>The mercury indicates, </li>
+                <li>The mercury level indicates, </li>
                 </random>
                 <li>
                 <star index="1"/> degrees
                 </li>
                  <random>
-                 <li>Exaclty! </li>
-                 <li>Or not. </li>
+                 <li>Exactly! </li>
+                 <li>Or maybe not. </li>
                  </random>
           
 	</template>

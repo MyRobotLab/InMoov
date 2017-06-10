@@ -228,7 +228,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       
     
     #tracking
-    if opencvStarted:
+    if isOpenCvActivated:
       i01.startEyesTracking(MyLeftPort,22,24)
       i01.startHeadTracking(MyLeftPort,12,13)
       talkBlocking(lang_TrackingStarted)  

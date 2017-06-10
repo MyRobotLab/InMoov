@@ -1,4 +1,11 @@
 def surrender():
+  i01.disableRobotRandom(60)
+  rightArm.omoplate.forceElectrize(10)
+  leftArm.omoplate.forceElectrize(10)
+  rightArm.shoulder.forceElectrize(10)
+  leftArm.shoulder.forceElectrize(10)
+  rightArm.rotate.forceElectrize(10)
+  leftArm.rotate.forceElectrize(10)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.75, 0.85, 0.95, 0.85)

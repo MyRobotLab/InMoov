@@ -1,6 +1,5 @@
 def howmanyfingersdoihave():
-  ear.pauseListening()
-  sleep(1)
+  i01.disableRobotRandom(60)
   fullspeed()
   i01.moveHead(49,74)
   i01.moveArm("left",75,83,79,24)
@@ -9,23 +8,23 @@ def howmanyfingersdoihave():
   i01.moveHand("right",89,80,98,120,114,0)
   sleep(2)
   i01.moveHand("right",0,80,98,120,114,0)
-  i01.mouth.speakBlocking("ten")
+  i01.mouth.speakBlocking("10")
 
   sleep(.1)
   i01.moveHand("right",0,0,98,120,114,0)
-  i01.mouth.speakBlocking("nine")
+  i01.mouth.speakBlocking("9")
 
   sleep(.1)
   i01.moveHand("right",0,0,0,120,114,0)
-  i01.mouth.speakBlocking("eight")
+  i01.mouth.speakBlocking("8")
 
   sleep(.1)
   i01.moveHand("right",0,0,0,0,114,0)
-  i01.mouth.speakBlocking("seven")
+  i01.mouth.speakBlocking("7")
 
   sleep(.1)
   i01.moveHand("right",0,0,0,0,0,0)
-  i01.mouth.speakBlocking("six")
+  i01.mouth.speakBlocking("6")
 
   sleep(.5)
   i01.setHeadSpeed(.70,.70)
@@ -35,7 +34,10 @@ def howmanyfingersdoihave():
   i01.moveHand("left",0,0,0,0,0,180)
   i01.moveHand("right",0,0,0,0,0,0)
   sleep(0.1)
-  i01.mouth.speakBlocking("and five makes eleven")
+  if MyLanguage=="fr":
+    i01.mouth.speakBlocking("et 5 font 11")
+  else:
+    i01.mouth.speakBlocking("and five makes eleven")
 
   sleep(0.7)
   i01.setHeadSpeed(0.7,0.7)
@@ -53,13 +55,15 @@ def howmanyfingersdoihave():
   i01.setHeadSpeed(0.7,0.7)
   i01.moveHead(90,85)
   sleep(0.7)
-  i01.mouth.speakBlocking("eleven")
+  i01.mouth.speakBlocking("11")
   i01.moveArm("left",70,75,70,20)
   i01.moveArm("right",60,75,65,20)
   sleep(1)
-  i01.mouth.speakBlocking("that doesn't seem right")
-  sleep(2)
-  i01.mouth.speakBlocking("I think I better try that again")
+  if MyLanguage=="fr":
+    i01.mouth.speakBlocking("oupse, cela semble incorect, je vais reessayer")
+  else:
+    i01.mouth.speakBlocking("that doesn't seem right, I think I better try that again")
+
 
   i01.moveHead(40,105)
   i01.moveArm("left",75,83,79,24)
@@ -69,24 +73,24 @@ def howmanyfingersdoihave():
   sleep(2)
 
   i01.moveHand("left",10,140,168,168,158,90)
-  i01.mouth.speakBlocking("one")
+  i01.mouth.speakBlocking("1")
   sleep(.1)
 
 
   i01.moveHand("left",10,10,168,168,158,90)
-  i01.mouth.speakBlocking("two")
+  i01.mouth.speakBlocking("2")
   sleep(.1)
 
   i01.moveHand("left",10,10,10,168,158,90)
-  i01.mouth.speakBlocking("three")
+  i01.mouth.speakBlocking("3")
   sleep(.1)
   i01.moveHand("left",10,10,10,10,158,90)
 
-  i01.mouth.speakBlocking("four")
+  i01.mouth.speakBlocking("4")
   sleep(.1)
   i01.moveHand("left",10,10,10,10,10,90)
 
-  i01.mouth.speakBlocking("five")
+  i01.mouth.speakBlocking("5")
   sleep(.1)
   i01.setHeadSpeed(0.65,0.65)
   i01.moveHead(53,65)
@@ -96,14 +100,23 @@ def howmanyfingersdoihave():
   i01.moveHand("left",10,10,10,10,10,90)
   i01.moveHand("right",10,10,10,10,10,25)
   sleep(1)
-  i01.mouth.speakBlocking("and five makes ten")
+  if MyLanguage=="fr":
+    i01.mouth.speakBlocking("et 5 font 10")
+  else:
+    i01.mouth.speakBlocking("and five makes ten")
   sleep(.5)
-  i01.mouth.speakBlocking("there that's better")
+  if MyLanguage=="fr":
+    i01.mouth.speakBlocking("c'est beaucoup mieux")
+  else:
+    i01.mouth.speakBlocking("it is better")
   i01.moveHead(95,85)
   i01.moveArm("left",75,83,79,24)
   i01.moveArm("right",40,70,70,10)
   sleep(0.5)
-  i01.mouth.speakBlocking("inmoov has ten fingers")
+  if MyLanguage=="fr":
+    i01.mouth.speakBlocking("inemouve a 10 doigts")
+  else:
+    i01.mouth.speakBlocking("inmoov has 10 fingers")
   sleep(0.5)
   i01.moveHead(90,90)
   i01.setHandSpeed("left", 0.8, 0.8, 0.8, 0.8, 0.8, 0.8)
@@ -118,7 +131,4 @@ def howmanyfingersdoihave():
   sleep(0.5)
   relax()
   sleep(0.5)
-
-  ear.resumeListening()
-
 

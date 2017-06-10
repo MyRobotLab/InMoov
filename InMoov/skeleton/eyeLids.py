@@ -53,7 +53,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isEyeLidsActivated==1:
+if isEyeLidsActivated:
   if LeftPortIsConnected or RighPortIsConnected:
     talkEvent(lang_startingEyeLids)
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
@@ -79,7 +79,8 @@ if isEyeLidsActivated==1:
     eyelids.eyelidleft.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
     eyelids.eyelidright.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
   
-    eyelids.rest()
+    eyelids.autoBlink(True)
+    
        
   else:
     #we force parameter if arduino is off

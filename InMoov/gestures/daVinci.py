@@ -1,6 +1,11 @@
 def daVinci():
-  i01.rightArm.enableAutoDisable(0)
-  i01.leftArm.enableAutoDisable(0)
+  i01.disableRobotRandom(60)
+  rightArm.omoplate.forceElectrize(10)
+  leftArm.omoplate.forceElectrize(10)
+  rightArm.shoulder.forceElectrize(10)
+  leftArm.shoulder.forceElectrize(10)
+  rightArm.rotate.forceElectrize(10)
+  leftArm.rotate.forceElectrize(10)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 0.65)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 0.65)
   i01.setArmSpeed("left", 0.80, 0.80, 0.80, 0.80)

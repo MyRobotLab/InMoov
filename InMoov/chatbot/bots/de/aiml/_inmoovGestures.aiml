@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: Avril 28, 2017 -->
+  <!-- Last modified: May 31, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -685,6 +685,30 @@
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
     </category>
   </topic>
+  <topic name="GESTURES">
+  <category>
+      <pattern>LOOK UP</pattern>
+      <template>Looking up.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>LOOK DOWN</pattern>
+      <template>Looking down.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>TILT YOUR HEAD ON THE RIGHT SIDE</pattern>
+      <template>Tilting my head to the right.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+   <topic name="GESTURES">
+    <category>
+      <pattern>TILT YOUR HEAD ON THE LEFT SIDE</pattern>
+      <template>Tilting my head to the left.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+    </category>
   <topic name="GESTURES">
     <category>
       <pattern>BEFORE HAPPY</pattern>

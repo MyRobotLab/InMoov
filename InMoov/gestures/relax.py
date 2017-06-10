@@ -3,7 +3,7 @@ def relax():
   sleep(2)
   PlayNeopixelAnimation("Ironman", 0, 0, 255, 1)
 
-  if (i01.eyesTracking.getOpenCV().capturing):
+  if (i01.RobotIsOpenCvCapturing()):
     i01.disableRobotRandom(30)
     i01.setHandVelocity("left", 43, 43, 43, 43, 43, 43)
     i01.setHandVelocity("right", 43, 43, 43, 43, 43, 43)

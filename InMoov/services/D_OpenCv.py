@@ -18,64 +18,53 @@ getInmoovFrParameter('opencv',ThisServicePart+'.config')
 CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
+global isOpenCvActivated
 isOpenCvActivated=0
-global opencvStarted  
-opencvStarted=0
-global eyesTrackingisIdle
-global headTrackingisIdle
-eyesTrackingisIdle=1
-headTrackingisIdle=1
+
 isOpenCvActivated=ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated')
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
+
+try:
+  streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+except:
+  ThisServicePartConfig.set('MAIN','streamerEnabled',False)
+  with open(ThisServicePart+'.config', 'wb') as f:
+    ThisServicePartConfig.write(f)
+  ThisServicePartConfig.read(ThisServicePart+'.config')
+  pass
+streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
 
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
 
 
-i01.opencv = Runtime.createAndStart("i01.opencv", "OpenCV")
+i01.opencv = Runtime.create("i01.opencv", "OpenCV")
 opencv=i01.opencv
-python.subscribe(opencv.getName(),"publishOpenCVData")
-
+opencv.streamerEnabled=streamerEnabled
+i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():
-  global opencvStarted  
-  opencvStarted=0
- 
-  
+  global isOpenCvActivated
   if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
   opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
-  opencv.addFilter("PyramidDown")
-  opencv.addFilter("Gray")
-  opencv.addFilter("FaceDetect")
-  opencv.setDisplayFilter("FaceDetect")
   opencv.capture()
   #worky open cv camera detection
   timeout=0
-  while not opencvStarted:
+  while not i01.RobotIsOpenCvCapturing():
     sleep(1)
     timeout+=1
     if timeout>7:break
   
-  if not opencvStarted:
+  if not i01.RobotIsOpenCvCapturing():
     if ScriptType!="RightSide":
       errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
     isOpenCvActivated=0
   else:talkEvent(lang_startingOpenCv)
   
   opencv.removeFilters()
-
-
-def onOpenCVData(data):
-#####################################################
-# This is opencv functions that do jobs
-#####################################################
-  global opencvStarted
-  if data and not opencvStarted:
-    opencvStarted=1
-  global FaceDetected
-
-if isOpenCvActivated:openCvInit()
+  opencv.stopCapture()
   
+if isOpenCvActivated:openCvInit()

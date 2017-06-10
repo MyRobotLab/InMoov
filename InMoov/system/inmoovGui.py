@@ -121,7 +121,7 @@ if iHaveInmoovFrKey:
   inmoovfr.setInterval(5000)
 
   def inmoovfr_def(timedata):
-    if RobotIsStarted and iHaveInmoovFrKey:
+    if i01.RobotIsStarted and iHaveInmoovFrKey:
       talkToInmoovFrQueue("MRLALIVE:"+str(runtime.getVersion()[-4:]))
       talkToInmoovFrQueue("BATTERYLEVEL:"+str(batterieLevel))
       data=getTheQueue()

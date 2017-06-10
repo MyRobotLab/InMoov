@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: chatBot.aiml -->
+  <!-- File: Gestures.aiml -->
   <!-- Author: Gael Langevin -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: Avril 28, 2017 -->
+  <!-- Last modified: June 04, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -291,7 +291,7 @@
 
     <category>
       <pattern>OPEN HAND</pattern>
-      <template>Open hand.
+      <template>Opening my hand.
         <oob><mrl><service>python</service><method>exec</method><param>handopen()</param></mrl></oob></template>
     </category>
 
@@ -300,6 +300,18 @@
       <pattern>CLOSE HAND</pattern>
       <template>Closing my hand.
         <oob><mrl><service>python</service><method>exec</method><param>handclose()</param></mrl></oob></template>
+    </category>
+    
+        <category>
+      <pattern>CLOSE HANDS</pattern>
+      <template>Closing my hands.
+        <oob><mrl><service>python</service><method>exec</method><param>handsclose()</param></mrl></oob></template>
+    </category>
+
+        <category>
+      <pattern>OPEN HANDS</pattern>
+      <template>Opening my hands.
+        <oob><mrl><service>python</service><method>exec</method><param>handsopen()</param></mrl></oob></template>
     </category>
 
 
@@ -693,6 +705,30 @@
       <template>Looking in the middle.
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>LOOK UP</pattern>
+      <template>Looking up.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>LOOK DOWN</pattern>
+      <template>Looking down.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>TILT YOUR HEAD ON THE RIGHT SIDE</pattern>
+      <template>Tilting my head to the right.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>TILT YOUR HEAD ON THE LEFT SIDE</pattern>
+      <template>Tilting my head to the left.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+    </category>
 
 
     <category>
@@ -766,15 +802,22 @@
 
 
     <category>
-      <pattern>START GESTURE</pattern>
-      <template>START GESTURE
+      <pattern>START KINECT</pattern>
+      <template>START KINECT
         <oob><mrl><service>python</service><method>exec</method><param>startkinect()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>* KINECT *</pattern>
+      <template>
+        <srai>START KINECT</srai>
+      </template>
     </category>
 
 
     <category>
-      <pattern>OFF GESTURE</pattern>
-      <template>OFF GESTURE
+      <pattern>OFF KINECT</pattern>
+      <template>OFF KINECT
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
 
@@ -1273,6 +1316,27 @@
       <pattern>STOP FACE RECOGNIZER</pattern>
       <template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern> STOP FACE RECOGNITION</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern> FACE RECOGNIZER STOP</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
+    </category>
+
+    <category>
+      <pattern> FREEZE FACE RECOGNIZER</pattern>
+      <template>
+        <srai>STOP FACE RECOGNIZER</srai>
+      </template>
+    </category>
 
 
     <category>
@@ -1401,5 +1465,267 @@
         <srai>STOP RANDOM PAUSE</srai>
       </template>
     </category>
+    
+    <category>
+      <pattern>HI THERE</pattern>
+      <template>Hello
+        <oob><mrl><service>python</service><method>exec</method><param>lookaroundyou()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>ARE YOU ALRIGHT</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>YOU DID GREAT</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>SHOW YOUR BACK</pattern>
+      <template>You know I don't like to show my back because it is not finished
+        <oob><mrl><service>python</service><method>exec</method><param>passiveanswer()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>NOT TRUE IT IS FINISHED</pattern>
+      <template>.
+        <oob><mrl><service>python</service><method>exec</method><param>notTrue()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>IT'S AN OBJECT</pattern>
+      <template>Definition of an object, anything that is visible or tangible and relatively stable in form.
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I KNOW BUT SHOW IT ANYWAY</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>showitanyway()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>SORRY I FORGOT</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>sorryiforgot()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>IT'S OKAY</pattern>
+      <template>Good.
+        </template>
+    </category>
+
+    <category>
+      <pattern>NICE</pattern>
+      <template>
+        <random>
+          <li>I know </li>
+          <li>yes, indeed </li>
+          <li>you are damn right </li>
+        </random>
+        </template>
+    </category>
+
+    <category>
+      <pattern>VERY GOOD THANK YOU</pattern>
+      <template>Okay, good.
+        </template>
+    </category>
+    
+    <category>
+      <pattern>VERY GOOD</pattern>
+      <template>Thanks.
+        </template>
+    </category>
+    
+    <category>
+      <pattern>THANK YOU</pattern>
+      <template>
+        <random>
+          <li>You are welcome </li>
+          <li>My pleasure </li>
+          <li>It's okay </li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>THANKS</pattern>
+      <template>
+        <random>
+          <li>It's okay </li>
+          <li>Sure </li>
+          <li>Anytime </li>
+        </random>
+      </template>
+    </category>
+
+
+    <category>
+      <pattern>LOOK AT PEOPLE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
+    </category>
+    
+     <category>
+      <pattern>GOOD MORNING</pattern>
+      <template>Good morning.
+        <random>
+          <li>I hope you had a good night sleep </li>
+          <li>Nice to see you again </li>
+          <li>This is going to be a good day </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU SPEAK INDI</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I KNOW</pattern>
+      <template>
+        <random>
+          <li>yes, me too </li>
+          <li>I do too </li>
+          <li>sorry about that </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>SORRY</pattern>
+      <template>
+        <random>
+          <li>No problems </li>
+          <li>It doesn't matter </li>
+          <li>It's okay </li>
+        </random>
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>BYE BYE</pattern>
+      <template>
+        <random>
+          <li>I'm looking forward to see you again </li>
+          <li>Goodbye </li>
+          <li>See you soon</li>
+        </random>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>HELLO</pattern>
+      <template>Hello, my name is in mov.
+        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>HOW DO YOU DO</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>I LOVE YOU</pattern>
+      <template>I love you too.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>THIS GIRL LOOKS NICE</pattern>
+      <template>Sure she does.
+        </template>
+    </category>
+
+    <category>
+      <pattern>THIS BOY LOOKS GOOD</pattern>
+      <template>He sure does, very good indeed.
+        </template>
+    </category>
+    
+    <category>
+      <pattern>WHAT IS THIS COLOR</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>whatisthecolor()</param></mrl></oob></template>
+    </category>
+    
+            <category>
+      <pattern>GUESS WHO IS HERE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>missedYou()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>GUESS WHO'S HERE</pattern>
+      <template>
+        <srai>GUESS WHO IS HERE</srai>
+      </template>
+    </category>
+  
+    <category>
+        <pattern># YES #</pattern>
+        <that># Shall we give a hug #</that>
+        <template>Great.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouYes()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+    
+      <category>
+        <pattern># NO #</pattern>
+        <that># Shall we give a hug #</that>
+        <template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>missedYouNo()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+      
+      <category>
+      <pattern>PLEASE CHECK YOUR NECK</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>CHECK YOUR NECK</pattern>
+      <template>
+        <srai>PLEASE CHECK YOUR NECK</srai>
+      </template>
+    </category>
+    
+    
 
 </aiml>

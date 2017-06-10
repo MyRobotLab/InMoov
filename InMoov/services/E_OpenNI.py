@@ -59,9 +59,46 @@ def onOpenNIData(data):
   global KinectStarted
   if data and not KinectStarted:
     KinectStarted=1
+  if data:
+    skeleton = data.skeleton
 
-if isKinectActivated:
-  i01.openni = Runtime.createAndStart("i01.openni", "OpenNi")
-  openni=i01.openni
-  python.subscribe(openni.getName(),"publishOpenNIData")
-  openNIInit()
+    leftBicep = round(skeleton.leftBicep.getAngleXY())
+    leftOmoplate = round(skeleton.leftShoulder.getAngleXY())
+    leftShoulder = round(skeleton.leftShoulder.getAngleYZ())
+
+    rightBicep = round(skeleton.rightBicep.getAngleXY())
+    rightOmoplate = round(skeleton.rightShoulder.getAngleXY())
+    rightShoulder = round(skeleton.rightShoulder.getAngleYZ())
+
+  try:
+    leftBicep = int(leftBicep)
+    leftOmoplate = int(leftOmoplate)
+    leftShoulder = int(leftShoulder) - 50
+
+    rightBicep = int(rightBicep)
+    rightOmoplate = int(rightOmoplate)
+    rightShoulder = int(rightShoulder) - 50
+  except ValueError:
+    print "Value error: ", ValueError
+
+  if leftBicep>0 and leftOmoplate>0 and leftShoulder>0:
+    if DEBUG_KINECT==1:
+      print "Left Bicep : ", leftBicep
+      print "Left Omoplate : ", leftOmoplate
+      print "Left Shoulder : ", leftShoulder
+
+      moveArm("left", leftBicep, 90, leftShoulder, leftOmoplate)
+
+  if rightBicep>0 and rightOmoplate>0 and rightShoulder>0:
+    if DEBUG_KINECT==1:
+      print "Right Bicep : ", rightBicep
+      print "Right Omoplate: ", rightOmoplate
+      print "Right Shoulder : ", rightShoulder
+
+      moveArm("right", rightBicep, 90, rightShoulder, rightOmoplate)  
+
+  if isKinectActivated:
+    i01.openni = Runtime.createAndStart("i01.openni", "OpenNi")
+    openni=i01.openni
+    python.subscribe(openni.getName(),"publishOpenNIData")
+    openNIInit()

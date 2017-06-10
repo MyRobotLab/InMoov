@@ -9,7 +9,7 @@
   <!--  -->
   <!-- modified: Gael Langevin -->
   <!-- Last modified: Avril 28, 2017 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- This inmoovNetherland brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
@@ -676,7 +676,30 @@
       <template>In het midden kijken.
         <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>KIJK NAAR BOVEN</pattern>
+      <template>Naar boven kijken.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
 
+    <category>
+      <pattern>KIJK NAAR BENEDEN</pattern>
+      <template>Naar beneden kijken.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>TILTE JE HOOFD AAN DE RECHTERKANT</pattern>
+      <template>Tilte mijn hoofd naar rechts.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>TILTE JE HOOFD AAN DE LINKSKANT</pattern>
+      <template>Tilte mijn hoofd naar links.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+    </category>
 
     <category>
       <pattern>VOORDAT GELUKKIG</pattern>

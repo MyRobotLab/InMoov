@@ -1,4 +1,4 @@
-def fullSpeed():
+def fullspeed():
   PlayNeopixelAnimation("Color Wipe", 200, 0, 0, 1)
   sleep(1)
   PlayNeopixelAnimation("Ironman", 0, 0, 255, 1)
@@ -22,7 +22,4 @@ def fullSpeed():
       
   if isEyeLidsActivated:
     i01.setEyelidsVelocity(-1,-1)
-    
-def fullspeed():
-  fullSpeed()
 

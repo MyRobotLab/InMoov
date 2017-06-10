@@ -16,30 +16,35 @@ echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
 echo .
 move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar
-if not exist %cd%\repo.json (
+if exist %cd%\mrlNeedReinstall (
 RMDIR /S /Q .myrobotlab
 RMDIR /S /Q haarcascades
 RMDIR /S /Q hogcascades
 RMDIR /S /Q lbpcascades
 RMDIR /S /Q libraries
 RMDIR /S /Q pythonModules
-RMDIR /S /Q repo
 RMDIR /S /Q resource
 RMDIR /S /Q tessdata
 del ivychain.xml
 del myrobotlab.log
 del repo.json
+del mrlNeedReinstall
 )
+COLOR 4F
+cls
 echo ------------------------------------------------------
-echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
-echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
+echo          !!!            MRL UPDATER          !!!
+echo          !!!            PLEASE WAIT          !!!
+echo          !!!       IT CAN TAKE LONG TIME     !!!
+echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
-timeout 2 > NUL
+timeout 3 > NUL
 java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
+cls
+COLOR 0F
 echo ------------------------------------------------------
 echo START MRL & INMOOV
 echo ------------------------------------------------------
-cls
 if not exist %cd%\Inmoov\InMoov.py (
     echo ERROR : %cd%\InMoov\InMoov.py DOES NOT EXIST
     echo PLEASE PUT SCRIPT AND FOLDERS INSIDE InMoov FOLDER

@@ -21,7 +21,7 @@ LaunchSwingGui=True
 
    
 BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-BasicConfig.read(RuningFolder+'config/' + '_Inmoov.config')
+BasicConfig.read(RuningFolder+'config/' + '_InMoov.config')
 
 #file patch
 configNeedUpdate=0
@@ -57,7 +57,7 @@ except:
   
   
 if configNeedUpdate:
-  with open(RuningFolder+'config/' + '_Inmoov.config') as f:
+  with open(RuningFolder+'config/' + '_InMoov.config', 'wb') as f:
     BasicConfig.write(f)
 
 

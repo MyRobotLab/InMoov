@@ -2,8 +2,8 @@
 <aiml>
   <!-- File: gesturesFrench.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: May11, 2017 -->
-  <!-- by Gael Langevin -->
+  <!-- Last modified: May 31, 2017 -->
+  <!-- by Anthony Gallot : phonehome -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -538,9 +538,26 @@
     </category>
     <category>
       <pattern>REGARDE EN HAUT</pattern>
-      <template>
-        <srai>REGARDE LE CIEL</srai>
-      </template>
+      <template>Je regarde en haut.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>REGARDE EN BAS</pattern>
+      <template>Je regarde en bas.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE LA TÊTE A DROITE</pattern>
+      <template>Je penche ma TÊTE a droite.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE TA TÊTE A GAUCHE</pattern>
+      <template>je penche ma TÊTE a gauche.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>BEFORE HAPPY</pattern>
@@ -873,9 +890,15 @@
       </template>
     </category>
     <category>
-      <pattern>D'OU VIENS tu</pattern>
+      <pattern>D Où VIENS tu</pattern>
       <template>
-        <srai>PHONE HOME</srai>
+         <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob>
       </template>
     </category>
     <category>
@@ -923,7 +946,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>A PROPOS DE STAR WARS</pattern>
+      <pattern>à PROPOS DE STAR WARS</pattern>
       <template>
         <oob>
           <mrl>
@@ -935,7 +958,7 @@
       </template>
     </category>
     <category>
-      <pattern>DONNE moi L'HEURE</pattern>
+      <pattern>DONNE moi L HEURE</pattern>
       <template>
         <oob>
           <mrl>

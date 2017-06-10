@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ 
+   <!-- файл:chatBot.aiml-->  
+   <!-- автор: Gael Langevin -->
+   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменение: Anthony G -->
+   <!-- Последнее изменение: 31 мая 2017 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+  
+    <!-- инициализация -->
+    <!-- обновления -->
+    <!-- погода -->
+    <!-- жесты -->
+
+    <!-- command used by system -->
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+   <!-- инициализация  -->
+  <category>
+    <pattern>FIRST_INIT</pattern>  
+    <template>
+      <think>
+        <set name="firstinit">started</set>    
+      </think>
+      <think>
+        <set name="topic">firstinit</set>    
+      </think>
+		Привет, Это моя первая инициализация. Мне нужна информация , Я слушаю, скажи как меня зовут ? 
+	</template>
+  </category>
+
+  
+  <topic name="firstinit">
+  
+    <category>
+      <pattern>#</pattern>
+      <that># скажи как меня зовут #</that>        
+      <template>
+        <set name="questionfirstinit">Меня зовут <star /> , скажите да или нет. </set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># нужно узнать твоё имя #</that>                  
+      <template>
+        <set name="questionfirstinit">твоё имя <star /> , скажите да или нет. </set>     
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># ДА #</pattern>                                                                  
+      <that># Меня зовут #</that>                                                               
+      <template>
+        <random>
+			<li>
+			Мне нравится это имя, <get name="tmpname" />.                                           
+			</li>
+			<li>
+			Очень красивое имя, <get name="tmpname" /> отлично.                                  
+			</li>
+        </random>
+	     Мне нужно узнать твоё имя , я слушаю ?                                   
+	<think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+	
+    <category>
+      <pattern># ДА #</pattern>                                                                 
+      <that># твоё имя #</that>                                                              
+      <template>
+        <random>
+		<li>
+			Теперь я знаю тебя , <get name="tmpname" />. Я рад.                                
+		</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+          <set name="firstinit">ok</set>                                                    
+          <set name="topic">default</set>                                                    
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.savePredicates()</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>                                                                     
+      </template>
+    </category>
+	
+    <category>
+      <pattern># НЕТ #</pattern>                                                                   
+      <that># Меня зовут #</that>                                                               
+      <template>
+	    Я переспрашиваю. Я слушаю. скажи как меня зовут ?                                                             
+    </template>
+    </category>
+	
+    <category>
+      <pattern># НЕТ #</pattern>                                                                    
+      <that># твоё имя #</that>                                                               
+      <template>
+	  Я переспрашиваю. Я слушаю. нужно узнать твоё имя ?                                                       
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># скажите да или нет #</that>                                                             
+      <template>
+        <random>
+          <li>
+	     Пожалуйста, ответьте на мой вопрос , это важно.                                                
+	      </li>
+          <li>
+	     Я повторяю.                                                                                   
+	      </li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- конец  начальной инициализации -->
+  
+  <!-- обновление  -->
+  <category>
+    <pattern>SYSTEM_NEW_VERSION</pattern>                                                 
+    <template>
+       <think><set name="topic">updater</set></think>
+	 Оповещение, новая версия операционной системы ИН МООВ доступна, если вы хотите, я могу ее обновить, скажите «да» или «нет»
+	 </template>
+  </category>
+  
+  <topic name="updater">
+  
+	
+    <category>
+      <pattern># ДА #</pattern>                        
+      <that># Обновляю #</that>                           
+      <template>
+       <think>
+         <set name="topic">default</set>   
+        </think>
+			<li>
+			Запуск загрузки, пожалуйста, подождите.          
+			</li>
+	<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob>		
+	</template>
+    </category>
+	
+     <category>
+      <pattern># НЕТ #</pattern>                             
+      <that># Не буду обновлять #</that>                            
+      <template>
+	  <think>
+         <set name="topic">default</set>
+        </think>
+	     Хорошо, как хотите, может быть в следующий раз. 
+		<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob>	
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># скажите да или нет #</that>                                
+      <template>Пожалуйста, ответьте на мой вопрос, это важно, скажите «да» или «нет».</template> 
+    </category>
+		
+  </topic>
+  
+    <category>
+    <pattern>* SYSTEM_PERCENT</pattern>                    
+    <template>
+      <li>
+        <star /> Процент.                                
+      </li>
+    </template>
+  </category>
+  
+  
+      <category>
+    <pattern>SYSTEM_DOWNLOAD_OK</pattern>         
+    <template>
+      <li>
+       Загрузка завершена, я отключусь. Пожалуйста, перезапустите меня.
+      </li>
+    </template>
+  </category>
+    <!-- конец обновления  -->
+	
+	<!-- Погода -->
+	
+  <!-- Город по умолчанию --> 
+   <category>
+    <pattern># Погода</pattern>                            
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+   <category>
+    <pattern>Какая погода</pattern>                    
+    <template>
+     <srai># Погода в</srai>                                 
+    </template>
+  </category>
+  
+  <!-- Свободный город -->
+  <category>
+    <pattern>Какая погода в *</pattern>              
+    <template>
+      <srai># Погода в <star/></srai>                     
+    </template>
+  </category>
+  
+
+  
+    <category>
+    <pattern># Погода в *</pattern>                      
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2"/>")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <!-- возвращение -->
+  <category>
+    <pattern>SYSTEM METEO curtemperature * Town * COMMENTAIRE *</pattern>
+    <template>
+     <think><set name="meteo"> <star index="3"/></set></think>
+                <random>
+                <li>Сегодня в <star index="2"/>, </li>                
+                <li>О погоде в <star index="2"/>, </li>         
+                </random>
+                <random>
+                <li>Там есть, </li>                                 
+                <li>Я могу сказать, что это так, </li>                         
+                </random>
+                
+                <condition>
+                <li name="meteo" value="200">Гроза с небольшим дождем</li> 
+                <li name="meteo" value="201">Гроза с дождем</li>       
+                <li name="meteo" value="202">Гроза с сильным дождем</li>  
+                <li name="meteo" value="210">Легкая гроза</li>            
+                <li name="meteo" value="211">Гроза</li>                 
+                <li name="meteo" value="212">Сильная гроза</li>            
+                <li name="meteo" value="221">Грохот грозы</li>          
+                <li name="meteo" value="230">Гроза с мелким дождём</li> 
+                <li name="meteo" value="231">Гроза с дождем</li>       
+                <li name="meteo" value="232">Гроза с сильным дождем</li> 
+                <li name="meteo" value="300">Мелкий интенсивный дождь</li>         
+                <li name="meteo" value="301">Моросит</li>                         
+                <li name="meteo" value="302">Сильно моросит</li>        
+                <li name="meteo" value="310">Не сильный моросящий дождь</li>    
+                <li name="meteo" value="311">Еле ощутимый дождь</li>                    
+                <li name="meteo" value="312">Сильная изморозь</li>    
+                <li name="meteo" value="313">Моросящий дождь с сильными порывами ветра</li>        
+                <li name="meteo" value="314">Чередование сильного дождя с ветром, и моросью</li>   
+                <li name="meteo" value="321">Ливневый дождь</li>                 
+                <li name="meteo" value="500">Небольшой дождь</li>                      
+                <li name="meteo" value="501">Умеренный дождь</li>                   
+                <li name="meteo" value="502">Интенсивный дождь</li>               
+                <li name="meteo" value="503">Сильный дождь</li>                 
+                <li name="meteo" value="504">Резкий дождь</li>                    
+                <li name="meteo" value="511">Ледяной дождь</li>                  
+                <li name="meteo" value="520">Кратковременный дождь с резкими порывами ветра</li>     
+                <li name="meteo" value="521">Сильный дождь с ветром</li>                    
+                <li name="meteo" value="522">Сильный дождь с резкими порывами ветра</li>    
+                <li name="meteo" value="531">Прерывистый сильный дождь</li>              
+                <li name="meteo" value="600">Небольшие осадки в виде снега</li>                      
+                <li name="meteo" value="601">Идет снег</li>                           
+                <li name="meteo" value="602">Сильный снегопад</li>                     
+                <li name="meteo" value="611">Дождь со снегом</li>                          
+                <li name="meteo" value="612">Сильный дождь со снегом</li>                    
+                <li name="meteo" value="615">Не большие осадки в виде снега и дождя</li>             
+                <li name="meteo" value="616">То дождь то снег</li>                   
+                <li name="meteo" value="620">Кратковременые осадки в виде сильного дождя со снегом</li>               
+                <li name="meteo" value="621">Ливень с градом</li>                     
+                <li name="meteo" value="622">Сильный снегопад</li>              
+                <li name="meteo" value="701">Дымка</li>                              
+                <li name="meteo" value="711">Туман</li>                             
+                <li name="meteo" value="721">Мгла</li>                             
+                <li name="meteo" value="731">Ветер с пылью</li>                
+                <li name="meteo" value="741">Густой туман</li>                              
+                <li name="meteo" value="751">Песчаная буря</li>                             
+                <li name="meteo" value="761">Пыль</li>                            
+                <li name="meteo" value="762">Вулканическая пыль</li>                    
+                <li name="meteo" value="771">Шквально</li>                          
+                <li name="meteo" value="781">Торнадо</li>                          
+                <li name="meteo" value="800">Безоблачно</li>                        
+                <li name="meteo" value="801">Малооблачно</li>                       
+                <li name="meteo" value="802">Рассеянные облака</li>                 
+                <li name="meteo" value="803">Переменная  облачность</li>                   
+                <li name="meteo" value="804">Тучи</li>                  
+                <li name="meteo" value="900">Торнадо</li>                          
+                <li name="meteo" value="901">Тропический шторм</li>                       
+                <li name="meteo" value="902">Ураган</li>                           
+                <li name="meteo" value="903">Холодно</li>                               
+                <li name="meteo" value="904">Жара</li>                                
+                <li name="meteo" value="905">Ветренно</li>                               
+                <li name="meteo" value="906">Град</li>                               
+                <li name="meteo" value="951">Штиль</li>                              
+                <li name="meteo" value="952">Легкий ветерок</li>                        
+                <li name="meteo" value="953">Ласковый, нежный бриз</li>                      
+                <li name="meteo" value="954">Умеренный ветер</li>                    
+                <li name="meteo" value="955">Прохладный, освежающий ветер</li>                       
+                <li name="meteo" value="956">Сильный ветер</li>                     
+                <li name="meteo" value="957">Мощные порывы ветра</li>              
+                <li name="meteo" value="958">Буря</li>                                 
+                <li name="meteo" value="959">Сильная буря</li>                          
+                <li name="meteo" value="960">Шторм</li>                                 
+                <li name="meteo" value="961">Сильный шторм</li>                        
+                <li name="meteo" value="962">Ураган</li>                             
+                </condition>
+          
+               <random>
+                <li>Если говорить о температуре, то... , </li>                                         
+                <li>Если взглянуть на мой термометр, ой, где же он - вот незадача?! </li>         
+                </random>
+                 <random>
+                <li>По ртути можно определить, что </li>                                      
+                </random>
+                <li>
+                <star index="1"/> Степени.                                  
+                </li>
+                 <random>
+                 <li>Так и есть!   </li>                                                            
+                 <li>Или нет. </li>                                               
+                 </random>
+          
+	</template>
+  </category>
+  <!-- КОНЕЦ О ПОГОДЕ -->
+ 
+    <!-- жесты  -->
+  <category>
+    <pattern>WAKE_UP</pattern>                    
+    <template>
+      <li>
+        <random>
+          <li>Я готов и слушаю.</li>        
+          <li>Что я могу сделать для вас.</li>          
+          <li>Чем я могу вам помочь.</li>              
+        </random>
+      </li>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ВЫКЛЮЧИСЬ</pattern>                     
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>КАКАЯ ТЕМА</pattern>             
+    <template>Тема:                          
+      <get name="topic" /></template>
+  </category>
+  <category>
+    <pattern>РЕЖИМ БОТА</pattern>                   
+    <template>Загружаюсь.
+      <think><set name="topic">BOOTUP</set></think></template>
+  </category>
+  <category>
+    <pattern>ЖЕСТЫ</pattern>                     
+    <template>Показать жесты.
+      <think><set name="topic">GESTURES</set></think></template>
+  </category>
+  <category>
+    <pattern>ЖЕСТЫ *</pattern> 
+    <template>
+      <srai>ЖЕСТЫ</srai>     
+    </template>
+  </category>
+  <category>
+    <pattern>* ЖЕСТЫ</pattern>  
+    <template>
+      <srai>ЖЕСТЫ</srai>      
+    </template>
+  </category>
+  <category>
+    <pattern>* ЖЕСТЫ *</pattern>   
+    <template>
+      <srai>ЖЕСТЫ</srai>           
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДЕНИТЬ ВСЁ</pattern>     
+    <template>Отсоединил всё.             
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОЛНОСТЬЮ ОТСОЕДЕНИТЬ</pattern>    
+    <template>
+      <srai>ОТСОЕДЕНИТЬ ВСЁ</srai>              
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИТЬ ВСЁ</pattern>          
+    <template>Всё подключенно.             
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОЛНОСТЬЮ ПОДКЛЮЧИТЬ</pattern>    
+    <template>
+      <srai>ПОДКЛЮЧИТЬ ВСЁ</srai>              
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</pattern>     
+    <template>Подключил правую кисть.       
+      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЮ ПРАВУЮ КИСТЬ</pattern>      
+    <template>
+      <srai>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</srai>            
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДЕНИ ПРАВУЮ КИСТЬ</pattern>           
+    <template>Отсоеденил правую кисть.            
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ СВОЮ ПРАВУЮ КИСТЬ</pattern>        
+    <template>
+      <srai>ОТСОЕДЕНИ ПРАВУЮ КИСТЬ</srai>               
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ ЛЕВУЮ КИСТЬ</pattern>           
+    <template>Подключил левую кисть.               
+      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЮ ЛЕВУЮ КИСТЬ</pattern>       
+    <template>
+      <srai>ПОДКЛЮЧИ ЛЕВУЮ КИСТЬ</srai>             
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДЕНИ ЛЕВУЮ КИСТЬ</pattern>           
+    <template>Отсоеденил левую кисть.                 
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ СВОЮ ЛЕВУЮ КИСТЬ</pattern>     
+    <template>
+      <srai>ОТСОЕДЕНИ ЛЕВУЮ КИСТЬ</srai>            
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ ГОЛОВУ</pattern>               
+    <template>Голова подключена.                    
+      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЮ ГОЛОВУ</pattern>          
+    <template>
+      <srai>ПОДКЛЮЧИ ГОЛОВУ</srai>                 
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДЕНИ ГОЛОВУ</pattern>            
+    <template>Отсоеденил голову.                       
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ ГОЛОВУ</pattern>                
+    <template>
+      <srai>ОТСОЕДЕНИ ГОЛОВУ</srai>                  
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</pattern>       
+    <template>Я соединяю свою правую руку.                
+      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЁ ПРАВОЕ ПЛЕЧО</pattern>       
+    <template>
+      <srai>ПОДКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</srai>           
+    </template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</pattern>           
+    <template>Я отсоединяю правую руку.               
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ ПРАВОЕ ПЛЕЧО</pattern>           
+    <template>
+      <srai>ОТКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</srai>              
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИТЕ СВОЮ ЛЕВУЮ РУЧКУ</pattern>           
+    <template>Я соединяю левую руку.                   
+      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЁ ЛЕВОЕ ПЛЕЧО</pattern>        
+    <template>
+      <srai>ПОДКЛЮЧИТЕ СВОЮ ЛЕВУЮ РУЧКУ</srai>              
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДИНЯЙТЕ СВОЮ ЛЕВУЮ РУКУ</pattern>              
+    <template>Я отсоединяю левую руку.                
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ ЛЕВОЕ ПЛЕЧО</pattern>        
+    <template>
+      <srai>ОТСОЕДЕНИ ЛЕВОЕ ПЛЕЧО</srai>           
+    </template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ ТОРС</pattern>                
+    <template>Торс подключен.                   
+      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ПОДКЛЮЧИ СВОЙ ТОРС</pattern>       
+    <template>
+      <srai>ПОДКЛЮЧИ ТОРС</srai>                    
+    </template>
+  </category>
+  <category>
+    <pattern>ОТСОЕДЕНИ ТОРС</pattern>              
+    <template>Торс отсоединён.               
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+  </category>
+  <category>
+    <pattern>ОТКЛЮЧИ ТОРС</pattern>             
+    <template>
+      <srai>ОТСОЕДЕНИ ТОРС</srai>                    
+    </template>
+  </category>
+</aiml>

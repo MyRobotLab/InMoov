@@ -1,12 +1,8 @@
 def about():
-  sleep(2)
-  ear.pauseListening()
-  sleep(2)
   i01.setArmSpeed("right", 0.1, 0.1, 0.2, 0.2);
   i01.setArmSpeed("left", 0.1, 0.1, 0.2, 0.2);
   i01.setHeadSpeed(0.2,0.2)
   i01.moveArm("right", 64, 94, 10, 10);
-
 
   i01.mouth.speakBlocking("I am the first life size humanoid robot you can 3D print and animate")
   i01.moveHead(65,66)
@@ -43,8 +39,6 @@ def about():
   i01.moveArm("right", 4, 94, 10, 11);
   i01.mouth.speakBlocking("so, until then. i will be humankind's humble servant")
 
-  i01.relax()
-  i01.fullspeed
-  sleep(2)
-  ear.resumeListening()
+  relax()
+  fullspeed()
 

@@ -59,24 +59,33 @@ def publishMouthcontrolPinLeft(pins):
 def talk(data):
   if data:
     if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    if MyvoiceTTS!="VoiceRss":
+      data=unicode(data,'utf-8')
+    else:
+      data=data.encode('utf-8')
     mouth.speak(data)
     
 def talkBlocking(data):
   if data:
     if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    if MyvoiceTTS!="VoiceRss":
+      data=unicode(data,'utf-8')
+    else:
+      data=data.encode('utf-8')
     mouth.speakBlocking(data)
     
 def talkEvent(data):
   if IsMute==0:
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    if MyvoiceTTS!="VoiceRss":
+      data=unicode(data,'utf-8')
+    else:
+      data=data.encode('utf-8')
     subconsciousMouth.speakBlocking(data)
 
 #stop autolisten
 def onEndSpeaking(text):
 
-  if RobotIsStarted==1:
+  if i01.RobotIsStarted:
     
     MoveHeadTimer.stopClock()
     MoveEyesTimer.stopClock()
@@ -86,7 +95,7 @@ def onEndSpeaking(text):
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
-      head.jaw.setVelocity(20)
+      head.jaw.setVelocity(30)
       head.jaw.moveTo(0)
       #head.jaw.setVelocity(200)
       #head.jaw.moveTo(0)
@@ -106,10 +115,10 @@ def onStartSpeaking(text):
     except:
       print "onStartSpeaking error"
       pass
-  if RobotIsStarted:
+  if i01.RobotIsStarted:
 
-    if 'oui' in text or 'yes' in text or 'ja' in text:Yes()
-    if 'non' in text or 'no' in text or 'nicht' in text or 'neen' in text:No()
+    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="oui":Yes()
+    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="non":No()
 
     if random.randint(0,1)==1:MoveHeadTimer.startClock()
     if random.randint(0,1)==1:MoveEyesTimer.startClock()
@@ -146,6 +155,7 @@ def setRobotLanguage():
     if tmplanguage=="es":tmplanguage="es-es"
     if tmplanguage=="de":tmplanguage="de-de"
     if tmplanguage=="nl":tmplanguage="nl-nl"
+    if tmplanguage=="ru":tmplanguage="ru-ru"
   
   try:
     if MyvoiceTTS=="VoiceRss":i01.mouth.setKey(VoiceRssApi)
@@ -178,7 +188,7 @@ def checkAndDownloadVoice():
       if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
-        runtime.exit()
+        killRuntime()
       else:
         errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
         
