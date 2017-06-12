@@ -91,6 +91,9 @@ def RemoveFile(file):
 
 RemoveFile(RuningFolder+"gestures/translateText.py")
 RemoveFile(RuningFolder+"gestures/translateTextFR.py")
+RemoveFile(RuningFolder+"gestures/rockpaperscissors.py")
+RemoveFile(RuningFolder+"gestures/rockpaperscissors2.py")
+RemoveFile(RuningFolder+"gestures/stoprockpaperscissors.py")
 RemoveFile(RuningFolder+"life/AutoListen.py")
 
   #clean up .default.config

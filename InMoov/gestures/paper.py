@@ -38,10 +38,3 @@ def paper():
   i01.moveArm("right",20,80,20,20)
   i01.moveHand("left",0,0,0,0,0,165)
   i01.moveHand("right",50,90,90,90,100,90)
-  sleep(.3)
-  x = (random.randint(1, 2))
-  if x == 1:
-    i01.mouth.speakBlocking("i have paper what do you have")
-  if x == 2:
-    i01.mouth.speakBlocking("what do you have")
-

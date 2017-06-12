@@ -11,7 +11,10 @@
   <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
 
-<!-- kids game 1 -->  
+<!-- 1 - kids game -->  
+<!-- 2 - rockpaperscissors  -->  
+
+<!-- kids game -->  
     <category>
     <pattern>Play the words game</pattern>
     <template>
@@ -50,7 +53,152 @@
     </category>  
   </topic>
     
-<!-- end kids game 1 --> 
+<!-- end kids game --> 
+
+<!-- rockpaperscissors  -->    
+  <category>
+  <pattern>ROCK PAPER SCISSORS</pattern>
+  <template>
+	<think><set name="topic">rockpaperscissors</set></think>
+  <think><set name="rockpaperscissorsHumanPoints">0</set></think>
+  <think><set name="rockpaperscissorsRobotPoints">0</set></think>
+	<random>
+		<li>
+		Lets play to Rock, paper, scissors !
+		</li>  
+		<li>
+		I like to play this game !
+		</li>  
+	</random>
+	<li>
+	3 points win ! Tell me, stop playing, to stop the game. You start. Say Rock, paper or scissors.
+	</li>
+	
+    </template>
+  </category>
+
+  
+  <topic name="rockpaperscissors">
+  
+    <category>
+      <pattern>ROCK</pattern>
+      <template>
+      
+       <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        I have paper, sorry it beat the rock !
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        I have scissors, rock breaked them.
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        I have rock too.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+    <category>
+      <pattern>PAPER</pattern>
+      <template>
+        <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        Sorry, I have scissors, it cut the paper !
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        Congratulation, I have rock, your paper envelops it.
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        I have paper too.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+    <category>
+      <pattern>SCISSORS</pattern>
+      <template>
+      
+       <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        I have rock, sorry it break the scissors ! 
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        I have paper, your scissors cutted it, 
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        I have scissors too.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+  <category>
+      <pattern>SYSTEM_COUNT_POINTS</pattern>
+      <template>
+      <li><get name="rockpaperscissorsHumanPoints" /> points for you.</li>
+      <li><get name="rockpaperscissorsRobotPoints" /> points for me.</li>
+      <condition>
+      <li name="rockpaperscissorsRobotPoints" value="3">I won ! <random><li>I am so smart</li><li>It was too easy to beat you</li><li>please, don't cry</li></random>. let's play again, or say , stop the game. <srai>ROCK PAPER SCISSORS</srai></li>
+      <li name="rockpaperscissorsHumanPoints" value="3">You won ! <random><li>Congratulation</li><li>I think you cheated</li><li>You are too smart</li></random>. let's play again, or say , stop the game. <srai>ROCK PAPER SCISSORS</srai></li>
+      <li>. let's go on.</li>
+      </condition>
+      </template>
+  </category>
+      
+     <category>
+      <pattern>*</pattern>
+      <template>
+      I said, say Rock, paper or scissors.
+      </template>
+    </category> 
+    
+  </topic>
+  
+ 
+<!-- end rockpaperscissors  -->  
 
     
    <category>
@@ -59,7 +207,8 @@
 	<think><set name="topic">default</set></think>
     <li>
     See you soon, I like to play!
-    </li>  
+    </li>
+    <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob>
     </template>
 	</category>
 

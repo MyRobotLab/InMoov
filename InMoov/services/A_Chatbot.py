@@ -34,6 +34,7 @@ if isChatbotActivated:
       shutil.rmtree(RuningFolder+'chatbot/bots/'+MyLanguage+'/aimlif')
     except: 
       pass
+    chatBot.repetition_count(10)
     chatBot.setPath(RuningFolder+"chatbot/")
     chatBot.cleanOutOfDateAimlIFFiles(MyLanguage)
     talkEvent(lang_chatbotLoading)

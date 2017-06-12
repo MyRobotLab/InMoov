@@ -38,10 +38,3 @@ def rock():
   i01.moveArm("right",20,80,20,20)
   i01.moveHand("left",130,180,180,180,180,80)
   i01.moveHand("right",50,90,90,90,100,90)
-  sleep(.3)
-  x = (random.randint(1, 2))
-  if x == 1:
-    i01.mouth.speakBlocking("i have rock what do you have")
-  if x == 2:
-    i01.mouth.speakBlocking("what do you have")
-
