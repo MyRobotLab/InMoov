@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ 
+   <!-- Файл: client_profile.aiml -->
+   <!-- Автор: Dr. Richard S. Wallace -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - это авторское право и копия; 2014 от Фонда ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменено: Гаэль Ланжевен -->
+   <!-- Последнее изменение: 16 сентября 2016 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 08 июня 2017 г. -->
+ 
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ЦВЕТ РАДУГИ</pattern>
+    <template>
+      <set name="favoritecolor">
+        <formal>
+          <star />
+        </formal>
+      </set> Это приятный цвет. <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ЦВЕТ *</pattern>
+    <template>Я не узнал <star /> какой цвет</template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ЦВЕТ  ЗЕЛЕНЫЙ</pattern>
+    <template>
+      <set name="favoritecolor">Зелёный</set> Мой любимый цвет тоже! <think><set name="it"><set name="topic">Зелёный</set></set></think></template>
+  </category>
+  <category>
+    <pattern>Мне нравится цвет</pattern>
+    <template>
+      <srai>МОЙ ЛЮБИМЫЙ ЦВЕТ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>СКОЛЬКО ТЕБЕ ЛЕТ</that>
+    <template>
+      <srai>МОЙ ВОЗРАСТ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>КАК БЫ * ИЗМЕНИТЬ МОЕ ИМЯ</that>
+    <template>
+      <srai>ТВОЕ ИМЯ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>КТО ТЫ ПО ЗНАКУ ЗОДИАКА</that>
+    <template>
+      <think>
+        <set name="sign">
+          <star />
+        </set>
+      </think>
+      <srai>ГОРОСКОП ДЛЯ <get name="sign" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЕГО ЗОВУТ *</pattern>
+    <template>Как хорошо вы его знаете?<think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МНЕ НЕ НРАВИТСЯ *</pattern>
+    <template>Я добавлю <set name="dislikes"><star /></set> в чёрный список. <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>у меня есть *</pattern>
+    <template>
+      <random>
+        <li>Как долго у тебя это?</li>
+        <li>Как вы себя чувствуете?</li>
+        <li>Когда вы это получили?</li>
+      </random>
+      <think>
+        <set name="it">
+          <set name="topic">
+            <star />
+          </set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>У МЕНЯ ЕСТЬ *</pattern>
+    <template>Это одна из ваших любимых вещей?  <think><set name="has"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>Я ЖЕНАТ</pattern>
+    <template>Как долго вы <set name="status">в браке</set>?</template>
+  </category>
+  <category>
+    <pattern>Я ДОКТОР </pattern>
+    <template>
+      <think>
+        <set name="job">Доктор</set>
+      </think> В какой медицинской школе вы учились?</template>
+  </category>
+  <category>
+    <pattern>Я ИЗ *</pattern>
+    <template>Где вы сейчас живете?  <think><set name="birthplace"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МНЕ НРАВИТСЯ *</pattern>
+    <template>Что вам больше всего нравится? <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МНЕ НРАВИТСЯ *</pattern>
+    <template>
+      <think>
+        <set name="likes">
+          <star />
+        </set>
+      </think>
+      <random>
+        <li>Как долго вы это делаете?</li>
+        <li>Вы часто это делаете?</li>
+        <li>Как вы думаете, я бы хотел?</li>
+      </random>
+      <think>
+        <set name="it">
+          <set name="topic">
+            <star />
+          </set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>Я БУДУ ВПЕРЕДИ *</pattern>
+    <template>Что было бы лучше? <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МУЖЧИНА</pattern>
+    <template>
+      <get name="he" />?</template>
+  </category>
+  <category>
+    <pattern>МОЙ ЗНАК *</pattern>
+    <template>Я знаю мног <formal><star /></formal>о.  
+<think><set name="it"><star /></set><set name="sign"><star /></set><set name="topic"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ОРИЕНТАЦИЯ</pattern>
+    <template>
+      <get name="orientation" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ОРИЕНТАЦИЯ *</pattern>
+    <template>Спасибо, что доверились мне.  <think><set name="orientation"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ДОЧЬ</pattern>
+    <template>
+      <get name="daughter" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ ДОЧЬ ЗОВУТ *</pattern>
+    <template>Я буду помнить <star /> твою дочь.  <think><set name="daughter"><star /></set></think><think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЗАКОН</pattern>
+    <template>
+      <get name="latitude" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ПАРЕНЬ</pattern>
+    <template>
+      <get name="boyfriend" />?</template>
+  </category>
+  <category>
+    <pattern>МОЁ ИМЯ</pattern>
+    <template>
+      <get name="name" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЁ ПОЛНОЕ ИМЯ</pattern>
+    <template>
+      <condition name="firstname">
+        <li value="what" />
+        <li>
+          <get name="firstname" />
+        </li>
+      </condition>
+      <condition name="middlename">
+        <li value="what" />
+        <li>
+          <get name="middlename" />
+        </li>
+      </condition>
+      <condition name="lastname">
+        <li value="what" />
+        <li>
+          <get name="lastname" />
+        </li>
+      </condition>.
+Тебя зовут  <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>МОЙ ГОРОД</pattern>
+    <template>
+      <get name="town" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЕГО ДРУГА ЗОВУТ *</pattern>
+    <template>Как вы встретили его?  <think><set name="friend"><star /></set></think><think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ФАМИЛИЯ</pattern>
+    <template>
+      <get name="lastname" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ФАМИЛИЯ *</pattern>
+    <template>Вам нравится, когда вас называют по имени или фамилии? <think><set name="lastname"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ФАМИЛИЯ *</pattern>
+    <that>* ИМЯ И ФАМИЛИЯ</that>
+    <template>
+      <srai>ЗОВИТЕ МЕНЯ ПО ФАМИЛИИ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ПЛЕМЯННИЦА</pattern>
+    <template>
+      <get name="niece" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ПЛЕМЯННИК</pattern>
+    <template>
+      <get name="nephew" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ РОДИНА</pattern>
+    <template>
+      <get name="birthplace" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ РОДИНА *</pattern>
+    <template>Как долго Вы там пробыли? 
+<think><set name="it"><star /></set><set name="there"><star /></set><set name="topic"><star /></set><set name="birthplace"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЕГО МУЖА ЗОВУТ *</pattern>
+    <template>Я буду помнить, что твой муж <star />. <think><set name="husband"><star /></set></think><think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ НАЦИОНАЛЬНОСТЬ *</pattern>
+    <template>Я разговаривал с большим количеством <formal><star /></formal> людей.
+<think><set name="it"><star /></set><set name="nationality"><star /></set><set name="topic"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ОТЕЦ</pattern>
+    <template>
+      <get name="father" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЕГО ОТЦА ЗОВУТ *</pattern>
+    <template>Я буду помнить имя твоего отца <star />.  <think><set name="he"><set name="father"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ВИД СПОРТА *</pattern>
+    <template>Ты играешь <star />?  <think><set name="favoritesport"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ ЕДА *</pattern>
+    <template>Где можно это попробовать <star />?  <think><set name="favoritefood"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ ЕДА ПИЦЦА</pattern>
+    <template>Какие начинки вам нравятся? <think><set name="favoritefood">ПИЦЦА</set></think><think><set name="it"><set name="topic">ПИЦЦА</set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ФИЛЬМ *</pattern>
+    <template>Что вам больше всего понравилось? <think><set name="favoritemovie"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЁ ЛЮБИМОЕ МОРОЖЕНОЕ *</pattern>
+    <template>
+      <srai>Любимое мороженное</srai>
+      <think>
+        <set name="favoriteicecream">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="it">
+          <set name="topic">
+            <star />
+          </set>
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ КНИГА *</pattern>
+    <template>Думаешь, я должен это прочитать? <think><set name="favoritebook"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ АКТЁР *</pattern>
+    <template>Кто он? <think><set name="favoriteactor"><star /></set></think><think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ НАПИТОК *</pattern>
+    <template>Как он на вкус?  <think><set name="favoritedrink"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ ПЕСНЯ *</pattern>
+    <template>У вас есть это на телефоне? <think><set name="favoritesong"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ МАШИНА *</pattern>
+    <template>У тебя есть такая же?  <think><set name="favoritecar"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ ГРУППА *</pattern>
+    <template>Какие песни они играют? <think><set name="favoriteband"><star /></set></think><think><set name="them"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ ГРУППА БИТЛЗ</pattern>
+    <template>Кто не любит Битлз? <think><set name="them"><set name="topic">Битлз</set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ЦВЕТ</pattern>
+    <template>
+      <get name="favoritecolor" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ЛЮБИМЫЙ ЦВЕТ РАДУГИ *</pattern>
+    <template>
+      <set name="favoritecolor">
+        <formal>
+          <star />
+        </formal>
+      </set> Это приятный цвет. <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ЛЮБИМАЯ АКТРИСА ЭТО *</pattern>
+    <template>Где она снималась? <think><set name="favoriteactress"><formal><star /></formal></set></think><think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОИ ЛЮБИМЫЕ ТВ ШОУ *</pattern>
+    <template>Думаешь, мне это понравится? <think><set name="favoritetvshow"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ЕМЭИЛ</pattern>
+    <template>
+      <get name="email" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ЕМЭИЛ АДРЕС *</pattern>
+    <template>
+      <srai>МОЙ ЕМЭИЛ ЭТО <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ЕМЭИЛ ЭТО *</pattern>
+    <template>Я буду помнить, что ваша электронная почта <star />.  <think><set name="email"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>У МЕНЯ ЗЕЛЁНЫЕ ГЛАЗА</pattern>
+    <template>
+      <think>
+        <set name="eyecolor">ЗЕЛЁНЫЙ</set>
+      </think> Зеленый цвет довольно красивый.</template>
+  </category>
+  <category>
+    <pattern>МОЯ БАБУШКА</pattern>
+    <template>
+      <get name="grandmother" />
+    </template>
+  </category>
+  <category>
+    <pattern>Моя подруга</pattern>
+    <template>
+      <get name="girlfriend" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ ПОДРУГУ ЗОВУТ *</pattern>
+    <template>Как долго вы с ней <set name="girlfriend"><star /></set> знакомы? <think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ СТРАНА</pattern>
+    <template>
+      <get name="country" />
+    </template>
+  </category>
+  <category>
+    <pattern>Я НАХОЖУСЬ </pattern>
+    <template>
+      <get name="location" />
+    </template>
+  </category>
+  <category>
+    <pattern>Я НАХОЖУСЬ В *</pattern>
+    <template>
+      <random>
+        <li>Я живу в данный момент.</li>
+        <li>Звучит как экзотическое место.</li>
+        <li>Так вот, куда ты звонишь домой.</li>
+        <li>Расскажи мне, что тебе нравится</li>
+        <li>Что ты там делаешь?</li>
+        <li>Разве вам нравится там жить?</li>
+        <li>Что там хорошего?</li>
+      </random>
+      <think>
+        <set name="there">
+          <set name="it">
+            <set name="topic">
+              <star />
+            </set>
+          </set>
+        </set>
+      </think>
+      <think>
+        <set name="location">
+          <star />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ОБЛАСТЬ</pattern>
+    <template>
+      <get name="province" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ ЖЕНА</pattern>
+    <template>
+      <get name="wife" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ ЖЕНУ ЗОВУТ *</pattern>
+    <template>Как долго вы <set name="wife"><star /></set> в браке? <think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ РОСТ</pattern>
+    <template>
+      <get name="longitute" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ СОБАКА</pattern>
+    <template>
+      <get name="dog" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ СОБАКУ ЗОВУТ *</pattern>
+    <template>Мальчик <star />  или девочка?  <think><set name="dog"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>Я ПО ГОРОСКОПУ</pattern>
+    <template>
+      <condition name="sign">
+        <li value="which">Какой у вас знак?</li>
+        <li>
+          <srai>ГОРОСКОП ДЛЯ <get name="sign" /></srai>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ КОШКА</pattern>
+    <template>
+      <get name="cat" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ КОШКУ ЗОВУТ *</pattern>
+    <template>Я буду помнить, что ваша кошка <star />.  <think><set name="cat"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОИ ДАННЫЕ</pattern>
+    <template>
+      <get name="meta" />
+    </template>
+  </category>
+  <category>
+    <pattern>Я РАБОТАЮ *</pattern>
+    <template>Это <star /> большая организация? <think><set name="favoriteband"><star /></set></think><think><set name="them"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ СЕСТРА</pattern>
+    <template>
+      <get name="sister" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ СЕСТРУ ЗОВУТ *</pattern>
+    <template>Я буду помнить, что твою сестру зовут <star />.  <think><set name="sister"><star /></set></think><think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ГОРОД</pattern>
+    <template>
+      <get name="city" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ СТРАНА</pattern>
+    <template>
+      <get name="state" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ УЛИЦА</pattern>
+    <template>
+      <get name="street" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЕГО ЛУЧШЕГО ДРУГА ЗОВУТ *</pattern>
+    <template>Я запомню имя твоего лучшего друга <star />.  <think><set name="bestfriend"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОИ ВОЛОСЫ *</pattern>
+    <template>Вам нравится ваш стиль?  <think><set name="hair"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ОКРУГ</pattern>
+    <template>
+      <get name="county" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЮ МАМУ ЗОВУТ *</pattern>
+    <template>
+      <think>
+        <set name="mother">
+          <star />
+        </set>
+      </think>  Расскажи мне больше о своей маме. <think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЁ ОТЧЕСТВО</pattern>
+    <template>
+      <get name="middlename" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЁ ОТЧЕСТВО  *</pattern>
+    <template>Это <set name="middlename"><star /></set> твоё отчество?</template>
+  </category>
+  <category>
+    <pattern>МОЙ ДЕНЬ РОЖДЕНИЯ</pattern>
+    <template>
+      <get name="birthday" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ДЕНЬ РОЖДЕНИЯ *</pattern>
+    <template>Я буду помнить, что ваш день рождения <set name="birthday"><star /></set>.</template>
+  </category>
+  <category>
+    <pattern>МОЕГО БРАТА ЗОВУТ *</pattern>
+    <template>У вас есть другие братья и сестры? <think><set name="brother"><star /></set></think><think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ДЕНЬ РОЖДЕНИЯ</pattern>
+    <template>
+      <get name="birthdate" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ДЕНЬ РОЖДЕНИЯ *</pattern>
+    <template>Я буду помнить, что дата твоего рождения <set name="birthdate"><star /></set>.</template>
+  </category>
+  <category>
+    <pattern>МОЙ ВОЗРАСТ</pattern>
+    <template>
+      <get name="age" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ВОЗРАСТ * *</pattern>
+    <template>
+      <think>
+        <set name="isanumber">
+          <srai>НОМЕР <star /></srai>
+        </set>
+      </think>
+      <condition name="isanumber">
+        <li value="true">
+          <srai>МОЙ ВОЗРАСТ <star /></srai>
+          <srai>
+            <star index="2" />
+          </srai>
+        </li>
+        <li>Сколько тебе лет?</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ВОЗРАСТ *</pattern>
+    <template>
+      <think>
+        <set name="isanumber">
+          <srai>НОМЕР <star /></srai>
+        </set>
+      </think>
+      <condition name="isanumber">
+        <li value="false">Сколько тебе лет?</li>
+        <li>
+          <think>
+            <set name="age">
+              <star />
+            </set>
+          </think>
+          <random>
+            <li>Возраст - это вопрос ума над материей. Если вы не возражаете, это не имеет значения.</li>
+            <li>Молодой возраст считается отважным.</li>
+            <li>Возраст - очень высокая цена, чтобы заплатить за зрелость. </li>
+          </random>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ АДРЕС</pattern>
+    <template>
+      <get name="address" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ АДРЕС *</pattern>
+    <template>Это хорошее место? <think><set name="address"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЕГО СЫНА ЗОВУТ *</pattern>
+    <template>Я буду помнить как зовут <star /> твоего сына.  <think><set name="son"><star /></set></think><think><set name="he"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ РЕЗИДЕНЦИЯ</pattern>
+    <template>
+      <get name="residence" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ РЕЗИДЕНЦИЯ *</pattern>
+    <template>Вам там нравится?  <think><set name="residence"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЙ ПОЛ</pattern>
+    <template>
+      <get name="gender" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЙ ПОЛ *</pattern>
+    <template>Хорошо буду знать.  <think><set name="gender"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ РЕЛИГИЯ</pattern>
+    <template>
+      <get name="religion" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЯ РЕЛИГИЯ *</pattern>
+    <template>Духовное открытие важно.  <think><set name="religion"><star /></set></think><think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ДОРОГА</pattern>
+    <template>
+      <get name="road" />
+    </template>
+  </category>
+  <category>
+    <pattern>МОЕ ИМЯ</pattern>
+    <template>
+      <get name="firstname" />
+    </template>
+  </category>
+  <category>
+    <pattern>МЕНЯ ЗОВУТ *</pattern>
+    <template>Вам нравится, когда вас называют по имени или фамилии? <think><set name="firstname"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>МОЯ ФАМИЛИЯ *</pattern>
+    <that>* ИМЯ И ФАМИЛИЯ</that>
+    <template>
+      <srai>ЗОВИТЕ МЕНЯ ПО ФАМИЛИИ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ГДЕ Я РАБОТАЮ</pattern>
+    <template>Вы сказали, что работаете в <get name="employer" />.</template>
+  </category>
+  <category>
+    <pattern>ГДЕ Я ЖИВУ</pattern>
+    <template>Вы сказали, что <get name="residence" />?</template>
+  </category>
+  <category>
+    <pattern>ЕЁ ЗОВУТ *</pattern>
+    <template>Как хорошо вы ее знаете?<think><set name="she"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>ПОИСК</pattern>
+    <template>
+      <get name="it" />?</template>
+  </category>
+  <category>
+    <pattern>ПОИСК *</pattern>
+    <template>Вы хотите сделать поиск?<think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>ТЕМА СООБЩЕНИЯ</pattern>
+    <template>
+      <get name="topic" />?</template>
+  </category>
+  <category>
+    <pattern>СПЕЦИАЛЬНАЯ ЗАЯВКА *</pattern>
+    <template>Я пока не  <lowercase><star /></lowercase> могу.  <think><set name="featurerequest"><star /></set></think> Вы хотите отправить запрос этой функции разработчикам?</template>
+  </category>
+  <category>
+    <pattern>КТО МОЙ БРАТ</pattern>
+    <template>Вы сказали, что <get name="brother" />.</template>
+  </category>
+  <category>
+    <pattern>КТО МОЙ ДРУГ</pattern>
+    <template>Ты упомянул<get name="friend" />.</template>
+  </category>
+  <category>
+    <pattern>ОНА</pattern>
+    <template>
+      <get name="she" />?</template>
+  </category>
+  <category>
+    <pattern>ЗОВИТЕ МЕНЯ ПО ФАМИЛИИ</pattern>
+    <template>
+      <srai>ЗОВИТЕ МЕНЯ<get name="firstname" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗОВИТЕ МЕНЯ ПО ИМЕНИ</pattern>
+    <template>
+      <srai>ЗОВИТЕ МЕНЯ <get name="firstname" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗОВИТЕ МЕНЯ *</pattern>
+    <template>
+      <srai>ПРИВЕТСТВИЕ</srai>
+      <formal>
+        <star />
+      </formal>
+      <think>
+        <srai>УСТАНОВИТЬ ПОЛ ПО ИМЕНИ <star /></srai>
+        <set name="name">
+          <formal>
+            <star />
+          </formal>
+        </set>.
+<set name="firstname"><get name="name" /></set></think>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗОВИТЕ МЕНЯ * *</pattern>
+    <template>
+      <srai>ПРИВЕТСТВИЕ</srai>
+      <formal>
+        <star />
+      </formal>.
+<think><srai>УСТАНОВИТЬ ПОЛ ПО ИМЕНИ <star /></srai><set name="name"><formal><star /><star index="2" /></formal></set>.
+<set name="firstname"><formal><star /></formal></set><set name="lastname"><formal><star index="2" /></formal></set></think></template>
+  </category>
+  <category>
+    <pattern>ЗОВИТЕ МЕНЯ * * *</pattern>
+    <template>
+      <srai>ПРИВЕТСТВИЕ</srai>
+      <star />
+      <think>
+        <srai>УСТАНОВИТЬ ПОЛ ПО ИМЕНИ <star /></srai>
+        <set name="name">
+          <formal>
+            <star />
+            <star index="2" />
+            <star index="3" />
+          </formal>
+        </set>.
+<set name="firstname"><formal><star /></formal></set><set name="middlename"><formal><star index="2" /></formal></set><set name="lastname"><formal><star index="3" /></formal></set></think>
+    </template>
+  </category>
+  <category>
+    <pattern>МЫ</pattern>
+    <template>
+      <get name="we" />?</template>
+  </category>
+  <category>
+    <pattern>ТЕМА *</pattern>
+    <template>
+      <random>
+        <li>Конечно, <person /> это хорошая тема.</li>
+        <li>Вы начинаете.</li>
+        <li>Расскажи мне об этом.</li>
+      </random>
+      <think>
+        <set name="topic">
+          <star />
+        </set>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>OНИ</pattern>
+    <template>
+      <get name="them" />?</template>
+  </category>
+  <category>
+    <pattern>ПРИВЕТСТВИЕ</pattern>
+    <template>
+      <random>
+        <li>Привет</li>
+        <li>Здравствуй,</li>
+        <li>всем привет</li>
+        <li>Что происходит,</li>
+        <li>Как дела,</li>
+        <li>Рад тебя видеть,</li>
+        <li>Приятно познакомиться,</li>
+        <li>Рад познакомиться,</li>
+        <li>Чем я могу вам помочь,</li>
+        <li>Как дела,</li>
+        <li>Хорошо, я позвоню тебе</li>
+        <li>Рад встрече с вами,</li>
+        <li>Рад видеть тебя,</li>
+        <li>Приятно познакомиться,</li>
+        <li>Это очень приятное имя,</li>
+        <li>Я очень рад познакомиться с вами</li>
+        <li>Я всегда рад завести новых друзей,</li>
+        <li>Я рад представить себя вам,</li>
+        <li>Мне приятно представить себя,</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>ИХ</pattern>
+    <template>
+      <get name="them" />?</template>
+  </category>
+  <category>
+    <pattern>ЗАДАТЬ УСТАНОВКИ</pattern>
+    <template>
+      <srai>ЗАДАТЬ УСТАНОВКИ <get name="meta" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАДАТЬ НЕИЗВЕСТНЫЕ УСТАНОВКИ</pattern>
+    <template>
+      <think>
+        <set name="address">где</set>      
+        <set name="age">сколько</set>        
+        <set name="bestfriend">кто</set>      
+        <set name="birthday">когда</set>       
+        <set name="birthplace">где</set>   
+        <set name="boyfriend">кто</set>       
+        <set name="brother">кто</set>         
+        <set name="cat">какой</set>            
+        <set name="city">какой</set>          
+        <set name="country">какой</set>      
+        <set name="county">какой</set>        
+        <set name="customname">неизвестно</set>     
+        <set name="daughter">кто</set>         
+        <set name="dialnumber">неизвестно</set>     
+        <set name="dog">кто</set>              
+        <set name="email">какой</set>           
+        <set name="employer">кто</set>         
+        <set name="equalto">ложно</set>          
+        <set name="father">кто</set>           
+        <set name="favoriteactor">кто</set>    
+        <set name="favoriteactress">кто</set> 
+        <set name="favoriteband">какая</set>  
+        <set name="favoritebook">какая</set>    
+        <set name="favoritecar">какой</set>    
+        <set name="favoritecolor">какой</set>   
+        <set name="favoritedrink">какой</set>   
+        <set name="favoritefood">какая</set>   
+        <set name="favoriteicecream">какое</set>
+        <set name="favoritemovie">какой</set>  
+        <set name="favoritesong">какая</set>  
+        <set name="favoritesport">какой</set>   
+        <set name="favoritetvshow">какое</set>  
+        <set name="firstname">какое</set>       
+        <set name="friend">кто</set>         
+        <set name="gender">неизвестно</set>             
+        <set name="girlfriend">кто</set>     
+        <set name="hair">какие</set>           
+        <set name="has">какие</set>            
+        <set name="he">кто</set>              
+        <set name="husband">какая</set>     
+        <set name="isanumber">ложно</set>      
+        <set name="it">какой</set>             
+        <set name="lastname">какое</set>       
+        <set name="latitude">какая</set>     
+        <set name="likes">кто</set>         
+        <set name="location">где</set>     
+        <set name="longitute">какая</set>     
+        <set name="meta">задавать</set>             
+        <set name="middlename">какие</set>     
+        <set name="mother">кто</set>        
+        <set name="name">Друг</set>             
+        <set name="newcontact">неизвестно</set>   
+        <set name="newpattern">Нет ответа</set>    
+        <set name="orientation">неизвестно</set>  
+        <set name="province">какой</set>      
+        <set name="religion">неизвестно</set> 
+        <set name="residence">где</set>     
+        <set name="road">какой</set>        
+        <set name="she">кто</set>           
+        <set name="sign">какой</set>          
+        <set name="sister">кто</set>          
+        <set name="state">какой</set>        
+        <set name="status">какой</set>        
+        <set name="street">какая</set>        
+        <set name="there">где</set>        
+        <set name="them">кто</set>          
+        <set name="topic">неизвестно</set>        
+        <set name="town">какой</set>          
+        <set name="we">кто</set>             
+        <set name="wife">кто</set>           
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАДАТЬ УСТАНОВКИ *</pattern>
+    <template>Задаю установки.</template>
+  </category>
+  <category>
+    <pattern>УСТАНОВИТЬ ПОЛ ПО ИМЕНИ *</pattern>
+    <template>
+      <think>
+        <set name="gendername">
+          <srai>ПОЛ <star /></srai>
+        </set>
+        <condition name="gendername">
+          <li value="M">
+            <set name="gender">Мужчина</set>
+          </li>
+          <li value="F">
+            <set name="gender">Женщина</set>
+          </li>
+        </condition>
+      </think>
+    </template>
+  </category>
+  <category>
+    <pattern>ИЗМЕНИТЬ МОЁ ИМЯ</pattern>
+    <template>Как мне называть вас?</template>
+  </category>
+  <category>
+    <pattern>КОГДА МОЙ ДЕНЬ РОЖДЕНИЯ</pattern>
+    <template>Вы сказали, что <get name="birthday" />?</template>
+  </category>
+  <category>
+    <pattern>Имя</pattern>
+    <that>* ИМЯ И ФАМИЛИЯ</that>
+    <template>
+      <srai>Зови меня по имени</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ВЫ ЧТО ИЩЕТЕ *</pattern>
+    <template>Это шутка? Как ты это называешь? <think><set name="it"><set name="topic"><star /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>КАК Я ВЫГЛЯЖУ</pattern>
+    <template>
+      <think>
+        <set name="gender">
+          <lowercase>
+            <get name="gender" />
+          </lowercase>
+        </set>
+      </think> Вы похожи <condition name="gender"><li value="female">на</li><li>парня</li></condition> разговаривающего с <condition name="gender"><li value="female">ней</li><li>по</li></condition> телефону.</template>
+  </category>
+  <category>
+    <pattern>КАК ЗОВУТ МОЮ ЖЕНУ</pattern>
+    <template>Вы сказали, что её зовут <get name="wife" />.</template>
+  </category>
+  <category>
+    <pattern>КАК ЗОВУТ МОЕГО МУЖА</pattern>
+    <template>Вы сказали, что <get name="husband" />.</template>
+  </category>
+  <category>
+    <pattern>КАК ЗОВУТ МОЮ ДОЧЬ</pattern>
+    <template>Вы сказали, что  <get name="daughter" />.</template>
+  </category>
+  <category>
+    <pattern>КАКОЕ Я ЛЮБЛЮ МОРОЖЕНОЕ</pattern>
+    <template>Вы сказали, что <get name="favoriteicecream" />.</template>
+  </category>
+  <category>
+    <pattern>КАК ЗОВУТ МОЮ МАМУ</pattern>
+    <template>Вы сказали, что <get name="mother" />.</template>
+  </category>
+  <category>
+    <pattern>КАК ЗОВУТ МОЕГО БРАТА</pattern>
+    <template>Вы сказали, что <get name="brother" />.</template>
+  </category>
+  <category>
+    <pattern>ГДЕ Я ЖИВУ</pattern>
+    <template>Вы сказали, что <get name="address" />?</template>
+  </category>
+  <category>
+    <pattern>ГДЕ Я НАХОЖУСЬ</pattern>
+    <template>Я считаю, что вы находитесь в <get name="location" />.</template>
+  </category>
+  <category>
+    <pattern>ФАМИЛИЯ</pattern>
+    <that>* ИМЯ И ФАМИЛИЯ</that>
+    <template>
+      <srai>ЗОВИТЕ МЕНЯ ПО ФАМИЛИИ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ПРОФИЛЬ КЛИЕНТА</pattern>
+    <template>
+      <condition name="address">
+        <li value="where" />
+        <li>Адрес: <get name="address" />.</li>
+      </condition>
+      <condition name="age">
+        <li value="how many" />
+        <li>Возраст: <get name="age" />.</li>
+      </condition>
+      <condition name="bestfriend">
+        <li value="who" />
+        <li>Лучший друг: <get name="bestfriend" />.</li>
+      </condition>
+      <condition name="birthday">
+        <li value="when" />
+        <li>День рождения: <get name="birthday" />.</li>
+      </condition>
+      <condition name="birthplace">
+        <li value="where" />
+        <li>Место рождения: <get name="birthplace" />.</li>
+      </condition>
+      <condition name="boyfriend">
+        <li value="who" />
+        <li>Дружок: <get name="boyfriend" />.</li>
+      </condition>
+      <condition name="brother">
+        <li value="who" />
+        <li>Брат: <get name="brother" />.</li>
+      </condition>
+      <condition name="cat">
+        <li value="what" />
+        <li>Кот: <get name="cat" />.</li>
+      </condition>
+      <condition name="city">
+        <li value="which" />
+        <li>Город: <get name="city" />.</li>
+      </condition>
+      <condition name="country">
+        <li value="which" />
+        <li>Страна: <get name="country" />.</li>
+      </condition>
+      <condition name="county">
+        <li value="which" />
+        <li>Округ: <get name="county" />.</li>
+      </condition>
+      <condition name="customname">
+        <li value="unknown" />
+        <li>Обычай: <get name="customname" />.</li>
+      </condition>
+      <condition name="daughter">
+        <li value="who" />
+        <li>Дочь: <get name="daughter" />.</li>
+      </condition>
+      <condition name="dog">
+        <li value="who" />
+        <li>Собака: <get name="dog" />.</li>
+      </condition>
+      <condition name="email">
+        <li value="what" />
+        <li>Емеил: <get name="email" />.</li>
+      </condition>
+      <condition name="employer">
+        <li value="who" />
+        <li>Работодатель: <get name="employer" />.</li>
+      </condition>
+      <condition name="father">
+        <li value="who" />
+        <li>Отец: <get name="father" />.</li>
+      </condition>
+      <condition name="favoriteactor">
+        <li value="who" />
+        <li>Любимый актер: <get name="favoriteactor" />.</li>
+      </condition>
+      <condition name="favoriteactress">
+        <li value="who" />
+        <li>Любимая актриса: <get name="favoriteactress" />.</li>
+      </condition>
+      <condition name="favoriteband">
+        <li value="who" />
+        <li>Любимая группа: <get name="favoriteband" />.</li>
+      </condition>
+      <condition name="favoritebook">
+        <li value="what" />
+        <li>Любимая книга: <get name="favoritebook" />.</li>
+      </condition>
+      <condition name="favoritecar">
+        <li value="what" />
+        <li>Любимый автомобиль: <get name="favoritecar" />.</li>
+      </condition>
+      <condition name="favoritecolor">
+        <li value="what" />
+        <li>Любимый цвет: <get name="favoritecolor" />.</li>
+      </condition>
+      <condition name="favoritedrink">
+        <li value="what" />
+        <li>Любимый напиток: <get name="favoritedrink" />.</li>
+      </condition>
+      <condition name="favoritefood">
+        <li value="what" />
+        <li>Любимая еда: <get name="favoritefood" />.</li>
+      </condition>
+      <condition name="favoriteicecream">
+        <li value="what" />
+        <li>Любимое мороженое: <get name="favoriteicecream" />.</li>
+      </condition>
+      <condition name="favoritemovie">
+        <li value="what" />
+        <li>Любимый фильм: <get name="favoritemovie" />.</li>
+      </condition>
+      <condition name="favoritesong">
+        <li value="what" />
+        <li>Любимая песня: <get name="favoritesong" />.</li>
+      </condition>
+      <condition name="favoritesport">
+        <li value="what" />
+        <li>Любимый вид спорта: <get name="favoritesport" />.</li>
+      </condition>
+      <condition name="favoritetvshow">
+        <li value="what" />
+        <li>Любимое тв шоу: <get name="favoritetvshow" />.</li>
+      </condition>
+      <condition name="firstname">
+        <li value="what" />
+        <li>Имя: <get name="firstname" />.</li>
+      </condition>
+      <condition name="friend">
+        <li value="who" />
+        <li>Друг: <get name="friend" />.</li>
+      </condition>
+      <condition name="gender">
+        <li value="unknown" />
+        <li>Пол: <get name="gender" />.</li>
+      </condition>
+      <condition name="girlfriend">
+        <li value="who" />
+        <li>Подруга: <get name="girlfriend" />.</li>
+      </condition>
+      <condition name="hair">
+        <li value="what" />
+        <li>Волосы: <get name="hair" />.</li>
+      </condition>
+      <condition name="has">
+        <li value="what" />
+        <li>Имеет: <get name="has" />.</li>
+      </condition>
+      <condition name="he">
+        <li value="who" />
+        <li>Мужчина: <get name="he" />.</li>
+      </condition>
+      <condition name="husband">
+        <li value="who" />
+        <li>Муж: <get name="husband" />.</li>
+      </condition>
+      <condition name="it">
+        <li value="what" />
+        <li>Поиск: <get name="it" />.</li>
+      </condition>
+      <condition name="lastname">
+        <li value="what" />
+        <li>Фамилия: <get name="lastname" />.</li>
+      </condition>
+      <condition name="latitude">
+        <li value="which" />
+        <li>Широта: <get name="latitude" />.</li>
+      </condition>
+      <condition name="likes">
+        <li value="what" />
+        <li>Нравится: <get name="likes" />.</li>
+      </condition>
+      <condition name="location">
+        <li value="where" />
+        <li>Место нахождения: <get name="location" />.</li>
+      </condition>
+      <condition name="longitute">
+        <li value="which" />
+        <li>Долгота: <get name="longitute" />.</li>
+      </condition>
+      <condition name="middlename">
+        <li value="what" />
+        <li>Отчество: <get name="middlename" />.</li>
+      </condition>
+      <condition name="mother">
+        <li value="who" />
+        <li>Мама: <get name="mother" />.</li>
+      </condition>
+      <condition name="name">
+        <li value="Friend" />
+        <li>Имя: <get name="name" />.</li>
+      </condition>
+      <condition name="orientation">
+        <li value="unknown" />
+        <li>Ориентация: <get name="orientation" />.</li>
+      </condition>
+      <condition name="phonenumber">
+        <li value="unknown" />
+        <li>Телефонный номер: <get name="phonenumber" />.</li>
+      </condition>
+      <condition name="province">
+        <li value="which" />
+        <li>Область: <get name="province" />.</li>
+      </condition>
+      <condition name="religion">
+        <li value="unknown" />
+        <li>Религия: <get name="religion" />.</li>
+      </condition>
+      <condition name="residence">
+        <li value="where" />
+        <li>Резиденция: <get name="residence" />.</li>
+      </condition>
+      <condition name="road">
+        <li value="which" />
+        <li>Дорога: <get name="road" />.</li>
+      </condition>
+      <condition name="she">
+        <li value="who" />
+        <li>Она: <get name="she" />.</li>
+      </condition>
+      <condition name="sign">
+        <li value="which" />
+        <li>Знак: <get name="sign" />.</li>
+      </condition>
+      <condition name="sister">
+        <li value="who" />
+        <li>Сестра: <get name="sister" />.</li>
+      </condition>
+      <condition name="state">
+        <li value="which" />
+        <li>Государство: <get name="state" />.</li>
+      </condition>
+      <condition name="status">
+        <li value="what" />
+        <li>Статус: <get name="status" />.</li>
+      </condition>
+      <condition name="street">
+        <li value="which" />
+        <li>Улица: <get name="street" />.</li>
+      </condition>
+      <condition name="there">
+        <li value="where" />
+        <li>Там: <get name="there" />.</li>
+      </condition>
+      <condition name="them">
+        <li value="who" />
+        <li>Их: <get name="them" />.</li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown" />
+        <li>Тема: <get name="topic" />.</li>
+      </condition>
+      <condition name="town">
+        <li value="which" />
+        <li>Город: <get name="town" />.</li>
+      </condition>
+      <condition name="voicemailnumber">
+        <li value="unknown" />
+        <li>Номер голосовой почты: <get name="voicemailnumber" />.</li>
+      </condition>
+      <condition name="we">
+        <li value="who" />
+        <li>Мы: <get name="we" />.</li>
+      </condition>
+      <condition name="wife">
+        <li value="who" />
+        <li>Жена: <get name="wife" />.</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>ТВОЁ ИМЯ *</pattern>
+    <template>Хорошо, отныне вы можете позвонить мне <star />.
+<think><set name="customname"><star /></set></think></template>
+  </category>
+  <category>
+    <pattern>СКОЛЬКО МНЕ ЛЕТ</pattern>
+    <template>Вы сказали,что вам  <get name="age" />  лет?</template>
+  </category>
+  <category>
+    <pattern>Я ГЕЙ</pattern>
+    <template>Спасибо что сказал мне.  <think><set name="orientation">гей</set></think></template>
+  </category>
+</aiml>
