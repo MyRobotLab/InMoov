@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: gesturesFrench.aiml -->
+  <!-- Author: Gael Langevin, Anthony Gallot -->
+  <!-- Last modified: Jun 6, 2017 -->
+  <!-- by Anthony Gallot : initial -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+
+<!-- 1 - kids game -->  
+<!-- 2 - rockpaperscissors  -->  
+
+<!-- kids game -->  
+    <category>
+    <pattern>Игра слов</pattern>
+    <template>
+	<think><set name="topic">playwordsgame</set></think>
+	<random>
+		<li>
+		Сова! Я люблю учиться с тобой. Какое слово вы хотите узнать?
+		</li>  
+		<li>
+		Я знаю много слов, которые вы знаете? Давай, попробуй!
+		</li>  
+		<li>
+		Я знаю почти каждое слово в мире! Нормальный, я робот. Поехали.
+		</li> 
+	</random>
+	<li>
+	Скажи мне, перестань играть, чтобы остановить игру
+	</li>
+	
+    </template>
+  </category>
+
+  
+  <topic name="playwordsgame">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>PlayWithWords("<star index="1" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>  
+  </topic>
+    
+<!-- end kids game --> 
+
+<!-- rockpaperscissors  -->    
+  <category>
+  <pattern>КАМЕНЬ НОЖНИЦЫ БУМАГА</pattern>
+  <template>
+	<think><set name="topic">rockpaperscissors</set></think>
+  <think><set name="rockpaperscissorsHumanPoints">0</set></think>
+  <think><set name="rockpaperscissorsRobotPoints">0</set></think>
+	<random>
+		<li>
+		Поиграем в рок, бумагу, ножницы!
+		</li>  
+		<li>
+		Мне нравится играть в эту игру!
+		</li>  
+	</random>
+	<li>
+	3 очка выигрывают! Скажи мне, перестань играть, чтобы остановить игру. Вы начинаете. Скажите Скалу, бумагу или ножницы.
+	</li>
+	
+    </template>
+  </category>
+
+  
+  <topic name="rockpaperscissors">
+  
+    <category>
+      <pattern>КАМЕНЬ</pattern>
+      <template>
+      
+       <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        У меня есть бумага, извините, она избила камень!
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        У меня есть ножницы, скала их разрушила.
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        У меня тоже камень.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+    <category>
+      <pattern>БУМАГА</pattern>
+      <template>
+        <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        Извините, у меня ножницы, он разрезал бумагу!
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        Поздравляю, у меня камень, твоя бумага окутывает его.
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        У меня тоже есть бумага.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+    <category>
+      <pattern>НОЖНИЦЫ</pattern>
+      <template>
+      
+       <random>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
+        У меня камень, жаль, что он сломал ножницы!
+        <think><set name="rockpaperscissorsRobotPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>  
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
+        У меня есть бумага, ваши ножницы отрезали ее,
+        <think><set name="rockpaperscissorsHumanPoints">
+        <javascript>
+        eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
+        </javascript>
+        </set></think>
+        </li>
+        <li>
+        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
+        У меня тоже ножницы.
+        </li> 
+      </random>
+      <srai>SYSTEM_COUNT_POINTS</srai>
+      </template>
+    </category> 
+
+  <category>
+      <pattern>SYSTEM_COUNT_POINTS</pattern>
+      <template>
+      <li><get name="rockpaperscissorsHumanPoints" /> Очки для вас.</li>
+      <li><get name="rockpaperscissorsRobotPoints" /> Очки для меня.</li>
+      <condition>
+      <li name="rockpaperscissorsRobotPoints" value="3">я выиграл ! <random><li>Я такой умный</li><li>Слишком легко победить тебя</li><li>Пожалуйста, не плачьy</li></random>. Давайте снова сыграем или, скажем, остановим игру. <srai>КАМЕНЬ НОЖНИЦЫ БУМАГА</srai></li>
+      <li name="rockpaperscissorsHumanPoints" value="3">Ты победил ! <random><li>Поздравление</li><li>Я думаю, вы обманули</li><li>Ты слишком умный</li></random>. Давайте снова сыграем или, скажем, остановим игру. <srai>КАМЕНЬ НОЖНИЦЫ БУМАГА</srai></li>
+      <li>. продолжим.</li>
+      </condition>
+      </template>
+  </category>
+      
+     <category>
+      <pattern>*</pattern>
+      <template>
+      Я сказал, скажем, рок, бумага или ножницы.
+      </template>
+    </category> 
+    
+  </topic>
+  
+ 
+<!-- end rockpaperscissors  -->  
+
+    
+   <category>
+    <pattern>stop playing</pattern>
+    <template>
+	<think><set name="topic">default</set></think>
+    <li>
+    See you soon, I like to play!
+    </li>
+    <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob>
+    </template>
+	</category>
+
+    
+</aiml>
