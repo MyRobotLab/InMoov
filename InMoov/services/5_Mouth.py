@@ -175,7 +175,10 @@ def setRobotLanguage():
 def checkAndDownloadVoice():        
   if MyvoiceTTS=="MarySpeech":
     if not CheckMaryTTSVoice(MyvoiceType):
-      mouth.installComponentsAcceptLicense(MyvoiceType)
+      try:
+        mouth.installComponentsAcceptLicense(MyvoiceType)
+      except:
+        pass
       if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
