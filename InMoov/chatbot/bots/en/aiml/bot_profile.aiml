@@ -42,7 +42,11 @@
   <category>
     <pattern>PIC</pattern>
     <template>I have this picture.
-<img src="http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg" /></template>
+      <oob><mrl><service>python</service>
+      <method>exec</method>
+      <param>BareBonesBrowserLaunch.openURL("http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg")</param>
+      </mrl></oob>
+    </template>
   </category>
   <category>
     <pattern>EMOTIONS</pattern>
@@ -60,9 +64,11 @@
   </category>
   <category>
     <pattern>TWEETER PAGE</pattern>
-    <template>Look for me on Tweeter here <oob><url>https://twitter.com/inmoov?lang=fr</url></oob>.</template>
+    <template>Look for me on Tweeter here. 
+    <oob><mrl><service>python</service><method>exec</method>
+    <param>BareBonesBrowserLaunch.openURL("https://twitter.com/inmoov?lang=fr")</param>
+    </mrl></oob>.</template>
   </category>
-  <category>
     <pattern>BIRTHPLACE</pattern>
     <template>My birthplace is Paris,France.</template>
   </category>
