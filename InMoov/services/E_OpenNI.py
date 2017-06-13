@@ -1,5 +1,5 @@
 # ##############################################################################
-#            *** KINECT ***
+#            *** KINECT *** >> TODO MIGRATE TO INMOOV SERVICE
 # ##############################################################################
 
 
@@ -32,25 +32,15 @@ isKinectActivated=ThisServicePartConfig.getboolean('MAIN', 'isKinectActivated')
 def openNIInit():
   global KinectStarted  
   KinectStarted=0
-  openni.capture()
-  #worky open ni kinect detection
-  timeout=0
-  while not KinectStarted:
-    sleep(1)
-    timeout+=1
-    if timeout>7:break
-  
-  if not KinectStarted:
-    if ScriptType!="RightSide":
-      errorSpokenFunc('OpenNiNoWorky')
-    isKinectActivated=0
-  else:
-    talkEvent(lang_startingOpenNi)
-    i01.startOpenNI()
-    openni.stopCapture()
-    
-  
- 
+  if isKinectActivated:
+    python.subscribe(openni.getName(),"publishOpenNIData")
+    openni.capture()
+    #worky open ni kinect detection
+    timeout=0
+    while not KinectStarted:
+      sleep(1)
+      timeout+=1
+      if timeout>7:break
 
 def onOpenNIData(data):
 #####################################################
@@ -59,6 +49,7 @@ def onOpenNIData(data):
   global KinectStarted
   if data and not KinectStarted:
     KinectStarted=1
+    
   if data:
     skeleton = data.skeleton
 
@@ -97,8 +88,19 @@ def onOpenNIData(data):
 
       moveArm("right", rightBicep, 90, rightShoulder, rightOmoplate)  
 
-  if isKinectActivated:
-    i01.openni = Runtime.createAndStart("i01.openni", "OpenNi")
-    openni=i01.openni
-    python.subscribe(openni.getName(),"publishOpenNIData")
-    openNIInit()
+if isKinectActivated:
+  try:
+    openni = Runtime.createAndStart("i01.openni", "OpenNi")
+  except:
+    isKinectActivated=0
+    pass
+  openNIInit()
+  
+  if not KinectStarted:
+    if ScriptType!="RightSide":errorSpokenFunc('OpenNiNoWorky')
+    isKinectActivated=0
+    
+  else:
+    talkEvent(lang_startingOpenNi)
+    i01.startOpenNI()
+    openni.stopCapture()
