@@ -14,6 +14,7 @@ echo "------------------------------------------------------"
 echo "UPDATE MRL INSTALLATION"
 echo "This may take a few minutes"
 echo "------------------------------------------------------"
+sleep 1
 mv ./myrobotlab-*.jar ./myrobotlab.jar
 if [ ./mrlNeedReinstall ]; then
 	rm -r .myrobotlab
