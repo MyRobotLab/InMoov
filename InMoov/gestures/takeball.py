@@ -1,7 +1,6 @@
 def takeball():
   rest()
   i01.disableRobotRandom(30)
-  i01.disableRobotCanMoveHeadRandom(30)
   i01.setHandSpeed("right", 0.65, 0.55, 0.65, 0.75, 0.85, 0.75)
   i01.setArmSpeed("right", 0.85, 0.85, 0.85, 0.85)
   i01.setHeadSpeed(0.9, 0.9)
