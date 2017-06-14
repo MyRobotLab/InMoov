@@ -99,7 +99,7 @@ for root, subdirs, files in os.walk(RuningFolder+'life'):
       if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
 
 #create the custom script, only if not exist
-if not os.path.isfile(RuningFolder+'custom/Inmoov_custom.py'):shutil.move(RuningFolder+'custom/Inmoov_custom.py.default',RuningFolder+'custom/Inmoov_custom.py')
+if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(RuningFolder+'custom/InMoov_custom.py.default',RuningFolder+'custom/InMoov_custom.py.py')
 
       
 ################################
