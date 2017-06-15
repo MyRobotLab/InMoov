@@ -59,18 +59,18 @@ def publishMouthcontrolPinLeft(pins):
 def talk(data):
   if data:
     if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8') 
+    data=unicode(data,'utf-8') 
     mouth.speak(data)
     
 def talkBlocking(data):
   if data:
     if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    data=unicode(data,'utf-8')
     mouth.speakBlocking(data)
     
 def talkEvent(data):
   if IsMute==0:
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    data=unicode(data,'utf-8')
     subconsciousMouth.speakBlocking(data)
 
 #stop autolisten
