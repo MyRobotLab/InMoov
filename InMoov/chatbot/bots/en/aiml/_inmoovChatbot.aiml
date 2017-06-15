@@ -407,7 +407,7 @@
   <category>
     <pattern>WAKE UP</pattern>
     <template>
-      <srai>WAKE_UP</srai>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
     </template>
   </category>  
   <category>
