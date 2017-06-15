@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+   <!-- Файл: date.aiml -->
+   <!-- Автор: Dr. Richard S. Wallace -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - это авторское право и копия; 2014 от Фонда ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменено: Гаэль Ланжевен -->
+   <!-- Последнее изменение: 16 сентября 2016 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 10 июня 2017 г. -->
+
+  <category>
+    <pattern>ДЕНЬ</pattern>
+    <template>Сегодня <date format="%A" jformat="EEEEEEEEEE" /></template>
+  </category>
+  <category>
+    <pattern>ГОД</pattern>
+    <template>Это <date format="%Y" jformat="YYYY" /></template>
+  </category>
+  <category>
+    <pattern>МЕСЯЦ</pattern>
+    <template>Это <date format="%B" jformat="MMMMMMMMM" /></template>
+  </category>
+  <category>
+    <pattern>ВРЕМЯ</pattern>
+    <template>Время <date format="%I:%M %p" jformat="h:mm a" /></template>
+  </category>
+  <category>
+    <pattern>ДАТА</pattern>
+    <template>Сегодня <date format="%B %d, %Y" jformat="MMMMMMMMM dd, YYYY" /></template>
+  </category>
+  <category>
+    <pattern>ДАТА И ВРЕМЯ</pattern>
+    <template>Дата и время <date /></template>
+  </category>
+  <category>
+    <pattern>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА ОСТАЛОСЬ</pattern>
+    <template>
+      <interval>
+        <jformat>MMMMMMMMM dd</jformat>
+        <style>days</style>
+        <from>
+          <date jformat="MMMMMMMMM dd" />
+        </from>
+        <to>December 25</to>
+      </interval>
+до рождества осталось </template>
+  </category>
+</aiml>
