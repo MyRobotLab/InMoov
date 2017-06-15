@@ -1,3 +1,5 @@
+REG ADD HKCU\Console /v CodePage /t REG_DWORD /d 0xfde9 /f
+REG ADD HKCU\Console /v FaceName /t REG_SZ /d "Lucida Console" /f
 @echo off
 echo ------------------------------------------------------
 echo 			INMOOV LAUNCHER
@@ -39,7 +41,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 3 > NUL
-java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
 cls
 COLOR 0F
 echo ------------------------------------------------------
@@ -50,6 +52,6 @@ if not exist %cd%\Inmoov\InMoov.py (
     echo PLEASE PUT SCRIPT AND FOLDERS INSIDE InMoov FOLDER
     timeout 10 > NUL
 ) else (
-java -jar myrobotlab.jar -invoke python execFile %cd%/InMoov/InMoov.py -service python Python
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -invoke python execFile %cd%/InMoov/InMoov.py -service python Python
 )
 
