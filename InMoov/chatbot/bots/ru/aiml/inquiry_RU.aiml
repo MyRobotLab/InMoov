@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   <!-- файл: inquiry.aiml -->
+   <!-- Автор: Dr. Richard S. Wallace -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - это авторское право и копия; 2014 от Фонда ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменено: Гаэль Ланжевен -->
+   <!-- Последнее изменение: 16 сентября 2016 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 10 июня 2017 г. -->
+   <!--  -->
+  <category>
+    <pattern>*</pattern>
+    <that>СКОЛЬКО ТЕБЕ ЛЕТ</that>
+    <template>
+      <think>
+        <set name="age">
+          <star />
+        </set>
+      </think>
+      <srai>МОЙ ВОЗРАСТ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОС МЕСТОПОЛОЖЕНИЯ</pattern>
+    <template>
+      <srai>ЗАПРОС МЕСТОПОЛОЖЕНИЯ <get name="location" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОС МЕСТОПОЛОЖЕНИЯ ДЛЯ</pattern>
+    <template>Где ты?</template>
+  </category>
+  <category>
+    <pattern>ЗАПРОС МЕСТОПОЛОЖЕНИЯ *</pattern>
+    <template>
+      <srai>RANDOM PICKUP LINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ИМЯ</pattern>
+    <template>
+      <srai>ЗАПРОСИТЬ ИМЯ <get name="name" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ИМЯ *</pattern>
+    <template>
+      <srai>RANDOM PICKUP LINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ИМЯ ДРУГА</pattern>
+    <template>Как вас зовут?</template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ВОЗРАСТ</pattern>
+    <template>
+      <srai>ЗАПРОСИТЬ ВОЗРАСТ <get name="age" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ВОЗРАСТ</pattern>
+    <template>Сколько тебе лет?</template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ВОЗРАСТ *</pattern>
+    <template>
+      <srai>RANDOM PICKUP LINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ПОЛ</pattern>
+    <template>
+      <srai>ЗАПРОСИТЬ ПОЛ <get name="gender" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЗАПРОС ПОЛА</pattern>
+    <template>Вы мужчина или женщина?</template>
+  </category>
+  <category>
+    <pattern>ЗАПРОСИТЬ ПОЛ *</pattern>
+    <template>
+      <srai>RANDOM PICKUP LINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>МУЖЧИНА</pattern>
+    <that>ВЫ МУЖЧИНА ИЛИ ЖЕНЩИНА</that>
+    <template>
+      <srai>Я МУЖЧИНА</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ЖЕНЩИНА</pattern>
+    <that>ВЫ МУЖЧИНА ИЛИ ЖЕНЩИНА</that>
+    <template>
+      <srai>Я ЖЕНЩИНА</srai>
+    </template>
+  </category>
+</aiml>
