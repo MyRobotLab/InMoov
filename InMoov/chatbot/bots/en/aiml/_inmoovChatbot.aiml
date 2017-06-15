@@ -421,7 +421,13 @@
     <template>
       <srai>SHUTDOWN</srai>
     </template>
-  </category> 
+  </category>
+  <category>
+    <pattern>GO TO SLEEP</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob>
+    </template>
+  </category>
   <category>
     <pattern>DISABLE</pattern>
     <template>
