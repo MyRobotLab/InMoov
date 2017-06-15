@@ -1,11 +1,14 @@
-Inmoov OS  
-Powered by Myrobotlab  
+Inmoov OS
+testing 0.3.6
 
-[DOCUMENTATION]
+[**DOCUMENTATION**]
 
 https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER  
-https://github.com/MyRobotLab/inmoov/wiki/
 
-topic : http://myrobotlab.org/content/inmoov-script-merge-them-all
+if you find bugs : https://github.com/MyRobotLab/inmoov/issues
 
-bugs : https://github.com/MyRobotLab/inmoov/issues
+[**CHANGELOG**]  
+
+0.3.6  
+- utf8 friendly inside logs & webgui  
+- linux compatibility fixed  
