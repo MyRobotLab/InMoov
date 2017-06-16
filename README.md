@@ -1,5 +1,5 @@
 Inmoov OS
-testing 0.3.6
+testing
 
 [**DOCUMENTATION**]
 
@@ -9,6 +9,8 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
 
 [**CHANGELOG**]  
 
+0.3.9
+- openni skeleton capture  
 0.3.6  
 - utf8 friendly inside logs & webgui  
 - linux compatibility fixed  
