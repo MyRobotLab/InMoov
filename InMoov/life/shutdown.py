@@ -11,6 +11,8 @@ def shutdown():
   switchOnAllNervo()
   talk(lang_shutDown)
   StopNeopixelAnimation()
+  if isOpenCvActivated:opencv.stopCapture()
+  if isKinectActivated:openni.stopCapture()
   i01.halfSpeed()
   i01.rest()
   if isEyeLidsActivated:
@@ -18,7 +20,6 @@ def shutdown():
     eyelids.eyelidleft.moveTo(180)
     eyelids.eyelidright.moveTo(180)
   sleep(7)
-  if isOpenCvActivated:opencv.stopCapture()
   i01.disable()
   switchOffAllNervo()
   killRuntime()

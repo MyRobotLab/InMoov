@@ -627,6 +627,18 @@
       <template>Arrêt de la kinect
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
+        <category>
+      <pattern>TRACKING SQUELETTE</pattern>
+      <template>starting TRACKING SKELETON with kinect
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+    </category>
+    
+     <category>
+      <pattern>TRACKIN SQUELETTE</pattern>
+      <template>
+        <srai>TRACKING SQUELETTE</srai>
+      </template>
+    </category>
     <category>
       <pattern>MOUVEMENT NUMÉRO 1</pattern>
       <template>Mouvement numéro 1

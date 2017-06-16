@@ -820,6 +820,19 @@
       <template>OFF KINECT
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>TRACKING SKELETON</pattern>
+      <template>starting TRACKING SKELETON with kinect
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+    </category>
+    
+     <category>
+      <pattern>TRACKIN SKELETON</pattern>
+      <template>
+        <srai>TRACKING SKELETON</srai>
+      </template>
+    </category>
 
 
     <category>

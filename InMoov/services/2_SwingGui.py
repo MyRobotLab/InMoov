@@ -44,4 +44,7 @@ if LaunchSwingGui:
 python.subscribe(runtime.getName(),"publishShutdown")
 
 def onShutdown(data):
-  shutdown()
+  try:
+    shutdown()
+  except: 
+    pass
