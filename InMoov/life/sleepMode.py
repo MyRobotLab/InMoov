@@ -19,7 +19,7 @@ def sleepModeWakeUp():
     ImageDisplay.exitFS()
     ImageDisplay.closeAll()
     
-    displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
+    #displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
     
     rdmWakup=random.randint(1,3)
     if rdmWakup==1:
