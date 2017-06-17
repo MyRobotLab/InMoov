@@ -10,7 +10,7 @@ def MoveBody(timedata):
   
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       #redefine next loop
-      MoveBodyTimer.setInterval(random.randint(10000,20000))
+      MoveBodyTimer.setInterval(random.randint(1000,5000))
       i01.setHandVelocity("left", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
       i01.setHandVelocity("right", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
       i01.setArmVelocity("left", random.randint(2,5), random.randint(2,5), random.randint(2,5), random.randint(2,5))
