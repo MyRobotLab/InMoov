@@ -30,7 +30,7 @@ def MoveRandom(timedata):
       
   if random.randint(0,3)==3:
     i01.disableRobotRandom(20)
-    chatBot.getResponse("RANDOM")
+    #chatBot.getResponse("RANDOM")
 
 def MoveRandomStart():
   MoveBodyTimer.startClock()
