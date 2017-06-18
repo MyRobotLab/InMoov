@@ -2,6 +2,7 @@ def comehere():
   fullspeed()
   rest()
   PlayNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
+  i01.startedGesture()
 ##look around
   i01.setHeadSpeed(0.80, 0.80, 0.90, 0.90, 1.0)
   i01.moveHead(80,66,7,85,52)
@@ -56,6 +57,7 @@ def comehere():
   i01.moveHead(60,80)
   i01.moveArm("right",90,65,10,25)
   sleep(3)
+  i01.finishedGesture()
   fullspeed()
   rest()
   sleep(0.3)
