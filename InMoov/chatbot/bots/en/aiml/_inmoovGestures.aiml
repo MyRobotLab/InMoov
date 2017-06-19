@@ -1723,6 +1723,40 @@
         <srai>PLEASE CHECK YOUR NECK</srai>
       </template>
     </category>
+                  
+    <category>
+      <pattern>SHALL WE READ THE CAT BOOK</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
+    </category>
+  
+    <category>
+        <pattern># YES #</pattern>
+        <that># lets turn the page #</that>
+        <template>Ok.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatYes()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+    
+      <category>
+        <pattern># NO #</pattern>
+        <that># Lets turn the page #</that>
+        <template>As you please.
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>bookcatNo()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
     
     
 
