@@ -627,6 +627,18 @@
       <template>Arrêt de la kinect
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
+    <category>
+      <pattern>ARRET DE LA CAPTURE</pattern>
+      <template>
+        <srai>STOP LA KINECT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>ARRET DE LA KINECT</pattern>
+      <template>
+        <srai>STOP LA KINECT</srai>
+      </template>
+    </category>
         <category>
       <pattern>TRACKING SQUELETTE</pattern>
       <template>starting TRACKING SKELETON with kinect
