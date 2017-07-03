@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: inmoovchatBot.aiml -->
+  <!-- File: _inmoovChatBot.aiml -->
   <!-- Authors: Gael Langevin, Anthony Gallot -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
@@ -49,7 +49,7 @@
       <pattern>#</pattern>
       <that># quel est mon nom #</that>
       <template>
-        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui , ou non</set>
+        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -62,7 +62,7 @@
       <pattern>#</pattern>
       <that># puis-je avoir ton prénom #</that>
       <template>
-        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui , ou non</set>
+        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -130,32 +130,27 @@
     <category>
       <pattern># NON #</pattern>
       <that># Si mon nom est #</that>
-      <template>
+      <template><li>
 	On recommence alors.
 	Je t'écoute. quel est mon nom ?
-    </template>
+    </li></template>
     </category>
 	
     <category>
       <pattern># NON #</pattern>
       <that># Si ton prénom #</that>
-      <template>
+      <template><li>
 	On recommence alors.
 	Je t'écoute. puis-je avoir ton prénom ?
-    </template>
+    </li></template>
     </category>
 	
     <category>
       <pattern>#</pattern>
-      <that># répond par oui , ou non #</that>
+      <that># répond par oui ou non #</that>
       <template>
-        <random>
-          <li>
-	S'il te plait, répond aux questions que je pose, c'est important.
-	</li>
-          <li>
-	Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.
-	</li>
+        <random><li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+        <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
         </random>
         <get name="questionfirstinit" />
       </template>

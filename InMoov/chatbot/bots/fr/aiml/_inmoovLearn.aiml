@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- WIP ! -->  <!-- WIP ! -->  <!-- WIP ! -->
+  
+  <!-- File: _inmoovLearn.aiml -->
+  <!-- File Authors: Dr. Richard S. Wallace / Gael Langevin / Anthony Gallot -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified:  -->
+  <!-- Last modified: 30/6/17 -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  
+  <!-- Général memories -->
+  <!-- todo share it -->
+
+  <category>
+    <pattern>UN * EST UN *</pattern>
+    <template>
+    <random>
+    <li>
+    Désormais je saurrais que un <star /> est un <star index="2" />.
+    </li>
+    <li>
+    J'étais presque sure que un <star /> était un <star index="2" />. Merci pour la confirmation.
+    </li>
+    </random>
+    <learnf><category><pattern>C EST QUOI UN <eval><star /></eval></pattern><template>Un <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UN <eval><star index="2" /></eval></pattern><template>Cela peut être un <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UN <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+  </category>
+  
+  <!-- Personnal memories -->
+  <!-- todo -->
+  
+</aiml>

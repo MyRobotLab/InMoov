@@ -8,6 +8,7 @@
 
 
 def shutdown():
+  if isChatbotActivated:chatBot.writeAndQuit()
   switchOnAllNervo()
   talk(lang_shutDown)
   StopNeopixelAnimation()
