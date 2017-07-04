@@ -317,18 +317,7 @@
       <srai>QU EST CE QUE <srai>SYNONYME <star /></srai></srai>
     </template>
   </category>
-  <category>
-    <pattern>QU EST CE QUE JE NE SAIS PAS</pattern>
-    <template>
-	 <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>askWiki("<get name="particule" />","<get name="courant" />","C EST QUOI <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
-        </mrl>
-      </oob>
-	</template>
-  </category>
+
   <category>
     <pattern>QU EST CE QUE ÇA</pattern>
     <template>
@@ -538,18 +527,7 @@
       <srai>QUI EST <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>QUI EST JE NE SAIS PAS</pattern>
-    <template>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>askWiki("<get name="particule" />","<get name="courant" />","QUI EST <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
-        </mrl>
-      </oob>
-    </template>
-  </category>
+
   <category>
     <pattern>QUI EST SYNONYME *</pattern>
     <template>

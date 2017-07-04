@@ -2,7 +2,7 @@
 <aiml>
   <!-- WIP ! -->  <!-- WIP ! -->  <!-- WIP ! -->
   
-  <!-- File: _inmoovLearn.aiml -->
+  <!-- File: _inmoovKnowledge.aiml -->
   <!-- File Authors: Dr. Richard S. Wallace / Gael Langevin / Anthony Gallot -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
@@ -17,9 +17,63 @@
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
   
+  <!-- *** INMOOV KNOWLEDGE ( french ) :  *** -->
+  <!-- local database -->
+  <!-- wikidata database -->
+  <!-- personnal memories TODO -->
   <!-- Général memories -->
-  <!-- todo share it -->
+  <!-- shared knowledge TODO -->
 
+  <!-- local database -->
+  <!-- local database is inside every aiml files like qui.aiml -->
+  <!-- it can be inside dedicated sets, like animal.txt + animals.aiml -->
+  <!-- end local database -->
+  
+  <!-- wikidata database -->
+    <category>
+    <pattern>* SIGNIFIE *</pattern>
+    <template>
+      <think>
+        <set name="equalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="equalto">
+        <li value="false">
+        OK, quand tu dis "<star />", cela signifie "<star index="2" />". Je comprend mieux maintenant.
+        <learnf><category><pattern><eval><star /></eval></pattern><template><srai><eval><star index="2" /></eval></srai></template></category><category><pattern><eval><star /></eval> _</pattern><template><srai><eval><star index="2" /></eval> <star /></srai></template></category><category><pattern>_ <eval><star /></eval></pattern><template><srai><star /> <eval><star index="2" /></eval></srai></template></category><category><pattern>_ <eval><star /></eval> *</pattern><template><srai><star /><eval> <star index="2" /></eval> <star index="2" /></srai></template></category></learnf></li>
+        <li>je le savais déja.</li>
+      </condition>
+    </template>
+   </category>
+   <category>
+    <pattern>QUI EST JE NE SAIS PAS</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>askWiki("<get name="particule" />","<get name="courant" />","QUI EST <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>QU EST CE QUE JE NE SAIS PAS</pattern>
+    <template>
+	 <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>askWiki("<get name="particule" />","<get name="courant" />","C EST QUOI <get name="particule" /> <get name="courant" />","SAY ","CONFUSION")</param>
+        </mrl>
+      </oob>
+	</template>
+  </category>
+  <!-- end wikidata database -->
+  
+  <!-- Général memories -->
+  <!-- records are stored inside learn.csv/learn.aiml -->
   <category>
     <pattern>UN * EST UN *</pattern>
     <template>
@@ -31,10 +85,47 @@
     J'étais presque sure que un <star /> était un <star index="2" />. Merci pour la confirmation.
     </li>
     </random>
-    <learnf><category><pattern>C EST QUOI UN <eval><star /></eval></pattern><template>Un <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UN <eval><star index="2" /></eval></pattern><template>Cela peut être un <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UN <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+    <learnf><category><pattern>C EST QUOI UN <eval><star /></eval></pattern><template>Un <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UN <eval><star index="2" /></eval></pattern><template>Cela peut être un <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UN <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
   </category>
-  
-  <!-- Personnal memories -->
-  <!-- todo -->
+  <category>
+    <pattern>UN * EST UNE *</pattern>
+    <template>
+    <random>
+    <li>
+    Désormais je saurrais que un <star /> est une <star index="2" />.
+    </li>
+    <li>
+    J'étais presque sure que un <star /> était une <star index="2" />. Merci pour la confirmation.
+    </li>
+    </random>
+    <learnf><category><pattern>C EST QUOI UN <eval><star /></eval></pattern><template>Une <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UN <eval><star index="2" /></eval></pattern><template>Cela peut être une <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UN <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+  </category>
+  <category>
+    <pattern>UNE * EST UN *</pattern>
+    <template>
+    <random>
+    <li>
+    Désormais je saurrais que une <star /> est un <star index="2" />.
+    </li>
+    <li>
+    J'étais presque sure que une <star /> était un <star index="2" />. Merci pour la confirmation.
+    </li>
+    </random>
+    <learnf><category><pattern>C EST QUOI UNE <eval><star /></eval></pattern><template>Un <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UN <eval><star index="2" /></eval></pattern><template>Cela peut être une <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UNE <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>évidement</li><li>bien sûre</li><li>je pense</li></random>.</template></category></learnf></template>
+  </category>
+  <category>
+    <pattern>UNE * EST UNE *</pattern>
+    <template>
+    <random>
+    <li>
+    Désormais je saurrais que une <star /> est une <star index="2" />.
+    </li>
+    <li>
+    J'étais presque sure que une <star /> était une <star index="2" />. Merci pour la confirmation.
+    </li>
+    </random>
+    <learnf><category><pattern>C EST QUOI UNE <eval><star /></eval></pattern><template>Une <eval><star index="2" /></eval>.</template></category><category><pattern>C EST QUOI UNE <eval><star index="2" /></eval></pattern><template>Cela peut être une <eval><star /></eval> par exemple.</template></category><category><pattern>EST CE QUE UNE <eval><star /></eval> EST UN <eval><star index="2" /></eval></pattern><template>Oui, <random><li>évidement</li><li>bien sûre</li><li>je pense</li></random>.</template></category></learnf></template>
+  </category>
+  <!-- end Général memories -->
   
 </aiml>
