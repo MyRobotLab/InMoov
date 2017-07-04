@@ -50,7 +50,7 @@
       <pattern>#</pattern>
       <that># what is my name #</that>
       <template>
-        <set name="questionfirstinit">if my name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">if my name is <star /> , say yes or no</set>
         <think>
           <set name="tmpname">
             <star />
@@ -63,7 +63,7 @@
       <pattern>#</pattern>
       <that># may I have your name #</that>
       <template>
-        <set name="questionfirstinit">if your name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">if your name is <star /> , say yes or no</set>
         <think>
           <set name="tmpname">
             <star />
@@ -135,7 +135,7 @@
 	
     <category>
       <pattern>#</pattern>
-      <that># say yes, or no #</that>
+      <that># say yes or no #</that>
       <template>
         <random>
           <li>
@@ -157,7 +157,7 @@
     <pattern>SYSTEM_NEW_VERSION</pattern>
     <template>
        <think><set name="topic">updater</set></think>
-	   Alert, new Inmoov operating system version available, if you wish, I can update it , say yes, or no
+	   Alert, new Inmoov operating system version available, if you wish, I can update it , say yes or no
 	   </template>
   </category>
   
@@ -205,7 +205,7 @@
     <category>
       <pattern>#</pattern>
       <that># say yes #</that>
-      <template>Please, awnser my question, it is important, say yes, or no</template>
+      <template>Please, awnser my question, it is important, say yes or no</template>
     </category>
 		
   </topic>
