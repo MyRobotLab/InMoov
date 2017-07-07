@@ -85,7 +85,7 @@ def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la descript
       chatBot.getResponse(ReturnNok)
     else:
       chatBot.getResponse(ReturnOk + answer)
-    chatBot.setPredicate("default","particule","")
+      chatBot.setPredicate("default","particule","")
   else:
     chatBot.getResponse(ReturnNok)
 
