@@ -2,6 +2,16 @@
 <aiml>
   <!--  -->
   <!--  -->
+  <category><pattern><set>articles</set> *</pattern>
+<template><random>
+        <li>Intéressant.  </li>
+        <li>Je n'en connais pas</li>
+        <li>Je vais me renseigner</li>
+      </random>
+      <think>
+        <set name="topic"><star /> <person/></set>
+      </think></template>
+</category>
   <category>
     <pattern>* QUEL QUE *</pattern>
     <template>

@@ -29,6 +29,8 @@ def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la descript
   if query!="":
     if particule!="":
       query=particule+" "+query
+    else:
+      chatBot.setPredicate("default","particule","")
     query = unicode(query,'utf-8')# on force le format de police UTF-8 pour prendre en charge les accents
     if query[1]== "\'" : # Si le sujet contient un apostrophe , on efface tout ce qui est avant ! ( "l'ete" -> "ete")
       query2 = query[2:len(query)]
@@ -88,4 +90,3 @@ def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la descript
       chatBot.setPredicate("default","particule","")
   else:
     chatBot.getResponse(ReturnNok)
-

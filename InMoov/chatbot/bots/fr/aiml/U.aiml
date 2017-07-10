@@ -16,19 +16,6 @@
     </template>
   </category>
   <category>
-    <pattern>UN *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>UN</pattern>
     <template>DEUX</template>
   </category>
@@ -260,19 +247,6 @@
   <category>
     <pattern>UN TROU</pattern>
     <template>Un problème?</template>
-  </category>
-  <category>
-    <pattern>UNE *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UNE <person /></set>
-      </think>
-    </template>
   </category>
   <category>
     <pattern>UNE * N EST PAS</pattern>
