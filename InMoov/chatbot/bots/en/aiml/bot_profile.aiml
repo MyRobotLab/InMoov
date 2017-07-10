@@ -273,24 +273,20 @@ I like to go with the flow.</template>
     <template>
       <think>
         <set var="years">
-          <interval>
-            <jformat>MMMMMMMMM dd, yyyy</jformat>
-            <style>years</style>
-            <from>October 9, 2011</from>
-            <to>
-              <date jformat="MMMMMMMMM dd, yyyy" />
-            </to>
-          </interval>
+        <interval>
+        <jformat>dd MM yyyy</jformat>
+        <style>years</style>
+        <from>9 9 2011</from>
+        <to><date jformat="dd MM yyyy" /></to>
+      </interval>
         </set>
         <set var="months">
-          <interval>
-            <jformat>MMMMMMMMM dd, yyyy</jformat>
-            <style>months</style>
-            <from>October 9, 2011</from>
-            <to>
-              <date jformat="MMMMMMMMM dd, yyyy" />
-            </to>
-          </interval>
+        <interval>
+        <jformat>dd MM yyyy</jformat>
+        <style>months</style>
+        <from>9 9 2011</from>
+        <to><date jformat="dd MM yyyy" /></to>
+      </interval>
         </set>
       </think>
       <condition var="years">
