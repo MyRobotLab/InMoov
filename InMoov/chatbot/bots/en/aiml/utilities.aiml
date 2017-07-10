@@ -80,7 +80,7 @@
     </template>
   </category>
   <category>
-    <pattern>NTH number *</pattern>
+    <pattern>NTH <set>number</set> *</pattern>
     <template>
       <think>
         <set var="nth">
@@ -528,7 +528,7 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
     <template>0</template>
   </category>
   <category>
-    <pattern>SUCCESSOR number</pattern>
+    <pattern>SUCCESSOR <set>number</set></pattern>
     <template>
       <map>
         <name>successor</name>
@@ -603,7 +603,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>PREDECESSOR number</pattern>
+    <pattern>PREDECESSOR <set>number</set></pattern>
     <template>
       <map>
         <name>predecessor</name>
@@ -661,19 +661,19 @@ Which item would you like to remove?
     <template>Here is your list: <srai>COMMASEPARATE <srai>MYLIST</srai></srai></template>
   </category>
   <category>
-    <pattern>ISANUMBER number</pattern>
+    <pattern>ISANUMBER <set>number</set></pattern>
     <template>true</template>
   </category>
   <category>
     <pattern>ISANUMBER *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER <set>number</set></pattern>
     <template>true</template>
   </category>
   <category>
-    <pattern>ISAPHONENUMBER number</pattern>
-    <template>true</template>
-  </category>
-  <category>
-    <pattern>ISAPHONENUMBER number *</pattern>
+    <pattern>ISAPHONENUMBER <set>number</set> *</pattern>
     <template>
       <srai>ISAPHONENUMBER <star /></srai>
     </template>
@@ -750,7 +750,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD 1 PLUS number</pattern>
+    <pattern>ADD 1 PLUS <set>number</set></pattern>
     <template>
       <map name="successor">
         <star />
@@ -758,7 +758,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD 0 PLUS number</pattern>
+    <pattern>ADD 0 PLUS <set>number</set></pattern>
     <template>
       <star />
     </template>
@@ -919,7 +919,7 @@ Which item would you like to remove?
     <template>CONS <star /> CONS <star index="2" /></template>
   </category>
   <category>
-    <pattern>COUNT TO number</pattern>
+    <pattern>COUNT TO <set>number</set></pattern>
     <template>
       <think>
         <set name="count">0</set>
