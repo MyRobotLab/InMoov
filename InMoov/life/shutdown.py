@@ -8,7 +8,9 @@
 
 
 def shutdown():
-  if isChatbotActivated:chatBot.writeAndQuit()
+  if isChatbotActivated:
+    chatBot.writeAndQuit()
+    RemoveFile(mrlWasNotCleanlyShutdownedFile)
   switchOnAllNervo()
   talk(lang_shutDown)
   StopNeopixelAnimation()

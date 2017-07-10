@@ -25,6 +25,17 @@ isChatbotActivated=ThisServicePartConfig.getboolean('MAIN', 'isChatbotActivated'
 # MRL SERVICE CALL
 # ##############################################################################
 
+# We check if MRL was cleanly closed
+mrlWasNotCleanlyShutdownedFile="mrlWasNotCleanlyShutdowned"
+if os.path.isfile(mrlWasNotCleanlyShutdownedFile):
+  if (os.path.isdir(RuningFolder+'chatbot/bots/'+MyLanguage+'/aiml')):
+    errorSpokenFunc('lang_BadShutdown')
+    try:
+      shutil.rmtree(RuningFolder+'chatbot/bots/'+MyLanguage+'/aimlif')
+    except: 
+      pass  
+open("mrlWasNotCleanlyShutdowned", 'a').close()
+
 Runtime.createAndStart("htmlFilter", "HtmlFilter")
 chatBot=Runtime.start("chatBot", "ProgramAB")
 if isChatbotActivated:
