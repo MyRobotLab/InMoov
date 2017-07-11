@@ -1726,13 +1726,13 @@
                   
     <category>
       <pattern>SHALL WE READ THE CAT BOOK</pattern>
-      <template>
+      <template>Sure it's a good idea.
         <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
     </category>
   
     <category>
-        <pattern># YES #</pattern>
-        <that># lets turn the page #</that>
+        <pattern># READ THE BOOK #</pattern>
+        <that># Tell me read the book or stop reading #</that>
         <template>Ok.
       <oob>
             <mrl>
@@ -1745,8 +1745,8 @@
       </category>
     
       <category>
-        <pattern># NO #</pattern>
-        <that># Lets turn the page #</that>
+        <pattern># STOP READING #</pattern>
+        <that># Tell me read the book or stop reading #</that>
         <template>As you please.
       <oob>
             <mrl>
@@ -1757,6 +1757,34 @@
        </oob>   
     </template>
       </category>
+
+      <category>
+        <pattern>TURN THE PAGE</pattern>
+        <template><random>
+          <li>Ok.</li>
+          <li>Sure.</li>
+          <li>Nice.</li>
+          <li>Right away.</li>
+          <li>I really love this book.</li>
+          <li>With pleasure.</li>
+          <li>Great images.</li>
+        </random>
+      <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>turnthepage()</param>
+            </mrl>
+       </oob>   
+    </template>
+      </category>
+
+    <category>
+      <pattern>* TURN THE PAGE *</pattern>
+      <template>
+        <srai>TURN THE PAGE</srai>
+      </template>
+    </category>
     
     
 
