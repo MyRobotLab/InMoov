@@ -31,30 +31,7 @@ except:
   BasicConfig.set('TTS', 'VoiceRssApi', 'xxx')
   configNeedUpdate=1
   pass
-  
-try:
-  BetaVersion = BasicConfig.getboolean('GENERAL', 'BetaVersion')
-except:
-  BasicConfig.set('GENERAL', 'BetaVersion', 1)
-  configNeedUpdate=1
-  pass
-  
-try:
-  virtualInmoovAlwaysActivated=0
-  virtualInmoovAlwaysActivated = BasicConfig.getboolean('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated')
-except:
-  BasicConfig.add_section('VIRTUAL_INMOOV')
-  BasicConfig.set('VIRTUAL_INMOOV', 'virtualInmoovAlwaysActivated', 'False')
-  configNeedUpdate=1
-  pass
-  
-try:
-    if BasicConfig.get('VOCAL', 'EarInterpretEngine')!='':
-      BasicConfig.remove_option('VOCAL', 'EarInterpretEngine')
-      configNeedUpdate=1
-except:
-  pass
-  
+
   
 if configNeedUpdate:
   with open(RuningFolder+'config/' + '_InMoov.config', 'wb') as f:
@@ -74,7 +51,6 @@ if MyvoiceType[0]=="[":
   MyvoiceType=MyvoiceType.split(']', 1 )[1]
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
-EarEngine=BasicConfig.get('VOCAL', 'EarEngine')
 LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')
 StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
 IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')

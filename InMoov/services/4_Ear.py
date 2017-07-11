@@ -2,6 +2,20 @@
 #                 EAR SERVICE FILE
 # ##############################################################################
 
+# ##############################################################################
+#               PERSONNAL PARAMETERS
+# ##############################################################################  
+  
+#read current service part config based on file name
+ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart+'.config')
+
+EarEngine=ThisServicePartConfig.get('MAIN', 'EarEngine')
+setContinuous=ThisServicePartConfig.getboolean('MAIN', 'setContinuous')
+setAutoListen=ThisServicePartConfig.getboolean('MAIN', 'setAutoListen')
 
 # ##############################################################################
 # MRL SERVICE CALL
@@ -10,7 +24,8 @@
 i01.ear=Runtime.createAndStart("i01.ear", EarEngine)
 i01.startEar()
 ear = i01.ear
-ear.setAutoListen(True)
+ear.setAutoListen(setAutoListen)
+ear.setContinuous(setContinuous)
 
 # Start the webgui service without starting the browser
 webgui = Runtime.create("WebGui","WebGui")
