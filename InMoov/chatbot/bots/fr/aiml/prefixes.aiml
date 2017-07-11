@@ -81,8 +81,14 @@
   </category>
   <category>
     <pattern>CALCULE *</pattern>
-    <template>ai je l'air d'une calculette?</template>
-  </category>
+    <template>
+    <random>
+    <li>ai je l'air d'une calculette?</li>
+    <li>Cela fait précisément.</li>
+    </random>
+ <srai><star /></srai>   
+   </template>
+   </category>
   <category>
     <pattern>CHER *</pattern>
     <template>

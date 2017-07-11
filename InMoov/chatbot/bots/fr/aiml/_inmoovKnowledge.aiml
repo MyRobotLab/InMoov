@@ -64,8 +64,12 @@
     <li>
     Cela ne doit pas être une information essentielle.
     </li>
+    <li>
+    Ok tu veux jouer aux devinettes.
+    </li>
     </random>
-    si tu as une idée dis moi ce que c'est.</template>
+    si tu as une idée dis moi ce que c'est.
+    </template>
 </category>
 <category><pattern>SYSTEM_IDONTKNOW_TEACH_ME_WHOISIT</pattern>
 <template><get name="courant"/> ?
@@ -116,7 +120,7 @@
     <srai><get name="courant"/> EST <star index="2"/></srai>
     </li></template>
 </category>
-<category><pattern>*</pattern><that># SI TU AS UNE IDÉE DIS MOI QUI C'EST #</that>
+<category><pattern>_</pattern><that># SI TU AS UNE IDÉE DIS MOI QUI C'EST #</that>
 <template><li>
     <srai><get name="courant"/> EST <star/></srai>
     </li></template>
@@ -175,7 +179,7 @@
     J'étais presque, sûre que <star index="1"/> était <star index="2"/>. Merci pour la confirmation.
     </li>
     </random>
-    <learnf><category><pattern>C EST QUI <eval><star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern>C EST QUI <eval><star index="2"/></eval></pattern><template>Je pense que c'est <eval><star index="1"/></eval>.</template></category><category><pattern>EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+    <learnf><category><pattern>QUI EST <eval><star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern>QUI EST <eval><star index="2"/></eval></pattern><template>Je pense que c'est <eval><star index="1"/></eval>.</template></category><category><pattern>EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
 </category>
 <!-- end Général memories -->
 </aiml>

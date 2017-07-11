@@ -49,6 +49,7 @@ if isChatbotActivated:
   chatBot.setPredicate("default","topic","default")
   chatBot.setPredicate("default","questionfirstinit","")
   chatBot.setPredicate("default","tmpname","")
+  chatBot.setPredicate("default","null","")
   chatBot.savePredicates()
 else:
   errorSpokenFunc('lang_ChatbotError')
