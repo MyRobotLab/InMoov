@@ -20,52 +20,56 @@ def bookcatNo():
   i01.moveHead(90,90,90)
 
 def turnthepage(): 
-  global helvar
-  if helvar <= 0:
+  global bookcat
+  if bookcat <= 0:
     sleep(3)
     i01.mouth.speakBlocking("Cat the cat, who is that?")
-    helvar += 1
-  elif helvar == 1:
+    bookcat += 1
+  elif bookcat == 1:
     sleep(3)
     i01.mouth.speakBlocking("It's mouse, the mouse! Hi, mouse the mouse!  Hello there")
-    helvar += 1
-  elif helvar == 2:
+    bookcat += 1
+  elif bookcat == 2:
     sleep(3)
     i01.mouth.speakBlocking("Cat the cat, who is that?")
-    helvar += 1
-  elif helvar == 3:
+    bookcat += 1
+  elif bookcat == 3:
     sleep(3)
     i01.mouth.speakBlocking("It's duck the duck! Hi, duck the duck! A pleasure, as always")
-    helvar += 1
-  elif helvar == 4:
+    bookcat += 1
+  elif bookcat == 4:
     sleep(3)
     i01.mouth.speakBlocking("Cat the cat, who is that?")
-    helvar += 1
-  elif helvar == 5:
+    bookcat += 1
+  elif bookcat == 5:
     sleep(3)
     i01.mouth.speakBlocking("It's fish the fish! Hi, fish the fish! Hey dude")
-    helvar += 1
-  elif helvar == 6:
+    bookcat += 1
+  elif bookcat == 6:
     sleep(3)
     i01.mouth.speakBlocking("Cat the cat likes her friends. Sure do")
-    helvar += 1
-  elif helvar == 7:
+    bookcat += 1
+  elif bookcat == 7:
     sleep(3)
     i01.mouth.speakBlocking("Cat the cat, who is that?  eep")
-    helvar += 1
-  elif helvar == 8:
+    bookcat += 1
+  elif bookcat == 8:
     sleep(3)
     i01.mouth.speakBlocking("I have no idea.  blarggie! blarggie")
-    helvar += 1
-  elif helvar == 9:
+    bookcat += 1
+  elif bookcat == 9:
     sleep(3)
     i01.mouth.speakBlocking("Maybe")
-    helvar += 1
-  elif helvar == 10:
+    bookcat += 1
+  elif bookcat == 10:
     sleep(3)
     i01.mouth.speakBlocking("Blarggie! Blarggie!  It's a new friend! Blarggie! Blarggie")
-    helvar += 1
-  elif helvar == 11:
+    bookcat += 1
+  elif bookcat == 11:
     sleep(3)
     i01.mouth.speakBlocking("The end")
-    helvar += 1
+    bookcat += 1
+  elif bookcat == 12:
+    sleep(3)
+    i01.mouth.speakBlocking("The end")
+    bookcat += 1
