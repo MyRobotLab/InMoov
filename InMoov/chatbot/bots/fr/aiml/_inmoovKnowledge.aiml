@@ -50,6 +50,19 @@
         </mrl>
       </oob></template>
 </category>
+    <!-- categorie -->
+    <category>
+        <pattern># QUEL EST <set>articles</set> _ <set>articles</set> _</pattern>
+        <template>
+          <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>getProperty( "<star index="4"/>" , "<star index="2"/>" , "QUEL EST <star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/> ","SAY ","SYSTEM_IDONTKNOW_TEACH_ME_WHATISIT" )</param>
+            </mrl>
+          </oob>
+        </template>
+      </category>
   <!-- end -->
   <!-- there is no wikidata awnsers we ask the user -->
 <category><pattern>SYSTEM_IDONTKNOW_TEACH_ME_WHATISIT</pattern>

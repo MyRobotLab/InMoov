@@ -57,3 +57,6 @@ else:
 def writeAIML():  
   chatBot.writeAIMLIF()
   
+# wikidata helper
+WikiFile="WIKIDATA_propEN.txt"
+if MyLanguage=="fr":WikiFile="WIKIDATA_propFR.txt"

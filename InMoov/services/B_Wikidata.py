@@ -90,3 +90,35 @@ def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la descript
       chatBot.setPredicate("default","particule","")
   else:
     chatBot.getResponse(ReturnNok)
+    
+def getProperty(query, what, question, ReturnOk, ReturnNok): # retourne la valeur contenue dans la propriete demandee (what)
+	#Light(1,0,0)
+	query = unicode(query,'utf-8')
+	what = unicode(what,'utf-8')
+	
+	if query[1]== "\'" :
+		query2 = query[2:len(query)]
+		query = query2
+	if what[1]== "\'" :
+		what2 = what[2:len(what)]
+		what = what2
+	
+	ID = "error"
+	# le fichier WIKIprop.txt contient les conversions propriete -> ID . wikidata n'utilise pas des mots mais des codes (monnaie -> P38)	f = codecs.open(unicode('os.getcwd().replace("develop", "").replace("\", "/") + "/proprietes_ID.txt','r',"utf-8") #
+	f = codecs.open(RuningFolder+"system/bdd/"+WikiFile,'r','utf-8') #os.getcwd().replace("develop", "").replace("\\", "/") set you propertiesID.txt path
+	
+	for line in f:
+    		line_textes=line.split(":")
+    		if line_textes[0]== what:
+	    		ID= line_textes[1]
+				
+	f.close()
+	#print "query = " + query + " - what = " + what + " - ID = " + ID
+	wikiAnswer= wdf.getData(query,ID) # recupere la valeur de la propriete si elle existe dans le document
+	
+	answer = ( what +" de " + query + " est " + wikiAnswer)
+	print ID,answer,what,query,wikiAnswer
+	if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") : # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
+		chatBot.getResponse(ReturnNok) # on balance au service apprentissage
+	else:
+		chatBot.getResponse(ReturnOk + answer)
