@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: June 04, 2017 -->
+  <!-- Last modified: Juillet 07, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -1728,6 +1728,13 @@
       <pattern>SHALL WE READ THE CAT BOOK</pattern>
       <template>Sure it's a good idea.
         <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>* THE CAT BOOK *</pattern>
+      <template>
+        <srai>SHALL WE READ THE CAT BOOK</srai>
+      </template>
     </category>
   
     <category>
