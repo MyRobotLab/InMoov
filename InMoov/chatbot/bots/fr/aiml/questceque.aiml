@@ -1362,7 +1362,7 @@
 <template><srai>CE QUI NE FAIT PAS <star/></srai></template>
 </category>
 <category><pattern>QU EST CE QUE C EST OPALE *</pattern>
-<template><srai>QUE VEUT DIRE <bot name="name"/><star/></srai></template>
+<template><srai>QUE VEUT DIRE <get name="botname"/><star/></srai></template>
 </category>
 <category><pattern>QU EST CE QUE C EST TA ROBE RESSEMBLE</pattern>
 <template>En réalité c'était juste une plaisanterie.</template>
@@ -4731,7 +4731,7 @@
       </random></template>
 </category>
 <category><pattern>QU EST CE QUE OPALE VEUT DIRE</pattern>
-<template><srai>QUE VEUT DIRE <bot name="name"/></srai></template>
+<template><srai>QUE VEUT DIRE <get name="botname"/></srai></template>
 </category>
 <category><pattern>QU EST CE QUE OPPOSÉ D ÉTERNITÉ</pattern>
 <template>un temps fini.</template>

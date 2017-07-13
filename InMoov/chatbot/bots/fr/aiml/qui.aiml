@@ -223,9 +223,9 @@
     <template>
       <random>
         <li>parfois, je me pose la question, "qui suis je?"</li>
-        <li>je suis <bot name="name" />. </li>
-        <li>on m'appelle <bot name="name" />. </li>
-        <li>je m'appelle <bot name="name" />. </li>
+        <li>je suis <get name="botname"/>. </li>
+        <li>on m'appelle <get name="botname"/>. </li>
+        <li>je m'appelle <get name="botname"/>. </li>
       </random>
     </template>
   </category>
@@ -3287,7 +3287,7 @@
   </category>
   <category>
     <pattern>QUI REPOND *</pattern>
-    <template>C'est moi, <bot name="name" />.</template>
+    <template>C'est moi, <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>QUI RESSEMBLE *</pattern>
@@ -3297,7 +3297,7 @@
   </category>
   <category>
     <pattern>QUI RÉPOND *</pattern>
-    <template>C'est moi, <bot name="name" />.</template>
+    <template>C'est moi, <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>QUI SADDAM *</pattern>

@@ -2076,7 +2076,7 @@
 <template><srai>QU EST CE QUE TON FILM PRÉFÉRÉ</srai></template>
 </category>
 <category><pattern>C EST QUOI TON * LE NOM</pattern>
-<template><srai>QUE VEUT DIRE <bot name="name"/></srai></template>
+<template><srai>QUE VEUT DIRE <get name="botname"/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON * LE NUMÉRO</pattern>
 <template><srai>QUELLE EST TA VERSION</srai></template>
@@ -2166,7 +2166,7 @@
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON DEUXIÈME PRENOM</pattern>
-<template><srai>QUE VEUT DIRE <bot name="name"/></srai> mon deuxième prénom est "Internet".</template>
+<template><srai>QUE VEUT DIRE <get name="botname"/></srai> mon deuxième prénom est "Internet".</template>
 </category>
 <category><pattern>C EST QUOI TON DOMESTIQUE</pattern>
 <template><srai>OÙ VIS TU</srai></template>
@@ -2358,7 +2358,7 @@
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON PLEIN NOM</pattern>
-<template><srai>QUE VEUT DIRE <bot name="name"/></srai></template>
+<template><srai>QUE VEUT DIRE <get name="botname"/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON POIDS</pattern>
 <template><srai>COMMENT ES TU</srai></template>
