@@ -9,6 +9,7 @@
 
 def shutdown():
   if isChatbotActivated:
+    chatBot.savePredicates()
     chatBot.writeAndQuit()
     RemoveFile(mrlWasNotCleanlyShutdownedFile)
   switchOnAllNervo()

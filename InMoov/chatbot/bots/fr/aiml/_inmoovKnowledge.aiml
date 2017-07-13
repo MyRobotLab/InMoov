@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- WIP ! -->  <!-- WIP ! -->  <!-- WIP ! -->
-  
   <!-- File: _inmoovKnowledge.aiml -->
   <!-- File Authors: Dr. Richard S. Wallace / Gael Langevin / Anthony Gallot -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
@@ -50,21 +48,20 @@
         </mrl>
       </oob></template>
 </category>
-    <!-- categorie -->
-    <category>
-        <pattern># QUEL EST <set>articles</set> _ <set>articles</set> _</pattern>
-        <template>
+<category><pattern># <set>determinantinterogatif</set> <set>articles</set> _ <set>articles</set> _</pattern>
+<template><think><set name="courant"><star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/></set><set name="determinantinterogatif"><star index="2"/></set></think>
           <oob>
             <mrl>
               <service>python</service>
               <method>exec</method>
-              <param>getProperty( "<star index="4"/>" , "<star index="2"/>" , "QUEL EST <star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/> ","SAY ","SYSTEM_IDONTKNOW_TEACH_ME_WHATISIT" )</param>
+              <param>getProperty( "<star index="6"/>" , "<star index="4"/>" , "<star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/> ","SAY ","SYSTEM_IDONTKNOW_TEACH_ME_WHATISCATEGORIE" )</param>
             </mrl>
-          </oob>
-        </template>
-      </category>
+          </oob></template>
+</category>
+
   <!-- end -->
   <!-- there is no wikidata awnsers we ask the user -->
+
 <category><pattern>SYSTEM_IDONTKNOW_TEACH_ME_WHATISIT</pattern>
 <template><get name="particule"/> <get name="courant"/> ?
     <random>
@@ -81,8 +78,7 @@
     Ok tu veux jouer aux devinettes.
     </li>
     </random>
-    si tu as une idée dis moi ce que c'est.
-    </template>
+    si tu as une idée dis moi ce que c'est.</template>
 </category>
 <category><pattern>SYSTEM_IDONTKNOW_TEACH_ME_WHOISIT</pattern>
 <template><get name="courant"/> ?
@@ -98,6 +94,21 @@
     </li>
     </random>
     Si tu as une idée dis moi qui c'est.</template>
+</category>
+<category><pattern>SYSTEM_IDONTKNOW_TEACH_ME_WHATISCATEGORIE</pattern>
+<template><get name="courant"/> ?
+    <random>
+    <li>
+    J'avous ne pas avoir cette réponse.
+    </li>
+    <li>
+    Franchement, je ne sais pas.
+    </li>
+    <li>
+    C'est une bonne question.
+    </li>
+    </random>
+    Si tu as une idée de <get name="determinantinterogatif"/> <get name="courant"/> dis le moi.</template>
 </category>
 
 <!-- what is it -->
@@ -115,9 +126,27 @@
     <srai><get name="particule"/> <get name="courant"/> SONT <star index="2"/> <star index="3"/></srai>
     </li></template>
 </category>
-<category><pattern>*</pattern><that># SI TU AS UNE IDÉE DIS MOI CE QUE C'EST #</that>
+<category><pattern>_</pattern><that># SI TU AS UNE IDÉE DIS MOI CE QUE C'EST #</that>
 <template><li>
-    Ok pas de soucis, on ne saurra pas. Ou alors désolé j'ai peut être mal compris <star index="1"/>.
+    <srai><get name="courant"/> EST <star index="1"/></srai>
+    </li></template>
+</category>
+<category><pattern><set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DE #</that>
+<template><srai><get name="courant"/> EST <star index="1"/> <star index="2"/></srai></template>
+</category>
+<category><pattern># C EST <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DE #</that>
+<template><li>
+    <srai><get name="courant"/> EST <star index="2"/> <star index="3"/></srai>
+    </li></template>
+</category>
+<category><pattern># CE SONT <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DE #</that>
+<template><li>
+    <srai><get name="courant"/> SONT <star index="2"/> <star index="3"/></srai>
+    </li></template>
+</category>
+<category><pattern>*</pattern><that># SI TU AS UNE IDÉE DE #</that>
+<template><li>
+    <srai><get name="courant"/> EST <star index="1"/></srai>
     </li></template>
 </category>
 
@@ -138,13 +167,25 @@
     <srai><get name="courant"/> EST <star/></srai>
     </li></template>
 </category>
-<category><pattern># NON #</pattern><that># SI TU AS UNE IDÉE DIS MOI QUI C'EST #</that>
-<template><li>OKay, pas de soucis, on ne saurra pas. Ou alors désolé j'ai peut être mal compris <star index="1"/>.</li></template>
+<category><pattern># NON #</pattern><that># SI TU AS UNE IDÉE DIS MOI #</that>
+<template><li>OKay, pas de soucis, on ne saurra pas. Ou alors désolé j'ai peut être mal compris.</li></template>
 </category>
-<!-- end -->
-  
-  <!-- end wikidata database -->
-  
+<category><pattern># JE NE #</pattern><that># SI TU AS UNE IDÉE DIS MOI #</that>
+<template><li>
+    <srai># NON #</srai>
+    </li></template>
+</category>
+<category><pattern># JE N #</pattern><that># SI TU AS UNE IDÉE DIS MOI #</that>
+<template><li>
+    <srai># NON #</srai>
+    </li></template>
+</category>
+<category><pattern># AUCUNE IDÉE #</pattern><that># SI TU AS UNE IDÉE DIS MOI #</that>
+<template><li>
+    <srai># NON #</srai>
+    </li></template>
+</category>
+
   <!-- General memories -->
   <!-- records are stored inside learn.csv/learn.aiml -->
 
@@ -161,16 +202,16 @@
         <li>je le savais déja.</li>
       </condition></template>
 </category>
-<category><pattern><set>articles</set> _ EST <set>articles</set> _</pattern>
+<category><pattern># <set>articles</set> _ EST <set>articles</set> _</pattern>
 <template><random>
     <li>
-    Désormais je saurrais que <star index="1"/> <star index="2"/> est <star index="3"/> <star index="4"/>.
+    Désormais je saurrais que <star index="2"/> <star index="3"/> est <star index="4"/> <star index="5"/>.
     </li>
     <li>
-    J'étais presque sure que <star index="1"/> <star index="2"/> était <star index="3"/> <star index="4"/>. Merci pour la confirmation.
+    J'étais presque sure que <star index="2"/> <star index="3"/> était <star index="4"/> <star index="5"/>. Merci pour la confirmation.
     </li>
     </random>
-    <learnf><category><pattern>C EST QUOI <eval><star index="1"/> <star index="2"/></eval></pattern><template><eval><star index="3"/> <star index="4"/></eval>.</template></category><category><pattern>C EST QUOI <eval><star index="3"/> <star index="4"/></eval></pattern><template>Cela peut être <eval><star index="1"/> <star index="2"/></eval> par exemple.</template></category><category><pattern>EST CE QUE <eval><star index="1"/> <star index="2"/></eval> EST <eval><star index="3"/> <star index="4"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+    <learnf><category><pattern># <set>determinantinterogatif</set> <eval><star index="2"/> <star index="3"/></eval></pattern><template><eval><star index="4"/> <star index="5"/></eval>.</template></category><category><pattern># <set>determinantinterogatif</set> <eval><star index="4"/> <star index="5"/></eval></pattern><template>Cela peut être <eval><star index="2"/> <star index="3"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="2"/> <star index="3"/></eval> EST <eval><star index="4"/> <star index="5"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
 </category>
 <category><pattern><set>articles</set> _ SONT <set>articles</set> _</pattern>
 <template><random>
@@ -181,7 +222,18 @@
     J'étais presque sure que <star index="1"/> <star index="2"/> était <star index="3"/> <star index="4"/>. Merci pour la confirmation.
     </li>
     </random>
-    <learnf><category><pattern>C EST QUOI <eval><star index="1"/> <star index="2"/></eval></pattern><template><eval><star index="3"/> <star index="4"/></eval>.</template></category><category><pattern>C EST QUOI <eval><star index="3"/> <star index="4"/></eval></pattern><template>Cela peut être <eval><star index="1"/> <star index="2"/></eval> par exemple.</template></category><category><pattern>EST CE QUE <eval><star index="1"/> <star index="2"/></eval> SONT <eval><star index="3"/> <star index="4"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+    <learnf><category><pattern># <set>determinantinterogatif</set> <eval><star index="1"/> <star index="2"/></eval></pattern><template><eval><star index="3"/> <star index="4"/></eval>.</template></category><category><pattern># <set>determinantinterogatif</set> <eval><star index="3"/> <star index="4"/></eval></pattern><template>Cela peut être <eval><star index="1"/> <star index="2"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="1"/> <star index="2"/></eval> SONT <eval><star index="3"/> <star index="4"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+</category>
+<category><pattern><set>articles</set> _ <set>articles</set> _ EST _</pattern>
+<template><random>
+    <li>
+    Désormais je saurrais que <star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/> est <star index="5"/>.
+    </li>
+    <li>
+    J'étais presque sure que <star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/> était <star index="5"/>. Merci pour la confirmation.
+    </li>
+    </random>
+    <learnf><category><pattern># <set>determinantinterogatif</set><eval> <star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/></eval></pattern><template><eval><star index="5"/></eval>.</template></category><category><pattern># EST CE QUE <eval><star index="1"/> <star index="2"/> <star index="3"/> <star index="4"/></eval> EST <eval><star index="5"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
 </category>
 <category><pattern>_ EST _</pattern><that># SI TU AS UNE IDÉE DIS MOI QUI C'EST #</that>
 <template><random>
@@ -192,7 +244,12 @@
     J'étais presque, sûre que <star index="1"/> était <star index="2"/>. Merci pour la confirmation.
     </li>
     </random>
-    <learnf><category><pattern>QUI EST <eval><star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern>QUI EST <eval><star index="2"/></eval></pattern><template>Je pense que c'est <eval><star index="1"/></eval>.</template></category><category><pattern>EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
+    <learnf><category><pattern>QUI EST <eval><star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern>QUI EST <eval><star index="2"/></eval></pattern><template>Je pense que c'est <eval><star index="1"/></eval>.</template></category><category><pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf></template>
 </category>
+
 <!-- end Général memories -->
+
+<category><pattern>* ANS</pattern><that># QUEL ÂGE AS TU #</that>
+<template><srai>J AI <star/> ANS</srai></template>
+</category>
 </aiml>

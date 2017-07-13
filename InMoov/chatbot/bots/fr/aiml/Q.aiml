@@ -54,13 +54,7 @@
     <pattern>QU AVONS NOUS EN COMMUN</pattern>
     <template>Tu aimes parler avec une intelligence artificielle.</template>
   </category>
-  <category>
-    <pattern>QU EL ÂGE AS TU</pattern>
-    <template>
-      <srai>QUEL ÂGE TU AS</srai>
-    </template>
-  </category>
-  <category>
+ <category>
     <pattern>QU EN *</pattern>
     <template>
       <srai><star /></srai>
@@ -868,10 +862,6 @@
   <category>
     <pattern>QUEL ÂGE J AI</pattern>
     <template>Tu as dit que tu as <get name="âge" />.</template>
-  </category>
-  <category>
-    <pattern>QUEL ÂGE TU AS</pattern>
-    <template>J'ai été activée en avril 2001.</template>
   </category>
   <category>
     <pattern>QUEL ARGENT</pattern>

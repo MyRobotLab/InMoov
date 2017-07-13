@@ -89,16 +89,16 @@
     <pattern>POSERQUESTIONPERSO</pattern>
     <template>
       <condition>
-        <li name="gender" value="inconnu">
+        <li name="gender" value="unknown">
           <srai>cherchergenre</srai>
         </li>
-        <li name="âge" value="inconnu">Quel ÂGE as tu? </li>
-        <li name="eyecolor" value="inconnu">De quelle couleur sont tes yeux? </li>
-        <li name="haircolor" value="inconnu">De quelle couleur sont tes cheveux? </li>
-        <li name="job" value="inconnu">Quelle est ton occupation? </li>
-        <li name="location" value="inconnu">D'où es tu? </li>
-        <li name="joblocation" value="inconnu">Où travailles tu? </li>
-        <li name="sign" value="inconnu">Quel est ton signe? </li>
+        <li name="âge" value="unknown">Quel ÂGE as tu? </li>
+        <li name="eyecolor" value="unknown">De quelle couleur sont tes yeux? </li>
+        <li name="haircolor" value="unknown">De quelle couleur sont tes cheveux? </li>
+        <li name="job" value="unknown">Quelle est ton occupation? </li>
+        <li name="location" value="unknown">D'où es tu? </li>
+        <li name="joblocation" value="unknown">Où travailles tu? </li>
+        <li name="sign" value="unknown">Quel est ton signe? </li>
         <li>
           <srai>poserrandomquestion</srai>
         </li>
@@ -109,15 +109,15 @@
     <pattern>POSERQUESTIONFAVORI</pattern>
     <template>
       <condition>
-        <li name="favmovie" value="inconnu">Quel est ton film favori? </li>
-        <li name="favbook" value="inconnu">Quel est ton livre préféré? </li>
-        <li name="hobby" value="inconnu">Quel est ton loisir préféré? </li>
-        <li name="favmusic" value="inconnu">Quelle est ta musique préférée? </li>
-        <li name="favband" value="inconnu">Quel est ton groupe de musiciens préféré? </li>
-        <li name="favsingle" value="inconnu">Quel est le morceau de <get name="favband" />, que tu préfères? </li>
-        <li name="favtvshow" value="inconnu">Quelle est ton émission de télé préférée? </li>
-        <li name="favoritefood" value="inconnu">Qu'aimes tu manger? </li>
-        <li name="favcolor" value="inconnu">Quel est ta couleur préférée? </li>
+        <li name="favmovie" value="unknown">Quel est ton film favori? </li>
+        <li name="favbook" value="unknown">Quel est ton livre préféré? </li>
+        <li name="hobby" value="unknown">Quel est ton loisir préféré? </li>
+        <li name="favmusic" value="unknown">Quelle est ta musique préférée? </li>
+        <li name="favband" value="unknown">Quel est ton groupe de musiciens préféré? </li>
+        <li name="favsingle" value="unknown">Quel est le morceau de <get name="favband" />, que tu préfères? </li>
+        <li name="favtvshow" value="unknown">Quelle est ton émission de télé préférée? </li>
+        <li name="favoritefood" value="unknown">Qu'aimes tu manger? </li>
+        <li name="favcolor" value="unknown">Quel est ta couleur préférée? </li>
         <li>
           <srai>poserrandomquestion</srai>
         </li>
