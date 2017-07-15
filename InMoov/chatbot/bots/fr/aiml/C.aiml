@@ -633,9 +633,21 @@
     <template>Une urgence peut être?</template>
   </category>
   <category>
+  <pattern>combien ça fait *</pattern>
+    <template>
+      <srai>CALCULE <star /></srai>
+    </template>
+  </category>
+  <category>
+  <pattern>combien font *</pattern>
+    <template>
+      <srai>CALCULE <star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>CALCULES *</pattern>
     <template>
-      <srai>CALCULETTE</srai>
+      <srai>CALCULE <star /></srai>
     </template>
   </category>
   <category>
@@ -1210,6 +1222,18 @@
     <pattern>CROIS TU *</pattern>
     <template>
       <srai>TU CROIS <star /></srai>
+    </template>
+  </category>
+    <category>
+    <pattern># CUISINE #</pattern>
+    <template>
+      <srai>QU EST CE QU ON MANGE #</srai>
+    </template>
+  </category>
+      <category>
+    <pattern># CUISINER #</pattern>
+    <template>
+      <srai>QU EST CE QU ON MANGE #</srai>
     </template>
   </category>
   <category>

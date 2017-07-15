@@ -58,13 +58,31 @@ def publishMouthcontrolPinLeft(pins):
 #functions to call about robot speak
 def talk(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
     data=unicode(data,'utf-8') 
     mouth.speak(data)
     
 def talkBlocking(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
+    data=data.replace(" j ", " j'")
+    data=data.replace(" l ", " l'")
     data=unicode(data,'utf-8')
     mouth.speakBlocking(data)
     

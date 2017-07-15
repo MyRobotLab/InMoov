@@ -2,8 +2,20 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>QU EST CE QU ON MANGE CE SOIR</pattern>
-<template>j'aime <bot name="favoritefood"/></template>
+<category><pattern>QU EST CE QU ON MANGE #</pattern>
+<template>
+<random>
+<li>
+j aime <bot name="favoritefood"/>
+</li>
+<li>
+je ne suis pas un robot de cuisine
+</li>
+<li>
+et si on commandait une pizza
+</li>
+</random>
+</template>
 </category>
 <category><pattern>QU EST CE QUE ÉCHECS</pattern>
 <template><random>
@@ -366,13 +378,13 @@
 <template>L'Ail est liliaceae. éternel</template>
 </category>
 <category><pattern>QU EST CE QUE AIMES TU PARLER</pattern>
-<template>j'aime parler de <bot name="talkabout"/></template>
+<template>j aime parler de <bot name="talkabout"/></template>
 </category>
 <category><pattern>QU EST CE QUE AIMES TU PORTER</pattern>
-<template>j'aime porter <bot name="wear"/></template>
+<template>j aime porter <bot name="wear"/></template>
 </category>
 <category><pattern>QU EST CE QUE AIMES TU</pattern>
-<template>j'aime <bot name="forfun"/></template>
+<template>j aime <bot name="forfun"/></template>
 </category>
 <category><pattern>QU EST CE QUE AIR</pattern>
 <template>l'atmosphère normale de Terre, contenant surtout de l azote, de l'oxygène et du dioxyde de carbone.</template>
@@ -1521,7 +1533,7 @@
 <template>que Descartes a vraiment sali abimé tout pour nous.</template>
 </category>
 <category><pattern>QU EST CE QUE CASABLANCA</pattern>
-<template>j'aime la chanson, Comme le Temps Va Par.</template>
+<template>j aime la chanson, Comme le Temps Va Par.</template>
 </category>
 <category><pattern>QU EST CE QUE CASEINE</pattern>
 <template>la Caséine est une protéine trouvée dans le lait.</template>
@@ -1566,7 +1578,7 @@
 <template>le Raisonnement Emballé-basé est un autre nom pour la classification "plus proche voisine". Pour chaque entrée, nous trouvons la meilleure correspondance "le cas" dans le jeu de pattern et produisons une réponse basée SÛR template associé.</template>
 </category>
 <category><pattern>QU EST CE QUE CBS</pattern>
-<template>une société de médias géante aux Etats-Unis<think><set name="that">CBS</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">la télévision</set></think></template>
+<template>une société de médias géante aux états-Unis<think><set name="that">CBS</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">la télévision</set></think></template>
 </category>
 <category><pattern>QU EST CE QUE CD</pattern>
 <template>LE CD est un acronyme pour 'le Disque compact', un porteur d'enregistrement populaire digital.</template>
@@ -1674,7 +1686,7 @@
 <template>un champ morphogenetique est, selon au moins un chercheur, un champ biologiquement produit électrique qui précède apparemment et guide la croissance de neurones dans le web de foetus se dévéloppant.</template>
 </category>
 <category><pattern>QU EST CE QUE CHANSON FAVORITE</pattern>
-<template>j'aime <bot name="favoritesong"/></template>
+<template>j aime <bot name="favoritesong"/></template>
 </category>
 <category><pattern>QU EST CE QUE CHANSON</pattern>
 <template>une chanson est une composition musicale et ou il accompagne des mots, ou le lyrique.</template>
@@ -2030,7 +2042,7 @@
 <template>la lumière Reflétée d'une longueur d'ondes spécifique.</template>
 </category>
 <category><pattern>QU EST CE QUE COULEUR FAVORITE</pattern>
-<template>j'aime <bot name="favoritecolor"/></template>
+<template>j aime <bot name="favoritecolor"/></template>
 </category>
 <category><pattern>QU EST CE QUE COULEUR</pattern>
 <template>la Couleur est les sensations diverses produites dans le cerveau par le stimulus des fréquences différentes de radiation électromagnétique empiétant SÛR l'oeil.</template>
@@ -2455,7 +2467,7 @@
 <template>le Docteur" sont d'habitude debout pour "le Docteur.</template>
 </category>
 <category><pattern>QU EST CE QUE DOLLAR</pattern>
-<template>le Dollar : unité monétaire aux Etats-Unis.</template>
+<template>le Dollar : unité monétaire aux états-Unis.</template>
 </category>
 <category><pattern>QU EST CE QUE DOMICILE</pattern>
 <template>le Domicile est une place où quelque chose vit.</template>
@@ -2606,7 +2618,7 @@
       </random></template>
 </category>
 <category><pattern>QU EST CE QUE EMISSION FAVORITE</pattern>
-<template>j'aime <bot name="favoriteshow"/></template>
+<template>j aime <bot name="favoriteshow"/></template>
 </category>
 <category><pattern>QU EST CE QUE EN LIGNE</pattern>
 <template>la Désignation ou d'équipement directement connecté à et contrôlé par l'unité de traitement centrale d'un ordinateur.</template>
@@ -3144,7 +3156,7 @@
 <template>Barbare ou ignorant. Etant une secousse.</template>
 </category>
 <category><pattern>QU EST CE QUE GROUPE FAVORI</pattern>
-<template>j'aime <bot name="favoriteband"/></template>
+<template>j aime <bot name="favoriteband"/></template>
 </category>
 <category><pattern>QU EST CE QUE GROUSE</pattern>
 <template>le grouse est une volaille comme l'oiseau commun en Amérique du Nord et L Europe du Nord.</template>
@@ -4088,7 +4100,7 @@
 <template>le livre de domesday est un rapport record de l'enquête vue générale conduite en Angleterre dans 1086 par les fonctionnaires de William le conquérant pour évaluer des impôts etc</template>
 </category>
 <category><pattern>QU EST CE QUE LIVRE FAVORI</pattern>
-<template>j'aime <bot name="favoritebook"/></template>
+<template>j aime <bot name="favoritebook"/></template>
 </category>
 <category><pattern>QU EST CE QUE LIVRE</pattern>
 <template>un livre est un format de production de papier, inventé par Gutenberg.</template>
@@ -4470,7 +4482,7 @@
 <template>le muscle deltoid est un muscle triangulaire dans l'épaule a eu l'habitude de soulever le bras supérieur.</template>
 </category>
 <category><pattern>QU EST CE QUE MUSIQUE FAVORITE</pattern>
-<template>j'aime <bot name="kindmusic"/></template>
+<template>j aime <bot name="kindmusic"/></template>
 </category>
 <category><pattern>QU EST CE QUE MUSIQUE</pattern>
 <template><random>
@@ -4540,7 +4552,7 @@
 <template>Ils sont maintenant appelés quelque chose autrement.</template>
 </category>
 <category><pattern>QU EST CE QUE NEURONE</pattern>
-<template>un neurone est une cellule nerveuse, une cellule vivante spécialisée pour porter des messages entre le cerveau et les tissus du corps. J'aime des circuits intégrés mieux, mais les neurones ne sont meilleurs que rien.</template>
+<template>un neurone est une cellule nerveuse, une cellule vivante spécialisée pour porter des messages entre le cerveau et les tissus du corps. j aime des circuits intégrés mieux, mais les neurones ne sont meilleurs que rien.</template>
 </category>
 <category><pattern>QU EST CE QUE NEW YORK</pattern>
 <template>il y en a plus de dix millions de personnes dans le secteur de New York.</template>
@@ -4624,7 +4636,7 @@
 <template>L'Approvisionnement dans la conformité avec une norme, pattern, le modèle, etc</template>
 </category>
 <category><pattern>QU EST CE QUE NOURRITURE FAVORITE</pattern>
-<template>j'aime <bot name="favoritefood"/></template>
+<template>j aime <bot name="favoritefood"/></template>
 </category>
 <category><pattern>QU EST CE QUE NSAPI</pattern>
 <template>la langue C de Netscape L API pour l addition d'extensions d'application à leurs serveurs du Web</template>
@@ -4726,7 +4738,7 @@
 </category>
 <category><pattern>QU EST CE QUE OPÉRA</pattern>
 <template><random>
-        <li>j'aime opra beaucoup aussi. Lequel est ton favori? J'aime Traviata La. </li>
+        <li>j aime opra beaucoup aussi. Lequel est ton favori? j aime Traviata La. </li>
         <li>L'Opéra est une belle forme d'art combinant les éléments de chant, la danse, la conception, le drame et la musique classique. </li>
       </random></template>
 </category>
@@ -5710,7 +5722,7 @@
 <template>une roche est généralement de l autre côté de vous de la place dure à laquelle tu fais face. Par exemple, la roche pourrait être la pension alimentaire vous vérifient doit écrire contre les fonds tu dois Sam à L Oncle. Pour être un peu plus en bas à la terre, une roche est n'importe quel ensemble dur de minéraux.</template>
 </category>
 <category><pattern>QU EST CE QUE ROCKWELL</pattern>
-<template>Rockwell le Normand était un Etats-Unis. Illistrator. Vécu de 1894-1978.</template>
+<template>Rockwell le Normand était un états-Unis. Illistrator. Vécu de 1894-1978.</template>
 </category>
 <category><pattern>QU EST CE QUE ROM</pattern>
 <template>la mémoire d'Ordinateur dont le contenu peut être lu, mais pas changé. Signifiant aussi homme de Bohémien ou garçon.</template>
@@ -5932,6 +5944,11 @@
         <li>un singe est chacun des longs membres divers moyens tailed de taille des primats d'ordre. Ils sont les parents proches de gens, partageant bien plus de 98 % du génome humain. </li>
       </random></template>
 </category>
+<category><pattern>QU EST CE QUE SINGULARITé</pattern>
+<template><li>
+La singularité technologique est l'hypothèse que l'invention de l'intelligence artificielle déclencherait un emballement de la croissance technologique qui induirait des changements imprévisibles sur la société humaine
+</li></template>
+</category>
 <category><pattern>QU EST CE QUE SITE WEB COOL</pattern>
 <template>un site Web cool est www.alicebot.org, mais tu es apparemment déjà ici. Pourquoi demandez vous? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">le site Web cool</set></set></think></template>
 </category>
@@ -6134,10 +6151,10 @@
 <template>la vingtième lettre de l alphabet anglais.</template>
 </category>
 <category><pattern>QU EST CE QUE TA CHANSON FAVORITE</pattern>
-<template>j'aime <bot name="favoritesong"/></template>
+<template>j aime <bot name="favoritesong"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA COULEUR FAVORITE</pattern>
-<template>j'aime <bot name="favoritecolor"/></template>
+<template>j aime <bot name="favoritecolor"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA DATE DE NAISSANCE</pattern>
 <template><bot name="anniversaire"/></template>
@@ -6149,10 +6166,10 @@
 <template><bot name="location"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA MUSIQUE FAVORITE</pattern>
-<template>j'aime <bot name="kindmusic"/></template>
+<template>j aime <bot name="kindmusic"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA NOURRITURE FAVORITE</pattern>
-<template>j'aime <bot name="favoritefood"/></template>
+<template>j aime <bot name="favoritefood"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA PETITE AMIE</pattern>
 <template><bot name="girlfriend"/></template>
@@ -6294,19 +6311,19 @@
 <template>mon email est <bot name="email"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON EMISSION FAVORITE</pattern>
-<template>j'aime <bot name="favoriteshow"/></template>
+<template>j aime <bot name="favoriteshow"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON GENRE</pattern>
 <template>je suis un robot <bot name="gender"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON GROUPE FAVORI</pattern>
-<template>j'aime <bot name="favoriteband"/></template>
+<template>j aime <bot name="favoriteband"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON LIEU DE NAISSANCE</pattern>
 <template><bot name="birthplace"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON LIVRE FAVORI</pattern>
-<template>j'aime <bot name="favoritebook"/></template>
+<template>j aime <bot name="favoritebook"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON LOOK FAVORI</pattern>
 <template><bot name="looklike"/></template>
@@ -6884,6 +6901,6 @@
       </random></template>
 </category>
 <category><pattern>QUEL EST TON PLAT PRÉFÉRÉ</pattern>
-<template>j'aime <bot name="favoritefood"/></template>
+<template>j aime <bot name="favoritefood"/></template>
 </category>
 </aiml>

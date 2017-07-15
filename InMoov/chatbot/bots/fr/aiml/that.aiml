@@ -686,23 +686,6 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU aimes tu CONNAITRE</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Je ne peut pas vous donner cette information.</template>
-  </category>
-  <category>
-    <pattern>*</pattern>
     <that>QU aimes tu CONNAÎTRE</that>
     <template>
       <think>
@@ -1538,7 +1521,7 @@
     <pattern>AUCUN *</pattern>
     <that>PAR LA VOIE TU N OBJECTE SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -1569,7 +1552,7 @@
     <pattern>BIEN *</pattern>
     <that>PAR LA VOIE TU OBJECTE SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -1634,7 +1617,7 @@
   </category>
   <category>
     <pattern>BIEN</pattern>
-    <that>QUI LAISSE LES ETATS UNIS CHANGER LE SUJET</that>
+    <that>QUI LAISSE LES états UNIS CHANGER LE SUJET</that>
     <template>Ce qui tu aimes parler de?</template>
   </category>
   <category>
@@ -2628,7 +2611,7 @@
   </category>
   <category>
     <pattern>QUE</pattern>
-    <that>QUI LAISSE BIEN DES ETATS UNIS LE FAIRE</that>
+    <that>QUI LAISSE BIEN DES états UNIS LE FAIRE</that>
     <template>je ne sait pas, je fais juste la conversation.</template>
   </category>
   <category>
@@ -3155,7 +3138,7 @@
     <pattern>VA *</pattern>
     <that>PAR LA VOIE VOUS OBJECTEZ SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
