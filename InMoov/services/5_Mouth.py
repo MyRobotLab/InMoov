@@ -72,6 +72,7 @@ def talk(data):
     
 def talkBlocking(data):
   if data:
+    data=unicode(data,'utf-8')
     if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
     if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
     if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
@@ -83,7 +84,6 @@ def talkBlocking(data):
     data=data.lower().replace("it s", "it's")
     data=data.replace(" j ", " j'")
     data=data.replace(" l ", " l'")
-    data=unicode(data,'utf-8')
     mouth.speakBlocking(data)
     
 def talkEvent(data):
