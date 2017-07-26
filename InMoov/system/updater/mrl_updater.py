@@ -4,8 +4,13 @@ now = datetime.now()
 if str(now.year)!=str(runtime.getVersion()[:4]):
   print
 
-  actualVersion=int(runtime.getVersion()[-4:])
-
+  try:
+    print int(runtime.getVersion())
+    actualVersion=int(runtime.getVersion()[-4:])
+  except:
+    actualVersion=0
+    pass
+ 
   currentMrlVersion=0
   iniFile=RuningFolder+'system/updater/currentMrlVersion.ini'
 
@@ -24,7 +29,7 @@ if str(now.year)!=str(runtime.getVersion()[:4]):
   #check if myrobotlab.jar version has changed
   #if yes we install mrl again
 
-  if actualVersion!=currentMrlVersion:
+  if actualVersion!=currentMrlVersion and actualVersion!=0:
     try:
       SwingGui=Runtime.createAndStart("SwingGui", "SwingGui")
     except:
