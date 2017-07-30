@@ -2,10 +2,8 @@
 #check if we are not using eclipse build
 now = datetime.now()
 if str(now.year)!=str(runtime.getVersion()[:4]):
-  print
 
   try:
-    print int(runtime.getVersion())
     actualVersion=int(runtime.getVersion()[-4:])
   except:
     actualVersion=0

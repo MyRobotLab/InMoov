@@ -54,7 +54,7 @@ except:
 # ##############################################################################
 
 if isEyeLidsActivated:
-  if LeftPortIsConnected or RighPortIsConnected:
+  if LeftPortIsConnected or RightPortIsConnected:
     talkEvent(lang_startingEyeLids)
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
         
