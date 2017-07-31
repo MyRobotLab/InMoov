@@ -1,16 +1,6 @@
 def shakehand():
   rest()
-  rightArm.omoplate.forceElectrize(10)
-  leftArm.omoplate.forceElectrize(10)
-  rightArm.shoulder.forceElectrize(10)
-  leftArm.shoulder.forceElectrize(10)
-  rightArm.rotate.forceElectrize(10)
-  leftArm.rotate.forceElectrize(10)
-  rightHand.thumb.forceElectrize(10)
-  rightHand.index.forceElectrize(10)
-  rightHand.majeure.forceElectrize(10)
-  rightHand.ringFinger.forceElectrize(10)
-  rightHand.pinky.forceElectrize(10)
+  i01.startedGesture()
   ##move arm and hand
   i01.setHandSpeed("left", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
   i01.setHandSpeed("right", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
@@ -210,3 +200,4 @@ def shakehand():
     i01.moveTorso(101,100,90)
     sleep(1)
     relax()
+  i01.finishedGesture()

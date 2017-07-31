@@ -41,14 +41,14 @@ def publishMouthcontrolPinLeft(pins):
   global AudioInputRawValue
 
   for pin in range(0, len(pins)):
-    
+    #print pins[pin].value
     #mouth control listener
     if isHeadActivated:
       if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
         
       if AudioSignalProcessing:
         if pins[pin].value>minAudioValue:
-          head.jaw.setVelocity(random.uniform(80,120))
+          head.jaw.setVelocity(random.uniform(200,400))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
           
@@ -104,7 +104,7 @@ def onEndSpeaking(text):
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
-      head.jaw.setVelocity(30)
+      head.jaw.setVelocity(100)
       head.jaw.moveTo(0)
       #head.jaw.setVelocity(200)
       #head.jaw.moveTo(0)

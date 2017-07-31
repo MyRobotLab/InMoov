@@ -97,7 +97,6 @@ def humanDetected():
   
 def SleepTimerRoutine(timedata):
   global pirTimerStarted
-  print "started"    
   if pirTimerStarted and not i01.RobotIsSleeping:
     PlayNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)

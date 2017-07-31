@@ -27,6 +27,8 @@ except:
     ThisServicePartConfig.write(f)
   ThisServicePartConfig.read(ThisServicePart+'.config')
   pass
+ArefLeftArduino=ThisServicePartConfig.get('MAIN', 'ArefLeftArduino')
+ArefRightArduino=ThisServicePartConfig.get('MAIN', 'ArefRightArduino')
   
   
 #function to check arduino & mrlcomm

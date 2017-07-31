@@ -9,6 +9,10 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
   
 [**CHANGELOG**]  
 
+0.4.3  
+- fix autodisable issues  
+0.4.2  
+- arduino aref  
 0.4.1  
 - fix head autodetach  
 0.4.0  
