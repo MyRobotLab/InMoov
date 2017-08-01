@@ -29,6 +29,7 @@ if exist %cd%\mrlNeedReinstall RMDIR /S /Q tessdata
 if exist %cd%\mrlNeedReinstall del ivychain.xml
 if exist %cd%\mrlNeedReinstall del myrobotlab.log
 if exist %cd%\mrlNeedReinstall del repo.json
+if exist %cd%\mrlNeedReinstall del %cd%\.myrobotlab\serviceData.json
 if exist %cd%\mrlNeedReinstall del mrlNeedReinstall
 COLOR 2F
 cls
