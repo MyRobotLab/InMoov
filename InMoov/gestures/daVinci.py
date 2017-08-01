@@ -10,5 +10,6 @@ def daVinci():
   i01.moveArm("right",0,118,29,74)
   i01.moveHand("left",50,40,30,20,10,47)
   i01.moveHand("right",50,40,30,20,10,137)
+  sleep(5)
   i01.finishedGesture()
 
