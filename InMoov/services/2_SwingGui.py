@@ -35,16 +35,6 @@ if LaunchSwingGui:
     
   SwingGui=Runtime.start("SwingGui", "SwingGui")
   #SwingGui.dockTab("python")
-  SwingGui.closeTimeout=2
-  sleep(1)
   print "MRL version : ",runtime.getVersion()[-4:]
   print "Inmoov version : ",version
   print "Starting..."
-  
-python.subscribe(runtime.getName(),"publishShutdown")
-
-def onShutdown(data):
-  try:
-    shutdown()
-  except: 
-    pass

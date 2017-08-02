@@ -9,6 +9,8 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
   
 [**CHANGELOG**]  
 
+0.4.4  
+- fix shutdown  
 0.4.3  
 - fix autodisable issues  
 0.4.2  
