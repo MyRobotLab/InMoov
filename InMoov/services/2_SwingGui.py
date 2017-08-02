@@ -35,7 +35,7 @@ if LaunchSwingGui:
     
   SwingGui=Runtime.start("SwingGui", "SwingGui")
   #SwingGui.dockTab("python")
-  SwingGui.closeTimeout=8
+  SwingGui.closeTimeout=2
   sleep(1)
   print "MRL version : ",runtime.getVersion()[-4:]
   print "Inmoov version : ",version

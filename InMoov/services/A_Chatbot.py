@@ -41,7 +41,6 @@ chatBot=Runtime.start("chatBot", "ProgramAB")
 if isChatbotActivated:
   chatBot.repetition_count(10)
   chatBot.setPath(RuningFolder+"chatbot/")
-  talkEvent(lang_chatbotLoading)
   chatBot.startSession("default",MyLanguage)
   talkEvent(lang_chatbotActivated)
   chatBot.addTextListener(htmlFilter)
