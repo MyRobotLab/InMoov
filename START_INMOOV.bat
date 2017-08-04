@@ -40,7 +40,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 3 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator MicrosoftLocalTTS
 COLOR 0F
 cls
 echo ------------------------------------------------------
