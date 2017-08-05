@@ -28,6 +28,7 @@ if [ ./mrlNeedReinstall ]; then
 	rm myrobotlab.log
 	rm repo.json
 	rm mrlNeedReinstall
+    rm .myrobotlab/serviceData.json
 fi
 java -jar myrobotlab.jar -install
 echo "Done"
