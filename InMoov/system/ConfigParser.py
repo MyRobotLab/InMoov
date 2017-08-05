@@ -31,6 +31,14 @@ except:
   BasicConfig.set('TTS', 'VoiceRssApi', 'xxx')
   configNeedUpdate=1
   pass
+  
+try:
+  IndianTtsApi = BasicConfig.get('TTS', 'IndianTtsApi')
+except:
+  BasicConfig.set('TTS', 'IndianTtsApi', '')
+  BasicConfig.set('TTS', 'IndianTtsUserId', '')
+  configNeedUpdate=1
+  pass
 
   
 if configNeedUpdate:
@@ -47,6 +55,8 @@ VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
 MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
 awsaccesskeyid=BasicConfig.get('TTS', 'awsaccesskeyid')
 awssecretkey=BasicConfig.get('TTS', 'awssecretkey')
+IndianTtsApi=BasicConfig.get('TTS', 'IndianTtsApi')
+IndianTtsUserId=BasicConfig.get('TTS', 'IndianTtsUserId')
 if MyvoiceType[0]=="[":
   MyvoiceType=MyvoiceType.split(']', 1 )[1]
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')

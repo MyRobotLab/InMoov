@@ -17,7 +17,6 @@ echo "------------------------------------------------------"
 sleep 1
 mv ./myrobotlab-*.jar ./myrobotlab.jar
 if [ ./mrlNeedReinstall ]; then
-	rm -r .myrobotlab
 	rm -r haarcascades
 	rm -r hogcascades
 	rm -r lbpcascades
