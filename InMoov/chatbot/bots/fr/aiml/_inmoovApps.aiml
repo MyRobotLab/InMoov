@@ -18,7 +18,7 @@
 	<think><set name="topic">playwordsgame</set></think>
 	<random>
 		<li>
-		Chouette ! J'aime apprendre avec toi. Quel mot veux-tu apprendre ?
+		Chouette ! j aime apprendre avec toi. Quel mot veux-tu apprendre ?
 		</li>  
 		<li>
 		Je connais plein de mots tu sais ? Va zi , essayes !
@@ -59,19 +59,26 @@
 <!-- end kids game -->  
 
 <!-- rockpaperscissors game -->   
+ 	<category>
+    <pattern># PIERRE FEUILLE CISEAU #</pattern>
+    <template>
+	<srai># chifoumi #</srai>
+    </template>
+	</category>
+ 
  
   <category>
-  <pattern>PIERRE FEUILLE CISEAU</pattern>
+  <pattern># chifoumi #</pattern>
   <template>
 	<think><set name="topic">rockpaperscissors</set></think>
   <think><set name="rockpaperscissorsHumanPoints">0</set></think>
   <think><set name="rockpaperscissorsRobotPoints">0</set></think>
 	<random>
 		<li>
-		Jouont à PIERRE FEUILLE CISEAU !
+		Jouont à chifoumi !
 		</li>  
 		<li>
-		J'aime ce jeu !
+		j aime ce jeu !
 		</li>  
 	</random>
 	<li>
@@ -146,7 +153,14 @@
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
     </category> 
-
+    
+ 	<category>
+    <pattern>CISEAUX</pattern>
+    <template>
+	<srai>CISEAU</srai>
+    </template>
+	</category>
+ 
     <category>
       <pattern>CISEAU</pattern>
       <template>
@@ -223,7 +237,7 @@
     <template>
 	<think><set name="topic">default</set></think>
     <li>
-    A bientôt, j'aime jouer !
+    A bientôt, j aime jouer !
     </li>  
     </template>
 	</category>

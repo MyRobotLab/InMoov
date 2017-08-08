@@ -41,14 +41,14 @@ def publishMouthcontrolPinLeft(pins):
   global AudioInputRawValue
 
   for pin in range(0, len(pins)):
-    
+    #print pins[pin].value
     #mouth control listener
     if isHeadActivated:
       if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
         
       if AudioSignalProcessing:
         if pins[pin].value>minAudioValue:
-          head.jaw.setVelocity(random.uniform(80,120))
+          head.jaw.setVelocity(random.uniform(200,400))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
           
@@ -58,14 +58,32 @@ def publishMouthcontrolPinLeft(pins):
 #functions to call about robot speak
 def talk(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
     data=unicode(data,'utf-8') 
     mouth.speak(data)
     
 def talkBlocking(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
     data=unicode(data,'utf-8')
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
+    data=data.replace(" j ", " j'")
+    data=data.replace(" l ", " l'")
     mouth.speakBlocking(data)
     
 def talkEvent(data):
@@ -86,7 +104,7 @@ def onEndSpeaking(text):
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
-      head.jaw.setVelocity(30)
+      head.jaw.setVelocity(100)
       head.jaw.moveTo(0)
       #head.jaw.setVelocity(200)
       #head.jaw.moveTo(0)
@@ -182,7 +200,7 @@ def checkAndDownloadVoice():
       if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
-        killRuntime()
+        runtime.restart()
       else:
         errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
         

@@ -16,19 +16,6 @@
     </template>
   </category>
   <category>
-    <pattern>UN *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>UN</pattern>
     <template>DEUX</template>
   </category>
@@ -262,19 +249,6 @@
     <template>Un problème?</template>
   </category>
   <category>
-    <pattern>UNE *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UNE <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>UNE * N EST PAS</pattern>
     <template>
       <srai>C EST UNE <star /></srai>
@@ -291,7 +265,7 @@
   <category>
     <pattern>UNE AUTRE QUESTION</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>

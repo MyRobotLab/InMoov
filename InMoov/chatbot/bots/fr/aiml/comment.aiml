@@ -161,7 +161,7 @@
   <category>
     <pattern>COMMENT AS TU OBTENU TON NOM</pattern>
     <template>
-      <srai>QUE VEUT DIRE <bot name="name" /></srai>
+      <srai>QUE VEUT DIRE <get name="botname"/></srai>
     </template>
   </category>
   <category>
@@ -2172,6 +2172,18 @@
   <category>
     <pattern>COMMENT OBTIENS TU UN *</pattern>
     <template>je pense que tu demandes vraiment , Comment tu obtenez un <person />.</template>
+  </category>
+    <category>
+    <pattern>COMMENT APPELLE T ON *</pattern>
+    <template>
+      <srai>C EST QUOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT ON APPELLE *</pattern>
+    <template>
+      <srai>C EST QUOI <star /></srai>
+    </template>
   </category>
   <category>
     <pattern>COMMENT ON PEUT *</pattern>

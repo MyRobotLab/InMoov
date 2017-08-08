@@ -28,9 +28,10 @@ isChatbotActivated=ThisServicePartConfig.getboolean('MAIN', 'isChatbotActivated'
 Runtime.createAndStart("htmlFilter", "HtmlFilter")
 chatBot=Runtime.start("chatBot", "ProgramAB")
 if isChatbotActivated:
+  if chatBot.wasCleanyShutdowned:
+    if chatBot.wasCleanyShutdowned=="nok":errorSpokenFunc('lang_BadShutdown')
   chatBot.repetition_count(10)
   chatBot.setPath(RuningFolder+"chatbot/")
-  talkEvent(lang_chatbotLoading)
   chatBot.startSession("default",MyLanguage)
   talkEvent(lang_chatbotActivated)
   chatBot.addTextListener(htmlFilter)
@@ -38,6 +39,7 @@ if isChatbotActivated:
   chatBot.setPredicate("default","topic","default")
   chatBot.setPredicate("default","questionfirstinit","")
   chatBot.setPredicate("default","tmpname","")
+  chatBot.setPredicate("default","null","")
   chatBot.savePredicates()
 else:
   errorSpokenFunc('lang_ChatbotError')
@@ -45,3 +47,6 @@ else:
 def writeAIML():  
   chatBot.writeAIMLIF()
   
+# wikidata helper
+WikiFile="WIKIDATA_propEN.txt"
+if MyLanguage=="fr":WikiFile="WIKIDATA_propFR.txt"

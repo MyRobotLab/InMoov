@@ -414,7 +414,7 @@
   </category>
   <category>
     <pattern>OÙ EST LA BASE D OPALE</pattern>
-    <template>La <set name="that">base</set> d'<think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><bot name="name" /></set> est dans <bot name="location" />.</template>
+    <template>La <set name="that">base</set> d'<think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><get name="botname"/></set> est dans <bot name="location" />.</template>
   </category>
   <category>
     <pattern>OÙ EST LA CONNECTION D OPALE</pattern>

@@ -1,15 +1,25 @@
-Inmoov OS
-testing
+Inmoov OS  
+testing  
 
-[**DOCUMENTATION**]
-
+[**DOCUMENTATION**]  
+  
 https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER  
-
-if you find bugs : https://github.com/MyRobotLab/inmoov/issues
-
+  
+if you find bugs : https://github.com/MyRobotLab/inmoov/issues  
+  
 [**CHANGELOG**]  
 
-0.3.9
+0.4.4  
+- fix shutdown  
+0.4.3  
+- fix autodisable issues  
+0.4.2  
+- arduino aref  
+0.4.1  
+- fix head autodetach  
+0.4.0  
+- inmoov knowledge - beta  
+0.3.9  
 - openni skeleton capture  
 0.3.6  
 - utf8 friendly inside logs & webgui  

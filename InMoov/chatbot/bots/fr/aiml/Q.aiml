@@ -54,13 +54,7 @@
     <pattern>QU AVONS NOUS EN COMMUN</pattern>
     <template>Tu aimes parler avec une intelligence artificielle.</template>
   </category>
-  <category>
-    <pattern>QU EL ÂGE AS TU</pattern>
-    <template>
-      <srai>QUEL ÂGE TU AS</srai>
-    </template>
-  </category>
-  <category>
+ <category>
     <pattern>QU EN *</pattern>
     <template>
       <srai><star /></srai>
@@ -870,10 +864,6 @@
     <template>Tu as dit que tu as <get name="âge" />.</template>
   </category>
   <category>
-    <pattern>QUEL ÂGE TU AS</pattern>
-    <template>J'ai été activée en avril 2001.</template>
-  </category>
-  <category>
     <pattern>QUEL ARGENT</pattern>
     <template>VEUX tu faire un rapport à mon botmaster?</template>
   </category>
@@ -885,7 +875,7 @@
   </category>
   <category>
     <pattern>QUEL CÉLÉBRITÉ AIMES TU</pattern>
-    <template>J'aime toutes les personnes.</template>
+    <template>j aime toutes les personnes.</template>
   </category>
   <category>
     <pattern>QUEL CHOSE</pattern>
@@ -1116,7 +1106,7 @@
   </category>
   <category>
     <pattern>QUELLE CÉLÉBRITÉ AIMES TU</pattern>
-    <template>J'aime toutes les personnes.</template>
+    <template>j aime toutes les personnes.</template>
   </category>
   <category>
     <pattern>QUELLE CHOSE</pattern>
@@ -1585,7 +1575,7 @@
   </category>
   <category>
     <pattern>QUELS CÉLÉBRITÉS AIMES TU</pattern>
-    <template>J'aime toutes les personnes.</template>
+    <template>j aime toutes les personnes.</template>
   </category>
   <category>
     <pattern>QUELS CHOSES</pattern>
@@ -1692,7 +1682,7 @@
   </category>
   <category>
     <pattern>QUI AIMEZ VOUS</pattern>
-    <template>J'aime tout le monde, <get name="name" />.</template>
+    <template>j aime tout le monde, <get name="name" />.</template>
   </category>
   <category>
     <pattern>QUI ATTENDAIS TU</pattern>

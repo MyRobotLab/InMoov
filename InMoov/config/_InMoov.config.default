@@ -19,11 +19,12 @@ MyLanguage=en
 ; en,fr,es,de,nl,ru
 
 MyvoiceTTS=MarySpeech
-; you can use MarySpeech,Polly,VoiceRss 
+; you can use MarySpeech,Polly,VoiceRss,MicrosoftLocalTTS,MicrosoftSpeech,IndianTts
 
 MyvoiceType=cmu-bdl-hsmm
 ; Voices are automatic donwloaded
 ; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
+; MicrosoftLocalTTS : use local windows voices ( 0,1,2 etc ) print mount.getVoices()
 
 ; amazon polly :  https://github.com/MyRobotLab/inmoov/wiki/POLLY-TTS
 
@@ -33,6 +34,10 @@ AWSSecretKey=XXX/YYY
 ; voiceRss use language only cant change the voice
 VoiceRssApi=XXX
 
+; IndianTts
+IndianTtsApi=
+IndianTtsUserId=
+
 ;----------------------------------- END --------------------------------------------------
 
 
@@ -41,10 +46,6 @@ VoiceRssApi=XXX
 
 
 [VOCAL]
-
-EarEngine=WebkitSpeechRecognition
-;WebkitSpeechRecognition or Sphinx
-
 IsMute=False
 ;talk about starting actions
 

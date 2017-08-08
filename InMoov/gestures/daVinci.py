@@ -1,11 +1,5 @@
 def daVinci():
-  i01.disableRobotRandom(60)
-  rightArm.omoplate.forceElectrize(10)
-  leftArm.omoplate.forceElectrize(10)
-  rightArm.shoulder.forceElectrize(10)
-  leftArm.shoulder.forceElectrize(10)
-  rightArm.rotate.forceElectrize(10)
-  leftArm.rotate.forceElectrize(10)
+  i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 0.65)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 0.65)
   i01.setArmSpeed("left", 0.80, 0.80, 0.80, 0.80)
@@ -16,4 +10,6 @@ def daVinci():
   i01.moveArm("right",0,118,29,74)
   i01.moveHand("left",50,40,30,20,10,47)
   i01.moveHand("right",50,40,30,20,10,137)
+  sleep(5)
+  i01.finishedGesture()
 

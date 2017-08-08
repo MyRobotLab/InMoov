@@ -20,6 +20,8 @@ global coloring
 coloring=0
 global helvar
 helvar=0
+global iReadbookcat
+iReadbookcat=0
 
 #system values
 #used by mouthcontrol audio signal processing

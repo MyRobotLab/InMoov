@@ -1,0 +1,11 @@
+;----------------------------- EAR CONFIGURATION ----------------------------------------
+[MAIN]
+EarEngine=WebkitSpeechRecognition
+;WebkitSpeechRecognition or Sphinx
+setContinuous=0
+;setContinuous=0/1 0 is immediate processing
+setAutoListen=1
+;auto rearm microphone
+;----------------------------------- END --------------------------------------------------
+
+

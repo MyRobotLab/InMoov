@@ -62,12 +62,11 @@ def errorSpokenFunc(errorType,param="0"):
     
   if errorType=="lang_VinmooovNoWorky":  
     errorSpokenAlert=lang_VinmooovNoWorky
+
+  if errorType=="lang_BadShutdown":  
+    errorSpokenAlert=lang_BadShutdown    
     
-    
-    
-    
-  
-    
+   
   print errorSpokenAlert.decode('utf-8')
   subconsciousMouth.speakBlocking(unicode(errorSpokenAlert,'utf-8'))
   
