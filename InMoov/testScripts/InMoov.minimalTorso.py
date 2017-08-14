@@ -39,9 +39,9 @@ i01.startMouth()
 torso = Runtime.create("i01.torso","InMoovTorso")
 # tweaking default torso settings
 #Velocity
-torso.topStom.setMaxVelocity(-1)
-torso.midStom.setMaxVelocity(-1)
-#torso.lowStom.setMaxVelocity(-1)
+torso.topStom.setVelocity(-1)
+torso.midStom.setVelocity(-1)
+#torso.lowStom.setVelocity(-1)
 #Mapping
 torso.topStom.map(0,180,65,120)
 torso.midStom.map(0,180,70,110)
@@ -117,9 +117,9 @@ i01.startMouth()
 torso = Runtime.create("i01.torso","InMoovTorso")
 # tweaking default torso settings
 # Velocity
-torso.topStom.setMaxVelocity(-1)
-torso.midStom.setMaxVelocity(-1)
-#torso.lowStom.setMaxVelocity(-1)
+torso.topStom.setVelocity(-1)
+torso.midStom.setVelocity(-1)
+#torso.lowStom.setVelocity(-1)
 # Mapping
 torso.topStom.map(0,180,65,120)
 torso.midStom.map(0,180,70,110)

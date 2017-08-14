@@ -43,10 +43,10 @@ i01.startMouth()
 #leftArm = Runtime.create("i01.leftArm","InMoovArm")
 #tweak defaults LeftArm
 #Velocity
-#leftArm.bicep.setMaxVelocity(-1)
-#leftArm.rotate.setMaxVelocity(-1)
-#leftArm.shoulder.setMaxVelocity(-1)
-#leftArm.omoplate.setMaxVelocity(-1)
+#leftArm.bicep.setVelocity(-1)
+#leftArm.rotate.setVelocity(-1)
+#leftArm.shoulder.setVelocity(-1)
+#leftArm.omoplate.setVelocity(-1)
 #Mapping
 #leftArm.bicep.map(0,90,45,96)
 #leftArm.rotate.map(40,180,60,142)
@@ -61,10 +61,10 @@ i01.startMouth()
 rightArm = Runtime.create("i01.rightArm","InMoovArm")
 # tweak default RightArm
 #Velocity
-rightArm.bicep.setMaxVelocity(-1)
-rightArm.rotate.setMaxVelocity(-1)
-rightArm.shoulder.setMaxVelocity(-1)
-rightArm.omoplate.setMaxVelocity(-1)
+rightArm.bicep.setVelocity(-1)
+rightArm.rotate.setVelocity(-1)
+rightArm.shoulder.setVelocity(-1)
+rightArm.omoplate.setVelocity(-1)
 #Mapping
 rightArm.bicep.map(0,90,45,96)
 rightArm.rotate.map(40,180,75,130)

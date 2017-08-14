@@ -1,5 +1,6 @@
-#file : InMoov.minimalFingerStarter.py
-#MRL version above 1.0.2000
+#WORK IN PROGRESS#
+#file : InMoov.minimalFingerStarterSensor.py
+#MRL version above 1.0.2404
 # this script is provided as a basic guide
 # most parts can be run by uncommenting them
 # InMoov now can be started in modular pieces through the skeleton.config
@@ -42,13 +43,16 @@ rightHand = Runtime.create("i01.rightHand","InMoovHand")
 rightHand.index.setVelocity(-1)
 # Mapping
 rightHand.index.map(0,180,42,160)
+# servo invert
+rightHand.index.setInverted(False)
+
 # Rest position
 rightHand.index.setRest(0)
 ##############
 i01 = Runtime.start("i01","InMoov")
 ##############
 i01.startRightHand(rightPort)
-i01.rightHand.enableAutoDisable(False)
+i01.rightHand.enableAutoDisable(True)
 i01.rightHand.enableAutoEnable(True)
 ##############
 # Verbal commands
@@ -62,9 +66,8 @@ ear.addCommand("rest", "i01.rightHand.index", "rest")## Hardcoded gesture
 ear.addCommand("open your finger", "python", "fingeropen")
 ear.addCommand("close your finger", "python", "fingerclose")
 ear.addCommand("finger to the middle", "python", "fingermiddle")
+ear.addCommand("calibration", "python", "calibrate")
 ear.addCommand("capture gesture", ear.getName(), "captureGesture")
-ear.addCommand("manual", ear.getName(), "lockOutAllGrammarExcept", "voice control")
-ear.addCommand("voice control", ear.getName(), "clearLock")
 
 # Confirmations and Negations are not supported yet in WebkitSpeechRecognition
 # So commands will execute immediatley
@@ -73,23 +76,30 @@ ear.addNegations("no","wrong","nope","nah")
 
 ear.startListening()
 
+#arduino type
+right.setBoardMega()##setBoardUno setBoardMega setBoardMegaAdk
+# sensor pin ( analog pin range are 14-18 on uno, 54-70 on mega )
+rightHand.index.setAnalogSensorPin(54)
+
+i01.mouth.speakBlocking("I will calibrate my sensor")
+i01.rightHand.index.autoCalibrateSensor()
+i01.rightHand.index.enableSensorFeedback(50)## apply 50% torque to servo
+
 def fingeropen():
   i01.rightHand.index.setVelocity(20)## Low velocity
   i01.moveHand("right",0,0,0,0,0,0)## Thumb,index,majeure,ringfinger,pinky,wrist
   i01.mouth.speak("ok I open my finger")
-  sleep(10)## We give a delay before to disable the servo
-  i01.disable()## We disconnect the servo
 
 def fingerclose():
   i01.rightHand.index.setVelocity(50)## Medium velocity
   i01.moveHand("right",180,180,180,180,180,90)
   i01.mouth.speak("my finger is closed")
-  sleep(3)
-  i01.disable()
 
 def fingermiddle():
   i01.rightHand.index.setVelocity(-1)## Maximum velocity
   i01.moveHand("right",90,90,90,90,90,90)
   i01.mouth.speak("ok you have my attention")
-  sleep(3)
-  i01.disable()
+  
+def calibrate():
+  i01.mouth.speakBlocking("ok I will calibrate my sensor")
+  i01.rightHand.index.autoCalibrateSensor()
