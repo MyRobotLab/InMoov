@@ -37,4 +37,6 @@ if ScriptType=="RightSide":talkEvent(lang_startingRightOnly)
 if ScriptType=="Full":talkEvent(lang_startingFull)
 if ScriptType=="NoArduino":talkEvent(lang_startingNoArduino)
 
+i01.language=MyLanguage
+
 
