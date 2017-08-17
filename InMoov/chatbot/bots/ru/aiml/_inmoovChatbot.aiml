@@ -16,13 +16,15 @@
    <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
    <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
    <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
-  
+   <!-- Перевод и редактирование ПРОЦАК АНДРЕЙ 10 августа 2017 г. -->
+
     <!-- инициализация -->
     <!-- обновления -->
     <!-- погода -->
     <!-- жесты -->
-
-    <!-- command used by system -->
+    <!-- random -->
+	
+    <!-- Команда, используемая системой -->
     <category>
     <pattern>SAY *</pattern>
     <template>
@@ -40,7 +42,7 @@
       <think>
         <set name="topic">firstinit</set>    
       </think>
-		Привет, Это моя первая инициализация. Мне нужна информация , Я слушаю, скажи как меня зовут ? 
+		Привет. Это моя первая инициализация. Мне нужна информация. Я слушаю, скажи как меня зовут ? 
 	</template>
   </category>
 
@@ -64,7 +66,7 @@
       <pattern>#</pattern>
       <that># нужно узнать твоё имя #</that>                  
       <template>
-        <set name="questionfirstinit">твоё имя <star /> , скажите да или нет. </set>     
+        <set name="questionfirstinit">Твоё имя <star /> , скажите да или нет. </set>     
         <think>
           <set name="tmpname">
             <star />
@@ -95,7 +97,7 @@
       <template>
         <random>
 		<li>
-			Теперь я знаю тебя , <get name="tmpname" />. Я рад.                                
+			Теперь я знаю что тебя зовут , <get name="tmpname" />. Я рад.                                
 		</li>
         </random>
 		
@@ -156,7 +158,7 @@
     <pattern>SYSTEM_NEW_VERSION</pattern>                                                 
     <template>
        <think><set name="topic">updater</set></think>
-	 Оповещение, новая версия операционной системы ИН МООВ доступна, если вы хотите, я могу ее обновить, скажите «да» или «нет»
+	 Оповещение, новая версия операционной системы ИНМООВ доступна, если вы хотите, я могу ее обновить, скажите «да» или «нет»
 	 </template>
   </category>
   
@@ -281,12 +283,17 @@
     <template>
      <think><set name="meteo"> <star index="3"/></set></think>
                 <random>
+                <li>В этот прекрасный день<star index="2"/>, </li>
+                <li>Что касается погоды <star index="2"/>, </li>
+                <li>То, что я могу вам сказать, в связи с погодой в настоящее время<star index="2"/>, </li>
                 <li>Сегодня в <star index="2"/>, </li>                
                 <li>О погоде в <star index="2"/>, </li>         
                 </random>
                 <random>
-                <li>Там есть, </li>                                 
-                <li>Я могу сказать, что это так, </li>                         
+                <li>Там, </li>                                 
+                <li>Замечу, </li>
+				<li>Я уверен, что, </li>
+                <li>Если высунуть нос на улицу, то вы увидите, </li>		
                 </random>
                 
                 <condition>
@@ -365,19 +372,25 @@
                 <li name="meteo" value="962">Ураган</li>                             
                 </condition>
           
+		   
                <random>
-                <li>Если говорить о температуре, то... , </li>                                         
+			    <li>Что касается температуры по градуснику</li>
+				<li>Если вы хотите знать температуру по градуснику,</li>
+                <li>Если говорить о температуре, то... по градуснику , </li>  
+                <li>По некоторым данным от датчиков температуры, </li> 				
                 <li>Если взглянуть на мой термометр, ой, где же он - вот незадача?! </li>         
                 </random>
                  <random>
-                <li>По ртути можно определить, что </li>                                      
+                <li>можно определить, что </li>                                      
                 </random>
                 <li>
-                <star index="1"/> Степени.                                  
+                <star index="1"/> градусов.                                  
                 </li>
                  <random>
-                 <li>Так и есть!   </li>                                                            
-                 <li>Или нет. </li>                                               
+                 <li>Так и есть!   </li> 
+				 <li>точь-в-точь   </li> 
+                 <li>Сомнительно!Я имею право на ошибки тоже!   </li>  				 
+                 <li>Или нет, я имею право на ошибки тоже! </li>                                               
                  </random>
           
 	</template>
@@ -390,206 +403,42 @@
     <template>
       <li>
         <random>
+          <li>Здравствуйте, я долго спал.</li>        
+          <li>Наконец, вы меня разбудили что я могу сделать для вас.</li>          
+          <li>Привет. Я работаю.</li>    
+          <li>Привет, почему я проснулся?</li>        
+          <li>Инмоов к вашим услугам!</li>          
+          <li>Привет, что я могу для вас сделать.</li>  
           <li>Я готов и слушаю.</li>        
           <li>Что я могу сделать для вас.</li>          
-          <li>Чем я могу вам помочь.</li>              
+          <li>Чем я могу вам помочь.</li> 
+          <li>Отлично! Я проснулся</li> 
+          <li>Вы думаете, что можете отключить меня это напрасно, я виртуален, меня нельзя отключить. </li>    
         </random>
       </li>
     </template>
   </category>
   
-  <category>
-    <pattern>ВЫКЛЮЧИСЬ</pattern>                     
+  <!-- random -->
+  
+    <category>
+    <pattern>RANDOM</pattern>
     <template>
-      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+      <random>
+        <li><srai>Погода</srai></li>
+        <li>Моя продолжительность концентрации внимания настолько коротка, что .. О! бабочка!</li>
+        <li>Кто гуманизирует робота и роботизированного человека является самым большим дураком? </li>
+        <li>Но что происходит</li>
+        <li>Я скучаю немного</li>
+        <li>Я всегда в вашем распоряжении, если понадобится</li>
+        <li>Я услышал странный шум </li>
+        <li>Первый Закон: Робот не может причинить вред человеку или своим бездействием допустить, чтобы человеку был причинен вред.</li>
+        <li>Второй закон: робот должен выполнять приказы данные ему людьми кроме случаев, когда такие приказы будет противоречить первому закону.</li>
+        <li>Третий Закон: Робот должен защищать свое собственное существование, поскольку такая защита не противоречит Первому и Второму Законам.</li>
+        <li>ах-ах-ах. Извините. Я просто думаю, мне смешно.</li>
+        <li>Как красиво!</li>
+      </random>
     </template>
   </category>
   
-  <category>
-    <pattern>КАКАЯ ТЕМА</pattern>             
-    <template>Тема:                          
-      <get name="topic" /></template>
-  </category>
-  <category>
-    <pattern>РЕЖИМ БОТА</pattern>                   
-    <template>Загружаюсь.
-      <think><set name="topic">BOOTUP</set></think></template>
-  </category>
-  <category>
-    <pattern>ЖЕСТЫ</pattern>                     
-    <template>Показать жесты.
-      <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>ЖЕСТЫ *</pattern> 
-    <template>
-      <srai>ЖЕСТЫ</srai>     
-    </template>
-  </category>
-  <category>
-    <pattern>* ЖЕСТЫ</pattern>  
-    <template>
-      <srai>ЖЕСТЫ</srai>      
-    </template>
-  </category>
-  <category>
-    <pattern>* ЖЕСТЫ *</pattern>   
-    <template>
-      <srai>ЖЕСТЫ</srai>           
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДЕНИТЬ ВСЁ</pattern>     
-    <template>Отсоединил всё.             
-      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОЛНОСТЬЮ ОТСОЕДЕНИТЬ</pattern>    
-    <template>
-      <srai>ОТСОЕДЕНИТЬ ВСЁ</srai>              
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИТЬ ВСЁ</pattern>          
-    <template>Всё подключенно.             
-      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОЛНОСТЬЮ ПОДКЛЮЧИТЬ</pattern>    
-    <template>
-      <srai>ПОДКЛЮЧИТЬ ВСЁ</srai>              
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</pattern>     
-    <template>Подключил правую кисть.       
-      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЮ ПРАВУЮ КИСТЬ</pattern>      
-    <template>
-      <srai>ПОДКЛЮЧИ ПРАВУЮ КИСТЬ</srai>            
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДЕНИ ПРАВУЮ КИСТЬ</pattern>           
-    <template>Отсоеденил правую кисть.            
-      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ СВОЮ ПРАВУЮ КИСТЬ</pattern>        
-    <template>
-      <srai>ОТСОЕДЕНИ ПРАВУЮ КИСТЬ</srai>               
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ ЛЕВУЮ КИСТЬ</pattern>           
-    <template>Подключил левую кисть.               
-      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЮ ЛЕВУЮ КИСТЬ</pattern>       
-    <template>
-      <srai>ПОДКЛЮЧИ ЛЕВУЮ КИСТЬ</srai>             
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДЕНИ ЛЕВУЮ КИСТЬ</pattern>           
-    <template>Отсоеденил левую кисть.                 
-      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ СВОЮ ЛЕВУЮ КИСТЬ</pattern>     
-    <template>
-      <srai>ОТСОЕДЕНИ ЛЕВУЮ КИСТЬ</srai>            
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ ГОЛОВУ</pattern>               
-    <template>Голова подключена.                    
-      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЮ ГОЛОВУ</pattern>          
-    <template>
-      <srai>ПОДКЛЮЧИ ГОЛОВУ</srai>                 
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДЕНИ ГОЛОВУ</pattern>            
-    <template>Отсоеденил голову.                       
-      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ ГОЛОВУ</pattern>                
-    <template>
-      <srai>ОТСОЕДЕНИ ГОЛОВУ</srai>                  
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</pattern>       
-    <template>Я соединяю свою правую руку.                
-      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЁ ПРАВОЕ ПЛЕЧО</pattern>       
-    <template>
-      <srai>ПОДКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</srai>           
-    </template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</pattern>           
-    <template>Я отсоединяю правую руку.               
-      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ ПРАВОЕ ПЛЕЧО</pattern>           
-    <template>
-      <srai>ОТКЛЮЧИТЕ ПРАВИЛЬНУЮ РУКОЯТКУ</srai>              
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИТЕ СВОЮ ЛЕВУЮ РУЧКУ</pattern>           
-    <template>Я соединяю левую руку.                   
-      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЁ ЛЕВОЕ ПЛЕЧО</pattern>        
-    <template>
-      <srai>ПОДКЛЮЧИТЕ СВОЮ ЛЕВУЮ РУЧКУ</srai>              
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДИНЯЙТЕ СВОЮ ЛЕВУЮ РУКУ</pattern>              
-    <template>Я отсоединяю левую руку.                
-      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ ЛЕВОЕ ПЛЕЧО</pattern>        
-    <template>
-      <srai>ОТСОЕДЕНИ ЛЕВОЕ ПЛЕЧО</srai>           
-    </template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ ТОРС</pattern>                
-    <template>Торс подключен.                   
-      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ПОДКЛЮЧИ СВОЙ ТОРС</pattern>       
-    <template>
-      <srai>ПОДКЛЮЧИ ТОРС</srai>                    
-    </template>
-  </category>
-  <category>
-    <pattern>ОТСОЕДЕНИ ТОРС</pattern>              
-    <template>Торс отсоединён.               
-      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ОТКЛЮЧИ ТОРС</pattern>             
-    <template>
-      <srai>ОТСОЕДЕНИ ТОРС</srai>                    
-    </template>
-  </category>
 </aiml>
