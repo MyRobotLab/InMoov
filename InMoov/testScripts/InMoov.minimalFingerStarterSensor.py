@@ -67,18 +67,16 @@ ear.addCommand("open your finger", "python", "fingeropen")
 ear.addCommand("close your finger", "python", "fingerclose")
 ear.addCommand("finger to the middle", "python", "fingermiddle")
 ear.addCommand("calibration", "python", "calibrate")
-ear.addCommand("take the egg", "python", "python","Tightens(10)")
-ear.addCommand("take the beer", "python", "python","Tightens(90)")
+ear.addCommand("calibrate", "python", "calibrate")
+ear.addCommand("take the egg", "python", "CloseWithTorque(10)")
+ear.addCommand("take the beer", "python", "CloseWithTorque(90)")
 
 ear.startListening()
 
 #arduino type
-right.setBoardMega()##setBoardUno setBoardMega setBoardMegaAdk
+right.setBoardMega()## setBoardNano setBoardUno setBoardMega setBoardMegaAdk
 # sensor pin ( analog pin range are 14-18 on uno, 54-70 on mega )
 rightHand.index.setAnalogSensorPin(54)
-
-i01.mouth.speakBlocking("I will calibrate my sensor")
-rightHand.index.autoCalibrateSensor()
 
 def fingeropen():
   i01.rightHand.index.setVelocity(20)## Low velocity
@@ -97,8 +95,11 @@ def fingermiddle():
   
 def calibrate():
   i01.mouth.speakBlocking("ok I will calibrate my sensor")
-  i01.rightHand.index.autoCalibrateSensor()
+  if i01.rightHand.index.autoCalibrateSensor():
+    i01.mouth.speakBlocking("Great, sensor is calibrated")
+  else:
+    i01.mouth.speakBlocking("Sorry, I can't calibrate the sensor, try again")
   
-def Tightens(torque):
-  i01.rightHand.index.enableSensorFeedback(torque)
+def CloseWithTorque(percent):
+  i01.rightHand.index.enableSensorFeedback(percent)
   i01.rightHand.index.moveTo(180)
