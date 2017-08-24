@@ -67,12 +67,8 @@ ear.addCommand("open your finger", "python", "fingeropen")
 ear.addCommand("close your finger", "python", "fingerclose")
 ear.addCommand("finger to the middle", "python", "fingermiddle")
 ear.addCommand("calibration", "python", "calibrate")
-ear.addCommand("capture gesture", ear.getName(), "captureGesture")
-
-# Confirmations and Negations are not supported yet in WebkitSpeechRecognition
-# So commands will execute immediatley
-ear.addComfirmations("yes","correct","yeah","ya")
-ear.addNegations("no","wrong","nope","nah")
+ear.addCommand("take the egg", "python", "python","Tightens(10)")
+ear.addCommand("take the beer", "python", "python","Tightens(90)")
 
 ear.startListening()
 
@@ -82,8 +78,7 @@ right.setBoardMega()##setBoardUno setBoardMega setBoardMegaAdk
 rightHand.index.setAnalogSensorPin(54)
 
 i01.mouth.speakBlocking("I will calibrate my sensor")
-i01.rightHand.index.autoCalibrateSensor()
-i01.rightHand.index.enableSensorFeedback(50)## apply 50% torque to servo
+rightHand.index.autoCalibrateSensor()
 
 def fingeropen():
   i01.rightHand.index.setVelocity(20)## Low velocity
@@ -103,3 +98,7 @@ def fingermiddle():
 def calibrate():
   i01.mouth.speakBlocking("ok I will calibrate my sensor")
   i01.rightHand.index.autoCalibrateSensor()
+  
+def Tightens(torque):
+  i01.rightHand.index.enableSensorFeedback(torque)
+  i01.rightHand.index.moveTo(180)
