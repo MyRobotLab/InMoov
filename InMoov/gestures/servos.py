@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def servos():
   ear.pauseListening()
   sleep(2)
@@ -12,6 +14,7 @@ def servos():
   i01.moveHand("left",42,58,87,55,71,35)
   i01.moveHand("right",81,20,82,60,105,113)
   i01.mouth.speakBlocking("I currently have twenty five  hobby servos installed in my body to give me life")
+  #i01.mouth.speakBlocking(u"У меня  есть двадцать пять ходовых сервомоторов, установленных в моем теле, чтобы дать мне возможность двитаться")
   i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.85, 0.85, 0.85, 0.85)
@@ -23,6 +26,7 @@ def servos():
   i01.moveHand("left",106,41,161,147,138,90)
   i01.moveHand("right",0,0,0,54,91,90)
   i01.mouth.speakBlocking("there's one servo  for moving my mouth up and down")
+  #i01.mouth.speakBlocking(u"Есть один сервопривод для перемещения моей челюсти вверх и вниз")
   sleep(1)
   i01.setHandSpeed("left", 0.85, 0.85, 1.0, 0.85, 0.85, 0.85)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
@@ -35,10 +39,12 @@ def servos():
   i01.moveHand("left",106,0,0,147,138,7);
   i01.moveHand("right",0,0,0,54,91,90);
   i01.mouth.speakBlocking("two for my eyes")
+  #i01.mouth.speakBlocking(u"Два для  глаз")
   sleep(0.2)
   i01.setHandSpeed("left", 0.85, 0.85, 1.0, 1.0, 1.0, 0.85)
   i01.moveHand("left",106,0,0,0,0,7);
   i01.mouth.speakBlocking("and two more for my head")
+  #i01.mouth.speakBlocking(u"И еще два для моей головы")
   sleep(0.5)
   i01.setHandSpeed("left", 0.85, 0.9, 0.9, 0.9, 0.9, 0.85)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
@@ -51,12 +57,14 @@ def servos():
   i01.moveHand("left",106,140,140,140,140,7);
   i01.moveHand("right",0,0,0,54,91,90);
   i01.mouth.speakBlocking("so i can look around")
+  #i01.mouth.speakBlocking(u"Поэтому я могу осмотреться")
   sleep(0.5)
   i01.setHeadSpeed(0.65, 0.65)
   i01.moveHead(105,125);
   i01.setArmSpeed("left", 0.9, 0.9, 0.9, 0.9)
   i01.moveArm("left",60,100,85,30);
   i01.mouth.speakBlocking("and see who's there")
+  #i01.mouth.speakBlocking(u"И посмотреть, кто там")
   i01.setHeadSpeed(0.65, 0.65)
   i01.moveHead(40,56);
   sleep(0.5)
@@ -69,6 +77,7 @@ def servos():
   i01.moveHand("left",98,150,160,160,160,104)
   i01.moveHand("right",0,0,50,54,91,90);
   i01.mouth.speakBlocking("there's three servos  in each shoulder")
+  #i01.mouth.speakBlocking(u"В каждом плече есть по три сервопривода")
   i01.moveHead(40,67);
   sleep(2)
   i01.setHandSpeed("left", 0.8, 0.9, 0.8, 0.8, 0.8, 0.8)
@@ -83,6 +92,7 @@ def servos():
   i01.moveHand("left",42,10,160,160,160,35)
   i01.moveHand("right",81,20,82,60,105,113)
   i01.mouth.speakBlocking("here is the first servo movement")
+  #i01.mouth.speakBlocking(u"Вот  движение первого сервопривода")
   sleep(1)
   i01.moveHead(37,60);
   i01.setHandSpeed("left", 1.0, 1.0, 0.9, 0.9, 1.0, 0.8)
@@ -90,16 +100,19 @@ def servos():
   i01.moveArm("right",5,95,67,42)
   i01.moveHand("left",42,10,10,160,160,30)
   i01.mouth.speakBlocking("this is the second one")
+  #i01.mouth.speakBlocking(u"Это второго")
   sleep(1)
   i01.moveHead(43,69);
   i01.setArmSpeed("right", 1.0, 1.0, 1.0, 1.0)
   i01.moveArm("right",5,134,67,42)
   i01.moveHand("left",42,10,10,10,160,35)
   i01.mouth.speakBlocking("now you see the third")
+  #i01.mouth.speakBlocking(u"Теперь вы видите третий")
   sleep(1)
   i01.setArmSpeed("right", 0.8, 0.8, 0.8, 0.8)
   i01.moveArm("right",20,90,45,16)
   i01.mouth.speakBlocking("they give me a more human like movement")
+  #i01.mouth.speakBlocking(u"Они дают мне более человекоподобные движения")
   sleep(1)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 1.0, 1.0, 1.0, 1.0);
@@ -109,6 +122,7 @@ def servos():
   i01.moveHand("left",42,80,100,80,113,35)
   i01.moveHand("right",81,0,82,60,105,69)
   i01.mouth.speakBlocking("but, i have only  one servo, to move each elbow")
+  #i01.mouth.speakBlocking(u"Но у меня есть только по  одному сервоприводу, чтобы двигать каждым бицепсом")
   i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 0.85)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.85, 0.85, 0.85, 0.85)
@@ -120,6 +134,7 @@ def servos():
   i01.moveHand("left",42,0,100,80,113,35)
   i01.moveHand("right",81,0,82,60,105,0)
   i01.mouth.speakBlocking("that, leaves me, with one servo per wrist")
+  #i01.mouth.speakBlocking(u"По одному сервоприводу  на запястьях")
   i01.moveHead(40,60)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 0.9, 0.9, 0.9, 0.9, 0.9, 0.9)
@@ -128,10 +143,12 @@ def servos():
   i01.moveHand("left",42,0,100,80,113,35)
   i01.moveHand("right", 10, 140,82,60,105,10)
   i01.mouth.speakBlocking("and one servo for each finger.")
+  #i01.mouth.speakBlocking(u"И один сервопривод для каждого пальца.")
   sleep(0.5)
   i01.moveHand("left",42,0,100,80,113,35)
   i01.moveHand("right", 50, 51, 15,23, 30,140);
   i01.mouth.speakBlocking("these servos are located in my forearms")
+  #i01.mouth.speakBlocking(u"Эти сервоприводы расположены в моих предплечьях")
   i01.setHandSpeed("left", 0.8, 0.8, 0.8, 0.8,0.8, 0.8)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.moveHand("left", 36, 52, 8,22, 20);
@@ -139,6 +156,7 @@ def servos():
   removeleftarm()
   sleep(1)
   i01.mouth.speakBlocking("they are hooked up, by the use of tendons")
+  #i01.mouth.speakBlocking(u"Они подключаются, через сухожилия")
   i01.moveHand("left",10,20,30,40,60,150);
   i01.moveHand("right",110,137,120,100,105,130);
   i01.setHeadSpeed(1,1)

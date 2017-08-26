@@ -1,8 +1,12 @@
+# -- coding: utf-8 --
+
 def notTrue():
   x = (random.randint(1, 3))
   i01.mouth.speak("oh")
+  #i01.mouth.speak(u"Ох")
   sleep(0.2)
   i01.mouth.speak("really")
+  #i01.mouth.speak(u"действительно")
   fullspeed()
   i01.moveHead(16,11)
   i01.moveArm("left",60,67,67,40)
@@ -16,10 +20,13 @@ def notTrue():
   relax()
   if x == 1:
     i01.mouth.speak("okay then, as you please")
+    #i01.mouth.speak(u"Тогда, как вам угодно")
     i01.moveHead(90,90)
   if x == 2:
     i01.mouth.speak("oh, yes I forgot")
+    #i01.mouth.speak(u"О, да, я забыл")
     i01.moveHead(90,90)
   if x == 3:
     i01.mouth.speak("oh, I will turn around")
+    #i01.mouth.speak(u"О, я обернусь")
     i01.moveHead(90,90)

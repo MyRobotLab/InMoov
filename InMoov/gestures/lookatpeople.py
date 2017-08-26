@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def lookatpeople():
   i01.setHeadVelocity(40, 40, 40)
   x = (random.randint(1, 5))
@@ -39,3 +41,4 @@ def lookatpeople():
   lookinmiddle()
   sleep(3)
   i01.mouth.speak("nice to meet you all")
+  #i01.mouth.speak(u"Приятно с вами познакомиться")

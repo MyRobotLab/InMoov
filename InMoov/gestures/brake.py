@@ -1,5 +1,8 @@
+# -- coding: utf-8 --
+
 def brake():
   #neopixel.write(9)
+  i01.startedGesture()
   i01.moveHead(80,86)
   i01.moveArm("left",5,90,30,10)
   i01.moveArm("right",5,90,30,10)
@@ -36,10 +39,12 @@ def brake():
   i01.moveTorso(90,90,90)
   sleep(3)
   i01.mouth.speakBlocking("Should I brake that")
+  #i01.mouth.speakBlocking(u"Должен ли я тормозить")
   i01.moveHead(110,93)
   i01.moveArm("left",90,69,84,22)
   i01.moveArm("right",71,66,60,10)
   i01.moveHand("left",138,134,168,168,120,90)
   i01.moveHand("right",124,142,151,48,30,146)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()
 

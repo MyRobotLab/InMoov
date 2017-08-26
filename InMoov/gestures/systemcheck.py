@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def systemcheck():
   fullspeed()
   sleep(0.2)
@@ -18,6 +20,7 @@ def systemcheck():
   i01.moveHead(90,90)
   sleep(1.5)
   i01.mouth.speakBlocking("Head, neck and mouth,   check")
+  #i01.mouth.speakBlocking(u"Голова, шея и рот, проверил")
   sleep(1)
   i01.setHeadSpeed(.9,.9)
   i01.moveHead(25,61)
@@ -31,6 +34,7 @@ def systemcheck():
   i01.setHeadSpeed(.9,.9)
   sleep(1)
   i01.mouth.speakBlocking("right arm and right shoulder,  check")
+  #i01.mouth.speakBlocking(u"Правая рука и правое плечо, проверил")
   sleep(1)
   i01.setHeadSpeed(.9,.9)
   i01.moveHead(20,122)
@@ -41,6 +45,7 @@ def systemcheck():
   i01.setHeadSpeed(.9,.9)
   sleep(1)
   i01.mouth.speakBlocking("left arm and left shoulder,  check")
+  #i01.mouth.speakBlocking(u"Левая рука и левое плечо, проверил")
   sleep(1)
   i01.setHeadSpeed(.9,.9)
   i01.moveHead(20,120)
@@ -63,6 +68,7 @@ def systemcheck():
   i01.setHeadSpeed(.9,.9)
   sleep(1)
   i01.mouth.speakBlocking(" hands and Wrists,  check")
+  #i01.mouth.speakBlocking(u" Кисти и запястья, проверил")
   sleep(1)
 
   i01.moveHead(90,90)
@@ -71,8 +77,10 @@ def systemcheck():
   i01.moveHand("left",0,0,0,0,0,90)
   i01.moveHand("right",0,0,0,0,0,90)
   i01.mouth.speakBlocking("all servos are functioning properly")
+  #i01.mouth.speakBlocking(u"Все сервоприводы функционируют должным образом")
   sleep(1.5)
   i01.mouth.speakBlocking("awaiting your commands")
+  #i01.mouth.speakBlocking(u"Ожидаю ваши команды")
   sleep(0.5)
   relax()
 

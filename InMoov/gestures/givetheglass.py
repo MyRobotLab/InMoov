@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def givetheglass():
   sleep(2)
   i01.setHandSpeed("left", 0.60, 0.60, 0.60, 0.60, 0.60, 0.60)
@@ -11,5 +13,6 @@ def givetheglass():
   i01.moveHand("left",109,138,180,164,180,60)
   i01.moveHand("right",102,86,105,105,143,133)
   i01.mouth.speakBlocking("Hello please take the glass")
+  #i01.mouth.speakBlocking(u"Привет, пожалуйста, возьмите стакан")
   sleep(1)
 

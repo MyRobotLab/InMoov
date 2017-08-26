@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def shakehand():
   rest()
   i01.startedGesture()
@@ -47,18 +49,25 @@ def shakehand():
   x = (random.randint(1, 7))
   if x == 1:
     i01.mouth.speak("please to meet you")
+    #i01.mouth.speak(u"рад встрече с вами")
   if x == 2:
     i01.mouth.speak("carefull my hand is made out of plastic")
+    #i01.mouth.speak(u"Осторожно, моя рука сделана из пластика")
   if x == 3:
     i01.mouth.speak("I am happy to shake a human hand")
+    #i01.mouth.speak(u"Я рад пожать руку человеку")
   if x == 4:
     i01.mouth.speak("it is a pleasure to meet you")
+    #i01.mouth.speak(u"Мне приятно  встретить тебя")
   if x == 5:
     i01.mouth.speak("very nice to meet you") 
+    #i01.mouth.speak(u"приятно познакомиться")
   if x == 6:
     i01.mouth.speak("shaking a human hand, feels strange. please to meet you") 
+    #i01.mouth.speak(u"Пожимая человеческую руку, чувствую себя странно. Рад встрече с вами.")
   if x == 7:
-    i01.mouth.speak("I am glad you don't shake me like trump does")    
+    i01.mouth.speak("I am glad you don't shake me like trump does")
+    #i01.mouth.speak(u"Я рад, что ты не встряхиваешь мою руку, как козырь")    
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -132,14 +141,19 @@ def shakehand():
   x = (random.randint(1, 5))
   if x == 1:
     i01.mouth.speak("please to meet you")
+    #i01.mouth.speak(u"рад встрече с вами")
   if x == 2:
     i01.mouth.speak("carefull my hand is made out of plastic")
+    #i01.mouth.speak(u"Осторожно, моя рука сделана из пластика")
   if x == 3:
     i01.mouth.speak("I am happy to shake a human hand")
+    #i01.mouth.speak(u"Я рад пожать руку человеку")
   if x == 4:
     i01.mouth.speak("it is a pleasure to meet you")
+    #i01.mouth.speak(u"Мне приятно  встретить тебя")
   if x == 5:
-    i01.mouth.speak("very nice to meet you")  
+    i01.mouth.speak("very nice to meet you") 
+    #i01.mouth.speak(u"приятно познакомиться") 
     i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
     i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
     i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)

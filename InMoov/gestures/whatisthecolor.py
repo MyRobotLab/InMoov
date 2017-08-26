@@ -1,10 +1,14 @@
+# -- coding: utf-8 --
+
 def whatisthecolor():
   global coloring
   if coloring <= 2:
     i01.mouth.speak("I have no idea, I am not ready to recognize colors")
+    #i01.mouth.speak(u"Я понятия не имею, я не готов распознавать цвета")
     coloring += 1
   elif coloring == 3:
     i01.mouth.speak("Sorry, I told you, I am not ready to recognize colors")
+    #i01.mouth.speak(u"Извините, я же сказал, я не готов распознавать цвета")
     i01.moveArm("left",43,88,22,10)
     i01.moveArm("right",20,90,30,10)
     i01.moveHand("left",0,0,0,0,0,119)
@@ -14,6 +18,7 @@ def whatisthecolor():
     coloring += 1
   elif coloring == 4:
     i01.mouth.speak("Gael, you are annoying, stop asking me about the colors")
+    #i01.mouth.speak(u"Гаэль, ты раздражаешь, перестань спрашивать меня о цветах")
     i01.moveArm("left",30,83,22,10)
     i01.moveArm("right",40,85,30,10)
     i01.moveHand("left",130,180,180,180,180,119)
@@ -38,6 +43,7 @@ def whatisthecolor():
     i01.moveHead(80,66)
     sleep(1)
     i01.mouth.speak("Humans are worst than robots, don't they ever learn")
+    #i01.mouth.speak(u"Люди хуже, чем роботы, разве они никогда не учатся")
     fullspeed()
     i01.moveArm("left",85,106,25,18)
     i01.moveArm("right",87,107,32,18)

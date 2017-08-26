@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def eatindianfood():
   fullspeed()
   i01.setHeadSpeed(0.85, 0.80, 0.90, 0.90, 1.0)
@@ -15,6 +17,7 @@ def eatindianfood():
   i01.moveTorso(90,90,90)
   i01.moveHead(80,40,7,85,52)
   i01.mouth.speakBlocking("yes, i want some paneer tikka")
+  #i01.mouth.speakBlocking(u"Да, я хочу немного paneer tikka")
   sleep(1)
   i01.moveHead(60,90,80,90,52)
   sleep(0.8)

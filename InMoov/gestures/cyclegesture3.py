@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def cyclegesture3():
   ##for x in range(3):
   rest()
@@ -173,6 +175,7 @@ def cyclegesture3():
   i01.moveTorso(90,90,90)
   sleep(2)
   i01.mouth.speakBlocking("wow, I feel good, I love this")
+  #i01.mouth.speakBlocking(u"Ничего себе, я чувствую себя хорошо, мне это нравится")
   sleep(2)
   rest()
   sleep(1)
