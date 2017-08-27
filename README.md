@@ -9,6 +9,8 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
   
 [**CHANGELOG**]  
 
+0.4.5 
+- russian and hindi language pack + new tts services  
 0.4.4  
 - fix shutdown  
 0.4.3  
