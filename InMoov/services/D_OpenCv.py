@@ -42,7 +42,7 @@ streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
 
 i01.opencv = Runtime.create("i01.opencv", "OpenCV")
 opencv=i01.opencv
-#opencv.streamerEnabled=streamerEnabled
+opencv.streamerEnabled=streamerEnabled
 i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():

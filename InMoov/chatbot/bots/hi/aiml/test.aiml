@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: test.aiml -->
+  <!-- Author: Gael Langevin, Anthony Gallot -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Anthony Gallot -->
+  <!-- Last modified: 8 27, 2017 -->
+  <!-- This inmoovHindi brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <srai>रैंडोम उत्तर</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>रैंडोम उत्तर</pattern>
+    <template>
+      <random>
+        <li>मुझे समझ नहीं आ रहा है</li>
+        <li>कृपया दोहराये</li>
+      </random>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>नमस्ते</pattern>
+    <template>
+      <random>
+        <li>आपसे मिलकर अच्छा लगा</li>
+      </random>
+    </template>
+  </category>
+</aiml>

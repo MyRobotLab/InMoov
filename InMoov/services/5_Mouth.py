@@ -175,6 +175,13 @@ def setRobotLanguage():
     if MyvoiceTTS=="Polly":i01.mouth.setKey(awsaccesskeyid,awssecretkey)
   except:
     pass
+    
+  try:  
+    if MyvoiceTTS=="IndianTts":
+      i01.mouth.api=IndianTtsApi
+      i01.mouth.userid=IndianTtsUserId
+  except:
+    pass
 
   
   try:
