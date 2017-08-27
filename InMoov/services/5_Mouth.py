@@ -58,6 +58,7 @@ def publishMouthcontrolPinLeft(pins):
 #functions to call about robot speak
 def talk(data):
   if data:
+    data=unicode(data,'utf-8')
     if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
     if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
     if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
@@ -67,7 +68,6 @@ def talk(data):
     data=data.lower().replace(" c ", " c'")
     data=data.lower().replace(" d ", " d'")
     data=data.lower().replace("it s", "it's")
-    data=unicode(data,'utf-8') 
     mouth.speak(data)
     
 def talkBlocking(data):
