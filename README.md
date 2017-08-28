@@ -8,7 +8,8 @@ https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER
 if you find bugs : https://github.com/MyRobotLab/inmoov/issues  
   
 [**CHANGELOG**]  
-
+0.4.7
+- fix random life if partial skeleton & vinmoov config file
 0.4.6
 - russian and hindi language pack + new tts services  
 0.4.4  
