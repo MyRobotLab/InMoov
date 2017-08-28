@@ -15,10 +15,15 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 
 virtualInmoovAlwaysActivated=ThisServicePartConfig.getboolean('MAIN', 'virtualInmoovAlwaysActivated')
 VinmoovMonitorActivated=ThisServicePartConfig.getboolean('MAIN', 'VinmoovMonitorActivated')
+ForceVinmoovDisable=False
+try:
+  ForceVinmoovDisable=ThisServicePartConfig.getboolean('MAIN', 'ForceVinmoovDisable')
+except:
+  pass
 
 global virtualInmoovActivated
 virtualInmoovActivated=False
-if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:
+if (ScriptType=="Virtual" or virtualInmoovAlwaysActivated) and not ForceVinmoovDisable:
   if os.path.isdir(RuningFolder+'/jm3') and runtime.is64bit:
     global virtualInmoovActivated
     virtualInmoovActivated=True
