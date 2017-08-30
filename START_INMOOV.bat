@@ -1,5 +1,6 @@
 REG ADD HKCU\Console /v CodePage /t REG_DWORD /d 0xfde9 /f
 REG ADD HKCU\Console /v FaceName /t REG_SZ /d "Lucida Console" /f
+@chcp 65001>nul
 @echo off
 echo ------------------------------------------------------
 echo 			INMOOV BATCH LAUNCHER 0.2
@@ -40,7 +41,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 3 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator MicrosoftLocalTTS IndianTts
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator MicrosoftLocalTTS IndianTts
 COLOR 0F
 cls
 echo ------------------------------------------------------
@@ -52,4 +53,4 @@ echo ERROR : %cd%\InMoov\InMoov.py is not available
 echo CHECK ABOUT SPACES INSIDE FOLDERS NAME or SPECIAL CHARACTERS 
 echo "c:\mrl" is a great place to start
 timeout 10 > NUL
-) else (java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -invoke python execFile %cd%/InMoov/InMoov.py -service python Python)
+) else (java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -invoke python execFile %cd%/InMoov/InMoov.py -service python Python)
