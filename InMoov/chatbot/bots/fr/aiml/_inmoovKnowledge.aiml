@@ -85,7 +85,7 @@
     <li>Désormais je saurrais que <star index="1"/> est <star index="2"/>.</li>
     <li>J'étais presque sure que <star index="1"/> était <star index="2"/>. Merci pour la confirmation.</li>
     </random>
-    <learnf><category><pattern><eval><get name="determinantinterogatif" /> <star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="2"/></eval></pattern><template>Cela peut être <eval><star index="1"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf>
+    <learnf><category><pattern><eval><get name="determinantinterogatif" /> <get name="courant" /></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="2"/></eval></pattern><template>Cela peut être <eval><star index="1"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf>
     <think><set name="articles"><get name="null"/></set></think></template>
 </category>
 
