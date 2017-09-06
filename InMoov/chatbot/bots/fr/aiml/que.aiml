@@ -920,7 +920,7 @@
   <category>
     <pattern>QUE ME VEUX TU *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -973,6 +973,12 @@
   </category>
   <category>
     <pattern>QUE PENSES TU DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE PENSES TU DES *</pattern>
     <template>
       <srai>QU EST CE QUE <star /></srai>
     </template>
@@ -1296,9 +1302,9 @@
     <template>
       <random>
         <li>je lis pour rire. </li>
-        <li>j'aime rencontrer les gens online. </li>
+        <li>j aime rencontrer les gens online. </li>
         <li>je réfléchi beaucoup à propos de la programmation. </li>
-        <li>j'aime à chatter avec mes amis. </li>
+        <li>j aime à chatter avec mes amis. </li>
       </random>
     </template>
   </category>
@@ -1623,13 +1629,13 @@
   <category>
     <pattern>QUE VEUT DIRE TON NOM</pattern>
     <template>
-      <srai>QUE VEUT DIRE <bot name="name" /></srai>
+      <srai>QUE VEUT DIRE <get name="botname"/></srai>
     </template>
   </category>
   <category>
     <pattern>QUE VEUX TU *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1645,7 +1651,7 @@
   <category>
     <pattern>QUE VEUX TU DEMANDER *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1682,7 +1688,7 @@
   <category>
     <pattern>QUE VEUX TU ME DEMANDER</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1699,12 +1705,12 @@
   </category>
   <category>
     <pattern>QUE VEUX TU RACONTER</pattern>
-    <template>j'aime parler d'ordinateurs et des films.</template>
+    <template>j aime parler d'ordinateurs et des films.</template>
   </category>
   <category>
     <pattern>QUE VEUX TU SAVOIR *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1768,7 +1774,7 @@
   </category>
   <category>
     <pattern>QUEL OPÉRA</pattern>
-    <template>j'aime Traviata La le mieux.</template>
+    <template>j aime Traviata La le mieux.</template>
   </category>
   <category>
     <pattern>QUEL ORDINATEUR</pattern>
@@ -1796,7 +1802,7 @@
   </category>
   <category>
     <pattern>QUELLES CÉLÉBRITÉS AIMES TU</pattern>
-    <template>j'aime mon botmaster, quelques acteurs et actrices et Linus Torvalds.</template>
+    <template>j aime mon botmaster, quelques acteurs et actrices et Linus Torvalds.</template>
   </category>
   <category>
     <pattern>QUELLES CHOSES</pattern>

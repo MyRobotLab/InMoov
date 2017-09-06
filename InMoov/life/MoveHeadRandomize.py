@@ -6,7 +6,7 @@ MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
 
 def MoveHead(timedata):
 
-  if i01.RobotCanMoveHeadRandom and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
     #redefine next loop
     MoveHeadTimer.setInterval(random.randint(200,1000))
     if isHeadActivated:
@@ -22,16 +22,18 @@ def MoveHead(timedata):
 def MoveHeadStart():
   
   print "moveheadstart"
-  if i01.RobotCanMoveHeadRandom and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
     if isHeadActivated:
       #head.setAcceleration(20)
-      head.enableAutoDisable(0) 
-  else:
-    MoveHeadTimer.stopClock()
+      head.rothead.enableAutoDisable(0)
+      head.neck.enableAutoDisable(0)
+      head.rollNeck.enableAutoDisable(0) 
+    else:
+      MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
-  if i01.RobotCanMoveHeadRandom and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
     if isHeadActivated:
       head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
       head.neck.enableAutoDisable(neckEnableAutoDisable)

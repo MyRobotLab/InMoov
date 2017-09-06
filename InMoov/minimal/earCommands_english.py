@@ -23,6 +23,8 @@ ear.addCommand(u"davinci", "python", "daVinci")
 ear.addCommand(u"omoplate", "python", "omoplate")
 
 # HAND(S) - inmoovGestures\ minimalHand.py
+ear.addCommand(u"disconnect your right hand", "i01.rightHand", "disable")
+ear.addCommand(u"disconnect your left hand", "i01.leftHand", "disable")
 ear.addCommand(u"open your hands", "python", "handsopen")
 ear.addCommand(u"close your hands", "python", "handsclose")
 ear.addCommand(u"open your right hand", "python", "handopen")

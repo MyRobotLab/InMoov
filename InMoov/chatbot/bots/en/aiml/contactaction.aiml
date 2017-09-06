@@ -628,7 +628,7 @@ I've saved <get name="contactname" /> to your contacts.
           <li>
             <condition name="isaphonenumber" value="true">
               <set name="contactid">undefined</set>
-  &gt;<set name="displayname"><set name="dialnumber"><set name="contacturi"><srai>FORMATPHONENUMBER <get name="contactname" /></srai></set></set></set></condition>
+  <set name="displayname"><set name="dialnumber"><set name="contacturi"><srai>FORMATPHONENUMBER <get name="contactname" /></srai></set></set></set></condition>
           </li>
         </condition>
       </think>

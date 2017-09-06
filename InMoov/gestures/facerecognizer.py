@@ -1,7 +1,7 @@
 def facerecognizer():
     
   i01.disableRobotRandom(30)
-  if (i01.eyesTracking.getOpenCV().capturing):
+  if (i01.RobotIsTrackingSomething()):
     i01.headTracking.stopTracking()
     i01.eyesTracking.stopTracking()
     i01.opencv.addFilter("PyramidDown")

@@ -1,4 +1,5 @@
 def comehere():
+  i01.startedGesture()
   fullspeed()
   rest()
   PlayNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
@@ -61,3 +62,4 @@ def comehere():
   sleep(0.3)
   relax()
   sleep(3)
+  i01.finishedGesture()

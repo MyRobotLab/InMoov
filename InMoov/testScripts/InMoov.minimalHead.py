@@ -16,7 +16,7 @@ Voice="cmu-bdl-hsmm" #Male US voice
 #Voice="cmu-slt-hsmm" #Default female for MarySpeech
 voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
-mouth.installComponentsAcceptLicense(Voice)
+#mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(voiceType)
 ##############
 # starting InMoov service
@@ -45,14 +45,14 @@ eyelids = Runtime.create("i01.eyelids", "InMoovEyelids")
 ##############
 # tweaking defaults settings of right hand
 # Velocity
-head.jaw.setMaxVelocity(-1)
-head.eyeY.setMaxVelocity(-1)
-head.eyeX.setMaxVelocity(-1)
-head.neck.setMaxVelocity(-1)
-head.rothead.setMaxVelocity(-1)
-head.rollNeck.setMaxVelocity(-1)
-eyelids.eyelidleft.setMaxVelocity(-1)
-eyelids.eyelidright.setMaxVelocity(-1)
+head.jaw.setVelocity(-1)
+head.eyeY.setVelocity(-1)
+head.eyeX.setVelocity(-1)
+head.neck.setVelocity(-1)
+head.rothead.setVelocity(-1)
+head.rollNeck.setVelocity(-1)
+eyelids.eyelidleft.setVelocity(-1)
+eyelids.eyelidright.setVelocity(-1)
 # Mapping
 head.jaw.map(0,180,55,95)
 head.eyeY.map(0,180,85,110)

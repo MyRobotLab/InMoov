@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: inmoovchatBot.aiml -->
+  <!-- File: _inmoovChatBot.aiml -->
   <!-- Authors: Gael Langevin, Anthony Gallot -->
   <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
   <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
@@ -25,6 +25,7 @@
   <!-- initialisaion routine -->
   <!-- wakeup action -->
   <!-- météo -->
+  <!-- random action -->
   
   <category>
     <pattern>FIRST_INIT</pattern>
@@ -36,8 +37,8 @@
         <set name="topic">firstinit</set>
       </think>
 		Bonjour, ceci est ma première initialisation.
-		Je suis emerveillé par ce que je vois.
-        S'il te plait, j'ai besoin de quelques infomations essentielles.
+		Je suis émerveillé par ce que je vois.
+        S'il te plait, j'ai besoin de quelques informations essentielles.
         Je t'écoute. quel est mon nom ?
 	</template>
   </category>
@@ -48,7 +49,7 @@
       <pattern>#</pattern>
       <that># quel est mon nom #</that>
       <template>
-        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui , ou non</set>
+        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -61,7 +62,7 @@
       <pattern>#</pattern>
       <that># puis-je avoir ton prénom #</that>
       <template>
-        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui , ou non</set>
+        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -76,7 +77,7 @@
       <template>
         <random>
 			<li>
-			J'aime beaucoup ce nom , <get name="tmpname" />.
+			j aime beaucoup ce nom , <get name="tmpname" />.
 			</li>
 			<li>
 			On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.
@@ -129,32 +130,27 @@
     <category>
       <pattern># NON #</pattern>
       <that># Si mon nom est #</that>
-      <template>
+      <template><li>
 	On recommence alors.
 	Je t'écoute. quel est mon nom ?
-    </template>
+    </li></template>
     </category>
 	
     <category>
       <pattern># NON #</pattern>
       <that># Si ton prénom #</that>
-      <template>
+      <template><li>
 	On recommence alors.
 	Je t'écoute. puis-je avoir ton prénom ?
-    </template>
+    </li></template>
     </category>
 	
     <category>
       <pattern>#</pattern>
-      <that># répond par oui , ou non #</that>
+      <that># répond par oui ou non #</that>
       <template>
-        <random>
-          <li>
-	S'il te plait, répond aux questions que je pose, c'est important.
-	</li>
-          <li>
-	Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.
-	</li>
+        <random><li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+        <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -174,11 +170,14 @@
           <li>Bonjour, je suis opérationnelle</li>
           <li>Salut, pourquoi m'avoir réveillé ?</li>
 	      <li>A vos ordres !</li>
-          <li>Inmouve à ton service !</li>
-          <li>Inmouve à ton écoute !</li>
-          <li>Tu crois que tu peux m'éteindre et m'allummer comme ça à ta convenance ? je suis pérationnel</li>
+          <li>Inemouve à ton service !</li>
+          <li>Inemouve à ton écoute !</li>
+          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
           <li>Bonjour, que puis-je faire pour toi</li>
           <li>Coucou ! Tu sais, je n'étais pas vraiment endormi</li>
+          <li>Chouette ! je suis réveillé</li>
+          <li>Ce fut une longue nuit, je suis éveuillé désormais</li>
+          <li>Bonjour</li>
         </random>
       </li>
     </template>
@@ -448,4 +447,35 @@
       <srai>GESTURES</srai>
     </template>
   </category>
+  
+  <!-- random -->
+  
+    <category>
+    <pattern>RANDOM</pattern>
+    <template>
+      <random>
+        <li><srai>à PROPOS DE STAR WARS</srai></li>
+        <li><srai>COMBIEN DE DOIGTS AS tu</srai></li>
+        <li><srai>MAINS EN L AIR</srai></li>
+        <li><srai>QUELLE HEURE IL EST</srai></li>
+        <li><srai>Météo</srai></li>
+        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
+        <li>sa me gratte. je dois avoir une puce </li>
+        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
+        <li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
+        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
+        <li>Mais que se passe-t-il </li>
+        <li>je m'ennuie un petit peu</li>
+        <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
+        <li>j'ai entendu un bruit étrange</li>
+        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
+        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
+        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
+        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
+        <li>Oh là là! </li>
+        <li>Que c'est beau! </li>
+      </random>
+    </template>
+  </category>
+  
 </aiml>

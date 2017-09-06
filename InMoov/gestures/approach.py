@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def approach():
   i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 1.0)
   i01.setHandSpeed("right", 0.85, 0.85, 0.85, 0.85, 0.85, 1.0)
@@ -33,6 +35,7 @@ def approach():
   i01.moveHand("right",119,150,163,134,151,180)
   i01.moveTorso(90,90,90)
   i01.mouth.speakBlocking("please approach")
+  #i01.mouth.speakBlocking(u"подойди пожалуйста")
   relax()
 
 

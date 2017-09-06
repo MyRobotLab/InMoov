@@ -18,7 +18,17 @@ MyLeftPort=ThisServicePartConfig.get('MAIN', 'MyLeftPort')
 BoardTypeMyRightPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyRightPort')
 BoardTypeMyLeftPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyLeftPort')
 ForceArduinoIsConnected=ThisServicePartConfig.getboolean('MAIN', 'ForceArduinoIsConnected')
-
+try:
+  test=ThisServicePartConfig.get('MAIN', 'ArefRightArduino')
+except:
+  ThisServicePartConfig.set('MAIN', 'ArefRightArduino', 'DEFAULT')
+  ThisServicePartConfig.set('MAIN', 'ArefLeftArduino', 'DEFAULT')
+  with open(ThisServicePart+'.config', 'wb') as f:
+    ThisServicePartConfig.write(f)
+  ThisServicePartConfig.read(ThisServicePart+'.config')
+  pass
+ArefLeftArduino=ThisServicePartConfig.get('MAIN', 'ArefLeftArduino')
+ArefRightArduino=ThisServicePartConfig.get('MAIN', 'ArefRightArduino')
   
   
 #function to check arduino & mrlcomm

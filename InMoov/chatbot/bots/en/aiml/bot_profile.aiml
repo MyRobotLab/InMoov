@@ -16,7 +16,7 @@
   <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
   <category>
-    <pattern>YOUR profile</pattern>
+    <pattern>YOUR <set>profile</set></pattern>
     <template>
       <srai>
         <star />
@@ -24,7 +24,7 @@
     </template>
   </category>
   <category>
-    <pattern>STATE YOUR profile</pattern>
+    <pattern>STATE YOUR <set>profile</set></pattern>
     <template>
       <srai>
         <star />
@@ -42,7 +42,11 @@
   <category>
     <pattern>PIC</pattern>
     <template>I have this picture.
-<img src="http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg" /></template>
+      <oob><mrl><service>python</service>
+      <method>exec</method>
+      <param>BareBonesBrowserLaunch.openURL("http://inmoov.fr/wp-content/uploads/2012/11/DSC07048.jpg")</param>
+      </mrl></oob>
+    </template>
   </category>
   <category>
     <pattern>EMOTIONS</pattern>
@@ -58,9 +62,17 @@
     <pattern>HEIGHT</pattern>
     <template>My height is 1.75 meter.</template>
   </category>
+   <category>
+    <pattern>TWITTER PAGE</pattern>
+    <template>Look for me on Twitter here <oob>
+    <mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://twitter.com/inmoov?lang=fr")</param>
+    </mrl></oob>.</template>
+  </category>
   <category>
-    <pattern>TWEETER PAGE</pattern>
-    <template>Look for me on Tweeter here <oob><url>https://twitter.com/inmoov?lang=fr</url></oob>.</template>
+      <pattern>* TWITTER PAGE</pattern>
+      <template>
+        <srai>TWITTER PAGE</srai>
+      </template>
   </category>
   <category>
     <pattern>BIRTHPLACE</pattern>
@@ -261,24 +273,20 @@ I like to go with the flow.</template>
     <template>
       <think>
         <set var="years">
-          <interval>
-            <jformat>MMMMMMMMM dd, yyyy</jformat>
-            <style>years</style>
-            <from>October 9, 2011</from>
-            <to>
-              <date jformat="MMMMMMMMM dd, yyyy" />
-            </to>
-          </interval>
+        <interval>
+        <jformat>dd MM yyyy</jformat>
+        <style>years</style>
+        <from>9 10 2011</from>
+        <to><date jformat="dd MM yyyy" /></to>
+      </interval>
         </set>
         <set var="months">
-          <interval>
-            <jformat>MMMMMMMMM dd, yyyy</jformat>
-            <style>months</style>
-            <from>October 9, 2011</from>
-            <to>
-              <date jformat="MMMMMMMMM dd, yyyy" />
-            </to>
-          </interval>
+        <interval>
+        <jformat>dd MM yyyy</jformat>
+        <style>months</style>
+        <from>9 10 2011</from>
+        <to><date jformat="dd MM yyyy" /></to>
+      </interval>
         </set>
       </think>
       <condition var="years">

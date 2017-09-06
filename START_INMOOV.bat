@@ -1,6 +1,9 @@
+REG ADD HKCU\Console /v CodePage /t REG_DWORD /d 0xfde9 /f
+REG ADD HKCU\Console /v FaceName /t REG_SZ /d "Lucida Console" /f
+@chcp 65001>nul
 @echo off
 echo ------------------------------------------------------
-echo 			INMOOV LAUNCHER
+echo 			INMOOV BATCH LAUNCHER 0.2
 echo ------------------------------------------------------
 echo .
 echo KILL JAVA to clean reborn
@@ -9,42 +12,45 @@ taskkill.exe /F /IM javaW.exe
 echo ------------------------------------------------------
 echo LOG CLEAN UP to free space disk and send clean noworky
 echo ------------------------------------------------------
-del myrobotlab.log
+del myrobotlab.log > NUL
 echo .
 echo ------------------------------------------------------
 echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
+timeout 1 > NUL
 echo .
-move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar
-if not exist %cd%\repo.json (
-RMDIR /S /Q .myrobotlab
-RMDIR /S /Q haarcascades
-RMDIR /S /Q hogcascades
-RMDIR /S /Q lbpcascades
-RMDIR /S /Q libraries
-RMDIR /S /Q pythonModules
-RMDIR /S /Q repo
-RMDIR /S /Q resource
-RMDIR /S /Q tessdata
-del ivychain.xml
-del myrobotlab.log
-del repo.json
-)
-echo ------------------------------------------------------
-echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
-echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
-echo ------------------------------------------------------
-timeout 2 > NUL
-java -jar myrobotlab.jar -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator
-echo ------------------------------------------------------
-echo START MRL & INMOOV
-echo ------------------------------------------------------
+move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar > NUL
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q haarcascades
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q hogcascades
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q lbpcascades
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q libraries
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q pythonModules
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q resource
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q tessdata
+if exist %cd%\mrlNeedReinstall del ivychain.xml
+if exist %cd%\mrlNeedReinstall del myrobotlab.log
+if exist %cd%\mrlNeedReinstall del repo.json
+if exist %cd%\mrlNeedReinstall del %cd%\.myrobotlab\serviceData.json
+if exist %cd%\mrlNeedReinstall del mrlNeedReinstall
+COLOR 2F
 cls
+echo ------------------------------------------------------
+echo          !!!            MRL UPDATER          !!!
+echo          !!!            PLEASE WAIT          !!!
+echo          !!!       IT CAN TAKE LONG TIME     !!!
+echo          !!!            DO NOT CLOSE         !!!
+echo ------------------------------------------------------
+timeout 3 > NUL
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator MicrosoftLocalTTS IndianTts
+COLOR 0F
+cls
+echo ------------------------------------------------------
+echo START MRL AND INMOOV
+echo ------------------------------------------------------
 if not exist %cd%\Inmoov\InMoov.py (
-    echo ERROR : %cd%\InMoov\InMoov.py DOES NOT EXIST
-    echo PLEASE PUT SCRIPT AND FOLDERS INSIDE InMoov FOLDER
-    timeout 10 > NUL
-) else (
-java -jar myrobotlab.jar -invoke python execFile %cd%/InMoov/InMoov.py -service python Python
-)
-
+COLOR 4F
+echo ERROR : %cd%\InMoov\InMoov.py is not available
+echo CHECK ABOUT SPACES INSIDE FOLDERS NAME or SPECIAL CHARACTERS 
+echo "c:\mrl" is a great place to start
+timeout 10 > NUL
+) else (java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -invoke python execFile %cd%/InMoov/InMoov.py -service python Python)

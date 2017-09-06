@@ -266,13 +266,15 @@ def translateText(text,language):
     
     try:
       RealLang=en_languages[language]
-    except: 
+    except:
+      chatBot.setPredicate("default","topic","default")
       chatBot.getResponse("AZURE_ERROR_2 "+language)
     print RealLang
     
     try:
       AzureTranslator.detectLanguage(text)
     except:
+      chatBot.setPredicate("default","topic","default")
       chatBot.getResponse("AZURE_ERROR_1")
       RealLang="0"
     
@@ -292,6 +294,7 @@ def translateText(text,language):
       
       
       if 'Cannot find an active Azure Market Place' in t_text:
+        chatBot.setPredicate("default","topic","default")
         chatBot.getResponse("AZURE_ERROR_3")
       else:
         mouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  

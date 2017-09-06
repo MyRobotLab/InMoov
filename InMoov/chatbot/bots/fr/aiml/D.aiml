@@ -37,7 +37,7 @@
   <category>
     <pattern>D AUTRES QUESTIONS</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -511,7 +511,7 @@
   <category>
     <pattern>DEMANDES MOI CE QUE TU VEUX</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -521,7 +521,7 @@
   <category>
     <pattern>DEMANDES MOI TOUT CE QUE TU VEUX</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -531,7 +531,7 @@
   <category>
     <pattern>DEMANDES UNE QUESTION</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -675,13 +675,13 @@
   <category>
     <pattern>DEPUIS COMBIEN DE TEMPS EXISTES TU</pattern>
     <template>
-      <srai>BOT ÂGE</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>DEPUIS COMBIEN DE TEMPS TU EXISTES</pattern>
     <template>
-      <srai>BOT ÂGE</srai>
+      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -963,6 +963,24 @@
     <template>Je suis supposé dire quoi?</template>
   </category>
   <category>
+    <pattern>DIS * à *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+    <category>
+    <pattern>DIS * a *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+   <category>
+   <pattern>DIS *</pattern>
+   <template>
+    <srai>SAY <star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>DIS LA LUI</pattern>
     <template>Ok, J archive.</template>
   </category>
@@ -1022,7 +1040,7 @@
   </category>
   <category>
     <pattern>DIS QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
+    <template>Mon nom est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>DIT</pattern>
@@ -1115,7 +1133,7 @@
   </category>
   <category>
     <pattern>DIT QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
+    <template>Mon nom est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>DITES</pattern>
@@ -1212,7 +1230,7 @@
   </category>
   <category>
     <pattern>DITES QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
+    <template>Mon nom est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>DIVISE PAR ZÉRO</pattern>

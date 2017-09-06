@@ -41,14 +41,14 @@ def publishMouthcontrolPinLeft(pins):
   global AudioInputRawValue
 
   for pin in range(0, len(pins)):
-    
+    #print pins[pin].value
     #mouth control listener
     if isHeadActivated:
       if AudioSignalProcessingCalibration:AudioInputValues.append(pins[pin].value)
         
       if AudioSignalProcessing:
         if pins[pin].value>minAudioValue:
-          head.jaw.setVelocity(random.uniform(80,120))
+          head.jaw.setVelocity(random.uniform(200,400))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
           
@@ -58,25 +58,43 @@ def publishMouthcontrolPinLeft(pins):
 #functions to call about robot speak
 def talk(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    data=unicode(data,'utf-8')
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
     mouth.speak(data)
     
 def talkBlocking(data):
   if data:
-    if data[0:2]=="l ":data=data.replace("l ", "l'")
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    data=unicode(data,'utf-8')
+    if data[0:2].lower()=="l ":data=data.replace("l ", "l'")
+    if data[0:2].lower()=="j ":data=data.replace("j ", "j'")
+    if data[0:2].lower()=="c ":data=data.replace("c ", "c'")
+    if data[0:2].lower()=="d ":data=data.replace("d ", "d'")
+    data=data.lower().replace(" j ", " j'")
+    data=data.lower().replace(" l ", " l'")
+    data=data.lower().replace(" c ", " c'")
+    data=data.lower().replace(" d ", " d'")
+    data=data.lower().replace("it s", "it's")
+    data=data.replace(" j ", " j'")
+    data=data.replace(" l ", " l'")
     mouth.speakBlocking(data)
     
 def talkEvent(data):
   if IsMute==0:
-    if MyvoiceTTS!="VoiceRss":data=unicode(data,'utf-8')
+    data=unicode(data,'utf-8')
     subconsciousMouth.speakBlocking(data)
 
 #stop autolisten
 def onEndSpeaking(text):
 
-  if RobotIsStarted==1:
+  if i01.RobotIsStarted:
     
     MoveHeadTimer.stopClock()
     MoveEyesTimer.stopClock()
@@ -86,7 +104,7 @@ def onEndSpeaking(text):
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
-      head.jaw.setVelocity(20)
+      head.jaw.setVelocity(100)
       head.jaw.moveTo(0)
       #head.jaw.setVelocity(200)
       #head.jaw.moveTo(0)
@@ -106,10 +124,10 @@ def onStartSpeaking(text):
     except:
       print "onStartSpeaking error"
       pass
-  if RobotIsStarted:
+  if i01.RobotIsStarted:
 
-    if 'oui' in text or 'yes' in text or 'ja' in text:Yes()
-    if 'non' in text or 'no' in text or 'nicht' in text or 'neen' in text:No()
+    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="oui":Yes()
+    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="non":No()
 
     if random.randint(0,1)==1:MoveHeadTimer.startClock()
     if random.randint(0,1)==1:MoveEyesTimer.startClock()
@@ -146,6 +164,7 @@ def setRobotLanguage():
     if tmplanguage=="es":tmplanguage="es-es"
     if tmplanguage=="de":tmplanguage="de-de"
     if tmplanguage=="nl":tmplanguage="nl-nl"
+    if tmplanguage=="ru":tmplanguage="ru-ru"
   
   try:
     if MyvoiceTTS=="VoiceRss":i01.mouth.setKey(VoiceRssApi)
@@ -156,15 +175,18 @@ def setRobotLanguage():
     if MyvoiceTTS=="Polly":i01.mouth.setKey(awsaccesskeyid,awssecretkey)
   except:
     pass
+    
+  try:  
+    if MyvoiceTTS=="IndianTts":
+      i01.mouth.api=IndianTtsApi
+      i01.mouth.userid=IndianTtsUserId
+  except:
+    pass
 
   
   try:
-    if MyvoiceTTS=="MarySpeech" and MyLanguage=="en":
-      print ""
-    else:
-      mouth.setLanguage(tmplanguage)
-    if EarEngine!="Sphinx":
-      i01.ear.setLanguage(MyLanguage)
+    mouth.setLanguage(tmplanguage)
+    if EarEngine!="Sphinx":i01.ear.setLanguage(MyLanguage)
   except:
     errorSpokenFunc('MyLanguage')
     LanguageError=1
@@ -174,11 +196,14 @@ def setRobotLanguage():
 def checkAndDownloadVoice():        
   if MyvoiceTTS=="MarySpeech":
     if not CheckMaryTTSVoice(MyvoiceType):
-      mouth.installComponentsAcceptLicense(MyvoiceType)
+      try:
+        mouth.installComponentsAcceptLicense(MyvoiceType)
+      except:
+        pass
       if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
-        runtime.exit()
+        runtime.restart()
       else:
         errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
         

@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def takethis():
   fullspeed()
   i01.moveHead(14,90)
@@ -12,4 +14,5 @@ def takethis():
   sleep(2)
   isitaball()
   i01.mouth.speak("what is it")
+  #i01.mouth.speak(u"что это")
 

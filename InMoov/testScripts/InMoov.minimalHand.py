@@ -15,7 +15,7 @@ Voice="cmu-bdl-hsmm" #Male US voice
 #Voice="cmu-slt-hsmm" #Default female for MarySpeech
 voiceType = Voice
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
-mouth.installComponentsAcceptLicense(Voice)
+#mouth.installComponentsAcceptLicense(Voice)
 mouth.setVoice(voiceType)
 #i01.mouth.installComponentsAcceptLicense(Voice)
 ##############
@@ -40,12 +40,12 @@ i01.startMouth()
 rightHand = Runtime.create("i01.rightHand","InMoovHand")
 # tweaking defaults settings of right hand
 #Velocity
-rightHand.thumb.setMaxVelocity(-1)
-rightHand.index.setMaxVelocity(-1)
-rightHand.majeure.setMaxVelocity(-1)
-rightHand.ringFinger.setMaxVelocity(-1)
-rightHand.pinky.setMaxVelocity(-1)
-rightHand.wrist.setMaxVelocity(-1)
+rightHand.thumb.setVelocity(-1)
+rightHand.index.setVelocity(-1)
+rightHand.majeure.setVelocity(-1)
+rightHand.ringFinger.setVelocity(-1)
+rightHand.pinky.setVelocity(-1)
+rightHand.wrist.setVelocity(-1)
 #Mapping
 rightHand.thumb.map(0,180,64,135)
 rightHand.index.map(0,180,42,160)

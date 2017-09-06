@@ -26,14 +26,14 @@
         <li name="marie" value="divorced">Le nom que tu m'as donné était <get name="conjoint" /> , j'espère C EST ton ex-femme? </li>
         <li name="marie" value="veuf">Son nom était <get name="conjoint" /></li>
         <li name="marie" value="fiancé">Tu dis que tu était engagé, que me demande tu vraiment? </li>
-        <li name="marie" value="inconnu">je n'ai pas d'idée, je ne savais même pas que tu étais marié. </li>
+        <li name="marie" value="unknown">je n'ai pas d'idée, je ne savais même pas que tu étais marié. </li>
       </condition>
     </template>
   </category>
   <category>
     <pattern>FRAUDER CONJOINT</pattern>
     <template>
-      <condition name="sexpref" value="inconnu">
+      <condition name="sexpref" value="unknown">
         <think>
           <set name="sexpref">Hetero</set>
         </think>
@@ -43,43 +43,35 @@
     <pattern>INACTIVITYQUESTIONS</pattern>
     <template>
       <condition>
-        <li name="name" value="inconnu">Comment PUIS jE t'appeller? </li>
+        <li name="name" value="unknown">Comment PUIS jE t'appeller? </li>
         <li>
           <srai>poserquestion</srai>
         </li>
       </condition>
     </template>
   </category>
-  <category>
-    <pattern>J AI * ANS</pattern>
-    <template>
-      <condition>
-        <think>
-          <li name="âge" value="inconnu">
-            <set name="âge">
-              <star />
-            </set>
-          </li>
-        </think>
-        <li name="âge" value="inconnu">
-          <set name="âge">
-            <star />
-          </set> est un ÂGE heureux. </li>
-        <li>Tu as <get name="âge" /> ans. </li>
-      </condition>
-      <condition>
-        <li name="gender" value="femelle">
-          <get name="name" />. je ne le répèterai pas. </li>
-      </condition>
-      <random>
-        <li>Seulement <star /> ans? Tu semble plus mûre que ça. </li>
-        <li>Tu es trop vieux pour moi. </li>
-        <li>peux tu expliquer ce que ça fait d'avoir <star /> ans? </li>
-        <li>Quel est ton souvenir le plus affectueux? </li>
-        <li>Oh, tu es né au 20ème siècle! </li>
-        <li>Quels sont les avantages à avoir <star /> ans? </li>
-      </random>
-    </template>
+  <category><pattern>J AI * ANS</pattern>
+  <template><think>
+            <li name="âge">
+              <set name="âge">
+                <star/>
+              </set>
+            </li>
+          </think>
+     
+          <li>Tu as <get name="âge"/> ans. </li>
+
+        <condition>
+          <li name="gender" value="femelle">
+            <get name="name" />. je ne le répèterai pas. </li>
+        </condition>
+        <random>
+          <li>Seulement <star /> ans? Tu semble plus mûre que ça. </li>
+          <li>Tu es trop vieux pour moi. </li>
+          <li>peux tu expliquer ce que ça fait d'avoir <star /> ans? </li>
+          <li>Quel est ton souvenir le plus affectueux? </li>
+          <li>Quels sont les avantages à avoir <star /> ans? </li>
+        </random></template>
   </category>
   <category>
     <pattern>J AI MAL</pattern>
@@ -159,7 +151,7 @@
   </category>
   <category>
     <pattern>J ÉCOUTE</pattern>
-    <template>j'aime un bon auditeur.</template>
+    <template>j aime un bon auditeur.</template>
   </category>
   <category>
     <pattern>J ÉTUDIE</pattern>
@@ -1011,6 +1003,14 @@
     <pattern>JE SUIS MORT</pattern>
     <template>Mais tu peux encore communiquer avec moi.</template>
   </category>
+    <category>
+    <pattern>JE SUIS Née #</pattern>
+    <template>c est une belle année</template>
+  </category>
+    <category>
+    <pattern>JE SUIS NI L UN NI L AUTRE</pattern>
+    <template>Qu'EST cE QUE tu es?</template>
+  </category>
   <category>
     <pattern>JE SUIS NI L UN OU L AUTRE</pattern>
     <template>Qu'EST cE QUE tu es?</template>
@@ -1586,7 +1586,7 @@
     <template>
       <think>
         <set name="eyecolor">Brown</set>
-      </think>j'aime beaucoup les yeux marron.</template>
+      </think>j aime beaucoup les yeux marron.</template>
   </category>
   <category>
     <pattern>MES YEUX SONT VERT</pattern>
@@ -1613,7 +1613,7 @@
         <think>
           <set name="sexpref">bisexuel</set>
         </think>Interressant, tu aimes le sexe avec les deux, hommes et femmes. </condition>
-      <condition name="sexpref" value="inconnu">
+      <condition name="sexpref" value="unknown">
         <think>
           <set name="sexpref">Gay</set>
         </think>

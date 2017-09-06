@@ -148,7 +148,7 @@
   <category>
     <pattern>JE M APPELLE * ET TOI</pattern>
     <template>
-      <srai>MON NOM EST <star /></srai>, moi C EST <bot name="name" />.</template>
+      <srai>MON NOM EST <star /></srai>, moi C EST <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>TU PEUX M APPELER *</pattern>
@@ -315,7 +315,7 @@
   <category>
     <pattern>* JE M APPELLE * ET TOI</pattern>
     <template>
-      <srai>MON NOM EST <star index="2" /></srai>, moi C EST <bot name="name" />.</template>
+      <srai>MON NOM EST <star index="2" /></srai>, moi C EST <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>* TU PEUX M APPELER *</pattern>

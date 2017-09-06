@@ -26,3 +26,4 @@ if (os.path.isdir(RuningFolder+'system/languagePack/'+languagePack)):
     languagePackLoaded=0
     pass
 else:languagePackLoaded=0
+i01.lang_shutDown=lang_shutDown

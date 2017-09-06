@@ -39,7 +39,7 @@ i01.startMouth()
 rightHand = Runtime.create("i01.rightHand","InMoovHand")
 # Tweaking defaults settings of right hand
 # Velocity
-rightHand.index.setMaxVelocity(-1)
+rightHand.index.setVelocity(-1)
 # Mapping
 rightHand.index.map(0,180,42,160)
 # Rest position
@@ -53,6 +53,8 @@ i01.rightHand.enableAutoEnable(True)
 ##############
 # Verbal commands
 ear = i01.ear
+#always listen
+#ear.setAutoListen(True)
 
 ear.addCommand("attach your finger", "i01.rightHand.index", "enable")
 ear.addCommand("disconnect your finger", "i01.rightHand.index", "disable")

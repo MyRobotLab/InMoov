@@ -92,17 +92,31 @@
     </template>
   </category>
   <category>
-    <pattern>MAN</pattern>
+    <pattern># MAN #</pattern>
     <that>ARE YOU A MAN OR A WOMAN</that>
     <template>
       <srai>MY GENDER IS MALE</srai>
     </template>
   </category>
   <category>
-    <pattern>WOMAN</pattern>
+    <pattern># WOMAN #</pattern>
     <that>ARE YOU A MAN OR A WOMAN</that>
     <template>
       <srai>MY GENDER IS FEMALE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># TRANSEXUAL #</pattern>
+    <that>ARE YOU A MAN OR A WOMAN</that>
+    <template>
+      <srai>MY GENDER IS TRANSEXUAL</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>*</pattern>
+    <that>ARE YOU A MAN OR A WOMAN</that>
+    <template>
+      <srai>MY GENDER IS UNDEFINED</srai>
     </template>
   </category>
 </aiml>

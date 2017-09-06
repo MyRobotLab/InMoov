@@ -3,16 +3,6 @@
 # ##############################################################################
 
 ################################
-# INIT.0
-################################
-
-print "MRL version : ",runtime.getVersion()[-4:]
-print "Inmoov version : ",version
-print "Starting..."
-
-
-
-################################
 # INIT.1 - system dependencies & language pack
 ################################
 #subconsciousMouth for diagnose
@@ -37,7 +27,7 @@ execfile(RuningFolder+'/system/ConfigParser.py')
 if DEBUG:
   runtime.setLogLevel("INFO")
 else:
-  runtime.setLogLevel("WARN")
+  runtime.setLogLevel("ERROR")
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
@@ -46,17 +36,11 @@ execfile(RuningFolder+'/system/languagePack.py')
 execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
 
-
-
-ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")
-if LoadingPicture:
-  r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/loading_1024-600.jpg',1)
-
 ################################
 # INIT.2 - mrl core updater
 ################################
 
-#execfile(RuningFolder+'/system/updater/mrl_updater.py')
+execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 ################################
 # INIT.3 - services call
@@ -66,10 +50,11 @@ if LoadingPicture:
 for filename in sorted(os.listdir(RuningFolder+'services')):    
   if os.path.splitext(filename)[1] == ".py":
     execfile(RuningFolder+'services/'+filename.encode('utf8'))
-    print filename
-
+    if DEBUG==1:print filename
+if LoadingPicture:displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
 #mrl too old dude, update it !
-#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')    
+#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')   
+ 
 ################################
 # INIT.4 - skeleton loading & virtual skeleton
 ################################
@@ -88,8 +73,11 @@ if virtualInmoovActivated:
 for root, subdirs, files in os.walk(RuningFolder+'minimal'):
   for name in files:
     if name.split(".")[-1] == "py":
-      execfile(os.path.join(root, name).encode('utf8'))
-      if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)    
+      if (isChatbotActivated and name.split(".")[0][:11] == "earCommands"):
+        print name.split(".")[0]," not loaded because chatbot is activated"
+      else:  
+        execfile(os.path.join(root, name).encode('utf8'))
+        if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)    
 
 
 ################################
@@ -111,7 +99,7 @@ for root, subdirs, files in os.walk(RuningFolder+'life'):
       if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
 
 #create the custom script, only if not exist
-if not os.path.isfile(RuningFolder+'custom/Inmoov_custom.py'):shutil.move(RuningFolder+'custom/Inmoov_custom.py.default',RuningFolder+'custom/Inmoov_custom.py')
+if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(RuningFolder+'custom/InMoov_custom.py.default',RuningFolder+'custom/InMoov_custom.py')
 
       
 ################################
@@ -131,7 +119,7 @@ if boot_green:
 sleep(1)
 #first init check
 if CheckVersion() and isChatbotActivated:
-  r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
+  displayPic(RuningFolder+'system/pictures/update_available_1024-600.jpg')
   chatBot.getResponse("SYSTEM_NEW_VERSION")
   
 else:

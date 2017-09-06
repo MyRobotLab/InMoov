@@ -1,7 +1,7 @@
 def brooke():
   i01.enable()
   gestureforlondon3()
-  sleep
+  sleep(8)
   i01.disable()
   sleep(8)
   i01.head.enable()
