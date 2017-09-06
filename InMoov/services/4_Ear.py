@@ -50,10 +50,11 @@ def onRecognized(text):
   #RobotneedUpdate : fix about first question do you want to update
   global lastRecognized
   lastRecognized=text
+  text=text.replace("'", " ").replace("-", " ")
   if DEBUG==1:
     print "onRecognized : ",text,RobotneedUpdate
-  if isChatbotActivated and i01.RobotIsStarted and not i01.RobotIsSleeping:
-    chatBot.getResponse(text.replace("'", " ").replace("-", " "))
+  if isChatbotActivated and i01.RobotIsStarted:
+    if not i01.RobotIsSleeping or text=="wake up":chatBot.getResponse(text)
   
 
 # ##############################################################################
