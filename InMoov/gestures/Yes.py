@@ -1,7 +1,6 @@
 def Yes():
-  i01.disableRobotCanMoveHeadRandom(30)
-  
   if isHeadActivated==1:
+    i01.startedGesture()
     i01.setHeadVelocity(40,40,40)
     i01.moveHead(130,90)
     sleep(0.5)
@@ -16,5 +15,6 @@ def Yes():
     i01.moveHead(70,90)
     sleep(0.5)
     i01.moveHead(90,90)
+    i01.finishedGesture()
 
   
