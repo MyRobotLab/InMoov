@@ -5,16 +5,16 @@ isRightArmActivated=False
 [SERVO_MINIMUM_MAP_OUTPUT]
 ;your servo minimal limits
 bicep=0
-rotate=40
+rotate=0
 shoulder=0
-omoplate=10
+omoplate=0
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
 ;your servo maximal limits
-bicep=90
+bicep=180
 rotate=180
 shoulder=180
-omoplate=80
+omoplate=180
 
 [SERVO_REST_POSITION]
 bicep=0
@@ -48,15 +48,15 @@ omoplate=11
 
 [MINIMUM_MAP_INPUT]
 bicep=0
-rotate=0
+rotate=40
 shoulder=0
-omoplate=0
+omoplate=10
 
 [MAXIMUM_MAP_INPUT]
-bicep=180
+bicep=90
 rotate=180
 shoulder=180
-omoplate=180
+omoplate=80
 
 [SERVO_AUTO_DISABLE]
 bicep=True
