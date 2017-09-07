@@ -1,6 +1,6 @@
 def facerecognizer():
     
-  i01.disableRobotRandom(30)
+  i01.startedGesture()
   if (i01.RobotIsTrackingSomething()):
     i01.headTracking.stopTracking()
     i01.eyesTracking.stopTracking()
@@ -23,3 +23,4 @@ def facerecognizer():
         #mouth.speak("Hello "+lastName)
         #sleep(2)
     #inmoovWebKit.getResponse(lastName,data)
+  i01.finishedGesture()
