@@ -49,7 +49,8 @@ def sleepModeWakeUp():
 
 
 def sleepModeSleep():
-  ear.setAutoListen(False)
+  if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
+  stopTracking()
   ImageDisplay.exitFS()
   ImageDisplay.closeAll()
     

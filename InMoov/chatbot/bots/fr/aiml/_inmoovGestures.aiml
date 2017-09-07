@@ -126,6 +126,17 @@
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
     </category>
     <category>
+      <pattern># REGARDE MOI #</pattern>
+      <template>Je vais te suivre du regard jusqu'a ce que tu me dise arrête de me regarder.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>ARRÊTE DE ME REGARDER #</pattern>
+      <template>
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
+    </category>
+    <category>
       <pattern>ARRÊTE DE CHERCHER #</pattern>
       <template>J'arrête le scanner.
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>

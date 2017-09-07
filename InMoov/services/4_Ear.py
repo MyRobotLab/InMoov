@@ -16,6 +16,13 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 EarEngine=ThisServicePartConfig.get('MAIN', 'EarEngine')
 setContinuous=ThisServicePartConfig.getboolean('MAIN', 'setContinuous')
 setAutoListen=ThisServicePartConfig.getboolean('MAIN', 'setAutoListen')
+ForceMicroOnIfSleeping=True
+MagicCommandToWakeUp="wake up"
+try:
+  ForceMicroOnIfSleeping=ThisServicePartConfig.getboolean('MAIN', 'ForceMicroOnIfSleeping')
+  MagicCommandToWakeUp=ThisServicePartConfig.getboolean('MAIN', 'MagicCommandToWakeUp')
+except:
+  pass
 
 # ##############################################################################
 # MRL SERVICE CALL
@@ -54,9 +61,8 @@ def onRecognized(text):
   if DEBUG==1:
     print "onRecognized : ",text,RobotneedUpdate
   if isChatbotActivated and i01.RobotIsStarted:
-    if not i01.RobotIsSleeping or text=="wake up":chatBot.getResponse(text)
+    if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
   
-
 # ##############################################################################
 # EAR RELATED FUNCTIONS
 # ##############################################################################
