@@ -7,5 +7,9 @@
 ###############################################################################
 
 def shutdown():
+  if isEyeLidsActivated:
+    eyelids.autoBlink(False)
+    eyelids.eyelidleft.moveTo(180)
+    eyelids.eyelidright.moveTo(180)
   StopNeopixelAnimation()
   runtime.shutdown()
