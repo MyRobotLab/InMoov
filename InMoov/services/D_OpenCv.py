@@ -27,13 +27,40 @@ DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
 try:
   streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+  eyeXPidKp=ThisServicePartConfig.get('TRACKING', 'eyeXPidKp')
 except:
   ThisServicePartConfig.set('MAIN','streamerEnabled',False)
+  ThisServicePartConfig.add_section('TRACKING')
+  ThisServicePartConfig.set('TRACKING','eyeXPidKp',12.0)
+  ThisServicePartConfig.set('TRACKING','eyeXPidKi',1.0)
+  ThisServicePartConfig.set('TRACKING','eyeXPidKd',0.1)
+  ThisServicePartConfig.set('TRACKING','eyeYPidKp',12.0)
+  ThisServicePartConfig.set('TRACKING','eyeYPidKi',1.0)
+  ThisServicePartConfig.set('TRACKING','eyeYPidKd',0.1)
+  ThisServicePartConfig.set('TRACKING','rotheadPidKp',5.0)
+  ThisServicePartConfig.set('TRACKING','rotheadPidKi',1.0)
+  ThisServicePartConfig.set('TRACKING','rotheadPidKd',0.1)
+  ThisServicePartConfig.set('TRACKING','neckPidKp',5.0)
+  ThisServicePartConfig.set('TRACKING','neckPidKi',1.0)
+  ThisServicePartConfig.set('TRACKING','neckPidKd',0.1)
+
   with open(ThisServicePart+'.config', 'wb') as f:
     ThisServicePartConfig.write(f)
   ThisServicePartConfig.read(ThisServicePart+'.config')
   pass
 streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+eyeXPidKp=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKp')
+eyeXPidKi=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKi')
+eyeXPidKd=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKd')
+eyeYPidKp=ThisServicePartConfig.getfloat('TRACKING', 'eyeYPidKp')
+eyeYPidKi=ThisServicePartConfig.getfloat('TRACKING', 'eyeYPidKi')
+eyeYPidKd=ThisServicePartConfig.getfloat('TRACKING', 'eyeYPidKd')
+rotheadPidKp=ThisServicePartConfig.getfloat('TRACKING', 'rotheadPidKp')
+rotheadPidKi=ThisServicePartConfig.getfloat('TRACKING', 'rotheadPidKi')
+rotheadPidKd=ThisServicePartConfig.getfloat('TRACKING', 'rotheadPidKd')
+neckPidKp=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKp')
+neckPidKi=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKi')
+neckPidKd=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKd')
 
 # ##############################################################################
 #                 SERVICE START
