@@ -1,6 +1,6 @@
 def stopTracking():
   if (i01.RobotIsOpenCvCapturing()):
-    i01.headTracking.stopTracking()
-    i01.eyesTracking.stopTracking()
-    i01.finishedGesture()
+    if i01.headTracking:i01.headTracking.stopTracking()
+    if i01.eyesTracking:i01.eyesTracking.stopTracking()
+  i01.finishedGesture()
 
