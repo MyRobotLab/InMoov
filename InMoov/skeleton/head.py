@@ -173,6 +173,8 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     
     
     head.jaw.setVelocity(-1)
+    head.rothead.moveTo(head.rothead.getRest()+1)
+    head.neck.moveTo(head.neck.getRest()+1)
     head.rest()
     
 # ##############################################################################
