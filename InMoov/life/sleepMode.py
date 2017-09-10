@@ -121,7 +121,7 @@ if isPirActivated:
   SleepTimer = Runtime.createAndStart("SleepTimer","Clock")
   SleepTimer.addListener("pulse", python.name, "SleepTimerRoutine")
   SleepTimer.addListener("clockStopped", python.name, "SleepTimerRoutineStopped")
-  SleepTimer.setInterval(HumanPresenceTimeout)
+  SleepTimer.setInterval(SleepTimeout)
   PirControlerArduino.addListener("publishPinArray","python","publishPinPir")
   PirControlerArduino.enablePin(PirPin,1)
 

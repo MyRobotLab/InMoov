@@ -10,17 +10,13 @@ TimerValue=60000
 RobotCanMoveHeadWhileSpeaking=True
 
 
-
-;------------ todo -------------
-[MOVEWHOLEROBOT]
-TimerValueMin=60000
-TimerValueMax=120000
-MoveHead=True
-MoveArms=True
-MoveStomach=True
-MoveHands=True
 [SLEEPMODE]
 Activated=True
 UsePirToWakeUp=True
-;dont worry if you don't have one, vocal command will work too
-UsePirToWakeUp=True
+UsePirToActivateTracking=False
+
+;Sleep 5 minutes after last presence detected
+SleepTimeout=300000
+
+;Turn off tracking 20 seconds after last presence detected
+TrackingTimeout=20000
