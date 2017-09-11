@@ -391,6 +391,19 @@
   
 	<!-- gesture  -->
   
+    <!-- audio test -->
+    <category>
+    <pattern>AUDIO TEST</pattern>
+    <template>
+        <oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob>
+    </template>
+  </category>
   
   <category>
     <pattern>WAKE_UP</pattern>
