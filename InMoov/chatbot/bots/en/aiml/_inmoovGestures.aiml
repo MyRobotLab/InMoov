@@ -1801,6 +1801,19 @@
       </template>
     </category>
     
+    <category>
+      <pattern>POWER GLOVE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>powerglove()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>* POWER GLOVE *</pattern>
+      <template>
+        <srai>POWER GLOVE</srai>
+      </template>
+    </category>
+    
     
 
 </aiml>
