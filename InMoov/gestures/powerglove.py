@@ -4,6 +4,8 @@ def Powerglove():
     i01.startedGesture()
     i01.setRightHandVelocity(80,80,80,80,80,80)
     
-    TO BE CONTINUED
+    #TO BE CONTINUED
+    
+    
     i01.finishedGesture()
   
