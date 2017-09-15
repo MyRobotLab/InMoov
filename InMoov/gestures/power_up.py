@@ -1,6 +1,5 @@
 def power_up():
   ##sleep(2)
-  ##ear.pauseListening()
   ##rightSerialPort.digitalWrite(53, Arduino.HIGH)
   ##leftSerialPort.digitalWrite(53, Arduino.HIGH)
   i01.mouth.speakBlocking("I was sleeping")
@@ -11,5 +10,3 @@ def power_up():
   relax()
   ear.clearLock()
   sleep(2)
-  ear.resumeListening()
-

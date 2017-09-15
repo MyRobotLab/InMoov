@@ -9,7 +9,7 @@
 
 
 def sleepModeWakeUp():
-  ear.setAutoListen(True)
+  ear.setAutoListen(setAutoListen)
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock()

@@ -1,7 +1,6 @@
 # -- coding: utf-8 --
 
 def servos():
-  ear.pauseListening()
   sleep(2)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
@@ -164,5 +163,3 @@ def servos():
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0);
   relax()
   sleep(2)
-  ear.resumeListening()
-

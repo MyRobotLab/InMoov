@@ -11,6 +11,13 @@
 AudioPlayer = Runtime.createAndStart("AudioPlayer", "AudioFile")
 
 def onAudioStart(data):
+  try:
+    if ear.listening:
+      ear.setAutoListen(False)
+      ear.stopListening()
+  except:
+    pass
+  
   if AudioSignalProcessing and isHeadActivated:
     print "onaudiostart"
     try:
@@ -22,6 +29,13 @@ def onAudioStart(data):
       pass
 
 def onAudioEnd(data):
+  try:
+    if not ear.listening:
+      ear.setAutoListen(setAutoListen)
+      ear.startListening()
+  except:
+    print "onAudioEnd error"
+    pass
   if AudioSignalProcessing and isHeadActivated:
     try:
       left.disablePin(AnalogPinFromSoundCard)
@@ -38,4 +52,4 @@ def AudioPlay(file):
 python.subscribe(AudioPlayer.getName(),"publishAudioStart")
 python.subscribe(AudioPlayer.getName(),"publishAudioEnd")
 if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
-sleep(2)	
+sleep(2)

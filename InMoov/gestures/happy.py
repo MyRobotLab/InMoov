@@ -25,5 +25,3 @@ def happy():
         i01.moveHand("left",0,0,0,0,0,90)
         i01.moveHand("right",81,79,118,47,0,90)
         sleep(5)
-        ear.resumeListening()
-
