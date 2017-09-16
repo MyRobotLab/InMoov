@@ -21,7 +21,6 @@ def onAudioStart(data):
   if AudioSignalProcessing and isHeadActivated:
     print "onaudiostart"
     try:
-      head.attach()
       head.jaw.moveTo(180)
       left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
     except:

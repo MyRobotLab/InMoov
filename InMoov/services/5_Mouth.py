@@ -48,7 +48,7 @@ def publishMouthcontrolPinLeft(pins):
         
       if AudioSignalProcessing:
         if pins[pin].value>minAudioValue:
-          head.jaw.setVelocity(random.uniform(200,400))
+          head.jaw.setVelocity(random.uniform(200,500))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
           
