@@ -9,6 +9,9 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
   
 [**CHANGELOG**]  
   
+-  
+0.5.0  
+- auto tracking  
 0.4.9  
 - tracking test and sleep fixes  
 0.4.7  

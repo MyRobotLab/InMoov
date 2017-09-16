@@ -7,12 +7,12 @@
 # only based on pir at this time
 ###############################################################################
 
-
 def sleepModeWakeUp():
+  WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
-      SleepTimer.startClock()
+      SleepTimer.startClock(True)
   
   if i01.RobotIsStarted:
     
@@ -47,7 +47,6 @@ def sleepModeWakeUp():
   StopNeopixelAnimation()
 
 
-
 def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
   stopTracking()
@@ -76,7 +75,6 @@ def sleepModeSleep():
   if isPirActivated:
     PirControlerArduino.enablePin(PirPin,1)
     
-    
 def welcomeMessage():
   
   if isChatbotActivated:
@@ -88,43 +86,45 @@ def welcomeMessage():
   else:
     talk(lang_ready)
   i01.RobotIsStarted=1
+
+global WaitXsecondBeforeRelaunchTracking
+WaitXsecondBeforeRelaunchTracking=0
+
+def humanDetected():
+  global WaitXsecondBeforeRelaunchTracking
+  WaitXsecondBeforeRelaunchTracking+=1
+  SleepTimer.restartClock(True)
+  if (isOpenCvActivated and UsePirToActivateTracking):
+    if (not i01.RobotIsTrackingSomething() and WaitXsecondBeforeRelaunchTracking>=5):
+      WaitXsecondBeforeRelaunchTracking=0
+      PlayNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
+      trackHumans()      
+    TrackingTimer.restartClock(True)
     
-def humanDetected():    
-  global SleepTimerAction    
-  SleepTimerAction="restart"
-  SleepTimer.stopClock()
-  
-  
-  
 def SleepTimerRoutine(timedata):
-  global pirTimerStarted
-  if pirTimerStarted and not i01.RobotIsSleeping:
+  if not i01.RobotIsSleeping:
     PlayNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
-    SleepTimer.stopClock()
-    
+    SleepTimer.stopClock()  
+    TrackingTimer.stopClock()
     sleepModeSleep()
-  pirTimerStarted=1
   
-def SleepTimerRoutineStopped():
-  global SleepTimerAction
-  global pirTimerStarted
-  pirTimerStarted=0
-  if SleepTimerAction=="restart":
-    SleepTimerAction=""
-    SleepTimer.startClock()
-    
-
+def TrackingTimerRoutine(timedata):
+  print "TrackingTimer stopped"
+  if i01.RobotIsTrackingSomething:
+    WaitXsecondBeforeRelaunchTracking=-10
+    stopTracking()
+    StopNeopixelAnimation()
+  TrackingTimer.stopClock()    
+  
 #pir starting  
 if isPirActivated:
   SleepTimer = Runtime.createAndStart("SleepTimer","Clock")
   SleepTimer.addListener("pulse", python.name, "SleepTimerRoutine")
-  SleepTimer.addListener("clockStopped", python.name, "SleepTimerRoutineStopped")
   SleepTimer.setInterval(SleepTimeout)
+  TrackingTimer = Runtime.createAndStart("TrackingTimer","Clock")
+  TrackingTimer.addListener("pulse", python.name, "TrackingTimerRoutine")
+  TrackingTimer.setInterval(TrackingTimeout)
   PirControlerArduino.addListener("publishPinArray","python","publishPinPir")
   PirControlerArduino.enablePin(PirPin,1)
-
-
-
-

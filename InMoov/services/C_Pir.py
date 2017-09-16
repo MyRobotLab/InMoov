@@ -33,10 +33,7 @@ PlayCurstomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCursto
 #                 SERVICE START
 # ##############################################################################
 #pir timer to avoid human detection notification every seconds...
-global pirTimerStarted
-pirTimerStarted=0
-global SleepTimerAction
-SleepTimerAction=""
+
 
 #analog pin listener read the pir
 def publishPinPir(pins):

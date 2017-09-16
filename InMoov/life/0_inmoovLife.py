@@ -37,4 +37,4 @@ except:
   pass
 SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
 TrackingTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'TrackingTimeout')
-UsePirToActivateTracking=inmoovLifeConfig.getboolean('SLEEPMODE', 'UsePirToActivateTracking') 
+UsePirToActivateTracking=inmoovLifeConfig.getboolean('SLEEPMODE', 'UsePirToActivateTracking')
