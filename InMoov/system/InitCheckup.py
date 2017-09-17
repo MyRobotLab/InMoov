@@ -65,7 +65,10 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 if virtualInmoovActivated:
   talkEvent(lang_startingVirtual)
   i01.startVinMoov()
-
+  
+if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
+  talkEvent(lang_noSkeleton)
+  
 ################################
 # INIT.5 - ear.addcmmands
 ################################
