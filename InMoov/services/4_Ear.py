@@ -35,7 +35,7 @@ ear.setAutoListen(setAutoListen)
 ear.setContinuous(setContinuous)
 
 # Start the webgui service without starting the browser
-webgui = Runtime.create("WebGui","WebGui")
+webgui = Runtime.create("webgui","WebGui")
 webgui.autoStartBrowser(False)
 webgui.startService()
 # Then start the browsers and show the WebkitSpeechRecognition service named i01.ear

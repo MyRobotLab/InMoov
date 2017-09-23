@@ -74,10 +74,8 @@ if isEyeLidsActivated:
  
     i01.startEyelids(EyeLidsConnectedToArduinoPort,EyeLidsConnectedToArduinoPortBoardType,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
     
-    eyelids.eyelidleft.enableAutoEnable(1)
-    eyelids.eyelidright.enableAutoEnable(1)
-    eyelids.eyelidleft.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
-    eyelids.eyelidright.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
+    eyelids.eyelidleft.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
+    eyelids.eyelidright.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
   
     eyelids.autoBlink(True)
     

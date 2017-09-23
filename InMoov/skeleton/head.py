@@ -155,27 +155,22 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       head.rollNeck.detach(left)
       head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollNeck'))
      
-    
-    
-    head.enableAutoEnable(1)
-  
     rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
     neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
     rollneckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rollneck')
     eyeXEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX')
     eyeYEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY')
-    head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
-    head.neck.enableAutoDisable(neckEnableAutoDisable)
-    head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
-    head.jaw.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
-    head.eyeX.enableAutoDisable(eyeXEnableAutoDisable)
-    head.eyeY.enableAutoDisable(eyeYEnableAutoDisable)
-    
     
     head.jaw.setVelocity(-1)
-    head.rothead.moveTo(head.rothead.getRest()+1)
-    head.neck.moveTo(head.neck.getRest()+1)
+
     head.rest()
+    
+    head.rothead.setAutoDisable(rotheadEnableAutoDisable)
+    head.neck.setAutoDisable(neckEnableAutoDisable)
+    head.rollNeck.setAutoDisable(rollneckEnableAutoDisable)
+    head.jaw.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
+    head.eyeX.setAutoDisable(eyeXEnableAutoDisable)
+    head.eyeY.setAutoDisable(eyeYEnableAutoDisable)
     
 # ##############################################################################
 #                 Software mouth control

@@ -1,5 +1,5 @@
 def trackHumans():
-  i01.startedGesture()
+  i01.head.setOverrideAutoDisable(True)
   if (i01.RobotIsOpenCvCapturing()):
     i01.opencv.removeFilter("Gray")
     i01.opencv.removeFilter("PyramidDown")
