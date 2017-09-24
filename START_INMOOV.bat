@@ -19,6 +19,8 @@ echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
 timeout 1 > NUL
 echo .
+if exist %cd%\InMoov\system\updated RMDIR /S /Q .myrobotlab
+if exist %cd%\InMoov\system\updated del %cd%\InMoov\system\updated
 move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar > NUL
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q haarcascades
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q hogcascades

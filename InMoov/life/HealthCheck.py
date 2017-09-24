@@ -11,13 +11,13 @@ HealthCheck.setInterval(60000)
 
 batterieLevel=100
 errorBat=1
-try:
-  if Runtime.getBatteryLevel():
-    batterieLevel = Runtime.getBatteryLevel()
-    print "battery :",batterieLevel
-    errorBat=0
-except:
-  pass
+#try:
+#  if Runtime.getBatteryLevel():
+#    batterieLevel = Runtime.getBatteryLevel()
+#    print "battery :",batterieLevel
+#    errorBat=0
+#except:
+#  pass
 
 
 def HealthCheck_def(timedata):
@@ -34,5 +34,5 @@ def HealthCheck_def(timedata):
   
 
 HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    
-HealthCheck.startClock()
+#HealthCheck.startClock()
 
