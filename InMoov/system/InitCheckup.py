@@ -5,10 +5,11 @@
 ################################
 # INIT.1 - system dependencies & language pack
 ################################
-#subconsciousMouth for diagnose
+#subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
-
+log = Runtime.createAndStart("log", "Log")
+runtime.setLogLevel("INFO")
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')
 # common functions
@@ -24,10 +25,6 @@ execfile(RuningFolder+'/system/inmoovGui.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-if DEBUG:
-  runtime.setLogLevel("INFO")
-else:
-  runtime.setLogLevel("ERROR")
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
@@ -108,6 +105,8 @@ if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(Runing
 ################################
 # INIT.8 - yes there is no 7 :) great, inmoov is alive
 ################################
+if DEBUG:runtime.setLogLevel("INFO")
+else:runtime.setLogLevel("ERROR")
 
 #wip updater
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')

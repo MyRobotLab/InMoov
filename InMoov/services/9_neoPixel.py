@@ -67,6 +67,14 @@ except:
   errorSpokenFunc('ConfigParserProblem','Neopixel.config')
   pass
   
+#for noworky
+log.info("NEOPIXEL.config")
+log.info("NeopixelMaster : "+str(ThisServicePartConfig.get('MAIN', 'NeopixelMaster')))
+log.info("masterArduinoPort : "+str(masterArduinoPort))
+log.info("isNeopixelActivated : "+str(isNeopixelActivated))
+log.info("pin : "+str(pin))
+log.info("numberOfPixel : "+str(numberOfPixel))
+  
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
@@ -97,6 +105,7 @@ if isNeopixelActivated==1:
     talkEvent(lang_startingNeoPixel)
   else:
     isNeopixelActivated=0
+    
 
 # ##############################################################################
 #                 SERVICE TWEAK

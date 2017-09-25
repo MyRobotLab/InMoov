@@ -62,6 +62,12 @@ neckPidKp=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKp')
 neckPidKi=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKi')
 neckPidKd=ThisServicePartConfig.getfloat('TRACKING', 'neckPidKd')
 
+#for noworky
+log.info("D_OpenCv.config")
+log.info("isOpenCvActivated : "+str(isOpenCvActivated))
+log.info("DisplayRender : "+str(DisplayRender))
+log.info("streamerEnabled : "+str(streamerEnabled))
+
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
