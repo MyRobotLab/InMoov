@@ -361,6 +361,11 @@
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
     </category>
     <category>
+      <pattern>MESURE LA DISTANCE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
+    </category>
+    <category>
       <pattern>PARFAIT</pattern>
       <template>Perfect.
         <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>

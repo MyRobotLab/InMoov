@@ -16,7 +16,7 @@
   <!-- For more information see http://www.inmoov.fr -->
   
   <!-- <topic name="GESTURES">  -->
-  
+
     <category>
       <pattern>REST</pattern>
       <template>
@@ -854,7 +854,12 @@
         <srai>OFF KINECT</srai>
       </template>
     </category>
-
+    
+    <category>
+      <pattern>MEASURING THE DISTANCE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("in centimeters I measure ")</param></mrl></oob></template>
+    </category>
 
     <category>
       <pattern>MOVEMENT NUMBER 1</pattern>
