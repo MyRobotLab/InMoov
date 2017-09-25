@@ -26,9 +26,9 @@ def sleepModeWakeUp():
       sleep(0.5)
       if PlayCurstomSoundIfDetection:AudioPlayer.playFile(RuningFolder+'/system/sounds/Notifications/'+random.choice(os.listdir(RuningFolder+'/system/sounds/Notifications')),False)
     elif rdmWakup==2:
-      PlayNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
+      if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 255, 0, 1)
       sleep(2)
-      StopNeopixelAnimation()
+      if isNeopixelActivated:i01.stopNeopixelAnimation()
     else: welcomeMessage()
     #optional switchon nervoboard
     switchOnAllNervo()
@@ -44,7 +44,7 @@ def sleepModeWakeUp():
     if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
   i01.RobotIsSleeping=0
-  StopNeopixelAnimation()
+  if isNeopixelActivated:i01.stopNeopixelAnimation()
 
 
 def sleepModeSleep():
@@ -66,9 +66,9 @@ def sleepModeSleep():
     sleep(5)
   i01.disable()
   switchOffAllNervo()
-  StopNeopixelAnimation()
+  if isNeopixelActivated:i01.stopNeopixelAnimation()
   sleep(2)
-  PlayNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
+  if isNeopixelActivated:i01.setNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
   
   i01.RobotIsSleeping=1
   #restart pir poling
@@ -97,13 +97,13 @@ def humanDetected():
   if (isOpenCvActivated and UsePirToActivateTracking):
     if (not i01.RobotIsTrackingSomething() and WaitXsecondBeforeRelaunchTracking>=5):
       WaitXsecondBeforeRelaunchTracking=0
-      PlayNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
+      if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
       trackHumans()      
     TrackingTimer.restartClock(True)
     
 def SleepTimerRoutine(timedata):
   if not i01.RobotIsSleeping:
-    PlayNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
+    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
     SleepTimer.stopClock()  
@@ -115,7 +115,7 @@ def TrackingTimerRoutine(timedata):
   if i01.RobotIsTrackingSomething:
     WaitXsecondBeforeRelaunchTracking=-10
     stopTracking()
-    StopNeopixelAnimation()
+    if isNeopixelActivated:i01.stopNeopixelAnimation()
   TrackingTimer.stopClock()    
   
 #pir starting  

@@ -30,7 +30,7 @@ def HealthCheck_def(timedata):
   
   if RobotIsErrorMode==1:
     if error_red:
-      PlayNeopixelAnimation("Flash Random", 255, 0, 0, 5)
+      i01.setNeopixelAnimation("Flash Random", 255, 0, 0, 5)
   
 
 HealthCheck.addListener("pulse", python.name, "HealthCheck_def")    

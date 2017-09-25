@@ -112,12 +112,12 @@ else:runtime.setLogLevel("ERROR")
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
-if boot_green:    
-  PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
+if boot_green and isNeopixelActivated:    
+  i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
-  StopNeopixelAnimation()
+  i01.stopNeopixelAnimation()
   sleep(1)
-  PlayNeopixelAnimation("Flash Random", 0, 255, 50, 10)
+  i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
 sleep(1)
 #first init check
 if CheckVersion() and isChatbotActivated:

@@ -11,5 +11,5 @@ def shutdown():
     eyelids.autoBlink(False)
     eyelids.eyelidleft.moveTo(180)
     eyelids.eyelidright.moveTo(180)
-  StopNeopixelAnimation()
+  i01.stopNeopixelAnimation()
   runtime.shutdown()

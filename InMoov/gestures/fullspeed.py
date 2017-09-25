@@ -1,7 +1,7 @@
 def fullspeed():
-  PlayNeopixelAnimation("Color Wipe", 200, 0, 0, 1)
+  i01.setNeopixelAnimation("Color Wipe", 200, 0, 0, 1)
   sleep(1)
-  PlayNeopixelAnimation("Ironman", 0, 0, 255, 1)
+  i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
   if isRightHandActivated:
     i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
       

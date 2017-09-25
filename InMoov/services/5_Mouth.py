@@ -98,8 +98,8 @@ def onEndSpeaking(text):
     
     MoveHeadTimer.stopClock()
     MoveEyesTimer.stopClock()
-    if flash_when_speak:
-      StopNeopixelAnimation()
+    if flash_when_speak and isNeopixelActivated:
+      i01.stopNeopixelAnimation()
 
   if AudioSignalProcessing:
     try:
@@ -131,7 +131,7 @@ def onStartSpeaking(text):
 
     if random.randint(0,1)==1:MoveHeadTimer.startClock()
     if random.randint(0,1)==1:MoveEyesTimer.startClock()
-    if flash_when_speak:PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+    if flash_when_speak and isNeopixelActivated:i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
 
 

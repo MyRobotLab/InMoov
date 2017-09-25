@@ -21,9 +21,10 @@ if ultraSonicSensorActivated:
   try:
     ultraSonicSensorArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicSensorArduino'))
     ultrasonicSensor.attach(ultraSonicSensorArduino, trigPin, echoPin)
+    i01.ultrasonicSensor=ultrasonicSensor
     talkEvent(lang_startingUltraSonic)
     # range can also be retreieved in a blocking call
-    print "ultrasonicSensor test is ", ultrasonicSensor.range()
+    print "ultrasonicSensor test is ", i01.getUltrasonicSensorDistance()
   except:
     errorSpokenFunc('BAdrduinoChoosen','ultra Sonic Sensor')
     ultraSonicSensorActivated=False
