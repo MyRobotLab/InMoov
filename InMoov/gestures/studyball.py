@@ -1,7 +1,7 @@
 # -- coding: utf-8 --
 
 def studyball():
-  i01.disableRobotRandom(30)
+  i01.startedGesture()
   ##keepball():
   sleep(3)
   i01.setHandSpeed("left", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
@@ -76,7 +76,6 @@ def studyball():
   #i01.mouth.speakBlocking("I will start tracking the object")
   #i01.mouth.speakBlocking(u"Я начну отслеживать объект")
   sleep(2)
-  sleep(2)
   i01.mouth.speakBlocking("I think it is a ball")
   #i01.mouth.speakBlocking(u"Я думаю, что это мяч")
   #i01.mouth.speakBlocking("you need to set the point")
@@ -85,3 +84,4 @@ def studyball():
   
   i01.headTracking.startLKTracking()
   i01.eyesTracking.startLKTracking()
+  i01.finishedGesture()
