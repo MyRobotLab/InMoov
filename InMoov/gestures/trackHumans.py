@@ -1,5 +1,4 @@
 def trackHumans():
-  i01.head.setOverrideAutoDisable(True)
   if (i01.RobotIsOpenCvCapturing()):
     i01.opencv.removeFilter("Gray")
     i01.opencv.removeFilter("PyramidDown")
@@ -8,8 +7,8 @@ def trackHumans():
   #i01.startEyesTracking("leftPort",22,24)
   #i01.eyesTracking.pid.setPID("eyeX",eyeXPidKp,eyeXPidKi,eyeXPidKd)
   #i01.eyesTracking.pid.setPID("eyeY",eyeYPidKp,eyeYPidKi,eyeYPidKd)
-  i01.headTracking.pid.setPID("rothead",rotheadPidKp,rotheadPidKi,rotheadPidKd)
-  i01.headTracking.pid.setPID("neck",neckPidKp,neckPidKi,neckPidKd)
+  i01.headTracking.pid.setPID("x",rotheadPidKp,rotheadPidKi,rotheadPidKd)
+  i01.headTracking.pid.setPID("y",neckPidKp,neckPidKi,neckPidKd)
   sleep(1)
   i01.headTracking.faceDetect()
   #i01.eyesTracking.faceDetect()
