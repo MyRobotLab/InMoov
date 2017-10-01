@@ -16,6 +16,7 @@ def relax():
     i01.moveHand("left",92,33,37,71,66,25)
     i01.moveHand("right",81,66,82,60,105,113)
     i01.moveTorso(95,90,90)
+    sleep(2)
 
   else:
     i01.setHandVelocity("left", 43, 43, 43, 43, 43, 43)
@@ -30,4 +31,5 @@ def relax():
     i01.moveHand("left",92,33,37,71,66,25)
     i01.moveHand("right",81,66,82,60,105,113)
     i01.moveTorso(95,90,90)
+    sleep(2)
   i01.finishedGesture()
