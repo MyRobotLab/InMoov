@@ -36,4 +36,4 @@ def areyoualright():
     i01.moveHead(90,90,90,90,65)
     sleep(1)
   i01.finishedGesture()
-    relax()
+  relax()
