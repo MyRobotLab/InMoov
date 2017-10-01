@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def canyougivemethetime():
+  i01.startedGesture()
   i01.mouth.speak("sure")
   #i01.mouth.speak(u"конечно")
   fullspeed()
@@ -83,5 +84,6 @@ def canyougivemethetime():
   i01.moveHand("right",20,40,40,30,30,72)
   i01.moveTorso(90,90,90)
   sleep(3)
+  i01.finishedGesture()
   relax()
    
