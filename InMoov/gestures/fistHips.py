@@ -1,4 +1,5 @@
 def fistHips():
+  i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -11,8 +12,10 @@ def fistHips():
   i01.moveHand("left",180,180,180,180,180,47)
   i01.moveHand("right",99,130,152,154,145,180)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()
 
 def fisthips():
+  i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -24,4 +27,5 @@ def fisthips():
   i01.moveHand("left",180,180,180,180,180,47)
   i01.moveHand("right",99,130,152,154,145,180)
   i01.moveTorso(90,90,90)
+  i01.finishedGesture()
 
