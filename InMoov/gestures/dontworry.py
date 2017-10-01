@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def dontworry():
+  i01.startedGesture()
   i01.setHandSpeed("left", 0.90, 0.90, 0.90, 0.90, 0.90, 0.95)
   i01.setHandSpeed("right", 0.90, 0.90, 0.90, 0.90, 0.90, 0.95)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -14,5 +15,6 @@ def dontworry():
   i01.mouth.speak("mmmmmmh, I sense much fear in you")
   #i01.mouth.speak(u"Ммммммх, я чувствую большой страх в тебе")
   sleep(2)
+  i01.finishedGesture()
   relax()
     
