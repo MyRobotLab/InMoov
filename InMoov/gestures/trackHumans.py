@@ -13,5 +13,6 @@ def trackHumans():
   i01.headTracking.faceDetect()
   #i01.eyesTracking.faceDetect()
   i01.setHeadVelocity(80, -1)
+  i01.moveHead.rollNeck(90)
   sleep(1)
   fullspeed()
