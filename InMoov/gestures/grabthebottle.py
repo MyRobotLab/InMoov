@@ -1,4 +1,5 @@
 def grabthebottle():
+  i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 0.80, 0.80, 0.80, 1.0, 0.80)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -11,4 +12,6 @@ def grabthebottle():
   i01.moveHand("left",180,138,140,164,180,60)
   i01.moveHand("right",0,0,0,0,0,90)
   i01.moveTorso(90,84,90)
+  sleep(1)
+  i01.finishedGesture()
 
