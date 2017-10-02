@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def playsong(data):
+  i01.startedGesture()
   if (data == "can i have your attention"): # Могу ли я привлечь ваше внимание
     i01.mouth.speak("ok you have my attention")
     #i01.mouth.speak(u"Хорошо, что я привлёк ваше внимание")
@@ -94,7 +95,8 @@ def playsong(data):
     madeby()
     relax()
     sleep(5)
-    i01.disable()  
+    i01.disable()
+  i01.finishedGesture()
 
   
    
