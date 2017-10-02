@@ -89,15 +89,19 @@ def welcomeMessage():
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10
+global autoTrackingStarted
+autoTrackingStarted=0
 
 def humanDetected():
   global WaitXsecondBeforeRelaunchTracking
   WaitXsecondBeforeRelaunchTracking+=1
+  global autoTrackingStarted
   SleepTimer.restartClock(True)
   if (isOpenCvActivated and UsePirToActivateTracking):
     if (not i01.RobotIsTrackingSomething() and WaitXsecondBeforeRelaunchTracking>=5):
       WaitXsecondBeforeRelaunchTracking=0
       if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
+      autoTrackingStarted=1
       trackHumans()      
     TrackingTimer.restartClock(True)
     
@@ -111,11 +115,14 @@ def SleepTimerRoutine(timedata):
     sleepModeSleep()
   
 def TrackingTimerRoutine(timedata):
+  global autoTrackingStarted
   global WaitXsecondBeforeRelaunchTracking
   print "TrackingTimer stopped"
   if i01.RobotIsTrackingSomething():
     WaitXsecondBeforeRelaunchTracking=-5
-    stopTracking()
+    if autoTrackingStarted:
+      autoTrackingStarted=0
+      stopTracking()
     if isNeopixelActivated:i01.stopNeopixelAnimation()
   TrackingTimer.stopClock()    
   
