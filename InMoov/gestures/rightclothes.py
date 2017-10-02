@@ -1,5 +1,6 @@
 def rightclothes():
   fullspeed()
+  i01.startedGesture()
   i01.setHandSpeed("left", 0.85, 0.85, 0.85, 0.85, 0.85, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.95, 0.95, 0.95, 0.85)
@@ -84,4 +85,6 @@ def rightclothes():
   i01.moveTorso(90,90,90)
   sleep(3)
   i01.moveHead(20,90,90,90,65)
+  sleep(1)
+  i01.finishedGesture()
   relax()
