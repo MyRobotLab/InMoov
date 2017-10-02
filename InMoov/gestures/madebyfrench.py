@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 def madebyfrench():
   relax()
+  i01.startedGesture()
   sleep(1)
   i01.moveHead(80,86)
   i01.moveArm("left",5,90,30,10)
@@ -199,5 +200,6 @@ def madebyfrench():
   i01.moveTorso(90,90,90)
   talkBlocking(u"merci de votre attention")
   sleep(0.2)
+  i01.finishedGesture()
   relax()
 
