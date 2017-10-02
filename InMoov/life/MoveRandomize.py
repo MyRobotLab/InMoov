@@ -9,27 +9,29 @@ def MoveRandom(timedata):
   MoveRandomTimer.setInterval(random.randint(10000,30000))
   
   if random.randint(0,1)==1:
-    if i01.RobotCanMoveEyesRandom:
-      i01.RobotCanMoveEyesRandom=False
+    if i01.RobotCanMoveEyesRandom:i01.RobotCanMoveEyesRandom=False
     else:
       i01.RobotCanMoveEyesRandom=True
       if not MoveEyesTimer.isClockRunning:MoveEyesTimer.startClock()
     
   if random.randint(0,1)==1:
-    if i01.RobotCanMoveBodyRandom:
-      i01.RobotCanMoveBodyRandom=False
+    if i01.RobotCanMoveBodyRandom:i01.RobotCanMoveBodyRandom=False
     else:
       i01.RobotCanMoveBodyRandom=True
+      if not MoveBodyTimer.isClockRunning:MoveBodyTimer.startClock()
     
   if random.randint(0,1)==1:
-    if i01.RobotCanMoveHeadRandom:
-      i01.RobotCanMoveHeadRandom=False
+    if i01.RobotCanMoveHeadRandom:i01.RobotCanMoveHeadRandom=False
     else:
       i01.RobotCanMoveHeadRandom=True
       if not MoveHeadTimer.isClockRunning:MoveHeadTimer.startClock()
       
-  if random.randint(0,3)==3:
-    i01.disableRobotRandom(20)
+  #little pause
+  if random.randint(0,4)==4:
+    i01.RobotCanMoveEyesRandom=False
+    i01.RobotCanMoveHeadRandom=False
+    i01.RobotCanMoveBodyRandom=False
+    rest()
     #chatBot.getResponse("RANDOM")
 
 def MoveRandomStart():
@@ -41,6 +43,7 @@ def MoveRandomStop():
   MoveBodyTimer.stopClock()
   MoveEyesTimer.stopClock()
   MoveHeadTimer.stopClock()
+  rest()
       
     
 MoveRandomTimer.addListener("pulse", python.name, "MoveRandom")
