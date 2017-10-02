@@ -26,6 +26,12 @@ def onAudioStart(data):
     except:
       print "onAudioStart error"
       pass
+      
+  try:
+    if MouthControlActivated:i01.mouthControl.onStartSpeaking("This is a fake text, a long fake text, very long.")
+  except:
+    pass
+    
 
 def onAudioEnd(data):
   try:
@@ -43,6 +49,11 @@ def onAudioEnd(data):
       print "onAudioEnd error"
       pass
       
+  try:
+    if MouthControlActivated:i01.mouthControl.onEndSpeaking("This is a fake text, a long fake text, very long.")
+  except:
+    pass
+  
 def AudioPlay(file):
   AudioPlayer.playFile(file,False)
       
