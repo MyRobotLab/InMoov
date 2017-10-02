@@ -62,6 +62,7 @@ def onRecognized(text):
     print "onRecognized : ",text,RobotneedUpdate
   if isChatbotActivated and i01.RobotIsStarted:
     if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
+    if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:humanDetected()
   
 # ##############################################################################
 # EAR RELATED FUNCTIONS
