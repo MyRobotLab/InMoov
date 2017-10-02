@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def servos():
+  i01.startedGesture()
   sleep(2)
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
@@ -161,5 +162,7 @@ def servos():
   i01.setHeadSpeed(1,1)
   i01.setArmSpeed("right", 1.0,1.0, 1.0, 1.0);
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0);
+  sleep(1)
+  i01.finishedGesture()
   relax()
   sleep(2)
