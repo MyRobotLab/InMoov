@@ -2,6 +2,7 @@
 
 def systemcheck():
   fullspeed()
+  i01.startedGesture()
   sleep(0.2)
   i01.setHeadSpeed(.75,.75)
   i01.moveHead(90,90)
@@ -82,5 +83,6 @@ def systemcheck():
   i01.mouth.speakBlocking("awaiting your commands")
   #i01.mouth.speakBlocking(u"Ожидаю ваши команды")
   sleep(0.5)
+  i01.finishedGesture()
   relax()
 
