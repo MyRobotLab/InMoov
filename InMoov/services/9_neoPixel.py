@@ -81,6 +81,8 @@ log.info("numberOfPixel : "+str(numberOfPixel))
 
 if isNeopixelActivated==1:
   neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
+  neopixelArduino.usedByInmoov=True
+  neopixelArduino.serial.usedByInmoov=True
   
   #check if connection is serial or usb
   if masterArduinoPort[:3].lower()=="com":

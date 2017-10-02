@@ -23,21 +23,12 @@ def MoveHeadStart():
   
   print "moveheadstart"
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
-    if isHeadActivated:
-      #head.setAcceleration(20)
-      head.rothead.enableAutoDisable(0)
-      head.neck.enableAutoDisable(0)
-      head.rollNeck.enableAutoDisable(0) 
-    else:
-      MoveHeadTimer.stopClock()
+    if not isHeadActivated:MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
     if isHeadActivated:
-      head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
-      head.neck.enableAutoDisable(neckEnableAutoDisable)
-      head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
       i01.setHeadVelocity(25,25,25)
       i01.head.rest()
       i01.setHeadVelocity(40,40,40)

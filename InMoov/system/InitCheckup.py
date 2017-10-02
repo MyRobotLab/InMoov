@@ -105,7 +105,7 @@ if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(Runing
 ################################
 # INIT.8 - yes there is no 7 :) great, inmoov is alive
 ################################
-if DEBUG:runtime.setLogLevel("INFO")
+if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
 
 #wip updater

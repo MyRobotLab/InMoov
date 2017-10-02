@@ -88,7 +88,7 @@ def welcomeMessage():
   i01.RobotIsStarted=1
 
 global WaitXsecondBeforeRelaunchTracking
-WaitXsecondBeforeRelaunchTracking=0
+WaitXsecondBeforeRelaunchTracking=-10
 
 def humanDetected():
   global WaitXsecondBeforeRelaunchTracking
@@ -111,9 +111,10 @@ def SleepTimerRoutine(timedata):
     sleepModeSleep()
   
 def TrackingTimerRoutine(timedata):
+  global WaitXsecondBeforeRelaunchTracking
   print "TrackingTimer stopped"
-  if i01.RobotIsTrackingSomething:
-    WaitXsecondBeforeRelaunchTracking=-10
+  if i01.RobotIsTrackingSomething():
+    WaitXsecondBeforeRelaunchTracking=-5
     stopTracking()
     if isNeopixelActivated:i01.stopNeopixelAnimation()
   TrackingTimer.stopClock()    
