@@ -1,5 +1,5 @@
 def howmanyfingersdoihave():
-  i01.disableRobotRandom(60)
+  i01.startedGesture()
   fullspeed()
   i01.moveHead(49,74)
   i01.moveArm("left",75,83,79,24)
@@ -129,6 +129,6 @@ def howmanyfingersdoihave():
   i01.moveArm("left",5,90,30,11)
   i01.moveArm("right",5,90,30,11)
   sleep(0.5)
+  i01.finishedGesture()
   relax()
-  sleep(0.5)
 
