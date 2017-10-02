@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def newyork():
+  i01.startedGesture()
   i01.mouth.speak("robot1")
   #i01.mouth.speak(u"робот1")
   i01.setHeadSpeed(1.0,1.0,1.0,1.0,1.0)
@@ -197,5 +198,6 @@ def newyork():
   i01.mouth.speakBlocking("New York, New York")
   #i01.mouth.speakBlocking(u"Нью-йорк, Нью-йорк")
   sleep(2)
+  i01.finishedGesture()
   relax()
 
