@@ -1,4 +1,5 @@
 def missedYou():
+  i01.startedGesture()
   #welcome   
   i01.setHandSpeed("left", 0.60, 0.60, 0.60, 0.60, 0.60, 0.60)
   i01.setHandSpeed("right", 0.60, 0.80, 0.60, 0.60, 0.60, 0.60)
@@ -14,8 +15,10 @@ def missedYou():
   sleep(2)
   #close arms
   chatBot.getResponse("SAY " + "Shall we give a hug")
+  i01.finishedGesture()
  
 def missedYouYes():
+  i01.startedGesture()
   print "missed you yes"
   i01.moveHead(20,90,30)
   i01.moveArm("left",60,60,45,30)
@@ -37,6 +40,7 @@ def missedYouYes():
   i01.moveHand("left",92,33,37,71,66,25)
   i01.moveHand("right",81,66,82,60,105,113)
   i01.moveTorso(95,90,90)
+  i01.finishedGesture()
   
 def missedYouNo():
   print "missed you no"
