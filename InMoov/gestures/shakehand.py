@@ -127,6 +127,6 @@ def shakehand():
   i01.moveHand("right",20,30,30,20,20,90)
   i01.moveTorso(95,95,90)
   sleep(1)
+  i01.finishedGesture()
   rest()
   relax()
-  i01.finishedGesture()
