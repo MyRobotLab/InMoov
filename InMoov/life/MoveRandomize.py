@@ -31,7 +31,7 @@ def MoveRandom(timedata):
     i01.RobotCanMoveEyesRandom=False
     i01.RobotCanMoveHeadRandom=False
     i01.RobotCanMoveBodyRandom=False
-    rest()
+    relax()
     #chatBot.getResponse("RANDOM")
 
 def MoveRandomStart():
