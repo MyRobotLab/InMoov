@@ -43,7 +43,7 @@ def MoveRandomStop():
   MoveBodyTimer.stopClock()
   MoveEyesTimer.stopClock()
   MoveHeadTimer.stopClock()
-  rest()
+  relax()
       
     
 MoveRandomTimer.addListener("pulse", python.name, "MoveRandom")

@@ -51,9 +51,6 @@ def publishMouthcontrolPinLeft(pins):
           head.jaw.setVelocity(random.uniform(200,500))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
-          
-
-
 
 #functions to call about robot speak
 def talk(data):
@@ -98,8 +95,7 @@ def onEndSpeaking(text):
     
     MoveHeadTimer.stopClock()
     MoveEyesTimer.stopClock()
-    if flash_when_speak and isNeopixelActivated:
-      i01.stopNeopixelAnimation()
+    if flash_when_speak and isNeopixelActivated:i01.stopNeopixelAnimation()
 
   if AudioSignalProcessing:
     try:
@@ -117,10 +113,7 @@ def onEndSpeaking(text):
 def onStartSpeaking(text):
   
   if AudioSignalProcessing:
-    try:
-      
-      left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-      
+    try:left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)      
     except:
       print "onStartSpeaking error"
       pass
@@ -133,9 +126,6 @@ def onStartSpeaking(text):
     if random.randint(0,1)==1:MoveEyesTimer.startClock()
     if flash_when_speak and isNeopixelActivated:i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
-
-
-
 # ##############################################################################
 # MOUTH RELATED FUNCTIONS
 # ##############################################################################

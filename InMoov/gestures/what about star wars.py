@@ -55,11 +55,4 @@ def whataboutstarwars():
       AudioPlayer.playFile(RuningFolder+'/system/sounds/mmmmmmh, from the dark side you are.mp3')
       sleep(4.5)
   i01.finishedGesture()
-  relax()    
-      
-
-      
-  
-      
-
-      
+  relax()
