@@ -1666,9 +1666,9 @@
     </category>
     
     <category>
-      <pattern>I LOVE YOU</pattern>
-      <template><srai>* DO YOU HAVE SOMETHING TO SAY ABOUT THIS</srai>
-        </template>
+      <pattern>WHAT DO YOU THINK ABOUT ARTIFICIAL INTELLIGENCE</pattern>
+      <template>I will always love you.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
     </category>
     
     <category>
