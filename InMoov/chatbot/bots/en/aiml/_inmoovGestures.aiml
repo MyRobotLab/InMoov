@@ -1034,8 +1034,43 @@
       <template>Shall we shake hand.
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>please to meet you</li>
+          <li>carefull my hand is made out of plastic</li>
+          <li>I am happy to shake a human hand</li>
+          <li>it is a pleasure to meet you</li>
+          <li>very nice to meet you</li>
+          <li>shaking a human hand, feels strange. please to meet you</li>
+          <li>I am glad you don't shake me like trump does</li>
+        </random>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>No problem, next time</li>
+          <li>I am sad that you do not want to shake my hand</li>
+        </random>
+      </template>
+    </category>
 
-
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Please, get closer, and take my hand</li>
+          <li>Don't be afraid, get closer</li>
+          <li>get closer, come, and shake my hand</li>
+        </random>
+      </template>
+    </category>
+    
     <category>
       <pattern>SHAKE HANDS</pattern>
       <template>

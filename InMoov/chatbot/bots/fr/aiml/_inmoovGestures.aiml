@@ -813,6 +813,40 @@
       </template>
     </category>
     <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>Je suis heureuse de te connaître</li>
+          <li>Attention ! ma main est fragile</li>
+          <li>Je suis heureuse de serrer une main humaine</li>
+          <li>Tu as la peau douce</li>
+          <li>Je viens en paix</li>
+          <li>C'est une sensation étrange de serrer une main biologique</li>
+          <li>Je suis heureuse que ce ne soit pas le président treumepeu qui me sert la main</li>
+        </random>
+      </template>
+    </category>
+        <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>Pas de soucis, la prochaine fois</li>
+          <li>je suis triste que tu ne veuilles pas me serrer la main</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Rapproche toi, viens me serrer la main</li>
+          <li>N'es pas peur, je ne mord pas</li>
+          <li>Rapproche toi</li>
+        </random>
+      </template>
+    </category>
+    <category>
       <pattern>SERRE LES MAINS</pattern>
       <template>
         <srai>SERRE LA MAIN</srai>
