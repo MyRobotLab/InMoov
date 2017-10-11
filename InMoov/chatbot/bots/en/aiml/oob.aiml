@@ -139,9 +139,9 @@
     <pattern>DIRECTIONS FROM * TO *</pattern>
     <template>Here are the directions from <star /> to <star index="2" />.  <oob><directions><from><star /></from><to><star index="2" /></to></directions></oob></template>
   </category>
-  <category>
-    <pattern>LAUNCH CAMERA</pattern>
-    <template>Launching the camera.  <oob><camera>on</camera></oob></template>
+  <category><pattern>LAUNCH CAMERA</pattern>
+    <template>Launching the camera.  
+    <srai>CAMERA ON</srai></template>
   </category>
   <category>
     <pattern>LAUNCH *</pattern>
