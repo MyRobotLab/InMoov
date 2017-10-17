@@ -9,9 +9,10 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
   
 [**CHANGELOG**]  
   
--  
+0.5.6  
+- MoveToBlocking()  
 0.5.2  
-- ultra sonic sensor   
+- ultra sonic sensor  
 0.5.0  
 - auto tracking  
 0.4.9  
