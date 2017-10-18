@@ -42,8 +42,8 @@ def MoveBody(timedata):
         if not rightArm.omoplate.isMoving():rightArm.omoplate.moveTo(random.uniform(10,20))
       if isTorsoActivated:
         i01.setTorsoVelocity(random.randint(2,5), random.randint(2,5), random.randint(2,5))
-        if not torso.topStom.isMoving():torso.topStom.moveTo(random.uniform(85,95))
-        if not torso.midStom.isMoving():torso.midStom.moveTo(random.uniform(88,93))
+        if not torso.topStom.isMoving():torso.topStom.moveTo(random.uniform(82,98))
+        if not torso.midStom.isMoving():torso.midStom.moveTo(random.uniform(82,98))
 
     else:
       MoveBodyTimer.stopClock()
@@ -67,7 +67,7 @@ def MoveBodyStopped():
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       print "MoveBodyStopped"
       i01.halfSpeed()
-      i01.rest()  
+      i01.rest()
 
 MoveBodyTimer.addListener("pulse", python.name, "MoveBody")
 MoveBodyTimer.addListener("clockStarted", python.name, "MoveBodyStart")  
