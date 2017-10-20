@@ -50,6 +50,7 @@ if configNeedUpdate:
 ScriptType=BasicConfig.get('MAIN', 'ScriptType')
 #read personnal config
 MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
+if MyvoiceTTS=="MicrosoftLocalTTS":MyvoiceTTS="LocalSpeech"
 MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
 VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
 MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')

@@ -1,7 +1,7 @@
 #mrl version check
 #check if we are not using eclipse build
 now = datetime.now()
-if str(now.year)!=str(runtime.getVersion()[:4]):
+if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:4])!="1.0.":
 
   try:
     actualVersion=int(runtime.getVersion()[-4:])
