@@ -85,7 +85,7 @@ if isNeopixelActivated==1:
   neopixelArduino.serial.usedByInmoov=True
   
   #check if connection is serial or usb
-  if masterArduinoPort[:3].lower()=="com":
+  if masterArduinoPort[:3].lower()=="com" or masterArduinoPort[:4].lower()=="/dev":
     neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort)
   else:
     try:

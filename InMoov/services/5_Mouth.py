@@ -137,7 +137,7 @@ def onStartSpeaking(text):
 #to know what is marytts version
 def getMaryttsVersion():
   try:
-    versionMary=glob.glob(os.getcwd().replace("\\", "/")+'/libraries/jar/marytts-common-*.jar')[0].replace('.jar','').replace(os.getcwd().replace("\\", "/")+'/libraries/jar\marytts-common-','')
+    versionMary="5.2"
   except:
     versionMary=0
     pass
