@@ -16,7 +16,7 @@ echo "This may take a few minutes"
 echo "------------------------------------------------------"
 sleep 1
 mv ./myrobotlab-*.jar ./myrobotlab.jar
-if [ ./mrlNeedReinstall ]; then
+if [ -f ./mrlNeedReinstall ]; then
 	rm -r haarcascades
 	rm -r hogcascades
 	rm -r lbpcascades
