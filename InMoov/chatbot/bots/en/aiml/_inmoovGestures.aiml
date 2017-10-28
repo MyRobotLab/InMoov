@@ -434,8 +434,8 @@
 
     <category>
       <pattern>MANUAL</pattern>
-      <template>Okay I don't listen anymore, to unlock me you need to say voice control.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
+      <template>Okay I don't listen anymore, to unlock me you need to say the custom keyword that is <get name="MagicCommandToWakeUp" />.
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp" /></param></mrl></oob></template>
     </category>
 
 
@@ -449,7 +449,7 @@
     <category>
       <pattern>STOP LISTENING</pattern>
       <template>I'm not going to listen to you.
-        <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
     </category>
 
 

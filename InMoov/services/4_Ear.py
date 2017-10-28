@@ -20,7 +20,7 @@ ForceMicroOnIfSleeping=True
 MagicCommandToWakeUp="wake up"
 try:
   ForceMicroOnIfSleeping=ThisServicePartConfig.getboolean('MAIN', 'ForceMicroOnIfSleeping')
-  MagicCommandToWakeUp=ThisServicePartConfig.getboolean('MAIN', 'MagicCommandToWakeUp')
+  MagicCommandToWakeUp=ThisServicePartConfig.get('MAIN', 'MagicCommandToWakeUp')
 except:
   pass
 
@@ -55,14 +55,14 @@ global lastRecognized
 lastRecognized=""
 def onRecognized(text):
   #RobotneedUpdate : fix about first question do you want to update
-  global lastRecognized
-  lastRecognized=text
-  text=text.replace("'", " ").replace("-", " ")
-  if DEBUG==1:
-    print "onRecognized : ",text,RobotneedUpdate
-  if isChatbotActivated and i01.RobotIsStarted:
-    if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
-    if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:humanDetected()
+  if text!="":
+    global lastRecognized
+    lastRecognized=text
+    text=text.replace("'", " ").replace("-", " ")
+    if DEBUG==1:print "onRecognized : ",text,RobotneedUpdate
+    if isChatbotActivated and i01.RobotIsStarted:
+      if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
+      if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:humanDetected()
   
 # ##############################################################################
 # EAR RELATED FUNCTIONS

@@ -40,6 +40,7 @@ if isChatbotActivated:
   chatBot.setPredicate("default","questionfirstinit","")
   chatBot.setPredicate("default","tmpname","")
   chatBot.setPredicate("default","null","")
+  chatBot.setPredicate("default","MagicCommandToWakeUp",MagicCommandToWakeUp)
   chatBot.savePredicates()
 else:
   errorSpokenFunc('lang_ChatbotError')

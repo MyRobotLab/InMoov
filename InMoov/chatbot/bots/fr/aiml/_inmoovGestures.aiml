@@ -246,8 +246,8 @@
     </category>
     <category>
       <pattern>MANUEL</pattern>
-      <template>Désormais je n'écoute plus, pour reprendre contrôle dites voice controle.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
+      <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp" />. Le mot clé peut être configuré dans ire . config
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp" /></param></mrl></oob></template>
     </category>
     <category>
       <pattern>VOICE CONTROL</pattern>
@@ -255,9 +255,9 @@
         <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
     </category>
     <category>
-      <pattern>ARRÊTE D'ÉCOUTER</pattern>
+      <pattern>ARRÊTE D ÉCOUTER</pattern>
       <template>Je coupe mon micro.
-        <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
     </category>
     <category>
       <pattern>VITESSE MAXI</pattern>

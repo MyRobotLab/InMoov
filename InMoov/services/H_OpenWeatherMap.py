@@ -36,14 +36,13 @@ def getRawWeather(townParam):
   	pass
   return r
   
-def isTheSunShiny(townParam=town):
+def isTheSunShiny(townParam="town"):
+  if townParam=="town":townParam=town
   weather=getRawWeather(townParam)
   
   if weather[1]!=1000 and isChatbotActivated:
+    print weather[1]
     todayforecast=weather[3].decode("utf-8")
     
     print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast)
     chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast))
-  
-  
-  
