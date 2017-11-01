@@ -48,6 +48,13 @@ except:
     ThisServicePartConfig.write(f)
   ThisServicePartConfig.read(ThisServicePart+'.config')
   pass
+  
+faceRecognizerActivated=True
+try:
+  faceRecognizerActivated=ThisServicePartConfig.getboolean('MAIN', 'faceRecognizerActivated')
+except:
+  pass
+
 streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
 eyeXPidKp=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKp')
 eyeXPidKi=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKi')
@@ -95,9 +102,18 @@ def openCvInit():
     if ScriptType!="RightSide":
       errorSpokenFunc('OpenCvNoWorky','camera '+str(CameraIndex))
     isOpenCvActivated=0
-  else:talkEvent(lang_startingOpenCv)
+  else:
+    talkEvent(lang_startingOpenCv)
+    python.subscribe("i01.opencv", "publishRecognizedFace")
   
   opencv.removeFilters()
   opencv.stopCapture()
   
 if isOpenCvActivated:openCvInit()
+
+def onRecognizedFace(name):
+  print name
+  # robot reaction if recognized face ( todo beter reaction... )
+  if isChatbotActivated:
+    chatBot.setUsername(name)
+    chatBot.getResponse("SYSTEM_SAY_HELLO")

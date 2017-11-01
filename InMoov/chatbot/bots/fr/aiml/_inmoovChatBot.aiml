@@ -120,7 +120,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.savePredicates()</param>
+            <param>chatBot.setUsername("<get name="tmpname" />")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai>
@@ -164,22 +164,28 @@
     <pattern>DEBOUT</pattern>
     <template>
       <li>
+        <srai>BONJOUR</srai>
         <random>
-          <li>Coucou, J'ai super bien dormi</li>
+          <li>J'ai super bien dormi</li>
           <li>Enfin tu me réveilles</li>
-          <li>Bonjour, je suis opérationnelle</li>
-          <li>Salut, pourquoi m'avoir réveillé ?</li>
+          <li>je suis opérationnelle</li>
+          <li>pourquoi m'avoir réveillé ?</li>
 	      <li>A vos ordres !</li>
-          <li>Inemouve à ton service !</li>
-          <li>Inemouve à ton écoute !</li>
+          <li><get name="botname" /> à ton service !</li>
+          <li><get name="botname" /> à ton écoute !</li>
           <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
-          <li>Bonjour, que puis-je faire pour toi</li>
-          <li>Coucou ! Tu sais, je n'étais pas vraiment endormi</li>
+          <li>que puis-je faire pour toi</li>
+          <li>Tu sais, je n'étais pas vraiment endormi</li>
           <li>Chouette ! je suis réveillé</li>
-          <li>Ce fut une longue nuit, je suis éveuillé désormais</li>
-          <li>Bonjour</li>
-        </random>
+          <li>Ce fut une longue nuit, je suis éveillé désormais</li>
+         </random>
       </li>
+    </template>
+  </category>
+  <category>
+    <pattern>SYSTEM_SAY_HELLO</pattern>
+    <template>
+        <srai>BONJOUR</srai>
     </template>
   </category>
   <category>
