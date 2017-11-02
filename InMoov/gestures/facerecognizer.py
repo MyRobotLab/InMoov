@@ -1,8 +1,8 @@
 def facerecognizer():    
   #( tracking now use facerecognizer filter, this raw function is useful to learn faces, waiting "not identified person concept"  )
   if (i01.RobotIsTrackingSomething()):
-    i01.headTracking.stopTracking()
-    i01.eyesTracking.stopTracking()
+    if i01.headTracking:i01.stopHeadTracking()
+    if i01.eyesTracking:i01.eyesTracking.stopTracking()
   i01.opencv.capture()
   i01.opencv.addFilter("PyramidDown")
   fr=i01.opencv.addFilter("FaceRecognizer")

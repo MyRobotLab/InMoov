@@ -1066,24 +1066,30 @@
       </template>
     </category>
     <category>
+      <pattern>APPRENTISSAGE DE VISAGE</pattern>
+      <template>Je démarre le module d'apprentissage des visages<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+    </category>
+    <category>
       <pattern>RECONNAISSANCE FACIALE</pattern>
-      <template>Je démarre la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+      <template><srai>CHERCHE LES HUMAINS</srai></template>
     </category>
     <category>
       <pattern>RECONNAISSANCE DE VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>RECONNAIT UN VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>ARRÊTE LA RECONNAISSANCE FACIALE</pattern>
-      <template>J'arrête la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+      <template>J'arrête la reconnaissance faciale
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
     </category>
     <category>
       <pattern>EXÉCUTE UNE SIGNATURE</pattern>

@@ -1,4 +1,5 @@
 def trackHumans():
+  stopTracking()
   i01.startHeadTracking("leftPort",12,13)
   #i01.startEyesTracking("leftPort",22,24)
   #i01.eyesTracking.pid.setPID("eyeX",eyeXPidKp,eyeXPidKi,eyeXPidKd)
