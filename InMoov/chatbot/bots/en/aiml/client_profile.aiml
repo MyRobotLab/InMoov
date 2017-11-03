@@ -781,7 +781,7 @@ I call you <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername("<get name="name" />")</param>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
           </mrl>
         </oob>
     </template>
@@ -799,7 +799,7 @@ I call you <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername("<get name="name" />")</param>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
           </mrl>
         </oob>
 </template>
@@ -823,7 +823,7 @@ I call you <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername("<get name="name" />")</param>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
           </mrl>
         </oob>
     </template>

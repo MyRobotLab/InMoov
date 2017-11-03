@@ -115,5 +115,5 @@ def onRecognizedFace(name):
   print name
   # robot reaction if recognized face ( todo beter reaction... )
   if isChatbotActivated:
-    chatBot.setUsername(name)
+    chatBot.setUsername(unicode(name,'utf-8'))
     chatBot.getResponse("SYSTEM_SAY_HELLO")

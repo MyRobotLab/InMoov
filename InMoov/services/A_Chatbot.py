@@ -42,10 +42,10 @@ if isChatbotActivated:
   chatBot.setPredicate("default","null","")
   chatBot.setPredicate("default","MagicCommandToWakeUp",MagicCommandToWakeUp)
   if chatBot.getPredicate("default","name")!="" and (chatBot.getPredicate("default","lastUsername")=="" or chatBot.getPredicate("default","lastUsername")=="unknown"):
-    chatBot.setPredicate("default","lastUsername",chatBot.getPredicate("default","name"))
+    chatBot.setPredicate("default","lastUsername",unicode(chatBot.getPredicate("default","name"),'utf-8'))
   chatBot.savePredicates()
   #start session based on last recognized person
-  if chatBot.getPredicate("default","lastUsername")!="" and chatBot.getPredicate("default","lastUsername")!="unknown":chatBot.setUsername(chatBot.getPredicate("default","lastUsername"))
+  if chatBot.getPredicate("default","lastUsername")!="" and chatBot.getPredicate("default","lastUsername")!="unknown":chatBot.setUsername(unicode(chatBot.getPredicate("default","lastUsername"),'utf-8'))
   
 else:
   errorSpokenFunc('lang_ChatbotError')
