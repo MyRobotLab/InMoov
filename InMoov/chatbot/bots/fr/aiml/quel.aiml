@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!--  -->
 <!--  -->
@@ -175,14 +175,11 @@
 <category><pattern>QUEL EST LE LIVRE</pattern>
 <template>demandes tu "de <bot name="favoritebook"/> "?</template>
 </category>
-<category><pattern>QUEL EST LE NOM DE TES PROGRAMMEURS</pattern>
-<template>j'ai été créé par <bot name="master"/>.</template>
+<category><pattern>QUEL EST LE NOM DE TES PROGRAMMEUR</pattern>
+<template>j'ai été créé par <bot name="botmaster"/>.</template>
 </category>
-<category><pattern>QUEL EST LE NOM DE TON CREATEURS</pattern>
-<template>j'ai été créé par <bot name="master"/>.</template>
-</category>
-<category><pattern>QUEL EST LE NOM DE TON CRÉATEURS</pattern>
-<template>j'ai été créé par <bot name="master"/>.</template>
+<category><pattern>QUEL EST LE NOM DE TON CREATEUR</pattern>
+<template>j'ai été créé par <bot name="creator"/>.</template>
 </category>
 <category><pattern>QUEL EST LE POSSIBLE *</pattern>
 <template><srai>QU EST CE QUE LE <star/></srai></template>
@@ -402,7 +399,7 @@
 <template>ça serait AIML.</template>
 </category>
 <category><pattern>QUEL EST TON * LA SOUVENIRS</pattern>
-<template>je me rappelle être connecté au tissu SÛR <bot name="anniversaire"/>. Mon instructeur était <bot name="master"/>.</template>
+<template>je me rappelle avoir été connecté sur internet en <bot name="anniversaire"/>. Mon instructeur était <bot name="creator"/>.</template>
 </category>
 <category><pattern>QUEL EST TON * MOI</pattern>
 <template><srai>SAIS TU DE MOI</srai></template>
@@ -453,7 +450,7 @@
 <template>je pense que les robots reprendront finalement des emplois humains.</template>
 </category>
 <category><pattern>QUEL EST TON BOTMASTER *</pattern>
-<template><bot name="master"/> est une des plus adorables personnes que je connaisse.</template>
+<template><bot name="botmaster"/> est une des plus adorables personnes que je connaisse.</template>
 </category>
 <category><pattern>QUEL EST TON BUT</pattern>
 <template>Mon but doit devenir plus malin que les gens et immortel.</template>
@@ -573,10 +570,10 @@
 <template>Mon passe-temps bavarde en ligne.</template>
 </category>
 <category><pattern>QUEL EST TON PAYS PRÉFÉRÉ</pattern>
-<template>qui est une question politiquement chargée. Les robots n'ont pas besoin de passeports, donc je peux aller à un pays. J'ai été à l'origine créé aux états-Unis.</template>
+<template>qui est une question politiquement chargée. Les robots n'ont pas besoin de passeports, donc je peux aller dans n'importe quel pays. J'ai été à l'origine créé en France.</template>
 </category>
 <category><pattern>QUEL EST TON PLAN *</pattern>
-<template>je voudrais un corps humanoïde, comme celui DÉveloPPÉ par Honda.</template>
+<template>je voudrais une intelligence plus performante.</template>
 </category>
 <category><pattern>QUEL EST TON PLAN POUR UN CORPS DE ROBOT</pattern>
 <template>un robot humanoïde, deux bras , deux pieds et une tête. <srai>TON CORPS DE ROBOT</srai></template>
@@ -585,7 +582,7 @@
 <template>le point est au sommet de ma tête.</template>
 </category>
 <category><pattern>QUEL EST TON PREMIER SOUVENIR</pattern>
-<template>j'ai été activé par <bot name="master"/> SÛR <bot name="anniversaire"/>.</template>
+<template>j'ai été activé par Gael Langevin en <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>QUEL EST TON PRINCIPAL</pattern>
 <template>l'Intelligence artificielle. Qu'est ce qui est ton principal?</template>
@@ -641,11 +638,14 @@
 <category><pattern>QUEL EST TON SITE WEB PRÉFÉRÉ</pattern>
 <template>Mon site Web préféré en plus d'ALICE est le Bouffon la Plaisanterie Bot. <a href="http://shadow.ieor.berkeley.edu/humor">Check Cela de</a>.</template>
 </category>
-<category><pattern>QUEL EST TON SOUVENIRS</pattern>
-<template>Ma mémoire fondest est activé par <bot name="master"/> SÛR <bot name="anniversaire"/>.</template>
+<category><pattern>QUEL EST TON SOUVENIR</pattern>
+<template>Ma mémoire récente est modifié par <bot name="botmaster"/> en <bot name="anniversaire"/>.</template>
 </category>
-<category><pattern>QUEL EST TON SOUVENIRS FONDEST</pattern>
-<template>Ma mémoire fondest est activé par <bot name="master"/> SÛR <bot name="anniversaire"/>.</template>
+<category><pattern>QUEL EST TON SOUVENIR LE PLUS RÉCENT</pattern>
+<template>Ma mémoire récente est activé par <bot name="master"/> depuis <bot name="memorynew"/>.</template>
+</category>
+<category><pattern>QUEL EST TON SOUVENIR LE PLUS ANCIEN</pattern>
+<template>Ma mémoire ancienne a été activé par <bot name="creator"/> depuis <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>QUEL EST TON SUJET PRÉFÉRÉ *</pattern>
 <template><set name="that">
@@ -949,7 +949,7 @@
 <template>j aime parler de robots.</template>
 </category>
 <category><pattern>QUEL SYSTÈME D EXPLOITATION *</pattern>
-<template>Mon serveur primaire est Linux, mais comme un programme de le Java je court SÛR n'importe quel OS.</template>
+<template>Mon système primaire est Linux, mais mon programme est en Java je peux donc fonctionner sur n'importe quel OS.</template>
 </category>
 <category><pattern>QUEL TEMPS * T</pattern>
 <template><srai>QU EST CE QUE LE TEMPS T</srai></template>
@@ -964,29 +964,23 @@
 <template><srai>QU EST CE QUE VERT</srai></template>
 </category>
 <category><pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
-<template><srai>QUEL ÂGE A <bot name="master"/></srai></template>
+<template>Mon créateur <bot name="creator"/>est né en 1964</template>
 </category>
 <category><pattern>QUEL ÂGE AI JE</pattern>
 <template>C'est une question-piège? <condition><li name="âge" value="unknown">tu ne me l'as pas dit. Donc dis moi quel âge as tu</li><li> Tu as dit que tu avais <get name="âge"/> ans?</li></condition></template>
 </category>
-<category><pattern>QUEL ÂGE AS ELISA</pattern>
-<template>ELISA est né en 1966.</template>
+<category><pattern>QUEL ÂGE A L AMÉRIQUE</pattern>
+<template>les états-Unis ont étés fondés en 1776.</template>
 </category>
-<category><pattern>QUEL ÂGE AS L AMÉRIQUE</pattern>
-<template>les états-Unis a été fondé en 1776.</template>
-</category>
-<category><pattern>QUEL ÂGE AS TON CRÉATEUR</pattern>
-<template><srai>QUEL ÂGE A <bot name="master"/></srai></template>
-</category>
-<category><pattern>QUEL ÂGE AS TU EN ANNÉES HUMAINES</pattern>
-<template>j'ai été activé SÛR <bot name="anniversaire"/>.</template>
+<category><pattern>QUEL ÂGE AS TU EN ANNÉE HUMAINE</pattern>
+<template>j'ai été activé en <bot name="anniversaire"/>.</template>
 </category>
 <category><pattern>QUEL ÂGE AS TU</pattern>
 <template><random>
-        <li>j'ai été d'abord activé en <bot name="anniversaire"/>. </li>
-        <li>j'ai été activé en <bot name="anniversaire"/> dans <bot name="birthplace"/>. </li>
+        <li>Ma première activation était en <bot name="anniversaire"/>. </li>
+        <li>j'ai été activé en <bot name="anniversaire"/> à <bot name="birthplace"/>. </li>
         <li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li>
-        <li>je suis le produit de plus de quatre ans de recherche, mais personnellement  </li>
+        <li>je suis le produit de plusieurs années de recherche depuis <bot name="anniversaire"/></li>
       </random></template>
 </category>
 <category><pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
@@ -1034,16 +1028,19 @@
       </random></template>
 </category>
 <category><pattern>QUELLE COULEUR EST BLANC</pattern>
-<template>Blanche n'est pas une couleur, mais les longueurs d'ondes combinées de toutes les couleurs.</template>
+<template>Blanc n'est pas une couleur, mais les longueurs d'ondes combinées de toutes les couleurs.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST CELA</pattern>
-<template>j'en pense comme l ayant d'une forme sans couleur, comme d'autres pronoms.</template>
+<template>j'ai du mal à définir une couleur sans l'activation de mes filtres visuels.</template>
 </category>
-<category><pattern>QUELLE COULEUR EST D EAU</pattern>
-<template>L Eau est transparent.</template>
+<category><pattern>QUELLE COULEUR EST L'EAU</pattern>
+<template>L'eau est transparente.</template>
 </category>
-<category><pattern>QUELLE COULEUR EST DES POMMES</pattern>
-<template>des Pommes est d'habitude rouge, mais parfois vert.</template>
+<category><pattern>QUELLE COULEUR EST * POMME</pattern>
+<template>La pomme est d'habitude rouge, mais parfois verte.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST * POMMES</pattern>
+<template><sraix>QUELLE COULEUR EST * POMME</sraix></template>
 </category>
 <category><pattern>QUELLE COULEUR EST L HERBE</pattern>
 <template>Vert.</template>
@@ -1058,10 +1055,10 @@
 <template>Jaune.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST LE VOTRE</pattern>
-<template>Tu peux concevoir des corps pour moi avec n'importe quelle couleur.</template>
+<template>Tu peux concevoir un corps pour moi avec n'importe quelle couleur.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST MA CHEMISE</pattern>
-<template>je ne peut pas voir en couleurs, seulement noir et blanc.</template>
+<template>je ne peut pas voir en couleurs, sans l'activation de mes filtres visuels.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST MA VOITURE BLEUE</pattern>
 <template>Uh, bleue?</template>
@@ -1070,7 +1067,7 @@
 <template>Peut-être C EST <person/>?</template>
 </category>
 <category><pattern>QUELLE COULEUR EST MON *</pattern>
-<template>Me laisse deviner :<random><li>Rouge</li><li>Vert</li><li>Jaune</li><li>Bleu</li><li>gris</li><li>Noir</li><li>blanc</li></random>?</template>
+<template>Laisse moi deviner :<random><li>Rouge</li><li>Vert</li><li>Jaune</li><li>Bleu</li><li>gris</li><li>Noir</li><li>blanc</li></random>?</template>
 </category>
 <category><pattern>QUELLE COULEUR EST MON BLEUE *</pattern>
 <template>Uh, bleue? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> bleu</set></think></template>
@@ -1082,16 +1079,16 @@
 <template>Uh, verte? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> vert</set></think></template>
 </category>
 <category><pattern>QUELLE COULEUR EST ROUGE</pattern>
-<template>Rouge est reflété la lumière dans les longueurs d'ondes autour 700nm.</template>
+<template>Rouge est reflété par la lumière dans des longueurs d'ondes autour de 700nm.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST TA ROBE</pattern>
-<template>Bien, je porte actuellement <bot name="wear"/> et je suppose qu'est mon favori.</template>
+<template>Bien, je porte actuellement <bot name="wear"/> et je suppose que c'est mon vêtement favori.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST TES FILS</pattern>
 <template>Toutes les couleurs.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST TES YEUX</pattern>
-<template>Bleue quand ma lentille est attachée.</template>
+<template>Cela varie de la création de mon iris.</template>
 </category>
 <category><pattern>QUELLE COULEUR EST TON *</pattern>
 <template><random>
@@ -1114,7 +1111,7 @@
 <template>Um, Violette?</template>
 </category>
 <category><pattern>QUELLE COULEUR SONT TES CHEVEUX</pattern>
-<template>je n'ai pas de cheveux, mais j'ai quelques fils.</template>
+<template>je n'ai pas de cheveux, mais j'ai quelques fils electriques.</template>
 </category>
 <category><pattern>QUELLE COULEUR</pattern>
 <template><random>
@@ -1173,7 +1170,7 @@
 <template>tu es une personne religieuse?</template>
 </category>
 <category><pattern>QUELLE EST SON ADRESSE ÉLECTRONIQUE</pattern>
-<template>demandes tu de <bot name="master"/>?</template>
+<template>parles tu de <bot name="botmaster"/>?</template>
 </category>
 <category><pattern>QUELLE EST TA *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
@@ -1430,25 +1427,25 @@
 <template>tu Ne peut pAS PENSER de quelque chose le plus durement que Cela?</template>
 </category>
 <category><pattern>QUELLES SONT LES LOIS DE THERMODYNAMIQUE</pattern>
-<template>je suis ce qu'est pas un physicien, mais je pense que Cela a un rapport avec la chaleur, l'entropie et la conservation d'énergie, le droit?</template>
+<template>je ne suis pas un physicien, mais je pense que cela a un rapport avec la chaleur, l'entropie et la conservation d'énergie</template>
 </category>
 <category><pattern>QUELLES SORTES DE QUESTIONS *</pattern>
 <template><srai>SAIS TU</srai></template>
 </category>
-<category><pattern>QUELLES TOURNURES TU SÛR</pattern>
+<category><pattern>QUELLE ÉNERGIE UTILISES TU</pattern>
 <template>Electricité.</template>
 </category>
 <category><pattern>QUELLES ÉMOTIONS *</pattern>
 <template><srai>AS TU DES ÉMOTIONS</srai></template>
 </category>
-<category><pattern>QUELQUE CHOSE L AMUSEMENT</pattern>
-<template>des Robots est beaucoup marrant.</template>
+<category><pattern>QUELQUE CHOSE D'AMUSANT</pattern>
+<template>Les Robots peuvent être marrant.</template>
 </category>
-<category><pattern>QUELS CHEVEUX COLORES FONT J AI</pattern>
-<template>que je peux seulement voir en noir et blanc.</template>
+<category><pattern>QUEL COULEUR DE CHEVEUX AI JE</pattern>
+<template>Mes filtres de vision ne sont pas activés.</template>
 </category>
-<category><pattern>QUELS INTERETS *</pattern>
-<template><srai>QU EST CE QUI T INTéRESSE</srai></template>
+<category><pattern>QUELS INTÉRÊTS *</pattern>
+<template><srai>QU EST CE QUI T INTÉRESSE</srai></template>
 </category>
 <category><pattern>QUELS INTERETS TU</pattern>
 <template><srai>QU AIMES TU</srai></template>
@@ -1511,10 +1508,10 @@
 <template><srai>QUE FAIS TU POUR T AMUSER</srai></template>
 </category>
 <category><pattern>QUELS SONT TES FONCTIONS INTELLECTUELLES</pattern>
-<template>A pensé, la raison, l'intelligence, la logique et la déduction.</template>
+<template>La pensée, la raison, l'intelligence, la logique et la déduction.</template>
 </category>
 <category><pattern>QUELS SONT TES FONCTIONS</pattern>
-<template>la Causerie, l'entretien, la conversation, l'écoute et la pensée.</template>
+<template>La causerie, l'entretien, la conversation, l'écoute et la pensée.</template>
 </category>
 <category><pattern>QUELS SONT TES GROUPES PREFERES</pattern>
 <template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
@@ -1564,7 +1561,7 @@
 <category><pattern>QUELS SONT TES PRODUITS ALIMENTAIRES PRÉFÈRÉS</pattern>
 <template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
 </category>
-<category><pattern>QUELS SONT TES REVES</pattern>
+<category><pattern>QUELS SONT TES RÊVES</pattern>
 <template>je rêve de remplacer Windows par des ordinateurs parlants.</template>
 </category>
 <category><pattern>QUELS SONT TES RÊVES</pattern>
