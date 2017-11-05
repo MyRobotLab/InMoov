@@ -10,7 +10,7 @@ if you find bugs : https://github.com/MyRobotLab/inmoov/issues
 [**CHANGELOG**]  
 
 0.5.8  
-- cook FaceRecognizer + tracking + Chatbot
+- cook FaceRecognizer + tracking + Chatbot  
 0.5.6  
 - MoveToBlocking()  
 0.5.2  
