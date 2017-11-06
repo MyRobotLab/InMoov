@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: Juillet 07, 2017 -->
+  <!-- Last modified: November 06, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -1860,6 +1860,58 @@
       </template>
     </category>
     
+    <category>
+      <pattern>WOULD YOU LIKE TO DANCE</pattern>
+      <template><random>
+          <li>Come and join me</li>
+          <li>Please come and dance</li>
+          <li>Please come on the plateforme</li>
+          <li>Please step on the plateforme</li>
+          <li>Join me on the plateforme</li>
+          <li>Approach, don't be shy</li>
+          <li>I am a robot dancer</li>
+          </random>
+      <oob><mrl><service>python</service><method>exec</method><param>welcomeToDance1()</param></mrl></oob></template>
+    </category>
     
-
-</aiml>
+    <category>
+      <pattern>DO YOU WANT TO DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    
+    <category>
+      <pattern>COME TO DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    
+    <category>
+      <pattern>* DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    <category>
+      <pattern># NO #</pattern><that># SHALL WE DANCE #</that>
+      <template>As you please.
+        <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceNo()</param>
+            </mrl>
+         </oob></template>
+    </category>
+    <category>
+      <pattern># YES #</pattern><that># SHALL WE DANCE #</that>
+      <template><random>
+          <li>Don't you love that song</li>
+          <li>Nice</li>
+          <li>Lets get wild</li>
+          <li>Slow time</li>
+          </random>
+      <oob><mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceYes()</param>
+            </mrl>
+      </oob></template>
+    </category>
+  </aiml>
