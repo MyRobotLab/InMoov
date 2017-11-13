@@ -32,6 +32,8 @@ def MoveHeadStop():
       i01.setHeadVelocity(25,25,25)
       i01.head.rest()
       i01.setHeadVelocity(40,40,40)
+      sleep(2)
+      i01.head.jaw.setVelocity(-1.0)
       
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
