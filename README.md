@@ -8,7 +8,9 @@ https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER
 if you find bugs : https://github.com/MyRobotLab/inmoov/issues  
   
 [**CHANGELOG**]  
-
+   
+0.6.1  
+- add AndroidSpeechRecognizer   
 0.5.8  
 - cook FaceRecognizer + tracking + Chatbot  
 0.5.6  

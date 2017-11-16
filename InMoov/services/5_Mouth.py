@@ -180,7 +180,7 @@ def setRobotLanguage():
   
   try:
     mouth.setLanguage(tmplanguage)
-    if EarEngine!="Sphinx":i01.ear.setLanguage(MyLanguage)
+    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLanguage(MyLanguage)
   except:
     errorSpokenFunc('MyLanguage')
     LanguageError=1
