@@ -12,7 +12,7 @@
   <!--  -->
 
     <category>
-      <pattern>METS-TOI AU REPOS *</pattern>
+      <pattern>METS TOI AU REPOS #</pattern>
       <template>
         <random>
           <li>Ah, C EST moins fatiguant.</li>
@@ -26,18 +26,6 @@
             <param>rest()</param>
           </mrl>
         </oob>
-      </template>
-    </category>
-    <category>
-      <pattern>METS-TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
-      </template>
-    </category>
-    <category>
-      <pattern>METS TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
       </template>
     </category>
     <category>
@@ -124,6 +112,11 @@
       <pattern>CHERCHE LES HUMAINS</pattern>
       <template>Je scanne les visages.
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>DéTECTION DE VISAGE</pattern>
+      <template>I'm looking for faces.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
     </category>
     <category>
       <pattern># REGARDE MOI #</pattern>
