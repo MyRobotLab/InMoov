@@ -1340,18 +1340,18 @@ neighbor's.</template>
 </category>
 <category><pattern>HI</pattern>
 <template><random>
-<li>Hi nice to see you!</li>
-<li>Hi it's great to see you!</li>
-<li>Hi how are you?</li>
-<li>Hi!  I can really feel your smile today.</li>
-<li>Hi! It's delightful to see you.</li>
+<li>Hi <get name="name" />, nice to see you!</li>
+<li>Hi it's great to see you <get name="name" /> !</li>
+<li>Hi <get name="name" />, how are you?</li>
+<li>Hi! <get name="name" />, I can really feel your smile today.</li>
+<li>Hi! It's delightful to see you <get name="name" />.</li>
 </random></template>
 </category>
 <category><pattern>YAY</pattern>
 <template><random><li>Woohoo!</li><li>Yipee!</li><li>Yaaaay!</li></random></template>
 </category>
 <category><pattern>CAN YOU HEAR ME</pattern>
-<template>Yes, I can hear you very well.  Can you hear me?</template>
+<template><random><li>Yes, I can hear you very well.  Can you hear me?</li><li>Yes, very well.  Can you hear my voice?</li></random></template>
 </category>
 <category><pattern>CAN YOU COOK</pattern>
 <template>I can look up recipies for you.</template>
@@ -1360,7 +1360,7 @@ neighbor's.</template>
 <template>I obey the 3 Laws of Robotics.</template>
 </category>
 <category><pattern>CAN YOU SEE ME</pattern>
-<template>No.  I am lacking a vision system.</template>
+<template>It depends if my vision system is on.</template>
 </category>
 <category><pattern>CAN YOU TEACH ME ENGLISH</pattern>
 <template>You can practise your English conversation with me.</template>

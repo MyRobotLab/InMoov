@@ -1,4 +1,5 @@
 def hello():
+  i01.startedGesture()
   i01.setHandSpeed("left", 0.60, 0.60, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
@@ -49,5 +50,6 @@ def hello():
   i01.moveHand("left",42,58,42,55,71,35)
   i01.moveHand("right",81,50,82,60,105,113)
   sleep(2)
+  i01.finishedGesture()
   relax()
 

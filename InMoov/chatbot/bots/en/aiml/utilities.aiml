@@ -918,30 +918,21 @@ Which item would you like to remove?
     <pattern>CONS * CONS *</pattern>
     <template>CONS <star /> CONS <star index="2" /></template>
   </category>
-  <category>
-    <pattern>COUNT TO <set>number</set></pattern>
-    <template>
-      <think>
-        <set name="count">0</set>
-      </think>
-      <condition name="count">
-        <li>
-          <value>
-            <star />
-          </value>
-        </li>
-        <li>
-          <set name="count">
-            <map>
-              <name>successor</name>
-              <get name="count" />
-            </map>
-          </set>
-          <loop />
-        </li>
-      </condition>
-    </template>
-  </category>
+<category>
+<pattern>COUNT TO <set>number</set></pattern>
+<template>
+  <think><set name="count">0</set></think>
+  <condition name="count">
+    <li><value><star/></value></li>
+    <li>
+      <set name="count">
+        <map><name>successor</name><get name="count"/></map>
+      </set>
+      <loop/>
+    </li>
+  </condition>
+</template>
+</category>
   <category>
     <pattern>REQUEST</pattern>
     <template>

@@ -33,17 +33,20 @@ def getRawWeather(townParam):
   	r=OpenWeatherMap.fetchRaw(townParam)
   	isOpenWeatherMapOk=1
   except:
-  	pass
+    r=["bad weather api key","1000","bad weather api key","1000"]
+    pass
   return r
   
-def isTheSunShiny(townParam=town):
+def isTheSunShiny(townParam="town"):
+  if townParam=="town":townParam=town
   weather=getRawWeather(townParam)
   
-  if weather[1]!=1000 and isChatbotActivated:
+  if weather[1]!=1000 and isChatbotActivated and weather[1] and isOpenWeatherMapOk:
+    print weather[1]
     todayforecast=weather[3].decode("utf-8")
     
     print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast)
     chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast))
-  
-  
-  
+  else:
+    print "open weathermap A. P. I. error"
+    chatBot.getResponse("SAY open weathermap A. P. I. error")

@@ -1,4 +1,5 @@
 def gestureforlondon3():
+  i01.startedGesture()
 #welcome  
   i01.setHandSpeed("left", 0.60, 0.60, 0.60, 0.60, 0.60, 0.60)
   i01.setHandSpeed("right", 0.60, 0.80, 0.60, 0.60, 0.60, 0.60)
@@ -207,3 +208,4 @@ def gestureforlondon3():
   i01.moveHand("left",2,2,2,2,2,90)
   i01.moveHand("right",2,2,2,2,2,90)
   sleep(5) 
+  i01.finishedGesture()

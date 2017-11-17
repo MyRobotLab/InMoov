@@ -5,16 +5,16 @@
 MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
 
 def MoveHead(timedata):
-
+  #redefine next loop
+  MoveHeadTimer.setInterval(random.randint(200,1000))
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
-    #redefine next loop
-    MoveHeadTimer.setInterval(random.randint(200,1000))
+    
     if isHeadActivated:
-      i01.setHeadVelocity(random.randint(8,25),random.randint(8,25),random.randint(8,25))
+      i01.setHeadVelocity(random.randint(8,20),random.randint(8,20),random.randint(8,20))
       #wait servo last move
-      if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(60,120))
-      if not head.neck.isMoving():head.neck.moveTo(random.uniform(60,120))
-      if not head.rollNeck.isMoving():head.rollNeck.moveTo(random.uniform(60,120))
+      if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(65,115))
+      if not head.neck.isMoving():head.neck.moveTo(random.uniform(70,110))
+      if not head.rollNeck.isMoving():head.rollNeck.moveTo(random.uniform(70,110))
     else:
       MoveHeadTimer.stopClock()
   
@@ -23,24 +23,17 @@ def MoveHeadStart():
   
   print "moveheadstart"
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
-    if isHeadActivated:
-      #head.setAcceleration(20)
-      head.rothead.enableAutoDisable(0)
-      head.neck.enableAutoDisable(0)
-      head.rollNeck.enableAutoDisable(0) 
-    else:
-      MoveHeadTimer.stopClock()
+    if not isHeadActivated:MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
     if isHeadActivated:
-      head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
-      head.neck.enableAutoDisable(neckEnableAutoDisable)
-      head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
       i01.setHeadVelocity(25,25,25)
       i01.head.rest()
       i01.setHeadVelocity(40,40,40)
+      sleep(2)
+      i01.head.jaw.setVelocity(-1.0)
       
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")

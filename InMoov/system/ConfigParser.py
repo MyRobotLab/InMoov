@@ -50,6 +50,7 @@ if configNeedUpdate:
 ScriptType=BasicConfig.get('MAIN', 'ScriptType')
 #read personnal config
 MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
+if MyvoiceTTS=="MicrosoftLocalTTS":MyvoiceTTS="LocalSpeech"
 MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
 VoiceRssApi=BasicConfig.get('TTS', 'VoiceRssApi')
 MyvoiceType=BasicConfig.get('TTS', 'MyvoiceType')
@@ -66,3 +67,14 @@ StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
 IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
 LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
 BetaVersion=BasicConfig.getboolean('GENERAL', 'BetaVersion')
+
+#for noworky
+log.info("_inmoov.config")
+log.info("ScriptType : "+str(ScriptType))
+log.info("MyvoiceTTS : "+str(MyvoiceTTS))
+log.info("MyLanguage : "+str(MyLanguage))
+log.info("MyvoiceType : "+str(MyvoiceType))
+log.info("ScriptType : "+str(ScriptType))
+log.info("MyvoiceTTS : "+str(MyvoiceTTS))
+log.info("MyLanguage : "+str(MyLanguage))
+log.info("MyvoiceType : "+str(MyvoiceType))

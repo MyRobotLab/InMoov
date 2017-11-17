@@ -777,6 +777,13 @@ I call you <get name="name" />.</template>
           </formal>
         </set>.
 <set name="firstname"><get name="name" /></set></think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
+          </mrl>
+        </oob>
     </template>
   </category>
   <category>
@@ -787,7 +794,15 @@ I call you <get name="name" />.</template>
         <star />
       </formal>.
 <think><srai>SET GENDER FROM NAME <star /></srai><set name="name"><formal><star /><star index="2" /></formal></set>.
-<set name="firstname"><formal><star /></formal></set><set name="lastname"><formal><star index="2" /></formal></set></think></template>
+<set name="firstname"><formal><star /></formal></set><set name="lastname"><formal><star index="2" /></formal></set></think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
+          </mrl>
+        </oob>
+</template>
   </category>
   <category>
     <pattern>CALL ME * * *</pattern>
@@ -804,6 +819,13 @@ I call you <get name="name" />.</template>
           </formal>
         </set>.
 <set name="firstname"><formal><star /></formal></set><set name="middlename"><formal><star index="2" /></formal></set><set name="lastname"><formal><star index="3" /></formal></set></think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="name" />")</param>
+          </mrl>
+        </oob>
     </template>
   </category>
   <category>
@@ -922,7 +944,6 @@ I call you <get name="name" />.</template>
         <set name="meta">set</set>
         <set name="middlename">what</set>
         <set name="mother">who</set>
-        <set name="name">Friend</set>
         <set name="newcontact">unknown</set>
         <set name="newpattern">NORESP</set>
         <set name="orientation">unknown</set>

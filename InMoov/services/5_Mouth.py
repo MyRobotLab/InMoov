@@ -48,12 +48,9 @@ def publishMouthcontrolPinLeft(pins):
         
       if AudioSignalProcessing:
         if pins[pin].value>minAudioValue:
-          head.jaw.setVelocity(random.uniform(200,400))
+          head.jaw.setVelocity(random.uniform(200,500))
           if not head.jaw.isMoving():head.jaw.moveTo(int(pins[pin].value))
     
-          
-
-
 
 #functions to call about robot speak
 def talk(data):
@@ -96,10 +93,10 @@ def onEndSpeaking(text):
 
   if i01.RobotIsStarted:
     
-    MoveHeadTimer.stopClock()
-    MoveEyesTimer.stopClock()
-    if flash_when_speak:
-      StopNeopixelAnimation()
+    if not MoveRandomTimer.isClockRunning:
+      MoveHeadTimer.stopClock()
+      MoveEyesTimer.stopClock()
+    if flash_when_speak and isNeopixelActivated:i01.stopNeopixelAnimation()
 
   if AudioSignalProcessing:
     try:
@@ -112,15 +109,10 @@ def onEndSpeaking(text):
       print "onEndSpeaking error"
       pass
   
-  
-  
 def onStartSpeaking(text):
   
   if AudioSignalProcessing:
-    try:
-      
-      left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-      
+    try:left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)      
     except:
       print "onStartSpeaking error"
       pass
@@ -129,13 +121,15 @@ def onStartSpeaking(text):
     if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="oui":Yes()
     if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="non":No()
 
-    if random.randint(0,1)==1:MoveHeadTimer.startClock()
-    if random.randint(0,1)==1:MoveEyesTimer.startClock()
-    if flash_when_speak:PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+    #force random move while speaking, to avoid conflict with random life gesture
+    if random.randint(0,1)==1:
+      i01.RobotCanMoveHeadRandom=True
+      MoveHeadTimer.startClock()
+    if random.randint(0,1)==1:
+      i01.RobotCanMoveEyesRandom=True
+      MoveEyesTimer.startClock()
+    if flash_when_speak and isNeopixelActivated:i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
-
-
-
 # ##############################################################################
 # MOUTH RELATED FUNCTIONS
 # ##############################################################################
@@ -143,7 +137,7 @@ def onStartSpeaking(text):
 #to know what is marytts version
 def getMaryttsVersion():
   try:
-    versionMary=glob.glob(os.getcwd().replace("\\", "/")+'/libraries/jar/marytts-common-*.jar')[0].replace('.jar','').replace(os.getcwd().replace("\\", "/")+'/libraries/jar\marytts-common-','')
+    versionMary="5.2"
   except:
     versionMary=0
     pass
@@ -186,7 +180,7 @@ def setRobotLanguage():
   
   try:
     mouth.setLanguage(tmplanguage)
-    if EarEngine!="Sphinx":i01.ear.setLanguage(MyLanguage)
+    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLanguage(MyLanguage)
   except:
     errorSpokenFunc('MyLanguage')
     LanguageError=1

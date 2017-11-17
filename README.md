@@ -8,7 +8,20 @@ https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER
 if you find bugs : https://github.com/MyRobotLab/inmoov/issues  
   
 [**CHANGELOG**]  
-0.4.7
+   
+0.6.1  
+- add AndroidSpeechRecognizer   
+0.5.8  
+- cook FaceRecognizer + tracking + Chatbot  
+0.5.6  
+- MoveToBlocking()  
+0.5.2  
+- ultra sonic sensor  
+0.5.0  
+- auto tracking  
+0.4.9  
+- tracking test and sleep fixes  
+0.4.7  
 - fix random life if partial skeleton & vinmoov config file  
 0.4.6  
 - russian and hindi language pack + new tts services  

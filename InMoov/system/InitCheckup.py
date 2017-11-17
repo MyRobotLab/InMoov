@@ -5,10 +5,11 @@
 ################################
 # INIT.1 - system dependencies & language pack
 ################################
-#subconsciousMouth for diagnose
+#subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
 subconsciousMouth.setVoice("cmu-slt-hsmm")
-
+log = Runtime.createAndStart("log", "Log")
+runtime.setLogLevel("INFO")
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')
 # common functions
@@ -24,10 +25,6 @@ execfile(RuningFolder+'/system/inmoovGui.py')
 
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-if DEBUG:
-  runtime.setLogLevel("INFO")
-else:
-  runtime.setLogLevel("ERROR")
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
@@ -65,7 +62,10 @@ for filename in os.listdir(RuningFolder+'skeleton'):
 if virtualInmoovActivated:
   talkEvent(lang_startingVirtual)
   i01.startVinMoov()
-
+  
+if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
+  talkEvent(lang_noSkeleton)
+  
 ################################
 # INIT.5 - ear.addcmmands
 ################################
@@ -105,17 +105,19 @@ if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(Runing
 ################################
 # INIT.8 - yes there is no 7 :) great, inmoov is alive
 ################################
+if DEBUG==1:runtime.setLogLevel("INFO")
+else:runtime.setLogLevel("ERROR")
 
 #wip updater
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
-if boot_green:    
-  PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
+if boot_green and isNeopixelActivated:    
+  i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)
   sleep(2)
-  StopNeopixelAnimation()
+  i01.stopNeopixelAnimation()
   sleep(1)
-  PlayNeopixelAnimation("Flash Random", 0, 255, 50, 10)
+  i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
 sleep(1)
 #first init check
 if CheckVersion() and isChatbotActivated:

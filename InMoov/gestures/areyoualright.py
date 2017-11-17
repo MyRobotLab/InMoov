@@ -1,4 +1,5 @@
 def areyoualright():
+  i01.startedGesture()
   i01.setHeadSpeed(0.85,1.0,0.85,0.85,1.0)
   i01.moveHead(90,60,90,180,65)
   sleep(0.5)
@@ -34,4 +35,5 @@ def areyoualright():
     i01.setHeadSpeed(1.0,1.0,1.0,1.0,1.0)
     i01.moveHead(90,90,90,90,65)
     sleep(1)
-    relax()
+  i01.finishedGesture()
+  relax()

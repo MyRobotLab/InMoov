@@ -17,7 +17,7 @@
   #speed: 1-65535   1=full speed, 2=2x slower than 1, 10=10x slower than 1
   #starting a animation :
 ##  neopixel.setAnimation("Animation Name", red, green, blue, speed)
-##  optional : PlayNeopixelAnimation("Animation Name", red, green, blue, speed, duration) > animation timeout, if neopixel exist
+##  optional : i01.setNeopixelAnimation("Animation Name", red, green, blue, speed, duration) > animation timeout, if neopixel exist
 
 # ##############################################################################
 #               PERSONNAL PARAMETERS
@@ -67,15 +67,25 @@ except:
   errorSpokenFunc('ConfigParserProblem','Neopixel.config')
   pass
   
+#for noworky
+log.info("NEOPIXEL.config")
+log.info("NeopixelMaster : "+str(ThisServicePartConfig.get('MAIN', 'NeopixelMaster')))
+log.info("masterArduinoPort : "+str(masterArduinoPort))
+log.info("isNeopixelActivated : "+str(isNeopixelActivated))
+log.info("pin : "+str(pin))
+log.info("numberOfPixel : "+str(numberOfPixel))
+  
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
 
 if isNeopixelActivated==1:
   neopixelArduino = Runtime.createAndStart("neopixelArduino","Arduino")
+  neopixelArduino.usedByInmoov=True
+  neopixelArduino.serial.usedByInmoov=True
   
   #check if connection is serial or usb
-  if masterArduinoPort[:3].lower()=="com":
+  if masterArduinoPort[:3].lower()=="com" or masterArduinoPort[:4].lower()=="/dev":
     neopixelArduinoIsConnected=CheckArduinos(neopixelArduino,masterArduinoPort)
   else:
     try:
@@ -94,32 +104,11 @@ if isNeopixelActivated==1:
   if neopixelArduinoIsConnected==True:
     #Starting NeoPixel Service
     neopixel.attach(neopixelArduino, pin, numberOfPixel)
+    i01.neopixel=neopixel
+    i01.neopixelArduino=neopixelArduino
     talkEvent(lang_startingNeoPixel)
   else:
     isNeopixelActivated=0
-
-# ##############################################################################
-#                 SERVICE TWEAK
-# ##############################################################################
-
-
-#function to call to clean poweroff neopixel  
-def StopNeopixelAnimation():
-  if isNeopixelActivated==1:
-    neopixel.animationStop()
     
-
-
-#function to call to play neopixel in blocking action  
-def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,duration=0):      
-  if isNeopixelActivated==1:
-    neopixel.setAnimation(Animation_Name, red, green, blue, speed)
-
-    if duration!=0:
-      sleep(duration)
-      neopixel.animationStop()
-
-
-sleep(0.1)
-if boot_green:    
-  PlayNeopixelAnimation("Theater Chase", 0, 255, 50, 1)
+if boot_green and isNeopixelActivated:    
+  i01.setNeopixelAnimation("Theater Chase", 0, 255, 50, 1)

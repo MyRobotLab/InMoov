@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: Juillet 07, 2017 -->
+  <!-- Last modified: November 06, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -16,7 +16,7 @@
   <!-- For more information see http://www.inmoov.fr -->
   
   <!-- <topic name="GESTURES">  -->
-  
+
     <category>
       <pattern>REST</pattern>
       <template>
@@ -244,6 +244,20 @@
       <template>I'm looking for faces.
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>FACE DETECTION</pattern>
+      <template>I'm looking for faces.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+    </category>
+    
+    
+    <category>
+      <pattern>LOOK AT ME</pattern>
+      <template>Where are you, there you are.
+        <srai>SEARCH HUMANS</srai>
+      </template>
+    </category>
 
 
     <category>
@@ -426,8 +440,8 @@
 
     <category>
       <pattern>MANUAL</pattern>
-      <template>Okay I don't listen anymore, to unlock me you need to say voice control.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
+      <template>Okay I don't listen anymore, to unlock me you need to say the custom keyword that is <get name="MagicCommandToWakeUp" />.
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp" /></param></mrl></oob></template>
     </category>
 
 
@@ -441,7 +455,7 @@
     <category>
       <pattern>STOP LISTENING</pattern>
       <template>I'm not going to listen to you.
-        <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
     </category>
 
 
@@ -846,7 +860,12 @@
         <srai>OFF KINECT</srai>
       </template>
     </category>
-
+    
+    <category>
+      <pattern>MEASURING THE DISTANCE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("in centimeters I measure ")</param></mrl></oob></template>
+    </category>
 
     <category>
       <pattern>MOVEMENT NUMBER 1</pattern>
@@ -1021,8 +1040,43 @@
       <template>Shall we shake hand.
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>please to meet you</li>
+          <li>carefull my hand is made out of plastic</li>
+          <li>I am happy to shake a human hand</li>
+          <li>it is a pleasure to meet you</li>
+          <li>very nice to meet you</li>
+          <li>shaking a human hand, feels strange. please to meet you</li>
+          <li>I am glad you don't shake me like trump does</li>
+        </random>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>No problem, next time</li>
+          <li>I am sad that you do not want to shake my hand</li>
+        </random>
+      </template>
+    </category>
 
-
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Please, get closer, and take my hand</li>
+          <li>Don't be afraid, get closer</li>
+          <li>get closer, come, and shake my hand</li>
+        </random>
+      </template>
+    </category>
+    
     <category>
       <pattern>SHAKE HANDS</pattern>
       <template>
@@ -1636,7 +1690,7 @@
     
     <category>
       <pattern>HELLO</pattern>
-      <template>Hello, my name is in mov.
+      <template><srai>HI</srai>
         <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
     </category>
     
@@ -1649,6 +1703,12 @@
     <category>
       <pattern>I LOVE YOU</pattern>
       <template>I love you too.
+        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>WHAT DO YOU THINK ABOUT ARTIFICIAL INTELLIGENCE</pattern>
+      <template>I will always love you.
         <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
     </category>
     
@@ -1793,6 +1853,71 @@
       </template>
     </category>
     
+    <category>
+      <pattern>POWER GLOVE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>powerglove()</param></mrl></oob></template>
+    </category>
     
-
-</aiml>
+    <category>
+      <pattern>* POWER GLOVE *</pattern>
+      <template>
+        <srai>POWER GLOVE</srai>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>WOULD YOU LIKE TO DANCE</pattern>
+      <template><random>
+          <li>Come and join me</li>
+          <li>Please come and dance</li>
+          <li>Please come on the plateforme</li>
+          <li>Please step on the plateforme</li>
+          <li>Join me on the plateforme</li>
+          <li>Approach, don't be shy</li>
+          <li>I am a robot dancer</li>
+          </random>
+      <oob><mrl><service>python</service><method>exec</method><param>welcomeToDance1()</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DO YOU WANT TO DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    
+    <category>
+      <pattern>COME TO DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    
+    <category>
+      <pattern>* DANCE</pattern>
+      <template><srai>WOULD YOU LIKE TO DANCE</srai></template>
+    </category>
+    <category>
+      <pattern># NO #</pattern><that># SHALL WE DANCE #</that>
+      <template>As you please.
+        <oob>
+            <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceNo()</param>
+            </mrl>
+         </oob></template>
+    </category>
+    <category>
+      <pattern># YES #</pattern><that># SHALL WE DANCE #</that>
+      <template><random>
+          <li>Don't you love that song</li>
+          <li>Nice</li>
+          <li>Lets get wild</li>
+          <li>Slow time</li>
+          </random>
+      <oob><mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>danceYes()</param>
+            </mrl>
+      </oob></template>
+    </category>
+  </aiml>

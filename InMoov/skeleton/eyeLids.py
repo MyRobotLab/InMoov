@@ -26,10 +26,8 @@ try:
   EyeLidsLeftActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsLeftActivated') 
   EyeLidsRightActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsRightActivated') 
   
-  if isEyeLidsActivated:
-    EyeLidsConnectedToArduinoPort=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino').replace("left","MyLeftPort").replace("right","MyRightPort"))
+  if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LightSide" or ScriptType=="Full")) or ScriptType=="Virtual":
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
-    EyeLidsConnectedToArduinoPortBoardType=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino').replace("left","BoardTypeMyLeftPort").replace("right","BoardTypeMyRightPort"))
 except:
   isEyeLidsActivated=0
   errorSpokenFunc('ConfigParserProblem','eyelids . config')
@@ -53,7 +51,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isEyeLidsActivated:
+if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LightSide" or ScriptType=="Full")) or ScriptType=="Virtual":
   if LeftPortIsConnected or RightPortIsConnected:
     talkEvent(lang_startingEyeLids)
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
@@ -71,13 +69,10 @@ if isEyeLidsActivated:
     eyelids.eyelidleft.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidleft'))
     eyelids.eyelidright.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'eyelidright'))
   
- 
-    i01.startEyelids(EyeLidsConnectedToArduinoPort,EyeLidsConnectedToArduinoPortBoardType,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
+    i01.startEyelids(EyeLidsConnectedToArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidleft'),ThisSkeletonPartConfig.getint('SERVO_PIN', 'eyelidright'))
     
-    eyelids.eyelidleft.enableAutoEnable(1)
-    eyelids.eyelidright.enableAutoEnable(1)
-    eyelids.eyelidleft.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
-    eyelids.eyelidright.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
+    eyelids.eyelidleft.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
+    eyelids.eyelidright.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidright'))
   
     eyelids.autoBlink(True)
     

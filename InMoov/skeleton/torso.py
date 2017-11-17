@@ -70,14 +70,13 @@ if isTorsoActivated or ScriptType=="Virtual":
       
     torso.topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
     torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
-   
     
     i01.startTorso(TorsoConnectedToArduinoPort,TorsoConnectedToArduinoPortBoardType)
-    torso.enableAutoEnable(1)
-    torso.topStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
-    torso.midStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
-  
+
     torso.rest()
+    
+    torso.topStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
+    torso.midStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
        
   else:
     #we force parameter if arduino is off

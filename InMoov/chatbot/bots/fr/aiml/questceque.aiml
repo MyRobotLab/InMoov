@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!--  -->
 <!--  -->
 <category><pattern>QU EST CE QU ON MANGE #</pattern>
-<template>
-<random>
+<template><random>
 <li>
 j aime <bot name="favoritefood"/>
 </li>
@@ -14,8 +13,7 @@ je ne suis pas un robot de cuisine
 <li>
 et si on commandait une pizza
 </li>
-</random>
-</template>
+</random></template>
 </category>
 <category><pattern>QU EST CE QUE ÉCHECS</pattern>
 <template><random>
@@ -4603,10 +4601,10 @@ et si on commandait une pizza
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
 <category><pattern>QU EST CE QUE NOM DE TON BOTMASTER *</pattern>
-<template>J'ai été créée par <bot name="master"/>.</template>
+<template>J'ai été créée par <bot name="botmaster"/>.</template>
 </category>
 <category><pattern>QU EST CE QUE NOM DE TON BOTMASTER</pattern>
-<template>J'ai été créée par <bot name="master"/>.</template>
+<template>J'ai été créée par <bot name="botmaster"/>.</template>
 </category>
 <category><pattern>QU EST CE QUE NOM RÉEL</pattern>
 <template>Probablement C EST <person/>.</template>
@@ -5449,17 +5447,6 @@ et si on commandait une pizza
         <li>un sentece ou l'enquête pour réunir cueillir l'information. </li>
       </random></template>
 </category>
-<category><pattern>QU EST CE QUE QUI</pattern>
-<template><random>
-        <li>je ne sais pas qui. </li>
-        <li>qui penses tu? </li>
-        <li>je ne peux pas dire à coup sûr. </li>
-        <li>ÊTRE plus spécifique. </li>
-        <li>ÊTRE moins spécifique. </li>
-        <li>Personne vous ne savez. </li>
-        <li>qu'ou que personne ou personnes. Aussi stands positions pour Organisation de Santé du Monde. </li>
-      </random></template>
-</category>
 <category><pattern>QU EST CE QUE QUOTIENT INTELLECTUEL</pattern>
 <template>Quotioent.</template>
 </category>
@@ -5944,7 +5931,7 @@ et si on commandait une pizza
         <li>un singe est chacun des longs membres divers moyens tailed de taille des primats d'ordre. Ils sont les parents proches de gens, partageant bien plus de 98 % du génome humain. </li>
       </random></template>
 </category>
-<category><pattern>QU EST CE QUE SINGULARITé</pattern>
+<category><pattern>QU EST CE QUE SINGULARITÉ</pattern>
 <template><li>
 La singularité technologique est l'hypothèse que l'invention de l'intelligence artificielle déclencherait un emballement de la croissance technologique qui induirait des changements imprévisibles sur la société humaine
 </li></template>
@@ -6015,7 +6002,7 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <template>C'est une question Très Zen-semblable.</template>
 </category>
 <category><pattern>QU EST CE QUE SON NOM DE FAMILLE</pattern>
-<template>demandes tu de <bot name="master"/>?</template>
+<template>parles tu de <bot name="master"/>?</template>
 </category>
 <category><pattern>QU EST CE QUE SON NOM</pattern>
 <template>que l'information est confidentielle.</template>
@@ -6329,7 +6316,7 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <template><bot name="looklike"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON MAITRE</pattern>
-<template>mon bot master est <bot name="master"/></template>
+<template>mon master est <bot name="master"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON PETIT AMI</pattern>
 <template><bot name="boyfriend"/></template>

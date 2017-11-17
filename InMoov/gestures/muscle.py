@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def muscle():
+  i01.startedGesture()
   i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.75, 0.85, 0.95, 0.85)
@@ -33,6 +34,7 @@ def muscle():
   i01.mouth.speakBlocking("not bad either, don't you think")
   #i01.mouth.speakBlocking(u"Неплохо, не так ли?")
   sleep(4)
+  i01.finishedGesture()
   relax()
   sleep(1)
 

@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: November 09, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -5111,7 +5111,7 @@
   <category>
     <pattern>WHO IS YOUR BOSS</pattern>
     <template>
-      <srai>BOTMASTER</srai>
+      <srai>CREATOR</srai>
     </template>
   </category>
   <category>
@@ -5157,7 +5157,7 @@
     </template>
   </category>
   <category>
-    <pattern>ARE YOU ALICE</pattern>
+    <pattern>ARE YOU INMOOV</pattern>
     <template>
       <srai>WHO ARE YOU</srai>
     </template>
@@ -9025,7 +9025,19 @@
   <category>
     <pattern>WHO IS YOUR CREATOR</pattern>
     <template>
-      <srai>BOTMASTER</srai>
+      <srai>CREATOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHO IS YOUR DOCTOR</pattern>
+    <template>
+      <srai>BOTDOCTOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHO IS YOUR MAKER</pattern>
+    <template>
+      <srai>MAKER</srai>
     </template>
   </category>
   <category>

@@ -12,7 +12,7 @@
   <!--  -->
 
     <category>
-      <pattern>METS-TOI AU REPOS *</pattern>
+      <pattern>METS TOI AU REPOS #</pattern>
       <template>
         <random>
           <li>Ah, C EST moins fatiguant.</li>
@@ -26,18 +26,6 @@
             <param>rest()</param>
           </mrl>
         </oob>
-      </template>
-    </category>
-    <category>
-      <pattern>METS-TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
-      </template>
-    </category>
-    <category>
-      <pattern>METS TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
       </template>
     </category>
     <category>
@@ -126,6 +114,22 @@
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
     </category>
     <category>
+      <pattern>DéTECTION DE VISAGE</pattern>
+      <template>I'm looking for faces.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># REGARDE MOI #</pattern>
+      <template>Je vais te suivre du regard jusqu'a ce que tu me dise arrête de me regarder.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>ARRÊTE DE ME REGARDER #</pattern>
+      <template>
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
+    </category>
+    <category>
       <pattern>ARRÊTE DE CHERCHER #</pattern>
       <template>J'arrête le scanner.
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
@@ -187,7 +191,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>METS LES MAINS SÛR LES HANCHES</pattern>
+      <pattern># MAINS SUR LES HANCHES</pattern>
       <template>Je mets mes mains SÛR les hanches.
         <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
     </category>
@@ -202,7 +206,7 @@
 	<oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>METS TES BRAS EN L'AIR</pattern>
+      <pattern># BRAS EN L AIR</pattern>
       <template>
         <random>
           <li>J'ai mes bras en l'air.</li>
@@ -235,8 +239,8 @@
     </category>
     <category>
       <pattern>MANUEL</pattern>
-      <template>Désormais je n'écoute plus, pour reprendre contrôle dites voice controle.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
+      <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp" />. Le mot clé peut être configuré dans ire . config
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp" /></param></mrl></oob></template>
     </category>
     <category>
       <pattern>VOICE CONTROL</pattern>
@@ -244,9 +248,9 @@
         <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
     </category>
     <category>
-      <pattern>ARRÊTE D'ÉCOUTER</pattern>
+      <pattern>ARRÊTE D ÉCOUTER</pattern>
       <template>Je coupe mon micro.
-        <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
     </category>
     <category>
       <pattern>VITESSE MAXI</pattern>
@@ -305,7 +309,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>SERS-TOI DE TA MAIN GAUCHE</pattern>
+      <pattern>SERS TOI DE TA MAIN GAUCHE</pattern>
       <template>J'utilise ma main gauche
         <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
     </category>
@@ -348,6 +352,11 @@
       <pattern>QU EST cE QUE C EST</pattern>
       <template>Je vérifie.
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>MESURE LA DISTANCE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
     </category>
     <category>
       <pattern>PARFAIT</pattern>
@@ -407,7 +416,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>MAINS EN L AIR</pattern>
+      <pattern># MAINS EN L AIR</pattern>
       <template>Surrender.
         <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
     </category>
@@ -797,6 +806,40 @@
       </template>
     </category>
     <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>Je suis heureuse de te connaître</li>
+          <li>Attention ! ma main est fragile</li>
+          <li>Je suis heureuse de serrer une main humaine</li>
+          <li>Tu as la peau douce</li>
+          <li>Je viens en paix</li>
+          <li>C'est une sensation étrange de serrer une main biologique</li>
+          <li>Je suis heureuse que ce ne soit pas le président treumepeu qui me sert la main</li>
+        </random>
+      </template>
+    </category>
+        <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>Pas de soucis, la prochaine fois</li>
+          <li>je suis triste que tu ne veuilles pas me serrer la main</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Rapproche toi, viens me serrer la main</li>
+          <li>N'es pas peur, je ne mord pas</li>
+          <li>Rapproche toi</li>
+        </random>
+      </template>
+    </category>
+    <category>
       <pattern>SERRE LES MAINS</pattern>
       <template>
         <srai>SERRE LA MAIN</srai>
@@ -988,7 +1031,7 @@
       </template>
     </category>
     <category>
-      <pattern>PAS D'INQUIÉTUDE</pattern>
+      <pattern>PAS D INQUIÉTUDE</pattern>
       <template>
         <oob>
           <mrl>
@@ -1016,24 +1059,30 @@
       </template>
     </category>
     <category>
+      <pattern>APPRENTISSAGE DE VISAGE</pattern>
+      <template>Je démarre le module d'apprentissage des visages<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+    </category>
+    <category>
       <pattern>RECONNAISSANCE FACIALE</pattern>
-      <template>Je démarre la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+      <template><srai>CHERCHE LES HUMAINS</srai></template>
     </category>
     <category>
       <pattern>RECONNAISSANCE DE VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>RECONNAIT UN VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>ARRÊTE LA RECONNAISSANCE FACIALE</pattern>
-      <template>J'arrête la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+      <template>J'arrête la reconnaissance faciale
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
     </category>
     <category>
       <pattern>EXÉCUTE UNE SIGNATURE</pattern>

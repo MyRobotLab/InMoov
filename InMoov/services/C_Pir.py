@@ -27,17 +27,13 @@ isPirActivated=ThisServicePartConfig.getboolean('MAIN', 'isPirActivated')
 PirPin=ThisServicePartConfig.getint('MAIN', 'PirPin') 
 if ScriptType=="Virtual":PirPin=2
 PirArduino=ThisServicePartConfig.get('MAIN', 'PirControlerArduino')
-HumanPresenceTimeout=ThisServicePartConfig.getint('TWEAK', 'HumanPresenceTimeout')
 PlayCurstomSoundIfDetection=ThisServicePartConfig.getboolean('MAIN', 'PlayCurstomSoundIfDetection')
 
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
 #pir timer to avoid human detection notification every seconds...
-global pirTimerStarted
-pirTimerStarted=0
-global SleepTimerAction
-SleepTimerAction=""
+
 
 #analog pin listener read the pir
 def publishPinPir(pins):

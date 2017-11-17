@@ -1,4 +1,5 @@
 def stopTracking():
-  i01.headTracking.stopTracking()
-  i01.eyesTracking.stopTracking()
-
+  if (i01.RobotIsTrackingSomething()):
+    if i01.headTracking:i01.stopHeadTracking()
+    if i01.eyesTracking:i01.eyesTracking.stopTracking()
+    stopfacerecognizer()

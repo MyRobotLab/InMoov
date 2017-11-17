@@ -67,7 +67,7 @@ def MoveBodyStopped():
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       print "MoveBodyStopped"
       i01.halfSpeed()
-      i01.rest()  
+      i01.rest()
 
 MoveBodyTimer.addListener("pulse", python.name, "MoveBody")
 MoveBodyTimer.addListener("clockStarted", python.name, "MoveBodyStart")  

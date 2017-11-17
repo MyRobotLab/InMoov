@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 
 def about():
+  i01.startedGesture()
   i01.setArmSpeed("right", 0.1, 0.1, 0.2, 0.2);
   i01.setArmSpeed("left", 0.1, 0.1, 0.2, 0.2);
   i01.setHeadSpeed(0.2,0.2)
@@ -49,6 +50,8 @@ def about():
   i01.moveArm("right", 4, 94, 10, 11);
   i01.mouth.speakBlocking("so, until then. i will be humankind's humble servant")
   #i01.mouth.speakBlocking(u"Так, до тех пор. Я буду покорным слугой человечества.")
+  sleep(1)
+  i01.finishedGesture()
 
   relax()
   fullspeed()

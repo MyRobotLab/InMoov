@@ -25,4 +25,16 @@ HealthCheckActivated=inmoovLifeConfig.getboolean('HEALTHCHECK', 'Activated')
 HealthCheckTimerValue=inmoovLifeConfig.getint('HEALTHCHECK', 'TimerValue')
 
 i01.RobotCanMoveHeadRandom=inmoovLifeConfig.getboolean('MOVEHEADRANDOM', 'RobotCanMoveHeadWhileSpeaking')
-  
+try:
+  SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
+except:
+  inmoovLifeConfig.set('SLEEPMODE', 'SleepTimeout', '300000')
+  inmoovLifeConfig.set('SLEEPMODE', 'TrackingTimeout', '60000')
+  inmoovLifeConfig.set('SLEEPMODE', 'UsePirToActivateTracking', True)
+  with open(inmoovLifeConfigFile+'.config', 'wb') as f:
+    inmoovLifeConfig.write(f)
+  inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')
+  pass
+SleepTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'SleepTimeout')
+TrackingTimeout=inmoovLifeConfig.getint('SLEEPMODE', 'TrackingTimeout')
+UsePirToActivateTracking=inmoovLifeConfig.getboolean('SLEEPMODE', 'UsePirToActivateTracking')

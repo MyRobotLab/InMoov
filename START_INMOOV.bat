@@ -19,6 +19,8 @@ echo UPDATE MRL INSTALLATION
 echo ------------------------------------------------------
 timeout 1 > NUL
 echo .
+if exist %cd%\InMoov\system\updated RMDIR /S /Q .myrobotlab
+if exist %cd%\InMoov\system\updated del %cd%\InMoov\system\updated
 move /y %cd%\myrobotlab-*.jar %cd%\myrobotlab.jar > NUL
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q haarcascades
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q hogcascades
@@ -27,6 +29,13 @@ if exist %cd%\mrlNeedReinstall RMDIR /S /Q libraries
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q pythonModules
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q resource
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q tessdata
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\de\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\es\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\en\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\fr\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\hi\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\nl\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\ru\aimlif
 if exist %cd%\mrlNeedReinstall del ivychain.xml
 if exist %cd%\mrlNeedReinstall del myrobotlab.log
 if exist %cd%\mrlNeedReinstall del repo.json
@@ -41,7 +50,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 3 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -install InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator MicrosoftLocalTTS IndianTts
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -install RasPi InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator LocalSpeech IndianTts
 COLOR 0F
 cls
 echo ------------------------------------------------------

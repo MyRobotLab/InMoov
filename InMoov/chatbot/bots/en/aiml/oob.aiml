@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: October 11, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -139,9 +139,9 @@
     <pattern>DIRECTIONS FROM * TO *</pattern>
     <template>Here are the directions from <star /> to <star index="2" />.  <oob><directions><from><star /></from><to><star index="2" /></to></directions></oob></template>
   </category>
-  <category>
-    <pattern>LAUNCH CAMERA</pattern>
-    <template>Launching the camera.  <oob><camera>on</camera></oob></template>
+  <category><pattern>LAUNCH CAMERA</pattern>
+    <template>Launching the camera.  
+    <srai>CAMERA ON</srai></template>
   </category>
   <category>
     <pattern>LAUNCH *</pattern>
@@ -273,7 +273,8 @@
   </category>
   <category>
     <pattern>PLAY *</pattern>
-    <template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. <oob><url>http://www.youtube.com/embed?listType=search&amp;list=<star />&amp;autoplay=1</url></oob></template>
+    <template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
+    <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("http://www.youtube.com/embed?listType=search&amp;list=<star/>&amp;autoplay=1")</param></mrl></oob></template>
   </category>
   <category>
     <pattern>WIFI ON</pattern>

@@ -983,7 +983,42 @@
       <template>пожимаю руку.
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
     </category>
+    
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>рад встрече с вами</li>
+          <li>Осторожно, моя рука сделана из пластика</li>
+          <li>Я рад пожать руку человеку</li>
+          <li>Мне приятно  встретить тебя</li>
+          <li>приятно познакомиться</li>
+          <li>Пожимая человеческую руку, чувствую себя странно. Рад встрече с вами.</li>
+          <li>Я рад, что ты не встряхиваешь мою руку, как козырь</li>
+        </random>
+      </template>
+    </category>
+    
+        <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>No problem, next time</li>
+          <li>I am sad that you do not want to shake my hand</li>
+        </random>
+      </template>
+    </category>
 
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Please, get closer, and take my hand</li>
+          <li>Don't be afraid, get closer</li>
+          <li>get closer, come, and shake my hand</li>
+        </random>
+      </template>
+    </category>
 
     <category>
       <pattern>ПОЖМИ РУКИ</pattern> 

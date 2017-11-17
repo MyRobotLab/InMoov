@@ -1,7 +1,7 @@
 # -- coding: utf-8 --
 
 def studyball():
-  i01.disableRobotRandom(30)
+  i01.startedGesture()
   ##keepball():
   sleep(3)
   i01.setHandSpeed("left", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
@@ -13,11 +13,12 @@ def studyball():
   i01.moveHead(20,70)
   i01.moveArm("left",5,84,16,20)
   i01.moveArm("right",54,77,45,10)
-  i01.moveHand("left",50,50,40,20,20,90)
+  i01.moveHand("left",0,50,40,20,20,90)
   i01.moveHand("right",180,145,145,3,0,11)
   i01.moveTorso(90,90,90)
   sleep(2)
   ##approachlefthand():
+  i01.setHandSpeed("left", 1.0, 0.65, 0.65, 0.65, 0.65, 1.0)
   i01.setHandSpeed("right", 0.75, 0.75, 0.75, 0.75, 0.75, 0.65)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.25, 0.25, 0.25, 0.25)
@@ -26,7 +27,7 @@ def studyball():
   i01.moveHead(20,84)
   i01.moveArm("left",65,52,62,23)
   i01.moveArm("right",60,50,35,10)
-  i01.moveHand("left",130,0,0,10,10,0)
+  i01.moveHand("left",0,0,0,10,10,0)
   i01.moveHand("right",180,145,145,3,0,11)
   i01.moveTorso(90,85,90)
   sleep(4)
@@ -38,7 +39,7 @@ def studyball():
   i01.moveHead(10,80)
   i01.moveArm("left",80,45,59,23)
   i01.moveArm("right",75,40,50,10)
-  i01.moveHand("left",120,0,40,10,10,0)
+  i01.moveHand("left",180,0,40,10,10,0)
   i01.moveHand("right",180,145,145,3,0,11)
   sleep(4)
   ##more():
@@ -49,7 +50,7 @@ def studyball():
   i01.moveHead(13,80)
   i01.moveArm("left",80,45,59,23)
   i01.moveArm("right",75,40,50,10)
-  i01.moveHand("left",160,148,140,10,10,0)
+  i01.moveHand("left",180,148,140,10,10,0)
   i01.moveHand("right",60,75,75,3,0,11)
   sleep(3)
   ##handdown():
@@ -73,15 +74,13 @@ def studyball():
   i01.moveArm("right",12,74,33,15)
   i01.moveHand("left",180,150,180,180,180,164)
   i01.moveHand("right",105,81,78,57,62,105)
-  #i01.mouth.speakBlocking("I will start tracking the object")
+  i01.mouth.speakBlocking("I will start tracking the object")
   #i01.mouth.speakBlocking(u"Я начну отслеживать объект")
+  fullspeed()
+  #trackPoint()
   sleep(2)
-  sleep(2)
-  i01.mouth.speakBlocking("I think it is a ball")
-  #i01.mouth.speakBlocking(u"Я думаю, что это мяч")
   #i01.mouth.speakBlocking("you need to set the point")
   #i01.mouth.speakBlocking(u"Вам нужно установить точку")
-  fullspeed()
-  
-  i01.headTracking.startLKTracking()
-  i01.eyesTracking.startLKTracking()
+  i01.mouth.speakBlocking("I think it is a ball")
+  #i01.mouth.speakBlocking(u"Я думаю, что это мяч")
+  i01.finishedGesture()

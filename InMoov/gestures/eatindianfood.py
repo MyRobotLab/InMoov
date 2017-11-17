@@ -2,6 +2,7 @@
 
 def eatindianfood():
   fullspeed()
+  i01.startedGesture()
   i01.setHeadSpeed(0.85, 0.80, 0.90, 0.90, 1.0)
   i01.moveHead(60,40,7,85,52)
   sleep(1)
@@ -21,4 +22,5 @@ def eatindianfood():
   sleep(1)
   i01.moveHead(60,90,80,90,52)
   sleep(0.8)
+  i01.finishedGesture()
   relax()

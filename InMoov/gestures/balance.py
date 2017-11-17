@@ -1,4 +1,5 @@
 def balance():
+  i01.startedGesture()
   i01.setHeadSpeed(0.95,0.95)
   i01.setArmSpeed("left",1.0,0.85,0.95,0.95)
   i01.setArmSpeed("right",0.65,0.85,0.65,0.85)
@@ -61,4 +62,5 @@ def balance():
   i01.moveHand("right",169,0,72,101,119,173)
   i01.moveTorso(31,112,90)
   sleep(6)
+  i01.finishedGesture()
   relax()
