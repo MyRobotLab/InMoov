@@ -216,8 +216,17 @@
           			<method>exec</method>
           			<param>sleepModeWakeUp()</param>
         		</mrl>
-      		</oob>      
-      		<li>
+      		</oob>      		
+     	</template>
+	</category>
+	<category>
+		<pattern>SYSTEM_SAY_HELLO</pattern>
+		<template><srai>BONJOUR</srai></template>
+	</category>	
+	<category>
+		<pattern>WAKE_UP</pattern>
+		<template>
+			<li>
         		<srai>BONJOUR</srai>
         		<random>
           			<li>J'ai super bien dormi</li>
@@ -233,16 +242,8 @@
           			<li>Chouette ! je suis réveillé</li>
           			<li>Ce fut une longue nuit, je suis éveillé désormais</li>
          		</random>
-     	 </li>
-     </template>
-	</category>
-	<category>
-		<pattern>SYSTEM_SAY_HELLO</pattern>
-		<template><srai>BONJOUR</srai></template>
-	</category>
-	<category>
-		<pattern>WAKE_UP</pattern>
-		<template><srai>Réveille-toi</srai></template>
+     		</li>
+     	</template>
 	</category>
 	<category>
 		<pattern>WAKE UP</pattern>
@@ -259,7 +260,9 @@
 	<category>
 		<pattern>FAIS DODO</pattern>
 		<template>
-			<set name="topic">SLEEPMODE</set>
+			<think>
+				<set name="topic">SLEEPMODE</set>
+			</think>	
 			Veux tu oui ou non que je me mette en veille
 		</template>
 	</category>
