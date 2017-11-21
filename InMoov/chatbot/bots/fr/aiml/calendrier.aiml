@@ -24,7 +24,7 @@
     <pattern>DONNER L HEURE</pattern>
    <template>
       <think><set name="heurequestion"> <date jformat="H"/></set></think>
-      Il est <date jformat="H"/>heure   <date jformat="mm"/>minutes
+      Il est <date jformat="H"/> heure   <date jformat="mm"/> minutes
       .
       <condition>
         <li name="heurequestion" value="0">et oui, on est déja demain</li>
@@ -206,9 +206,7 @@ jours avant noël, ho ho ho.</template>
     <template>
       <srai>DONNER LA DATE</srai>
     </template>
-  </category>
-  <category>
-  
+  </category>  
   <category>
     <pattern>DONNE MOI LA DATE</pattern>
     <template>
