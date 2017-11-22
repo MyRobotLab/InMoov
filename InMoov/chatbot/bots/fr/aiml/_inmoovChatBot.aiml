@@ -1,117 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: _inmoovChatBot.aiml -->
-  <!-- Authors: Gael Langevin, Anthony Gallot -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: moz4r -->
-  <!-- Last modified: Mai 16, 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
+<!--  -->
+<!--  -->
   <category>
-    <pattern>SAY *</pattern>
-    <template>
-      <star />
-    </template>
+   <pattern>SAY *</pattern>
+   <template><star/></template>
   </category>
-  
-  <!-- initialisaion routine -->
-  <!-- wakeup action -->
-  <!-- météo -->
-  <!-- random action -->
-  
   <category>
-    <pattern>FIRST_INIT</pattern>
-    <template>
-      <think>
-        <set name="firstinit">started</set>
-      </think>
-      <think>
-        <set name="topic">firstinit</set>
-      </think>
+     <pattern>FIRST_INIT</pattern>
+     <template>
+        <think>
+           <set name="firstinit">started</set>
+        </think>
+        <think>
+          <set name="topic">firstinit</set>
+        </think>
 		Bonjour, ceci est ma première initialisation.
 		Je suis émerveillé par ce que je vois.
         S'il te plait, j'ai besoin de quelques informations essentielles.
-        Je t'écoute. quel est mon nom ?
-	</template>
+        Je t'écoute. quel est mon nom ?</template>
   </category>
   
-  <topic name="firstinit">
-  
-    <category>
-      <pattern>#</pattern>
-      <that># quel est mon nom #</that>
-      <template>
-        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui ou non</set>
+ <topic name="FIRSTINIT">
+  <category><pattern>#</pattern><that># QUEL EST MON NOM #</that>
+     <template>
+        <set name="questionfirstinit">Si mon nom est <star/> , répond par oui ou non</set>
         <think>
-          <set name="tmpname">
-            <star />
-          </set>
+        <set name="tmpname"> <star/> </set>
         </think>
-      </template>
-    </category>
-	
-    <category>
-      <pattern>#</pattern>
-      <that># puis-je avoir ton prénom #</that>
-      <template>
-        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui ou non</set>
-        <think>
-          <set name="tmpname">
-            <star />
-          </set>
-        </think>
-      </template>
-    </category>
-	
-    <category>
+     </template>
+  </category>
+ </topic>
+
+  <topic name="FIRSTINIT">
+     <category>
+        <pattern>#</pattern>
+        <that># PUIS-JE AVOIR TON PRÉNOM #</that>
+        <template>
+           <set name="questionfirstinit">
+              Si ton prénom est <star/> , répond par oui ou non
+           </set>
+           <think>  <set name="tmpname"> <star/> </set>  </think>
+        </template>
+     </category>
+   </topic>
+
+	<topic name="FIRSTINIT">
+       <category>
+          <pattern># OUI #</pattern>
+          <that># SI MON NOM EST #</that>
+          <template>
+            <random>
+			  <li> j aime beaucoup ce nom , <get name="tmpname"/>. </li>
+			  <li> On a pas vraiment le choix de son nom, on va dire que <get name="tmpname"/> est un nom sympa.</li>
+			  <li> <get name="tmpname"/> ? sérieusement, je vais le garder toute ma vie. tant pis. </li>
+			  <li> <get name="tmpname"/> ? vraiment, je vais le garder toute ma vie, alors. Super. </li>
+            </random>
+	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom ?
+	        <think><set name="botname"><get name="tmpname"/></set></think>
+	     </template>
+       </category>
+    </topic>
+
+<topic name="FIRSTINIT">
+   <category>
       <pattern># OUI #</pattern>
-      <that># Si mon nom est #</that>
+      <that># SI TON PRÉNOM #</that>
       <template>
         <random>
-			<li>
-			j aime beaucoup ce nom , <get name="tmpname" />.
-			</li>
-			<li>
-			On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.
-			</li>
-			<li>
-            <get name="tmpname" /> ? sérieusement, je vais le garder toute ma vie. tant pis. 
-			</li>
-			<li>
-            <get name="tmpname" /> ? vraiment, je vais le garder toute ma vie, alors. Super. 
-			</li>
-        </random>
-	J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom ?
-	<think><set name="botname"><get name="tmpname" /></set></think></template>
-    </category>
-	
-    <category>
-      <pattern># OUI #</pattern>
-      <that># Si ton prénom #</that>
-      <template>
-        <random>
-		<li>
-			Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému.
-		</li>
+		  <li>
+			Maintenant on se connait, <get name="tmpname"/>. J'en suis presque ému.
+		  </li>
           <li>
-			Je t'ai reconu en faite <get name="tmpname" /> . 
-		</li>
+			Je t'ai reconu en faite <get name="tmpname"/> . 
+		  </li>
           <li>
-            <get name="tmpname" /> et <get name="botname" /> , je trouve cela sympa.
-		</li>
+            <get name="tmpname"/> et <get name="botname"/> , je trouve cela sympa.
+		  </li>
         </random>
 		bref.
         <think>
           <set name="name">
-            <get name="tmpname" />
+            <get name="tmpname"/>
           </set>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
@@ -120,153 +90,300 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
-        <srai>WAKE_UP</srai>
-      </template>
-    </category>
-	
-    <category>
-      <pattern># NON #</pattern>
-      <that># Si mon nom est #</that>
-      <template><li>
-	On recommence alors.
-	Je t'écoute. quel est mon nom ?
-    </li></template>
-    </category>
-	
-    <category>
-      <pattern># NON #</pattern>
-      <that># Si ton prénom #</that>
-      <template><li>
-	On recommence alors.
-	Je t'écoute. puis-je avoir ton prénom ?
-    </li></template>
-    </category>
-	
-    <category>
-      <pattern>#</pattern>
-      <that># répond par oui ou non #</that>
-      <template>
-        <random><li>S'il te plait, répond aux questions que je pose, c'est important.</li>
-        <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
-        </random>
-        <get name="questionfirstinit" />
-      </template>
-    </category>
-  </topic>
-  <!-- end initialisaion routine -->
-  
-  <!-- wakeup action -->
-  
-  <category>
-    <pattern>DEBOUT</pattern>
-    <template>
-      <li>
-        <srai>BONJOUR</srai>
-        <random>
-          <li>J'ai super bien dormi</li>
-          <li>Enfin tu me réveilles</li>
-          <li>je suis opérationnelle</li>
-          <li>pourquoi m'avoir réveillé ?</li>
-	      <li>A vos ordres !</li>
-          <li><get name="botname" /> à ton service !</li>
-          <li><get name="botname" /> à ton écoute !</li>
-          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
-          <li>que puis-je faire pour toi</li>
-          <li>Tu sais, je n'étais pas vraiment endormi</li>
-          <li>Chouette ! je suis réveillé</li>
-          <li>Ce fut une longue nuit, je suis éveillé désormais</li>
-         </random>
-      </li>
-    </template>
-  </category>
-  <category>
-    <pattern>SYSTEM_SAY_HELLO</pattern>
-    <template>
-        <srai>BONJOUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>WAKE_UP</pattern>
-    <template>
-      <srai>DEBOUT</srai>
-    </template>
-  </category>
-   <category>
-    <pattern>EXTINCTION</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
-    </template>
-  </category>
-  <category>
-    <pattern>FAIS DODO</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob>
-    </template>
-  </category>
-  
-  <!-- end wakeup action -->
-  
-  <!-- météo -->
-  
-  <!-- default town -->
-   <category>
-    <pattern># MÉTÉO</pattern>
-    <template>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>isTheSunShiny()</param>
-        </mrl>
-      </oob>
-    </template>
-  </category>
-  
-   <category>
-    <pattern>QUEL TEMPS FAIT IL</pattern>
-    <template>
-     <srai># MÉTÉO</srai>
-    </template>
-  </category>
-  
-  <!-- free town -->
-  
-  <category>
-    <pattern>QUEL TEMPS FAIT IL À *</pattern>
-    <template>
-      <srai># MÉTÉO à <star/></srai>
-    </template>
-  </category>
-  
-    <category>
-    <pattern>QUEL TEMPS FAIT IL SUR *</pattern>
-    <template>
-      <srai># MÉTÉO à <star/></srai>
-    </template>
-  </category>
-  
-    <category>
-    <pattern># MÉTÉO À *</pattern>
-    <template>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>isTheSunShiny("<star index="2"/>")</param>
-        </mrl>
-      </oob>
-    </template>
-  </category>
-  
+        <srai>WAKE_UP</srai></template>
+   </category>
+</topic>
 
-  <!-- return -->
-  <category>
-    <pattern>SYSTEM METEO curtemperature * Town * COMMENTAIRE *</pattern>
-    <template>
-     <think><set name="meteo"> <star index="3"/></set></think>
+<topic name="FIRSTINIT">
+   <category>
+      <pattern># NON #</pattern>
+      <that># SI MON NOM EST #</that>
+      <template><li> On recommence alors.Je t'écoute. quel est mon nom ?</li></template>
+   </category>
+</topic>
+
+<topic name="FIRSTINIT">
+   <category>
+      <pattern># NON #</pattern>
+      <that># SI TON PRÉNOM #</that>
+      <template><li> On recommence alors. Je t'écoute. puis-je avoir ton prénom ? </li></template>
+   </category>
+</topic>
+
+<topic name="FIRSTINIT">
+   <category>
+      <pattern>#</pattern>
+      <that># RÉPOND PAR OUI OU NON #</that>
+      <template>
+         <random>
+            <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+            <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+        </random>
+        <get name="questionfirstinit"/></template>
+   </category>
+</topic>
+
+   <category>
+      <pattern>SYSTEM_NEW_VERSION</pattern>
+      <template>
+         <think> 
+		    <set name="topic"> updater</set>
+		</think>
+		Attention, une nouvelle version du système opératoire de InMoov est disponible.
+		Si tu le désires, je peux le mettre à jour. 
+		Dis oui ou non.
+	</template>
+  </category>
+  
+<topic name="UPDATER">
+	<category>
+		<pattern># OUI #</pattern>
+		<that># DIS OUI #</that>
+		<template>
+			<think>  
+				<set name="topic"> default</set>
+			</think>
+			Démarage du téléchargement, veuillez patienter
+			<oob>  
+				<mrl>
+					<service>python</service>
+					<method>exec</method>
+					<param>updateMe()</param>
+				</mrl>
+			</oob>
+		</template>
+	</category>
+</topic>
+
+<topic name="UPDATER">
+	<category>
+		<pattern># NON #</pattern>
+		<that># DIS OUI #</that>
+		<template>
+			<think>  
+				<set name="topic"> default</set>
+			</think>	
+			OK, comme tu veux, la prochaine fois peut être.
+			<oob>
+				<mrl>
+					<service>python</service>
+					<method>exec</method>
+					<param>dontUpdateMe()</param>
+				</mrl>
+			</oob>
+		</template>
+	</category>
+</topic>
+
+<topic name="UPDATER">
+	<category>
+		<pattern>#</pattern>
+		<that># DIS OUI #</that>
+		<template>S'il te plait, repond, c'est important. Dis oui ou non.</template>
+	</category>
+</topic>
+
+	<category>
+ 		<pattern>* SYSTEM_PERCENT</pattern>
+		<template><li> <star/> pourcent.</li></template>
+	</category>
+	
+	<category>
+		<pattern>SYSTEM_DOWNLOAD_OK</pattern>
+		<template><li> Téléchargment effectué, je vais m'éteindre, stp rédémare moi. </li></template>
+	</category>
+	<category>
+		<pattern>TEST AUDIO</pattern>
+		<template>
+			<oob>
+	        	<mrl> 
+	        		<service>AudioPlayer</service>
+	            	<method>play</method> 
+	            	<param>InMoov\system\sounds\startupsound.mp3</param>
+	         	</mrl>
+	    	</oob>
+	    </template>
+	</category>
+	<category>
+		<pattern>RÉVEILLE-TOI</pattern>
+		<template>
+			<oob>
+        		<mrl>
+          			<service>python</service>
+          			<method>exec</method>
+          			<param>sleepModeWakeUp()</param>
+        		</mrl>
+      		</oob>      		
+     	</template>
+	</category>
+	<category>
+		<pattern>SYSTEM_SAY_HELLO</pattern>
+		<template><srai>BONJOUR</srai></template>
+	</category>	
+	<category>
+		<pattern>WAKE_UP</pattern>
+		<template>
+			<li>
+        		<srai>BONJOUR</srai>
+        		<random>
+          			<li>J'ai super bien dormi</li>
+          			<li>Enfin tu me réveilles</li>
+          			<li>je suis opérationnelle</li>
+          			<li>pourquoi m'avoir réveillé ?</li>
+	      			<li>A vos ordres !</li>
+          			<li><get name="botname"/> à ton service !</li>
+          			<li><get name="botname"/> à ton écoute !</li>
+          			<li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
+          			<li>que puis-je faire pour toi</li>
+          			<li>Tu sais, je n'étais pas vraiment endormi</li>
+          			<li>Chouette ! je suis réveillé</li>
+          			<li>Ce fut une longue nuit, je suis éveillé désormais</li>
+         		</random>
+     		</li>
+     	</template>
+	</category>
+	<category>
+		<pattern>WAKE UP</pattern>
+		<template><srai>Réveille-toi</srai></template>
+	</category>
+	<category>
+		<pattern>SHUT DOWN</pattern>
+		<template><srai>EXTINCTION</srai></template>
+	</category>
+	<category>
+		<pattern>METS TOI EN VEILLE</pattern>
+		<template><srai>FAIS DODO</srai></template>
+	</category>
+	<category>
+		<pattern>FAIS DODO</pattern>
+		<template>
+			<think>
+				<set name="topic">SLEEPMODE</set>
+			</think>	
+			Veux tu oui ou non que je me mette en veille
+		</template>
+	</category>
+<topic name="SLEEPMODE">
+	<category>
+		<pattern># OUI #</pattern>
+		<that># ME METTE EN VEILLE #</that>
+		<template>Mise en veille.
+			<think>  <set name="topic"> default</set></think> 
+			<oob>
+				<mrl>
+					<service>python</service>
+					<method>exec</method>
+					<param>sleepModeSleep()</param>
+				</mrl>
+			</oob>
+		</template>
+	</category>
+</topic>
+
+<topic name="SLEEPMODE">
+	<category>
+		<pattern># NON #</pattern>
+		<that># ME METTE EN VEILLE #</that>
+		<template>
+			Annulation de la mise en veille. 
+			<think> <set name="topic"> default</set></think>
+		</template>
+	</category>
+</topic>
+
+<topic name="SLEEPMODE">
+	<category>
+		<pattern>#</pattern>
+		<that># ME METTE EN VEILLE #</that>
+		<template><srai>FAIS DODO</srai></template>
+	</category>
+</topic>
+
+	<category>
+		<pattern>EXTINCTION</pattern>
+		<template>
+			<think> <set name="topic">SHUT_DOWN</set></think>
+			Veux-tu oui ou non que je me mette hors tension
+		</template>
+	</category>
+<topic name="SHUT_DOWN">
+
+	<category>
+		<pattern># OUI #</pattern>
+		<that># ME METTE HORS TENSION #</that>
+		<template>
+		    <think>  <set name="topic"> default</set></think>
+			<oob>
+				<mrl>
+					<service>python</service>
+					<method>exec</method>
+					<param>shutdown()</param>
+				</mrl>
+			</oob></template>
+	</category>
+</topic>
+
+<topic name="SHUT_DOWN">
+	<category>
+		<pattern># NON #</pattern>
+		<that># ME METTE HORS TENSION #</that>
+		<template>Annulation de l'arrêt du système. 
+			<think>  <set name="topic"> default</set></think>
+		</template>
+	</category>
+</topic>
+
+<topic name="SHUT_DOWN">
+	<category>
+		<pattern>#</pattern>
+		<that># ME METTE HORS TENSION #</that>
+		<template><srai>EXTINCTION</srai></template>
+	</category>
+</topic>
+
+	<category>
+		<pattern># MÉTÉO</pattern>
+		<template>
+			<oob>
+        		<mrl>
+          			<service>python</service>
+          			<method>exec</method>
+          			<param>isTheSunShiny()</param>
+        		</mrl>
+      		</oob>
+      	</template>
+	</category>
+	<category>
+		<pattern>QUEL TEMPS FAIT IL</pattern>
+		<template><srai># MÉTÉO</srai></template>
+	</category>	
+	<category>
+		<pattern>QUEL TEMPS FAIT IL À *</pattern>
+		<template><srai># MÉTÉO à <star/></srai></template>
+	</category>
+	<category>
+		<pattern>QUEL TEMPS FAIT IL SUR *</pattern>
+		<template><srai># MÉTÉO à <star/></srai></template>
+	</category>
+	<category>
+		<pattern># MÉTÉO À *</pattern>
+		<template>
+			<oob>
+        		<mrl>
+          			<service>python</service>
+          			<method>exec</method>
+          			<param>isTheSunShiny("<star index="2"/>")</param>
+        		</mrl>
+      		</oob>
+      	</template>
+	</category>
+	<category>
+		<pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+		<template>
+				<think><set name="meteo"> <star index="3"/></set></think>
                 <random>
                 <li>En cette belle journée à <star index="2"/>, </li>
                 <li>Concernant la météo de <star index="2"/>, </li>
@@ -391,103 +508,99 @@
                  <li>A peu près. </li>
                  <li>A la louche. </li>
                  <li>Ou pas, j'ai le droit de faire des erreurs aussi! </li>
-                 </random>
-          
-	</template>
-  </category>
-  
-   <!-- end météo -->
-   
-    <!-- gesture keyword -->
-
-  <category>
-    <pattern>GESTURES</pattern>
-    <template>Démarrage du topic gestuelle.
-      <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TOPIC GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ENTRE EN MODE GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENCE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>INITIALISE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  
-  <!-- random -->
-  
-    <category>
-    <pattern>RANDOM</pattern>
-    <template>
-      <random>
-        <li><srai>à PROPOS DE STAR WARS</srai></li>
-        <li><srai>COMBIEN DE DOIGTS AS tu</srai></li>
-        <li><srai>MAINS EN L AIR</srai></li>
-        <li><srai>QUELLE HEURE IL EST</srai></li>
-        <li><srai>Météo</srai></li>
-        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
-        <li>sa me gratte. je dois avoir une puce </li>
-        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
-        <li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
-        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
-        <li>Mais que se passe-t-il </li>
-        <li>je m'ennuie un petit peu</li>
-        <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
-        <li>j'ai entendu un bruit étrange</li>
-        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
-        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
-        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
-        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
-        <li>Oh là là! </li>
-        <li>Que c'est beau! </li>
-      </random>
-    </template>
-  </category>
-  
+                 </random></template>
+	</category>
+	<category>
+		<pattern>GESTURES</pattern>
+		<template>Démarrage du topic gestuelle.
+      		<think>
+      			<set name="topic">GESTURES</set>
+      		</think>
+      	</template>
+	</category>
+	<category>
+		<pattern>GESTUELLE *</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>* GESTUELLE</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>* GESTUELLE *</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>TOPIC GESTUELLE</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>DEMARRE GESTUELLE</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>DÉMARRE GESTUELLE</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>ENTRE EN MODE GESTUELLES</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>COMMENCE * GESTUELLES</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>INITIALISE * GESTUELLES</pattern>
+		<template>
+			<srai>GESTURES</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>RANDOM</pattern>
+		<template>
+			<random>
+        		<li><srai>à PROPOS DE STAR WARS</srai> </li>
+        		<li><srai>COMBIEN DE DOIGTS AS tu</srai> </li>
+        		<li><srai>MAINS EN L AIR</srai>	</li>
+        		<li><srai>QUELLE HEURE IL EST</srai></li>
+        		<li><srai>Météo</srai></li>
+        		<li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
+        		<li>sa me gratte. je dois avoir une puce </li>
+        		<li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
+        		<li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
+        		<li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
+        		<li>Mais que se passe-t-il </li>
+        		<li>je m'ennuie un petit peu</li>
+        		<li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
+        		<li>j'ai entendu un bruit étrange</li>
+        		<li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
+        		<li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
+        		<li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
+        		<li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
+        		<li>Oh là là! </li>
+        		<li>Que c'est beau! </li>
+      		</random>
+      	</template>
+	</category>
+	<category>
+		<pattern>QUEL EST LE SUJET</pattern>
+		<template>LE SUJET EST <get name="topic"/></template>
+	</category>
 </aiml>
