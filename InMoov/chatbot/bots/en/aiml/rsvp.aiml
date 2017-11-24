@@ -17,8 +17,21 @@
   <!--  -->
   <category>
     <pattern>SEND RSVP TO *</pattern>
-    <template>I'm sending an RSVP to <star />.
-<think><addtriple><subj><star /></subj><pred>has</pred><obj>RSVP</obj></addtriple><addtriple><subj><star /></subj><pred>status</pred><obj>not responded</obj></addtriple></think></template>
+    <template>
+    	I'm sending an RSVP to <star />.
+		<think>
+			<addtriple>
+				<subj><star /></subj>
+				<pred>has</pred>
+				<obj>RSVP</obj>
+			</addtriple>
+			<addtriple>
+				<subj><star /></subj>
+				<pred>status</pred>
+				<obj>not responded</obj>
+			</addtriple>
+		</think>
+	</template>
   </category>
   <category>
     <pattern>WHO HAS AN RSVP</pattern>
@@ -45,7 +58,13 @@
               </first>
             </tuple>
           </get>,
-  <think><set var="tuples"><rest><get var="tuples" /></rest></set></think><loop /></li>
+  		  <think>
+  			<set var="tuples">
+  				<rest><get var="tuples" /></rest>
+  			</set>
+  		  </think>
+  		  <loop />
+  		</li>
       </condition>
     </template>
   </category>
@@ -79,12 +98,38 @@
   </category>
   <category>
     <pattern>name IS ATTENDING</pattern>
-    <template>Setting <star />'s RSVP status to "attending".
-<think><deletetriple><subj><star /></subj><pred>status</pred><obj>not responded</obj></deletetriple><addtriple><subj><star /></subj><pred>status</pred><obj>attending</obj></addtriple></think></template>
+    <template>
+    	Setting <star />'s RSVP status to "attending".
+		<think>
+			<deletetriple>
+				<subj><star /></subj>
+				<pred>status</pred>
+				<obj>not responded</obj>
+			</deletetriple>
+			<addtriple>
+				<subj><star /></subj>
+				<pred>status</pred>
+				<obj>attending</obj>
+			</addtriple>
+		</think>
+	</template>
   </category>
   <category>
     <pattern>name IS NOT ATTENDING</pattern>
-    <template>Setting <star />'s RSVP status to "not attending".
-<think><deletetriple><subj><star /></subj><pred>status</pred><obj>not responded</obj></deletetriple><addtriple><subj><star /></subj><pred>status</pred><obj>not attending</obj></addtriple></think></template>
+    <template>
+    	Setting <star />'s RSVP status to "not attending".
+		<think>
+			<deletetriple>
+				<subj> <star /></subj>
+				<pred>status</pred>
+				<obj>not responded</obj>
+			</deletetriple>
+			<addtriple>
+				<subj><star /></subj>
+				<pred>status</pred>
+				<obj>not attending</obj>
+			</addtriple>
+		</think>
+	</template>
   </category>
 </aiml>

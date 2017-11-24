@@ -64,9 +64,15 @@
   </category>
    <category>
     <pattern>TWITTER PAGE</pattern>
-    <template>Look for me on Twitter here <oob>
-    <mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://twitter.com/inmoov?lang=fr")</param>
-    </mrl></oob>.</template>
+    <template>Look for me on Twitter here 
+		<oob>
+			<mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>BareBonesBrowserLaunch.openURL("https://twitter.com/inmoov?lang=fr")</param>
+			</mrl>
+		</oob>.
+	</template>
   </category>
   <category>
       <pattern>* TWITTER PAGE</pattern>

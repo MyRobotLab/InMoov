@@ -17,7 +17,7 @@
             <person />
           </set>
         </set>
-      </think>ES tu se réveillent d'habitude à cette heure?</template>
+      </think>te réveilles-tu d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>* EST</pattern>
@@ -916,13 +916,15 @@
         </set>
       </think>Je n'ai jamais entendu de métaphore comme ça auparavant.</template>
   </category>
+  
   <category>
     <pattern>*</pattern>
-    <that>QUE LA LANGUE peux tu PARLER</that>
+    <that>QUELle LANGUE peux tu PARLER</that>
     <template>
-      <srai>JE PARLE <star /></srai>
+      Je peux parler de nombreuses langues, veux-tu que je change de langue?
     </template>
   </category>
+  
   <category>
     <pattern>*</pattern>
     <that>QUE LE TEMPS EST Cela LA</that>
@@ -1787,6 +1789,7 @@
     <that>OH JE COMPRENDS</that>
     <template>que je comprends <get name="that" />.</template>
   </category>
+  
   <category>
     <pattern>DANS *</pattern>
     <that>Où *</that>
@@ -1794,6 +1797,7 @@
       <srai>JE SUIS DANS <star /></srai>
     </template>
   </category>
+  
   <category>
     <pattern>DANS OU</pattern>
     <that>QUEL EST Cela COMME DANS LA</that>

@@ -102,7 +102,7 @@
           <value>
             <get var="nth" />
           </value> 
-The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRSTLETTER <get var="letters" /></srai></li>
+		  The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRSTLETTER <get var="letters" /></srai></li>
         <li>
           <think>
             <set var="letters">
@@ -451,12 +451,24 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
   <category>
     <pattern>DELETE MY * LIST</pattern>
     <template>Deleting your list.
-<learnf><category><pattern>MY <eval><star /></eval> LIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>DELETE MY LIST</pattern>
     <template>Deleting your list.
-<learnf><category><pattern>MYLIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>ISANEMAILADDRESS UNKNOWN</pattern>
@@ -565,7 +577,15 @@ List value=<srai><get name="listname"/></srai>.
 -->
       <condition name="isamember">
         <li value="true">Taking <star /> off your list.
-<learnf><category><pattern><eval><get name="listname" /></eval></pattern><template><eval><srai>REMOVEITEM <star /> FROM LIST <srai><get name="listname" /></srai></srai></eval></template></category></learnf></li>
+			<learnf>
+				<category>
+					<pattern><eval><get name="listname" /></eval></pattern>
+					<template>
+						<eval><srai>REMOVEITEM <star /> FROM LIST <srai><get name="listname" /></srai></srai></eval>
+					</template>
+				</category>
+			</learnf>
+		</li>
         <li>
           <oob>
             <dialog>
@@ -578,9 +598,9 @@ List value=<srai><get name="listname"/></srai>.
           <think>
             <set name="topic">REMOVE LIST ITEM</set>
           </think> 
-I couldn't find <star /> on your list.  
-Which item would you like to remove?
-</li>
+		I couldn't find <star /> on your list.  
+		Which item would you like to remove?
+		</li>
       </condition>
     </template>
   </category>
@@ -779,7 +799,13 @@ Which item would you like to remove?
   <category>
     <pattern>ADD _ TO MY LIST</pattern>
     <template>I've added <star /> to your list.
-<learnf><category><pattern>MYLIST</pattern><template><eval><srai>CONS <star /><srai>MYLIST</srai></srai></eval></template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template><eval><srai>CONS <star /><srai>MYLIST</srai></srai></eval></template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>ADD _ TO LIST</pattern>
@@ -899,12 +925,24 @@ Which item would you like to remove?
   <category>
     <pattern>MAKE A * LIST</pattern>
     <template>Initializing your <star /> list.
-<learnf><category><pattern>MY <eval><star /></eval> LIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>MAKE A LIST</pattern>
     <template>Initializing your list.
-<learnf><category><pattern>MYLIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>CONS *</pattern>
