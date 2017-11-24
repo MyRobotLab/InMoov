@@ -27,8 +27,10 @@
       </think>
       <condition name="sraix">
         <li value="SCHEDULEFAILED">I'm unable to schedule that event.</li>
-        <li>I'll put that event on your calendar.
-<oob><schedule><title><star /></title><description><lowercase><star index="2" /></lowercase></description><get name="sraix" /></schedule></oob></li>
+        <li>
+        	I'll put that event on your calendar.
+			<oob><schedule><title><star /></title><description><lowercase><star index="2" /></lowercase></description><get name="sraix" /></schedule></oob>
+		</li>
       </condition>
     </template>
   </category>
@@ -44,8 +46,10 @@
       </think>
       <condition name="sraix">
         <li value="ALARMFAILED">Try asking me a different way.</li>
-        <li>I'll <lowercase><person><star index="2" /></person></lowercase>.
-<oob><alarm><message><star /></message><get name="sraix" /></alarm></oob></li>
+        <li>
+        	I'll <lowercase><person><star index="2" /></person></lowercase>.
+			<oob><alarm><message><star /></message><get name="sraix" /></alarm></oob>
+		</li>
       </condition>
     </template>
   </category>
