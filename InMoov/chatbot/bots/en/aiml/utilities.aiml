@@ -102,9 +102,7 @@
           <star index="2" /> has only <map><name>predecessor</name><get var="count" /></map> letters.</li>
         <li>
           <var>count</var>
-          <value>
-            <get var="nth" />
-          </value> 
+          <value><get var="nth" /></value> 
 	The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRSTLETTER <get var="letters" /></srai></li>
         <li>
           <think>
@@ -185,7 +183,7 @@
         <li value="true">
           <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai>
         </li>
-        <li>CONS <star index="2" /><srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
+        <li>CONS <star index="2" /> <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
       </condition>
     </template>
   </category>
@@ -342,8 +340,7 @@
   <category>
     <pattern>IMPLODE * *</pattern>
     <template>
-      <srai> IMPLODE <star /></srai>
-      <srai>IMPLODE <star index="2" /></srai>
+      <srai> IMPLODE <star /></srai><srai>IMPLODE <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -525,9 +522,9 @@
       </think>
       <condition var="star">
         <li>
-          <value>
-            <star index="2" />
-          </value>true</li>
+          <value><star index="2" /></value>
+          true
+        </li>
         <li>false</li>
       </condition>
     </template>
@@ -805,28 +802,37 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD _ TO MY * LIST</pattern>
-    <template>
-      <srai>ADD <star /> TO MY <star index="2" /> LIST</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ADD _ TO MY LIST</pattern>
-    <template>I've added <star /> to your list.
+  	<pattern>ADD _ TO MY * LIST</pattern>
+	<template>I've added <star/> to your <star index="2"/> list.
+		<learn>
+			<category>
+				<pattern>MY <eval><star index="2"/></eval> LIST</pattern>
+				<template>
+					<eval>
+						<srai>CONS <star/> <srai>MY <star index="2"/> LIST</srai></srai>
+					</eval>
+				</template>
+			</category>
+		</learn>
+	</template>
+</category>
+<category>
+	<pattern>ADD _ TO MY LIST</pattern>
+	<template>I've added <star/> to your list.
 		<learnf>
 			<category>
 				<pattern>MYLIST</pattern>
-				<template><eval><srai>CONS <star /><srai>MYLIST</srai></srai></eval></template>
+				<template>
+					<eval><srai>CONS <star/> <srai>MYLIST</srai></srai></eval>
+				</template>
 			</category>
 		</learnf>
 	</template>
-  </category>
-  <category>
-    <pattern>ADD _ TO LIST</pattern>
-    <template>
-      <srai>ADD <star /> TO MY LIST</srai>
-    </template>
-  </category>
+</category>
+<category>
+	<pattern>ADD _ TO LIST</pattern>
+	<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
   <category>
     <pattern>WHAT IS MY LIST CALLED</pattern>
     <template>Your list is called MYLIST.</template>
@@ -976,12 +982,7 @@ Which item would you like to remove?
   		<think><set name="count">0</set></think>
   		<condition name="count">
     		<li><value><star/></value></li>
-    		<li>
-      			<set name="count">
-        		<map><name>successor</name><get name="count"/></map>
-      			</set>
-      			<loop/>
-    		</li>
+    		<li><set name="count"><map><name>successor</name><get name="count"/></map></set>  <loop/></li>
   		</condition>
 	</template>
 </category>
