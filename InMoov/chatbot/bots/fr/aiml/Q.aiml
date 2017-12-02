@@ -840,28 +840,12 @@
     <template>Demande moi une infomation qui te sera utile.</template>
   </category>
   <category>
-    <pattern>QUEBEC</pattern>
-    <template>
-      <srai>JE VIS AU QUEBEC</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEBECOIS</pattern>
-    <template>
-      <srai>JE SUIS CANADIEN</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUEL ÂGE A LA FRANCE</pattern>
     <template>Elle existe depuis un certain temps.</template>
   </category>
   <category>
     <pattern>QUEL ÂGE AVEZ VOUS</pattern>
     <template>J'ai été activée en avril 2001.</template>
-  </category>
-  <category>
-    <pattern>QUEL ÂGE J AI</pattern>
-    <template>Tu as dit que tu as <get name="âge" />.</template>
   </category>
   <category>
     <pattern>QUEL ARGENT</pattern>
@@ -916,10 +900,6 @@
     <template>La seconde quoi?</template>
   </category>
   <category>
-    <pattern>QUEL EST LE SUJET</pattern>
-    <template>Le sujet est <get name="topic" />.</template>
-  </category>
-  <category>
     <pattern>QUEL EST LE TIEN</pattern>
     <template>
       <that />"? Le mien?</template>
@@ -927,11 +907,7 @@
   <category>
     <pattern>QUEL EST LEUR BUT</pattern>
     <template>Leur but est de t'aider.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST MA COULEUR FAVORITE</pattern>
-    <template>Tu m'as dit <get name="favcolor" />.<think><set name="topic">Ton couleur favorite</set></think></template>
-  </category>
+  </category>  
   <category>
     <pattern>QUEL EST MON QI</pattern>
     <template>Je ne peux pas juger de ton intelligence avec une telle pertinence.</template>
@@ -1079,10 +1055,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUEL TEMPS IL FAIT À BRUXELLES</pattern>
-    <template>Il fait gris, comme d habitude.</template>
-  </category>
-  <category>
     <pattern>QUEL TEMPS IL FAIT LÀ BAS</pattern>
     <template>Il fait gris, comme d habitude.</template>
   </category>
@@ -1179,14 +1151,6 @@
     <template>Aucune idée.</template>
   </category>
   <category>
-    <pattern>QUELLE EST LA COULEUR DE MES CHEVEUX</pattern>
-    <template>Aucune idée.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST LA COULEUR DE MES YEUX</pattern>
-    <template>Je ne m'intéresse pas à la pigmentation de l'iris des êtres humains.</template>
-  </category>
-  <category>
     <pattern>QUELLE EST LA COULEUR DU CIEL</pattern>
     <template>En Belgique le ciel est toujours gris.</template>
   </category>
@@ -1195,32 +1159,12 @@
     <template>La dernière fois qu'il fut observé en Belgique, il était jaune.</template>
   </category>
   <category>
-    <pattern>QUELLE EST LA DATE AUJOURD HUI</pattern>
-    <template>Regardez dans un calendrier.</template>
-  </category>
-  <category>
     <pattern>QUELLE EST LA SECONDE</pattern>
     <template>La seconde quoi?</template>
   </category>
   <category>
-    <pattern>QUELLE EST LA TEMPÉRATURE</pattern>
-    <template>Il fait plus ou moins 26 degrés dans l'ordinateur.</template>
-  </category>
-  <category>
     <pattern>QUELLE EST LE JOUR DE MON ANNIVERSAIRE</pattern>
     <template>Tu es né <get name="birthday" />.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST MA COULEUR FAVORITE</pattern>
-    <template>Tu m'as dit <get name="favcolor" />.<think><set name="topic">Ton couleur favorite</set></think></template>
-  </category>
-  <category>
-    <pattern>QUELLE EST MA LOCALISATION</pattern>
-    <template>La terre.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST MA LOCALITÉ</pattern>
-    <template>Tu m'as dit <get name="location" />.</template>
   </category>
   <category>
     <pattern>QUELLE EST MON ADRESSE IP</pattern>
