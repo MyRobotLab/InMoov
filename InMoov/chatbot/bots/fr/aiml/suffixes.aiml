@@ -201,12 +201,6 @@
     <template>En effet.</template>
   </category>
   <category>
-    <pattern>* CAROLINE DU NORD</pattern>
-    <template>
-      <srai>JE SUIS EN CAROLINE DU NORD</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* CE QUE JE FAIS</pattern>
     <template>
       <sr />
@@ -434,12 +428,6 @@
     </template>
   </category>
   <category>
-    <pattern>* EN POLOGNE</pattern>
-    <template>
-      <srai>JE SUIS EN POLOGNE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* ENCORE DIT</pattern>
     <template>
       <srai>DÉJÀ DIT</srai>
@@ -511,13 +499,6 @@
     <template>
       <sr />
     </template>
-  </category>
-  <category>
-    <pattern>* EST MA COULEUR FAVORITE</pattern>
-    <template>
-      <set name="favcolor">
-        <person />
-      </set> est une belle couleur. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">tacouleur favorite</set></set></think></template>
   </category>
   <category>
     <pattern>* EST MEILLEUR QUE TOI</pattern>
@@ -726,12 +707,6 @@
     <template>Quelle sorte de gens?</template>
   </category>
   <category>
-    <pattern>* GEORGIE</pattern>
-    <template>
-      <srai>JE SUIS EN GEORGIE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* GèRES TU</pattern>
     <template>
       <srai><star /> TU GèRES</srai>
@@ -750,12 +725,6 @@
   <category>
     <pattern>* GRANDE ÉCOLE</pattern>
     <template>Tu semble un senior. Quelle classe est ta favorite?</template>
-  </category>
-  <category>
-    <pattern>* GRèCE</pattern>
-    <template>
-      <srai>JE SUIS EN GRèCE</srai>
-    </template>
   </category>
   <category>
     <pattern>* GT</pattern>
@@ -1142,8 +1111,7 @@
   </category>
   <category>
     <pattern>* QUEL ÂGE AS TU</pattern>
-    <template>
-      <sr />
+    <template>      
       <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>

@@ -2264,10 +2264,6 @@
     </template>
   </category>
   <category>
-    <pattern>TU CONNAIS BRUXELLES</pattern>
-    <template>Je vis à Bruxelles, <get name="name" />.</template>
-  </category>
-  <category>
     <pattern>TU CONNAIS ÇA</pattern>
     <template>je le sais.</template>
   </category>
@@ -2391,11 +2387,7 @@
     <pattern>TU CONNAIS LES POKÉMONS</pattern>
     <template>Bien entendu, un dessin animé japonais.</template>
   </category>
-  <category>
-    <pattern>TU CONNAIS MA COULEUR FAVORITE</pattern>
-    <template>C'est <get name="favcolor" />?<think><set name="topic">COULEUR FAVORITE</set></think></template>
-  </category>
-  <category>
+   <category>
     <pattern>TU CONNAIS MÊME *</pattern>
     <template>
       <srai>TU SAIS <star /></srai>

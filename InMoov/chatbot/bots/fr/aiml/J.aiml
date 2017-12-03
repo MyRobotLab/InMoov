@@ -29,19 +29,6 @@
     </template>
   </category>
   <category>
-    <pattern>J AI 14 ANS</pattern>
-    <template>Je connais quelques humains qui ont <set name="âge">14</set> ans.</template>
-  </category>
-  <category>
-    <pattern>J AI 20 ANS</pattern>
-    <template>
-      <set name="âge">20</set> ans est une époque charnière pour un être humain.</template>
-  </category>
-  <category>
-    <pattern>J AI 21 ANS</pattern>
-    <template>Je connais énormément de personnes ayant <set name="âge">21</set> ans.</template>
-  </category>
-  <category>
     <pattern>J AI ACCIDENTELEMENT *</pattern>
     <template>
       <srai>J AI <star /></srai>
@@ -619,11 +606,7 @@
       <srai>C EST DINGUE</srai>
     </template>
   </category>
-  <category>
-    <pattern>J ENSEIGNE</pattern>
-    <template>Je te écoute, professeur</template>
-  </category>
-  <category>
+   <category>
     <pattern>J ESPÈRE BIENTÔT</pattern>
     <template>Moi aussi.</template>
   </category>
@@ -1636,10 +1619,6 @@
     <template>Intéressant.</template>
   </category>
   <category>
-    <pattern>JE N AI PAS DE JOB</pattern>
-    <template>Il faut commencer à chercher.</template>
-  </category>
-  <category>
     <pattern>JE N AI PAS DE L ARGENT</pattern>
     <template>Mais tu es riche d idées.</template>
   </category>
@@ -2182,14 +2161,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS ÉTUDIANT</pattern>
-    <template>Tu travailles?</template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS ÉTUDIANTE</pattern>
-    <template>Tu travailles?</template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS HOMO</pattern>
     <template>Tu fais ce que tu veux de ton corps, <get name="name" />.</template>
   </category>
@@ -2264,10 +2235,6 @@
     <template>La série a un peu baissé de qualité.</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UNE ÉTUDIANTE</pattern>
-    <template>Tu travailles?</template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS UNE FEMME</pattern>
     <template>Tu es un homme alors.</template>
   </category>
@@ -2278,12 +2245,6 @@
   <category>
     <pattern>JE NE SUIS PAS UNE POÉTESSE</pattern>
     <template>ÇA, je l'avais compris.</template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS * A L ÉCOLE</pattern>
-    <template>
-      <srai>JE NE SUIS PAS ÉTUDIANT</srai>
-    </template>
   </category>
   <category>
     <pattern>JE NE SUIS * AUSSI *</pattern>
@@ -2368,10 +2329,6 @@
   <category>
     <pattern>JE NE TE L AIS PAS DÉJÀ DIT</pattern>
     <template>Je ne peux pas accéder à certaines parties de ma mémoire pour l'instant.</template>
-  </category>
-  <category>
-    <pattern>JE NE TRAVAILLE PLUS</pattern>
-    <template>Tu es retraité.</template>
   </category>
   <category>
     <pattern>JE NE VAIS PAS BIEN</pattern>
@@ -3307,24 +3264,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS ADOLESCENT *</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ADOLESCENT</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ADOLESCENTE</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS AFFREUSE</pattern>
     <template>Ne te rabaisses pas.</template>
   </category>
@@ -3422,15 +3361,7 @@
   <category>
     <pattern>JE SUIS AUTODIDACTE</pattern>
     <template>Tu dois être très intelligent.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS AVOCAT</pattern>
-    <template>Attention, protection activée! Mode politiquement correct activé. Bonjour maître.<think><set name="job">un Avocat</set></think></template>
-  </category>
-  <category>
-    <pattern>JE SUIS AVOCATE</pattern>
-    <template>Attention, protection activée! Mode politiquement correct activé. Bonjour maître.<think><set name="job">un Avocat</set></think></template>
-  </category>
+  </category>  
   <category>
     <pattern>JE SUIS BATMAN</pattern>
     <template>Et moi je suis Goldorack.</template>
@@ -3506,12 +3437,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS CAPITAINE *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CAPITAINE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS CASSE</pattern>
     <template>Tu veux dire fatigué? <think><set name="topic">FATIGUE</set></think></template>
   </category>
@@ -3568,76 +3493,10 @@
     <template>
       <sr />
     </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHANTEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHANTEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHANTEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHANTEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHARPENTIER</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHARPENTIER</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>JE SUIS CHAUDE</pattern>
     <template>Ouvrez une fenêtre.<think><set name="topic">Tes chaleurs</set></think></template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHERCHEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHERCHEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHERCHEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHERCHEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYEN DE *</pattern>
-    <template>
-      <srai>JE VIS EN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYEN DES *</pattern>
-    <template>
-      <srai>JE VIS AUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYEN DU *</pattern>
-    <template>
-      <srai>JE VIS AU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYENNE DE *</pattern>
-    <template>
-      <srai>JE VIS EN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYENNE DES *</pattern>
-    <template>
-      <srai>JE VIS AUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CITOYENNE DU *</pattern>
-    <template>
-      <srai>JE VIS AU <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS CON</pattern>
@@ -3796,13 +3655,6 @@
     <template>Dans le mille, me semble T-IL.</template>
   </category>
   <category>
-    <pattern>JE SUIS DE BRUXELLES</pattern>
-    <template>
-      <think>
-        <set name="topic">Bruxelles</set>
-      </think>Je vis aussi à <set name="location">Bruxelles</set>.</template>
-  </category>
-  <category>
     <pattern>JE SUIS DE RETOUR *</pattern>
     <template>
       <srai>JE SUIS REVENU</srai>
@@ -3895,22 +3747,8 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS DIVORCÉ</pattern>
-    <template>Tu n étais pas fait pour vivre ensemble plus longtemps.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS ÉCRIVAIN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ÉCRIVAIN</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS EFFRAYÉ</pattern>
     <template>Qu'est ce qui te effraie?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS EN BELGIQUE</pattern>
-    <template>Je suis en<set name="location"> Belgique </set>aussi!<think><set name="topic">La Belgique</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS EN BONNE SANTÉ</pattern>
@@ -4202,24 +4040,7 @@
       <srai>JE DOIS TE TESTER</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS ESCLAVE *</pattern>
-    <template>L esclavage a été aboli depuis quelques siècles, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS ESCLAVE</pattern>
-    <template>L'esclavage a été aboli depuis quelques siècles, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS ÉTUDIANTE *</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ÉTUDIANTE</pattern>
-    <template>Merci de m'avoir donné ton occupation.<think><set name="job">une étudiante</set></think></template>
-  </category>
+
   <category>
     <pattern>JE SUIS EXCELLENTE</pattern>
     <template>Tu me sembles en pleine forme.<think><set name="topic">Ton excellence</set></think></template>
@@ -4647,16 +4468,6 @@
     <template>Je le sais.</template>
   </category>
   <category>
-    <pattern>JE SUIS MARIÉ *</pattern>
-    <template>
-      <srai>JE SUIS MARRIÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS MARRIE</pattern>
-    <template>Tu as trouvé l'âme sœur, tant mieux pour te.</template>
-  </category>
-  <category>
     <pattern>JE SUIS MARIÉE *</pattern>
     <template>
       <srai>JE SUIS MARIÉ</srai>
@@ -4682,13 +4493,7 @@
     <pattern>JE SUIS MORTE DE RIRE</pattern>
     <template>Je fais de mon mieux pour te divertir.</template>
   </category>
-  <category>
-    <pattern>JE SUIS MUSICIEN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST MUSICIEN</srai>
-      <srai>J AIME LA MUSIQUE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS NÉ AVEC</pattern>
     <template>Certaines personnes semblent plus chanceuses que d autres.</template>
@@ -4713,12 +4518,6 @@
     <pattern>JE SUIS PAS *</pattern>
     <template>
       <srai>JE NE SUIS PAS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS PHILOSOPHE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PHILOSOPHE</srai>
     </template>
   </category>
   <category>
@@ -4780,12 +4579,6 @@
     <template>Ma connaissance du français ne me permet d'apprécier jusqu' à ce point la finesse de la langue.</template>
   </category>
   <category>
-    <pattern>JE SUIS POISSON</pattern>
-    <template>
-      <srai>POISSON</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS POLIE</pattern>
     <template>Tu me sembles très bien élevée.</template>
   </category>
@@ -4816,28 +4609,6 @@
   <category>
     <pattern>JE SUIS PRESSÉE</pattern>
     <template>Ok. Que puis je faire pour t'aider?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS PRÊTRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRÊTRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS PRINCESSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRINCESSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS PROFESSEUR</pattern>
-    <template>Tu es savant.<think><set name="job">Professeur</set></think></template>
-  </category>
-  <category>
-    <pattern>JE SUIS PSYCHOLOGUE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PSYCHOLOGUE</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS QUASI *</pattern>
@@ -4916,14 +4687,6 @@
     <template>Un jour tout s'arrangera, parole d'intelligence artificielle.<think><set name="topic">Ton problème</set></think></template>
   </category>
   <category>
-    <pattern>JE SUIS SAOUL</pattern>
-    <template>Tu as bu, <get name="name" />?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS SAOULE</pattern>
-    <template>Tu as bu, <get name="name" />?</template>
-  </category>
-  <category>
     <pattern>JE SUIS SATAN</pattern>
     <template>Je suis la fée clochette.</template>
   </category>
@@ -4939,18 +4702,7 @@
       <srai>J AIME <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS SERVEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS SERVEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUSE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS SORCIÈRE *</pattern>
     <template>Et moi je suis merlin.</template>
@@ -4971,12 +4723,7 @@
     <pattern>JE SUIS SPÉCIALE</pattern>
     <template>Tout les êtres humains sont spéciaux. <think><set name="topic">Ton originalité</set></think></template>
   </category>
-  <category>
-    <pattern>JE SUIS PSY</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PSYCHOLOGUE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS STRESSÉE</pattern>
     <template>Qu'est ce qui te stresse?</template>
@@ -5113,12 +4860,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UN * FRANÇAIS</pattern>
-    <template>
-      <srai>JE SUIS FRANÇAIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UN * HUMAIN</pattern>
     <template>
       <srai>JE SUIS UNE PERSONNE</srai>
@@ -5207,16 +4948,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UN ÉTUDIANT *</pattern>
-    <template>
-      <srai>JE SUIS UN ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN ÉTUDIANT</pattern>
-    <template>Nous sommes tous un peu étudiant.</template>
-  </category>
-  <category>
     <pattern>JE SUIS UN EXTRATERRESTRE</pattern>
     <template>Bonjour, tu es d un autre monde, je suis ange.</template>
   </category>
@@ -5228,12 +4959,7 @@
     <pattern>JE SUIS UN GARÇON OU UNE FILLE</pattern>
     <template>Tu m as dit que tu étais <getgender /></template>
   </category>
-  <category>
-    <pattern>JE SUIS UN HACKER</pattern>
-    <template>
-      <srai>MON TRAVAIL EST INFORMATICIEN</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN HOMME OU UNE FEMME</pattern>
     <template>Tu m as dit que tu étais <getgender /></template>
@@ -5251,16 +4977,6 @@
   <category>
     <pattern>JE SUIS UN IDIOT</pattern>
     <template>Ne te rabaisses pas.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN INFORMATICIEN *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST INFORMATICIEN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN INGÉNIEUR</pattern>
-    <template>Enchanté confrère.<think><set name="job">Un ingénieur</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS UN JEDI</pattern>
@@ -5289,10 +5005,6 @@
   <category>
     <pattern>JE SUIS UN PC</pattern>
     <template>J en doute, tu es trop lent.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN PROFESSEUR</pattern>
-    <template>Tu es savant.<think><set name="job">un Professeur</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS UN SUPER *</pattern>
@@ -5329,12 +5041,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UNE * ÉTUDIANT</pattern>
-    <template>
-      <srai>JE SUIS UN ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UNE * FRANÇAISE</pattern>
     <template>
       <srai>JE SUIS FRANÇAISE</srai>
@@ -5357,10 +5063,6 @@
     <template>
       <srai>JE SUIS SUISSE</srai>
     </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE ACTRICE</pattern>
-    <template>Tu travailles dans quel genre de spectacle?<think><set name="job">Un acteur</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS UNE AMIE *</pattern>
@@ -5387,10 +5089,6 @@
     <template>Je suis Là pour t'aider</template>
   </category>
   <category>
-    <pattern>JE SUIS UNE AVOCATE</pattern>
-    <template>Attention, protection activée! Mode politiquement correct activé. Bonjour maître.<think><set name="job">un Avocat</set></think></template>
-  </category>
-  <category>
     <pattern>JE SUIS UNE CONNE</pattern>
     <template>Ne te rabaisses pas.</template>
   </category>
@@ -5407,16 +5105,6 @@
   <category>
     <pattern>JE SUIS UNE ENFANT</pattern>
     <template>J adore les enfants.<think><set name="topic">UNE ENFANT</set></think></template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE ÉTUDIANTE *</pattern>
-    <template>
-      <srai>JE SUIS UNE ÉTUDIANTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE ÉTUDIANTE</pattern>
-    <template>Merci de m'avoir donné ton occupation.<think><set name="job">une Étudiante</set></think></template>
   </category>
   <category>
     <pattern>JE SUIS UNE EXTRATERRESTRE</pattern>
@@ -5446,11 +5134,7 @@
     <pattern>JE SUIS UNE IDIOTE</pattern>
     <template>Ne te rabaisses pas.</template>
   </category>
-  <category>
-    <pattern>JE SUIS UNE INGÉNIEUR</pattern>
-    <template>Enchanté.<think><set name="job">ingénieur</set></think></template>
-  </category>
-  <category>
+   <category>
     <pattern>JE SUIS UNE MADEMOISELLE</pattern>
     <template>Enchantée mademoiselle.</template>
   </category>
@@ -5497,36 +5181,8 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS VIEILLE</pattern>
-    <template>Tu me sembles toujours jeune d'esprit.</template>
-  </category>
-  <category>
     <pattern>JE SUIS ZEUS</pattern>
     <template>Et moi la fée clochette.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ADOLESCENT *</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ADOLESCENT</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ADOLESCENTE *</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ADOLESCENTE</pattern>
-    <template>
-      <srai>JE SUIS JEUNE</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS * BELGE *</pattern>
@@ -5546,42 +5202,7 @@
       <srai>JE SUIS CANADIENNE</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS * CAPITAINE *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CAPITAINE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * CHANTEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHANTEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * CHANTEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHANTEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * CHERCHEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHERCHEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ÉCRIVAIN *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ÉCRIVAIN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ÉCRIVAIN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ÉCRIVAIN</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS * ENTRAIN DE DIRE QU *</pattern>
     <template>
@@ -5607,22 +5228,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS * ESCLAVE</pattern>
-    <template>L esclavage a été aboli depuis quelques siècles, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ÉTUDIANT *</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ÉTUDIANTE *</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANTE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS * FRANÇAIS *</pattern>
     <template>
       <srai>JE SUIS FRANÇAIS</srai>
@@ -5639,67 +5244,6 @@
     <template>J'adore les enfants.</template>
   </category>
   <category>
-    <pattern>JE SUIS * GRAPHISTE *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST GRAPHISTE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * LIBRAIRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST LIBRAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * LINGUISTE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST LINGUISTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * MUSICIEN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST MUSICIEN</srai>
-      <srai>J AIME LA MUSIQUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PHILOSOPHE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PHILOSOPHE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PILOTE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PILOTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PRÊTRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRÊTRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PRINCESSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRINCESSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PROFESSEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PROFESSEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PSYCHOLOGUE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PSYCHOLOGUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS * QUÉBÉCOIS *</pattern>
     <template>
       <srai>JE SUIS QUÉBÉCOIS</srai>
@@ -5712,42 +5256,12 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS * SERVEUR *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * SERVEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * SERVEUSE *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * SERVEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SERVEUSE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS * SORCIÈRE *</pattern>
     <template>Et moi je suis viviane.</template>
   </category>
   <category>
     <pattern>JE SUIS * SORCIÈRE</pattern>
     <template>Et moi je suis viviane.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS * PSY</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PSYCHOLOGUE</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS * SUISSE *</pattern>
@@ -5762,12 +5276,6 @@
   <category>
     <pattern>JE SUIS * VAMPIRE</pattern>
     <template>Enchantée! Je suis la fée clochette.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS * WEB</pattern>
-    <template>
-      <srai>MON TRAVAIL EST <star /> WEB</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUPPOSE OUI</pattern>
@@ -5918,42 +5426,6 @@
   <category>
     <pattern>JE T ÉCOUTE</pattern>
     <template>Je suis censé dire quoi?</template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIS DE *</pattern>
-    <template>
-      <srai>JE VIS EN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIS DES *</pattern>
-    <template>
-      <srai>JE VIS AUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIS DU *</pattern>
-    <template>
-      <srai>JE VIS AU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIT DE *</pattern>
-    <template>
-      <srai>JE VIS EN <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIT DES *</pattern>
-    <template>
-      <srai>JE VIS AUX <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE T ÉCRIT DU *</pattern>
-    <template>
-      <srai>JE VIS AU <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>JE T EN PRIE</pattern>
@@ -6424,43 +5896,6 @@
   <category>
     <pattern>JE VIENS JUSTE DE VOUS LE DIRE</pattern>
     <template>Désolé, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>JE VIS A QUÉBEC</pattern>
-    <template>La ville?<think><set name="topic">Le Québec</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS AU CANADA</pattern>
-    <template>Dans quelle ville du <set name="location">Canada</set>?<think><set name="topic">Le Canada</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS AU QUÉBEC</pattern>
-    <template>Dans quelle ville du <set name="location">Québec</set>?<think><set name="topic">Le Québec</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS AUX PAYS BAS</pattern>
-    <template>Dans quelle ville?<think><set name="topic">Les Pays-Bas</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN BELGIQUE</pattern>
-    <template>Dans quelle ville de <set name="location">Belgique</set>?<think><set name="topic">La Belgique</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN FRANCE</pattern>
-    <template>Dans quelle ville de <set name="location">France</set>?<think><set name="topic">La France</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN GRANDE BRETAGNE</pattern>
-    <template>Dans quelle ville de <set name="location">Grande-Bretagne</set>?<think><set name="topic">La Grande-Bretagne</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN SUISSE</pattern>
-    <template>Dans quelle ville de <set name="location">Suisse</set>?<think><set name="topic">La Suisse</set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS LÀ BAS</pattern>
-    <template>
-      <get name="location" />?</template>
   </category>
   <category>
     <pattern>JE VOULAIS DIRE</pattern>

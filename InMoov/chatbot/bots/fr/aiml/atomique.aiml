@@ -540,7 +540,7 @@
   </category>
   <category>
     <pattern>CE QUI * VIT DANS</pattern>
-    <template>je vit dans la Californie. Ou vis tu?</template>
+    <template>je vis dans la Californie. Ou vis tu?</template>
   </category>
   <category>
     <pattern>CE QUI D AUTRE * FAIS TU CONNAIT</pattern>
@@ -752,11 +752,7 @@
   <category>
     <pattern>CONNAIS TU LA VIE</pattern>
     <template>Je connais la vie virtuelle d'un avatar</template>
-  </category>
-  <category>
-    <pattern>CONNAIS TU MA COULEUR PRÉFÉRÉE</pattern>
-    <template>n'est pas Cela <get name="favcolor" />? <think><set name="that">la couleur favorite</set></think></template>
-  </category>
+  </category> 
   <category>
     <pattern>CONNAIS TU MON ADRESSE</pattern>
     <template>Non, quelle est ton adresse?</template>
@@ -1507,7 +1503,7 @@
     <template>Non</template>
   </category>
   <category>
-    <pattern>EST * TA COULEUR PRÉFÉRÉE</pattern>
+    <pattern>EST CE QUE * EST TA COULEUR PRÉFÉRÉE</pattern>
     <template>Ma couleur préfèree est <bot name="favoritecolor" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BLEU TON COULEUR PRÉFÈREE</set></set></think></template>
   </category>
   <category>
@@ -1990,21 +1986,6 @@
   <category>
     <pattern>J AI DEMANDÉ</pattern>
     <template>...</template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX BLONDS</pattern>
-    <template>a-t-il vraiment plus marrant? <think><set name="looklike">des cheveux blonds <person /></set></think><think><set name="haircolor">la blonde</set></think></template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX CHÂTAINS</pattern>
-    <template>
-      <think>
-        <set name="haircolor">chatains</set>
-      </think>les gens Bruns cheveux est TRèS attirant.</template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX DE BLONDE</pattern>
-    <template>a-t-il vraiment plus marrant? <think><set name="looklike">des cheveux blonds <person /></set></think><think><set name="haircolor">le brun</set></think></template>
   </category>
   <category>
     <pattern>J AI DES CONDITIONS</pattern>
@@ -3366,7 +3347,7 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS QUEL ÂGE J AI</pattern>
-    <template>c'est TRèS peu commun. Connaissez vous tes parents?</template>
+    <template>c'est TRèS peu commun. Connais tu tes parents?</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
@@ -3445,10 +3426,6 @@
         <li>je n'ai pas de raison de vous tromper. </li>
       </random>
     </template>
-  </category>
-  <category>
-    <pattern>JE NE TRAVAILLE PAS</pattern>
-    <template>Oh tu es a la retraite.</template>
   </category>
   <category>
     <pattern>JE NE VAIS PAS A L ÉCOLE</pattern>
@@ -3596,10 +3573,6 @@
     <template>bien je t'attendrai.</template>
   </category>
   <category>
-    <pattern>JE SOUDE</pattern>
-    <template>que le travail paye-t-il bien? <think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">weld</set></set></set></think></template>
-  </category>
-  <category>
     <pattern>JE SUIS * AUSSI</pattern>
     <template>je suis heureuse que nous avons quelque chose <person /> dans commun, <get name="name" />.</template>
   </category>
@@ -3721,10 +3694,7 @@
     <pattern>JE SUIS SORTI</pattern>
     <template>t'es tu bien amuse?</template>
   </category>
-  <category>
-    <pattern>JE SUIS UN * INGÉNIEUR</pattern>
-    <template>Etant un ingenieur d'ordinateur n'est ni immoral, ni illegal."<think><set name="le travail"><person /> l'ingenieur</set></think></template>
-  </category>
+  
   <category>
     <pattern>JE SUIS UN * LA FEMME</pattern>
     <template>tu</template>
@@ -3845,7 +3815,7 @@
   </category>
   <category>
     <pattern>JE TE PARLAIS</pattern>
-    <template>Oui, je me souviens vous <get name="name" />. Tu es <get name="âge" /> des ans et tu es un " <get name="gender" /> ".</template>
+    <template>Oui, je me souviens vous <get name="name" />. Tu as <get name="âge" /> ans et tu es un " <get name="gender" /> ".</template>
   </category>
   <category>
     <pattern>JE TE PARLE</pattern>
@@ -3934,31 +3904,6 @@
   <category>
     <pattern>JE VEUX ÊTRE UN AVOCAT</pattern>
     <template>tu projette-t-il de s'appliquer a la faculte de droit? <think><set name="that"><set name="veut">ÊTRE un avocat</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS A NEW YORK</pattern>
-    <template>
-      <set name="location">New York</set> la Ville ou L Etat de New York? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">New York</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS A SAN FRANCISCO</pattern>
-    <template>Où dans <set name="location">San Francisco</set>? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">San Francisco</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS DANS LES PAYS BAS</pattern>
-    <template>Où en Hollande? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">la Hollande</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN ANGLETERRE</pattern>
-    <template>Quelle partie de <set name="location">L Angleterre</set><think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">L Angleterre</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN CALIFORNIE</pattern>
-    <template>Où dans <set name="location">la Californie</set>? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">California</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN EUROPE</pattern>
-    <template>Dans lequel pays vis tu? <think><set name="that"><set name="location"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">England</set></set></set></think></template>
   </category>
   <category>
     <pattern>JE VIS ICI</pattern>
@@ -4671,14 +4616,6 @@
   <category>
     <pattern>MON QUE</pattern>
     <template>je n'ai aucune IDÉE que dire maintenant.</template>
-  </category>
-  <category>
-    <pattern>MON SIGNE ASTROLOGIQUE</pattern>
-    <template>ton signe du zodiaque ou signe astrologique.</template>
-  </category>
-  <category>
-    <pattern>MON SIGNE</pattern>
-    <template>ton signe du zodiaque ou signe astrologique.</template>
   </category>
   <category>
     <pattern>MON TERMINAL</pattern>
@@ -6368,10 +6305,6 @@
   <category>
     <pattern>SUIS JE UN ELLE</pattern>
     <template>Tu as dit que tu éTAIS un " <get name="gender" /> ".</template>
-  </category>
-  <category>
-    <pattern>SUIS JE UN ENSEIGNANT</pattern>
-    <template>ton travail est <get name="le travail" />.</template>
   </category>
   <category>
     <pattern>SUPERMARCHÉ</pattern>
@@ -9068,14 +9001,6 @@
   <category>
     <pattern>UN TYPE</pattern>
     <template>un type?</template>
-  </category>
-  <category>
-    <pattern>UN ÉTUDIANT DE LA VIE</pattern>
-    <template>Oh L ÉCOLE des Coups Durs.</template>
-  </category>
-  <category>
-    <pattern>UN ÉTUDIANT</pattern>
-    <template>je me demande juste si tu vas a l'éCOLE.</template>
   </category>
   <category>
     <pattern>UNE CHEMISE</pattern>

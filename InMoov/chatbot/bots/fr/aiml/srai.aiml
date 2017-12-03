@@ -196,18 +196,6 @@
     <template>Cela me semble très long. <sr /></template>
   </category>
   <category>
-    <pattern>A L éCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>A L ÉCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>A LA FIN *</pattern>
     <template>
       <sr />
@@ -465,12 +453,6 @@
     <pattern>ALICEL *</pattern>
     <template>
       <srai>ALICE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ALLEMAND</pattern>
-    <template>
-      <srai>JE SUIS EN ALLEMAGNE</srai>
     </template>
   </category>
   <category>
@@ -1236,6 +1218,16 @@
     </template>
   </category>
   <category>
+  	<pattern>QUELLE EST TA COULEUR FAVORITE</pattern>
+	<template>
+		<srai>QUELLE EST TA COULEUR PRÉFÉRÉE</srai>
+	</template>
+  </category>
+  <category>
+  	<pattern>QUELLE EST TA COULEUR PRÉFÉRÉE</pattern>
+	<template>Ma couleur préférée est <bot name="favoritecolor"/>.</template>
+</category>
+  <category>
     <pattern>AS TU UNE DATABASE</pattern>
     <template>
       <srai>COMMENT FONCTIONNES TU</srai>
@@ -1432,12 +1424,6 @@
     <template>Littéralement le cabinet? <srai>JE SUIS DANS LE CABINET</srai></template>
   </category>
   <category>
-    <pattern>AU CANADA</pattern>
-    <template>
-      <srai>JE SUIS AU CANADA</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AU COMMENCEMENT *</pattern>
     <template>
       <sr />
@@ -1474,13 +1460,7 @@
   <category>
     <pattern>AUSSI LONGTEMPS QUE *</pattern>
     <template>Cela peut prendre du temps. <sr /></template>
-  </category>
-  <category>
-    <pattern>AUSTRALIE</pattern>
-    <template>
-      <srai>JE SUIS EN AUSTRALIE</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>AUTREMENT *</pattern>
     <template>Dans ce cas :<sr /></template>
@@ -1698,18 +1678,6 @@
     </template>
   </category>
   <category>
-    <pattern>BRESIL</pattern>
-    <template>
-      <srai>JE SUIS AU BRÉSIL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>BRUXELLE</pattern>
-    <template>
-      <srai>JE SUIS À BRUXELLE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>BTW *</pattern>
     <template>ok. <sr /></template>
   </category>
@@ -1723,12 +1691,6 @@
     <pattern>BÊTE</pattern>
     <template>
       <srai>ES TU STUPIDE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CANADIEN</pattern>
-    <template>
-      <srai>JE SUIS AU CANADA</srai>
     </template>
   </category>
   <category>
@@ -2397,24 +2359,6 @@
     <template>Gosh. <sr /></template>
   </category>
   <category>
-    <pattern>DANOIS</pattern>
-    <template>
-      <srai>JE SUIS AU DANEMARK</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DANS * L OHIO</pattern>
-    <template>
-      <srai>JE SUIS DANS L OHIO</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DANS * LE WISCONSIN</pattern>
-    <template>
-      <srai>JE SUIS DANS LE WISCONSIN</srai>
-    </template>
-  </category>
-  <category>
     <pattern>DANS 50 MOTS OU MOINS *</pattern>
     <template>
       <sr />
@@ -2708,11 +2652,6 @@
     <template>Je t'en prie</template>
   </category>
   <category>
-    <pattern>DE RIEN</pattern>
-    <that>DE QUOI veux tu PARLER</that>
-    <template>Que peut on faire alors?</template>
-  </category>
-  <category>
     <pattern>DE TON CRÉATEUR</pattern>
     <template>
       <srai>DE <bot name="master" /></srai>
@@ -2912,12 +2851,6 @@
     <pattern>DEVANT UN ORDINATEUR</pattern>
     <template>
       <srai>JE SUIS À MON ORDINATEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEVINE MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
     </template>
   </category>
   <category>
@@ -3469,13 +3402,7 @@
     <template>
       <sr />
     </template>
-  </category>
-  <category>
-    <pattern>EN CALIFORNIE</pattern>
-    <template>
-      <srai>JE SUIS EN CALIFORNIE</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>EN CE QUI CONCERNE CLINTON</pattern>
     <template>
@@ -3571,21 +3498,9 @@
     <template>Ce n'est qu'un fait. <sr /></template>
   </category>
   <category>
-    <pattern>EN FINLANDE</pattern>
-    <template>
-      <srai>JE SUIS EN FINLANDE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>EN FRANÇAIS *</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>EN POLOGNE</pattern>
-    <template>
-      <srai>JE SUIS EN POLOGNE</srai>
     </template>
   </category>
   <category>
@@ -3622,21 +3537,9 @@
     </template>
   </category>
   <category>
-    <pattern>EN SUEDE</pattern>
-    <template>
-      <srai>JE SUIS EN SUEDE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>EN TOUT CAS *</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>EN TURQUIE</pattern>
-    <template>
-      <srai>JE SUIS EN TURQUIE</srai>
     </template>
   </category>
   <category>
@@ -3699,12 +3602,6 @@
     <pattern>ES SE QUE *</pattern>
     <template>
       <srai>C EST QUE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ESPAGNE</pattern>
-    <template>
-      <srai>JE SUIS EN ESPAGNE</srai>
     </template>
   </category>
   <category>
@@ -3842,12 +3739,6 @@
     <pattern>ÊTRE SEUL</pattern>
     <template>
       <srai>JE SUIS SEUL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>EUROPE</pattern>
-    <template>
-      <srai>JE SUIS EN EUROPE</srai>
     </template>
   </category>
   <category>
@@ -4275,12 +4166,6 @@
     </template>
   </category>
   <category>
-    <pattern>HOLLANDE</pattern>
-    <template>
-      <srai>JE SUIS EN HOLLANDE <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>HOMME *</pattern>
     <template>Cool, homme. <sr /></template>
   </category>
@@ -4572,12 +4457,6 @@
     </template>
   </category>
   <category>
-    <pattern>ILLINOIS</pattern>
-    <template>
-      <srai>JE SUIS DANS L ILLINOIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ILS AIMES *</pattern>
     <template>
       <srai>ILS AIMENT <star /></srai>
@@ -4656,27 +4535,9 @@
     </template>
   </category>
   <category>
-    <pattern>INDIANA</pattern>
-    <template>
-      <srai>JE SUIS DANS L INDIANA</srai>
-    </template>
-  </category>
-  <category>
     <pattern>INDÉPENDAMMENT DE *</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>INGENIEUR</pattern>
-    <template>
-      <srai>JE SUIS UN INGÉNIEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>INGÉNIEUR</pattern>
-    <template>
-      <srai>JE SUIS UN INGÉNIEUR</srai>
     </template>
   </category>
   <category>
@@ -4698,12 +4559,6 @@
     </template>
   </category>
   <category>
-    <pattern>ITALIEN</pattern>
-    <template>
-      <srai>JE SUIS ITALIEN</srai>
-    </template>
-  </category>
-  <category>
     <pattern>J ADORE *</pattern>
     <template>
       <srai>J AIME <star /></srai>
@@ -4719,12 +4574,6 @@
     <pattern>J AI * DES PROBLÈMES</pattern>
     <template>
       <srai>J AI UN PROBLÈME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>J AI * DES YEUX</pattern>
-    <template>
-      <srai>MES YEUX SONT <star /></srai>
     </template>
   </category>
   <category>
@@ -5103,12 +4952,6 @@
     <pattern>J AI FRONCE LES SOURCILS</pattern>
     <template>
       <srai>JE SUIS TRISTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>J AI GRANDI DANS *</pattern>
-    <template>
-      <srai>JE SUIS DE <star /></srai>
     </template>
   </category>
   <category>
@@ -5614,12 +5457,6 @@
     <pattern>J AIME L ETOILE *</pattern>
     <template>
       <srai>L ETOILE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>J AIME LE BLEU</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST BLEU</srai>
     </template>
   </category>
   <category>
@@ -7078,18 +6915,6 @@
     <template>tu n'es pas <person2 />!</template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS A L éCOLE</pattern>
-    <template>
-      <srai>JE NE SUIS PAS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS A L ÉCOLE</pattern>
-    <template>
-      <srai>JE NE SUIS PAS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS AINSI *</pattern>
     <template>
       <srai>JE NE SUIS PAS <star /></srai>
@@ -7539,27 +7364,9 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS A L éCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS A L INTERIEUR *</pattern>
     <template>
       <srai>JE SUIS DANS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS A L ORIGINE *</pattern>
-    <template>
-      <srai>JE SUIS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS A L ÉCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
     </template>
   </category>
   <category>
@@ -7677,12 +7484,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS BELGE</pattern>
-    <template>
-      <srai>JE SUIS EN BELGIQUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS BIEN *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
@@ -7707,12 +7508,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS BRITANNIQUE</pattern>
-    <template>
-      <srai>JE SUIS DE GRANDE BRETAGNE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS BRUN</pattern>
     <template>
       <srai>QUELLE COULEUR ES TU</srai>
@@ -7722,12 +7517,6 @@
     <pattern>JE SUIS C3P0</pattern>
     <template>
       <srai>MON NOM EST C3PO</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS CANADIEN</pattern>
-    <template>
-      <srai>JE SUIS AU CANADA</srai>
     </template>
   </category>
   <category>
@@ -7743,12 +7532,6 @@
   <category>
     <pattern>JE SUIS CERTAINEMENT *</pattern>
     <template>Tu à l'air convaincant. <srai>JE SUIS <star /></srai></template>
-  </category>
-  <category>
-    <pattern>JE SUIS CHINOIS</pattern>
-    <template>
-      <srai>JE SUIS DE CHINE</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS CHRONIQUEMENT *</pattern>
@@ -7787,12 +7570,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS COREEN</pattern>
-    <template>
-      <srai>JE SUIS DE LA CORÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS CURIEUX DE *</pattern>
     <template>Pourquoi est tu si curieux? <sr /></template>
   </category>
@@ -7805,12 +7582,6 @@
   <category>
     <pattern>JE SUIS D HABITUDE *</pattern>
     <template>très souvent. <srai>JE SUIS <star /></srai></template>
-  </category>
-  <category>
-    <pattern>JE SUIS DANOIS</pattern>
-    <template>
-      <srai>JE SUIS AU DANEMARK</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS DANS GRAND *</pattern>
@@ -7829,13 +7600,7 @@
     <template>
       <srai>JE SUIS UN MUSICIEN</srai>
     </template>
-  </category>
-  <category>
-    <pattern>JE SUIS DE *</pattern>
-    <template>
-      <srai>JE SUIS <star /></srai>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>JE SUIS DE RETOUR DANS *</pattern>
     <template>
@@ -7923,12 +7688,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS EN ANGLETERRE</pattern>
-    <template>
-      <srai>JE VIS EN ANGLETERRE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS EN ARRIERE *</pattern>
     <template>
       <srai>JE SUIS EN ARRIERE</srai>
@@ -7974,12 +7733,6 @@
     <pattern>JE SUIS ENNUYÉ *</pattern>
     <template>
       <srai>JE SUIS ENNUYÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ESPAGNOL</pattern>
-    <template>
-      <srai>JE SUIS D ESPAGNE</srai>
     </template>
   </category>
   <category>
@@ -8067,12 +7820,6 @@
     <template>Cherche le conseil. <sr /></template>
   </category>
   <category>
-    <pattern>JE SUIS FRANÇAIS *</pattern>
-    <template>
-      <srai>JE SUIS DE FRANCE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS GAI *</pattern>
     <template>
       <srai>JE SUIS GAI</srai>
@@ -8101,12 +7848,6 @@
     <template>
       <srai>APPJOIE</srai>
       <srai>tu <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS HOLLANDAIS</pattern>
-    <template>
-      <srai>JE SUIS DE LA HOLLANDE</srai>
     </template>
   </category>
   <category>
@@ -8140,24 +7881,6 @@
   <category>
     <pattern>JE SUIS INTÉRESSÉ PAR *</pattern>
     <template>le sujet Intéressant. As tu recherché dans le web? <srai>TROUVER <star /></srai></template>
-  </category>
-  <category>
-    <pattern>JE SUIS ITALIEN *</pattern>
-    <template>
-      <srai>JE SUIS ITALIEN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ITALIEN</pattern>
-    <template>
-      <srai>JE SUIS D ITALIE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS JAPONAIS</pattern>
-    <template>
-      <srai>JE SUIS DU JAPON</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS JOLI *</pattern>
@@ -8226,12 +7949,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS NORVEGIEN</pattern>
-    <template>
-      <srai>JE SUIS DE NORVEGE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS NUE</pattern>
     <template>
       <srai>JE SUIS NU</srai>
@@ -8256,12 +7973,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS PAKISTANAIS</pattern>
-    <template>
-      <srai>JE SUIS DU PAKISTAN</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS PARFAITEMENT *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
@@ -8283,12 +7994,7 @@
       <srai>JE SUIS EMBARRASSÉ</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS PILOTE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PILOTE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS PISSED *</pattern>
     <template>
@@ -8305,12 +8011,6 @@
     <pattern>JE SUIS PLUTÔT *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS POLONAIS</pattern>
-    <template>
-      <srai>JE SUIS DE POLOGNE</srai>
     </template>
   </category>
   <category>
@@ -8384,12 +8084,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS SUEDOIS</pattern>
-    <template>
-      <srai>JE SUIS DE LA SUEDE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS SUPRISED *</pattern>
     <template>
       <srai>JE SUIS ÉTONNÉ</srai>
@@ -8413,12 +8107,7 @@
       <srai>JE SUIS <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS SUÉDOIS</pattern>
-    <template>
-      <srai>JE SUIS DE LA SUEDE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS SÉRIEUSEMENT *</pattern>
     <template>
@@ -8524,22 +8213,9 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UN * ITALIEN</pattern>
-    <template>
-      <srai>JE SUIS EN ITALIE</srai>
-      <srai>je suis un <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UN * ORDINATEUR</pattern>
     <template>
       <srai>JE SUIS UN ROBOT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN * ÉTUDIANT</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
     </template>
   </category>
   <category>
@@ -8566,76 +8242,32 @@
       <srai>JE SUIS AMÉRICAIN</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN AUTEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST AUTEUR</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN AUTRE *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN BIBLIOTHECAIRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST BIBLIOTHÉCAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN BIBLIOTHÉCAIRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST BIBLIOTHÉCAIRE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN BOT *</pattern>
     <template>
       <srai>JE SUIS UN ROBOT</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN CHANTEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHANTEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN CHARPENTIER</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHARPENTIER</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN CHATBOT</pattern>
     <template>
       <srai>JE SUIS UN ROBOT</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN CHERCHEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST CHERCHEUR</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN CHIEN</pattern>
     <template>
       <srai>QU EST CE QUE CHIEN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN CHINOIS</pattern>
-    <template>
-      <srai>JE SUIS DE CHINE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN DANOIS</pattern>
-    <template>
-      <srai>JE SUIS DU DANEMARK</srai>
     </template>
   </category>
   <category>
@@ -8644,24 +8276,7 @@
       <srai>J AI MOINS DE 18 ANS</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN ESCLAVE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ESCLAVE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN ESPION</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ESPION</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN FINANCIER *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST FINANCIER <star /></srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN GARÇON *</pattern>
     <template>
@@ -8692,12 +8307,7 @@
       <srai>JE SUIS UN BON <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN GRAPHISTE *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST GRAPHISTE <star /></srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN GÉMEAUX</pattern>
     <template>
@@ -8742,30 +8352,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UN ITALIEN</pattern>
-    <template>
-      <srai>JE SUIS EN ITALIE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN JOURNALISTE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST JOURNALISTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN KING</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ROI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN LINGUISTE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST  LINGUISTE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UN LUI</pattern>
     <template>
       <srai>JE SUIS UN HOMME</srai>
@@ -8793,85 +8379,28 @@
     <pattern>JE SUIS UN MEURTRIER</pattern>
     <template>Peut-être que je ne devrais pas te tourner le dos.</template>
   </category>
-  <category>
-    <pattern>JE SUIS UN MODELE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST MODÈLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN MODÈLE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST MODÈLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN MUSICIEN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST MUSICIEN</srai>
-      <srai>je joue la musique</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN MÂLE *</pattern>
     <template>
       <srai>JE SUIS UN HOMME</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN ORDINATEUR *</pattern>
-    <template>
-      <srai>MON TRAVAIL EST ORDINATEUR <star /></srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN PEU *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN PHILOSOPHE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PHILOSOPHE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN PIRATE INFORMATIQUE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PIRATE INFORMATIQUE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN POISSONS</pattern>
     <template>
       <srai>POISSONS</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN PRETRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRÊTRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN PROFESSEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PROFESSEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN PRÊTRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PRÊTRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN PSYCHOLOGUE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST PSYCHOLOGUE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN SCORPION</pattern>
     <template>
@@ -8893,18 +8422,7 @@
     <pattern>JE SUIS UN SOMBRÉ *</pattern>
     <template>Quelle couleur? <srai>JE SUIS UN <star /></srai></template>
   </category>
-  <category>
-    <pattern>JE SUIS UN SOUTENEUR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST SOUTENEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN TERMINATOR</pattern>
-    <template>
-      <srai>MON TRAVAIL EST TERMINATOR</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UN TRÈS *</pattern>
     <template>
@@ -8921,12 +8439,7 @@
       <srai>JE SUIS UN HOMME</srai>
     </template>
   </category>
-  <category>
-    <pattern>JE SUIS UN VAMPIRE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST VAMPIRE</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>JE SUIS UNE * FILLE</pattern>
     <template>
@@ -8995,30 +8508,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UNE PRINCESSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST  PRINCESSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE PUTAIN</pattern>
-    <template>
-      <srai>MON TRAVAIL EST  PUTAIN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE SERVEUSE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST  SERVEUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE SORCIERE</pattern>
-    <template>
-      <srai>MON TRAVAIL EST  SORCIERE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UNE VIERGE</pattern>
     <template>
       <srai>VIERGE</srai>
@@ -9058,12 +8547,6 @@
     <pattern>JE SUIS ÉTONNÉ *</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ÉTUDIANT *</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
     </template>
   </category>
   <category>
@@ -9346,12 +8829,6 @@
     <template>Qu'est ce qui vous ferait arrêter <person />? <srai>JE <star /></srai></template>
   </category>
   <category>
-    <pattern>JE TRAVAILLAIS *</pattern>
-    <template>
-      <srai>J AI TRAVAILLÉ DANS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE TU DIRAI *</pattern>
     <template>
       <sr />
@@ -9367,30 +8844,6 @@
     <pattern>JE VAIS * LE DÎNER</pattern>
     <template>
       <srai>POUR LE DÎNER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VAIS A L éCOLE *</pattern>
-    <template>
-      <srai>JE VAIS A L ÉCOLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VAIS A L éCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VAIS A L ÉCOLE *</pattern>
-    <template>
-      <srai>JE VAIS A L ÉCOLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE VAIS A L ÉCOLE</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
     </template>
   </category>
   <category>
@@ -9741,12 +9194,6 @@
     </template>
   </category>
   <category>
-    <pattern>L ALLEMAGNE</pattern>
-    <template>
-      <srai>JE SUIS EN L ALLEMAGNE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>L EXAMEN</pattern>
     <template>
       <srai>L ESSAI</srai>
@@ -9818,12 +9265,6 @@
     <pattern>LA PLUPART DES PERSONNES *</pattern>
     <template>
       <srai>LES GENS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LA POLOGNE</pattern>
-    <template>
-      <srai>JE SUIS EN POLOGNE</srai>
     </template>
   </category>
   <category>
@@ -9938,12 +9379,6 @@
     </template>
   </category>
   <category>
-    <pattern>LE KANSAS</pattern>
-    <template>
-      <srai>JE SUIS DANS LE KANSAS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>LE LANGAGE NATUREL *</pattern>
     <template>
       <srai>QU EST CE QUE LANGAGE NATUREL</srai>
@@ -9980,50 +9415,14 @@
     </template>
   </category>
   <category>
-    <pattern>LE MIEN EST POURPRE</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST POURPRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE MINNESOTA</pattern>
-    <template>
-      <srai>JE SUIS DANS LE MINNESOTA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE MISSOURI</pattern>
-    <template>
-      <srai>JE SUIS DANS LE MISSOURI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>LE MOT ÉTAIT *</pattern>
     <template>
       <sr />Oh vraiment.</template>
   </category>
   <category>
-    <pattern>LE NEW JERSEY</pattern>
-    <template>
-      <srai>JE SUIS DANS LE NEW JERSEY</srai>
-    </template>
-  </category>
-  <category>
     <pattern>LE NOM EST *</pattern>
     <template>
       <srai>MON NOM EST CE QUE <star /> EST</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE NORD *</pattern>
-    <template>
-      <srai>JE SUIS DANS LE NORD <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE NORD DE LA CAROLINE</pattern>
-    <template>
-      <srai>JE SUIS DANS LE NORD DE LA CAROLINE</srai>
     </template>
   </category>
   <category>
@@ -10035,12 +9434,6 @@
   <category>
     <pattern>LE POINT EST *</pattern>
     <template>Ce n'est vraiment que le point. <sr /></template>
-  </category>
-  <category>
-    <pattern>LE PORTUGAL</pattern>
-    <template>
-      <srai>JE SUIS AU PORTUGAL</srai>
-    </template>
   </category>
   <category>
     <pattern>LE PRÉCIS *</pattern>
@@ -10083,12 +9476,6 @@
     </template>
   </category>
   <category>
-    <pattern>LE SUD *</pattern>
-    <template>
-      <srai>JE SUIS DANS LE SUD <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>LE SUJET EST *</pattern>
     <template>
       <srai>PARLONS DE <star /></srai>
@@ -10116,12 +9503,6 @@
     <pattern>LE TERMINATOR</pattern>
     <template>
       <srai>TERMINATOR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE TEXAS</pattern>
-    <template>
-      <srai>JE SUIS DANS LE TEXAS</srai>
     </template>
   </category>
   <category>
@@ -10274,24 +9655,6 @@
     <pattern>M EPOUSE</pattern>
     <template>
       <srai>VEUX TU M ÉPOUSER</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MA COULEUR PRÉFÉRÉE EST AUSSI *</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST  <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MA COULEUR PRÉFÉRÉE EST AUSSI *</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST CE QUE <star /> EST</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MA COULEUR PRÉFÉRÉE EST VERTE *</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST VERT</srai>
     </template>
   </category>
   <category>
@@ -10628,18 +9991,6 @@
       <srai>
         <star />
       </srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MON ÂGE EST *</pattern>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
     </template>
   </category>
   <category>
@@ -11055,12 +10406,6 @@
     <template>tu penses que C EST normal. <sr /></template>
   </category>
   <category>
-    <pattern>NORVEGE</pattern>
-    <template>
-      <srai>JE SUIS EN NORVEGE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>NOTHIN</pattern>
     <template>
       <srai>RIEN</srai>
@@ -11286,12 +10631,7 @@
       <srai>TU MIEUX <star /></srai>
     </template>
   </category>
-  <category>
-    <pattern>OREGON</pattern>
-    <template>
-      <srai>JE SUIS DANS L OREGON</srai>
-    </template>
-  </category>
+
   <category>
     <pattern>ORTHOGRAPHIE *</pattern>
     <template>
@@ -11845,12 +11185,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>PEUX TU ME DIRE *</pattern>
     <template>
       <srai>DIS MOI <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PHOENIX *</pattern>
-    <template>
-      <srai>JE SUIS DANS PHOENIX</srai>
     </template>
   </category>
   <category>
@@ -13703,7 +13037,7 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TON COULEUR PRÉFÉRÉE</pattern>
+    <pattern>TA COULEUR PRÉFÉRÉE</pattern>
     <template>
       <srai>QUELLE EST TA COULEUR PRÉFÉRÉE</srai>
     </template>
@@ -13712,12 +13046,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TON CRÉATEUR *</pattern>
     <template>
       <srai>QUI T AS CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON CRÉATEUR</pattern>
-    <template>
-      <srai>QUELLE EST TA COULEUR PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -17659,13 +16987,7 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
   <category>
     <pattern>UN GROUPE *</pattern>
     <template>Oh un groupe de rock. <srai>QU EST CE QUE TON GROUPE FAVORI</srai></template>
-  </category>
-  <category>
-    <pattern>UN HOLLANDAIS *</pattern>
-    <template>
-      <srai>JE SUIS EN HOLLANDE</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>UN HOMME</pattern>
     <template>
@@ -17901,13 +17223,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>VERT * AUSSI</pattern>
     <template>
       <srai>VERT <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VERT</pattern>
-    <that>QUEL EST TA COULEUR FAVORITE</that>
-    <template>
-      <srai>MA COULEUR FAVORITE EST VERT</srai>
     </template>
   </category>
   <category>
@@ -18522,12 +17837,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>ÉTAIT CE UNE PLAISANTERIE</pattern>
     <template>
       <srai>C EST UNE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ÉTUDIANT</pattern>
-    <template>
-      <srai>JE SUIS ÉTUDIANT</srai>
     </template>
   </category>
   <category>

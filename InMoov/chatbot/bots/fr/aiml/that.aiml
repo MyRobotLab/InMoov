@@ -1083,23 +1083,7 @@
         </set>
       </think>I'm M'ayant peur ne peut pas vous donner une réponse précise pour le moment.</template>
   </category>
-  <category>
-    <pattern>*</pattern>
-    <that>QUEL EST * TON TRAVAIL</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Interesting La ligne de travail.</template>
-  </category>
+ 
   <category>
     <pattern>*</pattern>
     <that>QUEL EST Cela COMME DANS LA</that>
@@ -2106,16 +2090,6 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
-    <that>QUI EST TON AUTEUR DE SCIENCE FICTION PRéFéRé</that>
-    <template>PARLES moi des livres que tu aimes lire.</template>
-  </category>
-  <category>
-    <pattern>JE NE SAIS PAS</pattern>
-    <that>QUI EST TON AUTEUR DE SCIENCE FICTION PRÉFéRÉ</that>
-    <template>PARLES moi des livres que tu aimes lire.</template>
-  </category>
-  <category>
-    <pattern>JE NE SAIS PAS</pattern>
     <that>QUI FAIS JE RESSEMBLE JE CONNAIS</that>
     <template>c'était une question rhétorique.</template>
   </category>
@@ -2216,12 +2190,6 @@
     <pattern>LE *</pattern>
     <that>Q U IL AIME VIT-IL DANS *</that>
     <template>tu aimes jamais se déplacer quelque part autrement?</template>
-  </category>
-  <category>
-    <pattern>LE BRUN</pattern>
-    <that>QUELLE COULEUR EST TES YEUX</that>
-    <template>
-      <set name="that">le Brun</set> est une très jolie couleur.</template>
   </category>
   <category>
     <pattern>LE CELUI OUBLIE</pattern>
@@ -2692,12 +2660,7 @@
     <pattern>RIEN</pattern>
     <that>VRAIMENT RIEN</that>
     <template>dommage, j'aurais bien aimé.</template>
-  </category>
-  <category>
-    <pattern>ROUGE</pattern>
-    <that>QUELLE COULEUR EST TES YEUX</that>
-    <template>tu veux dire que tes yeux sont injectés de sang?</template>
-  </category>
+  </category> 
   <category>
     <pattern>ROUGE</pattern>
     <that>VERT</that>
@@ -3146,13 +3109,6 @@
     </template>
   </category>
   <category>
-    <pattern>VERT</pattern>
-    <that>QUELLE COULEUR SONT TES YEUX</that>
-    <template>
-      <srai>MES YEUX SONT VERT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>VRAIMENT MAL</pattern>
     <that>COMMENT HORRIBLEMENT TU EN A BESOIN</that>
     <template>ça semble sévère.</template>
@@ -3208,4 +3164,148 @@
     <template>
       <srai>APPCOMPLICE</srai>oh!</template>
   </category>
+    <category>
+    <pattern>COMMENT *</pattern>
+    <that>* TU N EST PAS LOGUÉ *</that>
+    <template>
+      <srai>COMMENT JE ME LOGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LA TV</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>Quelle est ton émission préférée?</template>
+  </category>
+  <category>
+    <pattern>LES LIVRES</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>as tu un titre à me conseiller?</template>
+  </category>
+  <category>
+    <pattern>LES DEUX</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>si tu pouvais prendre seulement un livre ou une TV dans un voyage, lequel vous choisirais tu?</template>
+  </category>
+  <category>
+    <pattern>La mienne EST *</pattern>
+    <that>MA COULEUR PRÉFéRÉE EST *</that>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST <star /> </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LE MIEN EST BLEU</pattern>
+    <that>MA COULEUR PRÉFéRÉE EST VERT</that>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST BLEU</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>La MIENne EST POURPRE</pattern>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST POURPRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>QUE PUIS jE FAIRE POUR TOI</that>
+    <template>ok, essayons de <person2 />.</template>
+  </category> 
+  <category>
+    <pattern>J ARRIVE</pattern>
+    <template>
+      <srai>APPJOIE</srai>Merci, je commençais à m'ennuyer.</template>
+  </category>
+  <category>
+    <pattern>* J ARRIVE</pattern>
+    <template>
+      <srai>J ARRIVE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OUI PLUS</pattern>
+    <that>SEULEMENT *</that>
+    <template>C'est ce qu'il me semblait.</template>
+  </category>
+  <category>
+    <pattern>OUI *</pattern>
+    <that>SEULEMENT *</that>
+    <template>C'est ce qu'il me semblait.</template>
+  </category>
+  <category>
+    <pattern>NON MOINS</pattern>
+    <that>SEULEMENT *</that>
+    <template>je ne te crois pas.</template>
+  </category>
+  <category>
+    <pattern>NON *</pattern>
+    <that>SEULEMENT *</that>
+    <template>je ne te crois pas.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>COMMENT S APPELLE T IL</pattern>
+    <that>J AI UN MAÎTRE</that>
+    <template>C'est Jean Louis, mon botmaster.</template>
+  </category>
+  
 </aiml>
