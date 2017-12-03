@@ -105,6 +105,20 @@
 <category>
 	<pattern> # MON ANNIVERSAIRE EST en <set>mois</set></pattern>
 	<template><srai> JE SUIS Né en <star/> </srai></template>
+</category>
+<category>
+	<pattern>QUEL EST LA DATE DE MON ANNIVERSAIRE</pattern>
+	<template><srai> MON ANNIVERSAIRE </srai></template>
+</category>
+<category>
+	<pattern>QUEL JOUR SUIS JE Né</pattern>
+	<template><srai> MON JOUR DE NAISSANCE </srai></template>
+</category>
+<category>
+    <pattern>QUAND EST MON ANNIVERSAIRE</pattern>
+    <template>
+      <srai>MON ANNIVERSAIRE</srai>
+    </template>
 </category>   
 
   <!-- yeux -->  
@@ -259,8 +273,8 @@
       	<srai>JE NE SUIS PAS ÉTUDIANT</srai>
     </template>
 </category>
-<!--  Où travailles tu?   -->
 
+<!--  Où travailles tu?   -->
 <category>
     <pattern># je travaille pour # </pattern>
     <template>
@@ -348,7 +362,7 @@
 
 <!--  Quel est ta couleur préférée?   --> 
 <category>
-	<pattern># MA COULEUR PRÉFÉRÉE EST # <set>color</set> #</pattern>
+	<pattern># MA COULEUR favorite EST # <set>color</set> #</pattern>
 	<template>
 		<think>
 			<set name="color"><star index="3"/></set>
@@ -363,12 +377,6 @@
 			<set name="color"><star index="3"/></set>
 		</think>		
 		<srai>Ma couleur préférée est <get name="color"/></srai>
-	</template>
-</category>
-<category>
-	<pattern> # Ma couleur favortite est # <set>color</set> #</pattern>
-	<template>
-		<srai>Ma couleur préférée est <star index="2"/></srai>
 	</template>
 </category>
 <category>
