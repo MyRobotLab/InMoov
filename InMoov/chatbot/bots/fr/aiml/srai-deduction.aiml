@@ -86,6 +86,9 @@
       </think>
       <srai>QU EST CE QUE <star index="2"/></srai></template>
 </category>
+<category><pattern>QU EST CE QUE _ <set>possessifs</set> _</pattern>
+<template><srai>QU EST CE QUE <star index="1"/> <star index="2"/> <star index="3"/> JE NE SAIS PAS</srai></template>
+</category>
 <category><pattern>QU EST CE QUE C ÉTAIT *</pattern>
 <template><think>
         <set name="courant">

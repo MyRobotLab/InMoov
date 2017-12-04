@@ -172,7 +172,7 @@
     <template>
 		Je ne m'intéresse pas à la pigmentation de l'iris des êtres humains.
 		<condition name="eyecolor">
-			<li value="unknow"> </li>
+			<li value="unknown"> </li>
 			<li>Mais il me semble que tu m'as dis qu ils étaient <get name="eyecolor"/>. </li>
 		</condition>
 	</template>
@@ -197,7 +197,10 @@
 <category>
     <pattern>QUELLE EST LA COULEUR DE MES CHEVEUX</pattern>
     <template>
-    	Ils sont <get name="haircolor"/>.
+    <condition name="haircolor">
+    <li value="unknown"> Tu peux me le dire ?</li>
+    <li> Ils sont <get name="haircolor"/>.</li>
+    </condition>
     </template>
 </category>
   
@@ -304,7 +307,13 @@
     	<think><set name="employer"><star /></set></think>
     	<think><set name="them"><set name="topic"><star /></set></set></think>
     </template>
-</category>  
+</category>
+<category>
+    <pattern>Je travaille <set>articles</set> *</pattern>
+    <template>
+      <srai>Mon employeur est <star index="2"/></srai>
+    </template>
+</category>    
 <category>
     <pattern>Où est ce que je travaille</pattern>
     <template>
@@ -332,7 +341,7 @@
     		<li>
     			<random>
     				<li>C est la que tu vis maintenant? </li>
-    				<li>Je ne connais pas bien <set name="unknow"><star index="2" /></set>,c est une chouette ville?</li>
+    				<li>Je ne connais pas bien <set name="unknown"><star index="2" /></set>,c est une chouette ville?</li>
     			</random>
     		</li>    	
     	</condition>     	   	
@@ -547,8 +556,13 @@
     </template>
 </category>
 <category>
-  	<pattern>MON SIGNE ASTROLOGIQUE</pattern>
-    <template>ton signe du zodiaque est <get name="starsign"/></template>
+  	<pattern># MON SIGNE ASTROLOGIQUE</pattern>
+    <template>
+       <condition name="starsign">
+         <li value="unknown">Je ne le vois pas dans ma boule de cristal, dis le moi</li>
+         <li>ton signe du zodiaque est <get name="starsign"/></li>
+       </condition>
+    </template>
 </category>  
   
 <!--  QUESTION FAVORIS   -->

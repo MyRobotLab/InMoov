@@ -22,13 +22,15 @@ else:
 #                 functions called by the chatbot
 # ##############################################################################
 if isChatbotActivated:
-  chatBot.setPredicate("default","articles","")
-  chatBot.setPredicate("default","courant","")
+  chatBot.setPredicate(chatBot.currentUserName,"articles","")
+  chatBot.setPredicate(chatBot.currentUserName,"courant","")
 def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du sujet (query)
   #Light(1,0,0)
   if query!="":
-    if articles!="":
-      query=articles+" "+query
+    if articles=="unknown" or articles=="":
+      articles=""
+      chatBot.setPredicate(chatBot.currentUserName,"articles","")
+    else:query=articles+" "+query
 
     query = unicode(query,'utf-8')# on force le format de police UTF-8 pour prendre en charge les accents
     if query[1]== "\'" : # Si le sujet contient un apostrophe , on efface tout ce qui est avant ! ( "l'ete" -> "ete")

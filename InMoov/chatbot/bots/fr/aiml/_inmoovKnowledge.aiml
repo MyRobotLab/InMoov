@@ -18,7 +18,6 @@
   <!-- *** INMOOV KNOWLEDGE ( french ) :  *** -->
   <!-- local database -->
   <!-- wikidata database -->
-  <!-- personnal memories TODO -->
   <!-- Général memories -->
   <!-- shared knowledge TODO -->
 
@@ -115,7 +114,40 @@
     </li></template>
 </category>
 
-<!-- user dont know -->
+<!-- end user dont know -->
+
+<!-- personnal memories  -->
+<!-- you can add new sections inside profile-user.aiml  -->
+<!-- this section will just intercept personnal things, if missing inside other aiml -->
+<!-- goal is to not learn personnal things inside global knowledge -->
+<category><pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $JE NE SAIS PAS</pattern>
+<template>
+<star index="3"/> <person><star index="4"/></person> <star index="5"/> ?
+<random>
+<li>
+Franchement, c'est une question un peu intime, je ne préfère pas y répondre
+</li>
+<li>
+J'avoue ne pas avoir cette réponse
+</li>
+<li>
+Tu devrais le savoir. moi je n'en ai aucune idée
+</li>
+</random>
+</template>
+</category>
+
+  <category>
+    <pattern>PERSON *</pattern>
+    <template>
+      <person>
+        <star />
+      </person>
+    </template>
+  </category>
+
+<!-- end personnal memories  -->
+
 
 <!-- general learn like salut SIGNIFIE bonjour -->
 <category><pattern>_ SIGNIFIE _</pattern>

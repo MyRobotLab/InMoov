@@ -61,9 +61,10 @@ def onRecognized(text):
     text=text.replace("'", " ").replace("-", " ")
     if DEBUG==1:print "onRecognized : ",text,RobotneedUpdate
     if isChatbotActivated and i01.RobotIsStarted:
-      if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
-      if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:humanDetected()
-  
+      if i01.RobotIsSleeping and text==MagicCommandToWakeUp:chatBot.getResponse("WAKE_UP")
+      if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:
+        humanDetected()
+        chatBot.getResponse(text)
 # ##############################################################################
 # EAR RELATED FUNCTIONS
 # ##############################################################################
