@@ -43,7 +43,7 @@
             <mrl>
               <service>python</service>
               <method>exec</method>
-              <param>getProperty( "<star index="4"/>" , "<star index="2"/>" ,"SAY ","SYSTEM_LEARNING" )</param>
+              <param>getProperty("<star index="3"/> " , "<star index="4"/>" , "<star index="1"/> " , "<star index="2"/>" ,"SAY ","SYSTEM_LEARNING" )</param>
             </mrl>
           </oob></template>
 </category>
@@ -80,13 +80,25 @@
 <template><li><srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai></li></template>
 </category>
 
+<category><pattern><set>articles</set> _ $EST <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template>
+<think><set name="articles2"><star index="3"/></set></think>
+<srai><star index="1"/> <star index="2"/> EST <star index="4"/></srai>
+</template>
+</category>
+
 <category><pattern>_ EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-<template><random>
-    <li>Désormais je saurrais que <star index="1"/> est <star index="2"/>.</li>
-    <li>J'étais presque sure que <star index="1"/> était <star index="2"/>. Merci pour la confirmation.</li>
+<template>
+<condition name="articles2">
+    <li value="unknown"><think><set name="courant2"><star index="2"/></set></think></li>
+    <li><think><set name="courant2"><get name="articles2" /> <star index="2"/></set></think></li>
+</condition>  
+<random>
+    <li>Désormais je saurrais que <star index="1"/> est <get name="courant2"/>.</li>
+    <li>J'étais presque sure que <star index="1"/> était <get name="courant2"/>. Merci pour la confirmation.</li>
     </random>
-    <learnf><category><pattern><eval><get name="determinantinterogatif" /> <get name="courant" /></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="1"/></eval></pattern><template><eval><star index="2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="2"/></eval></pattern><template>Cela peut être <eval><star index="1"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><star index="2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf>
-    <think><set name="articles"><get name="null"/></set></think></template>
+    <learnf><category><pattern><eval><get name="determinantinterogatif" /> <get name="courant" /></eval></pattern><template><eval><get name="courant2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="1"/></eval></pattern><template><eval><get name="courant2"/></eval>.</template></category><category><pattern><eval><get name="determinantinterogatif" /> <star index="2"/></eval></pattern><template>Cela peut être <eval><star index="1"/></eval> par exemple.</template></category><category><pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><get name="courant2"/></eval></pattern><template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template></category></learnf>
+    <think><set name="articles"><get name="null"/></set><set name="courant2"><get name="null"/></set><set name="articles2"><get name="null"/></set></think></template>
 </category>
 
 <category><pattern>_</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
@@ -122,18 +134,22 @@
 <!-- goal is to not learn personnal things inside global knowledge -->
 <category><pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $JE NE SAIS PAS</pattern>
 <template>
-<star index="3"/> <person><star index="4"/></person> <star index="5"/> ?
-<random>
-<li>
-Franchement, c'est une question un peu intime, je ne préfère pas y répondre
-</li>
-<li>
-J'avoue ne pas avoir cette réponse
-</li>
-<li>
-Tu devrais le savoir. moi je n'en ai aucune idée
-</li>
-</random>
+<condition name="articles">
+    <li value="unknown"> </li>
+    <li><star index="3"/> </li>    		
+</condition>  
+    <person><star index="4"/></person> <star index="5"/> ?
+    <random>
+        <li>
+        Franchement, c'est une question un peu intime, je ne préfère pas y répondre
+        </li>
+        <li>
+        J'avoue ne pas avoir cette réponse
+        </li>
+        <li>
+        Tu devrais le savoir. moi je n'en ai aucune idée
+        </li>
+    </random>
 </template>
 </category>
 

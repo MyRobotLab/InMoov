@@ -167,12 +167,6 @@
 <category><pattern>QUEL EST LE * ÉTÉ A DEMANDÉ</pattern>
 <template>me demandent à moi les épousent tout le temps.</template>
 </category>
-<category><pattern>QUEL EST LE *</pattern>
-<template><think>
-        <set name="search">quoi</set>
-      </think>
-      <srai>QU EST CE QUE <star/></srai></template>
-</category>
 <category><pattern>QUEL EST LE BUT *</pattern>
 <template><srai>QUEL EST TON BUT</srai></template>
 </category>
