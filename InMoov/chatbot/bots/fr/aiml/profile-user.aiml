@@ -13,6 +13,23 @@
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
+  
+ <category>
+    <pattern>CLIENT PARAMETERS</pattern>
+    <template>
+      <srai>CLIENT PROPERTIES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CLIENT PREDICATES</pattern>
+    <template>
+      <srai>CLIENT PROPERTIES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CLIENT PROPERTIES</pattern>
+    <template>Name: <get name="name" />.ÂGE: <get name="âge" />.Birthday: <get name="birthday" />.Gender: <get name="gender" />.Job: <get name="job" />.Sign: <get name="sign" />.Location: <get name="location" />.Does: <get name="does" />.You are: <get name="is" />.You have: <get name="has" />.You want: <get name="want" />.You like: <get name="like" />.You said: <get name="memory" />.Personality: <get name="personality" />.Favorite color: <get name="favcolor" />.Favorite movie: <get name="favmovie" />.Password: <get name="password" />.Email: <get name="email" />.Phone: <get name="phone" />.Cat: <get name="cat" />.Dog: <get name="dog" />.Wife: <get name="wife" />.Husband: <get name="husband" />.Friend: <get name="friend" />.Boyfriend: <get name="boyfriend" />.Girlfriend: <get name="girlfriend" />.Brother: <get name="brother" />.Sister: <get name="sister" />.Father: <get name="father" />.Mother: <get name="mother" />.Nickname: <get name="nickname" />.Full name: <get name="fullname" />.Last name: <get name="lastname" />.Middle name: <get name="middlename" />.</template>
+  </category>
 
   <!--  QUESTION CONFUSION   -->
   <!--  QUESTION PERSO   -->
@@ -215,6 +232,7 @@
       	<li value="actrice">dans quoi aurais je pu te voir jouer?</li>
       	<li value="médecin">Où as tu étudié la médecine?</li>
       	<li value="poète">as tu publié quelque chose?</li>
+      	<li value="poétesse">Ma connaissance du français ne me permet d'apprécier jusqu' à ce point la finesse de la langue.</li>
       	<li value="professeur">
 			<random>
 				<li>Que pense tu du contrôle continu?</li>
@@ -369,10 +387,10 @@
     </template>
 </category>
 <category>
-    <pattern> # Je suis <set>nationalities</set> # </pattern>
+    <pattern> # Je suis # <set>nationalities</set> # </pattern>
     <template>
     	<think>
-    		<set name="nationality"><star index="2" /></set>
+    		<set name="nationality"><star index="3" /></set>
        	</think>    	 	    	
     	<condition><name>nationality</name>  	 		
     		<li value="Belge"> un belge une fois ! </li>
@@ -404,6 +422,10 @@
     	</think>
     	Je visite virtuellement <star index="2"/> de temps en temps.
     </template>
+</category>
+<category>
+    <pattern>JE SUIS SANS DOMICILE</pattern>
+    <template>Un jour tout s'arrangera, parole d'intelligence artificielle.<think><set name="topic">Ton problème</set></think></template>
 </category>
 <category>
     <pattern>Je me trouve à *</pattern>

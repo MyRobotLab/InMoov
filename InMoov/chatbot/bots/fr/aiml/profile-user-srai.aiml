@@ -30,8 +30,14 @@
 <!-- signe astrologique -->
 <!-- favorite -->
 
-  
-  <!-- Age -->     
+<category>
+    <pattern>CONNAIS TU MON MON</pattern>
+    <template>
+      <srai>QUEL EST MON NOM</srai>
+    </template>
+</category>
+
+  <!-- Age -->      
 <category>
     <pattern> # CONNAIS TU MON ÂGE # </pattern>
     <template>
@@ -66,6 +72,12 @@
 	<pattern>QUEL ÂGE J AI</pattern>
 	<template>
       <srai>QUEL ÂGE AI JE</srai>
+    </template>
+</category>
+<category>
+    <pattern>J AI QUEL ÂGE</pattern>
+    <template>
+    	<srai>QUEL ÂGE AI JE</srai>
     </template>
 </category>
 <category>
@@ -180,7 +192,13 @@
     <template>
       <srai>JE SUIS AU CHÔMAGE</srai>
     </template>
-</category> 
+</category>
+<category>
+    <pattern> # JE N AI PAS # EMPLOI # </pattern>
+    <template> 
+    	<srai>JE SUIS AU CHÔMAGE</srai> 
+    </template>
+</category>
   
 <category>
     <pattern>JE # à L ÉCOLE #</pattern>
@@ -268,6 +286,12 @@
     </template>
 </category>
 <category>
+    <pattern># JE SUIS RÉDACTEUR #</pattern>
+    <template>
+      <srai>JE SUIS JOURNALISTE</srai>
+    </template>
+</category>
+<category>
     <pattern>JE NE vais pas à L ÉCOLE # </pattern>
     <template>
       	<srai>JE NE SUIS PAS ÉTUDIANT</srai>
@@ -298,6 +322,12 @@
     <pattern>JE SUIS A L ORIGINE *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
+    </template>
+</category>
+<category>
+    <pattern>JE SUIS ORIGINAIRE DE *</pattern>
+    <template>
+      <srai>JE SUIS DE <star /></srai>
     </template>
 </category>
 <category>
