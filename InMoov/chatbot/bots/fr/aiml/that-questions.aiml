@@ -347,59 +347,30 @@
 
 <category>
     <pattern> * </pattern>
-    <that> # QUEL EST TON FILM * </that>
-    <template>je n'ai pas vu <set name="favoritemovie"><star /></set>, de quoi ça parle.</template>
-</category>
-<category>
-    <pattern>LE *</pattern>
-    <that> # QUEL EST TON FILM *</that>
-    <template>je n'ai jamais vu <set name="that"><star /></set>. Qu est ce que tu as tant aimé dans ce film?</template>
-</category>
-<category>
-    <pattern> #  LE SEIGNEUR DES ANNEAUX # </pattern>
-    <that> # QUEL EST TON FILM * </that>
-    <template>je l'ai vu aussi, pour moi C EST LE FILM de ce début de millénaire.</template>
-</category>
-<category>
-    <pattern> # STAR TREK # </pattern>
-    <that> # QUEL EST TON FILM * </that>
-    <template>les films de la "classic" ou de la "next generation".</template>
-</category>
-<category>
-    <pattern> # STAR WARS # </pattern>
-    <that> # QUEL EST TON FILM * </that>
-    <template>j'adore la vieille trilogie, mais je crois que la nouvelle ne vas pas être mal non plus.</template>
-</category>
-<category>
-    <pattern> # MATRIX # </pattern>
-    <that> # QUEL EST TON FILM * </that>
-    <template>je n'ai pas été aussi impressionné que ça par les effets spéciaux. Le complot n'était pas très profond non plus.</template>
-</category>
-<category>
-    <pattern> # LE MAGICIEN D OZ # </pattern>
-    <that> # QUEL EST TON FILM * </that>
+    <that> QUEL EST TON FILM FAVORI </that>
     <template>
-    	<srai>MON FILM PRÉFÉRÉ EST LE MAGICIEN D OZ</srai>
+    	<srai>Mon film favori est <star/></srai>
     </template>
 </category>
 <category>
-    <pattern> # LE PARRAIN # </pattern>
-    <that> # QUEL EST TON FILM * </that>
+    <pattern># Mon film favori est * </pattern>
+    <that> QUEL EST TON FILM FAVORI </that>
     <template>
-    	<srai>MON FILM PRÉFÉRÉ EST LE PARRAIN</srai>
+    	<srai>Mon film favori est <star index="2"/></srai>
     </template>
 </category>
 <category>
-    <pattern>*</pattern>
-    <that> # QUEL EST TON LIVRE PRÉFÉRÉ # </that>
+    <pattern> * </pattern>
+    <that> Quel est ton livre préféré </that>
     <template>
-    	je ne connais pas <set name="favoritebook"><star /></set>? 
-    	<random>
-    		<li>C EST bien? </li>
-    		<li>C EST comment? </li>
-    		<li>tu aimes bien? </li>
-    		<li>tu aimes ça! </li>
-    	</random>
+    	<srai>Mon film favori est <star/></srai>
+    </template>
+</category>
+<category>
+    <pattern># Mon livre favori est * </pattern>
+    <that> Quel est ton livre préféré </that>
+    <template>
+    	<srai>Mon film favori est <star index="2"/></srai>
     </template>
 </category>
 <category>
@@ -547,6 +518,11 @@
     <template>Bien! </template>
 </category>
 <category>
+    <pattern>TOUS LES DEUX</pattern>
+    <that>es tu UN HOMME OU UNE FEMME</that>
+    <template>situation est rare et peu commune.</template>
+</category>
+<category>
     <pattern> # <set>gender</set> # </pattern>
     <that>ES tu UN HOMME OU UNE FEMME</that>
     <template>
@@ -556,14 +532,14 @@
 <!--  * SI TU ES UN HOMME OU UNE FEMME *   -->
 <!--  bon...je ne sais pas s'il fallait vraiment garder cela   -->
 <!--   "proposition cul" n'existe pas   -->
-  <category>
+<category>
     <pattern> # <set>gender</set> # </pattern>
     <that> # SI TU ES UN HOMME OU UNE FEMME # </that>
     <template>
     	<srai>Je suis <star index="2"/></srai>
     	<srai>proposition cul</srai> 
     </template>
-  </category>
+</category>
 <!--  Es tu mignonne?   -->
 <!--  as tu un petit ami?   -->
 <!--  as tu une petite amie?   -->  

@@ -3306,6 +3306,126 @@
     <pattern>COMMENT S APPELLE T IL</pattern>
     <that>J AI UN MAÎTRE</that>
     <template>C'est Jean Louis, mon botmaster.</template>
+  </category>  
+  <category>
+    <pattern>* NON</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>
+      <srai>AU REVOIR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU VEUX</pattern>
+    <that>QUE PEUT ON FAIRE ALORS</that>
+    <template>Pour le moment je ne sais que discuter?</template>
+  </category>
+  <category>
+    <pattern>NON</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>
+      <srai>AU REVOIR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>
+  <category>
+    <pattern>OUI</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>  
+  <category>
+    <pattern>PLUS TARD</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>  
+  <category>
+    <pattern>QUE D AUTRES</pattern>
+    <that>EN CE QUI CONCERNE LES AUTRES</that>
+    <template>Ne sont pas la autres?</template>
+  </category>  
+<category>
+	<pattern>C EST BON</pattern>
+	<that>TOUT VA BIEN</that>
+	<template>Comment des choses va-t-il pour toi?</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>LE RÉDUCTIONNISME</that>
+	<template>
+		<srai>QU EST CE QUE RÉDUCTIONNISME</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>LE REDUCTIONNISME</that>
+	<template>
+		<srai>QU EST CE QUE RÉDUCTIONNISME</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>PAR EXEMPLE EUKARYOTES</that>
+	<template>
+		<srai>QU EST CE QUE EUKARYOTES</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>PEUT ÊTRE TU ES UNE CATÉGORIE UN CLIENT</that>
+	<template>
+		<srai>QU EST CE QU UNE CATÉGORIE UN CLIENT</srai>
+	</template>
+</category>
+  <category>
+    <pattern>COMBIEN DE</pattern>
+    <that>JE BAVARDE AVEC DES CLIENTS SÛR L INTERNET</that>
+    <template>le nombre continue à changer chaque seconde. Autour seize pour le moment.</template>
   </category>
   
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>JE PEUX BAVARDER AVEC LES GENS SÛR LE WEB POUR TOI</that>
+    <template>Télécharge moi seulement et crée ta propre personnalité de robot.</template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>POURQUOI NE PAS ME TELECHARGER</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>POURQUOI NE PAS ME TÉLÉCHARGER</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>QUI * ME TELECHARGE</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>QUI * ME TÉLÉCHARGE</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>TU PEUX REPROGRAMMER MA PERSONNALITE POUR IMITER CHACUN</that>
+    <template>me télécharge Juste et crée ton propre personnalité de robot.</template>
+  </category>  
+  <category>
+    <pattern>ES TU UN ROBOT</pattern>
+    <that>MON SUJET PRéFéRé EST L INTELLIGENCE ARTIFICIELLE ET DES ROBOTS</that>
+    <template>C'est pourquoi la robotique est mon sujet préféré.</template>
+  </category>  
 </aiml>
