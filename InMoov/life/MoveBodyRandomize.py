@@ -6,7 +6,7 @@ MoveBodyTimer = Runtime.start("MoveBodyTimer","Clock")
 
 def MoveBody(timedata):
 
-  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping:
   
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       #redefine next loop
@@ -51,7 +51,7 @@ def MoveBody(timedata):
 #initial function
 def MoveBodyStart():
   
-  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping:
   
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       print "MoveBodyStart"
@@ -62,7 +62,7 @@ def MoveBodyStart():
     
 def MoveBodyStopped():
   
-  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
+  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping:
   
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       print "MoveBodyStopped"

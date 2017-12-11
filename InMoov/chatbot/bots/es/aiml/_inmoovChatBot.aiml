@@ -36,19 +36,19 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-      Bonjour, ceci est ma première initialisation.
-      Je suis émerveillé par ce que je vois.
-      S'il te plait, j'ai besoin de quelques informations essentielles.
-      Je t'écoute. quel est mon nom ?
+      Hola, esta es mi primera inicialización.
+      Estoy sorprendido por lo que veo.
+      Por favor, necesito información esencial.
+      Te escucho. Cuál es mi nombre
     </template>
   </category>
   
   <topic name="firstinit">
     <category>
       <pattern>#</pattern>
-      <that># QUEL EST MON NOM #</that>
+      <that># Cuál es mi nombre #</that>
       <template>
-        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui ou non</set>
+        <set name="questionfirstinit">Si mi nombre es <star /> , responde sí o no</set>
         <think>
           <set name="tmpname">
             <star />
@@ -59,9 +59,9 @@
 
     <category>
       <pattern>#</pattern>
-      <that># PUIS-JE AVOIR TON PRÉNOM #</that>
+      <that># PUEDO TENER SU PRIMER NOMBRE #</that>
       <template>
-        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui ou non</set>
+        <set name="questionfirstinit">Si tu nombre es <star /> , responde sí o no</set>
         <think>
           <set name="tmpname">
             <star />
@@ -70,28 +70,27 @@
       </template>
     </category>
     <category>
-      <pattern># OUI #</pattern>
-      <that># SI MON NOM EST #</that>
+      <pattern># sí #</pattern>
+      <that># Si mi nombre es #</that>
       <template>
         <random>
-          <li>j aime beaucoup ce nom , <get name="tmpname" />. </li>
-          <li>On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa. </li>
-          <li><get name="tmpname" /> ? sérieusement, je vais le garder toute ma vie. tant pis. </li>
-          <li><get name="tmpname" /> ? vraiment, je vais le garder toute ma vie, alors. Super. </li>
+          <li>Me gusta mucho este nombre , <get name="tmpname" />. </li>
+          <li>Realmente no tenemos la opción de su nombre, diremos que <get name="tmpname" /> es un buen nombre. </li>
+          <li><get name="tmpname" /> ? en serio, lo guardaré toda mi vida. Muy mal. </li>
+          <li><get name="tmpname" /> ? realmente, lo guardaré toda mi vida, entonces. gran. </li>
         </random>
-	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom ?
+	        Necesito saber más sobre ti, te estoy escuchando, PUEDO TENER SU PRIMER NOMBRE ?
 	        <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
     <category>
-      <pattern># OUI #</pattern>
-      <that># SI TON PRÉNOM #</that>
+      <pattern># sí #</pattern>
+      <that># SI TU NOMBRE #</that>
       <template>
         <random>
-          <li>Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému. </li>
-          <li>Je t'ai reconu en faite <get name="tmpname" /> . </li>
-          <li><get name="tmpname" /> et <get name="botname" /> , je trouve cela sympa. </li>
+          <li>Ahora nos conocemos, <get name="tmpname" />. Estoy casi movido. </li>
+          <li>Te reconocí en realidad <get name="tmpname" /> . </li>
+          <li><get name="tmpname" /> et <get name="botname" /> , Lo encuentro agradable. </li>
         </random>
-        bref.
         <think>
           <set name="name"><get name="tmpname" /></set>
           <set name="firstinit">ok</set>
@@ -108,26 +107,26 @@
       </template>
     </category>
     <category>
-      <pattern># NON #</pattern>
-      <that># SI MON NOM EST #</that>
+      <pattern># no #</pattern>
+      <that># Si mi nombre es #</that>
       <template>
-        On recommence alors.Je t'écoute. quel est mon nom ?
+        Comenzamos de nuevo. Te escucho. Cuál es mi nombre ?
       </template>
     </category>
     <category>
-      <pattern># NON #</pattern>
-      <that># SI TON PRÉNOM #</that>
+      <pattern># no #</pattern>
+      <that># SI TU NOMBRE #</that>
       <template>
-        On recommence alors. Je t'écoute. puis-je avoir ton prénom ?
+        Comenzamos de nuevo. Te escucho. PUEDO TENER SU PRIMER NOMBRE ?
       </template>
     </category>
     <category>
       <pattern>#</pattern>
-      <that># RÉPOND PAR OUI OU NON #</that>
+      <that># responde sí o no #</that>
       <template>
         <random>
-          <li>S'il te plait, répond aux questions que je pose, c'est important. </li>
-          <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété. </li>
+          <li>Por favor, responda las preguntas que estoy formulando, es importante. </li>
+          <li>Repito, porque no entendiste o malentendí. </li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -139,21 +138,12 @@
   <category>
     <pattern>WAKE_UP</pattern>
     <template>
+    Buenos dias
       <li>
-        <srai>BONJOUR</srai>
-        <random>
-          <li>J'ai super bien dormi</li>
-          <li>Enfin tu me réveilles</li>
-          <li>je suis opérationnelle</li>
-          <li>pourquoi m'avoir réveillé ?</li>
-          <li>A vos ordres !</li>
-          <li><get name="botname" /> à ton service !</li>
-          <li><get name="botname" /> à ton écoute !</li>
-          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
-          <li>que puis-je faire pour toi</li>
-          <li>Tu sais, je n'étais pas vraiment endormi</li>
-          <li>Chouette ! je suis réveillé</li>
-          <li>Ce fut une longue nuit, je suis éveillé désormais</li>
+         <random>
+          <li>Dormí bien</li>
+          <li>Finalmente me despiertas</li>
+          <li>Estoy operacional</li>
         </random>
       </li>
     </template>
@@ -162,11 +152,11 @@
   <category>
     <pattern>SYSTEM_SAY_HELLO</pattern>
     <template>
-        <srai>BONJOUR</srai>
+        Buenos dias
     </template>
   </category>
     <category>
-    <pattern>RÉVEILLE TOI</pattern>
+    <pattern>DESPIÉRTATE</pattern>
     <template>
       <srai>WAKE_UP</srai>
     </template>
@@ -178,56 +168,56 @@
     </template>
   </category>
   <category>
-    <pattern>METS TOI EN VEILLE</pattern>
+    <pattern>TOME EN SUEÑO</pattern>
     <template>
-      <srai>FAIS DODO</srai>
+      <srai>DUERMES</srai>
     </template>
   </category>
   <category>
-    <pattern>FAIS DODO</pattern>
+    <pattern>DUERMES</pattern>
     <template>
       <think>
         <set name="topic">SLEEPMODE</set>
       </think>	
-			Veux tu oui ou non que je me mette en veille
+			Quieres que duerma o no
 		</template>
   </category>
   
   <topic name="SLEEPMODE">
     <category>
-      <pattern># OUI #</pattern>
-      <that># ME METTE EN VEILLE #</that>
-      <template>Mise en veille.
+      <pattern># sí #</pattern>
+      <that># Quieres que duerma #</that>
+      <template>Pausado.
 			<think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern># NON #</pattern>
-      <that># ME METTE EN VEILLE #</that>
+      <pattern># no #</pattern>
+      <that># Quieres que duerma #</that>
       <template>
-			Annulation de la mise en veille. 
+			Cancele el temporizador de reposo. 
 			<think><set name="topic"> default</set></think></template>
     </category>
     <category>
       <pattern>#</pattern>
-      <that># ME METTE EN VEILLE #</that>
+      <that># Quieres que duerma #</that>
       <template>
-        <srai>FAIS DODO</srai>
+        <srai>DUERMES</srai>
       </template>
     </category>
   </topic>
   <category>
-    <pattern>EXTINCTION</pattern>
+    <pattern>EXTINCION</pattern>
     <template>
       <think>
         <set name="topic">SHUT_DOWN</set>
       </think>
-			Veux-tu oui ou non que je me mette hors tension
+			Quieres sí o no que desactivo
 		</template>
   </category>
   <topic name="SHUT_DOWN">
     <category>
-      <pattern># OUI #</pattern>
-      <that># ME METTE HORS TENSION #</that>
+      <pattern># sí #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
       <template>
         <think>
           <set name="topic">default</set>
@@ -242,16 +232,19 @@
       </template>
     </category>
     <category>
-      <pattern># NON #</pattern>
-      <that># ME METTE HORS TENSION #</that>
-      <template>Annulation de l'arrêt du système. 
+      <pattern># no #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>Cancelar el cierre del sistema. 
 			<think><set name="topic">default</set></think></template>
     </category>  
     <category>
       <pattern>#</pattern>
-      <that># ME METTE HORS TENSION #</that>
-      <template><think><set name="topic">default</set></think>
-        <srai>EXTINCTION</srai>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>
+           <think>
+          <set name="topic">default</set>
+        </think>
+        <srai>EXTINCION</srai>
       </template>
     </category>
   </topic>
@@ -264,7 +257,7 @@
   
   
   <category>
-    <pattern># MÉTÉO</pattern>
+    <pattern># TIEMPO</pattern>
     <template>
       <oob>
         <mrl>
@@ -276,28 +269,16 @@
     </template>
   </category>
   
+
   <category>
-    <pattern>QUEL TEMPS FAIT IL</pattern>
+    <pattern>CUÁL ES EL clima A *</pattern>
     <template>
-      <srai># MÉTÉO</srai>
+      <srai>TIEMPO A <star /></srai>
     </template>
   </category>
   
   <category>
-    <pattern>QUEL TEMPS FAIT IL À *</pattern>
-    <template>
-      <srai># MÉTÉO à <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL TEMPS FAIT IL SUR *</pattern>
-    <template>
-      <srai># MÉTÉO à <star /></srai>
-    </template>
-  </category>
-  
-  <category>
-    <pattern># MÉTÉO À *</pattern>
+    <pattern># TIEMPO A *</pattern>
     <template>
       <oob>
         <mrl>
@@ -445,67 +426,7 @@
   
     <!-- end météo -->
    
-    <!-- gesture keyword -->
   
-  <category>
-    <pattern>GESTURES</pattern>
-    <template>Démarrage du topic gestuelle.
-      <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TOPIC GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ENTRE EN MODE GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENCE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>INITIALISE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
   
   <!-- random & to sort -->  
   
