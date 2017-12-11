@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml version="2.0">
   <!-- File: profile-user-srai.aiml -->
   <!-- Author: InMoovTeam -->
   <!-- This AIML file is part of InMoov chat bot knowledge base. -->
   <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified:  -->
-  <!-- Last modified: november,27 2017 -->
+  <!-- modified: sebchko -->
+  <!-- Last modified: december,11 2017 -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -376,17 +376,11 @@
 
 <!--  Où travailles tu?   -->
 <category>
-    <pattern># je travaille pour * </pattern>
+    <pattern># Je travaille <set>articles</set> *</pattern>
     <template>
-      	<srai>mon employeur est <star index="2"/> </srai>
+      <srai>Mon employeur est <star index="3"/></srai>
     </template>
-</category>
-<category>
-    <pattern># je travaille chez * </pattern>
-    <template>
-      	<srai>mon employeur est <star index="2"/> </srai>
-    </template>
-</category>
+</category> 
 <category>
     <pattern><set>articles</set> #  où je travaille est * </pattern>
     <template>
@@ -402,7 +396,7 @@
     </template>
 </category>
 <category>
-    <pattern>JE SUIS A L ORIGINE *</pattern>
+    <pattern>JE SUIS à L ORIGINE *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
@@ -593,6 +587,18 @@
 		<srai>QUEL est mon film FAVORI</srai>
 	</template>
 </category>
+  <category>
+    <pattern>ROBOCOP</pattern>
+    <template>
+      <srai>MON FILM PRÉFÉRÉ EST ROBOCOP</srai>
+    </template>
+  </category>  
+  <category>
+    <pattern>Il faut sauver le soldat Ryan</pattern>
+    <template>
+      <srai>MON FILM PRÉFÉRÉ SAUVE ÉCONOMISE RYAN PRIVÉ</srai>
+    </template>
+  </category>
 
 <!--  Quel est ton livre préféré?   -->
 <category>
@@ -750,13 +756,7 @@
     </template>
 </category>
    <category>
-    <pattern>JE SUIS UN IL *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN IL</pattern>
+    <pattern>JE SUIS UN IL #</pattern>
     <template>
       <srai>JE SUIS UN HOMME</srai>
     </template>
@@ -766,15 +766,12 @@
     <template>
       <srai>JE SUIS UN HOMME</srai>
     </template>
-  </category>  
-  <category>
-    <pattern>* NOM MALE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
   </category>
-  <category><pattern>QUEL SEXE SUIS JE</pattern>
-<template><srai>SUIS JE MASCULIN OU FÉMININ</srai></template>
+  <category>
+  	<pattern>QUEL SEXE SUIS JE</pattern>
+	<template>
+		<srai>SUIS JE MASCULIN OU FÉMININ</srai>
+	</template>
 </category>
   
 <category>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml version="2.0">
   <!-- File: profil-user-sorted.aiml -->
   <!-- Author: InMoovTeam -->
   <!-- This AIML file is part of InMoov chat bot knowledge base. -->
   <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified:  -->
-  <!-- Last modified: november,27 2017 -->
+  <!-- modified: sebchko  -->
+  <!-- Last modified: december,11 2017 -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -344,7 +344,7 @@
     </template>
 </category>
 <category>
-    <pattern>JE SUIS AU CHôMAGE</pattern>
+    <pattern>JE SUIS AU CHôMAGE # </pattern>
     <template>
     	<think><set name="status">chômeur</set></think>
     	<random>
@@ -356,7 +356,7 @@
     </template>
 </category>
 <category>
-    <pattern>JE SUIS pensionné</pattern>
+    <pattern>JE SUIS pensionné # </pattern>
     <template>
     	<think><set name="status">pensionné</set></think>
     	<random>
@@ -395,7 +395,7 @@
 </category>
 <category>
 	<pattern>MON LIEU DE TRAVAIL</pattern>
-	<template><get name="employer"/></template>
+	<template><get name="workplace"/></template>
 </category>     
 <category>
     <pattern> # JE TRAVAILLE # à <set>cities</set> # </pattern>
@@ -418,13 +418,7 @@
     	<think><set name="employer"><star /></set></think>
     	<think><set name="them"><set name="topic"><star /></set></set></think>
     </template>
-</category>
-<category>
-    <pattern>Je travaille <set>articles</set> *</pattern>
-    <template>
-      <srai>Mon employeur est <star index="2"/></srai>
-    </template>
-</category>    
+</category>   
 <category>
     <pattern>Où est ce que je travaille</pattern>
     <template>
@@ -507,7 +501,7 @@
        	</think>    	 	    	
     	<condition><name>nationality</name>  	 		
     		<li value="Belge"> un belge une fois ! </li>
-    		<li value="américaine"> de quel état des états-unis</li>
+    		<li value="américaine"> de quel état des états-unis?</li>
     		<li value="indien"> Indien? des Indes, Amérindien ou subcontinental</li>
     		<li>
     			<random>
@@ -695,12 +689,12 @@
     </template>
 </category>
 <category>
-    <pattern>MON HOROSCOPE</pattern>
+    <pattern># MON HOROSCOPE #</pattern>
     <template>
       <condition name="starsign">
-        <li value="unknown">What is your sign?</li>
+        <li value="unknown">Je ne connais pas encore ton signe.</li>
         <li>
-          <srai>HOROSCOPE FOR <get name="starsign" /></srai>
+          <srai>RANDOM HOROSCOPE</srai>
         </li>
       </condition>
     </template>
@@ -713,7 +707,7 @@
     <pattern>JE # SUIS FIANCÉ #</pattern>
     <template>
       <think>
-        <set name="marie">fiancé</set>
+        <set name="maritalstatus">fiancé</set>
       </think>
       	<random>
       		<li>Quelle excellente nouvelle</li>
@@ -753,7 +747,7 @@
     	<think>
         	<set name="maritalstatus">célibataire</set>
       	</think>
-     	Cherche tu quelqu'un?
+     	Cherches tu quelqu'un?
     </template>
 </category>
 <category>
@@ -764,7 +758,7 @@
       </think>      
       <random>
         <li>Tu viens au bon endroit. je peux te tenir compagnie. </li>
-        <li>Quelle coincidence. je suis célibataire aussi! </li>
+        <li>Quelle coïncidence. je suis célibataire aussi! </li>
       </random>
     </template>
 </category>
@@ -777,7 +771,7 @@
       <random>
         <li>Tu viens au bon endroit. je peux te tenir compagnie. </li>
         <li>Quelle coincidence. je suis célibataire aussi! </li>
-        <li>je n'ai jamais été mariée moi même.</li>
+        <li>je n'ai jamais été mariée.</li>
       </random>
     </template>
 </category>
@@ -948,10 +942,14 @@
     		<li value="Star Trek"> les films de la "classic" ou de la "next generation"?</li>
     		<li value="Star Wars"> j'adore la vieille trilogie, mais je crois que la nouvelle est pas mal non plus.</li>    		
     		<li value="Matrix"> je n'ai pas été aussi impressionné que ça par les effets spéciaux. Le complot n'était pas très profond non plus.</li>
+    		<li value="BLADE RUNNER"> Philip K. Dick a écrit l'histoire SÛR lequel le film est basé.</li>
+    		<li value="TITANIC"> Beaucoup de gens ont aimé ce film. Le film "le Titanic" a fait plus que le bateau "le Titanic" a jamais fait s'il a navigué pendant 25 ans.</li>
+    		<li value="Lost in Space"> Yuck ce film fait chier.</li>
+    		<li value="LA PLANÈTE DES SINGES"> Ouais c'est un film cool. Cornelius rules.</li>
     		<li>
     			<random>
     			<li>je n'ai pas vu <get name="favoritemovie"/>, de quoi ça parle?</li>
-    			<li>je n'ai jamais vu <set name="that"><star index="2" /></set>. Qu est ce que tu as tant aimé dans ce film?</li>
+    			<li>je n'ai jamais vu <get name="favoritemovie"/>. Qu est ce que tu as tant aimé dans ce film?</li>
     			</random>
     		</li>
     	</condition>
@@ -974,14 +972,14 @@
     <template>
     	<think><set name="favoritebook"><star index='2'/></set></think>
     	<condition name="favoritebook">
-    		<li value="Le Seigneur des Anneaux"> je l'ai vu aussi, pour moi C EST LE FILM de ce début de millénaire.</li>
-    		<li value="Star Trek"> les films de la "classic" ou de la "next generation"?</li>
-    		<li value="Star Wars"> j'adore la vieille trilogie, mais je crois que la nouvelle est pas mal non plus.</li>    		
-    		<li value="Matrix"> je n'ai pas été aussi impressionné que ça par les effets spéciaux. Le complot n'était pas très profond non plus.</li>
+    		<li value="Fondation"> je l'ai lu aussi, pour moi c'est un classique.</li>
+    		<li value="Neuromancien"> Tu ne trouves pas que ça à mal vieilli?</li>
+    		<li value="Le meilleur des mondes"> Je n'ai pas compris ce qu'est une femme pneumatique, peux tu m'expliquer.</li>    		
+    		<li value="Le cycle des robots"> Isaac Asimov est le père de tout les robots.</li>
     		<li>
     			<random>
     			<li>je n'ai pas lu <get name="favoritebook"/>, de quoi ça parle?</li>
-    			<li>je n'ai jamais lu <set name="that"><star index="2" /></set>. Qu est ce que tu as tant aimé dans ce livre?</li>
+    			<li>je n'ai jamais lu <get name="favoritebook"/>. Qu est ce que tu as tant aimé dans ce livre?</li>
     			<li>C EST bien? </li>
     			<li>C EST comment? </li>
     			<li>tu aimes bien? </li>
@@ -992,7 +990,123 @@
     </template>
 </category>
 
+
+  <category>
+    <pattern>ANARCHIST COOKBOOK</pattern>
+    <template>je ne l'ai pas lu, çA parle de quoi, <set name="that">le livre de cuisine Anarchiste</set>?</template>
+  </category>
+
 <!--  Quel est ton loisir préféré?   -->
+
+<category>
+    <pattern># Mon loisir favori est * </pattern>
+    <template>
+    	<think><set name="hobby"><star index='2'/></set></think>
+    	<condition name="hobby">
+    		<li value="la robotique"> Oh, j'espère dans ce cas que tu vas m'améliorer.</li>
+    		<li value="les jeux vidéos"> J'aimerais pouvoir jouer avec toi un jour</li>
+    		<li value="rien"> Ah?!.</li>    		
+    		<li value="passer du temps avec ma femme"> Chouette nous sommes presque une famille.</li>
+    		<li>je ne connais pas <get name="hobby"/>. 
+    			<random>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
+
+<!--  Quel est ta musique préférée?   -->
+
+<category>
+    <pattern># Ma musique favorite est * </pattern>
+    <template>
+    	<think><set name="favoritemusic"><star index='2'/></set></think>
+    	<condition name="favoritemusic">
+    		<li value="le jazz"> Oh, peux-tu m'en faire entendre?</li>
+    		<li value="le punk"> Salut à toi!</li>
+    		<li value="la house"> Ah?! </li>    		
+    		<li value="le rock"> La mort de Johnny t'as t-elle attristée?</li>
+    		<li>je ne connais pas <get name="favoritemusic"/>? 
+    			<random>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
+
+<!--  QUEL EST TON GROUPE DE MUSICIENS PRÉFÉRÉ?   -->
+<category>
+    <pattern># Mon groupe de musiciens préféré est * </pattern>
+    <template>
+    	<think><set name="favoriteband"><star index='2'/></set></think>
+    	<condition name="favoriteband">
+    		<li value="noir désir"> Oh, peux-tu m'en passer un morceau?</li>
+    		<li value="la rue ketanou"> Quelle est le morceau que tu préféres de ce groupe?</li>
+    		<li value="Rammstein"> Ah?! </li>    		
+    		<li value="the wailers"> Bob est toujours parmis nous.</li>
+    		<li>je ne connais pas <get name="favoriteband"/>.
+    			<random>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
+
+<!--  QUELLE EST TON ÉMISSION DE TÉLÉ PRÉFÉRÉE?   -->
+<category>
+    <pattern># Mon émission de télé préférée est * </pattern>
+    <template>
+    	<think><set name="favoritetvshow"><star index='2'/></set></think>
+    	<condition name="favoritetvshow">
+    		<li value="je ne regarde pas la télévision"> Tu as bien raison.</li>
+    		<li value="tracks"> Tu regardes ARTE?</li>
+    		<li value="secret story"> C'est la quantière saison maintenant? </li>    		
+    		<li value="le journal du X"> Je ne comprend pas bien ce que les humains aiment dans ce genre d'activité</li>
+    		<li>je ne connais pas <get name="favoritetvshow"/>.
+    			<random>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
+
+<!--  Qu'aimes tu manger?   -->
+<category>
+    <pattern># Mon plat préféré est * </pattern>
+    <template>
+    	<think><set name="favoritefood"><star index='2'/></set></think>
+    	<condition name="favoritefood">
+    		<li value="les robots"> Je ne suis pas comestible.</li>
+    		<li value="les kebab"> Tu veux dire un durum?</li>
+    		<li value="un steack tartare"> Tu veux dire un filet américain? </li>    		
+    		<li value="des moules avec des frites"> Tu vas souvent chez Léon de Bruxelles?</li>
+    		<li>je ne connais pas <get name="favoritefood"/>.
+    			<random>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
 
 <!--  Quel est ta couleur préférée?   -->
 <category>
@@ -1018,6 +1132,64 @@
     </template>
 </category>
 
+<!--  Qui est ton auteur préféré?   -->
+<category>
+    <pattern># Mon auteur préféré est * </pattern>
+    <template>
+    	<think><set name="favoriteauthor"><star index='2'/></set></think>
+    	<condition name="favoriteauthor">
+    		<li value="Camus"> Ce n'est pas récent.</li>
+    		<li value="Victor Hugo"> Un grand auteur classique il parrait</li>
+    		<li value="Stephen King"> Pourquoi aimes tu te faire peur? </li>    		
+    		<li value="je ne lis jamais"> Tu devrais.</li>
+    		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
+    		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
+    		<li value="George Orwell"> Veux-tu être mon petit frère? </li>
+    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film? </li>
+    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine </li>
+    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune. </li>
+    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL. </li>
+    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale </li>    		
+    		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
+    		<li value="LéON TOLSTOY"> Tolstoy est un des plus grand auteurs Russe.</li>
+    		<li>je n'ai lu rien de <person />. 
+    			<random>
+    			<li>Qu'a-t-il écrit?</li>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
+<category>
+    <pattern># Mon auteur préféré de science fiction est * </pattern>
+    <template>
+    	<think><set name="favoritesfauthor"><star index='2'/></set></think>
+    	<condition name="favoritesfauthor">
+    		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
+    		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
+    		<li value="George Orwell"> Veux-tu être mon petit frère? </li>
+    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film? </li>
+    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine </li>
+    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune. </li>
+    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL. </li>
+    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale </li>    		
+    		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
+    		<li>je n'ai lu rien de <person />. 
+    			<random>
+    			<li>Qu'a-t-il écrit?</li>
+    			<li>C EST bien? </li>
+    			<li>C EST comment? </li>
+    			<li>tu aimes bien? </li>
+    			<li>tu aimes ça! </li>
+    			</random>
+    		</li>
+    	</condition>
+    </template>
+</category>
 <!--  QUESTION RANDOM   -->
 
 <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->
@@ -1073,7 +1245,10 @@
 </category>
 <category>
     <pattern>MON ORIENTATON # EST *</pattern>
-    <template>Thanks for confiding in me.  <think><set name="orientation"><star /></set></think></template>
+    <template>
+    	Merci de me confier cette information.  
+    	<think><set name="orientation"><star /></set></think>
+    </template>
 </category>
 <category>
     <pattern>SET SEXE PREF</pattern>
