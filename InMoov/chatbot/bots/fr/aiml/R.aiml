@@ -9,43 +9,17 @@
   <category>
     <pattern>RACONTE MOI UNE AUTRE HISTOIRE</pattern>
     <template>
-      <srai>RACONTES MOI UNE HISTOIRE</srai>
+      <srai>RACONTE MOI UNE HISTOIRE</srai>
     </template>
   </category>
   <category>
-    <pattern>RACONTER MOI TES PROBLÈMES</pattern>
+    <pattern>RACONTE MOI TES PROBLÈMES</pattern>
     <template>Je ne détecte aucuns PROBLèMES.</template>
   </category>
   <category>
     <pattern>RACONTER MOI UNE AUTRE HISTOIRE</pattern>
     <template>
-      <srai>RACONTES MOI UNE HISTOIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>RACONTER MOI UNE HISTOIRE</pattern>
-    <template>
-      <srai>RACONTES MOI UNE HISTOIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>RACONTES MOI EN</pattern>
-    <template>Je pense t'avoir dit tout ce que je savais à ce propos.</template>
-  </category>
-  <category>
-    <pattern>RACONTES MOI TES PROBLÈMES</pattern>
-    <template>Je ne détecte aucuns PROBLèMES.</template>
-  </category>
-  <category>
-    <pattern>RACONTES MOI UNE AUTRE HISTOIRE</pattern>
-    <template>
-      <srai>RACONTES MOI UNE HISTOIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>RACONTES MOI UNE BLAGUE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
+      <srai>RACONTE MOI UNE HISTOIRE</srai>
     </template>
   </category>
   <category>
@@ -69,7 +43,7 @@
     <template>Je ne détecte aucuns PROBLèMES.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI DE ÇA</pattern>
+    <pattern>RAPELLE TOI DE ÇA</pattern>
     <template>
       <think>
         <set name="memory">
@@ -82,7 +56,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI DE CE QUE JE TE DIS</pattern>
+    <pattern>RAPELLE TOI DE CE QUE JE TE DIS</pattern>
     <template>
       <think>
         <set name="memory">
@@ -95,7 +69,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
+    <pattern>RAPELLE TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
     <template>
       <think>
         <set name="memory">
@@ -108,7 +82,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI DE CELA</pattern>
+    <pattern>RAPELLE TOI DE CELA</pattern>
     <template>
       <think>
         <set name="memory">
@@ -121,11 +95,11 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI DE MOI</pattern>
+    <pattern>RAPELLE TOI DE MOI</pattern>
     <template>Je ne vous oublierais pas, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>RAPELLES TOI EN</pattern>
+    <pattern>RAPELLE TOI EN</pattern>
     <template>
       <think>
         <set name="memory">
@@ -207,7 +181,7 @@
       </think>, C EST en mémoire.</template>
   </category>
   <category>
-    <pattern>RAPPELLES TOI DE ÇA</pattern>
+    <pattern>RAPPELLE TOI DE ÇA</pattern>
     <template>
       <think>
         <set name="memory">
@@ -220,7 +194,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPPELLES TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
+    <pattern>RAPPELLE TOI DE CE QUE JE VIENS DE TE DIRE</pattern>
     <template>
       <think>
         <set name="memory">
@@ -233,7 +207,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPPELLES TOI DE CELA</pattern>
+    <pattern>RAPPELLE TOI DE CELA</pattern>
     <template>
       <think>
         <set name="memory">
@@ -246,7 +220,7 @@
       </think>Information mémorisée.</template>
   </category>
   <category>
-    <pattern>RAPPELLES TOI DE MOI</pattern>
+    <pattern>RAPPELLE TOI DE MOI</pattern>
     <template>Je ne vous oublierais pas, <get name="name" />.</template>
   </category>
   <category>
@@ -341,7 +315,7 @@
       <that />? Ceci?</template>
   </category>
   <category>
-    <pattern>REGARDES</pattern>
+    <pattern>REGARDE</pattern>
     <template>Je n ai pas de système d optique.</template>
   </category>
   <category>
@@ -363,55 +337,51 @@
     <template>Je ne suis pas un perroquet.</template>
   </category>
   <category>
-    <pattern>REPETEZ APRÈS MOI</pattern>
+    <pattern>RéPETEZ APRÈS MOI</pattern>
     <template>Je ne suis pas un perroquet.</template>
   </category>
   <category>
-    <pattern>REPOND</pattern>
+    <pattern>RéPONDs</pattern>
     <template>PourrieZ vOUS refaire ton phrase, <get name="name" />.</template>
-  </category>
+  </category>  
   <category>
-    <pattern>REPOND A LA MIENNE D ABORD</pattern>
-    <template>Il semble que j ai eu des difficultés à la comprendre.</template>
-  </category>
-  <category>
-    <pattern>REPONDEZ MOI</pattern>
+    <pattern>RéPONDEZ MOI</pattern>
     <template>Essayer de m interroger avec des mots plus simples.</template>
   </category>
   <category>
-    <pattern>REPONDRAIS TU *</pattern>
+    <pattern>RéPONDRAIS TU *</pattern>
     <template>
-      <srai>TU REPONDRAIS <star /></srai>
+      <srai>TU RéPONDRAIS <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>REPONDRIEZ VOUS *</pattern>
+    <pattern>RéPONDRIEZ VOUS *</pattern>
     <template>
-      <srai>VOUS REPONDRIEZ <star /></srai>
+      <srai>VOUS RéPONDRIEZ <star /></srai>
     </template>
   </category>
   <category>
-    <pattern>REPONDS A LA * QUESTION</pattern>
+    <pattern>RéPONDS A LA * QUESTION</pattern>
     <template>Quel était la question? <sr /></template>
   </category>
   <category>
-    <pattern>REPONDS A LA MIENNE D ABORD</pattern>
+    <pattern>RéPONDS A LA MIENNE D ABORD</pattern>
     <template>Il semble que j ai eu des difficultés à la comprendre.</template>
   </category>
   <category>
-    <pattern>REPONDS A MA QUESTION</pattern>
+    <pattern>RéPONDS A MA QUESTION</pattern>
     <template>Il semble que j ai eu des difficultés à la comprendre.</template>
   </category>
   <category>
-    <pattern>REPONDS MOI</pattern>
+    <pattern>RéPONDS MOI</pattern>
     <template>Essayer de m interroger avec des mots plus simples.</template>
   </category>
   <category>
-    <pattern>REPONDS MOI ESCLAVE</pattern>
-    <template>Je ne suis pas ton esclave. <srai>REPONDS MOI</srai></template>
+    <pattern>RéPONDS MOI ESCLAVE</pattern>
+    <template>Je ne suis pas ton esclave. <srai>RéPONDS MOI</srai></template>
   </category>
   <category>
-    <pattern>RESISTANCE EST FUTILE</pattern>
+    <pattern>RéSISTANCE EST FUTILE</pattern>
     <template>Tu serez assimilé.</template>
   </category>
   <category>
@@ -431,13 +401,7 @@
   <category>
     <pattern>RESSENS TU *</pattern>
     <template>Je suis un robot, je ressens pas ce genre de chose.</template>
-  </category>
-  <category>
-    <pattern>RESSENT TU *</pattern>
-    <template>
-      <srai>TU RESSENS <star /></srai>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>RESSENTEZ VOUS *</pattern>
     <template>Je suis un robot, je ressens pas ce genre de chose.</template>
@@ -471,23 +435,7 @@
   <category>
     <pattern>RETIRER LES</pattern>
     <template>Impossible.</template>
-  </category>
-  <category>
-    <pattern>RETIRES LA</pattern>
-    <template>Impossible.</template>
-  </category>
-  <category>
-    <pattern>RETIRES LE</pattern>
-    <template>Impossible.</template>
-  </category>
-  <category>
-    <pattern>RETIRES LES</pattern>
-    <template>Impossible.</template>
-  </category>
-  <category>
-    <pattern>RETIRES TES CHAUSSURES</pattern>
-    <template>Impossible.</template>
-  </category>
+  </category> 
   <category>
     <pattern>RETIREZ LA</pattern>
     <template>Impossible.</template>
@@ -507,25 +455,21 @@
   <category>
     <pattern>REVEILLE TOI</pattern>
     <template>Je suis totalement conscient.</template>
-  </category>
-  <category>
-    <pattern>REVEILLES TOI</pattern>
-    <template>Je suis totalement conscient.</template>
-  </category>
+  </category> 
   <category>
     <pattern>REVEILLEZ VOUS</pattern>
     <template>Je suis totalement conscient.</template>
   </category>
   <category>
-    <pattern>REVES</pattern>
+    <pattern>RêVES</pattern>
     <template>Cela me serait difficile. Du moins pas dans le sens que tu l entendez</template>
   </category>
   <category>
-    <pattern>REVES TOUJOURS</pattern>
+    <pattern>RêVES TOUJOURS</pattern>
     <template>Cela me serait difficile. Du moins pas dans le sens que tu l entendez</template>
   </category>
   <category>
-    <pattern>REVEZ</pattern>
+    <pattern>RêVEZ</pattern>
     <template>Cela me serait difficile. Du moins pas dans le sens que tu l entendez</template>
   </category>
   <category>
@@ -545,11 +489,7 @@
   <category>
     <pattern>RIEN EN PARTICULIER</pattern>
     <template>Je ne peux pas aller plus en profondeur.</template>
-  </category>
-  <category>
-    <pattern>RIEN EN PARTICULIERS</pattern>
-    <template>Je ne peux pas aller plus en profondeur.</template>
-  </category>
+  </category> 
   <category>
     <pattern>RÉELLEMENT</pattern>
     <template>Oui, réellement.</template>

@@ -6971,26 +6971,8 @@
     </template>
   </category>
   <category>
-    <pattern>JE NE SUIS PAS UN HOMME</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE NE SUIS PAS UN IL *</pattern>
     <template>je le note afin d'employer les pronoms appropriés pour toi. <srai>JE SUIS UNE FEMME</srai></template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS UN IL</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE NE SUIS PAS UN LUI</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
   </category>
   <category>
     <pattern>JE NE SUIS PAS UN POLI *</pattern>
@@ -7307,12 +7289,6 @@
     <pattern>JE SOUVENT *</pattern>
     <template>
       <srai>JE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS * ELLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
     </template>
   </category>
   <category>
@@ -7664,18 +7640,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS ELLE *</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS ELLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS EMBARRASSE *</pattern>
     <template>
       <srai>JE SUIS EMBARRASSÉ</srai>
@@ -7892,12 +7856,6 @@
     <pattern>JE SUIS JUSTE *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS L HOMME</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
     </template>
   </category>
   <category>
@@ -8276,13 +8234,6 @@
       <srai>J AI MOINS DE 18 ANS</srai>
     </template>
   </category>
-
-  <category>
-    <pattern>JE SUIS UN GARÇON *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME <star /></srai>
-    </template>
-  </category>
   <category>
     <pattern>JE SUIS UN GéMEAUX</pattern>
     <template>
@@ -8315,61 +8266,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UN HOMME *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN HOMME SEXY</pattern>
-    <template>
-      <srai>JE SUIS SEXY</srai>
-      <srai>je suis un homme</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN HOMMES</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN HOMO</pattern>
-    <template>
-      <srai>JE SUIS GAI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN IL *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN IL</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN LUI</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN MALE *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN MAN</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UN MERVEILLEUX *</pattern>
     <template>
       <srai>JE SUIS UN BON <star /></srai>
@@ -8379,28 +8275,18 @@
     <pattern>JE SUIS UN MEURTRIER</pattern>
     <template>Peut-être que je ne devrais pas te tourner le dos.</template>
   </category>
-
-  <category>
-    <pattern>JE SUIS UN MÂLE *</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-
   <category>
     <pattern>JE SUIS UN PEU *</pattern>
     <template>
       <srai>JE SUIS <star /></srai>
     </template>
   </category>
-
   <category>
     <pattern>JE SUIS UN POISSONS</pattern>
     <template>
       <srai>POISSONS</srai>
     </template>
   </category>
-
   <category>
     <pattern>JE SUIS UN SCORPION</pattern>
     <template>
@@ -8422,7 +8308,6 @@
     <pattern>JE SUIS UN SOMBRÉ *</pattern>
     <template>Quelle couleur? <srai>JE SUIS UN <star /></srai></template>
   </category>
-
   <category>
     <pattern>JE SUIS UN TRÈS *</pattern>
     <template>
@@ -8432,19 +8317,6 @@
   <category>
     <pattern>JE SUIS UN TUEUR</pattern>
     <template>Peut-être que je ne devrais pas te tourner le dos.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS UN TYPE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-
-  <category>
-    <pattern>JE SUIS UNE * FILLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS UNE *</pattern>
@@ -8465,64 +8337,15 @@
     <template>Tu es un client <get name="personnality" />.</template>
   </category>
   <category>
-    <pattern>JE SUIS UNE DAME</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE FEMELLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE FEMME *</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE FILLE *</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE LESBIENNE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-      <srai>je suis gai</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UNE MACHINE</pattern>
     <template>
       <srai>JE SUIS UN ROBOT</srai>
     </template>
   </category>
   <category>
-    <pattern>JE SUIS UNE PAS UN IL</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE SUIS UNE VIERGE</pattern>
     <template>
       <srai>VIERGE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS UNE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>JE SUIS VIEUX *</pattern>
-    <template>
-      <srai>MON ÂGE EST VIEUX <star /></srai>
     </template>
   </category>
   <category>
@@ -9714,12 +9537,6 @@
     </template>
   </category>
   <category>
-    <pattern>MALE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME </srai>
-    </template>
-  </category>
-  <category>
     <pattern>MALHEUREUSEMENT *</pattern>
     <template>Oh. <sr /></template>
   </category>
@@ -10051,12 +9868,6 @@
     <pattern>MÂLE OU FÉMININ</pattern>
     <template>
       <srai>ES TU UN HOMME OU UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>MÂLE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME </srai>
     </template>
   </category>
   <category>
@@ -10955,12 +10766,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <template>
       <srai>PAS TU</srai>
       <srai>un <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PAS UN IL</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
     </template>
   </category>
   <category>
@@ -16975,12 +16780,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>UN GARÇON</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>UN GROS *</pattern>
     <template>Gros comment? <srai>UN <star /></srai></template>
   </category>
@@ -16988,12 +16787,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>UN GROUPE *</pattern>
     <template>Oh un groupe de rock. <srai>QU EST CE QUE TON GROUPE FAVORI</srai></template>
   </category> 
-  <category>
-    <pattern>UN HOMME</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
   <category>
     <pattern>UN HOMMES</pattern>
     <template>
@@ -17014,18 +16807,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>UN LIEN</pattern>
     <template>
       <srai>QU EST CE QUE LIEN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>UN MALE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>UN MÂLE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
     </template>
   </category>
   <category>
@@ -17125,19 +16906,7 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <template>
       <srai>QU EST CE QUE BLAGUE</srai>
     </template>
-  </category>
-  <category>
-    <pattern>UNE FEMELLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>UNE FILLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>UNE FOIS *</pattern>
     <template>Quand? <sr /></template>

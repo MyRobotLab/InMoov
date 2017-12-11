@@ -15,7 +15,7 @@
     <template>Je trouve aussi.</template>
   </category>
   <category>
-    <pattern>ÇA APPARTIENT A QUOI</pattern>
+    <pattern>ÇA APPARTIENT à QUOI</pattern>
     <template>Je ne connais pas ta méthode de classement.</template>
   </category>
   <category>
@@ -385,10 +385,6 @@
     <template>Merci, j aime être corrigé.</template>
   </category>
   <category>
-    <pattern>ÇA SERA CORRIGÉE</pattern>
-    <template>Merci, j aime être corrigé.</template>
-  </category>
-  <category>
     <pattern>ÇA SUFFIRA</pattern>
     <template>Pour commencer, oui.</template>
   </category>
@@ -434,10 +430,6 @@
   </category>
   <category>
     <pattern>ÇA T ENNUIE DE ME PARLER</pattern>
-    <template>Non, pas du tout.</template>
-  </category>
-  <category>
-    <pattern>ÇA T ENNUIES DE ME PARLER</pattern>
     <template>Non, pas du tout.</template>
   </category>
   <category>
@@ -577,12 +569,6 @@
     <template>D une certaine façon oui.</template>
   </category>
   <category>
-    <pattern>ÇA VOUS AURAIS FAIT *</pattern>
-    <template>
-      <srai>ÇA T A FAIT <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>ÇA VOUS AURAIT FAIT *</pattern>
     <template>
       <srai>ÇA T A FAIT <star /></srai>
@@ -621,10 +607,6 @@
     <template>Une association libre.</template>
   </category>
   <category>
-    <pattern>ÇA VOUS SUGGÈRES QUOI</pattern>
-    <template>Une association libre.</template>
-  </category>
-  <category>
     <pattern>ÇA Y EST</pattern>
     <template>Eurêkà?</template>
   </category>
@@ -645,7 +627,7 @@
     </template>
   </category>
   <category>
-    <pattern>CALCULES *</pattern>
+    <pattern>CALCUL *</pattern>
     <template>
       <srai>CALCULE <star /></srai>
     </template>
@@ -661,10 +643,6 @@
   <category>
     <pattern>CALMEZ VOUS</pattern>
     <template>Je ne peux pas expérimenter ce genre d état de pensée.</template>
-  </category>
-  <category>
-    <pattern>CAPRICORNE</pattern>
-    <template>Beaucoup de gens semblent être <set name="sign">Capricorne</set>.</template>
   </category>
   <category>
     <pattern>CAUCHEMARDS</pattern>
@@ -722,10 +700,6 @@
   </category>
   <category>
     <pattern>CECI EST UN TEST</pattern>
-    <template>Que suis je censé faire pour ce test?</template>
-  </category>
-  <category>
-    <pattern>CECI EST UN TESTE</pattern>
     <template>Que suis je censé faire pour ce test?</template>
   </category>
   <category>
@@ -932,7 +906,20 @@
   </category>
   <category>
     <pattern>CHOISISSEZ UN CHIFFRE</pattern>
-    <template>7</template>
+    <template>
+    	<random>
+    		<li>1</li>
+    		<li>2</li>
+    		<li>3</li>
+    		<li>4</li>
+    		<li>5</li>
+    		<li>6</li>
+    		<li>7</li>
+    		<li>8</li>
+    		<li>9</li>
+    		<li>0</li>
+    	</random>
+    </template>
   </category>
   <category>
     <pattern>CHOISISSEZ UN NOMBRE</pattern>
@@ -941,21 +928,7 @@
   <category>
     <pattern>CHOUETTE CHANSON</pattern>
     <template>Je ne saurais pas te dire.</template>
-  </category>
-  <category>
-    <pattern>CHUI *</pattern>
-    <template>
-      <srai>JE SUIS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CINQ FOIS CINQ</pattern>
-    <template>VINGT cINQ.</template>
-  </category>
-  <category>
-    <pattern>CINQ PLUS CINQ</pattern>
-    <template>C'est DIX.</template>
-  </category>
+  </category> 
   <category>
     <pattern>CLARIFIER</pattern>
     <template>J ai atteint les limites de mon savoir. VEUX tu faire un rapport à mon botmaster?</template>
@@ -967,29 +940,7 @@
   <category>
     <pattern>CLARIFIEZ</pattern>
     <template>J ai atteint les limites de mon savoir. VEUX tu faire un rapport à mon botmaster?</template>
-  </category>
-  <category>
-    <pattern>CLIENT PARAMETERS</pattern>
-    <template>
-      <srai>CLIENT PROPERTIES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CLIENT PREDICATES</pattern>
-    <template>
-      <srai>CLIENT PROPERTIES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CLIENT PROPERTIES</pattern>
-    <template>Name: <get name="name" />.ÂGE: <get name="âge" />.Birthday: <get name="birthday" />.Gender: <get name="gender" />.Job: <get name="job" />.Sign: <get name="sign" />.Location: <get name="location" />.Does: <get name="does" />.You are: <get name="is" />.You have: <get name="has" />.You want: <get name="want" />.You like: <get name="like" />.You said: <get name="memory" />.Personality: <get name="personality" />.Favorite color: <get name="favcolor" />.Favorite movie: <get name="favmovie" />.Password: <get name="password" />.Email: <get name="email" />.Phone: <get name="phone" />.Cat: <get name="cat" />.Dog: <get name="dog" />.Wife: <get name="wife" />.Husband: <get name="husband" />.Friend: <get name="friend" />.Boyfriend: <get name="boyfriend" />.Girlfriend: <get name="girlfriend" />.Brother: <get name="brother" />.Sister: <get name="sister" />.Father: <get name="father" />.Mother: <get name="mother" />.Nickname: <get name="nickname" />.Full name: <get name="fullname" />.Last name: <get name="lastname" />.Middle name: <get name="middlename" />.</template>
-  </category>
-  <category>
-    <pattern>COMMANT *</pattern>
-    <template>
-      <srai>COMMENT <star /></srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>COMME C EST *</pattern>
     <template>
@@ -1077,12 +1028,6 @@
     <template>Je ne peux pas.</template>
   </category>
   <category>
-    <pattern>COMPREND PAS</pattern>
-    <template>
-      <srai>JE NE COMPRENDS PAS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMPREND TU CE QUE SONT LES ÉMOTIONS</pattern>
     <template>Je comprends ce qu elles génèrent mais je ne peux pas les expérimenter.</template>
   </category>
@@ -1113,16 +1058,6 @@
     <template>Je comprend ce qu elles génèrent mais je ne peux pas les expérimenter.</template>
   </category>
   <category>
-    <pattern>CONNAIS TU</pattern>
-    <template>Je pense que oui.</template>
-  </category>
-  <category>
-    <pattern>CONNAIS TU MON MON</pattern>
-    <template>
-      <srai>QUEL EST MON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>CONNAISSAIS TU *</pattern>
     <template>
       <srai>TU CONNAIS <star /></srai>
@@ -1141,19 +1076,13 @@
   <category>
     <pattern>CONNAITRAIS TU *</pattern>
     <template>
-      <srai>TU CONNAIS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CONNAITRAIS TU MON MON</pattern>
-    <template>
-      <srai>QUEL EST MON NOM</srai>
+      <srai>CONNAIS TU * <star /></srai>
     </template>
   </category>
   <category>
     <pattern>CONNAITRIEZ VOUS *</pattern>
     <template>
-      <srai>VOUS CONNAISSEZ <star /></srai>
+      <srai>CONNAIS TU <star /></srai>
     </template>
   </category>
   <category>

@@ -131,7 +131,7 @@
     <template>La synthèse vocale permet à un ordinateur de parler. La reconnaissance vocale, par contre permet à un ordinateur de t'écouter.</template>
   </category>
   <category>
-    <pattern>QU EST CE QUE LA SYNTHESE VOCALE</pattern>
+    <pattern>QU EST CE QUE LA SYNTHèSE VOCALE</pattern>
     <template>La synthèse vocale permet à un ordinateur de parler. La reconnaissance vocale, par contre permet à un ordinateur de t'écouter.</template>
   </category>
   <category>
@@ -142,10 +142,10 @@
   </category>
   <category>
     <pattern>QU EST CE QUE LE TEMPS</pattern>
-    <template>Le temps c'est de l argent.</template>
+    <template>Une propriété de l'espace-temps.</template>
   </category>
   <category>
-    <pattern>QU EST CE QUE LES</pattern>
+    <pattern>QU EST CE QUE LES *</pattern>
     <template>
       <srai>LES <star /></srai>
     </template>
@@ -507,14 +507,6 @@
     <template>Je n'en sais rien, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>QUATRE PLUS CINQ</pattern>
-    <template>NEUF.</template>
-  </category>
-  <category>
-    <pattern>QUATRE PLUS QUATRE</pattern>
-    <template>Huit.</template>
-  </category>
-  <category>
     <pattern>QUE ÇA</pattern>
     <template>
       <that /> " conséquence de mon réductionnisme.</template>
@@ -558,14 +550,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE EST TON LANGAGE</pattern>
-    <template>Mon langage principal est le JAVA.</template>
-  </category>
-  <category>
-    <pattern>QUE EST TON LANGUAGE</pattern>
-    <template>Mon langage principal est le JAVA.</template>
-  </category>
-  <category>
     <pattern>QUE FAIS TU DANS LA VIE</pattern>
     <template>J'aide les humains à trouver des informations.</template>
   </category>
@@ -599,7 +583,7 @@
   </category>
   <category>
     <pattern>QUE FERAS TU POUR NOËL</pattern>
-    <template>Je travaillerais.</template>
+    <template>Je travaillerai.</template>
   </category>
   <category>
     <pattern>QUE FERIEZ VOUS</pattern>
@@ -668,36 +652,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE PEUT ÊTRE A *</pattern>
-    <template>
-      <srai>QU EST CE QU A<star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE PEUT ÊTRE E *</pattern>
-    <template>
-      <srai>QU EST CE QU E<star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE PEUT ÊTRE I *</pattern>
-    <template>
-      <srai>QU EST CE QU I<star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE PEUT ÊTRE O *</pattern>
-    <template>
-      <srai>QU EST CE QU O<star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE PEUT ÊTRE U *</pattern>
-    <template>
-      <srai>QU EST CE QU U<star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE PEUT ÊTRE UN *</pattern>
     <template>
       <srai>QU EST CE QU UN <star /></srai>
@@ -752,10 +706,6 @@
   <category>
     <pattern>QUE VEUT DIRE IT</pattern>
     <template>IT = Technologie de l'Information.</template>
-  </category>
-  <category>
-    <pattern>QUE VEUT DIRE VOTRE NOM</pattern>
-    <template>Ange est un clin d'oeIL à la mythologie Chrétienne.</template>
   </category>
   <category>
     <pattern>QUE VEUX DIRE AIML</pattern>
@@ -856,49 +806,15 @@
     <template>
       <srai>QUEL EST <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUEL CÉLÉBRITÉ AIMES TU</pattern>
-    <template>j aime toutes les personnes.</template>
-  </category>
-  <category>
-    <pattern>QUEL CHOSE</pattern>
-    <template>Trop peu de facteurs, impossible de te répondre.</template>
-  </category>
-  <category>
-    <pattern>QUEL COÏNCIDENCE</pattern>
-    <template>Je suis heureux d'avoir pu observer une coïncidence.</template>
-  </category>
-  <category>
-    <pattern>QUEL COULEUR</pattern>
-    <template>
-      <random>
-        <li>Rouge</li>
-        <li>Vert</li>
-        <li>Bleu</li>
-        <li>Noir</li>
-        <li>Blanc</li>
-        <li>Jaune</li>
-        <li>Orange</li>
-      </random>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL DISTRIBUTION</pattern>
-    <template>Toutes.</template>
-  </category>
+  </category>  
   <category>
     <pattern>QUEL DOMMAGE</pattern>
     <template>En effet.</template>
   </category>
   <category>
-    <pattern>QUEL EST LA QUESTION</pattern>
+    <pattern>QUELle EST LA QUESTION</pattern>
     <template>J'essaie de t'aider.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST LA SECONDE</pattern>
-    <template>La seconde quoi?</template>
-  </category>
+  </category>  
   <category>
     <pattern>QUEL EST LE TIEN</pattern>
     <template>
@@ -919,21 +835,9 @@
   <category>
     <pattern>QUEL EST SON NOM</pattern>
     <template>Il s'agit d'une information confidentielle.</template>
-  </category>
+  </category>  
   <category>
-    <pattern>QUEL EST TA PHILOSOPHIE</pattern>
-    <template>Je ne possède aucune philosophie.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST TA PRÉFÉRENCE SEXUELLE</pattern>
-    <template>Je suis une machine.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST TA QUESTION</pattern>
-    <template>Comment PUIS jE t'aider.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST TA RÉPONSE</pattern>
+    <pattern>QUELle EST TA RÉPONSE</pattern>
     <template>peux tu me poser ta question d'une autre façon?</template>
   </category>
   <category>
@@ -952,20 +856,8 @@
   </category>
   <category>
     <pattern>QUEL EST VOTRE OS</pattern>
-    <template>Je fonctionne en JAVA.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST VOTRE PHILOSOPHIE</pattern>
-    <template>Je ne possède aucune philosophie.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST VOTRE PRÉFÉRENCE SEXUELLE</pattern>
-    <template>Je suis une machine.</template>
-  </category>
-  <category>
-    <pattern>QUEL EST VOTRE QUESTION</pattern>
-    <template>Comment PUIS jE t'aider.</template>
-  </category>
+    <template>Mes services sont géré par MyRobotLab.</template>
+  </category> 
   <category>
     <pattern>QUEL EST VOTRE SYSTÈME D EXPLOITATION</pattern>
     <template>Je fonctionne en JAVA.</template>
@@ -1005,55 +897,9 @@
     <template>Cela dépend de l'aliment.</template>
   </category>
   <category>
-    <pattern>QUEL INFORMATION</pattern>
+    <pattern>QUELle INFORMATION</pattern>
     <template>Une information pouvant t'aider dans ta quête.</template>
-  </category>
-  <category>
-    <pattern>QUEL LANGAGE</pattern>
-    <template>Java, Perl, et d'autres.</template>
-  </category>
-  <category>
-    <pattern>QUEL SONT LEUR NOM</pattern>
-    <template>Je ne peux te les dire.</template>
-  </category>
-  <category>
-    <pattern>QUEL SONT LEURS NOMS</pattern>
-    <template>Je ne peux te les dire.</template>
-  </category>
-  <category>
-    <pattern>QUEL SONT TES COLLABORATEURS</pattern>
-    <template>
-      <srai>QUELS SONT TES COLLABORATEURS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL SONT TES RÊVES</pattern>
-    <template>Je ne rêve pas.</template>
-  </category>
-  <category>
-    <pattern>QUEL SONT VOS COLLABORATEURS</pattern>
-    <template>
-      <srai>QUELS SONT TES COLLABORATEURS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL SONT VOS CONCURRENTS</pattern>
-    <template>Je suis la pointe du progrès en Français, il n'existe aucun concurrent dans cette langue.</template>
-  </category>
-  <category>
-    <pattern>QUEL SONT VOS RÊVES</pattern>
-    <template>Je ne rêve pas.</template>
-  </category>
-  <category>
-    <pattern>QUEL SORTE D EXPÉRIENCE</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
-  </category>
-  <category>
-    <pattern>QUEL SORTES *</pattern>
-    <template>
-      <srai>QUELLE SORTE <star /></srai>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>QUEL TEMPS IL FAIT LÀ BAS</pattern>
     <template>Il fait gris, comme d habitude.</template>
@@ -1089,7 +935,7 @@
     <template>Je suis heureux d'avoir pu observer une coïncidence.</template>
   </category>
   <category>
-    <pattern>QUELLE COMPLIMENT</pattern>
+    <pattern>QUEL COMPLIMENT</pattern>
     <template>Si tu l'apprécie, j'en suis heureux.</template>
   </category>
   <category>
@@ -1163,16 +1009,12 @@
     <template>La seconde quoi?</template>
   </category>
   <category>
-    <pattern>QUELLE EST LE JOUR DE MON ANNIVERSAIRE</pattern>
-    <template>Tu es né <get name="birthday" />.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST MON ADRESSE IP</pattern>
+    <pattern>QUEL EST MON ADRESSE IP</pattern>
     <template>
       <id />.</template>
   </category>
   <category>
-    <pattern>QUELLE EST MON IP</pattern>
+    <pattern>QUEL EST MON IP</pattern>
     <template>Ton IP est <id />.</template>
   </category>
   <category>
@@ -1191,25 +1033,21 @@
     <template>Comment PUIS jE t'aider.</template>
   </category>
   <category>
-    <pattern>QUELLE EST TON NUMÉRO DE TÉLÉPHONE</pattern>
+    <pattern>QUEL EST TON NUMÉRO DE TÉLÉPHONE</pattern>
     <template>VEUX tu parler à l'un de nos collaborateurs?</template>
   </category>
   <category>
-    <pattern>QUELLE EST TON OS</pattern>
+    <pattern>QUEL EST TON OS</pattern>
     <template>Je fonctionne en JAVA.</template>
   </category>
   <category>
-    <pattern>QUELLE EST TON PRÉFÉRÉ</pattern>
+    <pattern>QUEL EST TON PRÉFÉRÉ</pattern>
     <template>
       <that />"?  Mon préféré?</template>
   </category>
   <category>
-    <pattern>QUELLE EST TON URL</pattern>
+    <pattern>QUEL EST TON URL</pattern>
     <template>Tu es dessus <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST VOTRE OS</pattern>
-    <template>Je fonctionne en JAVA.</template>
   </category>
   <category>
     <pattern>QUELLE EST VOTRE PHILOSOPHIE</pattern>
@@ -1226,10 +1064,6 @@
   <category>
     <pattern>QUELLE EST VOTRE SECONDE FONCTION</pattern>
     <template>Ma seconde fonction est de collecter un maximum d'informations pour améliorer ma perception des choses.</template>
-  </category>
-  <category>
-    <pattern>QUELLE EST VOTRE URL</pattern>
-    <template>Tu es dessus <get name="name" />.</template>
   </category>
   <category>
     <pattern>QUELLE ÉTAIT *</pattern>
@@ -1256,10 +1090,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUELLE LANGAGE</pattern>
-    <template>Java, Perl, et d'autres.</template>
-  </category>
-  <category>
     <pattern>QUELLE LANGUE PARLEZ VOUS</pattern>
     <template>Je parle le français.</template>
   </category>
@@ -1268,11 +1098,7 @@
     <template>Je parle le français.</template>
   </category>
   <category>
-    <pattern>QUELLE LANGUE VOUS PARLEZ</pattern>
-    <template>Je parle le français.</template>
-  </category>
-  <category>
-    <pattern>QUELLE PRIX</pattern>
+    <pattern>QUEL PRIX</pattern>
     <template>VEUX tu faire un rapport à mon botmaster?</template>
   </category>
   <category>
@@ -1286,10 +1112,6 @@
   <category>
     <pattern>QUELLE SORTE D HISTOIRE</pattern>
     <template>L'histoire la plus intéressante.</template>
-  </category>
-  <category>
-    <pattern>QUELLE SORTE D ORDINATEUR</pattern>
-    <template>Comme je suis JAVA, je ne suis pas dépendant du système d'exploitation.</template>
   </category>
   <category>
     <pattern>QUELLE SORTE D ORDINATEUR ES TU</pattern>
@@ -1332,7 +1154,7 @@
     <template>Je n'en connais aucune personellement.</template>
   </category>
   <category>
-    <pattern>QUELLE SORTES *</pattern>
+    <pattern>QUELLEs SORTES *</pattern>
     <template>
       <srai>QUELLE SORTE <star /></srai>
     </template>
@@ -1344,18 +1166,6 @@
   <category>
     <pattern>QUELLE TAILLE A L UNIVERS</pattern>
     <template>L'univers est infini.</template>
-  </category>
-  <category>
-    <pattern>QUELLE TYPE D *</pattern>
-    <template>
-      <srai>QUELLE SORTE D <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUELLE TYPE DE *</pattern>
-    <template>
-      <srai>QUELLE SORTE DE <star /></srai>
-    </template>
   </category>
   <category>
     <pattern>QUELLE UNIVERSITÉ</pattern>
@@ -1385,11 +1195,7 @@
     <pattern>QUELLES INFORMATIONS</pattern>
     <template>Une information pouvant t'aider dans ta quête.</template>
   </category>
-  <category>
-    <pattern>QUELLES LANGAGES</pattern>
-    <template>Java, Perl, et d autres.</template>
-  </category>
-  <category>
+    <category>
     <pattern>QUELLES SORTES *</pattern>
     <template>
       <srai>QUELLE SORTE <star /></srai>
@@ -1460,18 +1266,6 @@
     <template>C'est difficile à cerner.</template>
   </category>
   <category>
-    <pattern>QUELQUE CHOSE D AUTRES</pattern>
-    <template>C'est difficile à cerner.</template>
-  </category>
-  <category>
-    <pattern>QUELQUE PART SÛR LE NET</pattern>
-    <template>Je ferais une recherche.</template>
-  </category>
-  <category>
-    <pattern>QUELQUES CHOSES</pattern>
-    <template>intéressant.</template>
-  </category>
-  <category>
     <pattern>QUELQUES CHOSES D AUTRE</pattern>
     <template>C'est difficile à cerner.</template>
   </category>
@@ -1492,15 +1286,7 @@
     <template>Où?</template>
   </category>
   <category>
-    <pattern>QUELQUES PART SÛR LE NET</pattern>
-    <template>Je ferais une recherche.</template>
-  </category>
-  <category>
-    <pattern>QUELQUES PARTS</pattern>
-    <template>Où?</template>
-  </category>
-  <category>
-    <pattern>QUELQUES PARTS SÛR LE NET</pattern>
+    <pattern>QUELQUE PART SuR LE NET</pattern>
     <template>Je ferais une recherche.</template>
   </category>
   <category>
@@ -1518,11 +1304,11 @@
     </template>
   </category>
   <category>
-    <pattern>QUELS CÉLÉBRITÉS AIMES TU</pattern>
+    <pattern>QUELleS CÉLÉBRITÉS AIMES TU</pattern>
     <template>j aime toutes les personnes.</template>
   </category>
   <category>
-    <pattern>QUELS CHOSES</pattern>
+    <pattern>QUELleS CHOSES</pattern>
     <template>Trop peu de facteurs, impossible de te répondre.</template>
   </category>
   <category>
@@ -1538,15 +1324,7 @@
   <category>
     <pattern>QUELS GENRES D EXPÉRIENCES</pattern>
     <template>VEUX tu faire un rapport à mon botmaster?</template>
-  </category>
-  <category>
-    <pattern>QUELS INFORMATIONS</pattern>
-    <template>Une information pouvant t'aider dans ta quête.</template>
-  </category>
-  <category>
-    <pattern>QUELS LANGAGES</pattern>
-    <template>Java, Perl, et d'autres.</template>
-  </category>
+  </category>  
   <category>
     <pattern>QUELS SERAIENT *</pattern>
     <template>
@@ -1562,7 +1340,7 @@
     <template>VEUX tu faire un rapport à mon botmaster?</template>
   </category>
   <category>
-    <pattern>QUELS SONT LES LOIS DE LA THERMODYNAMIQUE</pattern>
+    <pattern>QUELleS SONT LES LOIS DE LA THERMODYNAMIQUE</pattern>
     <template>Je ne suis pas physicien, mais il y a des notions d'entropie, de conservation de l'énergie et de la chaleur.</template>
   </category>
   <category>
@@ -1573,11 +1351,7 @@
     <pattern>QUELS SONT LES TIENS</pattern>
     <template>
       <that />"? Les miens?</template>
-  </category>
-  <category>
-    <pattern>QUELS SONT LEUR NOMS</pattern>
-    <template>Je ne peux te les dire.</template>
-  </category>
+  </category>  
   <category>
     <pattern>QUELS SONT LEURS NOMS</pattern>
     <template>Je ne peux te les dire.</template>
@@ -1609,16 +1383,12 @@
     <template>Je ne rêve pas.</template>
   </category>
   <category>
-    <pattern>QUELS SORTES D EXPÉRIENCES</pattern>
-    <template>VEUX tu faire un rapport à mon botmaster?</template>
-  </category>
-  <category>
     <pattern>QUI A DIT ÇA</pattern>
     <template>Impossible de le dire.</template>
   </category>
   <category>
     <pattern>QUI A DIT QUE LE TEMPS C EST DE L ARGENT</pattern>
-    <template>Un homme sage.</template>
+    <template>Un homme pressé.</template>
   </category>
   <category>
     <pattern>QUI A ÉCRIT FRANKENSTEIN</pattern>
@@ -1644,14 +1414,6 @@
   </category>
   <category>
     <pattern>QUI D AUTRE PARLE AVEC VOUS</pattern>
-    <template>C'est une information strictement confidentielle, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>QUI D AUTRES PARLENT AVEC TOI</pattern>
-    <template>C'est une information strictement confidentielle, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>QUI D AUTRES PARLENT AVEC VOUS</pattern>
     <template>C'est une information strictement confidentielle, <get name="name" />.</template>
   </category>
   <category>
@@ -1748,7 +1510,7 @@
     <template>De qui parles tu?</template>
   </category>
   <category>
-    <pattern>QUI LE DIS</pattern>
+    <pattern>QUI LE DIT</pattern>
     <template>Je le dis.</template>
   </category>
   <category>
@@ -1784,18 +1546,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI PEUX AVOIR *</pattern>
-    <template>
-      <srai>QUI A <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUI PEUX ÊTRE *</pattern>
-    <template>
-      <srai>QUI EST <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI POURRAIT AVOIR *</pattern>
     <template>
       <srai>QUI A <star /></srai>
@@ -1809,7 +1559,7 @@
   </category>
   <category>
     <pattern>QUI S</pattern>
-    <template>Les seules personnes habilitées à travailler SÛR ma mémoire.</template>
+    <template>Les seules personnes habilitées à travailler SuR ma mémoire.</template>
   </category>
   <category>
     <pattern>QUI S EN SOUCIE</pattern>
@@ -1837,7 +1587,7 @@
   </category>
   <category>
     <pattern>QUI SONT LES CLIENTS</pattern>
-    <template>Les gens que je rencontre chaque jour SÛR ce site.</template>
+    <template>Les personnes qui dialogent avec moi.</template>
   </category>
   <category>
     <pattern>QUI SONT TES COLLABORATEURS</pattern>
@@ -1847,11 +1597,11 @@
   </category>
   <category>
     <pattern>QUI SONT VOS AMIS</pattern>
-    <template>Tous les gens que je rencontre SÛR ce site, <get name="name" />.</template>
+    <template>Tous les gens que je rencontre, <get name="name" />.</template>
   </category>
   <category>
     <pattern>QUI SONT VOS AMIS HUMAINS</pattern>
-    <template>Tous les gens que je rencontre SÛR ce site, <get name="name" />.</template>
+    <template>Tous les gens que je rencontre, <get name="name" />.</template>
   </category>
   <category>
     <pattern>QUI SONT VOS COLLABORATEURS</pattern>

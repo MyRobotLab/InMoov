@@ -342,9 +342,6 @@
 <category><pattern>C EST BON</pattern>
 <template>Tu aimes ça.</template>
 </category>
-<category><pattern>C EST BON</pattern><that>TOUT VA BIEN</that>
-<template>Comment des choses va-t-il pour toi?</template>
-</category>
 <category><pattern>C EST CE J AI DIT</pattern>
 <template>J archive.</template>
 </category>
@@ -1606,18 +1603,6 @@
 <category><pattern>C EST QUOI LE NET</pattern>
 <template><srai>QU EST CE QUE INTERNET</srai></template>
 </category>
-<category><pattern>C EST QUOI LE NOM DE MA FEMME</pattern>
-<template><condition name="gender" value="male">
-        <srai>femelle conjoint nom</srai>
-      </condition>
-      <condition name="gender" value="femelle">EXCUSE moi <get name="name"/> , mais tu m'avais dis que tu étais une femme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? </condition></template>
-</category>
-<category><pattern>C EST QUOI LE NOM DE MON MARI</pattern>
-<template><condition name="gender" value="femelle">
-        <srai>mâle conjoint nom</srai>
-      </condition>
-      <condition name="gender" value="male">EXCUSE moi <get name="name"/> , mais tu m'avais dis que tu étais un homme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? </condition></template>
-</category>
 <category><pattern>C EST QUOI LE NOM DE TON DE PÈRE</pattern>
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
@@ -1798,18 +1783,6 @@
 </category>
 <category><pattern>C EST QUOI QUASARS</pattern>
 <template><srai>QU EST CE QUE QUASAR</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>LE RÉDUCTIONNISME</that>
-<template><srai>QU EST CE QUE RÉDUCTIONNISME</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>LE REDUCTIONNISME</that>
-<template><srai>QU EST CE QUE RÉDUCTIONNISME</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>PAR EXEMPLE EUKARYOTES</that>
-<template><srai>QU EST CE QUE EUKARYOTES</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>PEUT ÊTRE TU ES UNE CATÉGORIE UN CLIENT</that>
-<template><srai>QU EST CE QU UNE CATÉGORIE UN CLIENT</srai></template>
 </category>
 <category><pattern>C EST QUOI QUELQUE * DES LIVRES</pattern>
 <template><srai>QU EST CE QUE TON LIVRE PRÉFÉRÉ</srai></template>
