@@ -12,5 +12,5 @@ def trackHumans(noFaceRecognizerOverride=True):
   else:
     i01.headTracking.faceDetect(False)
     # temporary disable "autoDisable"
-    i01.head.rollNeck.setOverrideAutoDisable(True)
-    i01.head.rollNeck.moveToBlocking(90)
+  i01.head.rollNeck.setOverrideAutoDisable(True)
+  i01.head.rollNeck.moveToBlocking(90)
