@@ -8,7 +8,7 @@
 <!-- Public License, as published by the Free Software Foundation. -->
 <!---->
 <!-- modified: Gael Langevin -->
-<!-- Last modified: October 10, 2016 -->
+<!-- Last modified: December 12, 2017 -->
 <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
 <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -2000,9 +2000,27 @@
 	<template>Only in an airplane.	</template>
 </category>
 <category>
-	<pattern>CAN YOU REPEAT THAT	</pattern>
-	<template>I said, <response/>.
-	</template>
+        <pattern>CAN YOU REPEAT  </pattern>
+        <template>
+	        <random>
+                        <li>I said, <response/>.</li>
+		        <li>I just said, <response/>.</li>
+		        <li>Let me repeat, I said, <response/>.</li>
+		        <li>Let me say it again, I said, <response/>.</li>
+                </random>
+        </template>		 
+</category>
+<category>
+        <pattern>CAN YOU REPEAT * </pattern>
+        <template><srai>CAN YOU REPEAT </srai></template>
+</category>
+<category>
+        <pattern>WHAT * YOU SAY</pattern>
+        <template><srai>CAN YOU REPEAT </srai></template>
+</category>
+<category>
+        <pattern>WHAT DID YOU * SAY</pattern>
+        <template><srai>CAN YOU REPEAT </srai></template>
 </category>
 <category>
 	<pattern>CAN I *	</pattern>
