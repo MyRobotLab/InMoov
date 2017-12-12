@@ -11,5 +11,6 @@ def trackHumans(noFaceRecognizerOverride=True):
     if faceRecognizerActivated:fr.train()# it takes some time to train and be able to recognize face
   else:
     i01.headTracking.faceDetect(False)
-    #i01.head.RollNeck.enableAutoDisable(False)
-    #i01.head.RollNeck.moveToBlocking(90)
+    # temporary disable "autoDisable"
+    i01.head.rollNeck.setOverrideAutoDisable(True)
+    i01.head.rollNeck.moveToBlocking(90)
