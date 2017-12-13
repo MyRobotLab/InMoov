@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<aiml version="1.0">
+<aiml version="2.0">
   <!-- A.L.I.C.E. is a Free software (c) 2001 ALICE AI Foundation -->
   <!-- The ProgramD is open source code released under the terms of the GNU General Public License as published by the Free Software Foundation. -->
   <!-- As This Module   : questions.aiml   -   version :   0.3   -   MàJ : 01/01/2003  -->
@@ -212,6 +212,9 @@
     <pattern>*</pattern>
     <that>raconte moi *</that>
     <template>Merci, je vais essayer de m'en rappeler."<star />"
-<think><gossip>HISTOIRE§<get name="name" /> m'a raconté "<star />"</gossip></think></template>
+		<think>
+		<gossip>HISTOIRE§<get name="name" /> m'a raconté "<star />"</gossip>
+		</think>
+	</template>
   </category>
 </aiml>
