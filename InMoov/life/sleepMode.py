@@ -32,19 +32,20 @@ def sleepModeWakeUp():
     else: welcomeMessage()
     #optional switchon nervoboard
     switchOnAllNervo()
-    #head up
-    if isHeadActivated:
-      head.neck.setVelocity(50)
-      head.neck.rest()
     if isEyeLidsActivated:
       eyelids.eyelidleft.moveTo(0)
       eyelids.eyelidright.moveTo(0)
       eyelids.autoBlink(True)
+          #head up
+    if isHeadActivated:
+      head.neck.setVelocity(50)
+      head.neck.moveToBlocking(head.neck.getRest())
   else:
     if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
   i01.RobotIsSleeping=False
   if isNeopixelActivated:i01.stopNeopixelAnimation()
+  fullspeed()
 
 
 def sleepModeSleep():

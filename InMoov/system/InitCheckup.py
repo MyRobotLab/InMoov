@@ -55,7 +55,9 @@ if LoadingPicture:displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg
 ################################
 # INIT.4 - skeleton loading & virtual skeleton
 ################################
-#we launch Inmoov Skeleton
+#we launch Inmoov Skeleton at half speed
+i01.halfSpeed()
+
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
