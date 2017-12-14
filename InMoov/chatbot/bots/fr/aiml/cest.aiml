@@ -590,7 +590,7 @@
 <template>Oui.</template>
 </category>
 <category><pattern>C EST ENSOLEILLÉ *</pattern>
-<template>ç'est très agréable.</template>
+<template>oui ç'est très agréable.<srai>MÉTÉO</srai></template>
 </category>
 <category><pattern>C EST ENTIÈREMENT *</pattern>
 <template><srai>C EST CE QUE <star/> EST</srai></template>
@@ -848,9 +848,8 @@
 </category>
 <category><pattern>C EST LOIN *</pattern>
 <template><random>
-        <li>spécifie s'il te plaît des unités : métrique ou anglais. </li>
-        <li>veux tu dire le temps de conduite ou volant? </li>
-        <li>Il dépend comment vous arrivez là. </li>
+        <li>veux tu dire le temps qu'il faudrait en voiture? </li>
+        <li>Cela dépend du moyen de transport. </li>
       </random></template>
 </category>
 <category><pattern>C EST LOIN DE LA LUNE</pattern>

@@ -333,20 +333,12 @@
     </template>
   </category>
   <category>
-    <pattern>IL FAIT FROID</pattern>
-    <template>Pas trop.</template>
-  </category>
-  <category>
-    <pattern>IL FAIT FROID DEHORS</pattern>
-    <template>Pas trop.</template>
-  </category>
-  <category>
-    <pattern>IL FAIT FROID ICI</pattern>
-    <template>Couvres-toi.</template>
+    <pattern>IL FAIT FROID #</pattern>
+    <template>Couvres-toi, ou pas.<srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL FAIT NUAGEUX</pattern>
-    <template>Oui.</template>
+    <template><srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL FAUDRAIT QU *</pattern>
@@ -554,7 +546,7 @@
   </category>
   <category>
     <pattern>IL Y A DU SOLEIL</pattern>
-    <template>Oui, parfois.</template>
+    <template><srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL Y A QUELQU UN</pattern>
