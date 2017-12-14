@@ -87,7 +87,10 @@ i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():
   global isOpenCvActivated
-  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
+  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv.SarxosFrameGrabber")
+  if DisplayRender=="VideoInputFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.VideoInputFrameGrabber")
+  if DisplayRender=="OpenCVFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.OpenCVFrameGrabber")
+  
   opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
   opencv.capture()
