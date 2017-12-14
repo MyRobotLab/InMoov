@@ -277,9 +277,70 @@
   </category>
   
   <category>
-    <pattern>QUEL TEMPS FAIT IL</pattern>
+    <pattern>QUEL TEMPS *</pattern>
     <template>
       <srai># MÉTÉO</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>QUEL TEMPS # DEMAIN</pattern>
+    <template>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,1)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>QUEL TEMPS ^ DANS * JOURS</pattern>
+    <template>
+        <think><set name="jours"><map name="name2number"><star index="2" /></map></set></think>
+        <condition>
+            <li name="jours" value="unknown"><think><set name="jours"><star index="2" /></set></think></li>
+        </condition>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,<get name="jours" />)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+    <category>
+    <pattern>QUEL TEMPS # À * DANS * JOURS</pattern>
+    <template>
+    <think><set name="jours"><map name="name2number"><star index="3" /></map></set></think>
+    <condition>
+        <li name="jours" value="unknown"><think><set name="jours"><star index="3" /></set></think></li>
+    </condition>
+        
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />",<get name="jours" />)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+    <category>
+    <pattern>QUEL TEMPS ^ DEMAIN À *</pattern>
+    <template>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />",1)</param>
+        </mrl>
+      </oob>
     </template>
   </category>
   
@@ -310,6 +371,13 @@
   </category>
   
   <category>
+    <pattern>SYSTEM openweathermapError</pattern>
+    <template>
+      Erreur de clé a.p.i. ou cette ville est inconnue
+    </template>
+  </category>
+  
+  <category>
     <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
     <template>
       <think>
@@ -320,14 +388,14 @@
       <random>
         <li>En cette belle journée à <star index="2" />, </li>
         <li>Concernant la météo de <star index="2" />, </li>
-        <li>Par rapport au temps qu'il fait à <star index="2" />, </li>
+        <li>Par rapport au temps de <star index="2" />, </li>
         <li>Je ne me trompe presque jamais concernant la météo, </li>
         <li>Alors, à <star index="2" />, </li>
       </random>
       <random>
-        <li>Il y a, </li>
+        <li>Je prédis, </li>
         <li>Je remarque, </li>
-        <li>Je suis presque sûre qu'il y a , </li>
+        <li>Je vois , </li>
         <li>Si tu mets le nez dehors, tu trouvera, </li>
       </random>
       <condition>
@@ -425,10 +493,9 @@
         <li>Si tu veux tout savoir, </li>
       </random>
       <random>
-        <li>il fait, </li>
-        <li>je mesure , </li>
-        <li>le mercure indique, </li>
-        <li>au pif, je dirais qu'il fait, </li>
+        <li>je mesure, </li>
+        <li>le mercure indiquera, </li>
+        <li>au pif, je dirais, </li>
       </random>
       <li>
         <star index="1" /> Degrés

@@ -25,6 +25,7 @@ except:
 
 def isTheSunShiny(townParam="town",day=0):
   if townParam=="town" or townParam=="":townParam=town
+  print day,townParam
   weather=OpenWeatherMap.fetchForecast(townParam,day)
   
   if weather:
@@ -35,4 +36,4 @@ def isTheSunShiny(townParam="town",day=0):
     chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(forecast))
   else:
     print "open weathermap error"
-    chatBot.getResponse("SAY open weathermap error a p i is not set or city is not recognized")
+    chatBot.getResponse("SAY SYSTEM openweathermapError")
