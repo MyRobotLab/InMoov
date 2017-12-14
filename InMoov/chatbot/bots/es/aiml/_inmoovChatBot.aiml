@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovChatBot.aiml -->
+  <!-- Authors: Gael Langevin, Anthony Gallot -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: moz4r -->
+  <!-- Last modified: Mai 16, 2017 -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+  <!-- initialisaion routine -->
+  <!-- wakeup action -->
+  <!-- météo -->
+  <!-- random action -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+      Hola, esta es mi primera inicialización.
+      Estoy sorprendido por lo que veo.
+      Por favor, necesito información esencial.
+      Te escucho. Cuál es mi nombre
+    </template>
+  </category>
+  
+  <topic name="firstinit">
+    <category>
+      <pattern>#</pattern>
+      <that># Cuál es mi nombre #</that>
+      <template>
+        <set name="questionfirstinit">Si mi nombre es <star /> , responde sí o no</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+
+    <category>
+      <pattern>#</pattern>
+      <that># PUEDO TENER SU PRIMER NOMBRE #</that>
+      <template>
+        <set name="questionfirstinit">Si tu nombre es <star /> , responde sí o no</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+    <category>
+      <pattern># sí #</pattern>
+      <that># Si mi nombre es #</that>
+      <template>
+        <random>
+          <li>Me gusta mucho este nombre , <get name="tmpname" />. </li>
+          <li>Realmente no tenemos la opción de su nombre, diremos que <get name="tmpname" /> es un buen nombre. </li>
+          <li><get name="tmpname" /> ? en serio, lo guardaré toda mi vida. Muy mal. </li>
+          <li><get name="tmpname" /> ? realmente, lo guardaré toda mi vida, entonces. gran. </li>
+        </random>
+	        Necesito saber más sobre ti, te estoy escuchando, PUEDO TENER SU PRIMER NOMBRE ?
+	        <think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+    <category>
+      <pattern># sí #</pattern>
+      <that># SI TU NOMBRE #</that>
+      <template>
+        <random>
+          <li>Ahora nos conocemos, <get name="tmpname" />. Estoy casi movido. </li>
+          <li>Te reconocí en realidad <get name="tmpname" /> . </li>
+          <li><get name="tmpname" /> et <get name="botname" /> , Lo encuentro agradable. </li>
+        </random>
+        <think>
+          <set name="name"><get name="tmpname" /></set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+    <category>
+      <pattern># no #</pattern>
+      <that># Si mi nombre es #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. Cuál es mi nombre ?
+      </template>
+    </category>
+    <category>
+      <pattern># no #</pattern>
+      <that># SI TU NOMBRE #</that>
+      <template>
+        Comenzamos de nuevo. Te escucho. PUEDO TENER SU PRIMER NOMBRE ?
+      </template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># responde sí o no #</that>
+      <template>
+        <random>
+          <li>Por favor, responda las preguntas que estoy formulando, es importante. </li>
+          <li>Repito, porque no entendiste o malentendí. </li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  
+  <!-- wakeup action ( WAKE_UP is globalized )-->
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+    Buenos dias
+      <li>
+         <random>
+          <li>Dormí bien</li>
+          <li>Finalmente me despiertas</li>
+          <li>Estoy operacional</li>
+        </random>
+      </li>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM_SAY_HELLO</pattern>
+    <template>
+        Buenos dias
+    </template>
+  </category>
+    <category>
+    <pattern>DESPIÉRTATE</pattern>
+    <template>
+      <srai>WAKE_UP</srai>
+    </template>
+  </category>
+      <category>
+    <pattern>WAKE UP</pattern>
+    <template>
+      <srai>WAKE_UP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TOME EN SUEÑO</pattern>
+    <template>
+      <srai>DUERMES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DUERMES</pattern>
+    <template>
+      <think>
+        <set name="topic">SLEEPMODE</set>
+      </think>	
+			Quieres que duerma o no
+		</template>
+  </category>
+  
+  <topic name="SLEEPMODE">
+    <category>
+      <pattern># sí #</pattern>
+      <that># Quieres que duerma #</that>
+      <template>Pausado.
+			<think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># no #</pattern>
+      <that># Quieres que duerma #</that>
+      <template>
+			Cancele el temporizador de reposo. 
+			<think><set name="topic"> default</set></think></template>
+    </category>
+    <category>
+      <pattern>#</pattern>
+      <that># Quieres que duerma #</that>
+      <template>
+        <srai>DUERMES</srai>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>EXTINCION</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+			Quieres sí o no que desactivo
+		</template>
+  </category>
+  <topic name="SHUT_DOWN">
+    <category>
+      <pattern># sí #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdown()</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+    <category>
+      <pattern># no #</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>Cancelar el cierre del sistema. 
+			<think><set name="topic">default</set></think></template>
+    </category>  
+    <category>
+      <pattern>#</pattern>
+      <that># Quieres sí o no que desactivo #</that>
+      <template>
+           <think>
+          <set name="topic">default</set>
+        </think>
+        <srai>EXTINCION</srai>
+      </template>
+    </category>
+  </topic>
+  
+  <!-- end wakeup action -->
+  
+  <!-- météo -->
+  
+  <!-- default town -->
+  
+  
+  <category>
+    <pattern># TIEMPO</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+
+  <category>
+    <pattern>CUÁL ES EL clima A *</pattern>
+    <template>
+      <srai>TIEMPO A <star /></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern># TIEMPO A *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+    <template>
+      <think>
+        <set name="meteo">
+          <star index="3" />
+        </set>
+      </think>
+      <random>
+        <li>En cette belle journée à <star index="2" />, </li>
+        <li>Concernant la météo de <star index="2" />, </li>
+        <li>Ce que je peux te dire, par rapport au temps qu'il fait en ce moment à <star index="2" />, </li>
+        <li>Je ne me trompe jamais concernant la météo, sauf si le vent à tourné, </li>
+        <li>Alors, à <star index="2" />, </li>
+      </random>
+      <random>
+        <li>Il y a, </li>
+        <li>Je remarque, </li>
+        <li>Je suis presque sûre qu'il y a , </li>
+        <li>Si tu mets le nez dehors, tu trouvera, </li>
+      </random>
+      <condition>
+        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain. </li>
+        <li name="meteo" value="200">De l'Orage avec pluie légère. </li>
+        <li name="meteo" value="201">De l'Orage avec pluie. </li>
+        <li name="meteo" value="202">De l'Orage avec de fortes pluies. </li>
+        <li name="meteo" value="210">De l'Orage léger. </li>
+        <li name="meteo" value="211">De l'Orage. </li>
+        <li name="meteo" value="212">Un très gros Orage. </li>
+        <li name="meteo" value="221">De l'Orage énomre. </li>
+        <li name="meteo" value="230">De l'Orage avec léger crachin. </li>
+        <li name="meteo" value="231">De l'Orage avec du crachin. </li>
+        <li name="meteo" value="232">De l'Orage avec beaucoup de crachin. </li>
+        <li name="meteo" value="300">du crachin léger. </li>
+        <li name="meteo" value="301">du crachin. </li>
+        <li name="meteo" value="302">beaucoup de crachin. </li>
+        <li name="meteo" value="310">de la Pluie légère. </li>
+        <li name="meteo" value="311">de la Pluie légère. </li>
+        <li name="meteo" value="312">de la Pluie intense. </li>
+        <li name="meteo" value="313">de la Pluie intense et crachin. </li>
+        <li name="meteo" value="314">de la Pluie intense. </li>
+        <li name="meteo" value="321">du crachin intense. </li>
+        <li name="meteo" value="500">de la Pluie légère. </li>
+        <li name="meteo" value="501">de la Pluie modérée. </li>
+        <li name="meteo" value="502">de la Pluie intense. </li>
+        <li name="meteo" value="503">Très forte pluie. </li>
+        <li name="meteo" value="504">de la Pluie extrême. </li>
+        <li name="meteo" value="511">de la Pluie verglaçante. </li>
+        <li name="meteo" value="520">de la Pluie modérée. </li>
+        <li name="meteo" value="521">de la Pluie intense. </li>
+        <li name="meteo" value="522">de la Pluie intense. </li>
+        <li name="meteo" value="531">de la Pluie avec innondations. </li>
+        <li name="meteo" value="600">de la neige légère. </li>
+        <li name="meteo" value="601">de la neige. </li>
+        <li name="meteo" value="602">beaucoup de neige. </li>
+        <li name="meteo" value="611">de la neige fondue. </li>
+        <li name="meteo" value="612">de la Pluie et neige. </li>
+        <li name="meteo" value="615">de la Pluie et neige. </li>
+        <li name="meteo" value="616">de la Pluie et neige. </li>
+        <li name="meteo" value="620">de la Pluie légère et neige. </li>
+        <li name="meteo" value="621">beaucoup de neige. </li>
+        <li name="meteo" value="622">énormément de neige. </li>
+        <li name="meteo" value="701">du brouillard. </li>
+        <li name="meteo" value="711">du brouillard. </li>
+        <li name="meteo" value="721">brume. </li>
+        <li name="meteo" value="731">Sable, tourbillons de poussière. </li>
+        <li name="meteo" value="741">du brouillard. </li>
+        <li name="meteo" value="751">Sable, tourbillons de poussière. </li>
+        <li name="meteo" value="761">poussière. </li>
+        <li name="meteo" value="762">cendre volcanique. </li>
+        <li name="meteo" value="771">Squalls. </li>
+        <li name="meteo" value="781">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
+        <li name="meteo" value="800">
+          <random>
+            <li>un magnifique ciel dégagé! </li>
+            <li>Pas un seul nuage, </li>
+            <li>rien, rien qu'un beau ciel bleu! </li>
+            <li>du soleil, ça sent les vacances, </li>
+            <li>du soleil, attention au pla ça fond, </li>
+            <li>du soleil, attention à l'a. b. s. ça jauni, </li>
+          </random>
+        </li>
+        <li name="meteo" value="801">Quelques nuages. </li>
+        <li name="meteo" value="802">des nuages ​​dispersés. </li>
+        <li name="meteo" value="803">des nuages éparses. </li>
+        <li name="meteo" value="804">des nuages ​​couverts. </li>
+        <li name="meteo" value="900">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
+        <li name="meteo" value="901">tempête tropicale. </li>
+        <li name="meteo" value="902">un ouragan, je ne rigole pas, reste à la maison. </li>
+        <li name="meteo" value="903">très froid. </li>
+        <li name="meteo" value="904">la canicule, pense à prendre de l'eau! </li>
+        <li name="meteo" value="905">du vent. </li>
+        <li name="meteo" value="906">de la grêle. </li>
+        <li name="meteo" value="951">calme. </li>
+        <li name="meteo" value="952">une brise légère. </li>
+        <li name="meteo" value="953">une petite brise. </li>
+        <li name="meteo" value="954">une Brise modérée. </li>
+        <li name="meteo" value="955">une Brise fraîche. </li>
+        <li name="meteo" value="956">une Brise asez forte. </li>
+        <li name="meteo" value="957">des coup de vent. </li>
+        <li name="meteo" value="958">des coup de vent. </li>
+        <li name="meteo" value="959">énormément de vent! </li>
+        <li name="meteo" value="960">De l'Orage. </li>
+        <li name="meteo" value="961">une tempête violente. </li>
+        <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison. </li>
+        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> .. </li>
+      </condition>
+      <random>
+        <li>Concernant la température, </li>
+        <li>Si je regarde mon thermomètre, oh ou il est encore. oups , </li>
+        <li>D'après quelques données issues de senseurs thermiques, </li>
+        <li>Autre information, </li>
+        <li>J'alais oublier, </li>
+        <li>Si tu veux tout savoir, </li>
+      </random>
+      <random>
+        <li>il fait, </li>
+        <li>je mesure , </li>
+        <li>le mercure indique, </li>
+        <li>au pif, je dirais qu'il fait, </li>
+      </random>
+      <li>
+        <star index="1" /> Degrés
+                </li>
+      <random>
+        <li>Exactement! </li>
+        <li>Précisément. </li>
+        <li>A peu près. </li>
+        <li>A la louche. </li>
+        <li>Ou pas, j'ai le droit de faire des erreurs aussi! </li>
+      </random>
+    </template>
+  </category>
+  
+    <!-- end météo -->
+   
+  
+  
+  <!-- random & to sort -->  
+  
+	<category>
+		<pattern>TEST AUDIO</pattern>
+		<template>
+			<oob>
+	        	<mrl> 
+	        		<service>AudioPlayer</service>
+	            	<method>play</method> 
+	            	<param>InMoov\system\sounds\startupsound.mp3</param>
+	         	</mrl>
+	    	</oob>
+	    </template>
+	</category>
+  
+  <category>
+    <pattern>RANDOM</pattern>
+    <template>
+      <random>
+        <li><srai>à PROPOS DE STAR WARS</srai></li>
+        <li><srai>COMBIEN DE DOIGTS AS tu</srai></li>
+        <li><srai>MAINS EN L AIR</srai></li>
+        <li><srai>QUELLE HEURE IL EST</srai></li>
+        <li><srai>Météo</srai></li>
+        <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
+        <li>sa me gratte. je dois avoir une puce </li>
+        <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
+        <li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
+        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
+        <li>Mais que se passe-t-il </li>
+        <li>je m'ennuie un petit peu</li>
+        <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
+        <li>j'ai entendu un bruit étrange</li>
+        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger. </li>
+        <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
+        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi. </li>
+        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
+        <li>Oh là là! </li>
+        <li>Que c'est beau! </li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL EST LE SUJET</pattern>
+    <template>LE SUJET EST <get name="topic" /></template>
+  </category>
+</aiml>

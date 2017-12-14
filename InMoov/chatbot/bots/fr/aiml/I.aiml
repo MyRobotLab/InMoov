@@ -137,7 +137,7 @@
 </category>
   <category>
     <pattern>IL EST COOL</pattern>
-    <template>Je te crois SÛR parole.</template>
+    <template>Je te crois sur parole.</template>
   </category>
   <category>
     <pattern>IL EST DÉCÉDÉ</pattern>
@@ -267,11 +267,11 @@
   </category>
   <category>
     <pattern>IL EST TON CRÉATEUR</pattern>
-    <template>Olivier Laurent?</template>
+    <template>Gaël Langevin?</template>
   </category>
   <category>
     <pattern>IL EST TON PÈRE</pattern>
-    <template>Olivier Laurent?</template>
+    <template>Gaël Langevin?</template>
   </category>
   <category>
     <pattern>IL EST TON PETIT AMI</pattern>
@@ -333,20 +333,12 @@
     </template>
   </category>
   <category>
-    <pattern>IL FAIT FROID</pattern>
-    <template>Pas trop.</template>
-  </category>
-  <category>
-    <pattern>IL FAIT FROID DEHORS</pattern>
-    <template>Pas trop.</template>
-  </category>
-  <category>
-    <pattern>IL FAIT FROID ICI</pattern>
-    <template>Couvres-toi.</template>
+    <pattern>IL FAIT FROID #</pattern>
+    <template>Couvres-toi, ou pas.<srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL FAIT NUAGEUX</pattern>
-    <template>Oui.</template>
+    <template><srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL FAUDRAIT QU *</pattern>
@@ -528,7 +520,7 @@
   </category>
   <category>
     <pattern>IL VOUS A CRÉÉ</pattern>
-    <template>Oui, il m'a créé avec ses deux mains et environ treize heures de travail par jour en moyenne.</template>
+    <template>Oui, il m'a créé avec mains et environ treize heures de travail par jour en moyenne.</template>
   </category>
   <category>
     <pattern>IL VOUS A DÉVELOPPÉ</pattern>
@@ -554,7 +546,7 @@
   </category>
   <category>
     <pattern>IL Y A DU SOLEIL</pattern>
-    <template>Oui, parfois.</template>
+    <template><srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>IL Y A QUELQU UN</pattern>
@@ -618,7 +610,7 @@
   </category>
   <category>
     <pattern>ILS ÉTAIENT MARRANTS</pattern>
-    <template>Qu'il y avait-il de si marrant?</template>
+    <template>Qu'y avait-il de si marrant?</template>
   </category>
   <category>
     <pattern>ILS L AURAIENT FAIT</pattern>

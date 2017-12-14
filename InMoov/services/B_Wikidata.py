@@ -22,13 +22,15 @@ else:
 #                 functions called by the chatbot
 # ##############################################################################
 if isChatbotActivated:
-  chatBot.setPredicate("default","articles","")
-  chatBot.setPredicate("default","courant","")
+  chatBot.setPredicate(chatBot.currentUserName,"articles","")
+  chatBot.setPredicate(chatBot.currentUserName,"courant","")
 def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du sujet (query)
   #Light(1,0,0)
   if query!="":
-    if articles!="":
-      query=articles+" "+query
+    if articles=="unknown" or articles=="":
+      articles=""
+      chatBot.setPredicate(chatBot.currentUserName,"articles","")
+    else:query=articles+" "+query
 
     query = unicode(query,'utf-8')# on force le format de police UTF-8 pour prendre en charge les accents
     if query[1]== "\'" : # Si le sujet contient un apostrophe , on efface tout ce qui est avant ! ( "l'ete" -> "ete")
@@ -89,7 +91,7 @@ def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du suj
   else:
     chatBot.getResponse(ReturnNok+query)
     
-def getProperty(query, what, ReturnOk, ReturnNok): # retourne la valeur contenue dans la propriete demandee (what)
+def getProperty(queryPart, query, whatPart, what, ReturnOk, ReturnNok): # retourne la valeur contenue dans la propriete demandee (what)
   #Light(1,0,0)
   query = unicode(query,'utf-8')
   what = unicode(what,'utf-8')
@@ -114,7 +116,7 @@ def getProperty(query, what, ReturnOk, ReturnNok): # retourne la valeur contenue
   try:wikiAnswer=wdf.getData(query,ID)
   except:wikiAnswer = "Not Found !"  
   
-  answer = ( what +" de " + query + " est " + wikiAnswer)
+  answer = ( whatPart + what + " " + queryPart + query + " est " + wikiAnswer)
   print ID,answer,what,query,wikiAnswer
   if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") : # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
     chatBot.getResponse(ReturnNok) # on balance au service apprentissage

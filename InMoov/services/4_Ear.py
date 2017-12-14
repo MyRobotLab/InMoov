@@ -20,7 +20,7 @@ ForceMicroOnIfSleeping=True
 MagicCommandToWakeUp="wake up"
 try:
   ForceMicroOnIfSleeping=ThisServicePartConfig.getboolean('MAIN', 'ForceMicroOnIfSleeping')
-  MagicCommandToWakeUp=ThisServicePartConfig.get('MAIN', 'MagicCommandToWakeUp')
+  MagicCommandToWakeUp=unicode(ThisServicePartConfig.get('MAIN', 'MagicCommandToWakeUp'),'utf-8')
 except:
   pass
 
@@ -61,8 +61,10 @@ def onRecognized(text):
     text=text.replace("'", " ").replace("-", " ")
     if DEBUG==1:print "onRecognized : ",text,RobotneedUpdate
     if isChatbotActivated and i01.RobotIsStarted:
-      if not i01.RobotIsSleeping or text==MagicCommandToWakeUp:chatBot.getResponse(text)
-      if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:humanDetected()
+      if i01.RobotIsSleeping and unicode(text,'utf-8')==MagicCommandToWakeUp:sleepModeWakeUp()        
+      if not i01.RobotIsSleeping and text!=MagicCommandToWakeUp:
+        chatBot.getResponse(text)
+        humanDetected()
   
 # ##############################################################################
 # EAR RELATED FUNCTIONS

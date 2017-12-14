@@ -12,7 +12,7 @@ ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 setUnits=ThisServicePartConfig.get('MAIN', 'setUnits')
 apikey=ThisServicePartConfig.get('MAIN', 'apikey')
-town=ThisServicePartConfig.get('MAIN', 'town')
+town=ThisServicePartConfig.get('MAIN', 'town').replace('"',"")
 
 
 OpenWeatherMap=Runtime.createAndStart("OpenWeatherMap", "OpenWeatherMap")
@@ -22,31 +22,18 @@ try:
 except:
   pass
 
-  
-global isOpenWeatherMapOk
-isOpenWeatherMapOk=0
 
-def getRawWeather(townParam):
-  global isOpenWeatherMapOk
-  r=["bad weather api key","1000","bad weather api key","1000"]
-  try:
-  	r=OpenWeatherMap.fetchRaw(townParam)
-  	isOpenWeatherMapOk=1
-  except:
-    r=["bad weather api key","1000","bad weather api key","1000"]
-    pass
-  return r
+def isTheSunShiny(townParam="town",day=0):
+  if townParam=="town" or townParam=="":townParam=town
+  print day,townParam
+  weather=OpenWeatherMap.fetchForecast(townParam,day)
   
-def isTheSunShiny(townParam="town"):
-  if townParam=="town":townParam=town
-  weather=getRawWeather(townParam)
-  
-  if weather[1]!=1000 and isChatbotActivated and weather[1] and isOpenWeatherMapOk:
+  if weather:
     print weather[1]
-    todayforecast=weather[3].decode("utf-8")
+    forecast=weather[3].decode("utf-8")
     
-    print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast)
-    chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(todayforecast))
+    print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(forecast)
+    chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(forecast))
   else:
-    print "open weathermap A. P. I. error"
-    chatBot.getResponse("SAY open weathermap A. P. I. error")
+    print "open weathermap error"
+    chatBot.getResponse("SAY SYSTEM openweathermapError")

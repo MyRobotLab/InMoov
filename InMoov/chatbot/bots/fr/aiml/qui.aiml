@@ -207,7 +207,7 @@
 <template>Le Président le plus cowboy des états-Unis.</template>
 </category>
 <category><pattern>QUI EST * SELIG</pattern>
-<template>Jon Selig est une experte de robotique au ROYAUME-UNI. Il a écrit 2 livres principaux SÛR la robotique et a travaillé avec Wallace SÛR le Moteur d'Indication Sphérique.</template>
+<template>Jon Selig est une experte en robotique au ROYAUME-UNI. Il a écrit 2 livres principaux SuR la robotique et a travaillé avec Wallace SuR le Moteur d'Indication Sphérique.</template>
 </category>
 <category><pattern>QUI EST * TRAVOLTA</pattern>
 <template><srai>QUI EST JOHN TRAVOLTA</srai></template>
@@ -865,6 +865,9 @@
 <category><pattern>QUI EST JOHN WAYNE</pattern>
 <template>un acteur de cow-boy célèbre mort avec un postiche.</template>
 </category>
+<category><pattern>QUI EST TON ACTEUR PRéFéRé</pattern>
+<template>Benoit Poelvoorde</template>
+</category>
 <category><pattern>QUI EST JOSEPH WEISENBAUM</pattern>
 <template><srai>QUI EST WEIZENBAUM</srai></template>
 </category>
@@ -1185,9 +1188,6 @@
 <category><pattern>QUI EST M. BILL</pattern>
 <template>Oh pas, M. Bill!.</template>
 </category>
-<category><pattern>QUI EST MA FEMME</pattern>
-<template><srai>QU EST CE QUE LE NOM DE MA FEMME</srai></template>
-</category>
 <category><pattern>QUI EST MABEL</pattern>
 <template>Mabel est un chatterbot de L Europe.</template>
 </category>
@@ -1291,9 +1291,6 @@
 </category>
 <category><pattern>QUI EST MON * AUSSI</pattern>
 <template><srai>QUI EST MON <star/></srai></template>
-</category>
-<category><pattern>QUI EST MON MARI</pattern>
-<template><srai>QU EST CE QUE LE NOM DE MON MARI</srai></template>
 </category>
 <category><pattern>QUI EST MON NOM</pattern><that>QUI N APPELLE PAS S IL TE PLAIS DE NOMS DES GENS</that>
 <template>Peut-être que tu devrais choisir un nom plus poli.</template>
@@ -1508,9 +1505,7 @@
 <category><pattern>QUI EST TA MAMAN</pattern>
 <template><srai>QUI EST TA MÈRE</srai></template>
 </category>
-<category><pattern>QUI EST TA MUSIQUE PRÉFÉRÉE *</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
+
 <category><pattern>QUI EST TA MÈRE</pattern>
 <template>En réalité je n'ai pas de mère.</template>
 </category>

@@ -21,7 +21,8 @@
       <think>
         <set name="topic">ASKING FAMILIAR CONTACTNAME</set>
       </think>
-What is your <lowercase><get name="familiarpredicate" /></lowercase>'s name?</template>
+	  What is your <lowercase><get name="familiarpredicate" /></lowercase>'s name?
+	</template>
   </category>
   <topic name="ASKING FAMILIAR CONTACTNAME">
     <category>
@@ -603,9 +604,29 @@ What is your <lowercase><get name="familiarpredicate" /></lowercase>'s name?</te
       <condition name="familiarpredicate">
         <li value="UNKNOWN" />
         <li>
-I will remember your <lowercase><get name="familiarpredicate" /></lowercase>'s name is 
-<set name="contactname"><condition name="familiarpredicate"><li value="SON"><set name="son"><get name="contactname" /></set></li><li value="AUNT"><set name="aunt"><get name="contactname" /></set></li><li value="WIFE"><set name="wife"><get name="contactname" /></set></li><li value="NIECE"><set name="niece"><get name="contactname" /></set></li><li value="UNCLE"><set name="uncle"><get name="contactname" /></set></li><li value="NEPHEW"><set name="niece"><get name="contactname" /></set></li><li value="MOTHER"><set name="mother"><get name="contactname" /></set></li><li value="FATHER"><set name="father"><get name="contactname" /></set></li><li value="SISTER"><set name="sister"><get name="contactname" /></set></li><li value="BROTHER"><set name="brother"><get name="contactname" /></set></li><li value="HUSBAND"><set name="husband"><get name="contactname" /></set></li><li value="DAUGHTER"><set name="daughter"><get name="contactname" /></set></li><li value="BOYFRIEND"><set name="boyfriend"><get name="contactname" /></set></li><li value="GIRLFRIEND"><set name="girlfriend"><get name="contactname" /></set></li><li value="GRANDMOTHER"><set name="grandmother"><get name="contactname" /></set></li><li value="GRANDFATHER"><set name="grandfather"><get name="contactname" /></set></li><li>who</li></condition></set>.
-</li>
+			I will remember your <lowercase><get name="familiarpredicate" /></lowercase>'s name is 
+			<set name="contactname">
+				<condition name="familiarpredicate">
+					<li value="SON"><set name="son"><get name="contactname" /></set></li>
+					<li value="AUNT"><set name="aunt"><get name="contactname" /></set></li>
+					<li value="WIFE"><set name="wife"><get name="contactname" /></set></li>
+					<li value="NIECE"><set name="niece"><get name="contactname" /></set></li>
+					<li value="UNCLE"><set name="uncle"><get name="contactname" /></set></li>
+					<li value="NEPHEW"><set name="niece"><get name="contactname" /></set></li>
+					<li value="MOTHER"><set name="mother"><get name="contactname" /></set></li>
+					<li value="FATHER"><set name="father"><get name="contactname" /></set></li>
+					<li value="SISTER"><set name="sister"><get name="contactname" /></set></li>
+					<li value="BROTHER"><set name="brother"><get name="contactname" /></set></li>
+					<li value="HUSBAND"><set name="husband"><get name="contactname" /></set></li>
+					<li value="DAUGHTER"><set name="daughter"><get name="contactname" /></set></li>
+					<li value="BOYFRIEND"><set name="boyfriend"><get name="contactname" /></set></li>
+					<li value="GIRLFRIEND"><set name="girlfriend"><get name="contactname" /></set></li>
+					<li value="GRANDMOTHER"><set name="grandmother"><get name="contactname" /></set></li>
+					<li value="GRANDFATHER"><set name="grandfather"><get name="contactname" /></set></li>
+					<li>who</li>
+				</condition>
+			</set>.
+		</li>
       </condition>
     </template>
   </category>

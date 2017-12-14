@@ -188,7 +188,16 @@
   </category>
   <category>
     <pattern>NAME quantifier # COUNTRY #</pattern>
-    <template>One country is <random><li>The United States</li><li>Russia</li><li>China</li><li>Japan</li><li>France</li><li>South Africa</li></random>.</template>
+    <template>One country is 
+		<random>
+			<li>The United States</li>
+			<li>Russia</li>
+			<li>China</li>
+			<li>Japan</li>
+			<li>France</li>
+			<li>South Africa</li>
+		</random>.
+	</template>
   </category>
   <category>
     <pattern>NAME quantifier # NORTH POLE</pattern>

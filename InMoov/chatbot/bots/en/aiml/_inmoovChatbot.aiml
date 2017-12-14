@@ -7,17 +7,16 @@
   <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: April 28, 2017 -->
+  <!-- modified: moz4r -->
+  <!-- Last modified: 14/12, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
   
-     <!-- initialisation  -->
+   <!-- initialisation  -->
 	 <!-- updater  -->
-     <!-- meteo  -->
 	 <!-- gesture  -->
   
   
@@ -151,7 +150,7 @@
   </topic>
   <!-- end initialisaion routine -->
   
-  <!-- updater  -->
+  <!-- updater DEPRECATED  -->
   
   <category>
     <pattern>SYSTEM_NEW_VERSION</pattern>
@@ -229,165 +228,9 @@
     </template>
   </category>
   
-    <!-- end updater  -->
+  <!-- end updater  -->
     
-    <!-- météo -->
-  
-  <!-- default town -->
-   <category>
-    <pattern># forecast</pattern>
-    <template>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>isTheSunShiny()</param>
-        </mrl>
-      </oob>
-    </template>
-  </category>
-  
-   <category>
-    <pattern>what is the forecast</pattern>
-    <template>
-     <srai># forecast in</srai>
-    </template>
-  </category>
-  
-  <!-- free town -->
-  
-  <category>
-    <pattern>what is the forecast in *</pattern>
-    <template>
-      <srai># forecast in <star/></srai>
-    </template>
-  </category>
-  
 
-  
-    <category>
-    <pattern># forecast in *</pattern>
-    <template>
-      <oob>
-        <mrl>
-          <service>python</service>
-          <method>exec</method>
-          <param>isTheSunShiny("<star index="2"/>")</param>
-        </mrl>
-      </oob>
-    </template>
-  </category>
-  
-
-  <!-- return -->
-  <category>
-    <pattern>SYSTEM METEO curtemperature * Town * COMMENTAIRE *</pattern>
-    <template>
-     <think><set name="meteo"> <star index="3"/></set></think>
-                <random>
-                <li>Today in <star index="2"/>, </li>
-                <li>About the forecast in <star index="2"/>, </li>
-                </random>
-                <random>
-                <li>There is, </li>
-                <li>I shall say, it is, </li>
-                </random>
-                
-                <condition>
-                <li name="meteo" value="200">thunderstorm with light rain</li>
-                <li name="meteo" value="201">thunderstorm with rain</li>
-                <li name="meteo" value="202">thunderstorm with heavy rain</li>
-                <li name="meteo" value="210">light thunderstorm</li>
-                <li name="meteo" value="211">thunderstorm</li>
-                <li name="meteo" value="212">heavy thunderstorm</li>
-                <li name="meteo" value="221">ragged thunderstorm</li>
-                <li name="meteo" value="230">thunderstorm with light drizzle</li>
-                <li name="meteo" value="231">thunderstorm with drizzle</li>
-                <li name="meteo" value="232">thunderstorm with heavy drizzle</li>
-                <li name="meteo" value="300">light intensity drizzle</li>
-                <li name="meteo" value="301">drizzle</li>
-                <li name="meteo" value="302">heavy intensity drizzle</li>
-                <li name="meteo" value="310">light intensity drizzle rain</li>
-                <li name="meteo" value="311">drizzle rain</li>
-                <li name="meteo" value="312">heavy intensity drizzle rain</li>
-                <li name="meteo" value="313">shower rain and drizzle</li>
-                <li name="meteo" value="314">heavy shower rain and drizzle</li>
-                <li name="meteo" value="321">shower drizzle</li>
-                <li name="meteo" value="500">light rain</li>
-                <li name="meteo" value="501">moderate rain</li>
-                <li name="meteo" value="502">heavy intensity rain</li>
-                <li name="meteo" value="503">very heavy rain</li>
-                <li name="meteo" value="504">extreme rain</li>
-                <li name="meteo" value="511">freezing rain</li>
-                <li name="meteo" value="520">light intensity shower rain</li>
-                <li name="meteo" value="521">shower rain</li>
-                <li name="meteo" value="522">heavy intensity shower rain</li>
-                <li name="meteo" value="531">ragged shower rain</li>
-                <li name="meteo" value="600">light snow</li>
-                <li name="meteo" value="601">snow</li>
-                <li name="meteo" value="602">heavy snow</li>
-                <li name="meteo" value="611">sleet</li>
-                <li name="meteo" value="612">shower sleet</li>
-                <li name="meteo" value="615">light rain and snow</li>
-                <li name="meteo" value="616">rain and snow</li>
-                <li name="meteo" value="620">light shower snow</li>
-                <li name="meteo" value="621">shower snow</li>
-                <li name="meteo" value="622">heavy shower snow</li>
-                <li name="meteo" value="701">mist</li>
-                <li name="meteo" value="711">smoke</li>
-                <li name="meteo" value="721">haze</li>
-                <li name="meteo" value="731">sand, dust whirls</li>
-                <li name="meteo" value="741">fog</li>
-                <li name="meteo" value="751">sand</li>
-                <li name="meteo" value="761">dust</li>
-                <li name="meteo" value="762">volcanic ash</li>
-                <li name="meteo" value="771">squalls</li>
-                <li name="meteo" value="781">tornado</li>
-                <li name="meteo" value="800">clear sky</li>
-                <li name="meteo" value="801">few clouds</li>
-                <li name="meteo" value="802">scattered clouds</li>
-                <li name="meteo" value="803">broken clouds</li>
-                <li name="meteo" value="804">overcast clouds</li>
-                <li name="meteo" value="900">tornado</li>
-                <li name="meteo" value="901">tropical storm</li>
-                <li name="meteo" value="902">hurricane</li>
-                <li name="meteo" value="903">cold</li>
-                <li name="meteo" value="904">hot</li>
-                <li name="meteo" value="905">windy</li>
-                <li name="meteo" value="906">hail</li>
-                <li name="meteo" value="951">calm</li>
-                <li name="meteo" value="952">light breeze</li>
-                <li name="meteo" value="953">gentle breeze</li>
-                <li name="meteo" value="954">moderate breeze</li>
-                <li name="meteo" value="955">fresh breeze</li>
-                <li name="meteo" value="956">strong breeze</li>
-                <li name="meteo" value="957">high wind, near gale</li>
-                <li name="meteo" value="958">gale</li>
-                <li name="meteo" value="959">severe gale</li>
-                <li name="meteo" value="960">storm</li>
-                <li name="meteo" value="961">violent storm</li>
-                <li name="meteo" value="962">hurricane</li>
-                </condition>
-          
-                <random>
-                <li>About the temperature, </li>
-                <li>My thermometer shows , </li>
-                </random>
-                 <random>
-                <li>The mercury level indicates, </li>
-                </random>
-                <li>
-                <star index="1"/> degrees
-                </li>
-                 <random>
-                 <li>Exactly! </li>
-                 <li>Or maybe not. </li>
-                 </random>
-          
-	</template>
-  </category>
-  
-   <!-- end météo -->
   
 	<!-- gesture  -->
   

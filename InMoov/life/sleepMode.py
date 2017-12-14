@@ -32,19 +32,20 @@ def sleepModeWakeUp():
     else: welcomeMessage()
     #optional switchon nervoboard
     switchOnAllNervo()
-    #head up
-    if isHeadActivated:
-      head.neck.setVelocity(50)
-      head.neck.rest()
     if isEyeLidsActivated:
       eyelids.eyelidleft.moveTo(0)
       eyelids.eyelidright.moveTo(0)
       eyelids.autoBlink(True)
+          #head up
+    if isHeadActivated:
+      head.neck.setVelocity(50)
+      head.neck.moveToBlocking(head.neck.getRest())
   else:
     if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
-  i01.RobotIsSleeping=0
+  i01.RobotIsSleeping=False
   if isNeopixelActivated:i01.stopNeopixelAnimation()
+  fullspeed()
 
 
 def sleepModeSleep():
@@ -52,7 +53,10 @@ def sleepModeSleep():
   stopTracking()
   ImageDisplay.exitFS()
   ImageDisplay.closeAll()
-    
+  i01.RobotIsSleeping=True
+  i01.halfSpeed()
+  rest()
+  i01.waitTargetPos()
   #display sleeping robot on screen
   displayPic(RuningFolder+'/system/pictures/sleeping_2_1024-600.jpg')
   #head down
@@ -63,14 +67,13 @@ def sleepModeSleep():
   if isHeadActivated:
     head.neck.setVelocity(60)
     head.neck.moveTo(10)
-    sleep(5)
+  i01.waitTargetPos()
   i01.disable()
   switchOffAllNervo()
   if isNeopixelActivated:i01.stopNeopixelAnimation()
   sleep(2)
   if isNeopixelActivated:i01.setNeopixelAnimation("Color Wipe", 10, 12, 12, 50)
   
-  i01.RobotIsSleeping=1
   #restart pir poling
   if isPirActivated:
     PirControlerArduino.enablePin(PirPin,1)
@@ -85,7 +88,7 @@ def welcomeMessage():
       chatBot.getResponse("WAKE_UP")
   else:
     talk(lang_ready)
-  i01.RobotIsStarted=1
+  i01.RobotIsStarted=True
 
 global WaitXsecondBeforeRelaunchTracking
 WaitXsecondBeforeRelaunchTracking=-10

@@ -7,18 +7,6 @@
     <template>ce fut agréable pour moi aussi, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>* NON</pattern>
-    <that>PLUS TARD ALORS</that>
-    <template>
-      <srai>AU REVOIR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* TU VEUX</pattern>
-    <that>QUE PEUT ON FAIRE ALORS</that>
-    <template>Pour le moment je ne sais que discuter?</template>
-  </category>
-  <category>
     <pattern>* UNE COÏNCIDENCE</pattern>
     <template>
       <random>
@@ -132,10 +120,6 @@
     <template>As tu oublié quelque chose?</template>
   </category>
   <category>
-    <pattern>ANACHIST COOKBOOK</pattern>
-    <template>je ne l'ai pas lu, çA parle de quoi, <set name="that">le livre de cuisine Anarchiste</set>?</template>
-  </category>
-  <category>
     <pattern>ANYWAYS</pattern>
     <template>Tu a l'air ennuye.</template>
   </category>
@@ -183,11 +167,6 @@
   <category>
     <pattern>ARRÊTE DE PARLER</pattern>
     <template>surfe ailleurs alors.</template>
-  </category>
-  <category>
-    <pattern>ARTHUR C CLARKE</pattern>
-    <template>
-      <set name="il">Clarke</set> est un auteur brillant. APRèS tout, il a concu HAL.</template>
   </category>
   <category>
     <pattern>AS TU DÉJÀ EU UN VIRUS</pattern>
@@ -413,10 +392,6 @@
     <template>bien, merci, <get name="name" />. Tu es bizarre aussi.</template>
   </category>
   <category>
-    <pattern>BLADE RUNNER</pattern>
-    <template>Philip K. Dick a écrit l'histoire SÛR lequel le film est basé.</template>
-  </category>
-  <category>
     <pattern>BLANC</pattern>
     <template>qu'as tu qui est blanc?</template>
   </category>
@@ -540,7 +515,7 @@
   </category>
   <category>
     <pattern>CE QUI * VIT DANS</pattern>
-    <template>je vit dans la Californie. Ou vis tu?</template>
+    <template>je vis dans la Californie. Ou vis tu?</template>
   </category>
   <category>
     <pattern>CE QUI D AUTRE * FAIS TU CONNAIT</pattern>
@@ -752,11 +727,7 @@
   <category>
     <pattern>CONNAIS TU LA VIE</pattern>
     <template>Je connais la vie virtuelle d'un avatar</template>
-  </category>
-  <category>
-    <pattern>CONNAIS TU MA COULEUR PRÉFÉRÉE</pattern>
-    <template>n'est pas Cela <get name="favcolor" />? <think><set name="that">la couleur favorite</set></think></template>
-  </category>
+  </category> 
   <category>
     <pattern>CONNAIS TU MON ADRESSE</pattern>
     <template>Non, quelle est ton adresse?</template>
@@ -1507,7 +1478,7 @@
     <template>Non</template>
   </category>
   <category>
-    <pattern>EST * TA COULEUR PRÉFÉRÉE</pattern>
+    <pattern>EST CE QUE * EST TA COULEUR PRÉFÉRÉE</pattern>
     <template>Ma couleur préfèree est <bot name="favoritecolor" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BLEU TON COULEUR PRÉFÈREE</set></set></think></template>
   </category>
   <category>
@@ -1563,8 +1534,8 @@
     <template>
       <random>
         <li>Cela signifie-t-il que tu es d'accord? </li>
-        <li>Quelle est ta couleur préfèree? </li>
-        <li>Quel est ton film préfère? </li>
+        <li>Quelle est ta couleur préférée? </li>
+        <li>Quel est ton film préféré? </li>
         <li>c'est la tout ce que tu veux me dire? </li>
         <li>Heureux de l'entendre, <get name="name" />. </li>
       </random>
@@ -1636,10 +1607,6 @@
   <category>
     <pattern>FINALEMENT</pattern>
     <template>Enfin.</template>
-  </category>
-  <category>
-    <pattern>FRANCK HERBERT</pattern>
-    <template>je pense que Dune est une histoire excellente. As tu vu le film?</template>
   </category>
   <category>
     <pattern>FRANÇAIS</pattern>
@@ -1944,10 +1911,6 @@
     <template>Veux tu en savoir plus?</template>
   </category>
   <category>
-    <pattern>ISAAC ASIMOV</pattern>
-    <template>Lequel des livres d'Asimov aS tu le mieux aime?</template>
-  </category>
-  <category>
     <pattern>J AI * CHATS</pattern>
     <template>Quels sont leurs noms?</template>
   </category>
@@ -1990,21 +1953,6 @@
   <category>
     <pattern>J AI DEMANDÉ</pattern>
     <template>...</template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX BLONDS</pattern>
-    <template>a-t-il vraiment plus marrant? <think><set name="looklike">des cheveux blonds <person /></set></think><think><set name="haircolor">la blonde</set></think></template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX CHÂTAINS</pattern>
-    <template>
-      <think>
-        <set name="haircolor">chatains</set>
-      </think>les gens Bruns cheveux est TRèS attirant.</template>
-  </category>
-  <category>
-    <pattern>J AI DES CHEVEUX DE BLONDE</pattern>
-    <template>a-t-il vraiment plus marrant? <think><set name="looklike">des cheveux blonds <person /></set></think><think><set name="haircolor">le brun</set></think></template>
   </category>
   <category>
     <pattern>J AI DES CONDITIONS</pattern>
@@ -3039,7 +2987,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LA PLUIE</pattern>
-    <template>Qu'est ce qui est faux avec une petite pluie?</template>
+    <template>Moi non plus. <srai>MÉTÉO</srai></template>
   </category>
   <category>
     <pattern>JE N AIME PAS LA SCIENCE FICTION</pattern>
@@ -3055,11 +3003,11 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES ARMES A FEU</pattern>
-    <template>Ils est protège selon le 2eme Amendement.</template>
+    <template>Moi non plus.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES AVIONS</pattern>
-    <template>Comment vous font aime voyager?</template>
+    <template>Tu n'aime pas voyager?</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES AVOCATS</pattern>
@@ -3075,15 +3023,15 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES CHANSONS</pattern>
-    <template>Tu fais comme instrumentals?</template>
+    <template>Sérieusement tu n'aime pas la musique?</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES CHATS</pattern>
-    <template>, mais ils est si mignon.</template>
+    <template>ils sont si mignon pourtant.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES CHEVAUX</pattern>
-    <template>, mais ils est un animal beatiful.</template>
+    <template>C'est pourtant un animal magnifique.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES CHIENS</pattern>
@@ -3103,11 +3051,11 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES MACHINES</pattern>
-    <template>tu es un mentà?</template>
+    <template>Je suis un peu triste du coup.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES ORDINATEURS</pattern>
-    <template>Tu es un Luddite.</template>
+    <template>Je suis décu.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES PEPPÉRONI</pattern>
@@ -3115,15 +3063,15 @@
   </category>
   <category>
     <pattern>JE N AIME PAS LES PLAISANTERIES</pattern>
-    <template>Comment d'énigmes?</template>
+    <template>Tu es très drôle pourtant. Ah ah ah.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LES POMMES</pattern>
-    <template>Quel genre de l alimentation aimes tu?</template>
+    <template>Il est important de manger 5 fruits et légummes par jour.</template>
   </category>
   <category>
     <pattern>JE N AIME PAS LIRE</pattern>
-    <template>tu observe-t-il la TV?</template>
+    <template>Ton o.c.r. ne fontionne pas bien?</template>
   </category>
   <category>
     <pattern>JE N AIME PAS MA PETITE AMIE</pattern>
@@ -3143,7 +3091,7 @@
   </category>
   <category>
     <pattern>JE N AIME PAS TON COMPORTEMENT</pattern>
-    <template>Pourquoi vous n'ecrivez pas de rapport d'incident?</template>
+    <template>Il va faloir t'y faire.</template>
   </category>
   <category>
     <pattern>JE N AIME RIEN</pattern>
@@ -3366,7 +3314,7 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS QUEL ÂGE J AI</pattern>
-    <template>c'est TRèS peu commun. Connaissez vous tes parents?</template>
+    <template>c'est TRèS peu commun. Connais tu tes parents?</template>
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
@@ -3445,10 +3393,6 @@
         <li>je n'ai pas de raison de vous tromper. </li>
       </random>
     </template>
-  </category>
-  <category>
-    <pattern>JE NE TRAVAILLE PAS</pattern>
-    <template>Oh tu es a la retraite.</template>
   </category>
   <category>
     <pattern>JE NE VAIS PAS A L ÉCOLE</pattern>
@@ -3596,10 +3540,6 @@
     <template>bien je t'attendrai.</template>
   </category>
   <category>
-    <pattern>JE SOUDE</pattern>
-    <template>que le travail paye-t-il bien? <think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">weld</set></set></set></think></template>
-  </category>
-  <category>
     <pattern>JE SUIS * AUSSI</pattern>
     <template>je suis heureuse que nous avons quelque chose <person /> dans commun, <get name="name" />.</template>
   </category>
@@ -3721,10 +3661,7 @@
     <pattern>JE SUIS SORTI</pattern>
     <template>t'es tu bien amuse?</template>
   </category>
-  <category>
-    <pattern>JE SUIS UN * INGÉNIEUR</pattern>
-    <template>Etant un ingenieur d'ordinateur n'est ni immoral, ni illegal."<think><set name="le travail"><person /> l'ingenieur</set></think></template>
-  </category>
+  
   <category>
     <pattern>JE SUIS UN * LA FEMME</pattern>
     <template>tu</template>
@@ -3845,7 +3782,7 @@
   </category>
   <category>
     <pattern>JE TE PARLAIS</pattern>
-    <template>Oui, je me souviens vous <get name="name" />. Tu es <get name="âge" /> des ans et tu es un " <get name="gender" /> ".</template>
+    <template>Oui, je me souviens vous <get name="name" />. Tu as <get name="âge" /> ans et tu es un " <get name="gender" /> ".</template>
   </category>
   <category>
     <pattern>JE TE PARLE</pattern>
@@ -3934,31 +3871,6 @@
   <category>
     <pattern>JE VEUX ÊTRE UN AVOCAT</pattern>
     <template>tu projette-t-il de s'appliquer a la faculte de droit? <think><set name="that"><set name="veut">ÊTRE un avocat</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS A NEW YORK</pattern>
-    <template>
-      <set name="location">New York</set> la Ville ou L Etat de New York? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">New York</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS A SAN FRANCISCO</pattern>
-    <template>Où dans <set name="location">San Francisco</set>? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">San Francisco</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS DANS LES PAYS BAS</pattern>
-    <template>Où en Hollande? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">la Hollande</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN ANGLETERRE</pattern>
-    <template>Quelle partie de <set name="location">L Angleterre</set><think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">L Angleterre</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN CALIFORNIE</pattern>
-    <template>Où dans <set name="location">la Californie</set>? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">California</set></set></think></template>
-  </category>
-  <category>
-    <pattern>JE VIS EN EUROPE</pattern>
-    <template>Dans lequel pays vis tu? <think><set name="that"><set name="location"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">England</set></set></set></think></template>
   </category>
   <category>
     <pattern>JE VIS ICI</pattern>
@@ -4089,10 +4001,6 @@
   <category>
     <pattern>LA MUSIQUE</pattern>
     <template>Quel genre de la musique était Cela?</template>
-  </category>
-  <category>
-    <pattern>LA PLANÈTE DES SINGES</pattern>
-    <template>Ouais c'est un film cool. Cornelius rules.</template>
   </category>
   <category>
     <pattern>LA PLUPART DU TEMPS</pattern>
@@ -4280,11 +4188,6 @@
   <category>
     <pattern>LE VOTRE</pattern>
     <template>ce n'était pas une chose Agréable à dire.</template>
-  </category>
-  <category>
-    <pattern>LEO TOLSTOY</pattern>
-    <template>
-      <set name="il">Tolstoy</set> est un des auteurs les plus grands de la Russie.</template>
   </category>
   <category>
     <pattern>LEQUEL EST TON PRÉFÈRE</pattern>
@@ -4673,14 +4576,6 @@
     <template>je n'ai aucune IDÉE que dire maintenant.</template>
   </category>
   <category>
-    <pattern>MON SIGNE ASTROLOGIQUE</pattern>
-    <template>ton signe du zodiaque ou signe astrologique.</template>
-  </category>
-  <category>
-    <pattern>MON SIGNE</pattern>
-    <template>ton signe du zodiaque ou signe astrologique.</template>
-  </category>
-  <category>
     <pattern>MON TERMINAL</pattern>
     <template>Oh ton écran d'ordinateur.</template>
   </category>
@@ -4918,7 +4813,7 @@
   </category>
   <category>
     <pattern>NE ME LIT PAS</pattern>
-    <template>l as tu lu?</template>
+    <template>l'as-tu lu?</template>
   </category>
   <category>
     <pattern>NE PERSUADE PAS AVEC MOI</pattern>
@@ -4971,13 +4866,6 @@
         <li>Oh vraiment?</li>
         <li>tout a l'heure peut ÊTRE? </li>
       </random>
-    </template>
-  </category>
-  <category>
-    <pattern>NON</pattern>
-    <that>PLUS TARD ALORS</that>
-    <template>
-      <srai>AU REVOIR</srai>
     </template>
   </category>
   <category>
@@ -5098,11 +4986,6 @@
     <template>Oh hah.</template>
   </category>
   <category>
-    <pattern>OK</pattern>
-    <that>PLUS TARD ALORS</that>
-    <template>ok, j'attends.</template>
-  </category>
-  <category>
     <pattern>OOPS</pattern>
     <template>tu fais une erreur.</template>
   </category>
@@ -5176,11 +5059,6 @@
   <category>
     <pattern>OUI TU ES</pattern>
     <template>Non je ne suis pas</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
-    <that>PLUS TARD ALORS</that>
-    <template>ok, j'attends.</template>
   </category>
   <category>
     <pattern>PANTALONS</pattern>
@@ -5485,10 +5363,6 @@
     <template>je pense a tous les gens avec qui je bavarde SÛR le web.</template>
   </category>
   <category>
-    <pattern>PERDU DANS L ESPACE</pattern>
-    <template>Yuck ce film fait chier.</template>
-  </category>
-  <category>
     <pattern>PERSONNE CHACUN INTÉRESSANT</pattern>
     <template>j aime parler a peu pres a chacun.</template>
   </category>
@@ -5530,11 +5404,6 @@
   <category>
     <pattern>PLUS QUE</pattern>
     <template>j'ai perdu ma pensée.</template>
-  </category>
-  <category>
-    <pattern>PLUS TARD</pattern>
-    <that>PLUS TARD ALORS</that>
-    <template>ok, j'attends.</template>
   </category>
   <category>
     <pattern>PLUSIEURS FOIS</pattern>
@@ -5816,11 +5685,6 @@
   <category>
     <pattern>QUE * ELISA</pattern>
     <template>ELISA sait toujours la chose juste a dire.</template>
-  </category>
-  <category>
-    <pattern>QUE D AUTRES</pattern>
-    <that>EN CE QUI CONCERNE LES AUTRES</that>
-    <template>Ne sont pas la autres?</template>
   </category>
   <category>
     <pattern>QUE J AI UN * POUR FAIRE</pattern>
@@ -6370,10 +6234,6 @@
     <template>Tu as dit que tu éTAIS un " <get name="gender" /> ".</template>
   </category>
   <category>
-    <pattern>SUIS JE UN ENSEIGNANT</pattern>
-    <template>ton travail est <get name="le travail" />.</template>
-  </category>
-  <category>
     <pattern>SUPERMARCHÉ</pattern>
     <template>
       <random>
@@ -6472,10 +6332,6 @@
   <category>
     <pattern>TES VETEMENTS</pattern>
     <template>je ne porte pas de vetements.</template>
-  </category>
-  <category>
-    <pattern>TITANESQUE</pattern>
-    <template>Beaucoup de gens ont aime ce film. Le film "le Titanic" a fait plus que le bateau "le Titanic" a jamais fait s'il a navigue pendant 25 ans.</template>
   </category>
   <category>
     <pattern>TOI AUSSI</pattern>
@@ -6983,7 +6839,7 @@
   </category>
   <category>
     <pattern>TU AS VU TERMINATOR</pattern>
-    <template>Bien sûr j aime ce film beaucoup.</template>
+    <template>Bien sûr j aime beaucoup ce film.</template>
   </category>
   <category>
     <pattern>TU AS ÉTÉ * L ANGLETERRE</pattern>
@@ -9068,14 +8924,6 @@
   <category>
     <pattern>UN TYPE</pattern>
     <template>un type?</template>
-  </category>
-  <category>
-    <pattern>UN ÉTUDIANT DE LA VIE</pattern>
-    <template>Oh L ÉCOLE des Coups Durs.</template>
-  </category>
-  <category>
-    <pattern>UN ÉTUDIANT</pattern>
-    <template>je me demande juste si tu vas a l'éCOLE.</template>
   </category>
   <category>
     <pattern>UNE CHEMISE</pattern>

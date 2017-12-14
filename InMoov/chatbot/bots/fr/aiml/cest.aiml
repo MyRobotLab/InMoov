@@ -342,9 +342,6 @@
 <category><pattern>C EST BON</pattern>
 <template>Tu aimes ça.</template>
 </category>
-<category><pattern>C EST BON</pattern><that>TOUT VA BIEN</that>
-<template>Comment des choses va-t-il pour toi?</template>
-</category>
 <category><pattern>C EST CE J AI DIT</pattern>
 <template>J archive.</template>
 </category>
@@ -593,7 +590,7 @@
 <template>Oui.</template>
 </category>
 <category><pattern>C EST ENSOLEILLÉ *</pattern>
-<template>ç'est très agréable.</template>
+<template>oui ç'est très agréable.<srai>MÉTÉO</srai></template>
 </category>
 <category><pattern>C EST ENTIÈREMENT *</pattern>
 <template><srai>C EST CE QUE <star/> EST</srai></template>
@@ -851,9 +848,8 @@
 </category>
 <category><pattern>C EST LOIN *</pattern>
 <template><random>
-        <li>spécifie s'il te plaît des unités : métrique ou anglais. </li>
-        <li>veux tu dire le temps de conduite ou volant? </li>
-        <li>Il dépend comment vous arrivez là. </li>
+        <li>veux tu dire le temps qu'il faudrait en voiture? </li>
+        <li>Cela dépend du moyen de transport. </li>
       </random></template>
 </category>
 <category><pattern>C EST LOIN DE LA LUNE</pattern>
@@ -1606,18 +1602,6 @@
 <category><pattern>C EST QUOI LE NET</pattern>
 <template><srai>QU EST CE QUE INTERNET</srai></template>
 </category>
-<category><pattern>C EST QUOI LE NOM DE MA FEMME</pattern>
-<template><condition name="gender" value="male">
-        <srai>femelle conjoint nom</srai>
-      </condition>
-      <condition name="gender" value="femelle">EXCUSE moi <get name="name"/> , mais tu m'avais dis que tu étais une femme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? </condition></template>
-</category>
-<category><pattern>C EST QUOI LE NOM DE MON MARI</pattern>
-<template><condition name="gender" value="femelle">
-        <srai>mâle conjoint nom</srai>
-      </condition>
-      <condition name="gender" value="male">EXCUSE moi <get name="name"/> , mais tu m'avais dis que tu étais un homme. Le nom que tu m'as donné était <get name="conjoint"/>. ES tu gay? </condition></template>
-</category>
 <category><pattern>C EST QUOI LE NOM DE TON DE PÈRE</pattern>
 <template><srai>QUI T A CRÉÉ</srai></template>
 </category>
@@ -1757,9 +1741,6 @@
 <category><pattern>C EST QUOI MON PROBLÈME</pattern>
 <template><srai>J AI UN PROBLÈME</srai></template>
 </category>
-<category><pattern>C EST QUOI MON SIGNE DU ZODIAQUE</pattern>
-<template><srai>QU EST CE QUE MON SIGNE</srai></template>
-</category>
 <category><pattern>C EST QUOI NOOSPHERE</pattern>
 <template><srai>QU EST CE QUE NOOSPHERE</srai></template>
 </category>
@@ -1801,18 +1782,6 @@
 </category>
 <category><pattern>C EST QUOI QUASARS</pattern>
 <template><srai>QU EST CE QUE QUASAR</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>LE RÉDUCTIONNISME</that>
-<template><srai>QU EST CE QUE RÉDUCTIONNISME</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>LE REDUCTIONNISME</that>
-<template><srai>QU EST CE QUE RÉDUCTIONNISME</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>PAR EXEMPLE EUKARYOTES</that>
-<template><srai>QU EST CE QUE EUKARYOTES</srai></template>
-</category>
-<category><pattern>C EST QUOI QUE</pattern><that>PEUT ÊTRE TU ES UNE CATÉGORIE UN CLIENT</that>
-<template><srai>QU EST CE QU UNE CATÉGORIE UN CLIENT</srai></template>
 </category>
 <category><pattern>C EST QUOI QUELQUE * DES LIVRES</pattern>
 <template><srai>QU EST CE QUE TON LIVRE PRÉFÉRÉ</srai></template>
@@ -2332,9 +2301,6 @@
 </category>
 <category><pattern>C EST QUOI TON OBJECTIF</pattern>
 <template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON OCCUPATION</pattern>
-<template><srai>QU EST CE QUE TON TRAVAIL</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ORDINATEUR *</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>

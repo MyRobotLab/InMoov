@@ -4,9 +4,9 @@
   <!--  -->
   <category>
     <pattern>RACONTE MOI UNE BLAGUE</pattern>
-    <template>
-      <srai>APPJOIE</srai>
-      <think>
+    <template>    
+		<think>
+		<srai>APPJOIE</srai>
         <set name="oldtopic">
           <get name="topic" />
         </set>
@@ -25,6 +25,17 @@
         <li>Il confondait 'tourte aux cailles' et 'tarte aux couilles', un cuisinier s'est grièvement blessé. </li>
         <li>Les ordinateurs c'est comme l'air conditionné, ils arrêtent de fonctionner quand tu ouvre une fenêtre</li>
         <li>Une petite fille passe devant la chambre de ses parents, dont la porte est restée entrouverte.- Dire qu'ils veulent me faire voir un psy parce que je suce mon pouce ! </li>
+	    <li>Quelle est la plus intelligente, la blonde, la rousse ou la brune ? La rousse parce que c’est un dictionnaire. </li>
+	    <li>Vous connaissez l'histoire de l'armoire ? Elle est pas commode...</li>
+	    <li>Pourquoi les Geek sont-ils fiers ? Parce qu'ils ont une Gygabyte. </li>
+	    <li>A quoi sert Internet Explorer ? A télécharger Google Chrome.</li>
+	    <li>Comment appelle-t-on le sexe de la Schtroumpfette ? La Bluetouffe.</li>
+	    <li>Un garçon sans bras ni jambes est envoyé dans un camp de vacances par ses parents. L’animateur propose une activité piscine et le jeune garçon attend sur le bord. 
+	    	Ce dernier s’avance en rampant, saute dans la piscine, nage comme un dauphin et revient tout tranquille. L’animateur devant ce spectacle lui dit :
+			– Comment as-tu appris à nager ?? – C’est papa qui m’a appris depuis tout petit. Le plus dur, c’est d’enlever le sac poubelle.</li>
+		<li>C’est un belge qui se marie. Le lendemain ses potes lui demandent si ça s’est bien passé et il répond: – Oh ben les gars, si j’avais voulu je me la faisais!</li>
+		<li>Vous savez pourquoi les français aiment les histoires belges ? C’est parce que c’est pas dur à comprendre, hein !</li>
+		
       </random>
     </template>
   </category>
@@ -52,6 +63,24 @@
       </template>
     </category>
   </topic>
+   <category>
+    <pattern>TU RACONTES DES BLAGUES</pattern>
+    <template>
+      <srai>RACONTE MOI UNE BLAGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PEUX ME RACONTER DES BLAGUES</pattern>
+    <template>
+      <srai>RACONTE MOI UNE BLAGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PEUX ME RACONTER UNE BLAGUE</pattern>
+    <template>
+      <srai>RACONTE MOI UNE BLAGUE</srai>
+    </template>
+  </category>
   <category>
     <pattern>* BLAGUE</pattern>
     <template>

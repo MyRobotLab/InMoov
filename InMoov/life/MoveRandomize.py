@@ -27,11 +27,12 @@ def MoveRandom(timedata):
       
   #little pause
   if random.randint(0,4)==4:
-    i01.RobotCanMoveHeadRandom=False
-    i01.RobotCanMoveBodyRandom=False
-    relax()
-    i01.waitTargetPos()
-    #chatBot.getResponse("RANDOM")
+    if i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
+      i01.RobotCanMoveHeadRandom=False
+      i01.RobotCanMoveBodyRandom=False
+      relax()
+      i01.waitTargetPos()
+      #chatBot.getResponse("RANDOM")
   if random.randint(0,3)==3:i01.RobotCanMoveEyesRandom=False
 
 def MoveRandomStart():

@@ -27,8 +27,10 @@
       </think>
       <condition name="sraix">
         <li value="SCHEDULEFAILED">I'm unable to schedule that event.</li>
-        <li>I'll put that event on your calendar.
-<oob><schedule><title><star /></title><description><lowercase><star index="2" /></lowercase></description><get name="sraix" /></schedule></oob></li>
+        <li>
+        	I'll put that event on your calendar.
+			<oob><schedule><title><star /></title><description><lowercase><star index="2" /></lowercase></description><get name="sraix" /></schedule></oob>
+		</li>
       </condition>
     </template>
   </category>
@@ -44,8 +46,10 @@
       </think>
       <condition name="sraix">
         <li value="ALARMFAILED">Try asking me a different way.</li>
-        <li>I'll <lowercase><person><star index="2" /></person></lowercase>.
-<oob><alarm><message><star /></message><get name="sraix" /></alarm></oob></li>
+        <li>
+        	I'll <lowercase><person><star index="2" /></person></lowercase>.
+			<oob><alarm><message><star /></message><get name="sraix" /></alarm></oob>
+		</li>
       </condition>
     </template>
   </category>
@@ -268,7 +272,7 @@
   <category>
     <pattern>SEARCH WEATHER PORTLAND MAINE</pattern>
     <template>
-      <sraix>SEARCH WEATHER PORTLAND MAINE</sraix>
+      <srai># forecast in PORTLAND</srai>
     </template>
   </category>
   <category>
@@ -467,25 +471,25 @@
   <category>
     <pattern>WEATHER FORECAST</pattern>
     <template>
-      <sraix>WEATHER FORECAST</sraix>
+      <srai># forecast in <star/></srai>
     </template>
   </category>
   <category>
     <pattern>WEATHER FOR SACRAMENTO</pattern>
     <template>
-      <sraix>WEATHER FOR SACRAMENTO</sraix>
+      <srai># forecast in SACRAMENTO</srai>
     </template>
   </category>
   <category>
     <pattern>WEATHER IN *</pattern>
     <template>
-      <sraix>WEATHER IN <star /></sraix>
+      <srai># forecast in <star/></srai>
     </template>
   </category>
   <category>
     <pattern>WEATHER *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER <star /></sraix>
+      <srai># forecast in <star/></srai>
     </template>
   </category>
   <category>
@@ -557,7 +561,7 @@
   <category>
     <pattern>IS THE WEATHER *</pattern>
     <template>
-      <sraix>IS THE WEATHER <star /></sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
@@ -1155,7 +1159,7 @@
     </template>
   </category>
   <category>
-    <pattern>ISANAME name</pattern>
+    <pattern>ISANAME <set>name</set> </pattern>
     <template>true</template>
   </category>
   <category>
@@ -1195,13 +1199,7 @@
   <category>
     <pattern>THE WEATHER IN *</pattern>
     <template>
-      <sraix>THE WEATHER IN <star /></sraix>
-    </template>
-  </category>
-  <category>
-    <pattern>THE WEATHER *</pattern>
-    <template>
-      <sraix>THE WEATHER <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
@@ -1933,163 +1931,148 @@
   <category>
     <pattern>WHAT IS THE WEATHER</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER FORECAST FOR *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FORECAST FOR <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER FOR TODAY</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FOR TODAY</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER FOR *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FOR <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER FOR TOMORROW</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FOR TOMORROW</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER RIGHT NOW</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER RIGHT NOW</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER TODAY</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER TODAY</sraix>
-    </template>
-  </category>
-  <category>
-    <pattern>WHAT IS THE WEATHER TODAY *</pattern>
-    <template>
-      <sraix>WHAT IS THE WEATHER TODAY <star /></sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER GOING TO BE *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER GOING TO BE <star /></sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER GOING TO BE LIKE TODAY</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER GOING TO BE LIKE TODAY</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER GOING TO BE LIKE IN *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER GOING TO BE LIKE IN <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER IN PARIS</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER IN PARIS</sraix>
+      At the top of eiffel tower,
+      <srai># forecast in paris</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER IN *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER IN <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER IN LONDON</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER IN LONDON</sraix>
-    </template>
-  </category>
-  <category>
-    <pattern>WHAT IS THE WEATHER *</pattern>
-    <template>
-      <sraix>WHAT IS THE WEATHER <star /></sraix>
+       Near big ben,
+      <srai># forecast in LONDON</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE FOR TODAY</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE FOR TODAY</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE FOR TOMORROW</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE FOR TOMORROW</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE TODAY</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE TODAY</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE IN NEW YORK</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE IN NEW YORK</sraix>
+             Near Statue of Liberty,
+      <srai># forecast in NEW YORK</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE IN *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE IN <star /></sraix>
-    </template>
-  </category>
-  <category>
-    <pattern>WHAT IS THE WEATHER LIKE *</pattern>
-    <template>
-      <sraix>WHAT IS THE WEATHER LIKE <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE HERE</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE HERE</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE OUTSIDE</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE OUTSIDE</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER LIKE TOMORROW</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER LIKE TOMORROW</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER TOMORROW</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER TOMORROW</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT IS THE WEATHER OUTSIDE</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER OUTSIDE</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
@@ -2125,7 +2108,7 @@
   <category>
     <pattern>WHAT IS THE CURRENT WEATHER</pattern>
     <template>
-      <sraix>WHAT IS THE CURRENT WEATHER</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
@@ -2631,19 +2614,13 @@
   <category>
     <pattern>WHAT WILL THE WEATHER BE LIKE IN *</pattern>
     <template>
-      <sraix>WHAT WILL THE WEATHER BE LIKE IN <star /></sraix>
-    </template>
-  </category>
-  <category>
-    <pattern>WHAT WILL THE WEATHER BE LIKE *</pattern>
-    <template>
-      <sraix>WHAT WILL THE WEATHER BE LIKE <star /></sraix>
+      <srai>forecast IN <star /> IN 1 DAYS</srai>
     </template>
   </category>
   <category>
     <pattern>WHAT WILL THE WEATHER BE LIKE TOMORROW</pattern>
     <template>
-      <sraix>WHAT WILL THE WEATHER BE LIKE TOMORROW</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
@@ -3201,25 +3178,25 @@
   <category>
     <pattern>HOW IS THE WEATHER</pattern>
     <template>
-      <sraix>HOW IS THE WEATHER</sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>HOW IS THE WEATHER *</pattern>
     <template>
-      <sraix>HOW IS THE WEATHER <star /></sraix>
+      <srai># forecast</srai>
     </template>
   </category>
   <category>
     <pattern>HOW IS THE WEATHER LIKE TODAY IN NEW DELHI</pattern>
     <template>
-      <sraix>HOW IS THE WEATHER LIKE TODAY IN NEW DELHI</sraix>
+      <srai># forecast in NEW DELHI</srai>
     </template>
   </category>
   <category>
     <pattern>HOW IS THE WEATHER LIKE TODAY IN *</pattern>
     <template>
-      <sraix>HOW IS THE WEATHER LIKE TODAY IN <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>
@@ -3423,13 +3400,13 @@
   <category>
     <pattern>WHAT IS THE WEATHER FORECAST</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FORECAST</sraix>
+      Tomorrow, <srai>forecast tomorrow</srai>
     </template>
   </category>
   <category>
     <pattern>WEATHER FOR *</pattern>
     <template>
-      <sraix>WHAT IS THE WEATHER FOR <star /></sraix>
+      <srai># forecast in <star /></srai>
     </template>
   </category>
   <category>

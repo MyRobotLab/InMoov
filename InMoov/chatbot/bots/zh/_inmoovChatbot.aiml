@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: chatBot.aiml -->
+  <!-- Author: Gael Langevin -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: December 3, 2017 -->
+  <!-- This inmoov Chinese brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  
+     <!-- initialisation  -->
+	 <!-- updater  -->
+	 <!-- gesture  -->
+  
+  
+   <category><pattern>说 *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+    你好，这是我第一次初始化。我需要一些信息，我正在听，我叫什么名字？</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># 我的名字是什么 #</that>
+<template><set name="questionfirstinit">如果我的名字是 <star/> , 说是或不是</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># 请问你叫什么名字 #</that>
+<template><set name="questionfirstinit">if your name is <star/> , 说是或不是</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># 是 #</pattern><that># 如果我的名字是 #</that>
+<template><random>
+      <li>
+      我喜欢这个名字 , <get name="tmpname"/>.
+      </li>
+      <li>
+      非常好的名字, <get name="tmpname"/> 是很棒的.
+      </li>
+        </random>
+  我需要了解你，我正在听，可否给我你的名字？
+  <think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># 是 #</pattern><that># 如果你的名字 #</that>
+<template><random>
+        <li>很高兴认识你, <get name="tmpname"/>.</li>
+        <li>很高兴见到你, <get name="tmpname"/>.</li>
+        </random>
+    
+        <think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># 没有 #</pattern><that># 如果我的名字是 #</that>
+<template>我们重启.
+  我正在听。我的名字是什么 ？</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># 没有 #</pattern><that># 如果你的名字 #</that>
+<template>我们重启.
+  我正在听。请问你叫什么名字 ？</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># 说是或不是 #</that>
+<template><random>
+          <li>
+  请回答我的问题，这很重要
+  </li>
+          <li>
+  我重复.
+  </li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>SYSTEM_NEW_VERSION</pattern>
+<template><think><set name="topic">updater</set></think>
+     警报，新的Inmoov操作系统版本可用，如果你愿意，我可以更新它，说是或否</template>
+</category>
+<topic name="UPDATER">
+<category><pattern># 是 #</pattern><that># 说是的 #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+      <li>
+      开始下载，请稍候.
+      </li>
+  <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern># 没有 #</pattern><that># 说是的 #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+  好的，下一次也许吧
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern>#</pattern><that># 说是的 #</that>
+<template>请回答我的问题，重要的是说是或否</template>
+</category></topic>
+
+<category><pattern>* SYSTEM_PERCENT</pattern>
+<template><li>
+        <star/> percent.
+      </li></template>
+</category>
+<category><pattern>SYSTEM_DOWNLOAD_OK</pattern>
+<template><li>
+       下载好，我会关闭。请重新启动我.
+      </li></template>
+</category>
+<category><pattern># FORECAST</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>WHAT IS THE FORECAST</pattern>
+<template><srai># forecast in</srai></template>
+</category>
+<category><pattern>WHAT IS THE FORECAST IN *</pattern>
+<template><srai># forecast in <star/></srai></template>
+</category>
+<category><pattern># FORECAST IN *</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2"/>")</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+<template><think><set name="meteo"> <star index="3"/></set></think>
+                <random>
+                <li>Today in <star index="2"/>, </li>
+                <li>About the forecast in <star index="2"/>, </li>
+                </random>
+                <random>
+                <li>There is, </li>
+                <li>I shall say, it is, </li>
+                </random>
+                
+                <condition>
+                <li name="meteo" value="200">thunderstorm with light rain</li>
+                <li name="meteo" value="201">thunderstorm with rain</li>
+                <li name="meteo" value="202">thunderstorm with heavy rain</li>
+                <li name="meteo" value="210">light thunderstorm</li>
+                <li name="meteo" value="211">thunderstorm</li>
+                <li name="meteo" value="212">heavy thunderstorm</li>
+                <li name="meteo" value="221">ragged thunderstorm</li>
+                <li name="meteo" value="230">thunderstorm with light drizzle</li>
+                <li name="meteo" value="231">thunderstorm with drizzle</li>
+                <li name="meteo" value="232">thunderstorm with heavy drizzle</li>
+                <li name="meteo" value="300">light intensity drizzle</li>
+                <li name="meteo" value="301">drizzle</li>
+                <li name="meteo" value="302">heavy intensity drizzle</li>
+                <li name="meteo" value="310">light intensity drizzle rain</li>
+                <li name="meteo" value="311">drizzle rain</li>
+                <li name="meteo" value="312">heavy intensity drizzle rain</li>
+                <li name="meteo" value="313">shower rain and drizzle</li>
+                <li name="meteo" value="314">heavy shower rain and drizzle</li>
+                <li name="meteo" value="321">shower drizzle</li>
+                <li name="meteo" value="500">light rain</li>
+                <li name="meteo" value="501">moderate rain</li>
+                <li name="meteo" value="502">heavy intensity rain</li>
+                <li name="meteo" value="503">very heavy rain</li>
+                <li name="meteo" value="504">extreme rain</li>
+                <li name="meteo" value="511">freezing rain</li>
+                <li name="meteo" value="520">light intensity shower rain</li>
+                <li name="meteo" value="521">shower rain</li>
+                <li name="meteo" value="522">heavy intensity shower rain</li>
+                <li name="meteo" value="531">ragged shower rain</li>
+                <li name="meteo" value="600">light snow</li>
+                <li name="meteo" value="601">snow</li>
+                <li name="meteo" value="602">heavy snow</li>
+                <li name="meteo" value="611">sleet</li>
+                <li name="meteo" value="612">shower sleet</li>
+                <li name="meteo" value="615">light rain and snow</li>
+                <li name="meteo" value="616">rain and snow</li>
+                <li name="meteo" value="620">light shower snow</li>
+                <li name="meteo" value="621">shower snow</li>
+                <li name="meteo" value="622">heavy shower snow</li>
+                <li name="meteo" value="701">mist</li>
+                <li name="meteo" value="711">smoke</li>
+                <li name="meteo" value="721">haze</li>
+                <li name="meteo" value="731">sand, dust whirls</li>
+                <li name="meteo" value="741">fog</li>
+                <li name="meteo" value="751">sand</li>
+                <li name="meteo" value="761">dust</li>
+                <li name="meteo" value="762">volcanic ash</li>
+                <li name="meteo" value="771">squalls</li>
+                <li name="meteo" value="781">tornado</li>
+                <li name="meteo" value="800">clear sky</li>
+                <li name="meteo" value="801">few clouds</li>
+                <li name="meteo" value="802">scattered clouds</li>
+                <li name="meteo" value="803">broken clouds</li>
+                <li name="meteo" value="804">overcast clouds</li>
+                <li name="meteo" value="900">tornado</li>
+                <li name="meteo" value="901">tropical storm</li>
+                <li name="meteo" value="902">hurricane</li>
+                <li name="meteo" value="903">cold</li>
+                <li name="meteo" value="904">hot</li>
+                <li name="meteo" value="905">windy</li>
+                <li name="meteo" value="906">hail</li>
+                <li name="meteo" value="951">calm</li>
+                <li name="meteo" value="952">light breeze</li>
+                <li name="meteo" value="953">gentle breeze</li>
+                <li name="meteo" value="954">moderate breeze</li>
+                <li name="meteo" value="955">fresh breeze</li>
+                <li name="meteo" value="956">strong breeze</li>
+                <li name="meteo" value="957">high wind, near gale</li>
+                <li name="meteo" value="958">gale</li>
+                <li name="meteo" value="959">severe gale</li>
+                <li name="meteo" value="960">storm</li>
+                <li name="meteo" value="961">violent storm</li>
+                <li name="meteo" value="962">hurricane</li>
+                </condition>
+          
+                <random>
+                <li>About the temperature, </li>
+                <li>My thermometer shows , </li>
+                </random>
+                 <random>
+                <li>The mercury level indicates, </li>
+                </random>
+                <li>
+                <star index="1"/> degrees
+                </li>
+                 <random>
+                 <li>Exactly! </li>
+                 <li>Or maybe not. </li>
+                 </random></template>
+</category>
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><li>
+        <srai>HI</srai>
+        <random>
+          <li>I am ready and listening.</li>
+          <li>What can I do for you.</li>
+          <li>How can I help you.</li>
+        </random>
+      </li></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category><pattern>WAKE UP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUTDOWN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUT DOWN</pattern>
+<template><srai>SHUTDOWN</srai></template>
+</category>
+<category><pattern>GO TO SLEEP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DISABLE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>WHAT IS THE TOPIC</pattern>
+<template>The topic is
+      <get name="topic"/></template>
+</category>
+<category><pattern>BOOT UP MODE</pattern>
+<template>Entering into the boot up topic.
+      <think><set name="topic">BOOTUP</set></think></template>
+</category>
+<category><pattern>GESTURES</pattern>
+<template>Entering into the gestures topic.
+      <think><set name="topic">GESTURES</set></think></template>
+</category>
+<category><pattern>GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>DETACH ALL</pattern>
+<template>Detach All
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DETACH EVERYTHING</pattern>
+<template><srai>DETACH ALL</srai></template>
+</category>
+<category><pattern>ATTACH ALL</pattern>
+<template>Attaching all
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT HAND</pattern>
+<template><srai>ATTACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>DETACH RIGHT HAND</pattern>
+<template>Detaching my right hand
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR RIGHT HAND</pattern>
+<template><srai>DETACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT HAND</pattern>
+<template><srai>ATTACH LEFT HAND</srai></template>
+</category>
+<category><pattern>DETACH LEFT HAND</pattern>
+<template>Detaching my left hand
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR LEFT HAND</pattern>
+<template><srai>DETACH LEFT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR HEAD</pattern>
+<template><srai>ATTACH HEAD</srai></template>
+</category>
+<category><pattern>DETACH HEAD</pattern>
+<template>Detaching my head
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT ARM</pattern>
+<template><srai>ATTACH RIGHT ARM</srai></template>
+</category>
+<category><pattern>DETACH RIGHT ARM</pattern>
+<template>Detaching my right arm
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT ARM</pattern>
+<template><srai>ATTACH LEFT ARM</srai></template>
+</category>
+<category><pattern>DETACH LEFT ARM</pattern>
+<template>Detaching my left arm
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR TORSO</pattern>
+<template><srai>ATTACH TORSO</srai></template>
+</category>
+<category><pattern>DETACH TORSO</pattern>
+<template>Detaching my torso
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+</aiml>
