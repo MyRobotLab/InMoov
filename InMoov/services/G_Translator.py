@@ -195,12 +195,12 @@ en_languages = {
 
 global translatorDegraded
 translatorDegraded=0
-if MyvoiceTTS=="MarySpeech":
+if Speechengine=="MarySpeech":
   translatorDegraded=1
   male_languages=male_languagesMary
   female_languages=female_languagesMary
   
-if MyvoiceTTS=="NaturalReaderSpeech":
+if Speechengine=="NaturalReaderSpeech":
   translatorDegraded=0
   male_languages=male_languagesNatural
   female_languages=female_languagesNatural
@@ -218,7 +218,7 @@ def translateText(text,language):
     translatorDegraded=0
     talkBlocking(lang_MaryTranslator)
   
-  if MyvoiceTTS=="MarySpeech":  
+  if Speechengine=="MarySpeech":  
     if not CheckMaryTTSVoice("dfki-pavoque-neutral-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
@@ -261,7 +261,7 @@ def translateText(text,language):
       sleep(4)
       runtime.exit()
     
-  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech" or MyvoiceTTS=="NaturalReaderSpeech":
+  if Speechengine=="Polly" or Speechengine=="MarySpeech" or Speechengine=="NaturalReaderSpeech":
     RealLang="0"
     
     try:
@@ -300,7 +300,7 @@ def translateText(text,language):
         mouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
         print t_text
         talkBlocking(t_text)
-        mouth.setVoice(unicode(MyvoiceType,'utf-8'))
+        mouth.setVoice(VoiceName)
         
   else:
     talk(lang_PollyNeeded)

@@ -9,7 +9,7 @@
 #TODO : english chatbot integration
 
 wdf=Runtime.createAndStart("wdf", "WikiDataFetcher")
-if MyLanguage=="fr":
+if Language=="fr":
    #WikiFile="BDD/WIKI_prop.txt"
    wdf.setLanguage("fr")
    wdf.setWebSite("frwiki")

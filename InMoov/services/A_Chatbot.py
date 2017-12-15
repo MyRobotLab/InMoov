@@ -32,7 +32,7 @@ if isChatbotActivated:
     if chatBot.wasCleanyShutdowned=="nok":errorSpokenFunc('lang_BadShutdown')
   chatBot.repetition_count(10)
   chatBot.setPath(RuningFolder+"chatbot/")
-  chatBot.startSession("default",MyLanguage)
+  chatBot.startSession("default",Language)
   talkEvent(lang_chatbotActivated)
   chatBot.addTextListener(htmlFilter)
   htmlFilter.addListener("publishText", python.name, "talk")
@@ -55,4 +55,4 @@ def writeAIML():
   
 # wikidata helper
 WikiFile="WIKIDATA_propEN.txt"
-if MyLanguage=="fr":WikiFile="WIKIDATA_propFR.txt"
+if Language=="fr":WikiFile="WIKIDATA_propFR.txt"
