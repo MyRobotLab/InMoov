@@ -121,10 +121,4 @@ if boot_green and isNeopixelActivated:
   sleep(1)
   i01.setNeopixelAnimation("Flash Random", 0, 255, 50, 10)
 sleep(1)
-#first init check
-if CheckVersion() and isChatbotActivated:
-  displayPic(RuningFolder+'system/pictures/update_available_1024-600.jpg')
-  chatBot.getResponse("SYSTEM_NEW_VERSION")
-  
-else:
-  sleepModeWakeUp()
+sleepModeWakeUp()

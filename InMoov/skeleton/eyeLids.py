@@ -3,7 +3,6 @@
 # ##############################################################################
 
 
-
   
 # ##############################################################################
 #               PERSONNAL PARAMETERS
@@ -32,20 +31,7 @@ except:
   isEyeLidsActivated=0
   errorSpokenFunc('ConfigParserProblem','eyelids . config')
   pass
-    
-try:
-  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyelidleft')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyelidleft', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyelidright', 1)
-  
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass   
-  
+
   
 # ##############################################################################
 #                 SERVO FUNCTIONS
@@ -80,5 +66,3 @@ if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LightSide" o
   else:
     #we force parameter if arduino is off
     isEyeLidsActivated=0
-    
-#todo set inverted
