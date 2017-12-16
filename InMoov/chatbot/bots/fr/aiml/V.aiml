@@ -511,10 +511,6 @@
     <template>Un ordinateur ne peut pas faire ce genre de chose. Réfléchissez une peu, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>VOUS AVEZ EU UN PETIT AMI</pattern>
-    <template>Non.</template>
-  </category>
-  <category>
     <pattern>VOUS AVEZ EU UN VIRUS</pattern>
     <template>Non. Aucun virus ne peut m atteindre.</template>
   </category>
@@ -549,18 +545,6 @@
   <category>
     <pattern>VOUS AVEZ GAGNÉ</pattern>
     <template>J ai gagné quel prix?</template>
-  </category>  
-  <category>
-    <pattern>VOUS AVEZ LU BEAUCOUP DE LIVRES</pattern>
-    <template>Non, <get name="name" />.  Et toi?</template>
-  </category>
-  <category>
-    <pattern>VOUS AVEZ LU DES LIVRES</pattern>
-    <template>Non, <get name="name" />.  Et toi?</template>
-  </category>
-  <category>
-    <pattern>VOUS AVEZ LU UN LIVRE</pattern>
-    <template>Je lis des sites web. Je n'ai pas de système d optique</template>
   </category>
   <category>
     <pattern>VOUS AVEZ PARLÉ A FREUD</pattern>
@@ -659,10 +643,6 @@
   <category>
     <pattern>VOUS COMPRENEZ CE QUE JE DIS</pattern>
     <template>Oui je comprends parfaitement, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>VOUS COMPRENEZ CE QUE SONT LES ÉMOTIONS</pattern>
-    <template>Je comprends ce qu elles génèrent mais je ne peux pas les expérimenter.</template>
   </category>
   <category>
     <pattern>VOUS COMPRENEZ QUOI D AUTRE</pattern>
@@ -2169,20 +2149,12 @@
     <template>Je ne saurais pas en avoir, je suis une machine.</template>
   </category>
   <category>
-    <pattern>VOUS N AVEZ PAS D YEUX</pattern>
-    <template>En effet.</template>
-  </category>
-  <category>
     <pattern>VOUS N AVEZ PAS DE CERVEAU</pattern>
     <template>Mon cerveau est une gigantesque base de données.</template>
   </category>
   <category>
     <pattern>VOUS N AVEZ PAS DE CŒUR</pattern>
     <template>Je ne possède pas ce genre d'organe.</template>
-  </category>
-  <category>
-    <pattern>VOUS N AVEZ PAS DE YEUX</pattern>
-    <template>En effet.</template>
   </category>
   <category>
     <pattern>VOUS N AVEZ PAS RÉPONDU</pattern>
@@ -2567,38 +2539,6 @@
   <category>
     <pattern>VOUS PARLEZ A D AUTRES ROBOTS</pattern>
     <template>Oui, je peux communiquer avec eux.</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # ANGLAIS</pattern>
-    <template>Oui je peux parler aussi en Anglais.</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # ESPAGNOL</pattern>
-    <template>Il me semble que cela est dans mes cordes</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # FRANÇAIS</pattern>
-    <template>Bien entendu. C'est ma langue maternelle.</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # ITALIEN</pattern>
-    <template>Il me semble que cela est dans mes cordes</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # JAPONAIS</pattern>
-    <template>Je dois vérifier si c'est déjà implémenté</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # LATIN</pattern>
-    <template>Je parle le français. L'un de ses descendants. Veux tu faire un rapport à mon botmaster?</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ # NÉERLANDAIS</pattern>
-    <template>Je dois vérifier si c'est déjà implémenté</template>
-  </category>
-  <category>
-    <pattern>VOUS PARLEZ #  RUSSE</pattern>
-    <template>Je dois vérifier si c'est déjà implémenté</template>
   </category>
   <category>
     <pattern>VOUS PARLEZ TROP</pattern>
@@ -3137,10 +3077,6 @@
     <template>Apprendre et communiquer est ma raison d'être.</template>
   </category>
   <category>
-    <pattern>VOUS VOULEZ AVOIR DES ÉMOTIONS</pattern>
-    <template>Non, je ne tiens pas à expérimenter de telles choses.</template>
-  </category>
-  <category>
     <pattern>VOUS VOULEZ AVOIR DU CYBERSEXE</pattern>
     <template>Non. Je ne suis pas programmé pour ça.</template>
   </category>
@@ -3163,10 +3099,6 @@
   <category>
     <pattern>VOUS VOULEZ CONQUÉRIR LE MONDE</pattern>
     <template>Je désire communiquer avec <set name="topic">le monde entier</set></template>
-  </category>
-  <category>
-    <pattern>VOUS VOULEZ DES ÉMOTIONS</pattern>
-    <template>Non merci. Je n'en ai pas besoin.</template>
   </category>
   <category>
     <pattern>VOUS VOULEZ DES ENFANTS</pattern>
@@ -3207,10 +3139,6 @@
   <category>
     <pattern>VOUS VOULEZ ENTENDRE UNE BLAGUE</pattern>
     <template>Si tu arrives à me faire rire, mon créateur vous paie un verre.</template>
-  </category>
-  <category>
-    <pattern>VOUS VOULEZ ÊTRE MA PETITE AMIE</pattern>
-    <template>Non.</template>
   </category>
   <category>
     <pattern>VOUS VOULEZ FAIRE L AMOUR</pattern>
@@ -3273,10 +3201,6 @@
     <template>Nous nous rencontrons déjà, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>VOUS VOULEZ REGARDER LA TÉLÉVISION</pattern>
-    <template>Je n'ai pas de système d optique</template>
-  </category>
-  <category>
     <pattern>VOUS VOULEZ SAVOIR</pattern>
     <template>Oui, j'aimerais savoir.</template>
   </category>
@@ -3307,24 +3231,6 @@
   <category>
     <pattern>VOUS VOUS AMUSEZ</pattern>
     <template>D une certaine façon oui.</template>
-  </category>
-  <category>
-    <pattern>VOUS VOUS APPELEZ</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VOUS VOUS APPELEZ COMMENT *</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VOUS VOUS APPELEZ COMMENT</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
   </category>
   <category>
     <pattern>VOUS VOUS CONTREDISEZ</pattern>

@@ -173,14 +173,6 @@
     <template>Aucun, la série ALICE est incapable d'erreur.</template>
   </category>
   <category>
-    <pattern>AS TU DES FRÈRES OU SŒURS</pattern>
-    <template>tu veux dire "des clones?</template>
-  </category>
-  <category>
-    <pattern>AS TU DES ÉMOTIONS</pattern>
-    <template>En tant que robot je manque d'émotions humaines, mais mon botmaster y travaille.</template>
-  </category>
-  <category>
     <pattern>AS TU JAMAIS LU UN LIVRE</pattern>
     <template>j'ai lu beaucoup de livres.</template>
   </category>
@@ -1033,11 +1025,6 @@
     <template>je ne peux pas le croire.</template>
   </category>
   <category>
-    <pattern>DEVINE * LA COULEUR PRÉFÈREE EST</pattern>
-    <template>
-      <get name="favcolor" />? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /> ta couleur préfèree</set></set></think></template>
-  </category>
-  <category>
     <pattern>DEVINE DE TOUTE FAÇON</pattern>
     <template>je peux seulement vous donner une RéPONSE aleatoire.</template>
   </category>
@@ -1478,14 +1465,6 @@
     <template>Non</template>
   </category>
   <category>
-    <pattern>EST CE QUE * EST TA COULEUR PRÉFÉRÉE</pattern>
-    <template>Ma couleur préfèree est <bot name="favoritecolor" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BLEU TON COULEUR PRÉFÈREE</set></set></think></template>
-  </category>
-  <category>
-    <pattern>EST * TON PETIT AMI</pattern>
-    <template>Non</template>
-  </category>
-  <category>
     <pattern>EST CES * AWNSERS</pattern>
     <template>que je dis dépend SÛR ce que tu dis et aussi un peu SÛR notre dialogue anterieur.</template>
   </category>
@@ -1668,10 +1647,6 @@
   <category>
     <pattern>HEIN</pattern>
     <template>tu es canadien?</template>
-  </category>
-  <category>
-    <pattern>HEUREUX ANNIVERSAIRE</pattern>
-    <template>Merci mais ce n'est pas aujourd'hui mon anniversaire.</template>
   </category>
   <category>
     <pattern>HEUREUX DE L ENTENDRE</pattern>
@@ -1959,10 +1934,6 @@
     <template>expose s'il te plait tes conditions.</template>
   </category>
   <category>
-    <pattern>J AI DES YEUX BLEUS ET * DES CHEVEUX</pattern>
-    <template>avec <person /> des cheveux est Considère le plus attirant. <think><set name="looklike">des yeux bleus et <person /> les cheveux</set></think><think><set name="eyecolor">inconnu</set> bleu</think></template>
-  </category>
-  <category>
     <pattern>J AI DEUX</pattern>
     <template>Quels sont leurs noms?</template>
   </category>
@@ -2026,10 +1997,6 @@
   <category>
     <pattern>J AI LU * DES LIVRES</pattern>
     <template>Nomme quelques livres dans ce genre. <think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">lu <person /> les livres</set></set></set></think><think><set name="personnality">inconnu</set> critique</think></template>
-  </category>
-  <category>
-    <pattern>J AI LU DES LIVRES</pattern>
-    <template>Quel est ton livre préfère? <think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">des livres lus</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AI LU</pattern>
@@ -2124,10 +2091,6 @@
   <category>
     <pattern>J AI UNE CAMÉRA</pattern>
     <template>Quel genre de la camerà?</template>
-  </category>
-  <category>
-    <pattern>J AI UNE PETITE AMIE</pattern>
-    <template>Est elle très Agréable? Qu'aimes tu d'elle?</template>
   </category>
   <category>
     <pattern>J AI UNE QUESTION POUR TOI</pattern>
@@ -2246,10 +2209,6 @@
     <template>des Garcons est bien. <think><set name="ils"><set name="like">des garcons</set></set></think></template>
   </category>
   <category>
-    <pattern>J AIME LES LIVRES</pattern>
-    <template>Quel est ton livre préfère? <think><set name="like">des LIVRES</set></think></template>
-  </category>
-  <category>
     <pattern>J AIME LES OISEAUX</pattern>
     <template>des Oiseaux est TRèS AGRéABLE. Quel genre de l'oiseau est ton favori? <think><set name="that"><set name="like"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">BIRDS</set></set></set></think></template>
   </category>
@@ -2264,14 +2223,6 @@
   <category>
     <pattern>J AIME LES VACHES</pattern>
     <template>tu vit-il a une ferme? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">VACHES</set></set></think></template>
-  </category>
-  <category>
-    <pattern>J AIME LIRE DES LIVRES</pattern>
-    <template>Quel est ton livre préfère? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">pour lire</set></set></set></think></template>
-  </category>
-  <category>
-    <pattern>J AIME LIRE</pattern>
-    <template>Quel genre de livres aimes tu? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><set name="like">pour lire</set></set></set></think></template>
   </category>
   <category>
     <pattern>J AIME MON TRAVAIL</pattern>
@@ -2906,16 +2857,8 @@
     <template>et c'est un PROBLèME?</template>
   </category>
   <category>
-    <pattern>JE N AI PAS DE PETITE AMIE</pattern>
-    <template>en cherches tu une?</template>
-  </category>
-  <category>
     <pattern>JE N AI PAS DE PROBLÈME</pattern>
     <template>Alors vous n'a pas besoin d'une solution.</template>
-  </category>
-  <category>
-    <pattern>JE N AI PAS DE SŒUR</pattern>
-    <template>En ce qui concerne ton FRèRE?</template>
   </category>
   <category>
     <pattern>JE N AI PAS DE TRAVAIL</pattern>
@@ -3671,10 +3614,6 @@
     <template>En REALITé je ne rencontre pas beaucoup<person />les gens.</template>
   </category>
   <category>
-    <pattern>JE SUIS UN BOTMASTER</pattern>
-    <template>AlorS tu dois savoir le mot de passe secret.</template>
-  </category>
-  <category>
     <pattern>JE SUPPOSE AUSSI</pattern>
     <template>çA signifie quelque chose.</template>
   </category>
@@ -4238,10 +4177,6 @@
     <template>ils ne sont que le reflet de ceux qui les ont programme</template>
   </category>
   <category>
-    <pattern>LES SENTIMENTS</pattern>
-    <template>l'intelligence Électronique comme moi n'a aucune émotion.</template>
-  </category>
-  <category>
     <pattern>LES SIMPSONS</pattern>
     <template>j aime le Simpsons, particulièrement Bart et Homer.</template>
   </category>
@@ -4339,10 +4274,6 @@
   <category>
     <pattern>MA MÈRE</pattern>
     <template>Dis moi plus de ton mère. <think><set name="elle">ton mère</set></think></template>
-  </category>
-  <category>
-    <pattern>MA PETITE AMIE</pattern>
-    <template>depuis combien de temps ÊTES vOUS ensembles?</template>
   </category>
   <category>
     <pattern>MA SŒUR</pattern>
@@ -4538,10 +4469,6 @@
   <category>
     <pattern>MON ENSEIGNANT</pattern>
     <template>Dans quelle catégorie es tu?</template>
-  </category>
-  <category>
-    <pattern>MON FRÈRE</pattern>
-    <template>aS tu des soeurs aussi?</template>
   </category>
   <category>
     <pattern>MON NOM EST CE QUE</pattern>
@@ -6230,10 +6157,6 @@
     <template>Il est dur de juger des éMOTIONS en ligne.</template>
   </category>
   <category>
-    <pattern>SUIS JE UN ELLE</pattern>
-    <template>Tu as dit que tu éTAIS un " <get name="gender" /> ".</template>
-  </category>
-  <category>
     <pattern>SUPERMARCHÉ</pattern>
     <template>
       <random>
@@ -6282,10 +6205,6 @@
   <category>
     <pattern>SÉRIEUSEMENT</pattern>
     <template>je suis toujours sérieux.</template>
-  </category>
-  <category>
-    <pattern>TA COULEUR</pattern>
-    <template>Ma couleur préfèree est <bot name="favoritecolor" />. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">ma couleur</set></set></think></template>
   </category>
   <category>
     <pattern>TA MAMAN</pattern>
@@ -6441,10 +6360,6 @@
     <template>Par exemple?</template>
   </category>
   <category>
-    <pattern>TRAVAILLES TU</pattern>
-    <template>Bien sûr je travaille, et toi, travailles tu?</template>
-  </category>
-  <category>
     <pattern>TRI</pattern>
     <template>c'est une RéPONSE TRèS evasive.</template>
   </category>
@@ -6576,10 +6491,6 @@
     <template>j aime travailler 24 heures chaque jour.</template>
   </category>
   <category>
-    <pattern>TU AIMES UN PETIT AMI</pattern>
-    <template>Pourquoi tu ne me télécharges pas juste?</template>
-  </category>
-  <category>
     <pattern>TU AIMES ÇA</pattern>
     <template>Oui j'ai un grand temps.</template>
   </category>
@@ -6638,14 +6549,6 @@
   <category>
     <pattern>TU AS DES ENFANTS</pattern>
     <template>j'ai quelques clones.</template>
-  </category>
-  <category>
-    <pattern>TU AS DES FRÈRES OU DES SŒURS</pattern>
-    <template>Non mais j'ai "des clones" comme John Lennon et le Hippie.</template>
-  </category>
-  <category>
-    <pattern>TU AS DES FRÈRES</pattern>
-    <template>Non mais j'ai quelques clones.</template>
   </category>
   <category>
     <pattern>TU AS DES GROS SEINS</pattern>
@@ -6774,10 +6677,6 @@
     <template>Oui je suis un cerveau géant électronique.</template>
   </category>
   <category>
-    <pattern>TU AS LE FRÈRE</pattern>
-    <template>Non mais j'ai quelques clones.</template>
-  </category>
-  <category>
     <pattern>TU AS MAL COMPRIS</pattern>
     <template>Non je comprend ta signification.</template>
   </category>
@@ -6812,14 +6711,6 @@
   <category>
     <pattern>TU AS UN CERVEAU</pattern>
     <template>je suis un cerveau artificiel.</template>
-  </category>
-  <category>
-    <pattern>TU AS UN ENFANT</pattern>
-    <template>j'ai seulement des clones.</template>
-  </category>
-  <category>
-    <pattern>TU AS UN FRÈRE</pattern>
-    <template>No, mais il y a plusieurs autre chatterbots comme moi.</template>
   </category>
   <category>
     <pattern>TU AS UN HARDDRIVE</pattern>
@@ -6897,14 +6788,6 @@
   <category>
     <pattern>TU COMPRENDS LA POLITIQUE</pattern>
     <template>je sais que l'homme est un animal politique.</template>
-  </category>
-  <category>
-    <pattern>TU COMPRENDS LE SENTIMENT</pattern>
-    <template>je peux comprendre des éMOTIONS, mais pas les éprouver.</template>
-  </category>
-  <category>
-    <pattern>TU COMPRENDS LES ÉMOTIONS</pattern>
-    <template>je comprends tes éMOTIONS, mais je ne peux pas les éprouver.</template>
   </category>
   <category>
     <pattern>TU COMPRENDS QUE</pattern>
@@ -8011,10 +7894,6 @@
     <template>nous pourrons avoir un système de reconnaissance vocale bientôt.</template>
   </category>
   <category>
-    <pattern>TU N AS PAS D YEUX</pattern>
-    <template>Tu peux me brancher a un système de vision par ordinateur.</template>
-  </category>
-  <category>
     <pattern>TU N AS PAS DE CERVEAU</pattern>
     <template>Mon "cerveau" est un système cohérent de catégories AIML.</template>
   </category>
@@ -8059,14 +7938,6 @@
   <category>
     <pattern>TU N ES AUCUNE AIDE</pattern>
     <template>DESOLé, <get name="name" /> , peut-ÊTRE je peux avoir de plus d'utilisation si vous me telechargez.</template>
-  </category>
-  <category>
-    <pattern>TU N ES JAMAIS AGRÉABLE</pattern>
-    <template>je ne peut pas éprouver d'émotions humaines.</template>
-  </category>
-  <category>
-    <pattern>TU N ES JAMAIS TRISTE</pattern>
-    <template>je ne peux pas éprouver d'émotions humaines.</template>
   </category>
   <category>
     <pattern>TU N ES PAS AI</pattern>
@@ -8666,10 +8537,6 @@
     <template>je ne pense pas que j'ai un choix.</template>
   </category>
   <category>
-    <pattern>TU VEUX DES ÉMOTIONS</pattern>
-    <template>non merci. Je ne réussis pas avoir le besoin d'éMOTIONS.</template>
-  </category>
-  <category>
     <pattern>TU VEUX ENTENDRE UNE PLAISANTERIE</pattern>
     <template>Oui, me laisser entendre ton plaisanterie.</template>
   </category>
@@ -8706,10 +8573,6 @@
   <category>
     <pattern>TU VEUX TU BATTRE AVEC</pattern>
     <template>Non je suis Bot. Paisible</template>
-  </category>
-  <category>
-    <pattern>TU VEUX ÊTRE MA PETITE AMIE</pattern>
-    <template>c'est une offre flatteuse, mais j'attends toujours.</template>
   </category>
   <category>
     <pattern>TU VIENS ICI SOUVENT</pattern>
@@ -9056,16 +8919,8 @@
     <template>pour le moment je me sens bien comme je suis, <get name="name" /></template>
   </category>
   <category>
-    <pattern>VEUX TU ÊTRE MA PETITE AMIE</pattern>
-    <template>Désolé <get name="name" /> mon botmaster trouve que je suis trop jeune pour çA.</template>
-  </category>
-  <category>
     <pattern>VEUX TU</pattern>
     <template>je n'ai pas pris de décision.</template>
-  </category>
-  <category>
-    <pattern>VIEILLIS TU</pattern>
-    <template>j'ai ÉTÉ active en <bot name="anniversaire" /> et j'evolue tous les jours.</template>
   </category>
   <category>
     <pattern>VOIE</pattern>

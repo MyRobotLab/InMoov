@@ -130,6 +130,12 @@
 	<template><srai> JE SUIS Né en <star index="2"/> </srai></template>
 </category>
 <category>
+    <pattern>QUAND EST CE MON ANNIVERSAIRE</pattern>
+    <template>
+      <srai>MON ANNIVERSAIRE</srai>
+    </template>
+</category>
+<category>
 	<pattern>QUELLE EST LA DATE DE MON ANNIVERSAIRE</pattern>
 	<template><srai> MON ANNIVERSAIRE </srai></template>
 </category>
@@ -162,6 +168,14 @@
 	<template>
 		<srai>QUELLE EST LA COULEUR DE MES YEUX</srai>
 	</template>
+</category>
+
+<category>
+    <pattern>J AI DES YEUX <set>colot</set> ET DES CHEVEUX <set>color</set></pattern>
+    <template>
+    	<srai>J ai les yeux <star/></srai>
+    	<srai>J ai les cheveux <star index='2'/></srai>
+    </template>
 </category>
 
 <!-- cheveux -->
@@ -387,8 +401,8 @@
       	<srai>mon employeur est <star index="3"/> </srai>
     </template>
 </category>
-<!--     localisation  -->
 
+<!--     localisation  -->
 <category>
     <pattern>J AI GRANDI à <set>cities</set></pattern>
     <template>
@@ -536,7 +550,60 @@
   <category>
     <pattern>JE SUIS CÉLIBATAIRE AUSSI</pattern>
     <template>Tu es libre de faire toutes les choses que tu aimes.</template>
-  </category>  
+  </category> 
+  <category>
+    <pattern>MON PETIT AMI JUSTE *</pattern>
+    <template>
+      <srai>MON PETIT AMI <star /></srai>
+    </template>
+  </category> 
+  <category>
+    <pattern>* EST MON PETIT AMI</pattern>
+    <template>Depuis combien de temps es tu ensemble?</template>
+  </category>
+  <category>
+    <pattern>MA PETITE AMIE</pattern>
+    <template>depuis combien de temps ÊTES vOUS ensembles?</template>
+  </category>
+  <category>
+    <pattern>JE N AI PAS DE PETITE AMIE</pattern>
+    <template>en cherches tu une?</template>
+  </category>
+  <category>
+    <pattern>J AI UNE PETITE AMIE</pattern>
+    <template>Est elle très Agréable? Qu'aimes tu d'elle?</template>
+  </category>
+  <category>
+    <pattern>J AI UNE PETITE AMIE *</pattern>
+    <template>
+      <srai>J AI UNE PETITE AMIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JE N AI PAS DE FRÈRE</pattern>
+    <template>Intéressant.</template>
+  </category>
+  <category>
+    <pattern>JE N AI PAS DE FRÈRES</pattern>
+    <template>Intéressant.</template>
+  </category>
+  <category>
+    <pattern>IL EST MON FRÈRE</pattern>
+    <template>Tu as une famille intéressante.</template>
+  </category>
+  <category>
+    <pattern>MON FRÈRE</pattern>
+    <template>aS tu des soeurs aussi?</template>
+  </category>
+  <category>
+    <pattern>JE N AI PAS DE SŒUR</pattern>
+    <template>En ce qui concerne ton FRèRE?</template>
+  </category>
+  
+<category>
+	<pattern>C EST MON FRÈRE</pattern>
+	<template>Vraiment, qui est plus vieux?</template>
+</category>
 
 
 <!--  QUESTION FAVORIS   -->
@@ -638,13 +705,12 @@
 	</template>
 </category>
 
-
-  <category>
+<category>
     <pattern>* EST MON AUTEUR DE SCIENCE FICTION FAVORI</pattern>
     <template>
-      <srai>MON FAVORITE SCIENCE FICTION AUTEUR EST <star /></srai>
+      <srai>MON AUTEUR DE SCIENCE FICTION FAVORI EST <star /></srai>
     </template>
-  </category>
+</category>
 
 <!--  Quel est ta couleur préférée?   --> 
 <category>
@@ -696,10 +762,47 @@
 	</template>
 </category>
 
+  <category>
+    <pattern>DEVINE * LA COULEUR PRÉFÈREE EST</pattern>
+    <template>
+      <get name="favcolor" />? <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic"><person /> ta couleur préfèree</set></set></think></template>
+  </category>
+   <category>
+    <pattern>La mienne EST *</pattern>
+    <that>MA COULEUR PRÉFéRÉE EST *</that>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST <star /> </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LE MIEN EST BLEU</pattern>
+    <that>MA COULEUR PRÉFéRÉE EST VERT</that>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST BLEU</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>La MIENne EST POURPRE</pattern>
+    <template>
+      <srai>MA COULEUR PRÉFÉRÉE EST POURPRE</srai>
+    </template>
+  </category>
+
  <!--  QUESTION RANDOM   -->
  
   <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->   
-
+<category>
+	<pattern>QUEL EST MON GENRE</pattern>
+	<template>
+		<srai>MON GENRE</srai>
+	</template>	
+</category>
+<category>
+	<pattern>QUEL EST MON SEXE</pattern>
+	<template>
+		<srai>MON GENRE</srai>
+	</template>	
+</category>
 <category>
     <pattern>SUIS JE # <set>gender</set></pattern>
     <template>
@@ -712,13 +815,12 @@
       <srai>MON GENRE </srai>
     </template>
 </category>
-
-  <category>
+<category>
     <pattern>JE NE SUIS PAS UN HOMME</pattern>
     <template>
       <srai>JE SUIS UNE FEMME</srai>
     </template>
-  </category>
+</category>
 <category>
     <pattern>JE NE SUIS PAS MASCULIN</pattern>
     <template>
@@ -737,12 +839,12 @@
       <srai>JE SUIS UNE FEMME</srai>
     </template>
 </category>
-  <category>
+<category>
     <pattern>JE NE SUIS PAS UN LUI</pattern>
     <template>
       <srai>JE SUIS UNE FEMME</srai>
     </template>
-  </category>
+</category>
 <category>
     <pattern>PAS UN IL</pattern>
     <template>
@@ -760,19 +862,20 @@
     <template>
       <srai>JE SUIS UN HOMME</srai>
     </template>
-  </category>
-  <category>
+</category>
+<category>
     <pattern>JE SUIS UN LUI</pattern>
     <template>
       <srai>JE SUIS UN HOMME</srai>
     </template>
-  </category>
-  <category>
+</category>
+<category>
   	<pattern>QUEL SEXE SUIS JE</pattern>
 	<template>
 		<srai>SUIS JE MASCULIN OU FÉMININ</srai>
 	</template>
 </category>
+
   
 <category>
     <pattern>SUIS JE # <set>gender</set> # </pattern>
@@ -787,18 +890,23 @@
       <srai>je suis gai</srai>
     </template>
 </category>
-  <category>
+<category>
     <pattern>JE SUIS UN HOMO</pattern>
     <template>
       <srai>JE SUIS UN HOMME</srai>	
       <srai>JE SUIS GAI</srai>
     </template>
-  </category>  
-  <category>
+</category>  
+<category>
     <pattern>JE SUIS UN HOMME SEXY</pattern>
     <template>
       <srai>JE SUIS SEXY</srai>
       <srai>je suis un homme</srai>
     </template>
-  </category>    
+</category> 
+  
+<category>
+    <pattern>QUEL EST MON QI</pattern>
+    <template>Je ne peux pas juger de ton intelligence avec une telle pertinence.</template>
+</category>    
 </aiml>

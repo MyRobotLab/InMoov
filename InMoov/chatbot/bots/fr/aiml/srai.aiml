@@ -622,24 +622,10 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU * ANS</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU * AUSSI</pattern>
     <template>
       <srai>AS TU <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>AS TU * DÉJEUNER</pattern>
-    <template>j aime <srai>QUELLE EST TA NOURRITURE FAVORITE</srai></template>
-  </category>
-  <category>
-    <pattern>AS TU * DÎNER</pattern>
-    <template>j aime <srai>QUELLE EST TA NOURRITURE FAVORITE</srai></template>
   </category>
   <category>
     <pattern>AS TU * PROBLÈMES</pattern>
@@ -672,33 +658,9 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU DE LA FAMILLE</pattern>
-    <template>
-      <srai>AS TU UN PÈRE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU DES BRAS *</pattern>
     <template>
       <srai>AS TU UN CORPS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU DES HOBBIES</pattern>
-    <template>
-      <srai>QU EST CE QUE TON HOBBY</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU DES HOBBY</pattern>
-    <template>
-      <srai>QU EST CE QUE TON HOBBY</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU DES HUMEURS</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
@@ -760,12 +722,6 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU DES RELATIONS</pattern>
-    <template>
-      <srai>AS TU UNE FAMILLE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU DES SEINS AGREABLES</pattern>
     <template>
       <srai>AS TU DES SEINS</srai>
@@ -775,18 +731,6 @@
     <pattern>AS TU DES SEINS AGRÉABLES</pattern>
     <template>
       <srai>AS TU DES SEINS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU DES SOEURS *</pattern>
-    <template>
-      <srai>AS TU DES FRÈRES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU DES ÉMOTIONS *</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
@@ -886,20 +830,6 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU PEUR DE *</pattern>
-    <template>
-      <think>
-        <set name="tmp">
-          <star />
-        </set>
-      </think>
-      <srai>AS TU PEUR</srai>
-      <srai>
-        <get name="tmp" />
-      </srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU PLUS *</pattern>
     <template>
       <srai>TU AS <star /></srai>
@@ -942,18 +872,6 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU QUELQUES ÉMOTION</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU QUELQUES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU UN * FAVORI</pattern>
     <template>
       <srai>QU EST CE QUE TON <star /> FAVORI</srai>
@@ -981,18 +899,6 @@
     <pattern>AS TU UN *</pattern>
     <template>
       <srai>AS TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN AMOUREUX</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN ANNIVERSAIRE</pattern>
-    <template>
-      <srai>QUAND EST TON ANNIVERSAIRE</srai>
     </template>
   </category>
   <category>
@@ -1044,99 +950,9 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU UN HOMME</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN JOB</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN LIVRE FAVORI</pattern>
-    <template>
-      <srai>QU EST CE QUE TON LIVRE FAVORI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN MEC</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN NOM PROPRE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN NOM</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PAPA</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PARTENAIRE</pattern>
-    <template>
-      <srai>ES TU SEULE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PETIT AMI *</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PETIT AMI</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PEU D AMIS</pattern>
-    <template>
-      <srai>AS TU DES AMIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU UN PROBLÈME *</pattern>
     <template>
       <srai>AS TU DES PROBLÈMES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN PÈRE</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN RENDEZ VOUS *</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN RENDEZ VOUS AVEC N IMPORTE QUI</pattern>
-    <template>
-      <srai>ES TU SEULE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UN RENDEZ VOUS</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
     </template>
   </category>
   <category>
@@ -1164,12 +980,6 @@
     </template>
   </category>
   <category>
-    <pattern>AS TU UN TRAVAIL</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>AS TU UN TÉLÉPHONE *</pattern>
     <template>
       <srai>QU EST CE QUE TON NUMÉRO DE TÉLÉPHONE</srai>
@@ -1185,12 +995,6 @@
     <pattern>AS TU UN WEB *</pattern>
     <template>
       <srai>AS TU UN SITE WEB</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>AS TU UNE AMOUREUSE</pattern>
-    <template>
-      <srai>QUI EST TA PETITE AMIE</srai>
     </template>
   </category>
   <category>
@@ -1211,22 +1015,6 @@
       <srai>ES TU CONSCIENTE</srai>
     </template>
   </category>
-  <category>
-    <pattern>AS TU UNE COULEUR FAVORITE</pattern>
-    <template>
-      <srai>QUELLE EST TA COULEUR FAVORITE</srai>
-    </template>
-  </category>
-  <category>
-  	<pattern>QUELLE EST TA COULEUR FAVORITE</pattern>
-	<template>
-		<srai>QUELLE EST TA COULEUR PRÉFÉRÉE</srai>
-	</template>
-  </category>
-  <category>
-  	<pattern>QUELLE EST TA COULEUR PRÉFÉRÉE</pattern>
-	<template>Ma couleur préférée est <bot name="favoritecolor"/>.</template>
-</category>
   <category>
     <pattern>AS TU UNE DATABASE</pattern>
     <template>
@@ -1719,12 +1507,6 @@
     <pattern>CE QUI A FAIS TU VEUX *</pattern>
     <template>
       <srai>QUE VEUX TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CE QUI ARRIVE QUAND *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
@@ -3018,12 +2800,6 @@
     </template>
   </category>
   <category>
-    <pattern>DIS MOI OU TU *</pattern>
-    <template>
-      <srai>OÙ ES TU <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>DIS MOI PARCE QUE *</pattern>
     <template>
       <srai>PARCE QUE <star /></srai>
@@ -3473,12 +3249,6 @@
     <pattern>EN CE QUI CONCERNE TA ROBE</pattern>
     <template>
       <srai>TON COSTUME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>EN CE QUI CONCERNE TON PÈRE</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
     </template>
   </category>
   <category>
@@ -5289,12 +5059,6 @@
     <template>as tu parlé à quelqu'un de Cela? <sr /></template>
   </category>
   <category>
-    <pattern>J AI UN QUOTIENT INTELLECTUEL DE *</pattern>
-    <template>
-      <srai>MON QUOTIENT INTELLECTUEL EST CE QUE <star /> EST</srai>
-    </template>
-  </category>
-  <category>
     <pattern>J AI UN TRÈS *</pattern>
     <template>
       <srai>J AI UN <star /></srai>
@@ -5304,12 +5068,6 @@
     <pattern>J AI UNE PASSION POUR *</pattern>
     <template>
       <srai>J AIME <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>J AI UNE PETITE AMIE *</pattern>
-    <template>
-      <srai>J AI UNE PETITE AMIE</srai>
     </template>
   </category>
   <category>
@@ -8489,12 +8247,6 @@
     </template>
   </category>
   <category>
-    <pattern>JE T APPELLERAI *</pattern>
-    <template>
-      <srai>TON NOM EST CE QUE <star /> EST</srai>
-    </template>
-  </category>
-  <category>
     <pattern>JE T APPRENDRAI QUELQUE *</pattern>
     <template>
       <srai>JE T APPRENDRAI <star /></srai>
@@ -9787,12 +9539,6 @@
     </template>
   </category>
   <category>
-    <pattern>MON PETIT AMI JUSTE *</pattern>
-    <template>
-      <srai>MON PETIT AMI <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>MON RÉEL *</pattern>
     <template>C'est un fait. <srai>MON <star /></srai></template>
   </category>
@@ -10150,12 +9896,6 @@
     <pattern>NOMME UN D ENTRE EUX</pattern>
     <template>
       <srai>QUI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>NOMME</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>
@@ -10972,12 +10712,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>PERSONNELLEMENT JE *</pattern>
     <template>
       <srai>JE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PETIT AMI</pattern>
-    <template>
-      <srai>PARLONS DE TON PETIT AMI</srai>
     </template>
   </category>
   <category>
@@ -12363,12 +12097,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>SORS TU AVEC *</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>SOURIRE *</pattern>
     <template>
       <think>
@@ -12621,12 +12349,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TA LOGIQUE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TA MAMAN *</pattern>
     <template>
       <srai>TA MÈRE <star /></srai>
@@ -12690,12 +12412,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TEL *</pattern>
     <template>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>TES BUTS DANS LA VIE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
     </template>
   </category>
   <category>
@@ -12782,33 +12498,9 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TON BOTMASTER *</pattern>
-    <template>
-      <srai>FAIT <bot name="master" /><star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON BUT EST *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON CHANSON PRÉFÉRÉE</pattern>
-    <template>
-      <srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TON COMMENCEMENT A *</pattern>
     <template>
       <srai>TU COMMENCE À <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON CONNAISSANCE *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
     </template>
   </category>
   <category>
@@ -12821,12 +12513,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TON CORRECT</pattern>
     <template>
       <srai>TU ES CORRECT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TA COULEUR PRÉFÉRÉE</pattern>
-    <template>
-      <srai>QUELLE EST TA COULEUR PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -12950,12 +12636,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TON INTESION</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TON INTÉRESSANT</pattern>
     <template>
       <srai>TU ES INTÉRESSANT</srai>
@@ -13022,12 +12702,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TON NOM</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TON OCCUPE</pattern>
     <template>
       <srai>ES TU OCCUPÉ</srai>
@@ -13052,12 +12726,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TON PETIT AMI</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TON POINT</pattern>
     <template>
       <srai>QU EST CE QUE TON POINT</srai>
@@ -13070,12 +12738,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
         <bot name="master" />
         <star />
       </srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON PÈRE</pattern>
-    <template>
-      <srai>QUI T A CRÉÉ</srai>
     </template>
   </category>
   <category>
@@ -13124,12 +12786,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TON VRAIMENT *</pattern>
     <template>
       <srai>TON <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -13197,18 +12853,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TOUT LE MONDE DÉJÀ *</pattern>
     <template>
       <srai>TOUT LE MONDE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TRAVAILLE TU</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TRAVAILLES TU *</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
     </template>
   </category>
   <category>
@@ -13394,12 +13038,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TU AIMES AVOIR LE DÎNER *</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TU AIMES BEAUCOUP *</pattern>
     <template>
       <srai>AIMES TU <star /></srai>
@@ -13421,12 +13059,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TU AIMES DES TRAINS *</pattern>
     <template>
       <srai>AIMES TU LES TRAINS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU AIMES DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -13652,18 +13284,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TU AS DES DESIRS</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU AS DES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TU AS DIS TU AS VOULU *</pattern>
     <template>
       <srai>TU VEUX <star /></srai>
@@ -13734,12 +13354,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TU AS EPOUSE</pattern>
-    <template>
-      <srai>ES TU MARIÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TU AS ÉTÉ MENTI *</pattern>
     <template>
       <srai>ON T A MENTI</srai>
@@ -13749,12 +13363,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TU AS ÉTÉ MENTI</pattern>
     <template>
       <srai>ON T A MENTI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU AS EU PEUR *</pattern>
-    <template>
-      <srai>AS TU PEUR <star /></srai>
     </template>
   </category>
   <category>
@@ -14037,12 +13645,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TU AS UN AVIS *</pattern>
     <template>
       <srai>TU AS UN AVIS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU AS UN BOYFIREND</pattern>
-    <template>
-      <srai>AS TU UN PETIT AMI</srai>
     </template>
   </category>
   <category>
@@ -14569,12 +14171,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TU ES DANS *</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TU ES DES ORDURES</pattern>
     <template>
       <srai>TU ES MERDIQUE</srai>
@@ -14781,12 +14377,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>TU ES NOMME *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>TU ES NOTOIREMENT *</pattern>
     <template>
       <srai>TU ES <star /></srai>
@@ -14814,12 +14404,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>TU ES PLEIN D HUMOUR</pattern>
     <template>
       <srai>TU ES DRÔLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU ES PLUS VIEUX *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -16912,12 +16496,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>UNE RELATION</pattern>
-    <template>
-      <srai>QUI EST TON PETIT AMI</srai>
-    </template>
-  </category>
-  <category>
     <pattern>UNE SEXMACHINE</pattern>
     <template>
       <srai>UN SEXBOT</srai>
@@ -17071,18 +16649,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>VEUX TU MARIE *</pattern>
-    <template>
-      <srai>VEUX TU M ÉPOUSER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VEUX TU MARIÉ *</pattern>
-    <template>
-      <srai>VEUX TU M ÉPOUSER <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>VEUX TU ME DIRE *</pattern>
     <template>
       <srai>DIS MOI <star /></srai>
@@ -17155,12 +16721,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     </template>
   </category>
   <category>
-    <pattern>VIEIL ES TU</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>VIES ENCORE</pattern>
     <template>
       <srai>QUOI</srai>
@@ -17170,12 +16730,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>VIT DANS *</pattern>
     <template>
       <srai>JE VIS DANS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VOIS TU *</pattern>
-    <template>
-      <srai>ES TU MARIÉE</srai>
     </template>
   </category>
   <category>
@@ -17419,12 +16973,6 @@ Ouais je vois ce que tu en veux dire. <srai>OUI</srai><srai><get name="tmp" /></
     <pattern>YEP</pattern>
     <template>
       <srai>OUI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>YEUX</pattern>
-    <template>
-      <srai>AS TU DES YEUX</srai>
     </template>
   </category>
   <category>

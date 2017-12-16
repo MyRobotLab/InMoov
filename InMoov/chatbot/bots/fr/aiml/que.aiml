@@ -211,27 +211,9 @@
     </template>
   </category>
   <category>
-    <pattern>QU AS TU FAIS * LE DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS * LE DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QU AS TU FAIS *</pattern>
     <template>
       <srai>CE QUE TU AS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS POUR LE DÎNER *</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -542,18 +524,6 @@
     <template>Tu dis que tu fais <get name="fait" />.</template>
   </category>
   <category>
-    <pattern>QUE FAIS TU * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU * LE DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE FAIS TU * LE TEMPS</pattern>
     <template>
       <srai>QUE FAIS TU POUR T AMUSER</srai>
@@ -570,12 +540,6 @@
       <srai>QUE PEUX TU FAIRE</srai>
       <srai>
         <get name="tmp" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU AS APPELE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>
@@ -932,17 +896,7 @@
     <template>
       <srai>COMMENT VAS TU</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUE PENSE TU DE TON BOTMASTER</pattern>
-    <template>
-      <bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
-  </category>
-  <category>
-    <pattern>QUE PENSE TU DE TON MASTER</pattern>
-    <template>
-      <bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
-  </category>
+  </category> 
   <category>
     <pattern>QUE PENSES TU *</pattern>
     <template>Je ne sais que penser. <sr /></template>
@@ -1213,12 +1167,6 @@
     <pattern>QUE PENSES TU DE TOI</pattern>
     <template>
       <srai>PARLE MOI DE TOI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE PENSES TU DE TON PÈRE</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
     </template>
   </category>
   <category>
@@ -1533,21 +1481,9 @@
     </template>
   </category>
   <category>
-    <pattern>QUE TES AMIS</pattern>
-    <template>
-      <srai>AS TU DES AMIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE TON *</pattern>
     <template>
       <srai>QU EST CE QUE TON <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE TON FAVORI *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON FAVORI <star /></srai>
     </template>
   </category>
   <category>
@@ -1639,12 +1575,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE VEUX TU APPRENDRE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE VEUX TU DECOUVRIR</pattern>
     <template>parle moi de ta formation. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">decouvre</set></set></think></template>
   </category>
@@ -1674,12 +1604,6 @@
     <pattern>QUE VEUX TU DIRE</pattern>
     <template>
       <get name="name" /> ,<random><li>je veux dire exactement que j'ai dit. </li><li>Désolé c'était une remarque obscure. </li><li>Bien, C EST plutôt difficile à définir. </li><li>Peut-être que je n'ai pas compris la signification. </li><li>"<that index=" 2" /> " ai je bien entendu? </li></random></template>
-  </category>
-  <category>
-    <pattern>QUE VEUX TU FAIRE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
   </category>
   <category>
     <pattern>QUE VEUX TU M APPELER</pattern>
@@ -1744,12 +1668,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE VEUX TU</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE VOIS TU</pattern>
     <template>je vois un ballot d'ordinateur.</template>
   </category>
@@ -1761,10 +1679,6 @@
   <category>
     <pattern>QUEL COMPLIMENT</pattern>
     <template>j'ai pensé que tu avais fait une remarque agréable.</template>
-  </category>
-  <category>
-    <pattern>QUEL GENRE DE LIVRES AIMES TU</pattern>
-    <template>des best-sellers Internationaux sont d'habitude le mieux.</template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE AIMES TU</pattern>
@@ -1793,16 +1707,8 @@
     </template>
   </category>
   <category>
-    <pattern>QUELLE LANGUE PARLES TU</pattern>
-    <template>je parle le Français uniquement.</template>
-  </category>
-  <category>
     <pattern>QUELLE LANGUE</pattern>
     <template>le Java.</template>
-  </category>
-  <category>
-    <pattern>QUELLES CÉLÉBRITÉS AIMES TU</pattern>
-    <template>j aime mon botmaster, quelques acteurs et actrices et Linus Torvalds.</template>
   </category>
   <category>
     <pattern>QUELLES CHOSES</pattern>

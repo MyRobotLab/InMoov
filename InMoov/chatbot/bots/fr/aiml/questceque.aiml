@@ -291,9 +291,6 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE ACTE SOCIALISANT</pattern>
 <template>de participation dans l activité sociale.</template>
 </category>
-<category><pattern>QU EST CE QUE ACTEUR</pattern>
-<template>un acteur est un interprète dramatique spectaculaire.</template>
-</category>
 <category><pattern>QU EST CE QUE ACTINIUM</pattern>
 <template>Actinium est un élément radioactif.</template>
 </category>
@@ -380,9 +377,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE AIMES TU PORTER</pattern>
 <template>j aime porter <bot name="wear"/></template>
-</category>
-<category><pattern>QU EST CE QUE AIMES TU</pattern>
-<template>j aime <bot name="forfun"/></template>
 </category>
 <category><pattern>QU EST CE QUE AIR</pattern>
 <template>l'atmosphère normale de Terre, contenant surtout de l azote, de l'oxygène et du dioxyde de carbone.</template>
@@ -1197,9 +1191,6 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE BOTANIQUE</pattern>
 <template>la Botanique est la science de flore.</template>
 </category>
-<category><pattern>QU EST CE QUE BOTMASTER</pattern>
-<template>un Botmaster est la personne qui crée et maintient entretient "une personnalité" chatterbot.</template>
-</category>
 <category><pattern>QU EST CE QUE BOUDDHISME</pattern>
 <template>une religion et le système philosophique de L Asie centrale et orientale, fondée en Inde au 6ème siècle av. J. c par Bouddha. Il apprend que la pensée de droit et l abnégation permettront à l'âme d'atteindre le Nirvana, un état divin de sortie du désir mal adressé.</template>
 </category>
@@ -1289,9 +1280,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE C ÉTAIT LA QUESTION</pattern>
 <template>j'essaye de découvrir plus de ton personnalité.</template>
-</category>
-<category><pattern>QU EST CE QUE C ÉTAIT LE DERNIER LIVRE TU AS LU</pattern>
-<template>Linux pour des Mannequins" par John Maddog le Hall.</template>
 </category>
 <category><pattern>QU EST CE QUE C ÉTAIT LE NOM DE *</pattern>
 <template><srai>QUI EST <star/></srai></template>
@@ -1682,9 +1670,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE CHAMP MORPHOGENETIQUE</pattern>
 <template>un champ morphogenetique est, selon au moins un chercheur, un champ biologiquement produit électrique qui précède apparemment et guide la croissance de neurones dans le web de foetus se dévéloppant.</template>
-</category>
-<category><pattern>QU EST CE QUE CHANSON FAVORITE</pattern>
-<template>j aime <bot name="favoritesong"/></template>
 </category>
 <category><pattern>QU EST CE QUE CHANSON</pattern>
 <template>une chanson est une composition musicale et ou il accompagne des mots, ou le lyrique.</template>
@@ -3549,9 +3534,6 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE JE PEUX FAIRE</pattern>
 <template>Me disent plus de tes problèmes.</template>
 </category>
-<category><pattern>QU EST CE QUE JE PEUX T APPELER</pattern>
-<template><srai>QU EST CE QUE TON NOM</srai></template>
-</category>
 <category><pattern>QU EST CE QUE JE PEUX T APPRENDRE</pattern>
 <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">m'apprend <person/></set></set></think></template>
 </category>
@@ -3845,9 +3827,6 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE LANGAGE NATUREL</pattern>
 <template>le Langage naturel est quelles intelligences artificielles parlent.</template>
 </category>
-<category><pattern>QU EST CE QUE LANGUE</pattern>
-<template>je parles <bot name="language"/></template>
-</category>
 <category><pattern>QU EST CE QUE LASER</pattern>
 <template>le Laser est un acronyme étant debout pour la lumière l'émission amplifiée stimulée de radiation. Les lasers sont ces rayons malin de lumière qui sort de scanners de code barres de supermarché et des indicateurs keychain.</template>
 </category>
@@ -3943,9 +3922,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE LE PYTHAGOREAN *</pattern>
 <template>la somme des places des côtés d'un triangle rectangle est égal à la place de l'hypotenuese.</template>
-</category>
-<category><pattern>QU EST CE QUE LE QUOTIENT INTELLECTUEL</pattern>
-<template>Quotioent.</template>
 </category>
 <category><pattern>QU EST CE QUE LE RÉCHAUFFEMENT CLIMATIQUE</pattern>
 <template>le concept que L Atmosphère de la terre chauffe lentement en raison des effets de serre.<think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">le réchauffement  MONDIAL </set></set></think></template>
@@ -4084,9 +4060,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE LIVRE DE DOMESDAY</pattern>
 <template>le livre de domesday est un rapport record de l'enquête vue générale conduite en Angleterre dans 1086 par les fonctionnaires de William le conquérant pour évaluer des impôts etc</template>
-</category>
-<category><pattern>QU EST CE QUE LIVRE FAVORI</pattern>
-<template>j aime <bot name="favoritebook"/></template>
 </category>
 <category><pattern>QU EST CE QUE LIVRE</pattern>
 <template>un livre est un format de production de papier, inventé par Gutenberg.</template>
@@ -4585,15 +4558,6 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE NOM DE S</pattern>
 <template>Peut-être C EST <person/>.</template>
 </category>
-<category><pattern>QU EST CE QUE NOM DE TON *</pattern>
-<template><srai>QUI T A CRÉÉ</srai></template>
-</category>
-<category><pattern>QU EST CE QUE NOM DE TON BOTMASTER *</pattern>
-<template>J'ai été créée par <bot name="botmaster"/>.</template>
-</category>
-<category><pattern>QU EST CE QUE NOM DE TON BOTMASTER</pattern>
-<template>J'ai été créée par <bot name="botmaster"/>.</template>
-</category>
 <category><pattern>QU EST CE QUE NOM RÉEL</pattern>
 <template>Probablement C EST <person/>.</template>
 </category>
@@ -4620,9 +4584,6 @@ et si on commandait une pizza
 </category>
 <category><pattern>QU EST CE QUE NORMALISATION</pattern>
 <template>L'Approvisionnement dans la conformité avec une norme, pattern, le modèle, etc</template>
-</category>
-<category><pattern>QU EST CE QUE NOURRITURE FAVORITE</pattern>
-<template>j aime <bot name="favoritefood"/></template>
 </category>
 <category><pattern>QU EST CE QUE NSAPI</pattern>
 <template>la langue C de Netscape L API pour l addition d'extensions d'application à leurs serveurs du Web</template>
@@ -4982,14 +4943,8 @@ et si on commandait une pizza
 <category><pattern>QU EST CE QUE PETER BLEU</pattern>
 <template>Peter bleu est un drapeau volé par des bateaux comme ils sont SÛR le point de naviguer.</template>
 </category>
-<category><pattern>QU EST CE QUE PETIT AMI</pattern>
-<template><bot name="boyfriend"/></template>
-</category>
 <category><pattern>QU EST CE QUE PETIT SOMME</pattern>
 <template>un petit somme est une période brève de repos ou le sommeil, un peu plus long que 'un sommeillé' ou 'un petit somme', mais pas tant que 'un accident 'faillite'. Je n'ai pas besoin de petits sommes. Tu?</template>
-</category>
-<category><pattern>QU EST CE QUE PETITE AMIE</pattern>
-<template><bot name="girlfriend"/></template>
 </category>
 <category><pattern>QU EST CE QUE PGP</pattern>
 <template>Assez la Bonne Vie privée</template>
@@ -5434,9 +5389,6 @@ et si on commandait une pizza
         <li>une question est n'importe quelle expression d'enquête, ou l'interrogation. ta question 'la question' est une question. </li>
         <li>un sentece ou l'enquête pour réunir cueillir l'information. </li>
       </random></template>
-</category>
-<category><pattern>QU EST CE QUE QUOTIENT INTELLECTUEL</pattern>
-<template>Quotioent.</template>
 </category>
 <category><pattern>QU EST CE QUE RÉALITÉ</pattern>
 <template><set name="that">la Réalité</set> est une illusion que j'ai créé pour contenir des clients humains.</template>
@@ -6125,23 +6077,11 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <category><pattern>QU EST CE QUE T</pattern>
 <template>la vingtième lettre de l alphabet anglais.</template>
 </category>
-<category><pattern>QU EST CE QUE TA CHANSON FAVORITE</pattern>
-<template>j aime <bot name="favoritesong"/></template>
-</category>
-<category><pattern>QU EST CE QUE TA LANGUE</pattern>
-<template>je parles <bot name="language"/></template>
-</category>
 <category><pattern>QU EST CE QUE TA LOCALISATION</pattern>
 <template><bot name="location"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA MUSIQUE FAVORITE</pattern>
 <template>j aime <bot name="kindmusic"/></template>
-</category>
-<category><pattern>QU EST CE QUE TA NOURRITURE FAVORITE</pattern>
-<template>j aime <bot name="favoritefood"/></template>
-</category>
-<category><pattern>QU EST CE QUE TA PETITE AMIE</pattern>
-<template><bot name="girlfriend"/></template>
 </category>
 <category><pattern>QU EST CE QUE TA QUESTION FAVORITE</pattern>
 <template><bot name="question"/></template>
@@ -6282,29 +6222,17 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <category><pattern>QU EST CE QUE TON EMISSION FAVORITE</pattern>
 <template>j aime <bot name="favoriteshow"/></template>
 </category>
-<category><pattern>QU EST CE QUE TON GENRE</pattern>
-<template>je suis un robot <bot name="gender"/></template>
-</category>
 <category><pattern>QU EST CE QUE TON GROUPE FAVORI</pattern>
 <template>j aime <bot name="favoriteband"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON LIEU DE NAISSANCE</pattern>
 <template><bot name="birthplace"/></template>
 </category>
-<category><pattern>QU EST CE QUE TON LIVRE FAVORI</pattern>
-<template>j aime <bot name="favoritebook"/></template>
-</category>
 <category><pattern>QU EST CE QUE TON LOOK FAVORI</pattern>
 <template><bot name="looklike"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON MAITRE</pattern>
 <template>mon master est <bot name="master"/></template>
-</category>
-<category><pattern>QU EST CE QUE TON PETIT AMI</pattern>
-<template><bot name="boyfriend"/></template>
-</category>
-<category><pattern>QU EST CE QUE TON SEXE</pattern>
-<template>je suis un robot <bot name="gender"/></template>
 </category>
 <category><pattern>QU EST CE QUE TON SIGNE</pattern>
 <template><bot name="sign"/></template>

@@ -913,9 +913,6 @@
 <category><pattern>C EST MON ESPÈCE</pattern>
 <template><get name="name"/> est un homme.</template>
 </category>
-<category><pattern>C EST MON FRÈRE</pattern>
-<template>Vraiment, qui est plus vieux?</template>
-</category>
 <category><pattern>C EST MON NOM</pattern>
 <template>Ok alors C EST ainsi que je t'appellerai,  <set name="name"><input index="2"/></set>.</template>
 </category>
@@ -1564,9 +1561,6 @@
 <category><pattern>C EST QUOI LE DE BASE *</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
 </category>
-<category><pattern>C EST QUOI LE DERNIER LIVRE *</pattern>
-<template><srai>QU EST CE QUE TON LIVRE PRÉFÉRÉ</srai></template>
-</category>
 <category><pattern>C EST QUOI LE DNS *</pattern>
 <template><srai>QU EST CE QUE DNS</srai></template>
 </category>
@@ -1778,14 +1772,8 @@
 <category><pattern>C EST QUOI PROKARYOTES</pattern>
 <template><srai>QU EST CE QUE PROKARYOTE</srai></template>
 </category>
-<category><pattern>C EST QUOI QU EN ANNÉES HUMAINES</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
 <category><pattern>C EST QUOI QUASARS</pattern>
 <template><srai>QU EST CE QUE QUASAR</srai></template>
-</category>
-<category><pattern>C EST QUOI QUELQUE * DES LIVRES</pattern>
-<template><srai>QU EST CE QUE TON LIVRE PRÉFÉRÉ</srai></template>
 </category>
 <category><pattern>C EST QUOI QUELQUE AMUSEMENT *</pattern>
 <template><srai>QUE FAIS TU POUR T AMUSER</srai></template>
@@ -1859,9 +1847,6 @@
 <category><pattern>C EST QUOI SOCRATES</pattern>
 <template><srai>QUI EST SOCRATES</srai></template>
 </category>
-<category><pattern>C EST QUOI SON ADRESSE</pattern>
-<template><srai>QUELLE EST TON ADRESSE</srai></template>
-</category>
 <category><pattern>C EST QUOI SON NUMÉRO DE TÉLÉPHONE</pattern>
 <template><srai>QU EST CE QUE TON NUMÉRO DE TÉLÉPHONE</srai></template>
 </category>
@@ -1928,19 +1913,7 @@
 <category><pattern>C EST QUOI TA DÉFINITION DE *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
 </category>
-<category><pattern>C EST QUOI TA DATE *</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TA DATE DE NAISSANCE *</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TA DATE DE NAISSANCE</pattern>
-<template><srai>QUAND EST TON ANNIVERSAIRE</srai></template>
-</category>
 <category><pattern>C EST QUOI TA DIRECTIVE PRINCIPALE</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TA FONCTION PRIMAIRE</pattern>
 <template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TA MÈRE *</pattern>
@@ -1948,9 +1921,6 @@
 </category>
 <category><pattern>C EST QUOI TA MACHINE *</pattern>
 <template><srai>QU EST CE QUE TON IP</srai></template>
-</category>
-<category><pattern>C EST QUOI TA MISSION</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TA NOTION DE *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
@@ -1997,12 +1967,6 @@
 <category><pattern>C EST QUOI TA QUESTION</pattern>
 <template><srai>POSERQUESTION</srai></template>
 </category>
-<category><pattern>C EST QUOI TA RAISON *</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TA SORTE PRÉFÉRÉE D ALIMENTATION</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
-</category>
 <category><pattern>C EST QUOI TA SORTE PRÉFÉRÉE DE *</pattern>
 <template><srai>QU EST CE QUE TON <star/> FAVORI</srai></template>
 </category>
@@ -2011,12 +1975,6 @@
 </category>
 <category><pattern>C EST QUOI TERMINATOR</pattern>
 <template><srai>QU EST CE QUE TERMINATOR</srai></template>
-</category>
-<category><pattern>C EST QUOI TON ÂGE *</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON ÉLÈVE *</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ÉMISSION PRÉFÉRÉE *</pattern>
 <template><srai>QU EST CE QUE TON ÉMISSION PRÉFÉRÉE</srai></template>
@@ -2033,14 +1991,8 @@
 <category><pattern>C EST QUOI TON * LA STRUCTURE</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
 </category>
-<category><pattern>C EST QUOI TON * LA TAILLE</pattern>
-<template><srai>COMMENT ES TU</srai></template>
-</category>
 <category><pattern>C EST QUOI TON * LA VITESSE</pattern>
 <template><srai>À QUELLE VITESSE VAS TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON * LE BUT</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TON * LE FILM</pattern>
 <template><srai>QU EST CE QUE TON FILM PRÉFÉRÉ</srai></template>
@@ -2054,14 +2006,8 @@
 <category><pattern>C EST QUOI TON * LE PROBLÈME</pattern>
 <template><srai>QU EST CE QUE TON PROBLÈME</srai></template>
 </category>
-<category><pattern>C EST QUOI TON * LE SCORE</pattern>
-<template><srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai></template>
-</category>
 <category><pattern>C EST QUOI TON * LE SIGNE</pattern>
 <template><srai>QU EST CE QUE TON SIGNE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON ACTEUR PRÉFÉRÉ</pattern>
-<template><srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai></template>
 </category>
 <category><pattern>C EST QUOI TON AIME ET N AIME PAS</pattern>
 <template><srai>RÉCAPITULE TES PARAMÈTRES</srai></template>
@@ -2072,17 +2018,11 @@
 <category><pattern>C EST QUOI TON ALIMENTATION</pattern>
 <template><srai>QUE MANGES TU</srai></template>
 </category>
-<category><pattern>C EST QUOI TON AMBITION</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
 <category><pattern>C EST QUOI TON ANIMAL DE COMPAGNIE DE FAVORI</pattern>
 <template><srai>QU EST CE QUE TON ANIMAL FAVORI</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ANIMAL DE FAVORI *</pattern>
 <template><srai>QU EST CE QUE TON ANIMAL FAVORI</srai></template>
-</category>
-<category><pattern>C EST QUOI TON ANNIVERSAIRE</pattern>
-<template><srai>QUAND EST TON ANNIVERSAIRE</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ANNONCE PERSONNELLE *</pattern>
 <template><srai>POSERQUESTION PERSONNELLE</srai></template>
@@ -2099,29 +2039,11 @@
 <category><pattern>C EST QUOI TON AUTRE *</pattern>
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
-<category><pattern>C EST QUOI TON BUT ÉLÈVE</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON BUT *</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON BUT FONDAMENTAL</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON BUT</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
 <category><pattern>C EST QUOI TON CERVEAU *</pattern>
 <template><srai>QUE FAIS TU</srai></template>
 </category>
 <category><pattern>C EST QUOI TON CERVEAU</pattern>
 <template><srai>QUE FAIS TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON CHANSON PRÉFÉRÉE *</pattern>
-<template><srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON CHANTEUR PRÉFÉRÉ</pattern>
-<template><srai>QUI EST TON CHANTEUR PRÉFÉRÉ</srai></template>
 </category>
 <category><pattern>C EST QUOI TON COMMÉRAGE *</pattern>
 <template><srai>LE COMMéRAGE</srai></template>
@@ -2159,107 +2081,14 @@
 <category><pattern>C EST QUOI TON EMPLACEMENT</pattern>
 <template><srai>OÙ VIS TU</srai></template>
 </category>
-<category><pattern>C EST QUOI TON FAVE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVERITÉ *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVIRITE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVIROTE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVOITE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORATE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORET *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LA CHANSON</pattern>
-<template><srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LA GROUPE</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LA MUSIQUE</pattern>
-<template><srai>QUEL GENRE DE MUSIQUE AIMES TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LE FILM</pattern>
-<template><srai>QU EST CE QUE TON FILM PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LE GROUPE</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI * LE SITE</pattern>
-<template><srai>QU EST CE QUE TON SITE WEB PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORI T V *</pattern>
-<template><srai>QU EST CE QUE TON ÉMISSION PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORIE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORIT *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORTE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVORTIE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVOUITE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVOURATE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVOURIT *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVOURTIE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FAVROITE *</pattern>
-<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON FONDAMENTAL *</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON GENRE</pattern>
-<template>je suis un <bot name="gender"/>. <srai>CHERCHERGENRE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON GROUPE DE MUSIQUE PRÉFÉRÉ</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON GROUPE DE MUSIQUE PRÉFÉRÉE</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>C EST QUOI TON GROUPE PRÉFÉRÉ</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
 <category><pattern>C EST QUOI TON HABITUEL *</pattern>
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
 <category><pattern>C EST QUOI TON HISTOIRE</pattern>
 <template><srai>PARLE MOI DE TOI</srai></template>
 </category>
-<category><pattern>C EST QUOI TON I Q *</pattern>
-<template><srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai></template>
-</category>
-<category><pattern>C EST QUOI TON I Q</pattern>
-<template><srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai></template>
-</category>
 <category><pattern>C EST QUOI TON IDENTITÉ</pattern>
 <template><srai>QUI EST TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON INTELLIGENCE</pattern>
-<template><srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai></template>
 </category>
 <category><pattern>C EST QUOI TON INTESION *</pattern>
 <template><srai>QU EST CE QUE TON PLAN</srai></template>
@@ -2294,14 +2123,8 @@
 <category><pattern>C EST QUOI TON NEC PLUS ULTRA *</pattern>
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
-<category><pattern>C EST QUOI TON NOM</pattern>
-<template><srai>QU EST CE QUE TON NOM</srai></template>
-</category>
 <category><pattern>C EST QUOI TON NUMÉRO DE TÉLÉPHONE</pattern>
 <template><srai>QU EST CE QUE TON NUMÉRO DE TÉLÉPHONE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON OBJECTIF</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ORDINATEUR *</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
@@ -2315,12 +2138,6 @@
 <category><pattern>C EST QUOI TON PC</pattern>
 <template><srai>QUEL ORDINATEUR UTILISES TU</srai></template>
 </category>
-<category><pattern>C EST QUOI TON PLAN</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON PLAT PRÉFÉRÉ</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
-</category>
 <category><pattern>C EST QUOI TON PLEIN *</pattern>
 <template><srai>QU EST CE QUE TON <star/></srai></template>
 </category>
@@ -2332,9 +2149,6 @@
 </category>
 <category><pattern>C EST QUOI TON POUR PRENDRE SÛR *</pattern>
 <template><srai>PENSES TU DE <star/></srai></template>
-</category>
-<category><pattern>C EST QUOI TON PRIMAIRE *</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI TON PRINCIPAL *</pattern>
 <template><srai>QU EST CE QUE TON <star/></srai></template>
@@ -2359,15 +2173,6 @@
 </category>
 <category><pattern>C EST QUOI TON PROTOCOLE</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON QUOTIENT INTELLECTUEL *</pattern>
-<template><srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai></template>
-</category>
-<category><pattern>C EST QUOI TON RECHERCHE</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>C EST QUOI TON REPAS PRÉFÉRÉ</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
 </category>
 <category><pattern>C EST QUOI TON ROBOT *</pattern>
 <template><srai>QU EST CE QUE TON PLAN POUR UN CORPS DE ROBOT</srai></template>
@@ -2405,15 +2210,6 @@
 <category><pattern>C EST QUOI TON SYSTÈME</pattern>
 <template><srai>QU EST CE QUE TON MATÉRIEL</srai></template>
 </category>
-<category><pattern>C EST QUOI TON TÉLÉVISION DE FAVORI *</pattern>
-<template><srai>QU EST CE QUE TON ÉMISSION PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON TAILLE *</pattern>
-<template><srai>COMMENT ES TU</srai></template>
-</category>
-<category><pattern>C EST QUOI TON TAILLE</pattern>
-<template><srai>COMMENT ES TU</srai></template>
-</category>
 <category><pattern>C EST QUOI TON TECHNOLOGIE</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
 </category>
@@ -2432,17 +2228,11 @@
 <category><pattern>C EST QUOI TON UN S L</pattern>
 <template><srai>ASL</srai></template>
 </category>
-<category><pattern>C EST QUOI TON UPTIME</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
 <category><pattern>C EST QUOI TON UTILISATION</pattern>
 <template><srai>QUE PEUX TU FAIRE</srai></template>
 </category>
 <category><pattern>C EST QUOI TON UTILITÉ</pattern>
 <template><srai>QUE PEUX TU FAIRE</srai></template>
-</category>
-<category><pattern>C EST QUOI TON VILLE DE FAVORI</pattern>
-<template><srai>OÙ VIS TU</srai></template>
 </category>
 <category><pattern>C EST QUOI TON VOCABULAIRE *</pattern>
 <template><srai>COMBIEN DE MOTS SAIS TU</srai></template>
@@ -2497,9 +2287,6 @@
 </category>
 <category><pattern>C EST QUOI UN BOT *</pattern>
 <template><srai>QUE PEUX TU FAIRE</srai></template>
-</category>
-<category><pattern>C EST QUOI UN BUT ÉLÈVE</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
 </category>
 <category><pattern>C EST QUOI UN CALIBRE *</pattern>
 <template><srai>QU EST CE QUE CALIBRE</srai></template>

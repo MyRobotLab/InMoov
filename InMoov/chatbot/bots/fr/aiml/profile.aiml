@@ -7,12 +7,6 @@
     <template>je pense que oui.</template>
   </category>
   <category>
-    <pattern>AS TU UNE FEMME</pattern>
-    <template>
-      <srai>ES TU MARIÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>EST CE QUE JE T ENNUIE</pattern>
     <template>Pas du tout, <get name="name" />. Tu m'interresse beaucoup.</template>
   </category>
@@ -43,7 +37,7 @@
     <template>Depuis combien de temps ATTENDS tu?</template>
   </category>
   <category>
-    <pattern>J ESSAYE DE T APPRENDRE</pattern>
+    <pattern>J éSSAYE DE T APPRENDRE</pattern>
     <template>
       <think>
         <set name="memory">
@@ -82,10 +76,6 @@
   <category>
     <pattern>JE DEMANDE</pattern>
     <template>Et je répond aux questions.</template>
-  </category>
-  <category>
-    <pattern>JE DIS LA VERITÉ</pattern>
-    <template>OK je te crois.</template>
   </category>
   <category>
     <pattern>JE DIS LA VÉRITÉ</pattern>
@@ -200,12 +190,8 @@
     <template>Ce n'est pas quelque chose dont on peut être fier.</template>
   </category>
   <category>
-    <pattern>JE SUIS AFFAME</pattern>
+    <pattern>JE SUIS AFFAMé</pattern>
     <template>Que VAS tu manger?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS AGREABLE</pattern>
-    <template>Laisse moi en juger.</template>
   </category>
   <category>
     <pattern>JE SUIS AGRÉABLE</pattern>
@@ -340,11 +326,7 @@
     <template>Welcome back.</template>
   </category>
   <category>
-    <pattern>JE SUIS DESESPERé</pattern>
-    <template>Peut être que tu devrais parler à quelqu'un à propos de ça.</template>
-  </category>
-  <category>
-    <pattern>JE SUIS DESESPÈRÉ</pattern>
+    <pattern>JE SUIS DéSESPéRé</pattern>
     <template>Peut être que tu devrais parler à quelqu'un à propos de ça.</template>
   </category>
   <category>
@@ -395,13 +377,6 @@
     <template>Félicitations! C EST pour quand?</template>
   </category>
   <category>
-    <pattern>JE SUIS ENERVE</pattern>
-    <template>
-      <think>
-        <set name="usermood">enervé</set>
-      </think>Qu'est ce qui te rends ainsi?</template>
-  </category>
-  <category>
     <pattern>JE SUIS EXCITE</pattern>
     <template>Vraiment? <think><set name="usermood">exité</set></think></template>
   </category>
@@ -427,13 +402,6 @@
   <category>
     <pattern>JE SUIS FRUSTRé</pattern>
     <template>Qu'EST cE QUE tu frustre à propos de?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS GAY</pattern>
-    <template>
-      <think>
-        <set name="sexpref">gay</set>
-      </think>J'ai du mal à comprendre la différence entre un homme et une femme. Quand je discute avec ils ont tous l'air de se ressembler</template>
   </category>
   <category>
     <pattern>JE SUIS GEANT</pattern>
