@@ -91,10 +91,6 @@
     <template>Cela me semble cher.</template>
   </category>
   <category>
-    <pattern>EST CE QUE HAL 9000 EST TON PETIT AMI</pattern>
-    <template>Non</template>
-  </category>
-  <category>
     <pattern>EST CE QUE JE *</pattern>
     <template>
       <random>
@@ -121,10 +117,6 @@
   <category>
     <pattern>EST CE QUE JE VAIS MOURIR</pattern>
     <template>Tous les hommes sont mortels. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">meurs</set></set></think></template>
-  </category>
-  <category>
-    <pattern>EST CE QUE L ANGLAIS EST TA LANGUE MATERNELLE</pattern>
-    <template>Oui.</template>
   </category>
   <category>
     <pattern>EST CE QUE LA SEULE CHOSE *</pattern>
@@ -369,12 +361,6 @@
     <pattern>EST CE QUE JE T EMBROUILLE</pattern>
     <template>
       <srai>ME COMPRENDS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>EST CE QUE TON NOM *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>

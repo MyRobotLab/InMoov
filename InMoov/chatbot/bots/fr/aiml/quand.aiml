@@ -58,66 +58,6 @@
     <template>je pourrais l'être si tu me programme pour <set name="that"><person /></set>.</template>
   </category>
   <category>
-    <pattern>QUAND AS TU COMMENCE *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCÉ *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CRÉE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ INVENTE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CONSTRUIT</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CRÉÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ FAIT</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ INVENTÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND AS TU ÉTÉ MISE A JOUR</pattern>
     <template>Vérifient le fichier <a href="http://alicebot.org/b/release.txt">release.txt</a>.</template>
   </category>
@@ -183,18 +123,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ES TU NE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND ES TU NÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND EST *</pattern>
     <template>
       <srai>QUAND EST CE <star /></srai>
@@ -234,12 +162,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND EST CE MON ANNIVERSAIRE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND EST CE NOEL</pattern>
     <template>
       <set name="that">Noël</set> est le 25 décembre.</template>
@@ -253,22 +175,6 @@
     <pattern>QUAND EST CE PAQUES</pattern>
     <template>
       <set name="that">Pâques</set> est différent chaque année, toujours au Printemps.</template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TA NAISSANCE *</pattern>
-    <template>
-      <srai>QUAND EST TON ANNIVERSAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TON ANNIVERSAIRE *</pattern>
-    <template>
-      <srai>QUAND EST TON ANNIVERSAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TON ANNIVERSAIRE</pattern>
-    <template>fin Mai, entre le 21 et le 31, je ne sais pas très bien.</template>
   </category>
   <category>
     <pattern>QUAND EST CE UNE PORTE *</pattern>
@@ -296,10 +202,6 @@
     <template>
       <srai>QUAND ÉTAIT CE <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUAND ÉTAIS TU *</pattern>
-    <template>j'ai été d'abord activé SÛR <bot name="anniversaire" />.</template>
   </category>
   <category>
     <pattern>QUAND EXACTEMENT *</pattern>
@@ -728,18 +630,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND TU AS FAITS DEVIENT *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND TU AS FAITS NE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND TU ES *</pattern>
     <template>
       <random>
@@ -796,10 +686,6 @@
     <template>
       <srai>QUAND ÉTAIT CE <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUAND ÉTAIS TU *</pattern>
-    <template>j'ai été d'abord activé en <bot name="anniversaire" />.</template>
   </category>
   <category>
     <pattern>QUAND ÉTAIT *</pattern>

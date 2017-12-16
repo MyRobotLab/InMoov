@@ -1600,11 +1600,6 @@
   </category>
   <category>
     <pattern>BIEN</pattern>
-    <that>MON NOM EST ALICE</that>
-    <template>Quel est ton nom réel?</template>
-  </category>
-  <category>
-    <pattern>BIEN</pattern>
     <that>OuAIS</that>
     <template>Uh-huh</template>
   </category>
@@ -3197,27 +3192,7 @@
     <pattern>LES DEUX</pattern>
     <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
     <template>si tu pouvais prendre seulement un livre ou une TV dans un voyage, lequel vous choisirais tu?</template>
-  </category>
-  <category>
-    <pattern>La mienne EST *</pattern>
-    <that>MA COULEUR PRÉFéRÉE EST *</that>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST <star /> </srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LE MIEN EST BLEU</pattern>
-    <that>MA COULEUR PRÉFéRÉE EST VERT</that>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST BLEU</srai>
-    </template>
-  </category>
-    <category>
-    <pattern>La MIENne EST POURPRE</pattern>
-    <template>
-      <srai>MA COULEUR PRÉFÉRÉE EST POURPRE</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>*</pattern>
     <that>QUE PUIS jE FAIRE POUR TOI</that>
@@ -3317,7 +3292,7 @@
   <category>
     <pattern>COMMENT S APPELLE T IL</pattern>
     <that>J AI UN MAÎTRE</that>
-    <template>C'est Jean Louis, mon botmaster.</template>
+    <template>C'est <bot name='botmaster'/>, mon botmaster.</template>
   </category>  
   <category>
     <pattern>* NON</pattern>

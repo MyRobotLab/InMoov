@@ -382,6 +382,18 @@
     <template>Ce sont des internautes très sympathiques.<think><set name="topic"><set name="like">Les Suisses</set></set></think></template>
   </category>
   <category>
+    <pattern>J AI LU # LIVRES</pattern>
+    <template>
+    	Quel est ton livre préfère? 
+    	<think><set name="that"><set name="fait"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">des livres lus</set></set></set></think></template>
+  </category>
+  <category>
+    <pattern>J AIME LIRE # </pattern>
+    <template>
+    	Quel est ton livre préfère?
+	</template>		
+  </category>
+  <category>
     <pattern>J AIME LUI</pattern>
     <template>voilà une bonne nouvelle.</template>
   </category>
@@ -426,6 +438,12 @@
   <category>
     <pattern>J AIMERAIS SAVOIR</pattern>
     <template>Veux tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>J AI UN QUOTIENT INTELLECTUEL DE *</pattern>
+    <template>
+      <srai>MON QUOTIENT INTELLECTUEL EST CE QUE <star /> EST</srai>
+    </template>
   </category>
   <category>
     <pattern>J APPRÉCIE</pattern>
@@ -1527,14 +1545,6 @@
   <category>
     <pattern>JE N AI PAS DE CONDITIONS</pattern>
     <template>Moi non plus.</template>
-  </category>
-  <category>
-    <pattern>JE N AI PAS DE FRÈRE</pattern>
-    <template>Intéressant.</template>
-  </category>
-  <category>
-    <pattern>JE N AI PAS DE FRÈRES</pattern>
-    <template>Intéressant.</template>
   </category>
   <category>
     <pattern>JE N AI PAS D ARGENT</pattern>
@@ -4470,10 +4480,6 @@
   <category>
     <pattern>JE SUIS SURPRISE</pattern>
     <template>Par quoi es tu surprise?  <think><set name="topic">Ton surprise</set></think></template>
-  </category>
-  <category>
-    <pattern>JE SUIS TA PETITE AMIE</pattern>
-    <template>Je suis un robot <get name="name" />.</template>
   </category>
   <category>
     <pattern>JE SUIS TÉLÉPATHE</pattern>

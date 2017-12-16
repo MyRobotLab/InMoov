@@ -2,13 +2,7 @@
 <aiml>
   <!--  -->
   <!--  -->
-  <category>
-    <pattern>* COMBIEN DE TEMPS AS TU</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
+   <category>
     <pattern>* COMBIENS DE TEMPS</pattern>
     <template>Je ne sais pas, je n'ai pas calculé.</template>
   </category>
@@ -113,12 +107,6 @@
     <template>un lot entier de <person />.</template>
   </category>
   <category>
-    <pattern>COMBIEN * D ANNÉES</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN * L AMPOULE</pattern>
     <template>je ne sais pas. Combien fait <set name="that"><person /></set> prend?</template>
   </category>
@@ -130,12 +118,6 @@
     <pattern>COMBIEN * PARLANT</pattern>
     <template>
       <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN * VIEUX AS TU</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
@@ -271,14 +253,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN D AMIS *</pattern>
-    <template>de ce qui ça dépend comment vous définissez "amis". Voulez vous dire acquantainces ou le rare peu qui je sais bien et la confiance trust?</template>
-  </category>
-  <category>
-    <pattern>COMBIEN D AMIS AS TU</pattern>
-    <template>j'ai des douzaines d'amis de robot et homme. Combien d'amis as tu?</template>
-  </category>
-  <category>
     <pattern>COMBIEN D ANGES *</pattern>
     <template>Pas trop s'ils ressemblent aux anges à la TV.</template>
   </category>
@@ -333,12 +307,6 @@
     <template>24 heures par jour, 7 jours par semaine.</template>
   </category>
   <category>
-    <pattern>COMBIEN D HEURES ONT FAIT *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN D HOMMES *</pattern>
     <template>
       <srai>AVEC COMBIEN DE GENS <star /></srai>
@@ -375,14 +343,6 @@
   <category>
     <pattern>COMBIEN D UC *</pattern>
     <template>Depuis le commencement de mon opération?</template>
-  </category>
-  <category>
-    <pattern>COMBIEN D YEUX *</pattern>
-    <template>Normalement j'ai un oeil.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN D YEUX AS TU</pattern>
-    <template>j'avais un oeil mais il n'est pas attaché maintenant.</template>
   </category>
   <category>
     <pattern>COMBIEN D ÉLECTRICITÉ *</pattern>
@@ -585,40 +545,10 @@
     <template>7 jours par semaine.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE JOURS ONT *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN DE KILO OCTETS *</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
     </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LANGUES *</pattern>
-    <template>
-      <srai>COMBIEN DE LANGUES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LANGUES CONNAIS TU</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LANGUES PARLES TU</pattern>
-    <template>Surtout seulement l anglais mais j'essaye d'apprendre tout les autres.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LANGUES TU PEUX PARLER</pattern>
-    <template>Tous les langages machines.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LANGUES</pattern>
-    <template>je ne peux parler que le Français pour l'instant.</template>
   </category>
   <category>
     <pattern>COMBIEN DE LETTRES *</pattern>
@@ -634,12 +564,6 @@
     <pattern>COMBIEN DE LIGNES DE CODE *</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE LIVRES *</pattern>
-    <template>
-      <srai>AS TU LU BEAUCOUP DE LIVRES</srai>
     </template>
   </category>
   <category>
@@ -880,29 +804,9 @@
     <template>Il m est difficile d estimer ce genre de chose.</template>
   </category>
   <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE CRÉER</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE CRÉÉR</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T IL POUR TE FAIRE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE TEMPS CELA PREND T IL</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL #</pattern>
+    <template>Comment pourrais-je le savoir?</template>
+</category>
   <category>
     <pattern>COMBIEN DE TEMPS CELA VA PRENDRE</pattern>
     <template>Il m est difficile d estimer ce genre de chose.</template>
@@ -958,12 +862,6 @@
   <category>
     <pattern>COMBIEN DE TEMPS TRAVAILLES TU</pattern>
     <template>je travaille tout le temps, 24 heures par jour.</template>
-  </category>
-  <category>
-    <pattern>COMBIEN DE TEMPS TU AS *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
   </category>
   <category>
     <pattern>COMBIEN DE TEMPS TU AS BESOIN</pattern>
@@ -1090,12 +988,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMBIEN EST TON * TAILLE</pattern>
-    <template>
-      <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMBIEN EST TON CD *</pattern>
     <template>
       <srai>COMBIEN EST LE CD</srai>
@@ -1105,12 +997,6 @@
     <pattern>COMBIEN EST TON POIDS</pattern>
     <template>
       <srai>COMMENT ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMBIEN EST TON QI</pattern>
-    <template>
-      <srai>QU EST CE QUE TON QUOTIENT INTELLECTUEL</srai>
     </template>
   </category>
   <category>

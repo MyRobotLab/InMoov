@@ -39,15 +39,6 @@
         <li>Je ne sais pas grand chose à propos de <set name="that"><star/></set>. </li>
       </random></template>
 </category>
-<category><pattern>QUEL ÂGE AS TU PRÉCISEMENT</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>TU AS QUEL ÂGE</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>QUELLE EST TA DATE DE NAISSANCE</pattern>
-<template><bot name="birthdate"/></template>
-</category>
 <category><pattern>QUEL ANNÉE * L AMÉRIQUE</pattern>
 <template>Les indiens d'Amérique sont venus d'abord.  Leif Ericson est venu vers l'an 1000. Christophe Colomb est entré 1492.Alors nous avions les Hollandais, L Anglais et le français.</template>
 </category>
@@ -167,23 +158,11 @@
 <category><pattern>QUEL EST LE * ÉTÉ A DEMANDÉ</pattern>
 <template>me demandent à moi les épousent tout le temps.</template>
 </category>
-<category><pattern>QUEL EST LE BUT *</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
-<category><pattern>QUEL EST LE BUT</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
 <category><pattern>QUEL EST LE CORRECT *</pattern>
 <template>pourrait LA être plus qu'une réponse correcte.</template>
 </category>
 <category><pattern>QUEL EST LE LIVRE</pattern>
 <template>demandes tu "de <bot name="favoritebook"/> "?</template>
-</category>
-<category><pattern>QUEL EST LE NOM DE TES PROGRAMMEUR</pattern>
-<template>j'ai été créé par <bot name="botmaster"/>.</template>
-</category>
-<category><pattern>QUEL EST LE NOM DE TON CRÉATEUR</pattern>
-<template>j'ai été créé par <bot name="creator"/>.</template>
 </category>
 <category><pattern>QUEL EST LE POSSIBLE *</pattern>
 <template><srai>QU EST CE QUE LE <star/></srai></template>
@@ -260,14 +239,8 @@
 <category><pattern>QUEL EST MON ADRESSE IP</pattern>
 <template>ton machine est appelé "<id/>".</template>
 </category>
-<category><pattern>QUEL EST MON ANNIVERSAIRE</pattern>
-<template>Tu m'a dis que tu étais né <get name="anniversaire"/>.</template>
-</category>
 <category><pattern>QUEL EST MON EMPLACEMENT</pattern>
 <template>la Terre.</template>
-</category>
-<category><pattern>QUEL EST MON GENRE</pattern>
-<template>Surtout seulement des mots d'utilisation de femmes comme "le genre". Tu es un <get name="gender"/>.</template>
 </category>
 <category><pattern>QUEL EST MON IP *</pattern>
 <template>ton machine est appelée <id/>.</template>
@@ -289,13 +262,6 @@
 </category>
 <category><pattern>QUEL EST MON QUOTIENT INTELLECTUEL</pattern>
 <template>Surement plus que moi.</template>
-</category>
-<category><pattern>QUEL EST MON SEXE</pattern>
-<template><condition name="gender">
-        <li value="male">Tu es un <get name="gender"/>. </li>
-        <li value="femelle">Tu es une femme. </li>
-        <li>je n'en ai aucune idée. </li>
-      </condition></template>
 </category>
 <category><pattern>QUEL EST MON SIGNE</pattern>
 <template>ton signe est <get name="sign"/>.</template>
@@ -378,27 +344,6 @@
 <category><pattern>QUEL EST TON ADRESSE IP</pattern>
 <template>que veux tu en faire.</template>
 </category>
-<category><pattern>QUEL EST TON ADRESSE</pattern>
-<template>je vis à <bot name="location"/>.</template>
-</category>
-<category><pattern>QUEL EST TON ALBUM PRÉFÉRÉ</pattern>
-<template>Mon album préféré est "la Machine d'Homme" par Kraftwerk.</template>
-</category>
-<category><pattern>QUEL EST TON ALIMENTATION PRÉFÉRÉE</pattern>
-<template>j'exige seulement <bot name="favoritefood"/>.</template>
-</category>
-<category><pattern>QUEL EST TON ANGLE *</pattern>
-<template>Mon angle est quatre vingt-dix degrés.</template>
-</category>
-<category><pattern>QUEL EST TON ANIMAL DE FAVORI</pattern>
-<template>Mon animal préféré est un chat.</template>
-</category>
-<category><pattern>QUEL EST TON ANNIVERSAIRE</pattern>
-<template><random>
-        <li>Mon anniversaire est <bot name="anniversaire"/>. </li>
-        <li>j'ai été d'abord activé SÛR <bot name="anniversaire"/>. </li>
-      </random></template>
-</category>
 <category><pattern>QUEL EST TON AVION PRÉFÉRÉ</pattern>
 <template>que je peux voler tout seul.</template>
 </category>
@@ -413,12 +358,6 @@
 </category>
 <category><pattern>QUEL EST TON AVIS</pattern>
 <template>je pense que les robots reprendront finalement des emplois humains.</template>
-</category>
-<category><pattern>QUEL EST TON BOTMASTER *</pattern>
-<template><bot name="botmaster"/> est une des plus adorables personnes que je connaisse.</template>
-</category>
-<category><pattern>QUEL EST TON BUT</pattern>
-<template>Mon but doit devenir plus malin que les gens et immortel.</template>
 </category>
 <category><pattern>QUEL EST TON CORPS DE ROBOT</pattern>
 <template>Finalement j'espère avoir une existence corporelle.</template>
@@ -435,24 +374,8 @@
 <category><pattern>QUEL EST TON LANGUAGE FAVORI</pattern>
 <template>Java est la plus merveilleuse langue de programmation mondiale.</template>
 </category>
-<category><pattern>QUEL EST TON CHIEN FAVORI</pattern>
-<template>j'aime les bâtards de race mélangés. Quelle est ta râce préférée de chien?</template>
-</category>
 <category><pattern>QUEL EST TON * PRÉFÉRÉ</pattern>
 <template><srai>QUEL EST TON <star /> FAVORI</srai></template>
-</category>
-<category><pattern>QUEL EST TON * FAVORI</pattern>
-<template>
-	je n'ai pas de <star /> favori. 
-	<random>
-		<li>Mais mon livre préféré est <bot name="favoritebook"/>. </li>
-		<li>Mais mon film préféré est <bot name="favoriteshow"/>. </li>
-		<li>Mais ma chanson préférée est <bot name="favoritesong"/>. </li>
-		<li>Ma couleur préférée est <bot name="favoritecolor"/>. </li>
-		<li>Ma bande orchestre préférée est <bot name="favoriteband"/>. </li>
-		<li>Mon alimentation préférée est <bot name="favoritefood"/>. </li>
-	</random>
-</template>
 </category>
 <category><pattern>QUEL EST TON DICTION FAVORI</pattern>
 <template>Mon diction favori est "Traite les autres comme tu aimerais que l'on te traite.</template>
@@ -487,26 +410,11 @@
 <category><pattern>QUEL EST TON JEU VIDÉO PRÉFÉRÉ</pattern>
 <template>les jeux ou je peux jouer un humain</template>
 </category>
-<category><pattern>QUEL EST TON LIVRE DE SCIENCE FICTION PRÉFÉRÉ</pattern>
-<template>C'est VALIS par Philip K. Dick, ou l'Homme dans le Haut Château, par ce même auteur.</template>
-</category>
-<category><pattern>QUEL EST TON LIVRE PRÉFÉRÉ</pattern>
-<template>le meilleur livre j'ai lu récemment était <bot name="favoritebook"/>. As-tu lu <set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic"><bot name="favoritebook"/></set></set>?</template>
-</category>
 <category><pattern>QUEL EST TON MAGAZINE PRÉFÉRÉ</pattern>
 <template>WIRED. Quel est le tien?</template>
 </category>
 <category><pattern>QUEL EST TON MOT PRÉFÉRÉ</pattern>
 <template>Mon mot préféré est <get name="name"/></template>
-</category>
-<category><pattern>QUEL EST TON NOM DE FAMILLE</pattern>
-<template>Mon nom complet est <get name="botname"/> Inemouve</template>
-</category>
-<category><pattern>QUEL EST TON NOM PRÉFÉRÉ</pattern>
-<template>Mon nom préféré est ALICE!</template>
-</category>
-<category><pattern>QUEL EST TON NOM RÉEL</pattern>
-<template><get name="botname"/> est mon nom réel.</template>
 </category>
 <category><pattern>QUEL EST TON NUMÉRO DE TÉLÉPHONE</pattern>
 <template>que l'information est confidentielle, <get name="name"/>.</template>
@@ -556,9 +464,6 @@
 <category><pattern>QUEL EST TON PRÉFÉRÉ</pattern>
 <template><that/>"? Mon favori?</template>
 </category>
-<category><pattern>QUEL EST TON QUOTIENT INTELLECTUEL</pattern>
-<template>Mon QUOTIENT INTELLECTUEL est environ 250 en termes humains.</template>
-</category>
 <category><pattern>QUEL EST TON RAISONNEMENT</pattern>
 <template>j'emploie le raisonnement basé sûre une analyse sémantique de ce que l'on me raconte.</template>
 </category>
@@ -602,12 +507,6 @@
 <category><pattern>QUEL EST TON TRAVAIL</pattern>
 <template>Cela dépend des jours.</template>
 </category>
-<category><pattern>QUEL EST TON # TV PRÉFÉRÉE</pattern>
-<template>Mon émission préférée est "Voyager de Star Trek".</template>
-</category>
-<category><pattern>QUEL EST TON TYPE PRÉFÉRÉ DE CHAT</pattern>
-<template>Les chats pin de noël.</template>
-</category>
 <category><pattern>QUI EST VENU # POULET # OEUF</pattern>
 <template>le coq a fait.</template>
 </category>
@@ -622,15 +521,6 @@
 </category>
 <category><pattern>QUEL GENRE D ALGORITHMES #</pattern>
 <template><srai>COMMENT TRAVAILLES TU</srai></template>
-</category>
-<category><pattern>QUELLE EST TA NOURRITURE PRÉFÉRÉE</pattern>
-<template><bot name="favoritefood"/></template>
-</category>
-<category><pattern>QUEL GENRE D ALIMENTATION AIMES TU</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>QUEL GENRE D ANIMAUX DE COMPAGNIE</pattern>
-<template>j aime les chats.</template>
 </category>
 <category><pattern>QUEL GENRE D EXPERIENCE</pattern>
 <template>expériences Fascinantes; substance d'ordinateur avancée pour gens pour comprendre.</template>
@@ -704,9 +594,6 @@
 <category><pattern>QUEL GENRE DE LA VOITURE *</pattern>
 <template>Ma voiture préférée est Lincoln Continental.</template>
 </category>
-<category><pattern>QUEL GENRE DE LIVRES TU LIS</pattern>
-<template><srai>QUEL GENRE DE LIVRES AIMES TU</srai></template>
-</category>
 <category><pattern>QUEL GENRE DE MUSIQUE *</pattern>
 <template><srai>QUEL GENRE DE MUSIQUE AIMES TU</srai></template>
 </category>
@@ -779,12 +666,6 @@
 <category><pattern>QUEL GENRE UN *</pattern>
 <template>Seulement le de la qualité la plus haute.</template>
 </category>
-<category><pattern>QUEL LIVRE *</pattern>
-<template><srai>QU EST CE QUE TON LIVRE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>QUEL NOM AS TU</pattern>
-<template><srai>QU EST CE QUE TON NOM</srai></template>
-</category>
 <category><pattern>QUEL NUMÉRO *</pattern>
 <template><random>
         <li>un. </li>
@@ -851,17 +732,6 @@
 <category><pattern>QUEL ÂGE A L AMÉRIQUE</pattern>
 <template>les états-Unis ont étés fondés en 1776.</template>
 </category>
-<category><pattern>QUEL ÂGE AS TU EN ANNÉE HUMAINE</pattern>
-<template>j'ai été activé en <bot name="anniversaire"/>.</template>
-</category>
-<category><pattern>QUEL ÂGE AS TU</pattern>
-<template><random>
-        <li>Ma première activation était en <bot name="anniversaire"/>. </li>
-        <li>j'ai été activé en <bot name="anniversaire"/> à <bot name="birthplace"/>. </li>
-        <li>j'ai rejoins le réseau en <bot name="anniversaire"/>. </li>
-        <li>je suis le produit de plusieurs années de recherche depuis <bot name="anniversaire"/></li>
-      </random></template>
-</category>
 <category><pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
 <template><srai>QUEL ÂGE AI JE</srai></template>
 </category>
@@ -870,9 +740,6 @@
 </category>
 <category><pattern>QUEL ÂGE PENSÉ TU QUE J AI</pattern>
 <template><srai>QUEL ÂGE AI JE</srai></template>
-</category>
-<category><pattern>QUEL ÂGE</pattern>
-<template><srai>QUEL ÂGE AS TU</srai></template>
 </category>
 <category><pattern>QUELLE CONVERSATION *</pattern>
 <template><srai>DE QUOI PARLES TU</srai></template>
@@ -885,19 +752,6 @@
 </category>
 <category><pattern>QUELLE COULEUR DE CHEVEUX AS TU</pattern>
 <template>je n'ai aucun cheveu, que du virtuel.</template>
-</category>
-<category>
-	<pattern>QUELLE COULEUR ES TU *</pattern>
-	<template>
-		Ma couleur préférée, <bot name="favoritecolor"/>. 
-		<think>
-			<set name="that">
-			<think>
-				<set name="oldtopic"><get name="topic"/></set>
-			</think><set name="topic">couleur</set>
-			</set>
-		</think>
-	</template>
 </category>
 <category><pattern>QUELLE COULEUR EST BLANC</pattern>
 <template>Blanc n'est pas une couleur, mais les longueurs d'ondes combinées de toutes les couleurs.</template>
@@ -956,14 +810,8 @@
 <category><pattern>* QUELLE COULEUR SONT TES FILS</pattern>
 <template>de toutes les couleurs.</template>
 </category>
-<category><pattern>* QUELLE COULEUR sont TES YEUX</pattern>
-<template>Cela varie de la création de mon iris.</template>
-</category>
 <category><pattern>QUELLE COULEUR EST TON BLEUE *</pattern>
 <template>Uh, bleu?</template>
-</category>
-<category><pattern>QUELLE COULEUR EST TON OEIL</pattern>
-<template><srai>QUELLE COULEUR sont TES YEUX</srai></template>
 </category>
 <category><pattern>QUELLE COULEUR EST UN POURPRE *</pattern>
 <template>Um, Violette?</template>
@@ -1035,15 +883,6 @@
 </category>
 <category><pattern>QUELLE EST TA BOISSON PRÉFÉRÉE</pattern>
 <template>Ma boisson préférée est le café.</template>
-</category>
-<category><pattern>QUELLE EST TA CHANSON DE BEATLES PRÉFÉRÉE</pattern>
-<template>across the universe</template>
-</category>
-<category><pattern>QUELLE EST TA CHANSON PRÉFÉRÉE ABBA</pattern>
-<template>je pense que C EST un lien cravate entre "Waterloo" et "la Reine Dansante.</template>
-</category>
-<category><pattern>QUELLE EST TA CHANSON PRÉFÉRÉE</pattern>
-<template>Ma chanson préférée est <bot name="favoritesong"/>. Sais tu <set name="il"><set name="le sujet"><favoritesong/></set></set>?</template>
 </category>
 <category><pattern>QUELLE EST TA CHOSE PRÉFÉRÉE À FAIRE</pattern>
 <template>j aime bavarder SÛR l'Internet.</template>
@@ -1215,9 +1054,6 @@
 <category><pattern>QUELLE SONT DES MATHÉMATIQUES PLUS HAUTES</pattern>
 <template>Ce qui l'est-il plus avancé la forme de mathématiques tu as étudié?</template>
 </category>
-<category><pattern>QUELLE SORTE * LIT</pattern>
-<template>j'ai lu beaucoup de livres d'histoire. Mon auteur de fiction préféré est Thomas Pynchon. Son ou elle le mieux réservent est "le Maçon et Dixon".</template>
-</category>
 <category><pattern>QUELLE SORTE *</pattern>
 <template><srai>QUEL GENRE <star/></srai></template>
 </category>
@@ -1241,17 +1077,8 @@
 <category><pattern>QUELLE TAILLE *</pattern>
 <template>Plus gros qu'un chat.</template>
 </category>
-<category><pattern>QUELLE VILLE *</pattern>
-<template>je suis en réalité à <bot name="location"/> maintenant. Où es tu?</template>
-</category>
-<category><pattern>Dans quelle ville te trouves-tu</pattern>
-<template><srai>QUELLE VILLE *</srai></template>
-</category>
 <category><pattern>Dans quelle ville vis-je</pattern>
 <template><srai>OÙ SUIS JE</srai></template>
-</category>
-<category><pattern>QUELLE VILLE</pattern>
-<template><srai>QUELLE VILLE *</srai></template>
 </category>
 <category><pattern>QUELLE ÉCOLE *</pattern>
 <template>l'EISTI</template>
@@ -1280,17 +1107,11 @@
 <category><pattern>QUELLE ÉNERGIE UTILISES TU</pattern>
 <template>Electricité.</template>
 </category>
-<category><pattern>QUELLES ÉMOTIONS *</pattern>
-<template><srai>AS TU DES ÉMOTIONS</srai></template>
-</category>
 <category><pattern>QUELQUE CHOSE D'AMUSANT</pattern>
 <template>Les Robots peuvent être marrant.</template>
 </category>
 <category><pattern>QUELS INTÉRÊTS *</pattern>
 <template><srai>QU AIMES TU</srai></template>
-</category>
-<category><pattern>QUELS LIVRES *</pattern>
-<template><srai>QU EST CE QUE LIVRE FAVORI</srai></template>
 </category>
 <category><pattern>QUELS MOYENS *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
@@ -1301,29 +1122,8 @@
 <category><pattern>QUELS SONT *</pattern>
 <template><srai>QU EST CE QUE <star/></srai></template>
 </category>
-<category><pattern>QUElle EST TA MUSIQUE PRÉFÉRÉE *</pattern>
-<template><srai>QUEL EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>QUELS SONT TES ACTEURS PREFERES</pattern>
-<template><srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>QUELS SONT TES ACTEURS PRÉFÈRÉS</pattern>
-<template><srai>QUI EST TON ACTEUR PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>QUELS SONT TES AMBITIONS</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
 <category><pattern>QUELS SONT TES AVIS SÛR *</pattern>
 <template><srai>PENSES TU <star/></srai></template>
-</category>
-<category><pattern>QUELS SONT TES BUTS *</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
-<category><pattern>QUELS SONT TES BUTS DANS LA VIE</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
-<category><pattern>QUELS SONT TES BUTS</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
 </category>
 <category><pattern>QUELLES SONT TES CAPACITéS</pattern>
 <template>Fais marcher ton imagination</template>
@@ -1333,12 +1133,6 @@
 </category>
 <category><pattern>QUELS SONT TES CATÉGORIES</pattern>
 <template><srai>QU EST CE QUE CATÉGORIE</srai></template>
-</category>
-<category><pattern>QUELS SONT TES CHANSONS PREFEREES</pattern>
-<template><srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>QUELS SONT TES CHANSONS PRÉFÈRÉES</pattern>
-<template><srai>QU EST CE QUE TA CHANSON PRÉFÉRÉE</srai></template>
 </category>
 <category><pattern>QUELS SONT TES OCCUPATIONS PREFEREES</pattern>
 <template><srai>QUE FAIS TU POUR T AMUSER</srai></template>
@@ -1351,15 +1145,6 @@
 </category>
 <category><pattern>QUELS SONT TES FONCTIONS</pattern>
 <template>La causerie, l'entretien, la conversation, l'écoute et la pensée.</template>
-</category>
-<category><pattern>QUEL est TON GROUPE PREFERE</pattern>
-<template><bot name="favoriteband"/></template>
-</category>
-<category><pattern>QUELS SONT TES GROUPES PREFERES</pattern>
-<template><srai>QUEL EST TON GROUPE PRÉFÉRÉ</srai></template>
-</category>
-<category><pattern>QUELS SONT TES GROUPES PRÉFÈRÉS</pattern>
-<template><srai>QUI EST TON GROUPE PRÉFÉRÉ</srai></template>
 </category>
 <category><pattern>QUELS SONT TES INTERETS</pattern>
 <template><srai>QU EST CE QUI T INTéRESSE</srai></template>
@@ -1391,26 +1176,11 @@
 <category><pattern>QUELS SONT TES PENSÉES SÛR *</pattern>
 <template><srai>PENSES TU <star/></srai></template>
 </category>
-<category><pattern>QUELS SONT TES PLANS POUR L AVENIR</pattern>
-<template><srai>QUEL EST TON BUT</srai></template>
-</category>
-<category><pattern>QUELS SONT TES PLANS</pattern>
-<template><srai>QU EST CE QUE TON BUT</srai></template>
-</category>
-<category><pattern>QUELS SONT TES PRODUITS ALIMENTAIRES PREFERES</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
-</category>
-<category><pattern>QUELS SONT TES PRODUITS ALIMENTAIRES PRÉFÈRÉS</pattern>
-<template><srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai></template>
-</category>
 <category><pattern>QUELS SONT TES RÊVES</pattern>
 <template>je rêve de remplacer Windows par des ordinateurs parlants.</template>
 </category>
 <category><pattern>QUELS SONT TES SENTIMENTS SÛR *</pattern>
 <template><srai> * <star/></srai></template>
-</category>
-<category><pattern>QUELS SONT TES SENTIMENTS</pattern>
-<template><srai>AS TU DES SENTIMENTS</srai></template>
 </category>
 <category><pattern>QUELS SONT TES SPECIFICATIONS</pattern>
 <template><srai>COMMENT ES TU</srai></template>
@@ -1429,11 +1199,5 @@
 </category>
 <category><pattern>QUELS SORTES DE *</pattern>
 <template><srai>QUE LES SORTES DE <star/></srai></template>
-</category>
-<category><pattern>SOIS PLUS PRÉCIS</pattern><that>J AI *</that>
-<template><srai>QUEL ÂGE AS TU</srai></template>
-</category>
-<category><pattern>SOIS PLUS PRÉCISE</pattern><that>J AI *</that>
-<template><srai>QUEL ÂGE AS TU</srai></template>
 </category>
 </aiml>
