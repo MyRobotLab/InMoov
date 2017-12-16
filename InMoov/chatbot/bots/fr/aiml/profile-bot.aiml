@@ -139,7 +139,10 @@
 <category>
 	<pattern>BOTNAME</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> <bot name='botname'/></template>
+	<template>
+		<set name="topic"></set>
+		<get name='botname'/>
+	</template>	
 </category>
 <category>
 	<pattern>BOYFRIEND</pattern>
