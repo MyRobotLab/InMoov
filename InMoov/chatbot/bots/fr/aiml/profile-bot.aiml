@@ -16,8 +16,8 @@
 <category>
 	<pattern># BOT <set>profile-bot</set> #</pattern>
 	<template>
-		<set name="topic">présentation du robot</set>
-		<srai><star/></srai>
+		<think><set name="topic">présentation du robot</set></think>
+		<srai><star index='2'/></srai>
 	</template>
 </category>
 
