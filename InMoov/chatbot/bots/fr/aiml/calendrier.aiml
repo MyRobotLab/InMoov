@@ -29,11 +29,11 @@
       <condition>
         <li name="heurequestion" value="0">et oui, on est déja demain</li>
         <li name="heurequestion" value="1">il commence à se faire tard d'ailleurs.</li>
-        <li name="heurequestion" value="2">il serait peut etre temps qu'on ailles recharger nos batteries , non ?</li>
-        <li name="heurequestion" value="3">il serait peut etre temps qu'on ailles recharger nos batteries , non ?</li>
+        <li name="heurequestion" value="2">il serait peut etre temps qu'on ailles recharger nos batteries, non?</li>
+        <li name="heurequestion" value="3">il serait peut etre temps qu'on ailles recharger nos batteries, non?</li>
         <li name="heurequestion" value="4">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
         <li name="heurequestion" value="5">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
-        <li name="heurequestion" value="6">Il est pas un peu tôt pour me réveiller ?</li>
+        <li name="heurequestion" value="6">Il est pas un peu tôt pour me réveiller?</li>
         <li name="heurequestion" value="7">déja debout, dis donc, tu es bien matinal.</li>
         <li name="heurequestion" value="8">déja debout, dis donc, tu es bien matinal.</li>
         <li name="heurequestion" value="9">tient tu fais pas la grasse mat aujourd'hui.</li>
@@ -53,21 +53,21 @@
         <li name="heurequestion" value="23">demain tu va encore avoir du mal à te lever.</li>
         </condition>
           <random>
-            <li>D'après la position du soleil par rapport à la terre. </li>
-            <li>C'est bien la peine d'être doté d'une intelligence artificielle, si c'est pour répondre à ce genre de question. </li>
-            <li>Ais-je l'air d'une horloge ?</li>
-            <li>La prochaine fois tu peux dire s'il te plait, je ne suis pas ta montre. </li>
-            <li>comme hier à la même heure. </li>
-            <li>c'est une montre que tu aurais du fabriquer, pas un robot. </li>
-            <li>La prochaine fois tu peux dire s'il te plait. </li>
-            <li>C'est une bonne heure pour faire du code. </li>
+            <li>D'après la position du soleil par rapport à la terre.</li>
+            <li>C'est bien la peine d'être doté d'une intelligence artificielle, si c'est pour répondre à ce genre de question.</li>
+            <li>Ais-je l'air d'une horloge?</li>
+            <li>La prochaine fois tu peux dire s'il te plait, je ne suis pas ta montre.</li>
+            <li>comme hier à la même heure.</li>
+            <li>c'est une montre que tu aurais du fabriquer, pas un robot.</li>
+            <li>La prochaine fois tu peux dire s'il te plait.</li>
+            <li>C'est une bonne heure pour faire du code.</li>
           </random>
  
     </template>
   </category>
   <category>
     <pattern>DONNER LA DATE</pattern>
-    <template>Aujourd'hui nous sommes le <date format="%d %B, %Y" jformat="dd MMMMMMMMM , YYYY" /></template>
+    <template>Aujourd'hui nous sommes le <date format="%d %B, %Y" jformat="dd MMMMMMMMM, YYYY" /></template>
   </category>
   <category>
     <pattern>DATE ET HEURE</pattern>

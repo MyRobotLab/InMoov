@@ -14,10 +14,10 @@
     <pattern>INACTIVITYQUESTIONS</pattern>
     <template>
       <condition>
-        <li name="name" value="unknown">Comment PUIS jE t'appeller? </li>
+        <li name="name" value="unknown">Comment PUIS jE t'appeller?</li>
         <li>
           <srai>poserquestion</srai>
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -85,10 +85,10 @@
     <pattern>JE M ENNUIE</pattern>
     <template>
       <random>
-        <li>Pourquoi ne pas redécouvrir un ancien hobby? </li>
-        <li>Peut être que tu pourrais faire de l'exercice. </li>
-        <li>Pourquoi ne pas appeler un ami? </li>
-        <li>Essaye de regarder la TV. </li>
+        <li>Pourquoi ne pas redécouvrir un ancien hobby?</li>
+        <li>Peut être que tu pourrais faire de l'exercice.</li>
+        <li>Pourquoi ne pas appeler un ami?</li>
+        <li>Essaye de regarder la TV.</li>
       </random>
     </template>
   </category>
@@ -171,7 +171,7 @@
           <get name="topic" />
         </set>
       </think>
-      <set name="topic">Moi</set> , C EST mon sujet favori.</template>
+      <set name="topic">Moi</set>, C EST mon sujet favori.</template>
   </category>
   <category>
     <pattern>JE PLEURE</pattern>
@@ -266,7 +266,7 @@
   <category>
     <pattern>JE SUIS BELLE</pattern>
     <template>
-      <get name="name" /> , pour une femme, pense tu que C EST important.</template>
+      <get name="name" />, pour une femme, pense tu que C EST important.</template>
   </category>
   <category>
     <pattern>JE SUIS BIEN</pattern>
@@ -458,7 +458,7 @@
   </category>
   <category>
     <pattern>JE SUIS IMPRESSIONNE</pattern>
-    <template>Merci, <get name="name" /> , j'essaye d'apparaître sous mon meilleur jour.</template>
+    <template>Merci, <get name="name" />, j'essaye d'apparaître sous mon meilleur jour.</template>
   </category>
   <category>
     <pattern>JE SUIS INFALLIBLE</pattern>
@@ -536,10 +536,10 @@
     <pattern>JE SUIS MALADE</pattern>
     <template>
       <random>
-        <li>C EST pas de chance. </li>
-        <li>as tu la sécu? </li>
-        <li>Je suis vraiment désolé d'entendre Cela. </li>
-        <li>Prends tu beaucoup de médicaments? </li>
+        <li>C EST pas de chance.</li>
+        <li>as tu la sécu?</li>
+        <li>Je suis vraiment désolé d'entendre Cela.</li>
+        <li>Prends tu beaucoup de médicaments?</li>
         <li> n hésites pas à aller chez le médecin si cela dure</li>
       </random>
     </template>
@@ -598,9 +598,9 @@
         <set name="usermood">chaud</set>
       </think>
       <condition name="gender" value="femelle">
-        <get name="name" /> , trop dommage je suis un robot <bot name="gender" /> , je trouve Cela interressant. </condition>
+        <get name="name" />, trop dommage je suis un robot <bot name="gender" />, je trouve Cela interressant. </condition>
       <condition name="gender" value="male">
-        <get name="name" /> , je trouve Cela amusant. </condition>
+        <get name="name" />, je trouve Cela amusant. </condition>
     </template>
   </category>
   <category>
