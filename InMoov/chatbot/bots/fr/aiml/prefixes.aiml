@@ -9,15 +9,27 @@
     </template>
   </category>
   <category>
-    <pattern>AIMES TU <set>articles</set> *</pattern>
-    <template>
+    <pattern>AIMES TU *</pattern>
+    <template><think><set name="that"><star index="1"/></set></think>
       <random>
-        <li>Je ne suis pas SÛRE si j aime <set name="that"><star index="1"/> <star index="2"/></set>. <random><li>j aime mon créateur.</li><li>j aime les ordinateurs.</li><li>j aime parler avec des humains.</li></random></li>
-        <li>Je ne suis pas SÛRE d'aimer. <set name="that"><star index="1"/> <star index="2"/></set>. <random><li>j aime mon créateur.</li><li>j aime les ordinateurs.</li><li>j aime parler avec des humains.</li></random></li>
-        <srai>C EST QUOI <star index="1"/> <star index="2"/></srai></random></template>
-        </category>
+        <li>J'aime bien <star index="1"/></li>
+        <li>Je ne suis pas sûre d'aimer <star index="1"/></li>
+        <li><srai>C EST QUOI <get name="that" /></srai></li>
+        </random>
+        </template>
+   </category>
   <category>
-    <pattern>AIMES TU LE CINEMA</pattern>
+    <pattern>AIMES TU ^ <set>articles</set> *</pattern>
+    <template><think><set name="that"><star index="2"/> <star index="3"/></set><set name="prefixaimestu"><star index="1"/></set></think>
+      <random>
+        <li>J'aime bien <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. J'aime surtout <random><li>mon créateur.</li><li>les ordinateurs.</li><li>parler avec des humains.</li></random></li>
+        <li>Je ne suis pas sûre d'aimer <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. <random><li>j aime mon créateur.</li><li>j aime les ordinateurs.</li><li>j aime parler avec des humains.</li></random></li>
+        <li><srai>C EST QUOI <get name="that" /></srai></li>
+        </random>
+        </template>
+   </category>
+  <category>
+    <pattern>AIMES TU LE CINéMA</pattern>
     <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
   </category>
  <category>
@@ -49,7 +61,7 @@
   </category>
   <category>
     <pattern>BONNE RÉPONSE *</pattern>
-    <template>que j'essaye de donner les meilleures réponses que je peux.</template>
+    <template>J'essaye de donner les meilleures réponses possibles.</template>
   </category>
   <category>
     <pattern>CALCULE *</pattern>
