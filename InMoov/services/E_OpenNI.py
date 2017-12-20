@@ -22,17 +22,6 @@ isKinectActivated=0
 global KinectStarted  
 KinectStarted=0
 isKinectActivated=ThisServicePartConfig.getboolean('MAIN', 'isKinectActivated')
-try:
-  test=ThisServicePartConfig.get('MAIN', 'openNiShouldersOffset')
-except:
-  ThisServicePartConfig.set('MAIN', 'openNiShouldersOffset', '-50')
-  ThisServicePartConfig.set('MAIN','openNiLeftShoulderInverted', True)
-  ThisServicePartConfig.set('MAIN','openNiRightShoulderInverted', True)
- 
-  with open(ThisServicePart+'.config', 'wb') as f:
-    ThisServicePartConfig.write(f)
-  ThisServicePartConfig.read(ThisServicePart+'.config')
-  pass
   
 openNiShouldersOffset=float(ThisServicePartConfig.get('MAIN', 'openNiShouldersOffset'))
 openNiLeftShoulderInverted=ThisServicePartConfig.getboolean('MAIN', 'openNiLeftShoulderInverted')

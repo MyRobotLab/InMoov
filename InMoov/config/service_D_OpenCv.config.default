@@ -7,8 +7,12 @@ faceRecognizerActivated=True
 
 CameraIndex=0
 DisplayRender=SarxosFrameGrabber
-;use SarxosFrameGrabber / default etc ...
-streamerEnabled=False
+;Available DisplayRender :
+;SarxosFrameGrabber
+;VideoInputFrameGrabber
+;OpenCVFrameGrabber
+
+streamerenabled=False
 
 [TRACKING]
 eyeXPidKp=20.0

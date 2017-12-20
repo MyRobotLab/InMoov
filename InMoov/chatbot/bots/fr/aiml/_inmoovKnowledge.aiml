@@ -43,7 +43,7 @@
             <mrl>
               <service>python</service>
               <method>exec</method>
-              <param>getProperty("<star index="3"/> " , "<star index="4"/>" , "<star index="1"/> " , "<star index="2"/>" ,"SAY ","SYSTEM_LEARNING" )</param>
+              <param>getProperty("<star index="3"/> ", "<star index="4"/>", "<star index="1"/> ", "<star index="2"/>","SAY ","SYSTEM_LEARNING" )</param>
             </mrl>
           </oob></template>
 </category>
@@ -55,7 +55,7 @@
 <!-- 3 we ask the user -->
 
 <category><pattern>SYSTEM_LEARNING</pattern>
-<template><get name="articles"/> <get name="courant"/> ?
+<template><get name="articles"/> <get name="courant"/>?
     <random>
     <li>J'avoue ne pas avoir cette réponse.</li>
     <li>Désolé, je ne sais pas.</li>
@@ -113,17 +113,17 @@
 <category><pattern># JE NE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><li>
     <srai># NON #</srai>
-    </li></template>
+</li></template>
 </category>
 <category><pattern># JE N #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><li>
     <srai># NON #</srai>
-    </li></template>
+</li></template>
 </category>
 <category><pattern># AUCUNE IDÉE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
 <template><li>
     <srai># NON #</srai>
-    </li></template>
+</li></template>
 </category>
 
 <!-- end user dont know -->
@@ -135,20 +135,20 @@
 <category><pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $JE NE SAIS PAS</pattern>
 <template>
 <condition name="articles">
-    <li value="unknown"> </li>
-    <li><star index="3"/> </li>    		
+    <li value="unknown"></li>
+    <li><star index="3"/></li>    		
 </condition>  
-    <person><star index="4"/></person> <star index="5"/> ?
+    <person><star index="4"/></person> <star index="5"/>?
     <random>
         <li>
         Franchement, c'est une question un peu intime, je ne préfère pas y répondre
-        </li>
+</li>
         <li>
         J'avoue ne pas avoir cette réponse
-        </li>
+</li>
         <li>
         Tu devrais le savoir. moi je n'en ai aucune idée
-        </li>
+</li>
     </random>
 </template>
 </category>

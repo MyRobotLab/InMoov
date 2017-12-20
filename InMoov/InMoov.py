@@ -4,42 +4,50 @@
 ##						   \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
-##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    OS - [wip]
-version='0.3.5'
+##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
+version='0.9.9'
 
 # this will run with versions of MRL above :
-mrlCompatible='2250'
+mrlCompatible='2667'
 
 # ###################################################################################
-# This is a very minimal script for Inmoov
-# ( also called FINGERSTARTER : A legend tells that when Inmoov came to life he did not shout, but moved a finger first )
-# although this script is very short you can still
-# do voice control of a finger starter
-# It uses WebkitSpeechRecognition, so you need to use Chrome as your default browser for this script to work
-# The Finger Starter is considered here to be right index, 
-# so make sure your servo is connected to pin3 of you Arduino
-# check your configuration inside Inmoov.config
+# This is the full configurable launcher script for Inmoov service :
+# MORE informations here : http://myrobotlab.org/service/InMoov
+# At this time configurable things are inside the config folder. 
+# By default virtual environment is started, so you can test things with no risk ! 
+#
+# To start using the Finger Starter with real hardware, set : 
+# ( The Finger Starter is considered here to be right index, 
+# so make sure your servo is connected to pin3 of you Arduino )
+##
+#   ScriptType=RightSide | inside config/_InMoov.config
+#   MyRightPort=COMx | inside config/_service_6_Arduino.config
+#   isRightHandActivated=True | inside config/skeleton_rightHand.config
+#   voice command sample : OPEN HAND
+##
+# Check your configuration inside Inmoov.config ( exemple to change english to french )
 # If you setup 2 arduino + configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
 # ###################################################################################
 
 
-
 ##############
-# Main inmoov service declaration
+# Main inmoov service
 i01 = Runtime.createAndStart("i01", "InMoov")
 
 ##############
-# robot checkup and initialisation ( skeleton & services)
+# robot checkup and initialisation ( skeleton & services )
 RuningFolder="InMoov"
 execfile(RuningFolder+'/system/InitCheckup.py')
 
 
-
-
 # ###################################################################################
 # SAMPLE COMMANDS 
-# Go further you can find more vocal commands into inmoovVocal/ear.addCommand
-# Go further you can find more associated functions into inmoovGestures
+#
+# WARNING : basic vocal commands ( activated only if chatbot is disable inside config/service_A_Chatbot.config )
+#
+# Go further ! you can find more basic vocal commands into inmoovVocal/ear.addCommand
+# Go further !! you can find more associated functions into inmoovGestures
+# Go further !!! you can find almost all chatbot vocal command into chatbot\bots\[lang]\aiml\_inmoovGestures.aiml
 # ###################################################################################
 
 ear.addCommand("attach your finger", "i01.rightHand.index", "attach") #to remove soon
@@ -48,7 +56,7 @@ ear.addCommand("open your finger", "python", "fingeropen")
 ear.addCommand("close your finger", "python", "fingerclose")
 ear.addCommand("finger to the middle", "python", "fingermiddle")
 
-# functions called by the vocal commands
+# functions called by the basic vocal commands engine
 def fingeropen():
   i01.moveHand("right",0,0,0,0,0)
   talkBlocking("ok I open my finger")
@@ -59,11 +67,9 @@ def fingerclose():
 
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
-  talkBlocking("ok you have my attention")
-  
-  
+  talkBlocking("ok you have my attention")  
   
 
 ##############
-#Go more further ! and code your own script in this file
+#Go further !!!! and write some code lines inside custom/InMoov_custom.py
 execfile(RuningFolder+'custom/InMoov_custom.py')

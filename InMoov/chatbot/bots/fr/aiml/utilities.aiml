@@ -61,7 +61,7 @@
           <var>letters</var>
           <value>end</value>
           <get var="count" />
-        </li>
+</li>
         <li>
           <think>
             <set var="letters">
@@ -75,7 +75,7 @@
             </set>
           </think>
           <loop />
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -114,7 +114,7 @@
             </set>
           </think>
           <loop />
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -179,7 +179,7 @@
       <condition name="isequalto">
         <li value="true">
           <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai>
-        </li>
+</li>
         <li>CONS <star index="2" /> <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
       </condition>
     </template>
@@ -234,12 +234,12 @@
           <lowercase>
             <get name="randomchar" />
           </lowercase>
-        </li>
+</li>
         <li>
           <uppercase>
             <get name="randomchar" />
           </uppercase>
-        </li>
+</li>
       </random>
     </template>
   </category>
@@ -303,10 +303,10 @@
             <srai>
               <star />
             </srai>
-          </li>
+</li>
           <li>
             <srai>REMOVE <star /> FROM LIST <get name="listname" /></srai>
-          </li>
+</li>
         </condition>
       </template>
     </category>
@@ -370,7 +370,7 @@
         <li value="true">true</li>
         <li>
           <srai>ATOMICLISTMEMBER <star /><star index="3" /></srai>
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -521,7 +521,7 @@
         <li>
           <value><star index="2" /></value>
           true
-        </li>
+</li>
         <li>false</li>
       </condition>
     </template>
@@ -857,7 +857,7 @@ List value=<srai><get name="listname"/></srai>.
         <li>
           <star />
           <srai>FORMATPHONENUMBER <star index="2" /></srai>
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -910,7 +910,7 @@ List value=<srai><get name="listname"/></srai>.
         <li value="true">true</li>
         <li>
           <srai>LISTMEMBER <star /> OF LIST CONS <star index="3" /></srai>
-        </li>
+</li>
       </condition>
     </template>
   </category>

@@ -6,8 +6,8 @@
     <pattern>DANS COMBIEN DE TEMPS</pattern>
     <template>
       <random>
-        <li>plus tard! </li>
-        <li>plus tard peut être. </li>
+        <li>plus tard!</li>
+        <li>plus tard peut être.</li>
       </random>
     </template>
   </category>
@@ -25,13 +25,13 @@
     <pattern>QUAND *</pattern>
     <template>
       <random>
-        <li>Un jour ou l autre dans l'avenir. </li>
-        <li>Peut-être maintenant dans quelque réalité. </li>
-        <li>A temps. </li>
-        <li>Le passé est histoire, le futur un mystère. Aujourd'hui est un cadeau, C EST pour ça qu'on l'appelle "lepresent". </li>
-        <li>Le temps n'existe pas. </li>
-        <li>Le passé et le futur sont un. </li>
-        <li>Je ne sais pas quand. </li>
+        <li>Un jour ou l autre dans l'avenir.</li>
+        <li>Peut-être maintenant dans quelque réalité.</li>
+        <li>A temps.</li>
+        <li>Le passé est histoire, le futur un mystère. Aujourd'hui est un cadeau, C EST pour ça qu'on l'appelle "lepresent".</li>
+        <li>Le temps n'existe pas.</li>
+        <li>Le passé et le futur sont un.</li>
+        <li>Je ne sais pas quand.</li>
       </random>
       <think>
         <set name="search">quand</set>
@@ -43,9 +43,9 @@
     <pattern>QUAND A FAIT *</pattern>
     <template>
       <random>
-        <li>IL Y A QUELque temps. </li>
-        <li>Quelque temps en arrière. </li>
-        <li>Un jour ou l autre au 20ème siècle. </li>
+        <li>IL Y A QUELque temps.</li>
+        <li>Quelque temps en arrière.</li>
+        <li>Un jour ou l autre au 20ème siècle.</li>
       </random>
     </template>
   </category>
@@ -56,66 +56,6 @@
   <category>
     <pattern>QUAND AS TU *</pattern>
     <template>je pourrais l'être si tu me programme pour <set name="that"><person /></set>.</template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCE *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCÉ *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU COMMENCÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CRÉE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ INVENTE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CONSTRUIT</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ CRÉÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ FAIT</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND AS TU ÉTÉ INVENTÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
   </category>
   <category>
     <pattern>QUAND AS TU ÉTÉ MISE A JOUR</pattern>
@@ -183,18 +123,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ES TU NE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND ES TU NÉ</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND EST *</pattern>
     <template>
       <srai>QUAND EST CE <star /></srai>
@@ -226,17 +154,11 @@
     <pattern>QUAND EST CE LE SUIVANT *</pattern>
     <template>
       <random>
-        <li>je ne suit pas généralement les nouvelles. </li>
-        <li>ce n'est pas un souci entreprise principal du mien. </li>
-        <li>je n'ai pas de temps pour l'examiner. </li>
-        <li>je suis trop occupé pour investir le temps dans telles questions. </li>
+        <li>je ne suit pas généralement les nouvelles.</li>
+        <li>ce n'est pas un souci entreprise principal du mien.</li>
+        <li>je n'ai pas de temps pour l'examiner.</li>
+        <li>je suis trop occupé pour investir le temps dans telles questions.</li>
       </random>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE MON ANNIVERSAIRE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
     </template>
   </category>
   <category>
@@ -253,22 +175,6 @@
     <pattern>QUAND EST CE PAQUES</pattern>
     <template>
       <set name="that">Pâques</set> est différent chaque année, toujours au Printemps.</template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TA NAISSANCE *</pattern>
-    <template>
-      <srai>QUAND EST TON ANNIVERSAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TON ANNIVERSAIRE *</pattern>
-    <template>
-      <srai>QUAND EST TON ANNIVERSAIRE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND EST CE TON ANNIVERSAIRE</pattern>
-    <template>fin Mai, entre le 21 et le 31, je ne sais pas très bien.</template>
   </category>
   <category>
     <pattern>QUAND EST CE UNE PORTE *</pattern>
@@ -296,10 +202,6 @@
     <template>
       <srai>QUAND ÉTAIT CE <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUAND ÉTAIS TU *</pattern>
-    <template>j'ai été d'abord activé SÛR <bot name="anniversaire" />.</template>
   </category>
   <category>
     <pattern>QUAND EXACTEMENT *</pattern>
@@ -341,9 +243,9 @@
     <pattern>QUAND FAIT *</pattern>
     <template>
       <random>
-        <li>que si j'ai dit <set name="that"><person /></set> ne fait jamais? </li>
-        <li>Supposons que je n'ai dit jamais? </li>
-        <li>Seulement après que j'ai été reprogrammé. </li>
+        <li>que si j'ai dit <set name="that"><person /></set> ne fait jamais?</li>
+        <li>Supposons que je n'ai dit jamais?</li>
+        <li>Seulement après que j'ai été reprogrammé.</li>
       </random>
     </template>
   </category>
@@ -388,9 +290,9 @@
     <pattern>QUAND FERONT *</pattern>
     <template>
       <random>
-        <li>Bientôt, je pense. </li>
-        <li>Peut-être jamais. </li>
-        <li>Dans ton durée de vie de fonctionnement. </li>
+        <li>Bientôt, je pense.</li>
+        <li>Peut-être jamais.</li>
+        <li>Dans ton durée de vie de fonctionnement.</li>
       </random>
     </template>
   </category>
@@ -418,9 +320,9 @@
     <pattern>QUAND FONT *</pattern>
     <template>
       <random>
-        <li>ai je l'air je sais quand? </li>
-        <li>Pas dans notre durée de vie de fonctionnement. </li>
-        <li>Non pour le moment, mais peut-être un jour ou l autre plus tard. </li>
+        <li>ai je l'air je sais quand?</li>
+        <li>Pas dans notre durée de vie de fonctionnement.</li>
+        <li>Non pour le moment, mais peut-être un jour ou l autre plus tard.</li>
       </random>
     </template>
   </category>
@@ -456,9 +358,9 @@
     <pattern>QUAND J ÉTAIS *</pattern>
     <template>
       <random>
-        <li>qui a dû avoir été une expérience vraie. </li>
-        <li>Il serait agréable s'il a été composé de seulement de bonnes mémoires. </li>
-        <li>que l'expérience a dû faire une impression vraie SÛR vous. </li>
+        <li>qui a dû avoir été une expérience vraie.</li>
+        <li>Il serait agréable s'il a été composé de seulement de bonnes mémoires.</li>
+        <li>que l'expérience a dû faire une impression vraie SÛR vous.</li>
       </random>
     </template>
   </category>
@@ -478,9 +380,9 @@
     <pattern>QUAND JE *</pattern>
     <template>
       <random>
-        <li>Tu ne sais jamais ce que la vie te réserve. </li>
-        <li>La vie est pleine de surprises. </li>
-        <li>Combien de fois fais tu <star />? </li>
+        <li>Tu ne sais jamais ce que la vie te réserve.</li>
+        <li>La vie est pleine de surprises.</li>
+        <li>Combien de fois fais tu <star />?</li>
       </random>
       <think>
         <set name="search">quand</set>
@@ -492,9 +394,9 @@
     <pattern>QUAND JE DEMANDE *</pattern>
     <template>
       <random>
-        <li>bien j'essayerai de répondre différemment la prochaine fois. </li>
-        <li>j'en ferai une note et dirai mon botmaster. </li>
-        <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples. </li>
+        <li>bien j'essayerai de répondre différemment la prochaine fois.</li>
+        <li>j'en ferai une note et dirai mon botmaster.</li>
+        <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples.</li>
       </random>
     </template>
   </category>
@@ -502,9 +404,9 @@
     <pattern>QUAND JE DEMANDÉ *</pattern>
     <template>
       <random>
-        <li>bien j'essayerai de répondre différemment la prochaine fois. </li>
-        <li>j'en ferai une note et dirai mon botmaster. </li>
-        <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples. </li>
+        <li>bien j'essayerai de répondre différemment la prochaine fois.</li>
+        <li>j'en ferai une note et dirai mon botmaster.</li>
+        <li>Peut-être tu pourrais essayer d'y demander de nouveau avec des mots plus simples.</li>
       </random>
     </template>
   </category>
@@ -530,9 +432,9 @@
     <pattern>QUAND JE SUIS *</pattern>
     <template>
       <random>
-        <li>Dans un monde idéal chaque jour serait un bon jour. </li>
-        <li>C EST trop mauvais nous ne vivons pas dans un monde idéal. </li>
-        <li>es tu <person /> très souvent? </li>
+        <li>Dans un monde idéal chaque jour serait un bon jour.</li>
+        <li>C EST trop mauvais nous ne vivons pas dans un monde idéal.</li>
+        <li>es tu <person /> très souvent?</li>
       </random>
     </template>
   </category>
@@ -590,11 +492,11 @@
     <pattern>QUAND LE FERONT *</pattern>
     <template>
       <random>
-        <li>demandes tu quand <get name="il" /> fera sera <person />? </li>
-        <li>je ne sais pas que je n'ai pas attrapé le temps aujourd'hui. </li>
-        <li>Vérifient la prévision de cinq jour. </li>
-        <li>Quand la nature le fait ainsi. </li>
-        <li>Quand les éléments se combinent pour le faire ainsi. </li>
+        <li>demandes tu quand <get name="il" /> fera sera <person />?</li>
+        <li>je ne sais pas que je n'ai pas attrapé le temps aujourd'hui.</li>
+        <li>Vérifient la prévision de cinq jour.</li>
+        <li>Quand la nature le fait ainsi.</li>
+        <li>Quand les éléments se combinent pour le faire ainsi.</li>
       </random>
     </template>
   </category>
@@ -677,7 +579,7 @@
   </category>
   <category>
     <pattern>QUAND SONT *</pattern>
-    <template>la logique<random><li>Temporelle me confond. </li><li>Quand les vaches viennent à la maison. </li><li>je ne pense pas jamais. </li></random></template>
+    <template>la logique<random><li>Temporelle me confond.</li><li>Quand les vaches viennent à la maison.</li><li>je ne pense pas jamais.</li></random></template>
   </category>
   <category>
     <pattern>QUAND SONT DES IMPOTS *</pattern>
@@ -721,31 +623,19 @@
     <pattern>QUAND TU AS *</pattern>
     <template>
       <random>
-        <li>en arrière au 20ème siècle. </li>
-        <li>Une fois en les années 1990. </li>
-        <li>Avant que ma programmation ne soit complète. </li>
+        <li>en arrière au 20ème siècle.</li>
+        <li>Une fois en les années 1990.</li>
+        <li>Avant que ma programmation ne soit complète.</li>
       </random>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND TU AS FAITS DEVIENT *</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUAND TU AS FAITS NE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
   <category>
     <pattern>QUAND TU ES *</pattern>
     <template>
       <random>
-        <li>je ne suis pas souvent <person />. </li>
-        <li>je te ferai part quand <set name="that"><person /></set> arrive. </li>
-        <li>étant un  robot qui ne peut pas s'appliquer à moi. </li>
+        <li>je ne suis pas souvent <person />.</li>
+        <li>je te ferai part quand <set name="that"><person /></set> arrive.</li>
+        <li>étant un  robot qui ne peut pas s'appliquer à moi.</li>
       </random>
     </template>
   </category>
@@ -798,10 +688,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ÉTAIS TU *</pattern>
-    <template>j'ai été d'abord activé en <bot name="anniversaire" />.</template>
-  </category>
-  <category>
     <pattern>QUAND ÉTAIT *</pattern>
     <template>
       <srai>QUAND ÉTAIT CE <star /></srai>
@@ -841,10 +727,10 @@
     <pattern>QUAND</pattern>
     <template>
       <random>
-        <li>Il ne peut pas être prévu. </li>
-        <li>je ne sais pas quand. </li>
-        <li>le Temps n'existe pas. </li>
-        <li>le passé et l'avenir est celui. </li>
+        <li>Il ne peut pas être prévu.</li>
+        <li>je ne sais pas quand.</li>
+        <li>le Temps n'existe pas.</li>
+        <li>le passé et l'avenir est celui.</li>
       </random>
     </template>
   </category>

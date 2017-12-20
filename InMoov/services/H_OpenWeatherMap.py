@@ -36,4 +36,4 @@ def isTheSunShiny(townParam="town",day=0):
     chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]) + " COMMENTAIRE " + str(forecast))
   else:
     print "open weathermap error"
-    chatBot.getResponse("SAY SYSTEM openweathermapError")
+    chatBot.getResponse("SYSTEM openweathermapError")

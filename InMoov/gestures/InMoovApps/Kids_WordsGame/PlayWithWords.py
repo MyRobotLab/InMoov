@@ -4,7 +4,7 @@ def PlayWithWords(word):
   for i in word.decode( "utf8" ):
     if i.isalpha():
       alphabet="alphabet"
-      if MyLanguage.lower()=="ru":alphabet="alphabet_ru"
+      if Language.lower()=="ru":alphabet="alphabet_ru"
       folderLetterPic=os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))+"\\"+alphabet+"\\"
       try:
         r=ImageDisplay.displayFullScreen(folderLetterPic+i+".jpg")

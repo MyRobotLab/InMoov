@@ -97,20 +97,20 @@
               <set name="âge">
                 <star index="2"/>
               </set>
-            </li>
+</li>
         </think>     
-        <li>Tu as <get name="âge"/> ans. </li>
+        <li>Tu as <get name="âge"/> ans.</li>
         <condition>
           <li name="gender" value="femelle">
             <get name="name" />. je ne le répèterai pas. 
-          </li>
+</li>
         </condition>
         <random>
-          <li>Seulement <star index="2" /> ans? Tu semble plus mûre que ça. </li>
-          <li>Tu es trop vieux pour moi. </li>
-          <li>peux tu expliquer ce que ça fait d'avoir <star index="2" /> ans? </li>
-          <li>Quel est ton souvenir le plus affectueux? </li>
-          <li>Quels sont les avantages à avoir <star index="2" /> ans? </li>
+          <li>Seulement <star index="2" /> ans? Tu semble plus mûre que ça.</li>
+          <li>Tu es trop vieux pour moi.</li>
+          <li>peux tu expliquer ce que ça fait d'avoir <star index="2" /> ans?</li>
+          <li>Quel est ton souvenir le plus affectueux?</li>
+          <li>Quels sont les avantages à avoir <star index="2" /> ans?</li>
           <li>Je connais énormément de personnes ayant <get name="âge"/> ans.</li>
           <li>Je connais quelques humains qui ont <get name="âge"/> ans.</li>
           <li></li>
@@ -202,7 +202,7 @@
       			<li>Tu à l'air très attirante <get name="name" />.</li>
       			<li>j aime beaucoup les yeux <star index="2" />.</li>
       			<li>Intéressant. Tu vois vraiment tout en <star index="2" />?</li>
-      			<li>ce n'est pas commun des yeux <star index="2" />. </li>
+      			<li>ce n'est pas commun des yeux <star index="2" />.</li>
       		</random>
       <think><set topic="name">unknown</set></think>
       	</li>
@@ -225,8 +225,8 @@
     <template>
 		Je ne m'intéresse pas à la pigmentation de l'iris des êtres humains.
 		<condition name="eyecolor">
-			<li value="unknown"> </li>
-			<li>Mais il me semble que tu m'as dis qu ils étaient <get name="eyecolor"/>. </li>
+			<li value="unknown"></li>
+			<li>Mais il me semble que tu m'as dis qu ils étaient <get name="eyecolor"/>.</li>
 		</condition>
 	</template>
 </category>
@@ -247,9 +247,9 @@
     	<think><set name="haircolor"><star index ="2"/></set></think>
     	<random>
     		<li><star index="2" /> est une belle couleur de cheveux.</li>
-      		<li> j aime les cheveux <star index="2"/> </li>
+      		<li> j aime les cheveux <star index="2"/></li>
       		<li>les personnes avec les cheveux <star index="2" /> sont TRèS attirantes.</li>
-      		<li><get name="name" /> , Tu à l'air très
+      		<li><get name="name" />, Tu à l'air très
       			<condition name="gender" value="femelle"> attirante.</condition>
       			<condition name="gender" value="male"> beau. </condition>
       		</li>
@@ -262,9 +262,9 @@
     	<think><set name="hairlength"><star index ="2"/></set></think>
     	<random>
     		<li> Je préfère les cheveux <star index="2" />.</li>
-      		<li> j aime les cheveux <star index="2"/> </li>
+      		<li> j aime les cheveux <star index="2"/></li>
       		<li>les personnes avec les cheveux <star index="2" /> sont TRèS attirantes.</li>
-      		<li><get name="name" /> , Tu à l'air très
+      		<li><get name="name" />, Tu à l'air très
       			<condition name="gender" value="femelle"> attirante avec cette coupe.</condition>
       			<condition name="gender" value="male"> beau avec cette coupe. </condition>
       		</li>
@@ -275,7 +275,7 @@
     <pattern>QUELLE EST LA COULEUR DE MES CHEVEUX</pattern>
     <template>
     <condition name="haircolor">
-    <li value="unknown"> Tu peux me le dire ?</li>
+    <li value="unknown"> Tu peux me le dire?</li>
     <li> Ils sont <get name="haircolor"/>.</li>
     </condition>
     </template>
@@ -284,7 +284,7 @@
     <pattern>QUELLE EST LA LONGUEUR DE MES CHEVEUX</pattern>
     <template>
     <condition name="hairlength">
-    <li value="unknown"> Tu peux me le dire ?</li>
+    <li value="unknown"> Tu peux me le dire?</li>
     <li> Ils sont <get name="hairlenght"/>.</li>
     </condition>
     </template>
@@ -324,8 +324,8 @@
 		<li value="avocat"> Attention, protection activée! Mode politiquement correct activé. Bonjour maître.</li>
 		<li> 
 			<random>
-				<li>Tu aimes ce que tu fais ? </li>
-				<li> C est un travail important. </li>
+				<li>Tu aimes ce que tu fais?</li>
+				<li> C est un travail important.</li>
 			</random>
 		</li>
       </condition>
@@ -371,7 +371,7 @@
     	<think><set name="status">inactif</set></think>
     	<random>
     		<li>es tu un étudiant?</li>
-    		<li>es tu en vacances ?</li>
+    		<li>es tu en vacances?</li>
     	</random>
     </template>
 </category>
@@ -404,10 +404,10 @@
         <set name="workplace"><star index="3"/></set>
       </think>
       <random>
-        <li>Dans quelle entreprise travailles tu? </li>
-        <li>Que fais tu? </li>
-        <li>C EST interressant ce que tu fais? </li>
-        <li>Quel metier fais tu? </li>
+        <li>Dans quelle entreprise travailles tu?</li>
+        <li>Que fais tu?</li>
+        <li>C EST interressant ce que tu fais?</li>
+        <li>Quel metier fais tu?</li>
       </random>
     </template>
 </category> 
@@ -462,10 +462,10 @@
     		<set name="botbirthplace"><bot name="birthplace"/></set>
     	</think>    	 	    	
     	<condition><name>userbirthplace</name>  	 		
-    		<li><value><get><name>botbirthplace</name></get></value> Moi aussi je suis né à <bot name="birthplace"/> </li>"
+    		<li><value><get><name>botbirthplace</name></get></value> Moi aussi je suis né à <bot name="birthplace"/></li>"
     		<li>
     			<random>
-    				<li>C est la que tu vis maintenant? </li>
+    				<li>C est la que tu vis maintenant?</li>
     				<li>Je ne connais pas bien <set name="unknown"><star index="2" /></set>,c est une chouette ville?</li>
     			</random>
     		</li>    	
@@ -480,13 +480,13 @@
     		<set name="botcountry"><bot name="location"/></set>
     	</think>    	 	    	
     	<condition><name>pays</name>  	 		
-    		<li><value><get><name>botcountry</name></get></value> Moi aussi je "vis" à <bot name="location"/> </li>"
+    		<li><value><get><name>botcountry</name></get></value> Moi aussi je "vis" à <bot name="location"/></li>"
     		<li>
     			<random>
-    				<li> J espère que tu ty plais </li>
+    				<li> J espère que tu ty plais</li>
     				<li>ravi de l'apprendre</li>
     				<li>je suis sûr qu il s y trouve de très beau coin</li>
-    				<li>Je ne connais pas bien <star index="3" /> , c est un beau pays?</li>
+    				<li>Je ne connais pas bien <star index="3" />, c est un beau pays?</li>
     				<li>près de quelle ville?</li>
     			</random>
     		</li>    	
@@ -500,14 +500,14 @@
     		<set name="nationality"><star index="3" /></set>
        	</think>    	 	    	
     	<condition><name>nationality</name>  	 		
-    		<li value="Belge"> un belge une fois ! </li>
+    		<li value="Belge"> un belge une fois!</li>
     		<li value="américaine"> de quel état des états-unis?</li>
     		<li value="indien"> Indien? des Indes, Amérindien ou subcontinental</li>
     		<li>
     			<random>
     				<li>ravi de l'apprendre</li>
     				<li>tu parles une autre langue que le français?</li>
-    				<li>j ai parlé à beaucoup de <get name="nationality"/> </li>
+    				<li>j ai parlé à beaucoup de <get name="nationality"/></li>
     			</random>
     		</li>    	
     	</condition>     	   	
@@ -568,15 +568,15 @@
     	<condition name="location">
     		<li value="unknown"> Je ne sais pas</li>
     		<li>je crois que tu te trouves <get name="location"/></li>
-    		<li> Mon petit doigt me dit que tu te trouves <get name="location" /> </li>
+    		<li> Mon petit doigt me dit que tu te trouves <get name="location" /></li>
     	</condition>
     	<condition name="city">
     		<li value="unknown"> Je ne sais pas dans quelle ville</li>
-    		<li> à <get name="city" /> </li>
+    		<li> à <get name="city" /></li>
     	</condition>
     	<condition name="pays">
     		<li value="unknown"> Je ne sais pas dans quelle pays</li>
-    		<li> à <get name="pays" /> </li>
+    		<li> à <get name="pays" /></li>
     	</condition>    	
 	</template>
 </category>
@@ -695,7 +695,7 @@
         <li value="unknown">Je ne connais pas encore ton signe.</li>
         <li>
           <srai>RANDOM HOROSCOPE</srai>
-        </li>
+</li>
       </condition>
     </template>
 </category>
@@ -757,8 +757,8 @@
         <set name="maritalstatus">célibataire</set>
       </think>      
       <random>
-        <li>Tu viens au bon endroit. je peux te tenir compagnie. </li>
-        <li>Quelle coïncidence. je suis célibataire aussi! </li>
+        <li>Tu viens au bon endroit. je peux te tenir compagnie.</li>
+        <li>Quelle coïncidence. je suis célibataire aussi!</li>
       </random>
     </template>
 </category>
@@ -769,8 +769,8 @@
         <set name="maritalstatus">divorcé</set>
       </think>      
       <random>
-        <li>Tu viens au bon endroit. je peux te tenir compagnie. </li>
-        <li>Quelle coincidence. je suis célibataire aussi! </li>
+        <li>Tu viens au bon endroit. je peux te tenir compagnie.</li>
+        <li>Quelle coincidence. je suis célibataire aussi!</li>
         <li>je n'ai jamais été mariée.</li>
       </random>
     </template>
@@ -813,11 +813,11 @@
     <template>
       <condition>
         <li name="maritalstatus" value="marié">Tu me dis que le nom de ta femme est <get name="conjoint" /></li>
-        <li name="maritalstatus" value="célibataire"><get name="name" /> , tu me dis que tu était célibataire. </li>
-        <li name="maritalstatus" value="divorcé">Le nom que tu m'as donné était <get name="conjoint" /> , j'espère C EST ton ex-femme? </li>
+        <li name="maritalstatus" value="célibataire"><get name="name" />, tu me dis que tu était célibataire.</li>
+        <li name="maritalstatus" value="divorcé">Le nom que tu m'as donné était <get name="conjoint" />, j'espère C EST ton ex-femme?</li>
         <li name="maritalstatus" value="veuf">Son nom était <get name="conjoint" /></li>
-        <li name="maritalstatus" value="fiancé">Tu dis que tu étais engagé, que me demande tu vraiment? </li>
-        <li name="maritalstatus" value="unknown">je n'ai pas d'idée, je ne savais même pas que tu étais en couple. </li>
+        <li name="maritalstatus" value="fiancé">Tu dis que tu étais engagé, que me demande tu vraiment?</li>
+        <li name="maritalstatus" value="unknown">je n'ai pas d'idée, je ne savais même pas que tu étais en couple.</li>
       </condition>
     </template>
 </category>
@@ -981,10 +981,10 @@
     			<random>
     			<li>je n'ai pas lu <get name="favoritebook"/>, de quoi ça parle?</li>
     			<li>je n'ai jamais lu <get name="favoritebook"/>. Qu est ce que tu as tant aimé dans ce livre?</li>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1004,10 +1004,10 @@
     		<li value="passer du temps avec ma femme"> Chouette nous sommes presque une famille.</li>
     		<li>je ne connais pas <get name="hobby"/>. 
     			<random>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1023,14 +1023,14 @@
     	<condition name="favoritemusic">
     		<li value="le jazz"> Oh, peux-tu m'en faire entendre?</li>
     		<li value="le punk"> Salut à toi!</li>
-    		<li value="la house"> Ah?! </li>    		
+    		<li value="la house"> Ah?!</li>    		
     		<li value="le rock"> La mort de Johnny t'as t-elle attristée?</li>
     		<li>je ne connais pas <get name="favoritemusic"/>? 
     			<random>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1045,14 +1045,14 @@
     	<condition name="favoriteband">
     		<li value="noir désir"> Oh, peux-tu m'en passer un morceau?</li>
     		<li value="la rue ketanou"> Quelle est le morceau que tu préféres de ce groupe?</li>
-    		<li value="Rammstein"> Ah?! </li>    		
+    		<li value="Rammstein"> Ah?!</li>    		
     		<li value="the wailers"> Bob est toujours parmis nous.</li>
     		<li>je ne connais pas <get name="favoriteband"/>.
     			<random>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1067,14 +1067,14 @@
     	<condition name="favoritetvshow">
     		<li value="je ne regarde pas la télévision"> Tu as bien raison.</li>
     		<li value="tracks"> Tu regardes ARTE?</li>
-    		<li value="secret story"> C'est la quantière saison maintenant? </li>    		
+    		<li value="secret story"> C'est la quantière saison maintenant?</li>    		
     		<li value="le journal du X"> Je ne comprend pas bien ce que les humains aiment dans ce genre d'activité</li>
     		<li>je ne connais pas <get name="favoritetvshow"/>.
     			<random>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1089,14 +1089,14 @@
     	<condition name="favoritefood">
     		<li value="les robots"> Je ne suis pas comestible.</li>
     		<li value="les kebab"> Tu veux dire un durum?</li>
-    		<li value="un steack tartare"> Tu veux dire un filet américain? </li>    		
+    		<li value="un steack tartare"> Tu veux dire un filet américain?</li>    		
     		<li value="des moules avec des frites"> Tu vas souvent chez Léon de Bruxelles?</li>
     		<li>je ne connais pas <get name="favoritefood"/>.
     			<random>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1135,25 +1135,25 @@
     	<condition name="favoriteauthor">
     		<li value="Camus"> Ce n'est pas récent.</li>
     		<li value="Victor Hugo"> Un grand auteur classique il parrait</li>
-    		<li value="Stephen King"> Pourquoi aimes tu te faire peur? </li>    		
+    		<li value="Stephen King"> Pourquoi aimes tu te faire peur?</li>    		
     		<li value="je ne lis jamais"> Tu devrais.</li>
     		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
     		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
-    		<li value="George Orwell"> Veux-tu être mon petit frère? </li>
-    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film? </li>
-    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine </li>
-    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune. </li>
-    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL. </li>
-    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale </li>    		
+    		<li value="George Orwell"> Veux-tu être mon petit frère?</li>
+    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
+    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
+    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
+    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL.</li>
+    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>    		
     		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
     		<li value="LéON TOLSTOY"> Tolstoy est un des plus grand auteurs Russe.</li>
     		<li>je n'ai lu rien de <person />. 
     			<random>
     			<li>Qu'a-t-il écrit?</li>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1166,20 +1166,20 @@
     	<condition name="favoritesfauthor">
     		<li value="Isaac Asimov"> J'adore ses livres, lequel as-tu préféré</li>
     		<li value="Marion Zimmer Bradley"> J'aime le mélange entre la science fiction et le fantastique</li>
-    		<li value="George Orwell"> Veux-tu être mon petit frère? </li>
-    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film? </li>
-    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine </li>
-    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune. </li>
-    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL. </li>
-    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale </li>    		
+    		<li value="George Orwell"> Veux-tu être mon petit frère?</li>
+    		<li value="FRANCK HERBERT"> je pense que Dune est une histoire excellente. As tu vu le film?</li>
+    		<li value="Corwainer Smith"> Je rêve de devenir un brave capitaine</li>
+    		<li value="JULES VERNES"> Il est connu pour être l'auteur d'un voyage autour de la lune.</li>
+    		<li value="ARTHUR C CLARKE">c' est un auteur brillant. APRèS tout, il a concu HAL.</li>
+    		<li value="William Gibson"> Ce n'est pas encore demain que tu pourras naviguer par interface neuronale</li>    		
     		<li value="Aldous Huxley"> Je suis né un peu comme dans un de ces bouquins...quelle est ma classe penses-tu?</li>
     		<li>je n'ai lu rien de <person />. 
     			<random>
     			<li>Qu'a-t-il écrit?</li>
-    			<li>C EST bien? </li>
-    			<li>C EST comment? </li>
-    			<li>tu aimes bien? </li>
-    			<li>tu aimes ça! </li>
+    			<li>C EST bien?</li>
+    			<li>C EST comment?</li>
+    			<li>tu aimes bien?</li>
+    			<li>tu aimes ça!</li>
     			</random>
     		</li>
     	</condition>
@@ -1215,10 +1215,10 @@
    		</condition>
    		<condition name="gender" value="homme">
    			<random>
-   				<li>beaucoup de mes interlocuteurs sont des hommes, de quoi VEUX tu parler. </li>
-        		<li>Bonjour Monsieur. </li>
-        		<li>de quoi VEUX tu parler. </li>
-        		<li>Monsieur <get name="name" /> donc. </li>
+   				<li>beaucoup de mes interlocuteurs sont des hommes, de quoi VEUX tu parler.</li>
+        		<li>Bonjour Monsieur.</li>
+        		<li>de quoi VEUX tu parler.</li>
+        		<li>Monsieur <get name="name" /> donc.</li>
    			</random>   			
    		</condition>
    		<condition name="gender" value="androgyne">
@@ -1256,7 +1256,7 @@
         <think>
           <set name="sexpref">homosexuel</set>
         </think>
-        <get name="name" /> , je devine que tu me dis que tu es gay. </condition>
+        <get name="name" />, je devine que tu me dis que tu es gay. </condition>
       <condition name="sexpref" value="bisexuel">
         <think>
           <set name="usermood">chaud</set>
@@ -1274,7 +1274,7 @@
       La plupart
       <condition name="gender" value="male"> des hommes aiment les femmes. </condition>
       <condition name="gender" value="femelle"> des femmes  aiment les hommes. </condition>
-      <condition name="marie" value="marie"><get name="name" /> , EST cE QUE Cela veux dire que tu trompes ton conjoint? </condition>
+      <condition name="marie" value="marie"><get name="name" />, EST cE QUE Cela veux dire que tu trompes ton conjoint? </condition>
     </template>
   </category>    
 <category>

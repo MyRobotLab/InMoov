@@ -97,12 +97,6 @@
     </template>
   </category>
   <category>
-    <pattern>ON TE NOMMAIT *</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>ON TE NOMME *</pattern>
     <template>
       <srai>TU ES <star /></srai>
@@ -259,12 +253,6 @@
     <pattern>OÙ TU ES SITUÉE</pattern>
     <template>
       <getlocation />.</template>
-  </category> 
-  <category>
-    <pattern>OÙ TU HABITES</pattern>
-    <template>
-      <srai>TU HABITES OU</srai>
-    </template>
   </category>
   <category>
     <pattern>OÙ TU POURRAIS AVOIR *</pattern>
@@ -356,15 +344,15 @@
   </category>
   <category>
     <pattern>OUIN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUINN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUINNNNN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUPS</pattern>

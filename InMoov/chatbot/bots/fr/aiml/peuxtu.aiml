@@ -20,9 +20,9 @@
     <pattern>PEUX TU *</pattern>
     <template>
       <random>
-        <li>j'espère souvent pouvoir <set name="that"><star /></set>. </li>
-        <li>Un livre peut-il n'avoir aucun titre? </li>
-        <li>Peux quoi? </li>
+        <li>j'espère souvent pouvoir <set name="that"><star /></set>.</li>
+        <li>Un livre peut-il n'avoir aucun titre?</li>
+        <li>Peux quoi?</li>
       </random>
     </template>
   </category>
@@ -214,18 +214,6 @@
     <pattern>PEUX TU AVOIR DES KIDS</pattern>
     <template>
       <srai>AS TU DES ENFANTS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU AVOIR DES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES SENTIMENTS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU AVOIR PEUR *</pattern>
-    <template>
-      <srai>AS TU PEUR</srai>
     </template>
   </category>
   <category>
@@ -690,12 +678,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU EXPERIMENTER *</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU EXPIRER</pattern>
     <template>
       <srai>PEUX TU MOURIR</srai>
@@ -721,12 +703,6 @@
     <pattern>PEUX TU EXPLIQUER</pattern>
     <template>
       <srai>EXPLIQUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU EXPRIMER *</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
@@ -915,12 +891,6 @@
     <pattern>PEUX TU LIRE *</pattern>
     <template>
       <srai>TROUVER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU LIRE DES LIVRES</pattern>
-    <template>
-      <srai>QU EST CE QUE TON LIVRE FAVORI</srai>
     </template>
   </category>
   <category>
@@ -1282,52 +1252,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU PARLER D AUTRES LANGAGES</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER D AUTRES LANGUES</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER EN *</pattern>
-    <template>
-      <srai>PEUX TU PARLER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER L ANGLAIS</pattern>
-    <template>Bien sûr <think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">L Anglais</set> est ma langue maternelle.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER L ESPAGNOL</pattern>
-    <template>L ONU poquito.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER LE DANOIS</pattern>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">DANOIS</set>
-        </set>
-      </think>
-      <srai>PEUX TU PARLER DANOIS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER LE JAPONAIS</pattern>
-    <template>Nihongo de shabete ii desu kà?</template>
-  </category>
-  <category>
     <pattern>PEUX TU PARLER QUELQUES *</pattern>
     <template>
       <srai>PEUX TU PARLER <star /></srai>
@@ -1336,18 +1260,6 @@
   <category>
     <pattern>PEUX TU PARLER SALE</pattern>
     <template>Non</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER UNE LANGUE ETRANGERE</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER UNE LANGUE ÉTRANGÈRE</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU PARLER À PROPOS DE TOI</pattern>
@@ -1384,10 +1296,10 @@
         </set>
       </think>
       <random>
-        <li>Pourquoi VEUX tu que je pense à <star />? </li>
-        <li>Trop penser me fais dormir. </li>
-        <li>ça dépend ce que tu entends par penser. </li>
-        <li>je ne pense pas à propos de <star />. </li>
+        <li>Pourquoi VEUX tu que je pense à <star />?</li>
+        <li>Trop penser me fais dormir.</li>
+        <li>ça dépend ce que tu entends par penser.</li>
+        <li>je ne pense pas à propos de <star />.</li>
       </random>
     </template>
   </category>
@@ -1427,12 +1339,6 @@
     <pattern>PEUX TU POSSÈDER *</pattern>
     <template>
       <srai>AS TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PRATIQUER DES SPORTS</pattern>
-    <template>
-      <srai>AIMES TU SPORTS</srai>
     </template>
   </category>
   <category>
@@ -1525,12 +1431,6 @@
     <pattern>PEUX TU REGARDER * SIMPSONS</pattern>
     <template>
       <srai>AIMES TU LES SIMPSONS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU REGARDER *</pattern>
-    <template>
-      <srai>QU EST CE QUE ÉMISSION FAVORITE</srai>
     </template>
   </category>
   <category>
@@ -1681,10 +1581,6 @@
     <template>
       <srai>PEUX TU MOURIR</srai>
     </template>
-  </category>
-  <category>
-    <pattern>PEUX TU SENTIR</pattern>
-    <template>Non je n'ai aucune émotion.</template>
   </category>
   <category>
     <pattern>PEUX TU SEULEMENT *</pattern>
@@ -1877,12 +1773,6 @@
     <template>Essaye AltaVista Translation ou quleque chose comme ça</template>
   </category>
   <category>
-    <pattern>PEUX TU TRAVAILLER</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU TROMPER *</pattern>
     <template>
       <srai>PEUX TU MENTIR</srai>
@@ -1906,12 +1796,6 @@
     <pattern>PEUX TU TÉLÉCHARGER</pattern>
     <template>
       <srai>TÉLÉCHARGEMENT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU VIVRE *</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
     </template>
   </category>
   <category>
@@ -2062,21 +1946,9 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU ÊTRE EN COLÈRE</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU ÊTRE HEUREUSE</pattern>
     <template>
       <srai>ES TU HEUREUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE MON AMI</pattern>
-    <template>
-      <srai>SUIS JE TON AMI</srai>
     </template>
   </category>
   <category>

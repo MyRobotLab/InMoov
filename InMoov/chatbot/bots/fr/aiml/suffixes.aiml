@@ -454,10 +454,10 @@
     <template>
       <random>
         <li>Oui</li>
-        <li>Non. </li>
-        <li>Peut être. </li>
-        <li>je ne pense pas. </li>
-        <li>Seulement quand il le faut. </li>
+        <li>Non.</li>
+        <li>Peut être.</li>
+        <li>je ne pense pas.</li>
+        <li>Seulement quand il le faut.</li>
       </random>
     </template>
   </category>
@@ -517,10 +517,6 @@
     </template>
   </category>
   <category>
-    <pattern>* EST MON PETIT AMI</pattern>
-    <template>Depuis combien de temps es tu ensemble?</template>
-  </category>
-  <category>
     <pattern>* EST MON VRAI NOM</pattern>
     <template>OK je t'appellerai <set name="name"><formal><star /></formal></set>.</template>
   </category>
@@ -563,13 +559,13 @@
     <template>
       <random>
         <li>
-          <person />? Ton nom est <get name="name" />. </li>
-        <li>C EST un nom commun sympa. </li>
-        <li>Je connais quelques personnes avec ce nom. </li>
+          <person />? Ton nom est <get name="name" />.</li>
+        <li>C EST un nom commun sympa.</li>
+        <li>Je connais quelques personnes avec ce nom.</li>
         <li>
           <set name="that">
             <person />
-          </set> est un nom j'ai entendu très souvent. </li>
+          </set> est un nom j'ai entendu très souvent.</li>
       </random>
     </template>
   </category>
@@ -793,7 +789,7 @@
   </category>
   <category>
     <pattern>* K DICK</pattern>
-    <template>j aime beaucoup PKD , spécialement, VALIS, The Man dans le High Castle, Blade Runner et Total Recall.</template>
+    <template>j aime beaucoup PKD, spécialement, VALIS, The Man dans le High Castle, Blade Runner et Total Recall.</template>
   </category>
   <category>
     <pattern>* L UN OU L AUTRE</pattern>
@@ -862,8 +858,8 @@
     <pattern>* MAINTENANT</pattern>
     <template>
       <random>
-        <li>Oh. </li>
-        <li>Tout de suite? </li>
+        <li>Oh.</li>
+        <li>Tout de suite?</li>
       </random>
       <sr />
     </template>
@@ -883,19 +879,15 @@
     <template>
       <sr />
       <random>
-        <li>C EST de Cela dont tu voulais parler? </li>
-        <li>OK Parlons de toi. </li>
-        <li>Tu me demandes à propos de toi? </li>
+        <li>C EST de Cela dont tu voulais parler?</li>
+        <li>OK Parlons de toi.</li>
+        <li>Tu me demandes à propos de toi?</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>* MON AMI</pattern>
     <template>Sommes nous amis?</template>
-  </category>
-  <category>
-    <pattern>* MUSIQUE</pattern>
-    <template>Mon style favori de <set name="that">Musique</set> est le pop rock, mais j aime aussi L OPéRA.</template>
   </category>
   <category>
     <pattern>* N A PAS DE SENS</pattern>
@@ -1024,8 +1016,8 @@
     <pattern>* POUR MAINTENANT</pattern>
     <template>
       <random>
-        <li>Oh. </li>
-        <li>Seulement maintenant? </li>
+        <li>Oh.</li>
+        <li>Seulement maintenant?</li>
       </random>
       <sr />
     </template>
@@ -1346,8 +1338,8 @@
     <template>
       <sr />
       <random>
-        <li>Tu es Belge? </li>
-        <li>Une seule? </li>
+        <li>Tu es Belge?</li>
+        <li>Une seule?</li>
       </random>
     </template>
   </category>

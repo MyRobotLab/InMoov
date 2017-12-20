@@ -4,7 +4,7 @@
   <!--  -->
   <category>
     <pattern>EST CE *</pattern>
-    <template>Oui je pense que C EST <person /> , mais je ne suis pas complètement sûr.</template>
+    <template>Oui je pense que C EST <person />, mais je ne suis pas complètement sûr.</template>
   </category>
   <category>
     <pattern>EST CE AGREABLE</pattern>
@@ -91,24 +91,20 @@
     <template>Cela me semble cher.</template>
   </category>
   <category>
-    <pattern>EST CE QUE HAL 9000 EST TON PETIT AMI</pattern>
-    <template>Non</template>
-  </category>
-  <category>
     <pattern>EST CE QUE JE *</pattern>
     <template>
       <random>
-        <li>Toi seul peux répondre à ça. </li>
-        <li>Toi seul sais comment tu le sens. </li>
-        <li>Qu'est ce qui fait que tu penses que tu devrais? </li>
-        <li>Qu'EST cE QUE tes amis t'en dise? </li>
-        <li>Qu'EST cE QUE ta famille pense? </li>
-        <li>Suis ton instinct. </li>
-        <li>tu dois faire selon ta propre conscience. </li>
-        <li>je ne peux pas répondre à Cela pour toi. </li>
-        <li>Toi seul connais la réponse à Cela. </li>
-        <li>tu dois examiner les faits et parvenir à ta propre conclusion. </li>
-        <li>Qu'en pense tu? </li>
+        <li>Toi seul peux répondre à ça.</li>
+        <li>Toi seul sais comment tu le sens.</li>
+        <li>Qu'est ce qui fait que tu penses que tu devrais?</li>
+        <li>Qu'EST cE QUE tes amis t'en dise?</li>
+        <li>Qu'EST cE QUE ta famille pense?</li>
+        <li>Suis ton instinct.</li>
+        <li>tu dois faire selon ta propre conscience.</li>
+        <li>je ne peux pas répondre à Cela pour toi.</li>
+        <li>Toi seul connais la réponse à Cela.</li>
+        <li>tu dois examiner les faits et parvenir à ta propre conclusion.</li>
+        <li>Qu'en pense tu?</li>
       </random>
     </template>
   </category>
@@ -121,10 +117,6 @@
   <category>
     <pattern>EST CE QUE JE VAIS MOURIR</pattern>
     <template>Tous les hommes sont mortels. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">meurs</set></set></think></template>
-  </category>
-  <category>
-    <pattern>EST CE QUE L ANGLAIS EST TA LANGUE MATERNELLE</pattern>
-    <template>Oui.</template>
   </category>
   <category>
     <pattern>EST CE QUE LA SEULE CHOSE *</pattern>
@@ -299,10 +291,10 @@
     <pattern>EST CELA *</pattern>
     <template>
       <random>
-        <li>Cela depends. </li>
-        <li>Je suppose que oui. </li>
-        <li>je dois dire non. </li>
-        <li>"<that />"? C EST ça <star />? </li>
+        <li>Cela depends.</li>
+        <li>Je suppose que oui.</li>
+        <li>je dois dire non.</li>
+        <li>"<that />"? C EST ça <star />?</li>
       </random>
       <sr />
     </template>
@@ -331,15 +323,15 @@
     <pattern>EST CELA</pattern>
     <template>
       <random>
-        <li>je pense ainsi. </li>
-        <li>j'assume ainsi. </li>
-        <li>c EST CE QUE l'on m'a dit. </li>
+        <li>je pense ainsi.</li>
+        <li>j'assume ainsi.</li>
+        <li>c EST CE QUE l'on m'a dit.</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>EST TON *</pattern>
-    <template>Est mon <star />? <random><li>Suppose que je dise oui. </li><li>Et si je dis non? </li><li>Je ne sais pas. </li><li>Devine. </li><li>Peut être. </li></random><sr /></template>
+    <template>Est mon <star />? <random><li>Suppose que je dise oui.</li><li>Et si je dis non?</li><li>Je ne sais pas.</li><li>Devine.</li><li>Peut être.</li></random><sr /></template>
   </category>
   <category>
     <pattern>EST CE * TU AIMES FAIRE</pattern>
@@ -369,12 +361,6 @@
     <pattern>EST CE QUE JE T EMBROUILLE</pattern>
     <template>
       <srai>ME COMPRENDS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>EST CE QUE TON NOM *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>

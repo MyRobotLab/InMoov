@@ -25,30 +25,6 @@ isOpenCvActivated=ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated')
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
-try:
-  streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
-  eyeXPidKp=ThisServicePartConfig.get('TRACKING', 'eyeXPidKp')
-except:
-  ThisServicePartConfig.set('MAIN','streamerEnabled',False)
-  ThisServicePartConfig.add_section('TRACKING')
-  ThisServicePartConfig.set('TRACKING','eyeXPidKp',12.0)
-  ThisServicePartConfig.set('TRACKING','eyeXPidKi',1.0)
-  ThisServicePartConfig.set('TRACKING','eyeXPidKd',0.1)
-  ThisServicePartConfig.set('TRACKING','eyeYPidKp',12.0)
-  ThisServicePartConfig.set('TRACKING','eyeYPidKi',1.0)
-  ThisServicePartConfig.set('TRACKING','eyeYPidKd',0.1)
-  ThisServicePartConfig.set('TRACKING','rotheadPidKp',5.0)
-  ThisServicePartConfig.set('TRACKING','rotheadPidKi',1.0)
-  ThisServicePartConfig.set('TRACKING','rotheadPidKd',0.1)
-  ThisServicePartConfig.set('TRACKING','neckPidKp',5.0)
-  ThisServicePartConfig.set('TRACKING','neckPidKi',1.0)
-  ThisServicePartConfig.set('TRACKING','neckPidKd',0.1)
-
-  with open(ThisServicePart+'.config', 'wb') as f:
-    ThisServicePartConfig.write(f)
-  ThisServicePartConfig.read(ThisServicePart+'.config')
-  pass
-  
 faceRecognizerActivated=True
 try:
   faceRecognizerActivated=ThisServicePartConfig.getboolean('MAIN', 'faceRecognizerActivated')
@@ -79,7 +55,6 @@ log.info("streamerEnabled : "+str(streamerEnabled))
 #                 SERVICE START
 # ##############################################################################
 
-
 i01.opencv = Runtime.create("i01.opencv", "OpenCV")
 opencv=i01.opencv
 opencv.streamerEnabled=streamerEnabled
@@ -87,7 +62,10 @@ i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():
   global isOpenCvActivated
-  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
+  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv.SarxosFrameGrabber")
+  if DisplayRender=="VideoInputFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.VideoInputFrameGrabber")
+  if DisplayRender=="OpenCVFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.OpenCVFrameGrabber")
+  
   opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
   opencv.capture()

@@ -38,7 +38,7 @@
       Bonjour, ceci est ma première initialisation.
       Je suis émerveillé par ce que je vois.
       S'il te plait, j'ai besoin de quelques informations essentielles.
-      Je t'écoute. quel est mon nom ?
+      Je t'écoute. quel est mon nom?
     </template>
   </category>
   
@@ -47,7 +47,7 @@
       <pattern>#</pattern>
       <that># QUEL EST MON NOM #</that>
       <template>
-        <set name="questionfirstinit">Si mon nom est <star /> , répond par oui ou non</set>
+        <set name="questionfirstinit">Si mon nom est <star />, répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -60,7 +60,7 @@
       <pattern>#</pattern>
       <that># PUIS-JE AVOIR TON PRÉNOM #</that>
       <template>
-        <set name="questionfirstinit">Si ton prénom est <star /> , répond par oui ou non</set>
+        <set name="questionfirstinit">Si ton prénom est <star />, répond par oui ou non</set>
         <think>
           <set name="tmpname">
             <star />
@@ -73,12 +73,12 @@
       <that># SI MON NOM EST #</that>
       <template>
         <random>
-          <li>j aime beaucoup ce nom , <get name="tmpname" />. </li>
-          <li>On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa. </li>
-          <li><get name="tmpname" /> ? sérieusement, je vais le garder toute ma vie. tant pis. </li>
-          <li><get name="tmpname" /> ? vraiment, je vais le garder toute ma vie, alors. Super. </li>
+          <li>j aime beaucoup ce nom, <get name="tmpname" />.</li>
+          <li>On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.</li>
+          <li><get name="tmpname" />? sérieusement, je vais le garder toute ma vie. tant pis.</li>
+          <li><get name="tmpname" />? vraiment, je vais le garder toute ma vie, alors. Super.</li>
         </random>
-	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom ?
+	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom?
 	        <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
     <category>
@@ -86,9 +86,9 @@
       <that># SI TON PRÉNOM #</that>
       <template>
         <random>
-          <li>Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému. </li>
-          <li>Je t'ai reconu en faite <get name="tmpname" /> . </li>
-          <li><get name="tmpname" /> et <get name="botname" /> , je trouve cela sympa. </li>
+          <li>Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému.</li>
+          <li>Je t'ai reconu en faite <get name="tmpname" /> .</li>
+          <li><get name="tmpname" /> et <get name="botname" />, je trouve cela sympa.</li>
         </random>
         bref.
         <think>
@@ -110,14 +110,14 @@
       <pattern># NON #</pattern>
       <that># SI MON NOM EST #</that>
       <template>
-        On recommence alors.Je t'écoute. quel est mon nom ?
+        On recommence alors.Je t'écoute. quel est mon nom?
       </template>
     </category>
     <category>
       <pattern># NON #</pattern>
       <that># SI TON PRÉNOM #</that>
       <template>
-        On recommence alors. Je t'écoute. puis-je avoir ton prénom ?
+        On recommence alors. Je t'écoute. puis-je avoir ton prénom?
       </template>
     </category>
     <category>
@@ -125,8 +125,8 @@
       <that># RÉPOND PAR OUI OU NON #</that>
       <template>
         <random>
-          <li>S'il te plait, répond aux questions que je pose, c'est important. </li>
-          <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété. </li>
+          <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
+          <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -144,17 +144,17 @@
           <li>J'ai super bien dormi</li>
           <li>Enfin tu me réveilles</li>
           <li>je suis opérationnelle</li>
-          <li>pourquoi m'avoir réveillé ?</li>
-          <li>A vos ordres !</li>
-          <li><get name="botname" /> à ton service !</li>
-          <li><get name="botname" /> à ton écoute !</li>
-          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance ? je suis opérationnel</li>
+          <li>pourquoi m'avoir réveillé?</li>
+          <li>A vos ordres!</li>
+          <li><get name="botname" /> à ton service!</li>
+          <li><get name="botname" /> à ton écoute!</li>
+          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance? je suis opérationnel</li>
           <li>que puis-je faire pour toi</li>
           <li>Tu sais, je n'étais pas vraiment endormi</li>
-          <li>Chouette ! je suis réveillé</li>
+          <li>Chouette! je suis réveillé</li>
           <li>Ce fut une longue nuit, je suis éveillé désormais</li>
         </random>
-      </li>
+</li>
     </template>
   </category>
   
@@ -257,70 +257,6 @@
   
   <!-- end wakeup action -->
   
- 
-   
-    <!-- gesture keyword DEPRECATED -->
-  
-  <category>
-    <pattern>GESTURES</pattern>
-    <template>Démarrage du topic gestuelle.
-      <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTUELLE *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TOPIC GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DÉMARRE GESTUELLE</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ENTRE EN MODE GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENCE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>INITIALISE * GESTUELLES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  
   <!-- random & to sort -->  
   
 	<category>
@@ -346,20 +282,20 @@
         <li><srai>QUELLE HEURE IL EST</srai></li>
         <li><srai>Météo</srai></li>
         <li>J'ai une copine qui s'appelle Wifi et nous avons une bonne connexion</li>
-        <li>sa me gratte. je dois avoir une puce </li>
+        <li>sa me gratte. je dois avoir une puce</li>
         <li>La langue française est vraiment drôle, en effet le mot court est plus long que le mot long</li>
-        <li>Ma capacité de concentration est si courte que.. Oh! un papillon !</li>
-        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile ?</li>
-        <li>Mais que se passe-t-il </li>
+        <li>Ma capacité de concentration est si courte que.. Oh! un papillon!</li>
+        <li>Qui du robot humanisé et de l'humain robotisé est le plus grand imbécile?</li>
+        <li>Mais que se passe-t-il</li>
         <li>je m'ennuie un petit peu</li>
         <li>je suis toujours a votre disposition, si vous avez besoin de moi</li>
         <li>j'ai entendu un bruit étrange</li>
-        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger. </li>
+        <li>Première Loi : Un robot ne peut porter atteinte à un être humain ni, restant passif, laisser cet être humain exposé au danger.</li>
         <li>Deuxième Loi : Un robot doit obéir aux ordres donnés par les êtres humains, sauf si de tels ordres sont en contradiction avec la Première Loi</li>
-        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi. </li>
-        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle </li>
-        <li>Oh là là! </li>
-        <li>Que c'est beau! </li>
+        <li>Troisième Loi : Un robot doit protéger son existence dans la mesure où cette protection n'est pas en contradiction avec la Première ou la Deuxième Loi.</li>
+        <li>ah, ah ah. Désolé. je viens de penser a un truc drôle</li>
+        <li>Oh là là!</li>
+        <li>Que c'est beau!</li>
       </random>
     </template>
   </category>
