@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+   <!-- File: _inmoovTraduction.aiml --> 
+   <!-- автор: Gael Langevin, Anthony Gallot -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменение: moz4r -->
+   <!-- Последнее изменение: 16 Мая, 2017 -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 2017 г. -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   
+  <topic name="TRADUCTION">
+    <category>
+        <pattern># ОСТАНОВИ ПЕРЕВОДЧИК #</pattern>  
+        <template>
+          <think>
+            <set name="topic"></set>
+          </think>
+          <think>
+            <set name="languetraduction">en</set>
+          </think>
+          <random>
+            <li>Я прекращаю перевод, этот язык хорош</li>
+			<li>Хорошо, я прекратил перевод, мне понравился этот язык</li>
+          </random>
+        </template>
+      </category> 
+ <category>
+      <pattern>#</pattern>
+      <template>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+  </topic>
+  
+  <category>
+    <pattern>ПЕРЕВОД В *</pattern>
+    <template>
+      <think>
+        <set name="topic">TRADUCTION</set>
+      </think>
+      <think>
+        <set name="languetraduction">
+          <star />
+        </set>
+      </think>
+      <li>
+		 Перевод на <star/>, cкажи мне: ОСТАНОВИТЬ ПЕРЕВОДЧИК, и я остановлюсь
+      </li>
+    </template>
+  </category>
+  
+  
+  <category>
+    <pattern>ПЕРЕВОД НА *</pattern>
+    <template>
+      <srai>ПЕРЕВОД В <star index="1" /></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ПЕРЕВЕДИ *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1" />","<get name="languetraduction" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ПЕРЕВОД * В *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1" />","<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ПЕРЕВОД * НА *</pattern>
+    <template>
+      <srai>ПЕРЕВЕДИ <star index="1" /> НА <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_1</pattern>
+    <template>Извините, проблема связана с сервером Azure, повторите попытку и проверьте ключ. !</template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_2 *</pattern>
+    <template>Я не знаю этот язык <star index="1"/>, Или неправильный синтаксис в файле azure !</template>
+  </category>
+  <category>
+    <pattern>AZURE_ERROR_3</pattern>
+    <template>Кажется, у меня проблемы с подключением к серверу .</template>
+  </category>
+</aiml>
