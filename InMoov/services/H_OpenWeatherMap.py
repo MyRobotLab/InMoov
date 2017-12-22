@@ -39,7 +39,7 @@ def isTheSunShiny(townParam="town"):
     chatBot.getResponse("SYSTEM openweathermapError")
 
 
-def doITakeAnUmbrella(townParam="town",index):
+def doITakeAnUmbrella(townParam="town",index=1):
   if townParam=="town" or townParam=="":townParam=town
   print index,townParam
   weather=OpenWeatherMap.fetchForecast(townParam,index)

@@ -66,7 +66,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,1)</param>
+          <param>doITakeAnUmbrella(town,8)</param>
         </mrl>
       </oob>
     </template>
@@ -79,29 +79,44 @@
         <condition>
             <li name="jours" value="unknown"><think><set name="jours"><star index="2" /></set></think></li>
         </condition>
+		<think>
+			<set var="index">
+			<javascript>
+			myMath = eval( 8 * <get name="jours"/> );
+			myMath;
+			</javascript>
+			</set>
+		</think>		
        <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,<get name="jours" />)</param>
+          <param>doITakeAnUmbrella(town,<get var="index" />)</param>
         </mrl>
       </oob>
     </template>
   </category>
   
-    <category>
+  <category>
     <pattern>QUEL TEMPS # À * DANS * JOURS</pattern>
     <template>
-    <think><set name="jours"><map name="name2number"><star index="3" /></map></set></think>
-    <condition>
-        <li name="jours" value="unknown"><think><set name="jours"><star index="3" /></set></think></li>
-    </condition>
-        
+		<think><set name="jours"><map name="name2number"><star index="3" /></map></set></think>
+		<condition>
+			<li name="jours" value="unknown"><think><set name="jours"><star index="3" /></set></think></li>
+		</condition>
+		<think>
+			<set var="index">
+			<javascript>
+			myMath = eval( 8 * <get name="jours"/> );
+			myMath;
+			</javascript>
+			</set>
+		</think>        
        <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",<get name="jours" />)</param>
+          <param>doITakeAnUmbrella("<star index="2" />",<get var="index" />)</param>
         </mrl>
       </oob>
     </template>
@@ -114,7 +129,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",1)</param>
+          <param>doITakeAnUmbrella("<star index="2" />",8)</param>
         </mrl>
       </oob>
     </template>
