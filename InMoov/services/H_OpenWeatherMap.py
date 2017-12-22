@@ -17,16 +17,14 @@ town=ThisServicePartConfig.get('MAIN', 'town').replace('"',"")
 
 OpenWeatherMap=Runtime.createAndStart("OpenWeatherMap", "OpenWeatherMap")
 OpenWeatherMap.setApiKey(apikey)
-try:
+
+
+# forecast index 1 is now to next 3 hours , so 24 hours is 8
+def isTheSunShiny(townParam="town",period=1):
   OpenWeatherMap.setUnits(setUnits)
-except:
-  pass
-
-
-def isTheSunShiny(townParam="town",day=0):
   if townParam=="town" or townParam=="":townParam=town
-  print day,townParam
-  weather=OpenWeatherMap.fetchForecast(townParam,day)
+  print period,townParam
+  weather=OpenWeatherMap.fetchForecast(townParam,period)
   
   if weather:
     print weather[1]

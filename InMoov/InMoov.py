@@ -5,10 +5,10 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='0.9.9'
+version='0.9.9.9'
 
 # this will run with versions of MRL above :
-mrlCompatible='2667'
+mrlCompatible='2684'
 
 # ###################################################################################
 # This is the full configurable launcher script for Inmoov service :
@@ -25,7 +25,8 @@ mrlCompatible='2667'
 #   isRightHandActivated=True | inside config/skeleton_rightHand.config
 #   voice command sample : OPEN HAND
 ##
-# Check your configuration inside Inmoov.config ( exemple to change english to french )
+# Check your configuration inside Inmoov.config
+# Change voice and speech engine inside mouth.config
 # If you setup 2 arduino + configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )
 # ###################################################################################
 
