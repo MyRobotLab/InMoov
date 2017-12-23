@@ -5,10 +5,10 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='0.9.9.9'
+version='0.1.0'
 
 # this will run with versions of MRL above :
-mrlCompatible='2684'
+mrlCompatible='2685'
 
 # ###################################################################################
 # This is the full configurable launcher script for Inmoov service :
