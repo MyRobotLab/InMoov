@@ -1,4 +1,4 @@
-# InMooV - Service launcher v 0.9.9   
+# InMooV - Service launcher v 1.0.0   
 
 This is the full configurable internationnal launcher script for Inmoov service.  
 Worky out of the box with standardized InMoov hardware configuration.  
