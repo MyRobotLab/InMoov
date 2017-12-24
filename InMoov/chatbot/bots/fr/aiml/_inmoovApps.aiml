@@ -18,17 +18,17 @@
 	<think><set name="topic">playwordsgame</set></think>
 	<random>
 		<li>
-		Chouette ! j aime apprendre avec toi. Quel mot veux-tu apprendre ?
+		Chouette! j aime apprendre avec toi. Quel mot veux-tu apprendre?
 		</li>  
 		<li>
-		Je connais plein de mots tu sais ? Va zi , essayes !
+		Je connais plein de mots tu sais? Va zi, essayes!
 		</li>  
 		<li>
-		Je connais presque tous les mots du monde ! Normal, je suis un robot. ALLons zi.
+		Je connais presque tous les mots du monde! Normal, je suis un robot. ALLons zi.
 		</li> 
 	</random>
 	<li>
-	Dis moi , STOP JEUX ! pour arrêter
+	Dis moi, STOP JEUX! pour arrêter
 	</li>
 	
     </template>
@@ -75,14 +75,14 @@
   <think><set name="rockpaperscissorsRobotPoints">0</set></think>
 	<random>
 		<li>
-		Jouont à chifoumi !
+		Jouont à chifoumi!
 		</li>  
 		<li>
-		j aime ce jeu !
+		j aime ce jeu!
 		</li>  
 	</random>
 	<li>
-	3 points pour gagner ! Dis moi , STOP JEUX ! pour arrêter. Tu commences. Dis PIERRE FEUILLE ou CISEAU.
+	3 points pour gagner! Dis moi, STOP JEUX! pour arrêter. Tu commences. Dis PIERRE FEUILLE ou CISEAU.
 	</li>
 	
     </template>
@@ -98,13 +98,13 @@
        <random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
-        J'ai une FEUILLE désolé elle recouvre la pierre !
+        J'ai une FEUILLE désolé elle recouvre la pierre!
         <think><set name="rockpaperscissorsRobotPoints">
         <javascript>
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>  
+</li>  
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         J'ai des ciseaux, ta pierre les a cassé.
@@ -113,11 +113,11 @@
         eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         J'ai une pierre aussi.
-        </li> 
+</li> 
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
@@ -129,13 +129,13 @@
         <random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
-        Désolé j'ai des ciseaux, ils coupent le papier !
+        Désolé j'ai des ciseaux, ils coupent le papier!
         <think><set name="rockpaperscissorsRobotPoints">
         <javascript>
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>  
+</li>  
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         Félicitation, j'ai une pierre, ton papier la recouvre.
@@ -144,11 +144,11 @@
         eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
         J'ai une feuille aussi.
-        </li> 
+</li> 
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
@@ -168,13 +168,13 @@
        <random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
-        J'ai une pierre, désolé ça casse les ciseaux ! 
+        J'ai une pierre, désolé ça casse les ciseaux! 
         <think><set name="rockpaperscissorsRobotPoints">
         <javascript>
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>  
+</li>  
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
         J'ai une feuille, tes ciseaux l'ont coupée
@@ -183,11 +183,11 @@
         eval( <get name="rockpaperscissorsHumanPoints" /> + 1 );
         </javascript>
         </set></think>
-        </li>
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         égalité, j'ai des ciseaux aussi.
-        </li> 
+</li> 
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
@@ -199,8 +199,8 @@
       <li><get name="rockpaperscissorsHumanPoints" /> points pour toi.</li>
       <li><get name="rockpaperscissorsRobotPoints" /> points pour moi.</li>
       <condition>
-      <li name="rockpaperscissorsRobotPoints" value="3">J'ai gagné ! <random><li>Je suis tellement doué</li><li>c'était trop facile</li><li>ne pleure pas</li></random>. Jouont encore ! ou bien dis stop jeux. <srai>PIERRE FEUILLE CISEAU</srai></li>
-      <li name="rockpaperscissorsHumanPoints" value="3">You won ! <random><li>Félicitation</li><li>Je pense que tu as triché</li><li>Tu es trop fort</li></random>. Jouont encore ! ou bien dis stop jeux. <srai>PIERRE FEUILLE CISEAU</srai></li>
+      <li name="rockpaperscissorsRobotPoints" value="3">J'ai gagné! <random><li>Je suis tellement doué</li><li>c'était trop facile</li><li>ne pleure pas</li></random>. Jouont encore! ou bien dis stop jeux. <srai>PIERRE FEUILLE CISEAU</srai></li>
+      <li name="rockpaperscissorsHumanPoints" value="3">You won! <random><li>Félicitation</li><li>Je pense que tu as triché</li><li>Tu es trop fort</li></random>. Jouont encore! ou bien dis stop jeux. <srai>PIERRE FEUILLE CISEAU</srai></li>
       <li>. continuont.</li>
       </condition>
       </template>
@@ -237,8 +237,8 @@
     <template>
 	<think><set name="topic">default</set></think>
     <li>
-    A bientôt, j aime jouer !
-    </li>  
+    A bientôt, j aime jouer!
+</li>  
     </template>
 	</category>
 

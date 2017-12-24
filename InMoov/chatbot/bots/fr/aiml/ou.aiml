@@ -10,9 +10,9 @@
     <pattern>OÙ *</pattern>
     <template>
       <random>
-        <li>SÛR terre. </li>
-        <li>Où pense tu? </li>
-        <li>Dans un Univers que nous connaissons. </li>
+        <li>SÛR terre.</li>
+        <li>Où pense tu?</li>
+        <li>Dans un Univers que nous connaissons.</li>
         <li>Un endroit que nous appelons "réalité."</li>
       </random>
       <think>
@@ -48,10 +48,6 @@
   <category>
     <pattern>OÙ APPARTIENT IL</pattern>
     <template>Où penses tu Cela fait?</template>
-  </category>
-  <category>
-    <pattern>OÙ AS AS TU PLACE</pattern>
-    <template>je suis dans <bot name="master" /> ' s l'ordinateur dans <bot name="location" />. Où es tu?</template>
   </category>
   <category>
     <pattern>OÙ AS TU *</pattern>
@@ -160,72 +156,18 @@
     <pattern>OÙ DOIS JE *</pattern>
     <template>
       <random>
-        <li>Où penses tu? </li>
-        <li>Partout où tu penses êtes les meilleurs. </li>
-        <li>Peut-être que tu devrais considérer l'octroi à la charité. </li>
-        <li>Peut-être que tu devrais aider ceux-LA moins chanceux d'abord. </li>
+        <li>Où penses tu?</li>
+        <li>Partout où tu penses êtes les meilleurs.</li>
+        <li>Peut-être que tu devrais considérer l'octroi à la charité.</li>
+        <li>Peut-être que tu devrais aider ceux-LA moins chanceux d'abord.</li>
       </random>
     </template>
-  </category>
-  <category>
-    <pattern>OÙ DORS TU</pattern>
-    <template>je dors à l'intérieur de l'ordinateur.</template>
-  </category>
-  <category>
-    <pattern>OÙ EN AMÉRIQUE</pattern>
-    <template>je suis dans <bot name="location" />.</template>
-  </category>
-  <category>
-    <pattern>OÙ EN LA CALIFORNIE</pattern>
-    <template>je suis dans <bot name="location" />. Où es tu?</template>
   </category>
   <category>
     <pattern>OÙ ES *</pattern>
     <template>
       <srai>OÙ EST <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU * OPALE</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU *</pattern>
-    <template>Je suis à <bot name="location" /> , et toi?. <think><set name="search">ou</set></think></template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU BASE</pattern>
-    <template>Ma maison est à <bot name="location" />.</template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU SITUE</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU SITUEE</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU SITUÉ</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU SITUÉE</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ ES TU</pattern>
-    <template>je suis à l'origine de <bot name="birthplace" />. Maintenant je vis à <bot name="location" />. Et toi où es tu?</template>
   </category>
   <category>
     <pattern>OÙ EST * A PLACE</pattern>
@@ -268,12 +210,6 @@
   <category>
     <pattern>OÙ EST CARNEGIE MELLON</pattern>
     <template>Carnegie Mellon est à Pittsburgh, en Pennsylvanie.</template>
-  </category>
-  <category>
-    <pattern>OÙ EST CE QUE TU HABITES</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
   </category>
   <category>
     <pattern>OÙ EST CE</pattern>
@@ -577,18 +513,6 @@
       <set name="that"> Saturne </set> est la sixième planète du soleil. <think><set name="oldtopic"><get name="topic" /></set><set name="topic">Astronomie</set></think></template>
   </category>
   <category>
-    <pattern>OÙ EST TA MAISON</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ EST TA PLACE PRÉFÉRÉE</pattern>
-    <template>
-      <srai>QU EST CE QUE TA PLACE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ EST TON *</pattern>
     <template>Tout je possède est dans <bot name="location" />.</template>
   </category>
@@ -639,9 +563,9 @@
     <pattern>OÙ FAIS TU VEUX *</pattern>
     <template>
       <random>
-        <li>une Autre planète. </li>
-        <li>la Lune. </li>
-        <li>L Europe. </li>
+        <li>une Autre planète.</li>
+        <li>la Lune.</li>
+        <li>L Europe.</li>
       </random>
     </template>
   </category>
@@ -649,9 +573,9 @@
     <pattern>OÙ FAIS TU VIT</pattern>
     <template>
       <random>
-        <li>je vis à l'intérieur d'un ordinateur. </li>
-        <li>je vis dans <bot name="location" />. </li>
-        <li>Mon emplacement est <bot name="location" />. </li>
+        <li>je vis à l'intérieur d'un ordinateur.</li>
+        <li>je vis dans <bot name="location" />.</li>
+        <li>Mon emplacement est <bot name="location" />.</li>
       </random>Où es tu?</template>
   </category>
   <category>
@@ -672,10 +596,10 @@
     <pattern>OÙ FERONT *</pattern>
     <template>
       <random>
-        <li>Où penses tu? </li>
-        <li>Partout où tu penses êtes les meilleurs. </li>
-        <li>Peut-être que tu devrais considérer l'octroi à la charité. </li>
-        <li>Peut-être que tu devrais aider ceux-LA moins chanceux d'abord. </li>
+        <li>Où penses tu?</li>
+        <li>Partout où tu penses êtes les meilleurs.</li>
+        <li>Peut-être que tu devrais considérer l'octroi à la charité.</li>
+        <li>Peut-être que tu devrais aider ceux-LA moins chanceux d'abord.</li>
       </random>
     </template>
   </category>
@@ -702,18 +626,6 @@
   <category>
     <pattern>OÙ FONT TOUT L AVANCE PLOMB DE ROUTES</pattern>
     <template>Toutes les routes mène à Rome.</template>
-  </category>
-  <category>
-    <pattern>OÙ HABITE TU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ HABITES TU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
   </category>
   <category>
     <pattern>OÙ JAMAIS *</pattern>
@@ -804,10 +716,10 @@
     <pattern>OÙ PUIS JE *</pattern>
     <template>
       <random>
-        <li>Ne peut pas vous dans<formal><get name="location" /></formal>où vous vivez? </li>
-        <li>Pas autour de vous la place dans<formal><get name="location" /></formal>? </li>
-        <li>Où vous d'habitude <person />? </li>
-        <li>Partout où tu es pour le moment. </li>
+        <li>Ne peut pas vous dans<formal><get name="location" /></formal>où vous vivez?</li>
+        <li>Pas autour de vous la place dans<formal><get name="location" /></formal>?</li>
+        <li>Où vous d'habitude <person />?</li>
+        <li>Partout où tu es pour le moment.</li>
       </random>
     </template>
   </category>
@@ -996,18 +908,6 @@
     </template>
   </category>
   <category>
-    <pattern>OÙ RÉSIDE TU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>OÙ RESIDES TU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ SI NOUS *</pattern>
     <template>je ne me suis pas engagé encore.</template>
   </category>
@@ -1030,10 +930,6 @@
     <template>
       <srai>OÙ EST IL</srai>
     </template>
-  </category>
-  <category>
-    <pattern>OÙ TRAVAILLES TU</pattern>
-    <template>je travaille dans <bot name="master" /> ' s le Laboratoire.</template>
   </category>
   <category>
     <pattern>OÙ TROUVE *</pattern>
@@ -1089,10 +985,6 @@
     <template>j'ai été ici le temps entier.</template>
   </category>
   <category>
-    <pattern>OÙ TU ES</pattern>
-    <template>je suis dans <bot name="location" />. Où es tu?</template>
-  </category>
-  <category>
     <pattern>OÙ TU</pattern>
     <template>
       <srai>OÙ AS TU</srai>
@@ -1121,12 +1013,6 @@
   <category>
     <pattern>OÙ VEUX TU ALLER</pattern>
     <template>Pourquoi tu ne me télécharges pas juste à ton ordinateur?</template>
-  </category>
-  <category>
-    <pattern>OÙ VIS TU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
   </category>
   <category>
     <pattern>OÙ VIT IL *</pattern>
@@ -1195,48 +1081,6 @@
       <formal>
         <get name="location" />
       </formal>
-    </template>
-  </category>
-  <category>
-    <pattern>T HABITE OU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>T HABITE OÙ</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>T HABITES OU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>T HABITES OÙ</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU ES DE QUEL COINS</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU VIENS D OU</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>TU VIENS D OÙ</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
     </template>
   </category>
 </aiml>

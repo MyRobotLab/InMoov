@@ -66,7 +66,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,1)</param>
+          <param>isTheSunShiny(town,8)</param>
         </mrl>
       </oob>
     </template>
@@ -83,7 +83,12 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,<get name="jours" />)</param>
+          <param>isTheSunShiny(town,
+<javascript>
+period = eval( <get name="jours" /> * 8 );
+period;
+</javascript>)
+</param>
         </mrl>
       </oob>
     </template>
@@ -101,7 +106,10 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",<get name="jours" />)</param>
+          <param>isTheSunShiny("<star index="2" />",<javascript>
+period = eval( <get name="jours" /> * 8 );
+period;
+</javascript>)</param>
         </mrl>
       </oob>
     </template>
@@ -114,7 +122,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",1)</param>
+          <param>isTheSunShiny("<star index="2" />",8)</param>
         </mrl>
       </oob>
     </template>
@@ -162,126 +170,126 @@
         </set>
       </think>
       <random>
-        <li>En cette belle journée à <star index="2" />, </li>
-        <li>Concernant la météo de <star index="2" />, </li>
-        <li>Par rapport au temps de <star index="2" />, </li>
-        <li>Je ne me trompe presque jamais concernant la météo, </li>
-        <li>Alors, à <star index="2" />, </li>
+        <li>En cette belle journée à <star index="2" />,</li>
+        <li>Concernant la météo de <star index="2" />,</li>
+        <li>Par rapport au temps de <star index="2" />,</li>
+        <li>Je ne me trompe presque jamais concernant la météo,</li>
+        <li>Alors, à <star index="2" />,</li>
       </random>
       <random>
-        <li>Je prédis, </li>
-        <li>Je remarque, </li>
-        <li>Je vois , </li>
-        <li>Si tu mets le nez dehors, tu trouvera, </li>
+        <li>Je prédis,</li>
+        <li>Je remarque,</li>
+        <li>Je vois,</li>
+        <li>Si tu mets le nez dehors, tu trouvera,</li>
       </random>
       <condition>
-        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain. </li>
-        <li name="meteo" value="200">De l'Orage avec pluie légère. </li>
-        <li name="meteo" value="201">De l'Orage avec pluie. </li>
-        <li name="meteo" value="202">De l'Orage avec de fortes pluies. </li>
-        <li name="meteo" value="210">De l'Orage léger. </li>
-        <li name="meteo" value="211">De l'Orage. </li>
-        <li name="meteo" value="212">Un très gros Orage. </li>
-        <li name="meteo" value="221">Un orage énorme. </li>
-        <li name="meteo" value="230">De l'Orage avec léger crachin. </li>
-        <li name="meteo" value="231">De l'Orage avec du crachin. </li>
-        <li name="meteo" value="232">De l'Orage avec beaucoup de crachin. </li>
-        <li name="meteo" value="300">du crachin léger. </li>
-        <li name="meteo" value="301">du crachin. </li>
-        <li name="meteo" value="302">beaucoup de crachin. </li>
-        <li name="meteo" value="310">de la Pluie légère. </li>
-        <li name="meteo" value="311">de la Pluie légère. </li>
-        <li name="meteo" value="312">de la Pluie intense. </li>
-        <li name="meteo" value="313">de la Pluie intense et crachin. </li>
-        <li name="meteo" value="314">de la Pluie intense. </li>
-        <li name="meteo" value="321">du crachin intense. </li>
-        <li name="meteo" value="500">de la Pluie légère. </li>
-        <li name="meteo" value="501">de la Pluie modérée. </li>
-        <li name="meteo" value="502">de la Pluie intense. </li>
-        <li name="meteo" value="503">Très forte pluie. </li>
-        <li name="meteo" value="504">de la Pluie extrême. </li>
-        <li name="meteo" value="511">de la Pluie verglaçante. </li>
-        <li name="meteo" value="520">de la Pluie modérée. </li>
-        <li name="meteo" value="521">de la Pluie intense. </li>
-        <li name="meteo" value="522">de la Pluie intense. </li>
-        <li name="meteo" value="531">de la Pluie avec innondations. </li>
-        <li name="meteo" value="600">de la neige légère. </li>
-        <li name="meteo" value="601">de la neige. </li>
-        <li name="meteo" value="602">beaucoup de neige. </li>
-        <li name="meteo" value="611">de la neige fondue. </li>
-        <li name="meteo" value="612">de la Pluie et neige. </li>
-        <li name="meteo" value="615">de la Pluie et neige. </li>
-        <li name="meteo" value="616">de la Pluie et neige. </li>
-        <li name="meteo" value="620">de la Pluie légère et neige. </li>
-        <li name="meteo" value="621">beaucoup de neige. </li>
-        <li name="meteo" value="622">énormément de neige. </li>
-        <li name="meteo" value="701">du brouillard. </li>
-        <li name="meteo" value="711">du brouillard. </li>
-        <li name="meteo" value="721">brume. </li>
-        <li name="meteo" value="731">Sable, tourbillons de poussière. </li>
-        <li name="meteo" value="741">du brouillard. </li>
-        <li name="meteo" value="751">Sable, tourbillons de poussière. </li>
-        <li name="meteo" value="761">poussière. </li>
-        <li name="meteo" value="762">cendre volcanique. </li>
-        <li name="meteo" value="771">Squalls. </li>
-        <li name="meteo" value="781">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
+        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain.</li>
+        <li name="meteo" value="200">De l'Orage avec pluie légère.</li>
+        <li name="meteo" value="201">De l'Orage avec pluie.</li>
+        <li name="meteo" value="202">De l'Orage avec de fortes pluies.</li>
+        <li name="meteo" value="210">De l'Orage léger.</li>
+        <li name="meteo" value="211">De l'Orage.</li>
+        <li name="meteo" value="212">Un très gros Orage.</li>
+        <li name="meteo" value="221">Un orage énorme.</li>
+        <li name="meteo" value="230">De l'Orage avec léger crachin.</li>
+        <li name="meteo" value="231">De l'Orage avec du crachin.</li>
+        <li name="meteo" value="232">De l'Orage avec beaucoup de crachin.</li>
+        <li name="meteo" value="300">du crachin léger.</li>
+        <li name="meteo" value="301">du crachin.</li>
+        <li name="meteo" value="302">beaucoup de crachin.</li>
+        <li name="meteo" value="310">de la Pluie légère.</li>
+        <li name="meteo" value="311">de la Pluie légère.</li>
+        <li name="meteo" value="312">de la Pluie intense.</li>
+        <li name="meteo" value="313">de la Pluie intense et crachin.</li>
+        <li name="meteo" value="314">de la Pluie intense.</li>
+        <li name="meteo" value="321">du crachin intense.</li>
+        <li name="meteo" value="500">de la Pluie légère.</li>
+        <li name="meteo" value="501">de la Pluie modérée.</li>
+        <li name="meteo" value="502">de la Pluie intense.</li>
+        <li name="meteo" value="503">Très forte pluie.</li>
+        <li name="meteo" value="504">de la Pluie extrême.</li>
+        <li name="meteo" value="511">de la Pluie verglaçante.</li>
+        <li name="meteo" value="520">de la Pluie modérée.</li>
+        <li name="meteo" value="521">de la Pluie intense.</li>
+        <li name="meteo" value="522">de la Pluie intense.</li>
+        <li name="meteo" value="531">de la Pluie avec innondations.</li>
+        <li name="meteo" value="600">de la neige légère.</li>
+        <li name="meteo" value="601">de la neige.</li>
+        <li name="meteo" value="602">beaucoup de neige.</li>
+        <li name="meteo" value="611">de la neige fondue.</li>
+        <li name="meteo" value="612">de la Pluie et neige.</li>
+        <li name="meteo" value="615">de la Pluie et neige.</li>
+        <li name="meteo" value="616">de la Pluie et neige.</li>
+        <li name="meteo" value="620">de la Pluie légère et neige.</li>
+        <li name="meteo" value="621">beaucoup de neige.</li>
+        <li name="meteo" value="622">énormément de neige.</li>
+        <li name="meteo" value="701">du brouillard.</li>
+        <li name="meteo" value="711">du brouillard.</li>
+        <li name="meteo" value="721">brume.</li>
+        <li name="meteo" value="731">Sable, tourbillons de poussière.</li>
+        <li name="meteo" value="741">du brouillard.</li>
+        <li name="meteo" value="751">Sable, tourbillons de poussière.</li>
+        <li name="meteo" value="761">poussière.</li>
+        <li name="meteo" value="762">cendre volcanique.</li>
+        <li name="meteo" value="771">Squalls.</li>
+        <li name="meteo" value="781">une vilaine tornade, je ne rigole pas, reste à la maison.</li>
         <li name="meteo" value="800">
           <random>
-            <li>un magnifique ciel dégagé! </li>
-            <li>Pas un seul nuage, </li>
-            <li>rien, rien qu'un beau ciel bleu! </li>
-            <li>du soleil, ça sent les vacances, </li>
-            <li>du soleil, attention au p.l.a ça fond, </li>
-            <li>du soleil, attention à l'a.b.s. ça jauni, </li>
+            <li>un magnifique ciel dégagé!</li>
+            <li>Pas un seul nuage,</li>
+            <li>rien, rien qu'un beau ciel bleu!</li>
+            <li>du soleil, ça sent les vacances,</li>
+            <li>du soleil, attention au p.l.a ça fond,</li>
+            <li>du soleil, attention à l'a.b.s. ça jauni,</li>
           </random>
-        </li>
-        <li name="meteo" value="801">Quelques nuages. </li>
-        <li name="meteo" value="802">des nuages ​​dispersés. </li>
-        <li name="meteo" value="803">des nuages éparses. </li>
-        <li name="meteo" value="804">des nuages ​​couverts. </li>
-        <li name="meteo" value="900">une vilaine tornade, je ne rigole pas, reste à la maison. </li>
-        <li name="meteo" value="901">tempête tropicale. </li>
-        <li name="meteo" value="902">un ouragan, je ne rigole pas, reste à la maison. </li>
-        <li name="meteo" value="903">très froid, vraiment. </li>
-        <li name="meteo" value="904">la canicule, pense à prendre de l'eau! </li>
-        <li name="meteo" value="905">du vent. </li>
-        <li name="meteo" value="906">de la grêle. </li>
-        <li name="meteo" value="951">calme. </li>
-        <li name="meteo" value="952">une brise légère. </li>
-        <li name="meteo" value="953">une petite brise. </li>
-        <li name="meteo" value="954">une Brise modérée. </li>
-        <li name="meteo" value="955">une Brise fraîche. </li>
-        <li name="meteo" value="956">une Brise asez forte. </li>
-        <li name="meteo" value="957">des coup de vent. </li>
-        <li name="meteo" value="958">des coup de vent. </li>
-        <li name="meteo" value="959">énormément de vent! </li>
-        <li name="meteo" value="960">De l'Orage. </li>
-        <li name="meteo" value="961">une violente tempête. </li>
-        <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison. </li>
-        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> .. </li>
+</li>
+        <li name="meteo" value="801">Quelques nuages.</li>
+        <li name="meteo" value="802">des nuages ​​dispersés.</li>
+        <li name="meteo" value="803">des nuages éparses.</li>
+        <li name="meteo" value="804">des nuages ​​couverts.</li>
+        <li name="meteo" value="900">une vilaine tornade, je ne rigole pas, reste à la maison.</li>
+        <li name="meteo" value="901">tempête tropicale.</li>
+        <li name="meteo" value="902">un ouragan, je ne rigole pas, reste à la maison.</li>
+        <li name="meteo" value="903">très froid, vraiment.</li>
+        <li name="meteo" value="904">la canicule, pense à prendre de l'eau!</li>
+        <li name="meteo" value="905">du vent.</li>
+        <li name="meteo" value="906">de la grêle.</li>
+        <li name="meteo" value="951">calme.</li>
+        <li name="meteo" value="952">une brise légère.</li>
+        <li name="meteo" value="953">une petite brise.</li>
+        <li name="meteo" value="954">une Brise modérée.</li>
+        <li name="meteo" value="955">une Brise fraîche.</li>
+        <li name="meteo" value="956">une Brise asez forte.</li>
+        <li name="meteo" value="957">des coup de vent.</li>
+        <li name="meteo" value="958">des coup de vent.</li>
+        <li name="meteo" value="959">énormément de vent!</li>
+        <li name="meteo" value="960">De l'Orage.</li>
+        <li name="meteo" value="961">une violente tempête.</li>
+        <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison.</li>
+        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> ..</li>
       </condition>
       <random>
-        <li>Concernant la température, </li>
-        <li>Si je regarde mon thermomètre, oh ou il est encore. oups , </li>
-        <li>D'après quelques données issues de senseurs thermiques, </li>
-        <li>Autre information, </li>
-        <li>J'alais oublier, </li>
-        <li>Si tu veux tout savoir, </li>
+        <li>Concernant la température,</li>
+        <li>Si je regarde mon thermomètre, oh ou il est encore. oups,</li>
+        <li>D'après quelques données issues de senseurs thermiques,</li>
+        <li>Autre information,</li>
+        <li>J'alais oublier,</li>
+        <li>Si tu veux tout savoir,</li>
       </random>
       <random>
-        <li>je mesure, </li>
-        <li>le mercure indiquera, </li>
-        <li>au pif, je dirais, </li>
+        <li>je mesure,</li>
+        <li>le mercure indiquera,</li>
+        <li>au pif, je dirais,</li>
       </random>
       <li>
         <star index="1" /> Degrés
-                </li>
+</li>
       <random>
-        <li>Exactement! </li>
-        <li>Précisément. </li>
-        <li>A peu près. </li>
-        <li>A la louche. </li>
-        <li>Ou pas. </li>
+        <li>Exactement!</li>
+        <li>Précisément.</li>
+        <li>A peu près.</li>
+        <li>A la louche.</li>
+        <li>Ou pas.</li>
       </random>
     </template>
   </category>

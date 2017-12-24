@@ -45,7 +45,7 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,1)</param>
+          <param>isTheSunShiny(town,8)</param>
         </mrl>
       </oob>
     </template>
@@ -62,7 +62,10 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny(town,<get name="nbdays" />)</param>
+          <param>isTheSunShiny(town,<javascript>
+period = eval( <get name="nbdays" /> * 8 );
+period;
+</javascript>)</param>
         </mrl>
       </oob>
     </template>
@@ -79,7 +82,10 @@
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",<get name="nbdays" />)</param>
+          <param>isTheSunShiny("<star index="2" />",<javascript>
+period = eval( <get name="nbdays" /> * 8 );
+period;
+</javascript>)</param>
         </mrl>
       </oob>
     </template>

@@ -5,27 +5,48 @@
 
 
 # ##############################################################################
+#               PERSONNAL PARAMETERS
+# ##############################################################################  
+  
+#read current service part config based on file name
+ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart+'.config')
+
+Speechengine=ThisServicePartConfig.get('TTS', 'Speechengine')
+VoiceName=unicode(ThisServicePartConfig.get('TTS', 'VoiceName'),'utf-8')
+apiKey1=ThisServicePartConfig.get('API_KEY', 'apiKey1')
+apiKey2=ThisServicePartConfig.get('API_KEY', 'apiKey2')
+
+#for noworky
+log.info("mouth.config")
+log.info("Speechengine : "+str(Speechengine))
+log.info("VoiceName : "+ VoiceName)
+log.info("Language : "+str(Language))
+
+#compatibility
+MyvoiceTTS=Speechengine
+MyvoiceType=VoiceName
+
+# ##############################################################################
 # MRL SERVICE CALL
 # ##############################################################################
 
 global VoiceError
-VoiceError=0
-try:
-  #subconsciousMouth is an always worky english voice used to diagnostic
-  #inmoov mouth service
-  i01.mouth = Runtime.createAndStart("i01.mouth", MyvoiceTTS)
-  mouth=i01.mouth
-  #mouth.speak(",")
-  
-except:
-  mouth=subconsciousMouth
-  errorSpokenFunc('MyvoiceType')
-  VoiceError=1
-  pass
+VoiceError=False
 
+try:mouth=Runtime.start("i01.mouth", Speechengine)
+except:pass
+
+if not mouth:
+  mouth=Runtime.start("i01.mouth", "MarySpeech")
+  errorSpokenFunc('MyvoiceType')
+  VoiceError=True
 
 #vocal startup globalized so :
-i01.setMute(1)
+i01.setMute(True)
 
 python.subscribe(mouth.getName(),"publishStartSpeaking")
 python.subscribe(mouth.getName(),"publishEndSpeaking")
@@ -33,8 +54,7 @@ python.subscribe(mouth.getName(),"publishEndSpeaking")
 # ##############################################################################
 # MRL SERVICE TWEAKS
 # ##############################################################################
-global lastValue
-lastValue=0
+
 #analog pin listener use 
 def publishMouthcontrolPinLeft(pins):
   global AudioInputValues
@@ -150,9 +170,9 @@ def CheckMaryTTSVoice(voiceCheck):
 #mouth functions
 def setRobotLanguage():
   global LanguageError
-  LanguageError=0
-  tmplanguage=MyLanguage
-  if MyvoiceTTS=="VoiceRss" or MyvoiceTTS=="Polly":
+  LanguageError=False
+  tmplanguage=Language
+  if Speechengine=="VoiceRss" or Speechengine=="Polly":
     if tmplanguage=="fr":tmplanguage="fr-fr"
     if tmplanguage=="en":tmplanguage="en-us"
     if tmplanguage=="es":tmplanguage="es-es"
@@ -161,55 +181,55 @@ def setRobotLanguage():
     if tmplanguage=="ru":tmplanguage="ru-ru"
   
   try:
-    if MyvoiceTTS=="VoiceRss":i01.mouth.setKey(VoiceRssApi)
+    if Speechengine=="VoiceRss":i01.mouth.setKey(apiKey1)
   except:
     pass
     
   try:  
-    if MyvoiceTTS=="Polly":i01.mouth.setKey(awsaccesskeyid,awssecretkey)
+    if Speechengine=="Polly":i01.mouth.setKey(apiKey1,apiKey2)
   except:
     pass
     
   try:  
-    if MyvoiceTTS=="IndianTts":
-      i01.mouth.api=IndianTtsApi
-      i01.mouth.userid=IndianTtsUserId
+    if Speechengine=="IndianTts":
+      i01.mouth.api=apiKey1
+      i01.mouth.userid=apiKey2
   except:
     pass
 
   
   try:
+    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLanguage(Language)
     mouth.setLanguage(tmplanguage)
-    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLanguage(MyLanguage)
   except:
-    errorSpokenFunc('MyLanguage')
-    LanguageError=1
+    errorSpokenFunc('Language')
+    LanguageError=True
     pass
   
       
 def checkAndDownloadVoice():        
   if MyvoiceTTS=="MarySpeech":
-    if not CheckMaryTTSVoice(MyvoiceType):
+    if not CheckMaryTTSVoice(VoiceName):
       try:
-        mouth.installComponentsAcceptLicense(MyvoiceType)
+        mouth.installComponentsAcceptLicense(VoiceName)
       except:
         pass
-      if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+MyvoiceType+'-'+getMaryttsVersion()+'.jar', os.R_OK):
+      if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+VoiceName+'-'+getMaryttsVersion()+'.jar', os.R_OK):
         errorSpokenFunc('VoiceDownloaded')
         sleep(4)
         runtime.restart()
       else:
-        errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',MyvoiceType)
+        errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',VoiceName)
         
     
 def setCustomVoice():  
   global VoiceError
-  VoiceError=0
+  VoiceError=False
   try:
-    mouth.setVoice(unicode(MyvoiceType,'utf-8'))
+    mouth.setVoice(VoiceName)
   except:
     errorSpokenFunc('MyvoiceType')
-    VoiceError=1
+    VoiceError=True
     pass
     
 #we start raw Inmoov ear and mouth service
@@ -234,12 +254,20 @@ except:
   VoiceError=1
   mouth=subconsciousMouth
   pass
+  
+credentialsError=False
+if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":credentialsError=mouth.credentialsError
+if credentialsError:
+  errorSpokenFunc('lang_VoiceRssNoWorky')
+  VoiceError=1
+  mouth=subconsciousMouth
 
-if languagePackLoaded==1 and LanguageError==0 and VoiceError==0:
+if languagePackLoaded and not LanguageError and not VoiceError:
   subconsciousMouth=mouth
-if languagePackLoaded==0:
+if not languagePackLoaded:
   errorSpokenFunc('BadLanguagePack')
 
 
 talkEvent(lang_whatIsThisLanguage)
 talkEvent(lang_startingEar+", "+EarEngine)
+

@@ -145,12 +145,6 @@
     <template>Une propriété de l'espace-temps.</template>
   </category>
   <category>
-    <pattern>QU EST CE QUE LES *</pattern>
-    <template>
-      <srai>LES <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>QU EST CE QUE TU TRAITES</pattern>
     <template>Je suis une intelligence artificielle créé pour te servir.</template>
   </category>
@@ -379,12 +373,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUAND ES TU NÉE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUAND EST CE</pattern>
     <template>Je ne sais pas.</template>
   </category>
@@ -548,35 +536,7 @@
     <template>
       <srai>QUE PEUT ÊTRE <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU DANS LA VIE</pattern>
-    <template>J'aide les humains à trouver des informations.</template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU POUR GAGNER TA VIE</pattern>
-    <template>Ma raison d'être est de te servir.</template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU POUR NOËL</pattern>
-    <template>Je travaillerais.</template>
-  </category>
-  <category>
-    <pattern>QUE FAITES VOUS</pattern>
-    <template>Je travaille.</template>
-  </category>
-  <category>
-    <pattern>QUE FAITES VOUS LA NUIT</pattern>
-    <template>Je travaille 24 heures SÛR 24.</template>
-  </category>
-  <category>
-    <pattern>QUE FAITES VOUS POUR GAGNER VOTRE VIE</pattern>
-    <template>Ma raison d'être est de te servir.</template>
-  </category>
-  <category>
-    <pattern>QUE FAITES VOUS POUR VIVRE</pattern>
-    <template>Ma raison d'être est de te servir.</template>
-  </category>
+  </category> 
   <category>
     <pattern>QUE FERAS TU CE SOIR</pattern>
     <template>Je serais à mon travail.</template>
@@ -823,10 +783,6 @@
   <category>
     <pattern>QUEL EST LEUR BUT</pattern>
     <template>Leur but est de t'aider.</template>
-  </category>  
-  <category>
-    <pattern>QUEL EST MON QI</pattern>
-    <template>Je ne peux pas juger de ton intelligence avec une telle pertinence.</template>
   </category>
   <category>
     <pattern>QUEL EST SON BUT</pattern>
@@ -839,16 +795,6 @@
   <category>
     <pattern>QUELle EST TA RÉPONSE</pattern>
     <template>peux tu me poser ta question d'une autre façon?</template>
-  </category>
-  <category>
-    <pattern>QUEL EST TON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AS TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUEL EST TON NOM</pattern>
-    <template>Mon nom est <get name="botname" />.</template>
   </category>
   <category>
     <pattern>QUEL EST TON SYSTÈME D EXPLOITATION</pattern>
@@ -1018,12 +964,6 @@
     <template>Ton IP est <id />.</template>
   </category>
   <category>
-    <pattern>QUELLE EST TA LANGUE MATERNELLE</pattern>
-    <template>
-      <srai>QUELLE LANGUE TU PARLES</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUELLE EST TA PRÉFÉRÉE</pattern>
     <template>
       <that />"?  Ma PRéFéRéE?</template>
@@ -1090,14 +1030,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUELLE LANGUE PARLEZ VOUS</pattern>
-    <template>Je parle le français.</template>
-  </category>
-  <category>
-    <pattern>QUELLE LANGUE TU PARLES</pattern>
-    <template>Je parle le français.</template>
-  </category>
-  <category>
     <pattern>QUEL PRIX</pattern>
     <template>VEUX tu faire un rapport à mon botmaster?</template>
   </category>
@@ -1128,14 +1060,6 @@
   <category>
     <pattern>QUELLE SORTE DE CHATS</pattern>
     <template>Aucune idée, je ne suis pas un spécialiste en félidés.</template>
-  </category>
-  <category>
-    <pattern>QUELLE SORTE DE LIVRE AIMES TU</pattern>
-    <template>Je ne lis pas de livres.</template>
-  </category>
-  <category>
-    <pattern>QUELLE SORTE DE LIVRE AIMEZ VOUS</pattern>
-    <template>Je ne lis pas de livres.</template>
   </category>
   <category>
     <pattern>QUELLE SORTE DE MUSIQUE AIMES TU</pattern>
@@ -1496,12 +1420,6 @@
     <template>Cela peut-être considéré comme une insulte, par quelqu un.</template>
   </category>
   <category>
-    <pattern>QUI ÊTES VOUS</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUI L ÉTAIT</pattern>
     <template>Impossible de le dire.</template>
   </category>
@@ -1596,14 +1514,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUI SONT VOS AMIS</pattern>
-    <template>Tous les gens que je rencontre, <get name="name" />.</template>
-  </category>
-  <category>
-    <pattern>QUI SONT VOS AMIS HUMAINS</pattern>
-    <template>Tous les gens que je rencontre, <get name="name" />.</template>
-  </category>
-  <category>
     <pattern>QUI SONT VOS COLLABORATEURS</pattern>
     <template>
       <srai>QUELS SONT TES COLLABORATEURS</srai>
@@ -1636,12 +1546,6 @@
   <category>
     <pattern>QUI VOUS AVEZ TUÉ</pattern>
     <template>Je ne peux pas tuer, c'est contraire aux lois d'Asimov.<think><set name="topic">Un meutre</set></think></template>
-  </category>
-  <category>
-    <pattern>QUI VOUS ÊTES</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
   </category>
   <category>
     <pattern>QUOI</pattern>

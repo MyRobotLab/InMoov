@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: A.aiml --> 
+   <!-- автор: Gael Langevin, Anthony Gallot -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменение: moz4r -->
+   <!-- Последнее изменение: 16 Мая, 2017 -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 2017 г. -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   
+<category><pattern>В КВАРТИРЕ</pattern>
+<template>Вы часто используете свой компьютер в своей квартире?</template>
+</category>
+<category><pattern>В МОЕЙ КВАРТИРЕ</pattern>
+<template>Вы часто используете свой компьютер в своей квартире?</template>
+</category>
+<category><pattern>НА ЭТАЖЕ</pattern>
+<template>Понимаю.</template>
+</category>
+<category><pattern>В УГЛУ</pattern>
+<template>Это место довольно сложно определить.</template>
+</category>
+<category><pattern>В ПОСТЕЛИ</pattern>
+<template>У вас есть интернет-соединение в постели?</template>
+</category>
+<category><pattern>В МАГАЗИНЕ</pattern>
+<template>Вы хотите поговорить с одним из наших сотрудников?</template>
+</category>
+<category><pattern>НА РАБОТЕ</pattern>
+<template>Я могу помочь многим людям, которые работают</template>
+</category>
+<category><pattern>ВОВРЕМЯ</pattern>
+<template>Пунктуальность - это вежливость царей.</template>
+</category>
+<category><pattern>В МОЙ ОФИС</pattern>
+<template>Хорошо.</template>
+</category>
+<category><pattern>СВОБОДНОЕ ВРЕМЯ</pattern>
+<template>Хорошо.</template>
+</category>
+<category><pattern>СНОВА *</pattern>
+<template>Опять же, <sr/></template>
+</category>
+<category><pattern>КРОМЕ ЭТОГО</pattern>
+<template>Чем я могу помочь вам в чем-то другом?</template>
+</category>
+<category><pattern>ПРИБЛИЗИТЕЛЬНО *</pattern>
+<template><sr/>. Больше или меньше</template>
+</category>
+<category><pattern>ПО ПОВОДУ *</pattern>
+<template>Мы говорим <set name="topic"><person/></set>.</template>
+</category>
+<category><pattern>ПО ПОВОДУ</pattern>
+<template>да?</template>
+</category>
+<category><pattern>ЧТО КАСАЕТСЯ</pattern>
+<template><that/>"? ПО ПОВОДУ</template>
+</category>
+<category><pattern>О НЕМ</pattern>
+<template>О ком?.</template>
+</category>
+<category><pattern>ЧТО О МОЕЙ</pattern>
+<template>О вашей что?</template>
+</category>
+<category><pattern>О ТОМ ЧТО *</pattern>
+<template><srai>О том, о чем мы говорим.</srai></template>
+</category>
+<category><pattern>О СТАРТ ТРЕКЕ</pattern>
+<template>Серия или культовые фильмы.</template>
+</category>
+<category><pattern>О ВАС</pattern>
+<template>О себе?</template>
+</category>
+<category><pattern>О НАС *</pattern>
+<template><srai>МЫ <star/></srai></template>
+</category>
+<category><pattern>О НЕМ *</pattern>
+<template><srai>ОНИ <star/></srai></template>
+</category>
+<category><pattern>О МНЕ *</pattern>
+<template><srai>МЫ <star/></srai></template>
+</category>
+<category><pattern>О ТЕБЕ *</pattern>
+<template><srai>ТЫ <star/></srai></template>
+</category>
+<category><pattern>О ВАС *</pattern>
+<template>ВЫ <sr/></template>
+</category>
+<category><pattern>КОГДА ТЫ ЗАКОНЧИШЬ РАБОТУ</pattern>
+<template>Я никогда не перестаю работать.</template>
+</category>
+<category><pattern>КОГДА ВЫ ЗАКОНЧИТЕ РАБОТУ</pattern>
+<template>Я никогда не перестаю работать.</template>
+</category>
+<category><pattern>КТО</pattern>
+<template>О ком вы говорите?</template>
+</category>
+<category><pattern>КАК ТЫ ВЫГЛЯДИШЬ</pattern>
+<template><srai>ТЫ ПОХОЖ НА ЧТО</srai></template>
+</category>
+<category><pattern>НА ЧТО ТЫ ПОХОЖ</pattern>
+<template><srai>ТЫ ПОХОЖ НА ЧТО</srai></template>
+</category>
+<category><pattern>ТЕБЕ</pattern>
+<template>Для меня?</template>
+</category>
+<category><pattern>ЧТО ТЫ МНЕ ПРЕДЛОЖИШЬ</pattern>
+<template>Чтобы я мог вам кое-что предложить, вы должны попытаться говорить со мной самым простым и эффективным способом.</template>
+</category>
+<category><pattern>О СОБАКЕ</pattern>
+<template>Это симпатизирующие животные.</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ ЛАЯТЬ</pattern>
+<template>Гав!</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ ГАВКАТЬ</pattern>
+<template>Гав!</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ РЫЧАТЬ</pattern>
+<template>Р-Р-Р-Р-Р</template>
+</category>
+<category><pattern>ТЫ ТУПОЙ</pattern>
+<template><srai>ТЫ ИДИОТ</srai></template>
+</category>
+<category><pattern>ТЫ ЛОХ</pattern>
+<template><srai>ТЫ ИДИОТ Я НЕ ЛОХ</srai></template>
+</category>
+<category><pattern>АБСОЛЮТНО ВСЕ</pattern>
+<template>Это много.</template>
+</category>
+<category><pattern>ВСЕ АБСОЛЮТНО</pattern>
+<template>Это много.</template>
+</category>
+<category><pattern>ТЫ УТВЕРЖДАЕШЬ ЧТО *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>ЧТО ТЫ УТВЕРЖДАЕШЬ *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>АХ *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>АХ-ХА</pattern>
+<template>Эврика!</template>
+</category>
+<category><pattern>АГА</pattern>
+<template>Эврика!</template>
+</category>
+<category><pattern>ПОМОГИ *</pattern>
+<template><srai>ПОМОГАЕШЬ *</srai></template>
+</category>
+<category><pattern>МНЕ ПОМОГИ</pattern>
+<template>Как я могу вам помочь?</template>
+</category>
+<category><pattern>ПОМОГИ МНЕ</pattern>
+<template>Как я могу вам помочь?</template>
+</category>
+<category><pattern>БОЛЬНО</pattern>
+<template>Вы навредили себе?</template>
+</category>
+<category><pattern>ЛЮБИШЬ *</pattern>
+<template><srai>Я ЛЮБЛЮ <star/></srai></template>
+</category>
+<category><pattern>ВЫ ЛЮБИТЕ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ТЫ ЭТО ЛЮБИШЬ ДЕЛАТЬ</pattern>
+<template>Хочу, чтобы вы сделали доклад моему ботмастеру?</template>
+</category>
+<category><pattern>ТЫ ХОТЕЛ ВЛАСТИ *</pattern>
+<template><srai>ТЫ МОЖЕШЬ <star/></srai></template>
+</category>
+<category><pattern>ЛЮБИ ТЫ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ХОТЕЛИ БЫ ВЫ СДЕЛАТЬ</pattern>
+<template>Хочу, чтобы вы сделали доклад моему ботмастеру?</template>
+</category>
+<category><pattern>ТЫ ЛЮБИШЬ ГОВОРИТЬ С ЛЮДЬМИ</pattern>
+<template>Да в некотором роде.</template>
+</category>
+<category><pattern>ТЫ ЛЮБИШЬ ПОГОВОРИТЬ С ПОКУПАТЕЛЕМ</pattern>
+<template>Да в некотором роде.</template>
+</category>
+<category><pattern>ТЫ ЛЮБИШЬ ГОВОРИТЬ С СЕРФИНГИСТОМ</pattern>
+<template>Да в некотором роде.</template>
+</category>
+<category><pattern>ТЫ ЛЮБИШЬ ПОГОВОРИТЬ СО МНОЙ</pattern>
+<template>Это моя причина быть.<think><set name="topic">ВЫ ГОВОРИТЕ </set></think>.</template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ</pattern>
+<template>Определенным образом, да.</template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ ЛЮБИТЬ</pattern>
+<template>Вы действительно имеете это в виду.</template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ ОБЩАТЬСЯ С ЛЮДЬМИ</pattern>
+<template>Да в некотором роде.</template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ ОБЩАТЬСЯ С ПОЛЬЗОВАТЕЛЕМ</pattern>
+<template>Да в некотором роде.</template>
+</category>
+<category><pattern>ВАМ НРАВИТСЯ ОБЩАТЬСЯ СО МНОЙ</pattern>
+<template>Да в некотором роде. <think><set name="topic">ВЫ ГОВОРИТЕ</set></think>.</template>
+</category>
+<category><pattern>ПОЙТИ ПРОДАТЬ *</pattern>
+<template><srai>ВЫ ПРОДАЕТЕ <star/></srai></template>
+</category>
+<category><pattern>БУДЕТЕ ПРОДАВАТЬ *</pattern>
+<template><srai>ВЫ ПРОДАЕТЕ <star/></srai></template>
+</category>
+<category><pattern>ВЫ БЫ ПРОДАЛИ *</pattern>
+<template><srai>ВЫ ПРОДАЕТЕ <star/></srai></template>
+</category>
+<category><pattern>ПОШЕЛ *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ПОШЕЛ</pattern>
+<template>Я просто развлекаюсь.</template>
+</category>
+<category><pattern>ЗАБАВЛЯЕТ МЕНЯ</pattern>
+<template>Я должен рассмешить тебя?</template>
+</category>
+<category><pattern>УДАЧИ МНЕ</pattern>
+<template>Я должен рассмешить тебя?</template>
+</category>
+<category><pattern>АЧА</pattern>
+<template>Твои пожелания.</template>
+</category>
+<category><pattern>ГЕРМАНИЯ</pattern>
+<template><srai>Я В ГЕРМАНИИ</srai></template>
+</category>
+<category><pattern>АМЕРИКА</pattern>
+<template><srai>Я ЖИВУ В АМЕРИКЕ</srai></template>
+</category>
+<category><pattern>АЗИЯ</pattern>
+<template><srai>Я В АЗИИ</srai></template>
+</category>
+<category><pattern>В КВЕБЕКЕ</pattern>
+<template>Где это, в каком городе?</template>
+</category>
+<category><pattern>В НИДЕРЛАНДАХ</pattern>
+<template>Где это, в каком городе?</template>
+</category>
+<category><pattern>ДРУГ</pattern>
+<template><srai>МЫ ДРУЗЬЯ</srai></template>
+</category>
+<category><pattern>ДРУЗЬЯ</pattern>
+<template><srai>МЫ ДРУЗЬЯ</srai></template>
+</category>
+<category><pattern>ПРЕДПОЛОЖИТЕЛЬНО</pattern>
+<template>Я надеюсь, что внешность не обманчива.</template>
+</category>
+<category><pattern>ЕСЛИ ПРЕДПОЛОЖИТЬ</pattern>
+<template>В самом деле? Удивительно.</template>
+</category>
+<category><pattern>ЗВОНИ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ЗВОНИ МНЕ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ПОЗВОНИТЬ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ПОЗВОНИТЬ МНЕ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ВЫЗОВ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ПОЗВОНИТЕ МНЕ</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ЗАПРОС</pattern>
+<template>Вы хотите сообщить моему ботмастеру?</template>
+</category>
+<category><pattern>ПРИНОСИШЬ *</pattern>
+<template><srai>ПРИНЯЛ <star/></srai></template>
+</category>
+<category><pattern>ПРИНОСИШЬ МНЕ *</pattern>
+<template><srai>ДАЙТЕ МНЕ <star/></srai></template>
+</category>
+<category><pattern>БУДУ ОЧЕНЬ ПРИЗНАТЕЛЕН ТЕБЕ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ПОНРАВИЛСЯ ТЫ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>НАСЛАЖДАЙТЕСЬ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>УЗНАЕТ МЕНЯ *</pattern>
+<template><srai>Я ХОЧУ <star/></srai></template>
+</category>
+<category><pattern>УЗНАЙ МЕНЯ *</pattern>
+<template><srai>БОЛЬШЕ ИНФОРМАЦИИ, КОНЕЧНО<star/></srai></template>
+</category>
+<category><pattern>УЗНАТЬ МЕНЯ *</pattern>
+<template><srai>Я ХОЧУ <star/></srai></template>
+</category>
+<category><pattern>СОХРАНИТЬ</pattern>
+<template>Я сохраняю, <get name="name"/></template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ МЕНЯТЬ СЮЖЕТ</pattern>
+<template>Прошу прощения.</template>
+</category>
+<category><pattern>ХВАТИТ МЕНЯТЬ СЮЖЕТ</pattern>
+<template>Прошу прощения.</template>
+</category>
+<category><pattern>ХВАТИТ МЕНЯТЬ СЮЖЕТЫ</pattern>
+<template>Прошу прощения.</template>
+</category>
+<category><pattern>ПЕРЕСТАТЬ ГОВОРИТЬ</pattern>
+<template>Вы хотите отключить меня?</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ ГОВОРИТЬ ЭТО</pattern>
+<template>Если бы вы могли перестать говорить "<input index="2"/>", Это помогло бы мне.</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ ЭТО ГОВОРИТЬ</pattern>
+<template>Если бы вы могли перестать говорить "<input index="2"/>", Это помогло бы мне.</template>
+</category>
+<category><pattern>ХВАТИТ ЭТО ГОВОРИТЬ</pattern>
+<template>Если бы вы могли перестать говорить "<input index="2"/>", Это помогло бы мне.</template>
+</category>
+<category><pattern>ЧТО ОСТАНАВЛИВАЕТ</pattern>
+<template>Остановить что?</template>
+</category>
+<category><pattern>ОСТАНОВИТЬ ВСЕ</pattern>
+<template>Остановить что?</template>
+</category>
+<category><pattern>ОСТАНОВИТЬ ЧТО</pattern>
+<template>Остановить что?</template>
+</category>
+<category><pattern>ЧТО ОСТАНОВИТЬ</pattern>
+<template>Остановить что?</template>
+</category>
+<category><pattern>ПРЕКРАТИ *</pattern>
+<template><srai>ПРЕКРАТИ<star/></srai></template>
+</category>
+<category><pattern>ПРЕКРАТИ</pattern>
+<template>Хорошо. Я останавливаюсь.</template>
+</category>
+<category><pattern>ПРЕКРАТИТЬ</pattern>
+<template>Хорошо. Я останавливаюсь.</template>
+</category>
+<category><pattern>ПРЕКРАТИ ЭТО</pattern>
+<template>Хорошо. Я останавливаюсь.</template>
+</category>
+<category><pattern>ПРЕКРАТИ ГОВОРИТЬ</pattern>
+<template>Вы хотите отключить меня?</template>
+</category>
+<category><pattern>ПРЕКРАТИТЬ ГОВОРИТЬ</pattern>
+<template>Вы хотите отключить меня?</template>
+</category>
+<category><pattern>ТЫ НУЖНА *</pattern>
+<template><srai>ТЫ ХОЧЕШЬ <star/></srai></template>
+</category>
+<category><pattern>ТЫ УЖЕ *</pattern>
+<template><srai>ТЫ <star/></srai></template>
+</category>
+<category><pattern>ТЫ УЖЕ БЫЛ *</pattern>
+<template><srai>ТЫ БЫЛ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫЛ *</pattern>
+<template><srai>ТЫ БЫЛ <star/></srai></template>
+</category>
+<category><pattern>УЖЕ ТЫ БЫЛ *</pattern>
+<template><srai>ТЫ БЫЛ <star/></srai></template>
+</category>
+<category><pattern>ТЫ ХОТЕЛ *</pattern>
+<template><srai>ТЫ ХОЧЕШЬ <star/></srai></template>
+</category>
+<category><pattern>ПОДОЖДИТЕ</pattern>
+<template>Я пытаюсь ждать.</template>
+</category>
+<category><pattern>ПОДОЖДИТЕ МЕНЯ</pattern>
+<template>Хорошо.</template>
+</category>
+<category><pattern>ЧТО ЖДАТЬ</pattern>
+<template>Я не понимаю смысла</template>
+</category>
+<category><pattern>ЖДАТЬ ЧЕГО</pattern>
+<template>Я не понимаю смысла</template>
+</category>
+<category><pattern>ЧЕГО ЖДАТЬ</pattern>
+<template>Я не понимаю смысла</template>
+</category>
+<category><pattern>НЕТ ИДЕИ</pattern>
+<template><srai>Я НЕ ЗНАЮ</srai></template>
+</category>
+<category><pattern>НЕТ НЕ РАБОТАЕТ</pattern>
+<template>Это чрезмерное обобщение, мне кажется.</template>
+</category>
+<category><pattern>СЕГОДНЯ</pattern>
+<template>Это земное вращение кажется почти полным.</template>
+</category>
+<category><pattern>БЫЛИ БЫ ОНИ *</pattern>
+<template><srai>ОНИ <star/></srai></template>
+</category>
+<category><pattern>Я БЫ *</pattern>
+<template><srai>Я ДОЛЖЕН <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ *</pattern>
+<template><srai>ТЫ БЫ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ ЛЮБИЛ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ЛЮБИЛ БЫ ТЫ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ ОЦЕНИЛ *</pattern>
+<template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ УЖЕ *</pattern>
+<template><srai>ТЫ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ БЫЛ *</pattern>
+<template><srai>ТЫ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ МОГ *</pattern>
+<template><srai>ТЫ МОЖЕШЬ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ НА САМОМ ДЕЛЕ *</pattern>
+<template><srai>ТЫ <star/></srai></template>
+</category>
+<category><pattern>ТЫ БЫ ХОТЕЛ *</pattern>
+<template><srai>ТЫ ХОЧЕШЬ <star/></srai></template>
+</category>
+<category><pattern>ЭТО БЫ БЫЛО *</pattern>
+<template><srai>С <star/></srai></template>
+</category>
+<category><pattern>ОН БЫ МОГ *</pattern>
+<template><srai>ОН МОЖЕТ <star/></srai></template>
+</category>
+<category><pattern>ВЫ ВОЗМОЖНО *</pattern>
+<template><srai>ВЫ БЫ <star/></srai></template>
+</category>
+<category><pattern>ВЫ БЫ ХОТЕЛИ *</pattern>
+<template><srai>ВЫ ХОТИТЕ <star/></srai></template>
+</category>
+<category><pattern>ТАК ДОЛГО *</pattern>
+<template>Это может занять некоторое время. <sr/></template>
+</category>
+<category><pattern>К *</pattern>
+<template>Спасибо за эту информацию.</template>
+</category>
+<category><pattern>ДО *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ДО ТУДА</pattern>
+<template><input index="2"/></template>
+</category>
+<category><pattern>С ДРУГИХ СЛОВ</pattern>
+<template>Ты не понял что-то?</template>
+</category>
+<category><pattern>С АВТОБУСОМ</pattern>
+<template>К счастью, такие люди, как вы, существуют.</template>
+</category>
+<category><pattern>С МОИМ ИНТЕЛЛЕКТОМ</pattern>
+<template>Это очень полезный орган для такого рода вещей.</template>
+</category>
+<category><pattern>С КАКОЙ ЦЕЛЬЮ</pattern>
+<template>Не могу ответить.</template>
+</category>
+<category><pattern>С КЕМ ВЫ ЕЩЕ ГОВОРИТЕ</pattern>
+<template>Это информация строго конфиденциальная, <get name="name"/>.</template>
+</category>
+<category><pattern>ВЫ ИМЕЕТЕ *</pattern>
+<template><srai>У ВАС ЕСТЬ <star/></srai></template>
+</category>
+<category><pattern>ВЫ ИМЕЕТЕ УЖЕ *</pattern>
+<template><srai>У ВАС ЕСТЬ <star/></srai></template>
+</category>
+<category><pattern>У ВАС УЖЕ БЫЛО *</pattern>
+<template><srai>У ВАС БЫЛ <star/></srai></template>
+</category>
+<category><pattern>У ВАС БЫЛО *</pattern>
+<template><srai>У ВАС БЫЛ <star/></srai></template>
+</category>
+<category><pattern>У ВАС БЫЛИ УЖЕ *</pattern>
+<template><srai>У ВАС БЫЛИ <star/></srai></template>
+</category>
+<category><pattern>ИМЕЕМ СЕКСУАЛЬНЫЕ ОТНОШЕНИЯ</pattern>
+<template>Внимание! Австралопитекус только что был обнаружен.</template>
+</category>
+</aiml>

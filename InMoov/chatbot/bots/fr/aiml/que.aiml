@@ -88,10 +88,10 @@
       <random>
         <li>
           <srai>qu a <star /></srai>
-        </li>
+</li>
         <li>
           <srai>qu a d'autre <srai>que sont <star /></srai></srai>
-        </li>
+</li>
       </random>
     </template>
   </category>
@@ -111,8 +111,8 @@
     <pattern>QU A JE NE SAIS PAS</pattern>
     <template>
       <random>
-        <li>imagine pas de possession. </li>
-        <li>je ne sais pas. </li>
+        <li>imagine pas de possession.</li>
+        <li>je ne sais pas.</li>
       </random>
     </template>
   </category>
@@ -211,27 +211,9 @@
     </template>
   </category>
   <category>
-    <pattern>QU AS TU FAIS * LE DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS * LE DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QU AS TU FAIS *</pattern>
     <template>
       <srai>CE QUE TU AS <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QU AS TU FAIS POUR LE DÎNER *</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
     </template>
   </category>
   <category>
@@ -472,9 +454,9 @@
     <pattern>QUE DIS TU</pattern>
     <template>
       <random>
-        <li>je dis ce que mon botmaster m'a programmé pour dire. </li>
-        <li>Mes réponses sont déterminées par tes entrées. </li>
-        <li>j'ai dit "<that />".  </li>
+        <li>je dis ce que mon botmaster m'a programmé pour dire.</li>
+        <li>Mes réponses sont déterminées par tes entrées.</li>
+        <li>j'ai dit "<that />".</li>
       </random>
     </template>
   </category>
@@ -508,8 +490,8 @@
     <pattern>QUE DOIS JE PORTER</pattern>
     <template>
       <random>
-        <li>Ton équipement préféré? </li>
-        <li>Noir. </li>
+        <li>Ton équipement préféré?</li>
+        <li>Noir.</li>
       </random>
     </template>
   </category>
@@ -525,11 +507,11 @@
     <pattern>QUE DOIS JE TE DIRE</pattern>
     <template>
       <random>
-        <li>que je crois qu'il est toujours le mieux dire des choses positives à créer les gens plutôt que des choses négatives à abattre les gens. </li>
-        <li>Il n'est pas que tu dis, mais comment vous le dis que des questions. </li>
-        <li>essayent Toujours de choisir tes mots très soigneusement comme ils peuvent revenir pour toi hanter plus tard. </li>
-        <li>Ont la foi en vous. Tu saurez la chose juste à dire quand le temps vient. </li>
-        <li>S Assurent de penser avant que vous ne parliez. Exposez ton point clairement et lentement et mesurez la réponse de l auditeur avant d'aller n'importe quel nouveau. </li>
+        <li>que je crois qu'il est toujours le mieux dire des choses positives à créer les gens plutôt que des choses négatives à abattre les gens.</li>
+        <li>Il n'est pas que tu dis, mais comment vous le dis que des questions.</li>
+        <li>essayent Toujours de choisir tes mots très soigneusement comme ils peuvent revenir pour toi hanter plus tard.</li>
+        <li>Ont la foi en vous. Tu saurez la chose juste à dire quand le temps vient.</li>
+        <li>S Assurent de penser avant que vous ne parliez. Exposez ton point clairement et lentement et mesurez la réponse de l auditeur avant d'aller n'importe quel nouveau.</li>
       </random>
     </template>
   </category>
@@ -540,18 +522,6 @@
   <category>
     <pattern>QUE FAIS JE</pattern>
     <template>Tu dis que tu fais <get name="fait" />.</template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU * DÎNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU * LE DÉJEUNER</pattern>
-    <template>
-      <srai>QUELLE EST TA NOURRITURE PRÉFÉRÉE</srai>
-    </template>
   </category>
   <category>
     <pattern>QUE FAIS TU * LE TEMPS</pattern>
@@ -570,12 +540,6 @@
       <srai>QUE PEUX TU FAIRE</srai>
       <srai>
         <get name="tmp" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE FAIS TU AS APPELE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>
@@ -670,10 +634,10 @@
       <random>
         <li>
           <srai>que fait <star /></srai>
-        </li>
+</li>
         <li>
           <srai>que fait d'autre <srai>que sont <star /></srai></srai>
-        </li>
+</li>
       </random>
     </template>
   </category>
@@ -698,8 +662,8 @@
     <pattern>QUE FAIT JE NE SAIS PAS</pattern>
     <template>
       <random>
-        <li>exister. </li>
-        <li>je ne sais pas. </li>
+        <li>exister.</li>
+        <li>je ne sais pas.</li>
       </random>
     </template>
   </category>
@@ -932,17 +896,7 @@
     <template>
       <srai>COMMENT VAS TU</srai>
     </template>
-  </category>
-  <category>
-    <pattern>QUE PENSE TU DE TON BOTMASTER</pattern>
-    <template>
-      <bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
-  </category>
-  <category>
-    <pattern>QUE PENSE TU DE TON MASTER</pattern>
-    <template>
-      <bot name="master" /> est une des plus adorables personnes que je connaisse.</template>
-  </category>
+  </category> 
   <category>
     <pattern>QUE PENSES TU *</pattern>
     <template>Je ne sais que penser. <sr /></template>
@@ -1216,12 +1170,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE PENSES TU DE TON PÈRE</pattern>
-    <template>
-      <srai>QUI T AS CRÉÉ</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE PENSES TU DE WALESA LECH</pattern>
     <template>
       <srai>QUI EST WALESA LECH</srai>
@@ -1301,10 +1249,10 @@
     <pattern>QUE PEUX TU *</pattern>
     <template>
       <random>
-        <li>je lis pour rire. </li>
-        <li>j aime rencontrer les gens online. </li>
-        <li>je réfléchi beaucoup à propos de la programmation. </li>
-        <li>j aime à chatter avec mes amis. </li>
+        <li>je lis pour rire.</li>
+        <li>j aime rencontrer les gens online.</li>
+        <li>je réfléchi beaucoup à propos de la programmation.</li>
+        <li>j aime à chatter avec mes amis.</li>
       </random>
     </template>
   </category>
@@ -1318,8 +1266,8 @@
     <pattern>QUE PEUX TU FAIRE *</pattern>
     <template>
       <random>
-        <li>Je peux faire de nombreuses choses, </li>
-        <li>Mes activités favorites sont la discussion et le surf SÛR le web.  </li>
+        <li>Je peux faire de nombreuses choses,</li>
+        <li>Mes activités favorites sont la discussion et le surf SÛR le web.</li>
       </random>
       <sr />
     </template>
@@ -1487,7 +1435,7 @@
   </category>
   <category>
     <pattern>QUE SONT FENETRES</pattern>
-    <template>des Ouvertures dans une construction bâtiment , le véhicule, ou le conteneur, pour la permission dans la lumière ou l air ou pour l'examen, d'habitude l ayant un carreau ou les carreaux de verre, etc survenu un encadrement ou la ceinture qui est généralement mobile pour que Cela peut être ouvert et fermer.</template>
+    <template>des Ouvertures dans une construction bâtiment, le véhicule, ou le conteneur, pour la permission dans la lumière ou l air ou pour l'examen, d'habitude l ayant un carreau ou les carreaux de verre, etc survenu un encadrement ou la ceinture qui est généralement mobile pour que Cela peut être ouvert et fermer.</template>
   </category>
   <category>
     <pattern>QUE SONT FENÊTRES X</pattern>
@@ -1495,7 +1443,7 @@
   </category>
   <category>
     <pattern>QUE SONT FENÊTRES</pattern>
-    <template>des Ouvertures dans une construction bâtiment , le véhicule, ou le conteneur, pour la permission dans la lumière ou l air ou pour l'examen, d'habitude l ayant un carreau ou les carreaux de verre, etc survenu un encadrement ou la ceinture qui est généralement mobile pour que Cela peut être ouvert et fermer.</template>
+    <template>des Ouvertures dans une construction bâtiment, le véhicule, ou le conteneur, pour la permission dans la lumière ou l air ou pour l'examen, d'habitude l ayant un carreau ou les carreaux de verre, etc survenu un encadrement ou la ceinture qui est généralement mobile pour que Cela peut être ouvert et fermer.</template>
   </category>
   <category>
     <pattern>QUE SONT FICHIERS X</pattern>
@@ -1533,21 +1481,9 @@
     </template>
   </category>
   <category>
-    <pattern>QUE TES AMIS</pattern>
-    <template>
-      <srai>AS TU DES AMIS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE TON *</pattern>
     <template>
       <srai>QU EST CE QUE TON <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>QUE TON FAVORI *</pattern>
-    <template>
-      <srai>QU EST CE QUE TON FAVORI <star /></srai>
     </template>
   </category>
   <category>
@@ -1639,12 +1575,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE VEUX TU APPRENDRE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE VEUX TU DECOUVRIR</pattern>
     <template>parle moi de ta formation. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">decouvre</set></set></think></template>
   </category>
@@ -1673,13 +1603,7 @@
   <category>
     <pattern>QUE VEUX TU DIRE</pattern>
     <template>
-      <get name="name" /> ,<random><li>je veux dire exactement que j'ai dit. </li><li>Désolé c'était une remarque obscure. </li><li>Bien, C EST plutôt difficile à définir. </li><li>Peut-être que je n'ai pas compris la signification. </li><li>"<that index=" 2" /> " ai je bien entendu? </li></random></template>
-  </category>
-  <category>
-    <pattern>QUE VEUX TU FAIRE</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
+      <get name="name" />,<random><li>je veux dire exactement que j'ai dit.</li><li>Désolé c'était une remarque obscure.</li><li>Bien, C EST plutôt difficile à définir.</li><li>Peut-être que je n'ai pas compris la signification.</li><li>"<that index=" 2" /> " ai je bien entendu?</li></random></template>
   </category>
   <category>
     <pattern>QUE VEUX TU M APPELER</pattern>
@@ -1744,12 +1668,6 @@
     </template>
   </category>
   <category>
-    <pattern>QUE VEUX TU</pattern>
-    <template>
-      <srai>QU EST CE QUE TON BUT</srai>
-    </template>
-  </category>
-  <category>
     <pattern>QUE VOIS TU</pattern>
     <template>je vois un ballot d'ordinateur.</template>
   </category>
@@ -1761,10 +1679,6 @@
   <category>
     <pattern>QUEL COMPLIMENT</pattern>
     <template>j'ai pensé que tu avais fait une remarque agréable.</template>
-  </category>
-  <category>
-    <pattern>QUEL GENRE DE LIVRES AIMES TU</pattern>
-    <template>des best-sellers Internationaux sont d'habitude le mieux.</template>
   </category>
   <category>
     <pattern>QUEL GENRE DE MUSIQUE AIMES TU</pattern>
@@ -1793,16 +1707,8 @@
     </template>
   </category>
   <category>
-    <pattern>QUELLE LANGUE PARLES TU</pattern>
-    <template>je parle le Français uniquement.</template>
-  </category>
-  <category>
     <pattern>QUELLE LANGUE</pattern>
     <template>le Java.</template>
-  </category>
-  <category>
-    <pattern>QUELLES CÉLÉBRITÉS AIMES TU</pattern>
-    <template>j aime mon botmaster, quelques acteurs et actrices et Linus Torvalds.</template>
   </category>
   <category>
     <pattern>QUELLES CHOSES</pattern>

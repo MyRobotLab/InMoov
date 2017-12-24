@@ -1,42 +1,47 @@
-Inmoov OS  
-testing  
+# InMooV - Service launcher v 1.0.0   
 
-[**DOCUMENTATION**]  
+This is the full configurable internationnal launcher script for Inmoov service.  
+Worky out of the box with standardized InMoov hardware configuration.  
+
+
+![virtual inmoov screenshot](http://www.myai.cloud/pic/main.png)
+
+## Getting Started
+MORE informations here : http://myrobotlab.org/service/InMoov  
   
-https://github.com/MyRobotLab/inmoov/wiki/HOWTO---USING-SCRIPT--FINGERSTARTER  
+At this time ( v 1.0.0 ) , configurable things are inside the config folder.   
+By default virtual environment is started, so you can test things with no risk !  
+
+![virtual inmoov screenshot](http://www.myai.cloud/pic/virtual.png)
   
-if you find bugs : https://github.com/MyRobotLab/inmoov/issues  
+To start using the Finger Starter with real hardware, set :  
+ ( The Finger Starter is considered here to be right index, so make sure your servo is connected to pin3 of you Arduino )  
+
+```
+ScriptType=RightSide | inside config/_InMoov.config  
+MyRightPort=COMx | inside config/_service_6_Arduino.config  
+isRightHandActivated=True | inside config/skeleton_rightHand.config  
+voice command sample : OPEN HAND  
+```
+
+Check your configuration inside Inmoov.config ( exemple to change english to french )  
+If you setup 2 arduino + configs in skeleton folder, it can run full Inmoov or separated parts ( right hand / head ... )  
+
   
-[**CHANGELOG**]  
+### DOCUMENTATION & HELP  
+http://myrobotlab.org/service/InMoov  
+  
+bugs report : https://github.com/MyRobotLab/inmoov/issues  
+
+### CONTRIBUTION  
+Is welcome :)  
+( On the develop branch )  
+  
+### CHANGELOG  
    
+0.9.9  
+/ Testing...  
+0.7.0  
+/ Chatbots enhancements & fixes...  
 0.6.1  
-- add AndroidSpeechRecognizer   
-0.5.8  
-- cook FaceRecognizer + tracking + Chatbot  
-0.5.6  
-- MoveToBlocking()  
-0.5.2  
-- ultra sonic sensor  
-0.5.0  
-- auto tracking  
-0.4.9  
-- tracking test and sleep fixes  
-0.4.7  
-- fix random life if partial skeleton & vinmoov config file  
-0.4.6  
-- russian and hindi language pack + new tts services  
-0.4.4  
-- fix shutdown  
-0.4.3  
-- fix autodisable issues  
-0.4.2  
-- arduino aref  
-0.4.1  
-- fix head autodetach  
-0.4.0  
-- inmoov knowledge - beta  
-0.3.9  
-- openni skeleton capture  
-0.3.6  
-- utf8 friendly inside logs & webgui  
-- linux compatibility fixed  
+/ add AndroidSpeechRecognizer   

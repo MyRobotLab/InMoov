@@ -12,9 +12,35 @@ ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 UseMaleVoice=ThisServicePartConfig.getboolean('MAIN', 'UseMaleVoice')
 apikey=ThisServicePartConfig.get('MAIN', 'apikey')
+try:
+  test=ThisServicePartConfig.get('MAIN', 'outputSpeechService')
+except:
+  ThisServicePartConfig.set('MAIN', 'outputSpeechService', 'default')
+  with open(ThisServicePart+'.config', 'wb') as f:
+    ThisServicePartConfig.write(f)
+  ThisServicePartConfig.read(ThisServicePart+'.config')
+  pass
+outputSpeechService=ThisServicePartConfig.get('MAIN', 'outputSpeechService')
+
+# ##############################################################################
+#                 SERVICE START
+# ##############################################################################
 
 AzureTranslator=Runtime.createAndStart("AzureTranslator", "AzureTranslator")
-#initiate azure
+
+
+
+# we map AzureTranslator output to an other speech service
+if outputSpeechService!="default":
+  AzureTranslatorMouth = Runtime.createAndStart("AzureTranslatorMouth", outputSpeechService)
+  #maybe
+  #AzureTranslatorMouth.setKey(awsaccesskeyid,awssecretkey)
+  python.subscribe(AzureTranslatorMouth.getName(),"publishStartSpeaking")
+  python.subscribe(AzureTranslatorMouth.getName(),"publishEndSpeaking")
+else:
+  # or we map AzureTranslator output to original mouth
+  AzureTranslatorMouth=mouth
+  outputSpeechService=Speechengine
 
 if apikey!="":AzureTranslator.setCredentials(apikey)
 
@@ -118,43 +144,43 @@ female_languagesMary = {
 }
 
 
-#experimental natural voices 
+#zombie natural voices 
 male_languagesNatural = { 
-  'da' : 'Erik',
-  'nl' : 'Klaus',
-  'en' : 'Ryan',
-  'fr' : 'Bruno',
-  'de' : 'Klaus',
-  'it' : 'Vittorio',
-  'is' : 'Erik',
-  'no' : 'Erik',
-  'pt' : 'Celia ',
-  'ru' : 'Ryan',
-  'es' : 'Alberto',
-  'sv' : 'Erik',
-  'tr' : 'Ryan',
-  'ro' : 'Ryan',
-  'ja' : 'Sakura',
-  'pl' : 'Ryan',
+  'da' : 'Danish_Mikkel',
+  'nl' : 'German_Johann',
+  'en' : 'US-English_Ronald',
+  'fr' : 'French_Gabriel',
+  'de' : 'Dutch_Daan',
+  'it' : 'Italian_Francesco',
+  'is' : 'Icelandic_Gunnar',
+  'no' : 'Norwegian_Ingrid',
+  'pt' : 'Portuguese_Joao ',
+  'ru' : 'Russian_Sergei',
+  'es' : 'Spanish_Enrique',
+  'sv' : 'Swedish_Elsa',
+  'tr' : 'Turkish_Esma',
+  'ro' : 'Romanian_Elena',
+  'ja' : 'Japanese_Takumi',
+  'pl' : 'Polish_Kacper',
 }
 
 female_languagesNatural = { 
-  'da' : 'Emma',
-  'nl' : 'Klaus',
-  'en' : 'Crystal',
-  'fr' : 'Louise',
-  'de' : 'Klaus',
-  'it' : 'Chiara',
-  'is' : 'Emma',
-  'no' : 'Emma',
-  'pt' : 'Celia',
-  'ru' : 'Ryan',
-  'es' : 'Rosa',
-  'sv' : 'Emma',
-  'tr' : 'Ryan',
-  'ro' : 'Ryan',
-  'ja' : 'Sakura',
-  'pl' : 'Ryan',
+  'da' : 'Danish_Line',
+  'nl' : 'German_Johann',
+  'en' : 'US-English_Linda',
+  'fr' : 'French_Renee',
+  'de' : 'Dutch_Birgit',
+  'it' : 'Italian_Giulia',
+  'is' : 'Icelandic_Helga',
+  'no' : 'Norwegian_Ingrid',
+  'pt' : 'Portuguese_Mariana',
+  'ru' : 'Russian_Olga',
+  'es' : 'Spanish_Laura',
+  'sv' : 'Swedish_Elsa',
+  'tr' : 'Turkish_Esma',
+  'ro' : 'Romanian_Elena',
+  'ja' : 'Japanese_Midori',
+  'pl' : 'Polish_Zofia',
 }
 
 #Translate to :
@@ -195,12 +221,12 @@ en_languages = {
 
 global translatorDegraded
 translatorDegraded=0
-if MyvoiceTTS=="MarySpeech":
+if outputSpeechService=="MarySpeech":
   translatorDegraded=1
   male_languages=male_languagesMary
   female_languages=female_languagesMary
   
-if MyvoiceTTS=="NaturalReaderSpeech":
+if outputSpeechService=="NaturalReaderSpeech":
   translatorDegraded=0
   male_languages=male_languagesNatural
   female_languages=female_languagesNatural
@@ -218,63 +244,63 @@ def translateText(text,language):
     translatorDegraded=0
     talkBlocking(lang_MaryTranslator)
   
-  if MyvoiceTTS=="MarySpeech":  
+  if outputSpeechService=="MarySpeech":  
     if not CheckMaryTTSVoice("dfki-pavoque-neutral-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)
-      mouth.installComponentsAcceptLicense("dfki-pavoque-neutral-hsmm")
+      AzureTranslatorMouth.installComponentsAcceptLicense("dfki-pavoque-neutral-hsmm")
       needArestart=1
     if not CheckMaryTTSVoice("upmc-jessica-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)      
-      mouth.installComponentsAcceptLicense("upmc-jessica-hsmm")  
+      AzureTranslatorMouth.installComponentsAcceptLicense("upmc-jessica-hsmm")  
       needArestart=1
     if not CheckMaryTTSVoice("upmc-pierre-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)
-      mouth.installComponentsAcceptLicense("upmc-pierre-hsmm") 
+      AzureTranslatorMouth.installComponentsAcceptLicense("upmc-pierre-hsmm") 
       needArestart=1
     if not CheckMaryTTSVoice("istc-lucia-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)
-      mouth.installComponentsAcceptLicense("istc-lucia-hsmm") 
+      AzureTranslatorMouth.installComponentsAcceptLicense("istc-lucia-hsmm") 
       needArestart=1
     if not CheckMaryTTSVoice("dfki-ot-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)
-      mouth.installComponentsAcceptLicense("dfki-ot-hsmm")
+      AzureTranslatorMouth.installComponentsAcceptLicense("dfki-ot-hsmm")
       needArestart=1
     if not CheckMaryTTSVoice("bits1-hsmm"):
       if needAdownloadTalk:
         needAdownloadTalk=0
         talkBlocking(lang_MaryDownloadAll)
-      mouth.installComponentsAcceptLicense("bits1-hsmm")
+      AzureTranslatorMouth.installComponentsAcceptLicense("bits1-hsmm")
       needArestart=1
     
     if needArestart:
       errorSpokenFunc('VoiceDownloaded')
       sleep(4)
-      runtime.exit()
+      runtime.shutdown()
     
-  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech" or MyvoiceTTS=="NaturalReaderSpeech":
+  if outputSpeechService=="Polly" or outputSpeechService=="MarySpeech" or outputSpeechService=="NaturalReaderSpeech":
     RealLang="0"
     
     try:
       RealLang=en_languages[language]
     except:
-      chatBot.setPredicate("default","topic","default")
+      chatBot.setPredicate(chatBot.currentUserName,"topic","default")
       chatBot.getResponse("AZURE_ERROR_2 "+language)
     print RealLang
     
     try:
       AzureTranslator.detectLanguage(text)
     except:
-      chatBot.setPredicate("default","topic","default")
+      chatBot.setPredicate(chatBot.currentUserName,"topic","default")
       chatBot.getResponse("AZURE_ERROR_1")
       RealLang="0"
     
@@ -294,13 +320,13 @@ def translateText(text,language):
       
       
       if 'Cannot find an active Azure Market Place' in t_text:
-        chatBot.setPredicate("default","topic","default")
+        chatBot.setPredicate(chatBot.currentUserName,"topic","default")
         chatBot.getResponse("AZURE_ERROR_3")
       else:
-        mouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
+        AzureTranslatorMouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
         print t_text
-        talkBlocking(t_text)
-        mouth.setVoice(unicode(MyvoiceType,'utf-8'))
-        
+        AzureTranslatorMouth.speakBlocking(unicode(t_text,'utf-8'))
+        #restore original VoiceName
+        mouth.setVoice(VoiceName)        
   else:
     talk(lang_PollyNeeded)

@@ -2,8 +2,6 @@
 #            *** RIGHT ARM ***
 # ##############################################################################
 
-
-
   
   
 # ##############################################################################
@@ -19,32 +17,17 @@ ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack(
 getInmoovFrParameter('rightArm',ThisSkeletonPart+'.config')
 ###############################################################################
 
-
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
 
   isRightArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isRightArmActivated') 
-  
 
 except:
   errorSpokenFunc('ConfigParserProblem','rightarm.config')
   pass  
-  
-try:
-  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'bicep', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'shoulder', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rotate', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'omoplate', 1)
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass    
-  
+ 
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -89,5 +72,3 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
   else:
     #we force parameter if arduino is off
     isRightArmActivated=0
-    
-#todo set inverted

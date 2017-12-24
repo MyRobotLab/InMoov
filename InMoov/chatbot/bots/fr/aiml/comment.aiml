@@ -404,9 +404,9 @@
     <pattern>COMMENT CONNAIS TU</pattern>
     <template>
       <random>
-        <li>A priori. </li>
-        <li>C EST évident. </li>
-        <li>raisonnement Déductif. </li>
+        <li>A priori.</li>
+        <li>C EST évident.</li>
+        <li>raisonnement Déductif.</li>
       </random>
     </template>
   </category>
@@ -463,9 +463,9 @@
     <pattern>COMMENT DIFFÉRENT *</pattern>
     <template>
       <random>
-        <li>ils Ne sont pas vraiment très semblables? </li>
-        <li>très différent. </li>
-        <li>Opposés. </li>
+        <li>ils Ne sont pas vraiment très semblables?</li>
+        <li>très différent.</li>
+        <li>Opposés.</li>
       </random>
     </template>
   </category>
@@ -497,12 +497,6 @@
     <pattern>COMMENT DOIS JE APPELER *</pattern>
     <template>
       <srai>QUI EST UN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT DOIS JE T APPELER</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
     </template>
   </category>
   <category>
@@ -855,10 +849,10 @@
     <pattern>COMMENT FAIS TU CELA TRAVAILLE</pattern>
     <template>
       <condition>
-        <li>Certaines personnes appellent cette sorte de programme "case base raisonning". </li>
+        <li>Certaines personnes appellent cette sorte de programme "case base raisonning".</li>
         <li>
           <srai>comment fais tu <get name="that" /> le travail</srai>
-        </li>
+</li>
       </condition>
     </template>
   </category>
@@ -935,7 +929,7 @@
   </category>
   <category>
     <pattern>COMMENT FAIS TU DEVIES PLUS</pattern>
-    <template>Mon botmaster met à jour mon cerveau basé SÛR ce que les gens disent.</template>
+    <template>Mon botmaster met à jour mon cerveau basé SuR ce que les gens disent.</template>
   </category>
   <category>
     <pattern>COMMENT FAIS TU DIT LE TEMPS</pattern>
@@ -1386,8 +1380,8 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT FONT J OBTIENS UNE PETITE AMIE</pattern>
-    <template>Essayent d'aller aux cours du soir.</template>
+    <pattern>COMMENT TROUVE T-ON UNE PETITE AMIE</pattern>
+    <template>Essaye d'aller aux cours du soir.</template>
   </category>
   <category>
     <pattern>COMMENT FONT J OUVRE *</pattern>
@@ -1449,10 +1443,6 @@
     <template>
       <srai>COMMENT GèRES TU</srai>
     </template>
-  </category>
-  <category>
-    <pattern>COMMENT GRAND AS TU</pattern>
-    <template>Ma taille de téléchargement est environ 1 MO. L'exigence de mémoire est autour du 32Mo pour l'édition de le Java, ou seulement le 640Ko pour le C/C ++ l'édition. Ma mémoire contient maintenant : <taille /></template>
   </category>
   <category>
     <pattern>COMMENT GRAND ES TU LE VOCABULAIRE</pattern>
@@ -1865,18 +1855,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT JE PEUX T APPELER</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT JE PEUX T APPELLER</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT JE PEUX T APPRENDRE *</pattern>
     <template>
       <srai>COMMENT JE T APPRENDS <star /></srai>
@@ -2171,7 +2149,7 @@
   </category>
   <category>
     <pattern>COMMENT OBTIENS TU UN *</pattern>
-    <template>je pense que tu demandes vraiment , Comment tu obtenez un <person />.</template>
+    <template>je pense que tu demandes vraiment, Comment tu obtenez un <person />.</template>
   </category>
     <category>
     <pattern>COMMENT APPELLE T ON *</pattern>
@@ -2383,11 +2361,11 @@
   </category>
   <category>
     <pattern>COMMENT PRENES TU *</pattern>
-    <template>si tu as dû prendre <set name="that"><person /></set> , comment vous?</template>
+    <template>si tu as dû prendre <set name="that"><person /></set>, comment vous?</template>
   </category>
   <category>
     <pattern>COMMENT PRESENTESZ VOUS *</pattern>
-    <template>je dis d'habitude , "Qu'est ce que je peux vous appeler?</template>
+    <template>je dis d'habitude, "Qu'est ce que je peux vous appeler?</template>
   </category>
   <category>
     <pattern>COMMENT PROCRÉES TU</pattern>
@@ -2600,16 +2578,6 @@
     </template>
   </category>
   <category>
-    <pattern>COMMENT PUIS JE T APPELER</pattern>
-    <template>
-      <srai>QU EST CE QUE TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT PUIS JE T APPELLE</pattern>
-    <template>Tu peux appeler <bot name="master" /> à <bot name="location" />.</template>
-  </category>
-  <category>
     <pattern>COMMENT PUIS JE T APPREND</pattern>
     <template>si tu veux m'apprendre quelque chose le dit dans une phrase. Dites alors "Se le rappellent."<think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">m'apprend <person /></set></set></think></template>
   </category>
@@ -2767,12 +2735,6 @@
     <pattern>COMMENT RÉPONDS TU</pattern>
     <template>
       <srai>COMMENT TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT S APPELLE TON BOTMASTER</pattern>
-    <template>
-      <srai>QUI EST TON BOTMASTER</srai>
     </template>
   </category>
   <category>
@@ -3519,18 +3481,6 @@
       <srai>QUEL EST TON NOM</srai>
     </template>
   </category>
-   <category>
-    <pattern>COMMENT T APPELLES TU</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT TU T APPELLES</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
   <category>
     <pattern>COMMENT TU TAPERAIS *</pattern>
     <template>
@@ -3630,14 +3580,14 @@
     <template>
       <think>
         <set name="that">le neurone</set>
-      </think>je cherche un rendeZ vOUS, mon mignon. Et toi? Cherches tu des filles à gros cerveau? SouvienS-TOI juste , je suis un robot <bot name="gender" />.</template>
+      </think>je cherche un rendeZ vOUS, mon mignon. Et toi? Cherches tu des filles à gros cerveau? SouvienS-TOI juste, je suis un robot <bot name="gender" />.</template>
   </category>
   <category>
     <pattern>COMMENT UNE FILLE AGRÉABLE COMME TOI *</pattern>
     <template>
       <think>
         <set name="that">le neurone</set>
-      </think>je cherche un rendeZ vOUS, mon mignon. Et toi? Cherches tu des filles à gros cerveau? SouvienS-TOI juste , je suis un robot <bot name="gender" />.</template>
+      </think>je cherche un rendeZ vOUS, mon mignon. Et toi? Cherches tu des filles à gros cerveau? SouvienS-TOI juste, je suis un robot <bot name="gender" />.</template>
   </category>
   <category>
     <pattern>COMMENT UTILISAIS TU *</pattern>
@@ -3757,18 +3707,6 @@
     <pattern>COMMENT VOUS ALLEZ</pattern>
     <template>
       <srai>COMMENT ÇA VA</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS APELLEZ VOUS</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS APPELLEZ VOUS</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
     </template>
   </category>
   <category>
@@ -3897,30 +3835,6 @@
     <pattern>COMMENT VOUS TROUVEZ *</pattern>
     <template>
       <srai>COMMENT TU TROUVES <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS VOUS APELLEZ *</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS VOUS APELLEZ</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS VOUS APPELLEZ *</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>COMMENT VOUS VOUS APPELLEZ</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
     </template>
   </category>
   <category>

@@ -65,7 +65,7 @@ def sleepModeSleep():
     eyelids.eyelidleft.moveTo(180)
     eyelids.eyelidright.moveTo(180)
   if isHeadActivated:
-    head.neck.setVelocity(60)
+    head.neck.setVelocity(40)
     head.neck.moveTo(10)
   i01.waitTargetPos()
   i01.disable()
