@@ -4,7 +4,7 @@ now = datetime.now()
 if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5])!="1.0.l":
 
   try:
-    actualVersion=int(runtime.getVersion()[-4:])
+    actualVersion=str(runtime.getVersion()[-4:])
   except:
     actualVersion=0
     pass
@@ -17,12 +17,12 @@ if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5]
   #default write current mrl version inside cfg file
   if not os.path.isfile(iniFile):
     currentMrlVersionCheck.add_section('CLIENT')
-    currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
+    currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',str(runtime.getVersion()[-4:]))
     with open(iniFile, 'w') as configfile:
       currentMrlVersionCheck.write(configfile)
 
   currentMrlVersionCheck.read(iniFile)
-  currentMrlVersion=currentMrlVersionCheck.getint('CLIENT', 'currentMrlVersion')
+  currentMrlVersion=currentMrlVersionCheck.get('CLIENT', 'currentMrlVersion')
 
   #check if myrobotlab.jar version has changed
   #if yes we install mrl again
@@ -34,7 +34,7 @@ if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5]
       pass
 
     #update version
-    currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',int(runtime.getVersion()[-4:]))
+    currentMrlVersionCheck.set('CLIENT', 'currentMrlVersion',str(runtime.getVersion()[-4:]))
     with open(iniFile, 'w') as configfile:
       currentMrlVersionCheck.write(configfile)
       
