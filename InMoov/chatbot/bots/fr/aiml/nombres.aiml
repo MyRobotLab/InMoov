@@ -14,24 +14,29 @@ myMath;
 </javascript>
     </template>
   </category>
-  <category><pattern>* FOIS *</pattern>
-<template><srai><star index="1" /> X <star index="2" /></srai></template>
+  
+  
+<category>
+	<pattern>* FOIS *</pattern>
+	<template>
+		<srai><star index="1" /> X <star index="2" /></srai>
+	</template>
 </category>
-  <category>
+<category>
     <pattern>* X *</pattern>
     <template>
       <srai><star index="1" /> MULTIPLIÉ PAR <star index="2" /></srai>
     </template>
-  </category>
-  <category>
+</category>
+<category>
     <pattern>* MULTIPLIÉ PAR *</pattern>
     <template>
       <javascript>
-myMath = eval( <star index="1" /> * <star index="2" /> );
- myMath;
-</javascript>
+		myMath = eval( <star index="1" /> * <star index="2" /> );
+		myMath;
+	  </javascript>
     </template>
-  </category>
+</category>
   <category>
     <pattern>* PLUS *</pattern>
     <template>
