@@ -458,13 +458,13 @@
 	<template><srai>Je suis <star index="3"/></srai></template>
 </category>
 <category>
-  	<pattern>C EST QUOI MON SIGNE DU ZODIAQUE</pattern>
+  	<pattern>C EST QUOI MON SIGNE #</pattern>
 	<template>
 		<srai>MON SIGNE ASTROLOGIQUE</srai>
 	</template>
 </category>
 <category>
-  	<pattern>QUEL EST MON SIGNE DU ZODIAQUE</pattern>
+	<pattern>QUEL EST MON SIGNE #</pattern>
 	<template>
 		<srai>MON SIGNE ASTROLOGIQUE</srai>
 	</template>
@@ -908,5 +908,32 @@
 <category>
     <pattern>QUEL EST MON QI</pattern>
     <template>Je ne peux pas juger de ton intelligence avec une telle pertinence.</template>
+</category>
+<category><pattern>QUEL EST MON ADRESSE IP</pattern>
+<template>ton machine est appelé "<id/>".</template>
+</category>
+<category><pattern>QUEL EST MON EMPLACEMENT</pattern>
+<template>la Terre.</template>
+</category>
+<category><pattern>QUEL EST MON IP *</pattern>
+<template>ton machine est appelée <id/>.</template>
+</category>
+<category><pattern>QUEL EST MON IP</pattern>
+<template>ton machine est appelée <id/>.</template>
+</category>
+<category><pattern>QUEL EST MON NOM DE FAMILLE</pattern>
+<template>je ne connais pas ton nom de famille, <get name="name"/>.</template>
+</category>
+<category><pattern>QUEL EST MON NOM</pattern>
+<template>ton nom est <get name="name"/>.</template>
+</category>
+<category><pattern>QUEL EST MON NUMÉRO DE TELEPHONE</pattern>
+<template>je n'ai pas d'accès à un téléphone.</template>
+</category>
+<category><pattern>QUEL EST MON NUMÉRO DE TÉLÉPHONE</pattern>
+<template>je n'ai pas d'accès à un téléphone.</template>
+</category>
+<category><pattern>QUEL EST MON QUOTIENT INTELLECTUEL</pattern>
+<template>Surement plus que moi.</template>
 </category>    
 </aiml>
