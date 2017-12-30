@@ -7,8 +7,8 @@
   <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
-  <!-- modified:moz4r, sebchko  -->
-  <!-- Last modified: 25/12/17 -->
+  <!-- modified:moz4r, sebchko, gael  -->
+  <!-- Last modified: 29/12/17 -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -113,8 +113,8 @@
 			<li><think><set name="courant2"><get name="articles2" /> <star index="2"/></set></think></li>
 		</condition>  
 		<random>
-			<li>Désormais je saurrais que <star index="1"/> est <get name="courant2"/>.</li>
-			<li>J'étais presque sure que <star index="1"/> était <get name="courant2"/>. Merci pour la confirmation.</li>
+			<li>Désormais je saurais que <star index="1"/> est <get name="courant2"/>.</li>
+			<li>J'étais presque sur que <star index="1"/> était <get name="courant2"/>. Merci pour la confirmation.</li>
 		</random>
 		<learnf>
 			<category>
@@ -155,7 +155,7 @@
 <category>
 	<pattern># NON #</pattern>
 	<that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-	<template><li>OKay, pas de soucis, on ne saurra pas. Ou alors désolé j'ai peut être mal compris.</li></template>
+	<template><li>Oké, pas de soucis, on ne saura pas. Ou alors désolé j'ai peut être mal compris.</li></template>
 </category>
 <category>
 	<pattern># JE NE #</pattern>
