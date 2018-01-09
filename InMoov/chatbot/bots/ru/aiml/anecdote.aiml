@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ЕЩЕ АНЕКДОТ</pattern>
+<template><srai>Расскажи анекдот</srai></template>
+</category>
+<category><pattern>РАССКАЖИ ЕЩЕ</pattern>
+<template><srai>Расскажи анекдот</srai></template>
+</category>
+<category><pattern>ВНИМАНИЕ</pattern>
+<template>Дорогие друзья,
+	          отойдите,  пожалуйста,  на расстояние вытянутой руки,
+			  Вы мне мешаете</template>
+</category>
+<category><pattern>КАСАНИЕ</pattern>
+<template><oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>Touch()</param>
+            </mrl>
+        </oob></template>
+</category>
+<category><pattern>ПОЗДРАВЛЕНИЕ</pattern>
+<template><oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>Congratulations()</param>
+            </mrl>
+        </oob></template>
+</category>
+<category><pattern>ПОЗДРАВЛЕНИЯ</pattern>
+<template><srai>поздравление</srai></template>
+</category>
+<category><pattern>* ПОЗДРАВЬ</pattern>
+<template><srai>поздравление</srai></template>
+</category>
+</aiml>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ДАЙТЕ ДАТУ</pattern>
+<template>Сегодня <date format="%d %B, %Y" jformat="dd MMMMMMMMM , YYYY"/></template>
+</category>
+<category><pattern>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</pattern>
+<template>Осталось
+      <interval>
+        <jformat>dd MM</jformat>
+        <style>days</style>
+        <from><date jformat="dd MM"/></from>
+        <to>25 12</to>
+      </interval>
+несколько дней до Рождества, хо-хо-хо.</template>
+</category>
+<category><pattern>КАКОЙ ГОД</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>ГОД КАКОЙ</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>В КАКОМ ГОДУ</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>В ГОДУ КАКОМ</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>В КАКОМ ГОДУ МЫ</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>МЫ В КАКОМ ГОДУ</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>КАКОЙ СЕЙЧАС ГОД</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>КАКОЙ ГОД СЕЙЧАС</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>ГОД КАКОЙ СЕЙЧАС</pattern>
+<template><srai>ГОД</srai></template>
+</category>
+<category><pattern>КАКОЙ МЕСЯЦ</pattern>
+<template><srai>МЕСЯЦ</srai></template>
+</category>
+<category><pattern>МЕСЯЦ КАКОЙ</pattern>
+<template><srai>МЕСЯЦ</srai></template>
+</category>
+<category><pattern>МЕСЯЦ КАКОЙ СЕЙЧАС</pattern>
+<template><srai>МЕСЯЦ</srai></template>
+</category>
+<category><pattern>КАКОЙ СЕЙЧАС МЕСЯЦ</pattern>
+<template><srai>МЕСЯЦ</srai></template>
+</category>
+<category><pattern>СЕЙЧАС КАКОЙ МЕСЯЦ</pattern>
+<template><srai>МЕСЯЦ</srai></template>
+</category>
+<category><pattern>КАКОЙ ДЕНЬ НЕДЕЛИ</pattern>
+<template><srai>ДЕНЬ</srai>,
+      <srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>ДЕНЬ НЕДЕЛИ КАКОЙ</pattern>
+<template><srai>ДЕНЬ</srai>,
+      <srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>* КАКОЙ ДЕНЬ *</pattern>
+<template><srai>ДЕНЬ</srai></template>
+</category>
+<category><pattern>* КАКОЙ ДЕНЬ</pattern>
+<template><srai>ДЕНЬ</srai></template>
+</category>
+<category><pattern>ЧТО ЗА ДАТА СЕГОДНЯ</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>СЕГОДНЯ ЧТО ЗА ДАТА</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>СЕГОДНЯ ДАТА КАКАЯ</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>КАКАЯ СЕГОДНЯ ДАТА</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>КАКАЯ ДАТА СЕГОДНЯ</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ СКАЗАТЬ МНЕ ВРЕМЯ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ МНЕ ВРЕМЯ СКАЗАТЬ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>СКОЛЬКО ВРЕМЯ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>ВРЕМЯ СКОЛЬКО</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ СКАЗАТЬ ВРЕМЯ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>ТЫ СКАЗАТЬ ВРЕМЯ МОЖЕШЬ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>ТЫ ВРЕМЯ СКАЗАТЬ МОЖЕШЬ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>КАКАЯ ДАТА #</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>СКАЖИ МНЕ ДАТУ</pattern>
+<template><srai>ДАЙТЕ ДАТУ</srai></template>
+</category>
+<category><pattern>* МИНУТ</pattern>
+<template>Это долго.</template>
+</category>
+<category><pattern>* МИНУТКУ</pattern>
+<template>Это быстро прошло!</template>
+</category>
+<category><pattern>* ЧАС *</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>* ЧАСОВ</pattern>
+<template><srai>КОТОРЫЙ ЧАС</srai></template>
+</category>
+<category><pattern>СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА</pattern>
+<template><srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai></template>
+</category>
+<category><pattern>СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА *</pattern>
+<template><srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai></template>
+</category>
+<category><pattern>* СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА *</pattern>
+<template><srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai></template>
+</category>
+<category><pattern>ДО РОЖДЕСТВА СКОЛЬКО ВРЕМЕНИ</pattern>
+<template><srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai></template>
+</category>
+</aiml>
