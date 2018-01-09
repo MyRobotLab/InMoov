@@ -6,13 +6,13 @@ TorsoConnectedToArduino=left
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 ;your servo minimal limits
-topStom=60
-midStom=60
+topStom=0
+midStom=0
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
 ;your servo maximal limits
-topStom=120
-midStom=120
+topStom=180
+midStom=180
 
 [SERVO_REST_POSITION]
 topStom=90
@@ -32,12 +32,12 @@ topStom=-1
 midStom=-1
 
 [MINIMUM_MAP_INPUT]
-topStom=0
-midStom=0
+topStom=60
+midStom=60
 
 [MAXIMUM_MAP_INPUT]
-topStom=180
-midStom=180
+topStom=120
+midStom=120
 
 [SERVO_PIN]
 topStom=27

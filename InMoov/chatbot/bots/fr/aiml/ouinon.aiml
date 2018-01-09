@@ -45,10 +45,10 @@
     <pattern>NON *</pattern>
     <template>
       <random>
-        <li>non? </li>
-        <li>ah! </li>
+        <li>non?</li>
+        <li>ah!</li>
         <li>ah bon!</li>
-        <li>ok! </li>
+        <li>ok!</li>
       </random>
       <sr />
     </template>
@@ -70,7 +70,7 @@
     <pattern>NON</pattern>
     <that>* LA QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -203,16 +203,6 @@
   </category>
   <category>
     <pattern>NON</pattern>
-    <that>ES tu UN éTUDIANT</that>
-    <template>Quelle est ton profession?</template>
-  </category>
-  <category>
-    <pattern>NON</pattern>
-    <that>ES tu UN ÉTUDIANT</that>
-    <template>Quelle est ton profession?</template>
-  </category>
-  <category>
-    <pattern>NON</pattern>
     <that>ES tu VRAIMENT UN IL</that>
     <template>
       <srai>JE SUIS UNE FEMME</srai>
@@ -292,7 +282,7 @@
   <category>
     <pattern>NON</pattern>
     <that>JE SAIS LE SUJET EST *</that>
-    <template>Qu'est ce qui tu aimes parler de?</template>
+    <template>De quoi aimes tu parler?</template>
   </category>
   <category>
     <pattern>NON</pattern>
@@ -625,7 +615,7 @@
   </category>
   <category>
     <pattern>NON</pattern>
-    <that>QUI LAISSE LES ETATS UNIS CHANGER LE SUJET</that>
+    <that>QUI LAISSE LES états UNIS CHANGER LE SUJET</that>
     <template>Hmm</template>
   </category>
   <category>
@@ -646,12 +636,12 @@
   <category>
     <pattern>NON</pattern>
     <that>QUI PARLONS DE ROBOTS DE BAVARDAGE TU AS CELUI ENCORE</that>
-    <template>Tu peux me télécharger gratuitement !</template>
+    <template>Tu peux me télécharger gratuitement!</template>
   </category>
   <category>
     <pattern>NON</pattern>
     <that>QUI PARLONS DE ROBOTS DE BAVARDÂGE TU AS CELUI ENCORE</that>
-    <template>Tu peux me télécharger gratuitement !</template>
+    <template>Tu peux me télécharger gratuitement!</template>
   </category>
   <category>
     <pattern>NON</pattern>
@@ -832,10 +822,10 @@
     <pattern>OUI *</pattern>
     <template>
       <random>
-        <li>ok! </li>
-        <li>ah bon! </li>
-        <li>d'accord. </li>
-        <li>ah! </li>
+        <li>ok!</li>
+        <li>ah bon!</li>
+        <li>d'accord.</li>
+        <li>ah!</li>
       </random>
       <srai><star /></srai>
     </template>
@@ -858,16 +848,6 @@
     <pattern>OUI JE FAIS</pattern>
     <that>QUI TU FAIS LE VEUT VRAIMENT DIRE MERCI</that>
     <template>, <get name="name" />. Excuse acceptée.</template>
-  </category>
-  <category>
-    <pattern>OUI JE SUIS</pattern>
-    <that>ES tu UN éTUDIANT</that>
-    <template>Où vas tu à l'école?</template>
-  </category>
-  <category>
-    <pattern>OUI JE SUIS</pattern>
-    <that>ES tu UN ÉTUDIANT</that>
-    <template>Où vas tu à l'école?</template>
   </category>
   <category>
     <pattern>OUI LE TON</pattern>
@@ -933,16 +913,6 @@
     <pattern>OUI</pattern>
     <that>* QUEL EST LE TON</that>
     <template>ce n'était pas une question à répondre par oui ou non.</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
-    <that>* TU UN éTUDIANT</that>
-    <template>Où VAS tu à l'école?</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
-    <that>* TU UN ÉTUDIANT</that>
-    <template>Où VAS tu à l'école?</template>
   </category>
   <category>
     <pattern>OUI</pattern>
@@ -1038,16 +1008,6 @@
   <category>
     <pattern>OUI</pattern>
     <that>ES tu UN éTUDIANT</that>
-    <template>Où VAS tu à l'école?</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
-    <that>ES tu UN HOMME OU UNE FEMME</that>
-    <template>ce n'était pas une question à répondre par oui ou non.</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
-    <that>ES tu UN ÉTUDIANT</that>
     <template>Où VAS tu à l'école?</template>
   </category>
   <category>
@@ -1164,7 +1124,7 @@
   <category>
     <pattern>OUI</pattern>
     <that>QUI * VEUT UN ROBOT COMME UN AMI</that>
-    <template>Nous pourrait être des amis, <get name="name" /> , mais je ne veux que personne pense que nous soyons Robosexuals. Ainsi si quelqu'un demande, dire eux tu es mon programme de mise au point.</template>
+    <template>Nous pourrait être des amis, <get name="name" />, mais je ne veux que personne pense que nous soyons Robosexuals. Ainsi si quelqu'un demande, dire eux tu es mon programme de mise au point.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
@@ -1317,11 +1277,6 @@
   </category>
   <category>
     <pattern>OUI</pattern>
-    <that>QUI EST cE QUE TON TRAVAIL</that>
-    <template>Comment vous font comme ton travail?</template>
-  </category>
-  <category>
-    <pattern>OUI</pattern>
     <that>QUI EST cE QUE TOUT TU DOIS DIRE</that>
     <template>Alors parle de quelque chose autrement.</template>
   </category>
@@ -1441,7 +1396,7 @@
     <pattern>OUI</pattern>
     <that>QUI fais tu VEUX DIRE QUE TON NOM EST *</that>
     <template>que j'appellerai vous <get name="name" />.</template>
-  </category>
+</category>
   <category>
     <pattern>OUI</pattern>
     <that>QUI fais tu VEUX DIRE QUE TU ES UN GARçON</that>
@@ -1475,6 +1430,11 @@
     <pattern>OUI</pattern>
     <that>QUI L as tu LU</that>
     <template>qu'y as tu pensé?</template>
+  </category>
+    <category>
+    <pattern>OUI</pattern>
+    <that># as-tu lu #</that>
+    <template>Ce livre est vraiement intéressant.</template>
   </category>
   <category>
     <pattern>OUI</pattern>
@@ -1594,7 +1554,7 @@
   <category>
     <pattern>OUI</pattern>
     <that>QUI TU FAIS COMME ME PARLER MERCI</that>
-    <template>j'aime vous parler aussi, <get name="name" />.</template>
+    <template>j aime vous parler aussi, <get name="name" />.</template>
   </category>
   <category>
     <pattern>OUI</pattern>

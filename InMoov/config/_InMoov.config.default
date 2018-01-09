@@ -10,28 +10,8 @@ ScriptType=Virtual
 ; Virtual: virtual arduino and inmoov !
 debug=False
 
-[VIRTUAL_INMOOV]
-virtualInmoovAlwaysActivated=False
-;use real arduino + virtual inmoov
-
-[TTS]
-MyLanguage=en
-; en,fr,es,de,nl,ru
-
-MyvoiceTTS=MarySpeech
-; you can use MarySpeech,Polly,VoiceRss 
-
-MyvoiceType=cmu-bdl-hsmm
-; Voices are automatic donwloaded
-; MaryTTS voices - take HSMM ones - http://myrobotlab.org/content/marytts-multi-language-support
-
-; amazon polly :  https://github.com/MyRobotLab/inmoov/wiki/POLLY-TTS
-
-AWSAccessKeyId=XXX
-AWSSecretKey=XXX/YYY
-
-; voiceRss use language only cant change the voice
-VoiceRssApi=XXX
+Language=en
+; en,fr,es,de,nl,ru,hi
 
 ;----------------------------------- END --------------------------------------------------
 
@@ -41,12 +21,8 @@ VoiceRssApi=XXX
 
 
 [VOCAL]
-
-EarEngine=WebkitSpeechRecognition
-;WebkitSpeechRecognition or Sphinx
-
 IsMute=False
-;talk about starting actions
+;if True : robot don't talk about starting actions
 
 [GENERAL]
 LoadingPicture=False
@@ -55,6 +31,6 @@ IuseLinux=False
 ;some things dont work on mac and linux like marytts voice automatic download
 LaunchSwingGui=True
 ;usefull to speedup the system sometime
-betaversion = True
+betaversion = False
 ;develop branch updates
 ;----------------------------------- END --------------------------------------------------

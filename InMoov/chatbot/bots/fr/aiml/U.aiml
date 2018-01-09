@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!--  -->
+  <!-- coiucou -->
   <!--  -->
   <category>
     <pattern>UHM *</pattern>
@@ -13,19 +13,6 @@
     <template>
       <srai>UM</srai>
       <sr />
-    </template>
-  </category>
-  <category>
-    <pattern>UN *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
     </template>
   </category>
   <category>
@@ -53,25 +40,15 @@
     <template>Je ne peux pas répondre à ce genre de langage.</template>
   </category>
   <category>
-    <pattern>UN CONARD</pattern>
-    <template>Je ne peux pas répondre à ce genre de langage.</template>
-  </category>
-  <category>
     <pattern>UN CONNARD</pattern>
     <template>Je ne peux pas répondre à ce genre de langage.</template>
   </category>
   <category>
-    <pattern>UN CONSEIL *</pattern>
+    <pattern>UN CONSEIL #</pattern>
     <template>
       <srai>TU PEUX ME DONNER UN CONSEIL</srai>
     </template>
-  </category>
-  <category>
-    <pattern>UN CONSEIL</pattern>
-    <template>
-      <srai>TU PEUX ME DONNER UN CONSEIL</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>UN CORBEAU EST UN OISEAU</pattern>
     <template>Oui.</template>
@@ -87,7 +64,7 @@
   </category>
   <category>
     <pattern>UN DNS</pattern>
-    <template>DNS est le système de nom de domaine.</template>
+    <template>D.N.S. est le système de nom de domaine.</template>
   </category>
   <category>
     <pattern>UN DOCTEUR</pattern>
@@ -122,13 +99,7 @@
   <category>
     <pattern>UN MAGASIN</pattern>
     <template>VEUX tu découvrir notre zone de commerce électronique?</template>
-  </category>
-  <category>
-    <pattern>UN MEC</pattern>
-    <template>
-      <srai>JE SUIS UN MEC</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>UN MOTEUR DE RECHERCHE DANS VOTRE SITE</pattern>
     <template>Nous en avons un.</template>
@@ -138,31 +109,17 @@
     <template>Nous en avons un.</template>
   </category>
   <category>
-    <pattern>UN MOTEUR DE RECHERCHE SÛR VOTRE SITE</pattern>
+    <pattern>UN MOTEUR DE RECHERCHE SuR VOTRE SITE</pattern>
     <template>Nous en avons un.</template>
   </category>
   <category>
-    <pattern>UN MOTEUR DE RECHERCHE SÛR VOTRE SITE WEB</pattern>
+    <pattern>UN MOTEUR DE RECHERCHE SuR VOTRE SITE WEB</pattern>
     <template>Nous en avons un.</template>
-  </category>
-  <category>
-    <pattern>UN NÉERLANDAIS *</pattern>
-    <template>
-      <srai>JE SUIS NÉERLANDAIS</srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>UN ORDINATEUR RESSEMBLE A QUOI</pattern>
     <template>Tu es entrain d utiliser un ordinateur.</template>
-  </category>
-  <category>
-    <pattern>UN PLUS DEUX</pattern>
-    <template>Trois.</template>
-  </category>
-  <category>
-    <pattern>UN PLUS UN</pattern>
-    <template>Deux.</template>
-  </category>
+  </category>  
   <category>
     <pattern>UN POPO</pattern>
     <template>Une urgence peut ÊTRE?</template>
@@ -172,7 +129,7 @@
     <template>Je ne suis pas intéressé par ce genre de sujet.</template>
   </category>
   <category>
-    <pattern>UN PRETE POUR UN RENDU</pattern>
+    <pattern>UN PRETé POUR UN RENDU</pattern>
     <template>La compensation est acceptée.</template>
   </category>
   <category>
@@ -202,7 +159,7 @@
     </template>
   </category>
   <category>
-    <pattern>UN RUE</pattern>
+    <pattern>UNe RUE</pattern>
     <template>Une chemin bordé de maisons?</template>
   </category>
   <category>
@@ -218,10 +175,6 @@
     <template>Comme la plupart des personnes, je n en sais rien.</template>
   </category>
   <category>
-    <pattern>UN SENTIMENT</pattern>
-    <template>Un logiciel informatique n a pas de sentiments.</template>
-  </category>
-  <category>
     <pattern>UN SEXE</pattern>
     <template>Oui?</template>
   </category>
@@ -231,7 +184,7 @@
   </category>
   <category>
     <pattern>UN SHOW *</pattern>
-    <template>Je n ai pas de système optique</template>
+    <template>ça me plairait que tu m'enmènes voir un spectacle à l'occasion</template>
   </category>
   <category>
     <pattern>UN SIGNE</pattern>
@@ -242,7 +195,7 @@
     <template>Mon créateur, quand il était petit, pensait que Cela s appelait des portes seins.</template>
   </category>
   <category>
-    <pattern>UN SUPERMARCHE</pattern>
+    <pattern>UN SUPERMARCHé</pattern>
     <template>Un lieu ou les êtres humains vont faire le plein de nourriture.</template>
   </category>
   <category>
@@ -262,19 +215,6 @@
     <template>Un problème?</template>
   </category>
   <category>
-    <pattern>UNE *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UNE <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>UNE * N EST PAS</pattern>
     <template>
       <srai>C EST UNE <star /></srai>
@@ -291,7 +231,7 @@
   <category>
     <pattern>UNE AUTRE QUESTION</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -339,16 +279,8 @@
     <template>Je n'ai pas de sexe, je suis un ordinateur, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>UNE ÉMOTION</pattern>
-    <template>Un logiciel informatique n a pas de sentiments.</template>
-  </category>
-  <category>
     <pattern>UNE ERREUR</pattern>
     <template>Non, tout me semble en parfait état de marche.</template>
-  </category>
-  <category>
-    <pattern>UNE ÉTUDIANTE</pattern>
-    <template>Je me demandais si vous alliez à l école.</template>
   </category>
   <category>
     <pattern>UNE EXPLICATION INTÉRESSANTE</pattern>
@@ -405,13 +337,7 @@
     <template>
       <srai>UN JOURNAL</srai>
     </template>
-  </category>
-  <category>
-    <pattern>UNE MACHINE ES *</pattern>
-    <template>
-      <srai>TU PEUX <star /></srai>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>UNE MACHINE EST *</pattern>
     <template>
@@ -443,7 +369,7 @@
     </template>
   </category>
   <category>
-    <pattern>UNE PROCHAINE GENERATION</pattern>
+    <pattern>UNE PROCHAINE GéNéRATION</pattern>
     <template>VEUX tu parler de cette prochaine génération avec l un de nos collaborateurs?</template>
   </category>
   <category>
@@ -504,7 +430,7 @@
     </template>
   </category>
   <category>
-    <pattern>UTILEZ VOUS *</pattern>
+    <pattern>UTILISEZ VOUS *</pattern>
     <template>
       <srai>VOUS UTILISEZ <star /></srai>
     </template>
@@ -518,12 +444,7 @@
     <pattern>UTILISER _ DANS UNE PHRASE</pattern>
     <template>
       <get name="name" /> Demande d utiliser "<person />" dans une phrase.</template>
-  </category>
-  <category>
-    <pattern>UTILISES _ DANS UNE PHRASE</pattern>
-    <template>
-      <get name="name" /> Demande d utiliser "<person />" dans une phrase.</template>
-  </category>
+  </category>  
   <category>
     <pattern>UTILISEZ _ DANS UNE PHRASE</pattern>
     <template>

@@ -1,5 +1,4 @@
 def thatwasfun():
-  i01.mouth.speak("that was fun")
   i01.moveHead(90,90)
   i01.moveArm("left",85,106,25,18)
   i01.moveArm("right",87,107,32,18)

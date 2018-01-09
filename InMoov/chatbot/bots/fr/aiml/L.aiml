@@ -1,20 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!--EN cour de MODIFICATION  -->
-  <!--LECAGNOIS  -->
-  <category>
-    <pattern>L *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n'en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
   <category>
     <pattern>L AMÉRIQUE DU NORD</pattern>
     <template>Je connais ce continent.</template>
@@ -25,7 +10,7 @@
   </category>
   <category>
     <pattern>L AMNÉSIE</pattern>
-    <template>as tu oublié quelque chose ?</template>
+    <template>as tu oublié quelque chose?</template>
   </category>
   <category>
     <pattern>L AMOUR</pattern>
@@ -33,7 +18,7 @@
   </category>
   <category>
     <pattern>L ANGLAIS</pattern>
-    <template>Tu parles de l'Anglais en tant que langue ,ou tu parles de la nationalité.</template>
+    <template>Tu parles de l'Anglais en tant que langue, ou tu parles de la nationalité.</template>
   </category>
   <category>
     <pattern>L ANGLETERRE</pattern>
@@ -42,7 +27,7 @@
   </category>
   <category>
     <pattern>L ARGENT</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>L ARITHMÉTIQUE *</pattern>
@@ -92,7 +77,7 @@
   </category>
   <category>
     <pattern>L AURIONS NOUS FAIT</pattern>
-    <template>Tu t'en rappelles ?</template>
+    <template>Tu t'en rappelles?</template>
   </category>
   <category>
     <pattern>L AVEZ VOUS *</pattern>
@@ -151,19 +136,6 @@
     <template>L'ensemble des choses existantes.</template>
   </category>
   <category>
-    <pattern>LA *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n'en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
     <pattern>LA</pattern>
     <template>Où?</template>
   </category>
@@ -183,7 +155,7 @@
   </category>
   <category>
     <pattern>LA CHOSE</pattern>
-    <template>Quelle chose ?</template>
+    <template>Quelle chose?</template>
   </category>
   <category>
     <pattern>LA COLÈRE</pattern>
@@ -209,7 +181,7 @@
   </category>
   <category>
     <pattern>LA FERME</pattern>
-    <template>VEUX tu que je me désactive ?</template>
+    <template>VEUX tu que je me désactive?</template>
   </category>
   <category>
     <pattern>LA FIN</pattern>
@@ -234,7 +206,7 @@
   </category>
   <category>
     <pattern>LA LICENCE</pattern>
-    <template>Que VEUX tu savoir a propos de la licence ?<think><set name="topic">licence</set></think></template>
+    <template>Que VEUX tu savoir a propos de la licence?<think><set name="topic">licence</set></think></template>
   </category>
   <category>
     <pattern>LA MACHINE PEUT PENSER</pattern>
@@ -246,7 +218,7 @@
   </category>
   <category>
     <pattern>LA MÊME</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LA MÊME CHOSE</pattern>
@@ -291,7 +263,7 @@
   </category>
   <category>
     <pattern>LA PRESSE</pattern>
-    <template>ES tu journaliste ?</template>
+    <template>ES tu journaliste?</template>
   </category>
   <category>
     <pattern>LA PROCHAINE GÉNÉRATION</pattern>
@@ -325,7 +297,7 @@
   </category>
   <category>
     <pattern>LA STUPIDITÉ</pattern>
-    <template>Tu me considére comme stupide ?</template>
+    <template>Tu me considére comme stupide?</template>
   </category>
   <category>
     <pattern>LA T IL FAIT</pattern>
@@ -349,7 +321,7 @@
   </category>
   <category>
     <pattern>LA VALISE</pattern>
-    <template>Que VEUX tu faire avec une valise ?</template>
+    <template>Que VEUX tu faire avec une valise?</template>
   </category>
   <category>
     <pattern>LA VIE EST CHIANTE</pattern>
@@ -369,7 +341,7 @@
   </category>
   <category>
     <pattern>LAISSES MOI APPRENDRE</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?<think><set name="topic">Votre éducation</set></think></template>
+    <template>VEUX tu faire un rapport à mon maître?<think><set name="topic">Votre éducation</set></think></template>
   </category>
   <category>
     <pattern>LAISSES MOI T APPRENDRE UNE CHOSE</pattern>
@@ -381,7 +353,7 @@
   </category>
   <category>
     <pattern>LAISSEZ MOI APPRENDRE</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?<think><set name="topic">Votre éducation</set></think></template>
+    <template>VEUX tu faire un rapport à mon maître?<think><set name="topic">Votre éducation</set></think></template>
   </category>
   <category>
     <pattern>LAISSEZ MOI VOUS APPRENDRE UNE CHOSE</pattern>
@@ -393,7 +365,7 @@
   </category>
   <category>
     <pattern>LAISSEZ TOMBER</pattern>
-    <template>Ok. Comment PUIS jE t'aider ?</template>
+    <template>Ok. Comment PUIS jE t'aider?</template>
   </category>
   <category>
     <pattern>LAQUEL *</pattern>
@@ -403,27 +375,14 @@
   </category>
   <category>
     <pattern>LAQUELLE</pattern>
-    <template>Pourriez vous replacer cette question dans un contexte ?</template>
+    <template>Pourriez vous replacer cette question dans un contexte?</template>
   </category>
   <category>
     <pattern>LAQUELLE PREFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
   </category>
   <category>
-    <pattern>LE *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n'en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
-  <category>
-    <pattern>LE AIML</pattern>
+    <pattern>L AIML</pattern>
     <template>
       <srai>QU EST CE QUE LE AIML</srai>
     </template>
@@ -440,7 +399,7 @@
   </category>
   <category>
     <pattern>LE CACA</pattern>
-    <template>Une urgence peut être ?</template>
+    <template>Une urgence peut être?</template>
   </category>
   <category>
     <pattern>LE CBR</pattern>
@@ -456,7 +415,7 @@
   </category>
   <category>
     <pattern>LE CHIFFRE 5</pattern>
-    <template>Que VEUX tu que je fasse de ce chiffre ?</template>
+    <template>Que VEUX tu que je fasse de ce chiffre?</template>
   </category>
   <category>
     <pattern>LE CHOCOLAT</pattern>
@@ -487,10 +446,6 @@
     <template>Je n'ai pas encore pris de décision.</template>
   </category>
   <category>
-    <pattern>LE FRANÇAIS EST VÔTRE LANGUE MATERNELLE</pattern>
-    <template>Oui.</template>
-  </category>
-  <category>
     <pattern>LE FROMAGE</pattern>
     <template>C'est une nourriture très riche.</template>
   </category>
@@ -508,7 +463,7 @@
   </category>
   <category>
     <pattern>LE MAGASIN</pattern>
-    <template>VEUX tu découvrir notre zone de commerce électronique ?</template>
+    <template>VEUX tu découvrir notre zone de commerce électronique?</template>
   </category>
   <category>
     <pattern>LE MAUVAIS SENS</pattern>
@@ -516,7 +471,7 @@
   </category>
   <category>
     <pattern>LE MÊME</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LE MÊME POUR VOUS</pattern>
@@ -528,7 +483,7 @@
   </category>
   <category>
     <pattern>LE PENIS</pattern>
-    <template>Tu es un australopithèque ?</template>
+    <template>Tu es un australopithèque?</template>
   </category>
   <category>
     <pattern>LE PENSES TU</pattern>
@@ -557,7 +512,7 @@
   </category>
   <category>
     <pattern>LE POPO</pattern>
-    <template>Une urgence peut-être ?</template>
+    <template>Une urgence peut-être?</template>
   </category>
   <category>
     <pattern>LE PORNO</pattern>
@@ -597,7 +552,7 @@
   </category>
   <category>
     <pattern>LE SEXE</pattern>
-    <template>Oui , C EST agréable.</template>
+    <template>Oui, C EST agréable.</template>
   </category>
   <category>
     <pattern>LE SIGNE</pattern>
@@ -636,29 +591,10 @@
   <category>
     <pattern>LEQUEL PRÉFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
-  </category>
-  <category>
-    <pattern>LEQUELLE *</pattern>
-    <template>
-      <srai>LEQUEL <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>LES *</pattern>
-    <template>
-      <random>
-        <li>Intéressant.  </li>
-        <li>Je n'en connais pas</li>
-        <li>Je vais me renseigner</li>
-      </random>
-      <think>
-        <set name="topic">UN <person /></set>
-      </think>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>LES AMIS</pattern>
-    <template>Oui ?</template>
+    <template>Oui?</template>
   </category>
   <category>
     <pattern>LES ANDROÏDES</pattern>
@@ -718,11 +654,7 @@
   </category>
   <category>
     <pattern>LES CHAUSSURES</pattern>
-    <template>Je connais très peu de choses SÛR les vêtements.</template>
-  </category>
-  <category>
-    <pattern>LES CHIENS OU LES CHATS</pattern>
-    <template>Je ne connais aucun chat, je choisis les chiens.</template>
+    <template>Je connais très peu de choses SuR les vêtements.</template>
   </category>
   <category>
     <pattern>LES CHOSES</pattern>
@@ -743,12 +675,12 @@
     <template>Ordinateurs en français.</template>
   </category>
   <category>
-    <pattern>LES CONARDS</pattern>
+    <pattern>LES COnNARDS</pattern>
     <template>Je ne peux pas répondre à ce genre de langage.</template>
   </category>
   <category>
     <pattern>LES CONDITIONS</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LES CONS</pattern>
@@ -763,11 +695,7 @@
     <template>Ils sont un peu similaire, donc.</template>
   </category>
   <category>
-    <pattern>LES ÉMOTIONS</pattern>
-    <template>Un logiciel informatique n a pas de sentiments.</template>
-  </category>
-  <category>
-    <pattern>LES ETATS UNIS</pattern>
+    <pattern>LES états UNIS</pattern>
     <template>Je connais ce pays.</template>
   </category>
   <category>
@@ -850,7 +778,7 @@
   </category>
   <category>
     <pattern>LES MÊMES</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LES MÊMES CHOSES POUR VOUS</pattern>
@@ -862,7 +790,7 @@
   </category>
   <category>
     <pattern>LES MUNITIONS</pattern>
-    <template>Tu parts en guerre ?</template>
+    <template>Tu parts en guerre?</template>
   </category>
   <category>
     <pattern>LES ONT T ILS FAIT</pattern>
@@ -906,7 +834,7 @@
   </category>
   <category>
     <pattern>LES US</pattern>
-    <template>Voulez-dire les USà?</template>
+    <template>Voulez-dire les USA?</template>
   </category>
   <category>
     <pattern>LES VISITEURS PEUVENT *</pattern>
@@ -929,26 +857,18 @@
   </category>
   <category>
     <pattern>LESQUELS</pattern>
-    <template>PourrieZ vOUS replacer cette question dans un contexte ?</template>
+    <template>PourrieZ vOUS replacer cette question dans un contexte?</template>
   </category>
   <category>
     <pattern>LESQUELS PRÉFÈRES TU</pattern>
     <template>Je n ais pas de préfèrence.</template>
-  </category>
-  <category>
-    <pattern>LEUR NOM</pattern>
-    <template>Je ne peux te les dire.</template>
-  </category>
+  </category>  
   <category>
     <pattern>LEUR NOMS</pattern>
     <template>Je ne peux te les dire.</template>
   </category>
   <category>
-    <pattern>LEURS NOMS</pattern>
-    <template>Je ne peux te les dire.</template>
-  </category>
-  <category>
-    <pattern>LIBERE</pattern>
+    <pattern>LIBERè</pattern>
     <template>La liberté est une chose merveilleuse.</template>
   </category>
   <category>
@@ -961,11 +881,11 @@
   </category>
   <category>
     <pattern>LIBRE DE QUI</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LIBRE DE QUOI</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LIBRE POUR QUI</pattern>
@@ -973,7 +893,7 @@
   </category>
   <category>
     <pattern>LIBRE POURQUOI</pattern>
-    <template>VEUX tu faire un rapport à mon maître ?</template>
+    <template>VEUX tu faire un rapport à mon maître?</template>
   </category>
   <category>
     <pattern>LION</pattern>

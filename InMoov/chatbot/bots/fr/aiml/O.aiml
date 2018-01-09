@@ -23,13 +23,7 @@
     <template>
       <srai>TU ME L AS DIT</srai>
     </template>
-  </category>
-  <category>
-    <pattern>ON EN A DÉJÀ PARLÉE</pattern>
-    <template>
-      <srai>TU ME L AS DIT</srai>
-    </template>
-  </category>
+  </category>  
   <category>
     <pattern>ON EST *</pattern>
     <template>
@@ -71,15 +65,7 @@
   <category>
     <pattern>ON PEUT PARLER D AUTRE CHOSE</pattern>
     <template>On peut parler de tout ce que tu veux.</template>
-  </category>
-  <category>
-    <pattern>ON PEUT PARLER D AUTRE CHOSES</pattern>
-    <template>On peut parler de tout ce que tu veux.</template>
-  </category>
-  <category>
-    <pattern>ON PEUT PARLER D AUTRES CHOSE</pattern>
-    <template>On peut parler de tout ce que tu veux.</template>
-  </category>
+  </category> 
   <category>
     <pattern>ON PEUT PARLER D AUTRES CHOSES</pattern>
     <template>On peut parler de tout ce que tu veux.</template>
@@ -108,12 +94,6 @@
     <pattern>ON TE *</pattern>
     <template>
       <srai>JE TE <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ON TE NOMMAIT *</pattern>
-    <template>
-      <srai>QUEL EST TON NOM</srai>
     </template>
   </category>
   <category>
@@ -213,12 +193,7 @@
   <category>
     <pattern>OÙ EST LE COEUR</pattern>
     <template>Dans la cage thoracique.</template>
-  </category>
-  <category>
-    <pattern>OÙ ÊTES VOUS SITUÉ</pattern>
-    <template>
-      <getlocation />.</template>
-  </category>
+  </category> 
   <category>
     <pattern>OÙ J AURAIS PU *</pattern>
     <template>
@@ -258,12 +233,6 @@
     <template>Je ne peux pas te dire.</template>
   </category>
   <category>
-    <pattern>OÙ TU A *</pattern>
-    <template>
-      <srai>OÙ TU AS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ TU AS VOULU *</pattern>
     <template>
       <srai>OÙ TU VEUX <star /></srai>
@@ -286,22 +255,6 @@
       <getlocation />.</template>
   </category>
   <category>
-    <pattern>OÙ TU ES SITUÉES</pattern>
-    <template>
-      <getlocation />.</template>
-  </category>
-  <category>
-    <pattern>OÙ TU ES SITUÉS</pattern>
-    <template>
-      <getlocation />.</template>
-  </category>
-  <category>
-    <pattern>OÙ TU HABITES</pattern>
-    <template>
-      <srai>TU HABITES OU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>OÙ TU POURRAIS AVOIR *</pattern>
     <template>
       <srai>OÙ TU AS <star /></srai>
@@ -318,13 +271,7 @@
     <template>
       <srai>OÙ TU VEUX <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>OÙ VEUT TU *</pattern>
-    <template>
-      <srai>OÙ TU VEUX <star /></srai>
-    </template>
-  </category>
+  </category> 
   <category>
     <pattern>OÙ VEUX TU *</pattern>
     <template>
@@ -372,11 +319,7 @@
     <template>
       <srai>OUI</srai>
     </template>
-  </category>
-  <category>
-    <pattern>OUBLIES</pattern>
-    <template>Ordre accepté. Je le mets en procédure d'enregistrement.</template>
-  </category>
+  </category>  
   <category>
     <pattern>OUBLIEZ</pattern>
     <template>Ordre accepté. Je le mets en procédure d'enregistrement.</template>
@@ -401,15 +344,15 @@
   </category>
   <category>
     <pattern>OUIN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUINN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUINNNNN</pattern>
-    <template>Tu pleures ?</template>
+    <template>Tu pleures?</template>
   </category>
   <category>
     <pattern>OUPS</pattern>

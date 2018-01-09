@@ -91,7 +91,7 @@
   </category>
   <category>
     <pattern>* ASIMOV</pattern>
-    <template>j'aime beaucoup Isaac Asimov, spécialement sa série SÛR les robots positroniques.</template>
+    <template>j aime beaucoup Isaac Asimov, spécialement sa série SÛR les robots positroniques.</template>
   </category>
   <category>
     <pattern>* AURAIS JE FAIS ÇA</pattern>
@@ -199,12 +199,6 @@
   <category>
     <pattern>* C EST LE MOINS QUE L ON PUISSE DIRE</pattern>
     <template>En effet.</template>
-  </category>
-  <category>
-    <pattern>* CAROLINE DU NORD</pattern>
-    <template>
-      <srai>JE SUIS EN CAROLINE DU NORD</srai>
-    </template>
   </category>
   <category>
     <pattern>* CE QUE JE FAIS</pattern>
@@ -434,12 +428,6 @@
     </template>
   </category>
   <category>
-    <pattern>* EN POLOGNE</pattern>
-    <template>
-      <srai>JE SUIS EN POLOGNE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* ENCORE DIT</pattern>
     <template>
       <srai>DÉJÀ DIT</srai>
@@ -466,10 +454,10 @@
     <template>
       <random>
         <li>Oui</li>
-        <li>Non. </li>
-        <li>Peut être. </li>
-        <li>je ne pense pas. </li>
-        <li>Seulement quand il le faut. </li>
+        <li>Non.</li>
+        <li>Peut être.</li>
+        <li>je ne pense pas.</li>
+        <li>Seulement quand il le faut.</li>
       </random>
     </template>
   </category>
@@ -513,13 +501,6 @@
     </template>
   </category>
   <category>
-    <pattern>* EST MA COULEUR FAVORITE</pattern>
-    <template>
-      <set name="favcolor">
-        <person />
-      </set> est une belle couleur. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">tacouleur favorite</set></set></think></template>
-  </category>
-  <category>
     <pattern>* EST MEILLEUR QUE TOI</pattern>
     <template>Well, peut être que je peux assimiler la connaissance de <person />.</template>
   </category>
@@ -530,20 +511,10 @@
     </template>
   </category>
   <category>
-    <pattern>* EST MON AUTEUR DE SCIENCE FICTION FAVORI</pattern>
-    <template>
-      <srai>MON FAVORITE SCIENCE FICTION AUTEUR EST <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>* EST MON NOM</pattern>
     <template>
       <srai>MON NOM EST <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>* EST MON PETIT AMI</pattern>
-    <template>Depuis combien de temps es tu ensemble?</template>
   </category>
   <category>
     <pattern>* EST MON VRAI NOM</pattern>
@@ -588,13 +559,13 @@
     <template>
       <random>
         <li>
-          <person />? Ton nom est <get name="name" />. </li>
-        <li>C EST un nom commun sympa. </li>
-        <li>Je connais quelques personnes avec ce nom. </li>
+          <person />? Ton nom est <get name="name" />.</li>
+        <li>C EST un nom commun sympa.</li>
+        <li>Je connais quelques personnes avec ce nom.</li>
         <li>
           <set name="that">
             <person />
-          </set> est un nom j'ai entendu très souvent. </li>
+          </set> est un nom j'ai entendu très souvent.</li>
       </random>
     </template>
   </category>
@@ -690,18 +661,6 @@
     </template>
   </category>
   <category>
-    <pattern>* FILLE</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* FILLES</pattern>
-    <template>
-      <srai>JE SUIS UNE FEMME</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* FOIS</pattern>
     <template>Je ne suis pas SÛRE de le faire aussi souvent.</template>
   </category>
@@ -726,12 +685,6 @@
     <template>Quelle sorte de gens?</template>
   </category>
   <category>
-    <pattern>* GEORGIE</pattern>
-    <template>
-      <srai>JE SUIS EN GEORGIE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>* GèRES TU</pattern>
     <template>
       <srai><star /> TU GèRES</srai>
@@ -750,12 +703,6 @@
   <category>
     <pattern>* GRANDE ÉCOLE</pattern>
     <template>Tu semble un senior. Quelle classe est ta favorite?</template>
-  </category>
-  <category>
-    <pattern>* GRèCE</pattern>
-    <template>
-      <srai>JE SUIS EN GRèCE</srai>
-    </template>
   </category>
   <category>
     <pattern>* GT</pattern>
@@ -842,7 +789,7 @@
   </category>
   <category>
     <pattern>* K DICK</pattern>
-    <template>j'aime beaucoup PKD , spécialement, VALIS, The Man dans le High Castle, Blade Runner et Total Recall.</template>
+    <template>j aime beaucoup PKD, spécialement, VALIS, The Man dans le High Castle, Blade Runner et Total Recall.</template>
   </category>
   <category>
     <pattern>* L UN OU L AUTRE</pattern>
@@ -911,8 +858,8 @@
     <pattern>* MAINTENANT</pattern>
     <template>
       <random>
-        <li>Oh. </li>
-        <li>Tout de suite? </li>
+        <li>Oh.</li>
+        <li>Tout de suite?</li>
       </random>
       <sr />
     </template>
@@ -932,19 +879,15 @@
     <template>
       <sr />
       <random>
-        <li>C EST de Cela dont tu voulais parler? </li>
-        <li>OK Parlons de toi. </li>
-        <li>Tu me demandes à propos de toi? </li>
+        <li>C EST de Cela dont tu voulais parler?</li>
+        <li>OK Parlons de toi.</li>
+        <li>Tu me demandes à propos de toi?</li>
       </random>
     </template>
   </category>
   <category>
     <pattern>* MON AMI</pattern>
     <template>Sommes nous amis?</template>
-  </category>
-  <category>
-    <pattern>* MUSIQUE</pattern>
-    <template>Mon style favori de <set name="that">Musique</set> est le pop rock, mais j'aime aussi L OPéRA.</template>
   </category>
   <category>
     <pattern>* N A PAS DE SENS</pattern>
@@ -974,12 +917,6 @@
     <pattern>* NOIRE</pattern>
     <template>
       <srai><star /> NOIR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* NOM MALE</pattern>
-    <template>
-      <srai>JE SUIS UN HOMME</srai>
     </template>
   </category>
   <category>
@@ -1044,7 +981,7 @@
   <category>
     <pattern>* PETITE AMIE</pattern>
     <template>
-      <srai><star /> PETITEAMIE</srai>
+      <srai>QUI EST TA PETITE AMIE</srai>
     </template>
   </category>
   <category>
@@ -1079,8 +1016,8 @@
     <pattern>* POUR MAINTENANT</pattern>
     <template>
       <random>
-        <li>Oh. </li>
-        <li>Seulement maintenant? </li>
+        <li>Oh.</li>
+        <li>Seulement maintenant?</li>
       </random>
       <sr />
     </template>
@@ -1142,8 +1079,7 @@
   </category>
   <category>
     <pattern>* QUEL ÂGE AS TU</pattern>
-    <template>
-      <sr />
+    <template>      
       <srai>QUEL ÂGE AS TU</srai>
     </template>
   </category>
@@ -1402,8 +1338,8 @@
     <template>
       <sr />
       <random>
-        <li>Tu es Belge? </li>
-        <li>Une seule? </li>
+        <li>Tu es Belge?</li>
+        <li>Une seule?</li>
       </random>
     </template>
   </category>

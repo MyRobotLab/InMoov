@@ -3,7 +3,6 @@
 # ##############################################################################
 
 
-
   
 # ##############################################################################
 #               PERSONNAL PARAMETERS
@@ -31,20 +30,6 @@ try:
   HowManyPollsBySecond=ThisSkeletonPartConfig.getint('AUDIOSIGNALPROCESSING', 'HowManyPollsBySecond')
   MouthControlJawMin=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMin')
   MouthControlJawMax=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawMax')
-  
-  try:
-    MouthControlJawTweak=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlJawTweak')
-  except:
-    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawTweak', False)
-    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytime', 1) 
-    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytimestop', 1) 
-    ThisSkeletonPartConfig.set('MOUTHCONTROL', 'MouthControlJawdelaytimeletter', 1) 
-    
-    with open(ThisSkeletonPart+'.config', 'wb') as f:
-      ThisSkeletonPartConfig.write(f)
-    ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-    pass   
-    
   MouthControlJawTweak=ThisSkeletonPartConfig.getboolean('MOUTHCONTROL', 'MouthControlJawTweak')
   MouthControlJawdelaytime=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawdelaytime')
   MouthControlJawdelaytimestop=ThisSkeletonPartConfig.getint('MOUTHCONTROL', 'MouthControlJawdelaytimestop')
@@ -58,44 +43,7 @@ except:
   isHeadActivated=0
   errorSpokenFunc('ConfigParserProblem','head.config')
   pass
- 
-#rollneck migration
-try:
-  tmprollneck = ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'isRollNeckActivated')
-except:
-  ThisSkeletonPartConfig.set('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck', 0)
-  ThisSkeletonPartConfig.add_section('ROLLNECKSERVO')
-  ThisSkeletonPartConfig.set('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck', 180)
-  ThisSkeletonPartConfig.set('SERVO_REST_POSITION', 'rollneck', 90)
-  ThisSkeletonPartConfig.set('SERVO_INVERTED', 'rollneck', 0)
-  ThisSkeletonPartConfig.set('MINIMUM_MAP_INPUT', 'rollneck', 0)
-  ThisSkeletonPartConfig.set('MAXIMUM_MAP_INPUT', 'rollneck', 180)
-  ThisSkeletonPartConfig.set('MAX_VELOCITY', 'rollneck', -1)
-  ThisSkeletonPartConfig.set('SERVO_PIN', 'rollneck', 30)
-  ThisSkeletonPartConfig.set('ROLLNECKSERVO', 'isRollNeckActivated', True)
-  ThisSkeletonPartConfig.set('ROLLNECKSERVO', 'RollNeckArduino', "left")
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass 
-  
-try:
-  rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rothead', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rollneck', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'jaw', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'neck', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyeX', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'eyeY', 1)
-  
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass 
+
 isRollNeckActivated=ThisSkeletonPartConfig.getboolean('ROLLNECKSERVO', 'isRollNeckActivated') 
 RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 
@@ -115,11 +63,6 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     head.neck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'neck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'neck')) 
     head.rothead.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rothead'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rothead'))
     head.rollNeck.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'rollneck'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'rollneck'))
-    
-    #velocity
-    #head.jaw.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'jaw'))
-    #head.eyeX.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeX'))
-    #head.eyeY.setVelocity(ThisSkeletonPartConfig.getint('VELOCITY', 'eyeY'))
   
     #maxvelocity
     head.neck.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'neck'))
@@ -155,25 +98,22 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       head.rollNeck.detach(left)
       head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollNeck'))
      
-    
-    
-    head.enableAutoEnable(1)
-  
     rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
     neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
     rollneckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rollneck')
     eyeXEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeX')
     eyeYEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'eyeY')
-    head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
-    head.neck.enableAutoDisable(neckEnableAutoDisable)
-    head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
-    head.jaw.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
-    head.eyeX.enableAutoDisable(eyeXEnableAutoDisable)
-    head.eyeY.enableAutoDisable(eyeYEnableAutoDisable)
-    
     
     head.jaw.setVelocity(-1)
+
     head.rest()
+    
+    head.rothead.setAutoDisable(rotheadEnableAutoDisable)
+    head.neck.setAutoDisable(neckEnableAutoDisable)
+    head.rollNeck.setAutoDisable(rollneckEnableAutoDisable)
+    head.jaw.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'jaw'))
+    head.eyeX.setAutoDisable(eyeXEnableAutoDisable)
+    head.eyeY.setAutoDisable(eyeYEnableAutoDisable)
     
 # ##############################################################################
 #                 Software mouth control
@@ -226,14 +166,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
         
       print maxAudioValue,minAudioValue
       
-    
-    #tracking
-    if isOpenCvActivated:
-      i01.startEyesTracking(MyLeftPort,22,24)
-      i01.startHeadTracking(MyLeftPort,12,13)
-      talkBlocking(lang_TrackingStarted)  
-    
-    
+   
   else:
     #we force parameter if arduino is off
     isHeadActivated=0
@@ -241,5 +174,3 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     
 else:
   MouthControlActivated=0
-    
-#todo set inverted

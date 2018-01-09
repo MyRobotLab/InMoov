@@ -43,13 +43,12 @@
     <pattern>HOW MANY DAYS UNTIL CHRISTMAS</pattern>
     <template>
       <interval>
-        <jformat>MMMMMMMMM dd</jformat>
+        <jformat>dd MM</jformat>
         <style>days</style>
-        <from>
-          <date jformat="MMMMMMMMM dd" />
-        </from>
-        <to>December 25</to>
+        <from><date jformat="dd MM" /></from>
+        <to>25 12</to>
       </interval>
-days until Christmas.</template>
+	  days until Christmas.
+	</template>
   </category>
 </aiml>

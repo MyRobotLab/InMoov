@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: utilities.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>FIRSTLETTER * *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>FIRSTLETTER *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>REMAININGLETTERS * *</pattern>
+    <template>
+      <star index="2" />
+    </template>
+  </category>
+  <category>
+    <pattern>REMAININGLETTERS *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>REMAININGLETTERS</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>NTH 0 *</pattern>
+    <template>
+      <star /> has no zeroth letter.</template>
+  </category>
+  <category>
+    <pattern>COUNTLETTERS *</pattern>
+    <template>
+      <think>
+        <set var="letters">
+          <explode>
+            <star />
+          </explode> end</set>
+        <set var="count">0</set>
+      </think>
+      <condition>
+        <li>
+          <var>letters</var>
+          <value>end</value>
+          <get var="count" />
+</li>
+        <li>
+          <think>
+            <set var="letters">
+              <srai>REMAININGLETTERS <get var="letters" /></srai>
+            </set>
+            <set var="count">
+              <map>
+                <name>successor</name>
+                <get var="count" />
+              </map>
+            </set>
+          </think>
+          <loop />
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>NTH <set>number</set> *</pattern>
+    <template>
+      <think>
+        <set var="nth">
+          <star />
+        </set>
+        <set var="count">1</set>
+        <set var="letters">
+          <explode>
+            <star index="2" />
+          </explode> end</set>
+      </think>
+      <condition>
+        <li>
+          <var>letters</var>
+          <value>end</value>
+          <star index="2" /> has only <map><name>predecessor</name><get var="count" /></map> letters.</li>
+        <li>
+          <var>count</var>
+          <value><get var="nth" /></value> 
+		  La <map><name>number2ordinal</name><get var="nth"/></map> lettre est <srai>FIRSTLETTER <get var="letters"/></srai>.</li>
+        <li>
+          <think>
+            <set var="letters">
+              <srai>REMAININGLETTERS <get var="letters" /></srai>
+            </set>
+            <set var="count">
+              <map>
+                <name>successor</name>
+                <get var="count" />
+              </map>
+            </set>
+          </think>
+          <loop />
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>ISANAME * *</pattern>
+    <template>
+      <srai>ISANAME <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISANAME <set>name</set> </pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISANAME *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>LOGICALOR FALSE</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>LOGICALOR FALSE *</pattern>
+    <template>
+      <srai>LOGICALOR <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LOGICALOR TRUE</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>LOGICALOR TRUE *</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>REMOVEITEM * FROM LIST NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>REMOVEITEM * FROM LIST CONS * NIL</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">NIL</li>
+        <li>CONS <star index="2" /> NIL</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>REMOVEITEM * FROM LIST CONS * CONS *</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">
+          <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai>
+</li>
+        <li>CONS <star index="2" /> <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>RANDOMCHAR</pattern>
+    <template>
+      <think>
+        <set name="randomchar">
+          <random>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+            <li>G</li>
+            <li>H</li>
+            <li>I</li>
+            <li>J</li>
+            <li>K</li>
+            <li>L</li>
+            <li>M</li>
+            <li>N</li>
+            <li>O</li>
+            <li>P</li>
+            <li>Q</li>
+            <li>R</li>
+            <li>S</li>
+            <li>T</li>
+            <li>U</li>
+            <li>V</li>
+            <li>W</li>
+            <li>X</li>
+            <li>Y</li>
+            <li>Z</li>
+          </random>
+        </set>
+      </think>
+      <random>
+        <li>
+          <lowercase>
+            <get name="randomchar" />
+          </lowercase>
+</li>
+        <li>
+          <uppercase>
+            <get name="randomchar" />
+          </uppercase>
+</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 3</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 2</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 1</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 0</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 7</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 6</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 5</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 4</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 9</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISADIGIT 8</pattern>
+    <template>true</template>
+  </category>
+  <topic name="REMOVE LIST ITEM">
+    <category>
+      <pattern>_</pattern>
+      <that>WHICH ITEM WOULD YOU LIKE TO REMOVE</that>
+      <template>
+        <think>
+          <set name="selecteditem">
+            <star />
+          </set>
+          <set name="topic">unknown</set>
+        </think>
+        <condition name="selecteditem">
+          <li value="None of the above">
+            <srai>
+              <star />
+            </srai>
+</li>
+          <li>
+            <srai>REMOVE <star /> FROM LIST <get name="listname" /></srai>
+</li>
+        </condition>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>SENTENCELENGTH</pattern>
+    <template>0</template>
+  </category>
+  <category>
+    <pattern>SENTENCELENGTH *</pattern>
+    <template>1</template>
+  </category>
+  <category>
+    <pattern>SENTENCELENGTH * *</pattern>
+    <template>
+      <map>
+        <name>successor</name>
+        <srai>SENTENCELENGTH <star index="2" /></srai>
+      </map>
+    </template>
+  </category>
+  <category>
+    <pattern>IMPLODE *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>IMPLODE * *</pattern>
+    <template>
+      <srai> IMPLODE <star /></srai><srai>IMPLODE <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ATOMICLISTMEMBER *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ATOMICLISTMEMBER * *</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">true</li>
+        <li>false</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>ATOMICLISTMEMBER * * *</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">true</li>
+        <li>
+          <srai>ATOMICLISTMEMBER <star /><star index="3" /></srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>WOULD YOU LIKE TO MAKE A * LIST</that>
+    <template>
+      <srai>MAKE A <thatstar /> LIST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>THAT</pattern>
+    <template>
+      <that />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 2 3</pattern>
+    <template>
+      <that index="2,3" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 2 2</pattern>
+    <template>
+      <that index="2,2" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 2 1</pattern>
+    <template>
+      <that index="2,1" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 2 4</pattern>
+    <template>
+      <that index="2,4" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 1 3</pattern>
+    <template>
+      <that index="1,3" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 1 2</pattern>
+    <template>
+      <that index="1,2" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 1 1</pattern>
+    <template>
+      <that index="1,1" />
+    </template>
+  </category>
+  <category>
+    <pattern>THAT 1 4</pattern>
+    <template>
+      <that index="1,4" />
+    </template>
+  </category>
+  <category>
+    <pattern>MY * LIST</pattern>
+    <template>Would you like to make a <star /> list?</template>
+  </category>
+  <category>
+    <pattern>GENERATE PASSWORD</pattern>
+    <template>
+      <srai>
+      	IMPLODE 
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DELETE MY * LIST</pattern>
+    <template>Deleting your list.
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>DELETE MY LIST</pattern>
+    <template>Deleting your list.
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>ISANEMAILADDRESS UNKNOWN</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISANEMAILADDRESS *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISANEMAILADDRESS * AT * DOT *</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>CAR NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>CAR *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>CAR CONS * NIL</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>CAR CONS * CONS *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>IS _ EQUALTO *</pattern>
+    <template>
+      <think>
+        <set var="star">
+          <star />
+        </set>
+      </think>
+      <condition var="star">
+        <li>
+          <value><star index="2" /></value>
+          true
+</li>
+        <li>false</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>ISSHORTANSWER *</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISSHORTANSWER * *</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISSHORTANSWER * * *</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISSHORTANSWER * * * *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>SUCCESSOR</pattern>
+    <template>0</template>
+  </category>
+  <category>
+    <pattern>SUCCESSOR <set>number</set></pattern>
+    <template>
+      <map>
+        <name>successor</name>
+        <star />
+      </map>
+    </template>
+  </category>
+  <category>
+    <pattern>REMOVE * FROM MY * LIST</pattern>
+    <template>
+      <srai>REMOVE <star /> FROM LIST MY <star index="2" /> LIST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>REMOVE * FROM MY LIST</pattern>
+    <template>
+      <srai>REMOVE <star /> FROM LIST MYLIST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>REMOVE * FROM LIST *</pattern>
+    <template>
+      <think>
+        <set name="listname">
+          <star index="2" />
+        </set>
+        <set name="isamember">
+          <srai>LISTMEMBER <star /> OF LIST <srai><get name="listname" /></srai></srai>
+        </set>
+      </think>
+      <!--
+List name=<get name="listname"/>.
+List value=<srai><get name="listname"/></srai>.
+-->
+      <condition name="isamember">
+        <li value="true">Taking <star /> off your list.
+			<learnf>
+				<category>
+					<pattern><eval><get name="listname" /></eval></pattern>
+					<template>
+						<eval><srai>REMOVEITEM <star /> FROM LIST <srai><get name="listname" /></srai></srai></eval>
+					</template>
+				</category>
+			</learnf>
+		</li>
+        <li>
+          <oob>
+            <dialog>
+              <title>Which item?</title>
+              <list>
+                <srai>XMLITEMIZE <srai><get name="listname" /></srai></srai>
+              </list>
+            </dialog>
+          </oob>
+          <think>
+            <set name="topic">REMOVE LIST ITEM</set>
+          </think> 
+		I couldn't find <star /> on your list.  
+		Which item would you like to remove?
+		</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>LOGICALAND FALSE</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>LOGICALAND FALSE *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>LOGICALAND TRUE</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>LOGICALAND TRUE *</pattern>
+    <template>
+      <srai>LOGICALAND <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PREDECESSOR <set>number</set></pattern>
+    <template>
+      <map>
+        <name>predecessor</name>
+        <star />
+      </map>
+    </template>
+  </category>
+  <category>
+    <pattern>CDR NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>CDR *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>CDR CONS * NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>CDR CONS * CONS *</pattern>
+    <template>CONS <star index="2" /></template>
+  </category>
+  <category>
+    <pattern>XMLITEMIZE NIL</pattern>
+    <template>Your list is empty.</template>
+  </category>
+  <category>
+    <pattern>XMLITEMIZE *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>XMLITEMIZE CONS * NIL</pattern>
+    <template>
+      <item>
+        <star />
+      </item>
+    </template>
+  </category>
+  <category>
+    <pattern>XMLITEMIZE CONS * CONS *</pattern>
+    <template>
+      <item>
+        <star />
+      </item>
+      <srai>XMLITEMIZE CONS <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>READ MY * LIST</pattern>
+    <template>Here is your <star /> list: <srai>COMMASEPARATE <srai>MY <star /> LIST</srai></srai></template>
+  </category>
+  <category>
+    <pattern>READ MY LIST</pattern>
+    <template>Here is your list: <srai>COMMASEPARATE <srai>MYLIST</srai></srai></template>
+  </category>
+  <category>
+    <pattern>ISANUMBER <set>number</set></pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISANUMBER *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER <set>number</set></pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER <set>number</set> *</pattern>
+    <template>
+      <srai>ISAPHONENUMBER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER PLUS *</pattern>
+    <template>
+      <srai>ISAPHONENUMBER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER DASH *</pattern>
+    <template>
+      <srai>ISAPHONENUMBER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER LPAREN *</pattern>
+    <template>
+      <srai>ISAPHONENUMBER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER RPAREN *</pattern>
+    <template>
+      <srai>ISAPHONENUMBER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ISAPHONENUMBER *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>INPUT</pattern>
+    <template>
+      <input index="1" />
+    </template>
+  </category>
+  <category>
+    <pattern>INPUT 3</pattern>
+    <template>
+      <input index="3" />
+    </template>
+  </category>
+  <category>
+    <pattern>INPUT 2</pattern>
+    <template>
+      <input index="2" />
+    </template>
+  </category>
+  <category>
+    <pattern>INPUT 4</pattern>
+    <template>
+      <input index="4" />
+    </template>
+  </category>
+  <category>
+    <pattern>LEARNEQUAL * EQUALTO *</pattern>
+    <template>
+      <learn>
+        <category>
+          <pattern>TESTEQUAL <eval><star /></eval> EQUALTO <eval><star /></eval></pattern>
+          <template>true</template>
+        </category>
+        <category>
+          <pattern>TESTEQUAL <eval><star /></eval> EQUALTO *</pattern>
+          <template>false</template>
+        </category>
+        <category>
+          <pattern>TESTEQUAL * EQUALTO <eval><star /></eval></pattern>
+          <template>false</template>
+        </category>
+      </learn>
+    </template>
+  </category>
+  <category>
+    <pattern>ADD 1 PLUS <set>number</set></pattern>
+    <template>
+      <map name="successor">
+        <star />
+      </map>
+    </template>
+  </category>
+  <category>
+    <pattern>ADD 0 PLUS <set>number</set></pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>ADD * PLUS *</pattern>
+    <template>
+      <srai>ADD 1 PLUS <srai>ADD <map name="predecessor"><star /></map> PLUS
+<star index="2" /></srai></srai>
+    </template>
+  </category>
+   <category>
+  	<pattern>ADD _ TO MY * LIST</pattern>
+	<template>I've added <star/> to your <star index="2"/> list.
+		<learn>
+			<category>
+				<pattern>MY <eval><star index="2"/></eval> LIST</pattern>
+				<template>
+					<eval>
+						<srai>CONS <star/> <srai>MY <star index="2"/> LIST</srai></srai>
+					</eval>
+				</template>
+			</category>
+		</learn>
+	</template>
+</category>
+<category>
+	<pattern>ADD _ TO MY LIST</pattern>
+	<template>I've added <star/> to your list.
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>
+					<eval><srai>CONS <star/> <srai>MYLIST</srai></srai></eval>
+				</template>
+			</category>
+		</learnf>
+	</template>
+</category>
+<category>
+	<pattern>ADD _ TO LIST</pattern>
+	<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+  <category>
+    <pattern>WHAT IS MY LIST CALLED</pattern>
+    <template>Your list is called MYLIST.</template>
+  </category>
+  <category>
+    <pattern>FORMATPHONENUMBER *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>FORMATPHONENUMBER * *</pattern>
+    <template>
+      <think>
+        <set name="firstword">
+          <lowercase>
+            <star />
+          </lowercase>
+        </set>
+      </think>
+      <condition name="firstword">
+        <li value="dash">-<srai>FORMATPHONENUMBER <star index="2" /></srai></li>
+        <li value="plus">+<srai>FORMATPHONENUMBER <star index="2" /></srai></li>
+        <li value="lparen">(<srai>FORMATPHONENUMBER <star index="2" /></srai></li>
+        <li value="rparen">(<srai>FORMATPHONENUMBER <star index="2" /></srai></li>
+        <li>
+          <star />
+          <srai>FORMATPHONENUMBER <star index="2" /></srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMASEPARATE NIL</pattern>
+    <template>Your list is empty.</template>
+  </category>
+  <category>
+    <pattern>COMMASEPARATE *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>COMMASEPARATE CONS * NIL</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>COMMASEPARATE CONS * CONS *</pattern>
+    <template>
+      <star />, <srai>COMMASEPARATE CONS <star index="2" /></srai></template>
+  </category>
+  <category>
+    <pattern>LISTMEMBER * OF LIST NIL</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>LISTMEMBER * OF LIST CONS * NIL</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">true</li>
+        <li>false</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>LISTMEMBER * OF LIST CONS * CONS *</pattern>
+    <template>
+      <think>
+        <set name="isequalto">
+          <srai>IS <star /> EQUALTO <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="isequalto">
+        <li value="true">true</li>
+        <li>
+          <srai>LISTMEMBER <star /> OF LIST CONS <star index="3" /></srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>RESPONSE</pattern>
+    <template>
+      <response index="1" />
+    </template>
+  </category>
+  <category>
+    <pattern>RESPONSE 3</pattern>
+    <template>
+      <response index="3" />
+    </template>
+  </category>
+  <category>
+    <pattern>RESPONSE 2</pattern>
+    <template>
+      <response index="2" />
+    </template>
+  </category>
+  <category>
+    <pattern>RESPONSE 4</pattern>
+    <template>
+      <response index="4" />
+    </template>
+  </category>
+  <category>
+    <pattern>MAKE A * LIST</pattern>
+    <template>Initializing your <star /> list.
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>MAKE A LIST</pattern>
+    <template>Initializing your list.
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>CONS *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>CONS * NIL</pattern>
+    <template>CONS <star /> NIL</template>
+  </category>
+  <category>
+    <pattern>CONS * CONS *</pattern>
+    <template>CONS <star /> CONS <star index="2" /></template>
+  </category>
+  <category>
+    <pattern>COUNT TO <set>number</set></pattern>
+    <template>
+  		<think><set name="count">0</set></think>
+  		<condition name="count">
+    		<li><value><star/></value></li>
+    		<li><set name="count"><map><name>successor</name><get name="count"/></map></set>  <loop/></li>
+  		</condition>
+	</template>
+  </category>
+  <category>
+    <pattern>REQUEST</pattern>
+    <template>
+      <request index="1" />
+    </template>
+  </category>
+  <category>
+    <pattern>REQUEST 3</pattern>
+    <template>
+      <request index="3" />
+    </template>
+  </category>
+  <category>
+    <pattern>REQUEST 2</pattern>
+    <template>
+      <request index="2" />
+    </template>
+  </category>
+  <category>
+    <pattern>REQUEST 4</pattern>
+    <template>
+      <request index="4" />
+    </template>
+  </category>
+</aiml>

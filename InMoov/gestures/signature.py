@@ -1,4 +1,7 @@
+# -- coding: utf-8 --
+
 def signature():
+  i01.startedGesture()
   ##approach
   i01.setHeadSpeed(0.75,0.75,1.0,1.0,1.0)
   i01.setArmSpeed("left",0.75,0.75,0.75,0.75)
@@ -94,4 +97,7 @@ def signature():
   i01.moveArm("right",52,91,32,9)
   i01.moveHand("left",2,2,2,2,2,180)
   i01.moveHand("right",180,180,180,179,180,112)
-  i01.mouth.speakBlocking("there you go")   
+  i01.mouth.speakBlocking("there you go")
+  #i01.mouth.speakBlocking(u"Туда вы идёте")
+  sleep(1)
+  i01.finishedGesture()

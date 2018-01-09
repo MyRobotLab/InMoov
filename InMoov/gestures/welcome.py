@@ -1,3 +1,5 @@
+# -- coding: utf-8 --
+
 def welcome():
   sleep(1)
   i01.setHandSpeed("left", 0.60, 0.60, 0.60, 0.60, 0.60, 0.60)
@@ -12,6 +14,7 @@ def welcome():
   i01.moveHand("right",2,2,2,2,2,90)
   sleep(1)
   i01.mouth.speakBlocking("Welcome to the inmoov nation")
+  #i01.mouth.speakBlocking(u"Добро пожаловать в страну Инмоов")
   sleep(1)
 
 

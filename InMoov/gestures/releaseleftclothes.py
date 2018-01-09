@@ -1,4 +1,5 @@
 def releaseleftclothes():
+  i01.startedGesture()
   ##arms get to middle
   i01.setHandSpeed("left", 1.0, 0.80, 0.80, 0.80, 1.0, 0.80)
   i01.setHandSpeed("right", 1.0, 0.70, 0.70, 1.0, 1.0, 0.80)
@@ -51,3 +52,5 @@ def releaseleftclothes():
   i01.moveHand("left",92,33,37,71,66,25)
   i01.moveHand("right",81,66,82,60,105,113)
   i01.moveTorso(95,90,90)
+  sleep(1)
+  i01.finishedGesture()

@@ -173,10 +173,6 @@
     <template>Cette année.</template>
   </category>
   <category>
-    <pattern>EN ALLEMAGNE</pattern>
-    <template>Où ça, près de quelle ville?</template>
-  </category>
-  <category>
     <pattern>EN AS TU *</pattern>
     <template>
       <srai>TU AS <star /></srai>
@@ -221,10 +217,6 @@
   <category>
     <pattern>EN AVION</pattern>
     <template>C'est beaucoup plus rapide que tous les autres moyens de transport.</template>
-  </category>
-  <category>
-    <pattern>EN BELGIQUE</pattern>
-    <template>Où ça, près de quelle ville?</template>
   </category>
   <category>
     <pattern>EN CINQUIÈME *</pattern>
@@ -290,14 +282,6 @@
     <template>
       <srai>VOUS L AVEZ <star /></srai>
     </template>
-  </category>
-  <category>
-    <pattern>EN FRANCE</pattern>
-    <template>Où ça, près de quelle ville?</template>
-  </category>
-  <category>
-    <pattern>EN GRANDE BRETAGNE</pattern>
-    <template>Où ça, près de quelle ville?</template>
   </category>
   <category>
     <pattern>EN IMAGINANT QU *</pattern>
@@ -366,10 +350,6 @@
     <pattern>EN SIXIÈME *</pattern>
     <template>
       <sr />. Et ensuite?</template>
-  </category>
-  <category>
-    <pattern>EN SUISSE</pattern>
-    <template>Où ça, près de quelle ville?</template>
   </category>
   <category>
     <pattern>EN SUPPOSANT QU *</pattern>
@@ -642,11 +622,11 @@
   </category>
   <category>
     <pattern>ET A PROPOS DE TOI</pattern>
-    <template>Moi? Je ne fais qu'aider des clients en ligne.</template>
+    <template>Moi? Je ne fais qu'aider.</template>
   </category>
   <category>
     <pattern>ET A PROPOS DE VOUS</pattern>
-    <template>Moi? Je ne fais qu'aider des clients en ligne.</template>
+    <template>Moi? Je ne fais qu'aider.</template>
   </category>
   <category>
     <pattern>ET BIEN *</pattern>
@@ -683,7 +663,7 @@
   <category>
     <pattern>ET MOI</pattern>
     <template>
-      <that />"?  Et tu?</template>
+      <that />"?  Et toi?</template>
   </category>
   <category>
     <pattern>ET POUR *</pattern>
@@ -713,10 +693,8 @@
     <pattern>ET VOUS</pattern>
     <template>
       <random>
-        <li>
-Je ne fais qu'aider des clients en ligne.</li>
-        <li> 
-Sois plus spécifique.</li>
+        <li>Je ne fais qu'aider des clients en ligne.</li>
+        <li>Sois plus spécifique.</li>
       </random>
     </template>
   </category>
@@ -837,7 +815,7 @@ Sois plus spécifique.</li>
   </category>
   <category>
     <pattern>EXPLIQUE</pattern>
-    <template>Veux tu faire un rapport à mon botmaster.</template>
+    <template>Veux tu faire un rapport à mon botmaster?</template>
   </category>
   <category>
     <pattern>EXPLIQUE CE *</pattern>
@@ -983,7 +961,7 @@ Sois plus spécifique.</li>
   <category>
     <pattern>EXPLIQUEZ LA</pattern>
     <template>
-      <that />"?  L EXPLIQUER?</template>
+      <that />"? L EXPLIQUER?</template>
   </category>
   <category>
     <pattern>EXPLIQUEZ LE</pattern>

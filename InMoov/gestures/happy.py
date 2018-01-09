@@ -1,4 +1,5 @@
 def happy():
+  i01.startedGesture()
   for w in range(0,3):
     sleep(1)
     i01.setHandSpeed("left", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
@@ -25,5 +26,5 @@ def happy():
         i01.moveHand("left",0,0,0,0,0,90)
         i01.moveHand("right",81,79,118,47,0,90)
         sleep(5)
-        ear.resumeListening()
-
+  i01.startedGesture()    
+        

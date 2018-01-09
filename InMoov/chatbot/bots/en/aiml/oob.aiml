@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: October 11, 2017 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -18,7 +18,9 @@
   <category>
     <pattern>TEACH ME language</pattern>
     <template>
-      <srai>LANGUAGE</srai> Let's try a searching for "learn <star />". <oob><search>LEARN <star /></search></oob></template>
+      <srai>LANGUAGE</srai> Let's try a searching for "learn <star />". 
+      <oob><search>LEARN <star /></search></oob>
+     </template>
   </category>
   <category>
     <pattern>CLEAR LOG</pattern>
@@ -45,23 +47,45 @@
           <star />
         </set>
       </think> Click send to mail your feature request.  
-<oob><email><to>callmom-info@pandorabots.com</to><subject>Feature request <get name="featurerequest" /></subject><body>Dear CallMom developers, I'd like to request that you add this feature to the next version of CallMom: <get name="featurerequest" />.  Sincerely, <get name="name" /></body></email></oob></template>
+	  <oob>
+	  	<email>
+	  		<to>callmom-info@pandorabots.com</to>
+	  		<subject>Feature request <get name="featurerequest" /></subject>
+	  		<body>
+	  			Dear CallMom developers, I'd like to request that you add this feature to the next version of CallMom:
+				<get name="featurerequest" />.  Sincerely, <get name="name" />
+	  		</body>
+	  	</email>
+	  </oob>
+	</template>
   </category>
   <category>
     <pattern>SHOW ME A VIDEO *</pattern>
-    <template>I'm looking up videos for you.  <oob><search>VIDEO <star /></search></oob></template>
+    <template>
+    	I'm looking up videos for you.  
+    	<oob><search>VIDEO <star /></search></oob>
+    </template>
   </category>
   <category>
     <pattern>SHOW ME A WEBSITE ABOUT *</pattern>
-    <template>Let's try a google search.  <oob><search><star /></search></oob></template>
+    <template>
+    	Let's try a google search.  
+    	<oob><search><star /></search></oob>
+    </template>
   </category>
   <category>
     <pattern>I WANT TO BUY *</pattern>
-    <template>Let's try to find a store on the map.  <oob><map><star /></map></oob></template>
+    <template>
+    	Let's try to find a store on the map.  
+    	<oob><map><star /></map></oob>
+    </template>
   </category>
   <category>
     <pattern>I AM FAT</pattern>
-    <template>I'm looking for a weight loss center near you.  <oob><map>weight loss</map></oob></template>
+    <template>
+    	I'm looking for a weight loss center near you.  
+    	<oob><map>weight loss</map></oob>
+    </template>
   </category>
   <category>
     <pattern>I AM HUNGRY</pattern>
@@ -86,7 +110,9 @@
         <search>
           <star />
         </search>
-      </oob> I'm opening your browser.</template>
+      </oob> 
+      I'm opening your browser.
+     </template>
   </category>
   <category>
     <pattern>SEARCH *</pattern>
@@ -137,15 +163,20 @@
   </category>
   <category>
     <pattern>DIRECTIONS FROM * TO *</pattern>
-    <template>Here are the directions from <star /> to <star index="2" />.  <oob><directions><from><star /></from><to><star index="2" /></to></directions></oob></template>
+    <template>Here are the directions from <star /> to <star index="2" />.  
+    	<oob><directions><from><star /></from><to><star index="2" /></to></directions></oob>
+    </template>
   </category>
-  <category>
-    <pattern>LAUNCH CAMERA</pattern>
-    <template>Launching the camera.  <oob><camera>on</camera></oob></template>
+  <category><pattern>LAUNCH CAMERA</pattern>
+    <template>Launching the camera.  
+    <srai>CAMERA ON</srai></template>
   </category>
   <category>
     <pattern>LAUNCH *</pattern>
-    <template>I didn't find <star /> among your installed apps.  Let's try to find it. <think><set name="it"><star /></set></think>.  <oob><search><star /></search></oob></template>
+    <template>
+    	I didn't find <star /> among your installed apps.  Let's try to find it. 
+    	<think><set name="it"><star /></set></think>.  
+    	<oob><search><star /></search></oob></template>
   </category>
   <category>
     <pattern>LAUNCH * DOT COM</pattern>
@@ -273,7 +304,16 @@
   </category>
   <category>
     <pattern>PLAY *</pattern>
-    <template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. <oob><url>http://www.youtube.com/embed?listType=search&amp;list=<star />&amp;autoplay=1</url></oob></template>
+    <template>
+    	Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
+    	<oob>
+    		<mrl>
+    			<service>python</service>
+    			<method>exec</method>
+    			<param>BareBonesBrowserLaunch.openURL("http://www.youtube.com/embed?listType=search&amp;list=<star/>&amp;autoplay=1")</param>
+    		</mrl>
+    	</oob>
+    </template>
   </category>
   <category>
     <pattern>WIFI ON</pattern>
@@ -296,7 +336,9 @@
     <template>
       <oob>
         <url>https://twitter.com/intent/tweet?source=webclient&amp;text=<star /></url>
-      </oob>Please check the message and press Tweet if you are happy.</template>
+      </oob>
+      Please check the message and press Tweet if you are happy.
+    </template>
   </category>
   <category>
     <pattern>WWW DOT * DOT COM</pattern>
@@ -324,7 +366,10 @@
     <template>
       <oob>
         <url>http://www.facebook.com/dialog/feed?_path=feed&amp;app_id=294334050655455&amp;redirect_uri=https://www.facebook.com&amp;display=touch</url>
-      </oob>Now opening a screen for you to update your status. Type or speak your message into the status box and press share to post it on your wall.</template>
+      </oob>
+      Now opening a screen for you to update your status. 
+      Type or speak your message into the status box and press share to post it on your wall.
+    </template>
   </category>
   <category>
     <pattern>OPEN GOOGLE</pattern>

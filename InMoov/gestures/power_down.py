@@ -2,7 +2,6 @@ def power_down():
   relax()
   i01.powerDown()
   ##sleep(2)
-  ##ear.pauseListening()
   ##relax()
   ##i01.mouth.speakBlocking()
   ##sleep(2)
@@ -12,5 +11,3 @@ def power_down():
   ##leftSerialPort.digitalWrite(53, Arduino.LOW)
   ear.lockOutAllGrammarExcept("power up")
   sleep(2)
-  ear.resumeListening()
-

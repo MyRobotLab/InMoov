@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: chatBot.aiml -->
+  <!-- Author: Gael Langevin, Anthony Gallot-->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Anthony Gallot -->
+  <!-- Last modified: 8 27, 2017 -->
+  <!-- This inmoovHindi brain file is distributed withOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  
+     <!-- initialisation  -->
+	 <!-- updater  -->
+     <!-- meteo  -->
+	 <!-- gesture  -->
+  
+  
+    <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+   <!-- initialisaion  -->
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>हैलो यह मेरी पहली प्रारंभिकता है मुझे कुछ जानकारी चाहिए मैं सुन रहा हूँ मेरा नाम क्या है ?</template>
+  </category>
+
+  
+  <topic name="firstinit">
+  
+    <category>
+      <pattern>#</pattern>
+      <that># मेरा नाम क्या है #</that>
+      <template>
+        <set name="questionfirstinit">यदि मेरा नाम है <star /> कहो हाँ या ना</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># क्या मैं आपका नाम जान सकता हूँ #</that>
+      <template>
+        <set name="questionfirstinit">अगर आपका नाम है <star /> कहो हाँ या ना</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># हाँ #</pattern>
+      <that># यदि मेरा नाम है #</that>
+      <template>
+        <random>
+			<li>
+			मुझे यह नाम पसंद है , <get name="tmpname" />.
+			</li>
+			<li>
+			बहुत अच्छा नाम, <get name="tmpname" /> महान है.
+			</li>
+        </random>
+	मुझे आपको पता होना चाहिए में सुन रहा हुँ क्या मैं आपका नाम जान सकता हूँ ?
+	<think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+	
+    <category>
+      <pattern># हाँ #</pattern>
+      <that># अगर आपका नाम #</that>
+      <template>
+        <random>
+        <li>आपको जानकर बड़ी खुशी हुई <get name="tmpname" />.</li>
+        <li>आपसे मिलकर अच्छा लगा <get name="tmpname" />.</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname" />
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># नहीं #</pattern>
+      <that># यदि मेरा नाम है #</that>
+      <template>
+	हम पुनः आरंभ करते हैं.
+	में सुन रहा हुँ. मेरा नाम क्या है ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern># नहीं #</pattern>
+      <that># अगर आपका नाम #</that>
+      <template>
+	हम पुनः आरंभ करते हैं.
+	में सुन रहा हुँ. क्या मैं आपका नाम जान सकता हूँ ?
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># कहो हाँ या ना #</that>
+      <template>
+        <random>
+          <li>
+	कृपया मेरे प्रश्न का उत्तर दें यह महत्वपूर्ण है
+	</li>
+          <li>
+	मैं दोहराता हूँ
+	</li>
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- end initialisaion routine -->
+  
+  <!-- updater  -->
+  
+  <category>
+    <pattern>SYSTEM_NEW_VERSION</pattern>
+    <template>
+       <think><set name="topic">updater</set></think>
+	   चेतावनी नया इन्वॉव ऑपरेटिंग सिस्टम संस्करण उपलब्ध है यदि आप चाहे तो मैं इसे अपडेट कर सकता हूं कहो हाँ या ना
+	   </template>
+  </category>
+  
+  <topic name="updater">
+  
+	
+    <category>
+      <pattern># हाँ #</pattern>
+      <that># say हाँ #</that>
+      <template>
+       <think>
+         <set name="topic">default</set>
+        </think>
+			<li>
+			डाउनलोड शुरू कृपया प्रतीक्षा करें
+			</li>
+	<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob>		
+	</template>
+    </category>
+	
+     <category>
+      <pattern># नहीं #</pattern>
+      <that># say हाँ #</that>
+      <template>
+	  <think>
+         <set name="topic">default</set>
+        </think>
+	ठीक है जैसा कि आप चाहें अगली बार हो सकता है
+		<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob>	
+    </template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># कहना हाँ #</that>
+      <template>कृपया मेरे प्रश्न का उत्तर दें यह महत्वपूर्ण है कहो हाँ या ना</template>
+    </category>
+		
+  </topic>
+  
+    <category>
+    <pattern>* SYSTEM_PERCENT</pattern>
+    <template>
+      <li>
+        <star /> प्रतिशत.
+      </li>
+    </template>
+  </category>
+  
+  
+      <category>
+    <pattern>SYSTEM_DOWNLOAD_OK</pattern>
+    <template>
+      <li>
+       डाउनलोड ठीक है मैं बंद कर दूँगा कृपया मुझे पुनरारंभ करें
+      </li>
+    </template>
+  </category>
+  
+    <!-- end updater  -->
+    
+    <!-- météo -->
+  
+  <!-- default town -->
+   <category>
+    <pattern># पूर्वानुमान</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+   <category>
+    <pattern>पूर्वानुमान क्या है</pattern>
+    <template>
+     <srai># में पूर्वानुमान</srai>
+    </template>
+  </category>
+  
+  <!-- free town -->
+  
+  <category>
+    <pattern>क्या है में पूर्वानुमान *</pattern>
+    <template>
+      <srai># में पूर्वानुमान <star/></srai>
+    </template>
+  </category>
+  
+
+  
+    <category>
+    <pattern># में पूर्वानुमान *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2"/>")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+
+  <!-- return -->
+  <category>
+    <pattern>SYSTEM METEO curtemperature * Town * COMMENTAIRE *</pattern>
+    <template>
+     <think><set name="meteo"> <star index="3"/></set></think>
+                <random>
+                <li>बारे में <star index="2"/>, </li>
+                </random>
+                <random>
+                <li>वहाँ है</li>
+                </random>
+                
+                <condition>
+                <li name="meteo" value="200">आंधी तूफान साथ में रोशनी बारिश</li>
+                <li name="meteo" value="201">आंधी तूफान साथ में बारिश</li>
+                <li name="meteo" value="202">आंधी तूफान साथ में heavy बारिश</li>
+                <li name="meteo" value="210">रोशनी आंधी तूफान</li>
+                <li name="meteo" value="211">आंधी तूफान</li>
+                <li name="meteo" value="212">heavy आंधी तूफान</li>
+                <li name="meteo" value="221">ragged आंधी तूफान</li>
+                <li name="meteo" value="230">आंधी तूफान साथ में रोशनी drizzle</li>
+                <li name="meteo" value="231">आंधी तूफान साथ में drizzle</li>
+                <li name="meteo" value="232">आंधी तूफान साथ में heavy drizzle</li>
+                <li name="meteo" value="300">रोशनी intensity drizzle</li>
+                <li name="meteo" value="301">drizzle</li>
+                <li name="meteo" value="302">heavy intensity drizzle</li>
+                <li name="meteo" value="310">रोशनी intensity drizzle बारिश</li>
+                <li name="meteo" value="311">drizzle बारिश</li>
+                <li name="meteo" value="312">heavy intensity drizzle बारिश</li>
+                <li name="meteo" value="313">shower बारिश and drizzle</li>
+                <li name="meteo" value="314">heavy shower बारिश and drizzle</li>
+                <li name="meteo" value="321">shower drizzle</li>
+                <li name="meteo" value="500">रोशनी बारिश</li>
+                <li name="meteo" value="501">moderate बारिश</li>
+                <li name="meteo" value="502">heavy intensity बारिश</li>
+                <li name="meteo" value="503">very heavy बारिश</li>
+                <li name="meteo" value="504">extreme बारिश</li>
+                <li name="meteo" value="511">freezing बारिश</li>
+                <li name="meteo" value="520">रोशनी intensity shower बारिश</li>
+                <li name="meteo" value="521">shower बारिश</li>
+                <li name="meteo" value="522">heavy intensity shower बारिश</li>
+                <li name="meteo" value="531">ragged shower बारिश</li>
+                <li name="meteo" value="600">रोशनी sनहींw</li>
+                <li name="meteo" value="601">sनहींw</li>
+                <li name="meteo" value="602">heavy sनहींw</li>
+                <li name="meteo" value="611">sleet</li>
+                <li name="meteo" value="612">shower sleet</li>
+                <li name="meteo" value="615">रोशनी बारिश and sनहींw</li>
+                <li name="meteo" value="616">बारिश and sनहींw</li>
+                <li name="meteo" value="620">रोशनी shower sनहींw</li>
+                <li name="meteo" value="621">shower sनहींw</li>
+                <li name="meteo" value="622">heavy shower sनहींw</li>
+                <li name="meteo" value="701">mist</li>
+                <li name="meteo" value="711">smoke</li>
+                <li name="meteo" value="721">haze</li>
+                <li name="meteo" value="731">sand, dust whirls</li>
+                <li name="meteo" value="741">fog</li>
+                <li name="meteo" value="751">sand</li>
+                <li name="meteo" value="761">dust</li>
+                <li name="meteo" value="762">volcanic ash</li>
+                <li name="meteo" value="771">squalls</li>
+                <li name="meteo" value="781">tornado</li>
+                <li name="meteo" value="800">clear sky</li>
+                <li name="meteo" value="801">few clouds</li>
+                <li name="meteo" value="802">scattered clouds</li>
+                <li name="meteo" value="803">broken clouds</li>
+                <li name="meteo" value="804">overcast clouds</li>
+                <li name="meteo" value="900">tornado</li>
+                <li name="meteo" value="901">tropical storm</li>
+                <li name="meteo" value="902">hurricane</li>
+                <li name="meteo" value="903">cold</li>
+                <li name="meteo" value="904">hot</li>
+                <li name="meteo" value="905">windy</li>
+                <li name="meteo" value="906">hail</li>
+                <li name="meteo" value="951">calm</li>
+                <li name="meteo" value="952">रोशनी breeze</li>
+                <li name="meteo" value="953">gentle breeze</li>
+                <li name="meteo" value="954">moderate breeze</li>
+                <li name="meteo" value="955">fresh breeze</li>
+                <li name="meteo" value="956">strong breeze</li>
+                <li name="meteo" value="957">high wind, near gale</li>
+                <li name="meteo" value="958">gale</li>
+                <li name="meteo" value="959">severe gale</li>
+                <li name="meteo" value="960">storm</li>
+                <li name="meteo" value="961">violent storm</li>
+                <li name="meteo" value="962">hurricane</li>
+                </condition>
+          
+                <random>
+                <li>तापमान के बारे में, </li>
+                </random>
+                <li>
+                <star index="1"/> डिग्री
+                </li>   
+	</template>
+  </category>
+  
+   <!-- end météo -->
+  
+	<!-- gesture  -->
+  
+  
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+      <li>
+        <random>
+          <li>मैं तैयार हूं और सुन रहा हूँ</li>
+          <li>मै आप के लिये क्य कर सक्त हु।</li>
+          <li>में आपकी कैसे मदद कर सकता हूं।</li>
+        </random>
+      </li>
+    </template>
+  </category>
+  <category>
+    <pattern>उठो</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category>  
+  <category>
+    <pattern>बंद करना</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
+    </template>
+  </category>
+
+</aiml>

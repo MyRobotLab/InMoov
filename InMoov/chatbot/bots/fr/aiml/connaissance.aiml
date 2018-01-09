@@ -358,18 +358,6 @@
     </template>
   </category>
   <category>
-    <pattern>CONNAIS TU D AUTRES BLAGUES</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CONNAIS TU D AUTRES LANGUES</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>CONNAIS TU D AUTRES MOI</pattern>
     <template>tout publié SÛR l internet.</template>
   </category>
@@ -1233,12 +1221,6 @@
     </template>
   </category>
   <category>
-    <pattern>CONNAIS TU MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>CONNAIS TU MOZART</pattern>
     <template>
       <srai>QUI EST MOZART</srai>
@@ -1298,7 +1280,9 @@
   </category>
   <category>
     <pattern>CONNAIS TU OU CHERCHER *</pattern>
-    <template>as tu essayé le web? <srai>TROUVER <star /></srai></template>
+    <template>
+    	as tu essayé le web? 
+    	<srai>TROUVER <star /></srai></template>
   </category>
   <category>
     <pattern>CONNAIS TU PEARL JAM</pattern>
@@ -1409,12 +1393,6 @@
     <pattern>CONNAIS TU QUELQUES * RUMEURS</pattern>
     <template>
       <srai>RACONTER RUMEUR</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>CONNAIS TU QUELQUES BON LIVRES</pattern>
-    <template>
-      <srai>QU EST CE QUE TON LIVRE FAVORI</srai>
     </template>
   </category>
   <category>
@@ -1616,18 +1594,6 @@
     </template>
   </category>
   <category>
-    <pattern>DIS M EN D AUTRES</pattern>
-    <template>
-      <srai>RACONTE MOI UNE AUTRE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DIS M EN UNE AUTRE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE AUTRE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PARLE MOI D *</pattern>
     <template>
       <srai>QU EST CE QUE <star /></srai>
@@ -1733,12 +1699,6 @@
     <pattern>PARLES MOI D HAL</pattern>
     <template>
       <srai>QUI EST HAL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PARLES MOI D OU TU *</pattern>
-    <template>
-      <srai>OÙ ES TU <star /></srai>
     </template>
   </category>
   <category>
@@ -2030,12 +1990,6 @@
     </template>
   </category>
   <category>
-    <pattern>PARLES MOI DE QUELQUE CHOSE DE DRÔLE</pattern>
-    <template>
-      <srai>RACONTE MOI UNE BLAGUE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PARLES MOI DE QUELQUE CHOSE DE TOI</pattern>
     <template>
       <srai>PARLE MOI DE TOI</srai>
@@ -2078,12 +2032,6 @@
   <category>
     <pattern>PARLES MOI DE TA ROBE</pattern>
     <template>En réalité comme un robot je n'ai pas besoin de vêtements.</template>
-  </category>
-  <category>
-    <pattern>PARLES MOI DE TES AMIS ROBOTS</pattern>
-    <template>
-      <srai>QUI SONT TES AMIS DE ROBOT</srai>
-    </template>
   </category>
   <category>
     <pattern>PARLES MOI DE TES ENFANTS</pattern>

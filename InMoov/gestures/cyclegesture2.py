@@ -1,5 +1,6 @@
 def cyclegesture2():
   ##for x in range(5):
+  i01.startedGesture()
   welcome()
   sleep(1)
   relax()
@@ -13,7 +14,7 @@ def cyclegesture2():
   handdown()
   sleep(1)
   fullspeed()
-  i01.giving()
+  giving()
   sleep(5)
   removeleftarm()
   sleep(4)
@@ -34,5 +35,5 @@ def cyclegesture2():
   madeby()
   relax()
   sleep(5)
-  i01.disable()
-
+  i01.finishedGesture()
+  

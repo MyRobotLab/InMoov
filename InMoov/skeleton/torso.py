@@ -2,7 +2,6 @@
 #            *** TORSO ***
 # ##############################################################################
 
-
  
   
 # ##############################################################################
@@ -35,25 +34,13 @@ except:
   isTorsoActivated=0
   TorsoConnectedToArduino=""
   pass
-try:
-  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'topStom', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'midStom', 1)
 
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass     
-   
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if isTorsoActivated  or ScriptType=="Virtual":
-  if LeftPortIsConnected or RighPortIsConnected  or ScriptType=="Virtual":
+if isTorsoActivated or ScriptType=="Virtual":
+  if LeftPortIsConnected or RightPortIsConnected  or ScriptType=="Virtual":
     isTorsoActivated=1
     talkEvent(lang_startingTorso)
     torso = Runtime.create("i01.torso","InMoovTorso")
@@ -70,17 +57,14 @@ if isTorsoActivated  or ScriptType=="Virtual":
       
     torso.topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
     torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
-   
     
     i01.startTorso(TorsoConnectedToArduinoPort,TorsoConnectedToArduinoPortBoardType)
-    torso.enableAutoEnable(1)
-    torso.topStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
-    torso.midStom.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
-  
+
     torso.rest()
+    
+    torso.topStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
+    torso.midStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
        
   else:
     #we force parameter if arduino is off
     istorsoActivated=0
-    
-#todo set inverted

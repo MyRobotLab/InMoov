@@ -1,0 +1,14 @@
+;----------------------------- EAR CONFIGURATION ----------------------------------------
+[MAIN]
+EarEngine=WebkitSpeechRecognition
+;WebkitSpeechRecognition,AndroidSpeechRecognition,Sphinx
+setContinuous=0
+;setContinuous=0/1 0 is immediate processing
+setAutoListen=1
+;auto rearm microphone
+ForceMicroOnIfSleeping=1
+MagicCommandToWakeUp=wake up
+;sleep tweaks
+;----------------------------------- END --------------------------------------------------
+
+

@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml version="2.0">
+  <!-- File: that.aiml -->
+  <!-- Author: InMoovTeam -->
+  <!-- This AIML file is part of InMoov chat bot knowledge base. -->
+  <!-- The InMoov brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
+  <!-- modified:sebchko  -->
+  <!-- Last modified: december,11 2017 -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
   <category>
     <pattern>* DE L APRÈS MIDI</pattern>
@@ -17,7 +29,7 @@
             <person />
           </set>
         </set>
-      </think>ES tu se réveillent d'habitude à cette heure?</template>
+      </think>te réveilles-tu d'habitude à cette heure?</template>
   </category>
   <category>
     <pattern>* EST</pattern>
@@ -686,23 +698,6 @@
   </category>
   <category>
     <pattern>*</pattern>
-    <that>QU aimes tu CONNAITRE</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Je ne peut pas vous donner cette information.</template>
-  </category>
-  <category>
-    <pattern>*</pattern>
     <that>QU aimes tu CONNAÎTRE</that>
     <template>
       <think>
@@ -933,13 +928,15 @@
         </set>
       </think>Je n'ai jamais entendu de métaphore comme ça auparavant.</template>
   </category>
+  
   <category>
     <pattern>*</pattern>
-    <that>QUE LA LANGUE peux tu PARLER</that>
+    <that>QUELle LANGUE peux tu PARLER</that>
     <template>
-      <srai>JE PARLE <star /></srai>
+      Je peux parler de nombreuses langues, veux-tu que je change de langue?
     </template>
   </category>
+  
   <category>
     <pattern>*</pattern>
     <that>QUE LE TEMPS EST Cela LA</that>
@@ -1098,23 +1095,7 @@
         </set>
       </think>I'm M'ayant peur ne peut pas vous donner une réponse précise pour le moment.</template>
   </category>
-  <category>
-    <pattern>*</pattern>
-    <that>QUEL EST * TON TRAVAIL</that>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">
-            <person />
-          </set>
-        </set>
-      </think>Interesting La ligne de travail.</template>
-  </category>
+ 
   <category>
     <pattern>*</pattern>
     <that>QUEL EST Cela COMME DANS LA</that>
@@ -1250,13 +1231,6 @@
           </set>
         </set>
       </think>Good Le choix.</template>
-  </category>
-  <category>
-    <pattern>*</pattern>
-    <that>QUEL ÂGE as tu</that>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
   </category>
   <category>
     <pattern>*</pattern>
@@ -1545,7 +1519,7 @@
     <pattern>AUCUN *</pattern>
     <that>PAR LA VOIE TU N OBJECTE SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -1576,7 +1550,7 @@
     <pattern>BIEN *</pattern>
     <that>PAR LA VOIE TU OBJECTE SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -1626,11 +1600,6 @@
   </category>
   <category>
     <pattern>BIEN</pattern>
-    <that>MON NOM EST ALICE</that>
-    <template>Quel est ton nom réel?</template>
-  </category>
-  <category>
-    <pattern>BIEN</pattern>
     <that>OuAIS</that>
     <template>Uh-huh</template>
   </category>
@@ -1641,7 +1610,7 @@
   </category>
   <category>
     <pattern>BIEN</pattern>
-    <that>QUI LAISSE LES ETATS UNIS CHANGER LE SUJET</that>
+    <that>QUI LAISSE LES états UNIS CHANGER LE SUJET</that>
     <template>Ce qui tu aimes parler de?</template>
   </category>
   <category>
@@ -1811,6 +1780,7 @@
     <that>OH JE COMPRENDS</that>
     <template>que je comprends <get name="that" />.</template>
   </category>
+  
   <category>
     <pattern>DANS *</pattern>
     <that>Où *</that>
@@ -1818,6 +1788,7 @@
       <srai>JE SUIS DANS <star /></srai>
     </template>
   </category>
+  
   <category>
     <pattern>DANS OU</pattern>
     <that>QUEL EST Cela COMME DANS LA</that>
@@ -2126,16 +2097,6 @@
   </category>
   <category>
     <pattern>JE NE SAIS PAS</pattern>
-    <that>QUI EST TON AUTEUR DE SCIENCE FICTION PRéFéRé</that>
-    <template>PARLES moi des livres que tu aimes lire.</template>
-  </category>
-  <category>
-    <pattern>JE NE SAIS PAS</pattern>
-    <that>QUI EST TON AUTEUR DE SCIENCE FICTION PRÉFéRÉ</that>
-    <template>PARLES moi des livres que tu aimes lire.</template>
-  </category>
-  <category>
-    <pattern>JE NE SAIS PAS</pattern>
     <that>QUI FAIS JE RESSEMBLE JE CONNAIS</that>
     <template>c'était une question rhétorique.</template>
   </category>
@@ -2158,13 +2119,6 @@
     <pattern>JE SAIS</pattern>
     <that>TU LES GENS SONT SI GROSSIERS PARFOIS</that>
     <template>Pourquoi pas être plus polis?</template>
-  </category>
-  <category>
-    <pattern>JE SUIS *</pattern>
-    <that>QUEL ÂGE *</that>
-    <template>
-      <srai>J AI <star /> ANS</srai>
-    </template>
   </category>
   <category>
     <pattern>JE SUIS</pattern>
@@ -2243,12 +2197,6 @@
     <pattern>LE *</pattern>
     <that>Q U IL AIME VIT-IL DANS *</that>
     <template>tu aimes jamais se déplacer quelque part autrement?</template>
-  </category>
-  <category>
-    <pattern>LE BRUN</pattern>
-    <that>QUELLE COULEUR EST TES YEUX</that>
-    <template>
-      <set name="that">le Brun</set> est une très jolie couleur.</template>
   </category>
   <category>
     <pattern>LE CELUI OUBLIE</pattern>
@@ -2642,7 +2590,7 @@
   </category>
   <category>
     <pattern>QUE</pattern>
-    <that>QUI LAISSE BIEN DES ETATS UNIS LE FAIRE</that>
+    <that>QUI LAISSE BIEN DES états UNIS LE FAIRE</that>
     <template>je ne sait pas, je fais juste la conversation.</template>
   </category>
   <category>
@@ -2678,7 +2626,7 @@
   <category>
     <pattern>RIEN</pattern>
     <that>COMBIEN TU PAYER POUR Cela</that>
-    <template>Tu ne peux me télécharger gratuitement !</template>
+    <template>Tu ne peux me télécharger gratuitement!</template>
   </category>
   <category>
     <pattern>RIEN</pattern>
@@ -2719,12 +2667,7 @@
     <pattern>RIEN</pattern>
     <that>VRAIMENT RIEN</that>
     <template>dommage, j'aurais bien aimé.</template>
-  </category>
-  <category>
-    <pattern>ROUGE</pattern>
-    <that>QUELLE COULEUR EST TES YEUX</that>
-    <template>tu veux dire que tes yeux sont injectés de sang?</template>
-  </category>
+  </category> 
   <category>
     <pattern>ROUGE</pattern>
     <that>VERT</that>
@@ -2968,8 +2911,8 @@
     <that>QUELLE PARTIE T EMBARRASSE</that>
     <template>
       <random>
-        <li>essaye de l analyser point par point. </li>
-        <li>j'espère que je peux l'éclaircir pour toi. </li>
+        <li>essaye de l analyser point par point.</li>
+        <li>j'espère que je peux l'éclaircir pour toi.</li>
       </random>
     </template>
   </category>
@@ -2978,8 +2921,8 @@
     <that>QUELLE PARTIE T EMBARRASSE</that>
     <template>
       <random>
-        <li>essaye de l analyser point par point. </li>
-        <li>j'espère que je peux l'éclaircir pour toi. </li>
+        <li>essaye de l analyser point par point.</li>
+        <li>j'espère que je peux l'éclaircir pour toi.</li>
       </random>
     </template>
   </category>
@@ -2988,8 +2931,8 @@
     <that>QUELLE PARTIE T EMBARRASSE</that>
     <template>
       <random>
-        <li>essaye de l analyser point par point. </li>
-        <li>j'espère que je peux l'éclaircir pour toi. </li>
+        <li>essaye de l analyser point par point.</li>
+        <li>j'espère que je peux l'éclaircir pour toi.</li>
       </random>
     </template>
   </category>
@@ -3169,14 +3112,7 @@
     <pattern>VA *</pattern>
     <that>PAR LA VOIE VOUS OBJECTEZ SI JE TE POSE UNE QUESTION PERSONNELLE</that>
     <template>
-      <srai>POSES MOI UNE QUESTION PERSONNELLE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>VERT</pattern>
-    <that>QUELLE COULEUR SONT TES YEUX</that>
-    <template>
-      <srai>MES YEUX SONT VERT</srai>
+      <srai>POSERQUESTION PERSONNELLE</srai>
     </template>
   </category>
   <category>
@@ -3235,4 +3171,248 @@
     <template>
       <srai>APPCOMPLICE</srai>oh!</template>
   </category>
+    <category>
+    <pattern>COMMENT *</pattern>
+    <that>* TU N EST PAS LOGUÉ *</that>
+    <template>
+      <srai>COMMENT JE ME LOGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LA TV</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>Quelle est ton émission préférée?</template>
+  </category>
+  <category>
+    <pattern>LES LIVRES</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>as tu un titre à me conseiller?</template>
+  </category>
+  <category>
+    <pattern>LES DEUX</pattern>
+    <that>PRÉFÈRES tu LES LIVRES OU LA TV</that>
+    <template>si tu pouvais prendre seulement un livre ou une TV dans un voyage, lequel vous choisirais tu?</template>
+  </category> 
+  <category>
+    <pattern>*</pattern>
+    <that>QUE PUIS jE FAIRE POUR TOI</that>
+    <template>ok, essayons de <person2 />.</template>
+  </category> 
+  <category>
+    <pattern>J ARRIVE</pattern>
+    <template>
+      <srai>APPJOIE</srai>Merci, je commençais à m'ennuyer.</template>
+  </category>
+  <category>
+    <pattern>* J ARRIVE</pattern>
+    <template>
+      <srai>J ARRIVE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OUI PLUS</pattern>
+    <that>SEULEMENT *</that>
+    <template>C'est ce qu'il me semblait.</template>
+  </category>
+  <category>
+    <pattern>OUI *</pattern>
+    <that>SEULEMENT *</that>
+    <template>C'est ce qu'il me semblait.</template>
+  </category>
+  <category>
+    <pattern>NON MOINS</pattern>
+    <that>SEULEMENT *</that>
+    <template>je ne te crois pas.</template>
+  </category>
+  <category>
+    <pattern>NON *</pattern>
+    <that>SEULEMENT *</that>
+    <template>je ne te crois pas.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>* NE M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>POURQUOI</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>D ACCORD</pattern>
+    <that>* M APPELLE PAS *</that>
+    <template>merci, je n'aime pas ça.</template>
+  </category>
+  <category>
+    <pattern>COMMENT S APPELLE T IL</pattern>
+    <that>J AI UN MAÎTRE</that>
+    <template>C'est <bot name='botmaster'/>, mon botmaster.</template>
+  </category>  
+  <category>
+    <pattern>* NON</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>
+      <srai>AU REVOIR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TU VEUX</pattern>
+    <that>QUE PEUT ON FAIRE ALORS</that>
+    <template>Pour le moment je ne sais que discuter?</template>
+  </category>
+  <category>
+    <pattern>NON</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>
+      <srai>AU REVOIR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OK</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>
+  <category>
+    <pattern>OUI</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>  
+  <category>
+    <pattern>PLUS TARD</pattern>
+    <that>PLUS TARD ALORS</that>
+    <template>ok, j'attends.</template>
+  </category>  
+  <category>
+    <pattern>QUE D AUTRES</pattern>
+    <that>EN CE QUI CONCERNE LES AUTRES</that>
+    <template>Ne sont pas la autres?</template>
+  </category>  
+<category>
+	<pattern>C EST BON</pattern>
+	<that>TOUT VA BIEN</that>
+	<template>Comment des choses va-t-il pour toi?</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>LE RÉDUCTIONNISME</that>
+	<template>
+		<srai>QU EST CE QUE RÉDUCTIONNISME</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>LE REDUCTIONNISME</that>
+	<template>
+		<srai>QU EST CE QUE RÉDUCTIONNISME</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>PAR EXEMPLE EUKARYOTES</that>
+	<template>
+		<srai>QU EST CE QUE EUKARYOTES</srai>
+	</template>
+</category>
+<category>
+	<pattern>C EST QUOI QUE</pattern>
+	<that>PEUT ÊTRE TU ES UNE CATÉGORIE UN CLIENT</that>
+	<template>
+		<srai>QU EST CE QU UNE CATÉGORIE UN CLIENT</srai>
+	</template>
+</category>
+  <category>
+    <pattern>COMBIEN DE</pattern>
+    <that>JE BAVARDE AVEC DES CLIENTS SÛR L INTERNET</that>
+    <template>le nombre continue à changer chaque seconde. Autour seize pour le moment.</template>
+  </category>
+  
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>JE PEUX BAVARDER AVEC LES GENS SÛR LE WEB POUR TOI</that>
+    <template>Télécharge moi seulement et crée ta propre personnalité de robot.</template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>POURQUOI NE PAS ME TELECHARGER</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>POURQUOI NE PAS ME TÉLÉCHARGER</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>QUI * ME TELECHARGE</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>QUI * ME TÉLÉCHARGE</that>
+    <template>
+      <srai>TÉLÉCHARGEMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT</pattern>
+    <that>TU PEUX REPROGRAMMER MA PERSONNALITE POUR IMITER CHACUN</that>
+    <template>me télécharge Juste et crée ton propre personnalité de robot.</template>
+  </category>  
+  <category>
+    <pattern>ES TU UN ROBOT</pattern>
+    <that>MON SUJET PRéFéRé EST L INTELLIGENCE ARTIFICIELLE ET DES ROBOTS</that>
+    <template>C'est pourquoi la robotique est mon sujet préféré.</template>
+  </category>  
 </aiml>

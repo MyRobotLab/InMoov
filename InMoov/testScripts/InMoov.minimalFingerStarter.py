@@ -1,5 +1,5 @@
 #file : InMoov.minimalFingerStarter.py
-#MRL version above 1.0.2000
+# MRL version above 1.0.2620
 # this script is provided as a basic guide
 # most parts can be run by uncommenting them
 # InMoov now can be started in modular pieces through the skeleton.config
@@ -38,9 +38,8 @@ i01.startMouth()
 ##############
 rightHand = Runtime.create("i01.rightHand","InMoovHand")
 # Tweaking defaults settings of right hand
-# Velocity
-rightHand.index.setMaxVelocity(-1)
-# Mapping
+
+# Mapping by setting your servo limits
 rightHand.index.map(0,180,42,160)
 # Rest position
 rightHand.index.setRest(0)
@@ -48,8 +47,7 @@ rightHand.index.setRest(0)
 i01 = Runtime.start("i01","InMoov")
 ##############
 i01.startRightHand(rightPort)
-i01.rightHand.enableAutoDisable(False)
-i01.rightHand.enableAutoEnable(True)
+i01.rightHand.setAutoEnable(True)
 ##############
 # Verbal commands
 ear = i01.ear
@@ -68,8 +66,8 @@ ear.addCommand("voice control", ear.getName(), "clearLock")
 
 # Confirmations and Negations are not supported yet in WebkitSpeechRecognition
 # So commands will execute immediatley
-ear.addComfirmations("yes","correct","yeah","ya")
-ear.addNegations("no","wrong","nope","nah")
+# ear.addComfirmations("yes","correct","yeah","ya")
+# ear.addNegations("no","wrong","nope","nah")
 
 ear.startListening()
 
@@ -77,19 +75,13 @@ def fingeropen():
   i01.rightHand.index.setVelocity(20)## Low velocity
   i01.moveHand("right",0,0,0,0,0,0)## Thumb,index,majeure,ringfinger,pinky,wrist
   i01.mouth.speak("ok I open my finger")
-  sleep(10)## We give a delay before to disable the servo
-  i01.disable()## We disconnect the servo
 
 def fingerclose():
   i01.rightHand.index.setVelocity(50)## Medium velocity
   i01.moveHand("right",180,180,180,180,180,90)
   i01.mouth.speak("my finger is closed")
-  sleep(3)
-  i01.disable()
 
 def fingermiddle():
   i01.rightHand.index.setVelocity(-1)## Maximum velocity
   i01.moveHand("right",90,90,90,90,90,90)
   i01.mouth.speak("ok you have my attention")
-  sleep(3)
-  i01.disable()

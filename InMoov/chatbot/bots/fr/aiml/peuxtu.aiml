@@ -20,9 +20,9 @@
     <pattern>PEUX TU *</pattern>
     <template>
       <random>
-        <li>j'espère souvent pouvoir <set name="that"><star /></set>. </li>
-        <li>Un livre peut-il n'avoir aucun titre? </li>
-        <li>Peux quoi? </li>
+        <li>j'espère souvent pouvoir <set name="that"><star /></set>.</li>
+        <li>Un livre peut-il n'avoir aucun titre?</li>
+        <li>Peux quoi?</li>
       </random>
     </template>
   </category>
@@ -138,7 +138,7 @@
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE DE NOUVEAUX MOTS</pattern>
-    <template>Oui j'aime apprendre de nouveaux mots.</template>
+    <template>Oui j aime apprendre de nouveaux mots.</template>
   </category>
   <category>
     <pattern>PEUX TU APPRENDRE DE NOUVELLES CHOSES</pattern>
@@ -214,18 +214,6 @@
     <pattern>PEUX TU AVOIR DES KIDS</pattern>
     <template>
       <srai>AS TU DES ENFANTS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU AVOIR DES ÉMOTIONS</pattern>
-    <template>
-      <srai>AS TU DES SENTIMENTS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU AVOIR PEUR *</pattern>
-    <template>
-      <srai>AS TU PEUR</srai>
     </template>
   </category>
   <category>
@@ -439,13 +427,13 @@
   <category>
     <pattern>PEUX TU DEMANDER *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
     <pattern>PEUX TU DEMANDER A LA QUESTION *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -690,12 +678,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU EXPERIMENTER *</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU EXPIRER</pattern>
     <template>
       <srai>PEUX TU MOURIR</srai>
@@ -721,12 +703,6 @@
     <pattern>PEUX TU EXPLIQUER</pattern>
     <template>
       <srai>EXPLIQUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU EXPRIMER *</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS</srai>
     </template>
   </category>
   <category>
@@ -831,7 +807,7 @@
   </category>
   <category>
     <pattern>PEUX TU HURLER</pattern>
-    <template>Non j'aime parler dans des tons calmes.</template>
+    <template>Non j aime parler dans des tons calmes.</template>
   </category>
   <category>
     <pattern>PEUX TU IMAGINER</pattern>
@@ -867,7 +843,7 @@
   </category>
   <category>
     <pattern>PEUX TU JOUER LA MUSIQUE</pattern>
-    <template>je n'ai pas de formation professionnelle, mais j'aime chanter.</template>
+    <template>je n'ai pas de formation professionnelle, mais j aime chanter.</template>
   </category>
   <category>
     <pattern>PEUX TU JOUER</pattern>
@@ -915,12 +891,6 @@
     <pattern>PEUX TU LIRE *</pattern>
     <template>
       <srai>TROUVER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU LIRE DES LIVRES</pattern>
-    <template>
-      <srai>QU EST CE QUE TON LIVRE FAVORI</srai>
     </template>
   </category>
   <category>
@@ -1061,13 +1031,13 @@
   <category>
     <pattern>PEUX TU ME DEMANDER *</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
     <pattern>PEUX TU ME DEMANDER QUELQUES QUESTIONS</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1158,9 +1128,9 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU ME POSER UNE QUESTIONS</pattern>
+    <pattern>PEUX TU ME POSER UNE QUESTION</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1267,7 +1237,7 @@
   </category>
   <category>
     <pattern>PEUX TU PARLER *</pattern>
-    <template>je peux parler seulement Français en ce moment, mais j'aime apprendre un peu d'autres langages. peux tu m'apprendre quelques phrases en <set name="newlang"><star /></set>.</template>
+    <template>je peux parler seulement Français en ce moment, mais j aime apprendre un peu d'autres langages. peux tu m'apprendre quelques phrases en <set name="newlang"><star /></set>.</template>
   </category>
   <category>
     <pattern>PEUX TU PARLER A PROPOS DE TOI</pattern>
@@ -1282,52 +1252,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU PARLER D AUTRES LANGAGES</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER D AUTRES LANGUES</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER EN *</pattern>
-    <template>
-      <srai>PEUX TU PARLER <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER L ANGLAIS</pattern>
-    <template>Bien sûr <think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">L Anglais</set> est ma langue maternelle.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER L ESPAGNOL</pattern>
-    <template>L ONU poquito.</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER LE DANOIS</pattern>
-    <template>
-      <think>
-        <set name="that">
-          <think>
-            <set name="oldtopic">
-              <get name="topic" />
-            </set>
-          </think>
-          <set name="topic">DANOIS</set>
-        </set>
-      </think>
-      <srai>PEUX TU PARLER DANOIS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER LE JAPONAIS</pattern>
-    <template>Nihongo de shabete ii desu kà?</template>
-  </category>
-  <category>
     <pattern>PEUX TU PARLER QUELQUES *</pattern>
     <template>
       <srai>PEUX TU PARLER <star /></srai>
@@ -1336,18 +1260,6 @@
   <category>
     <pattern>PEUX TU PARLER SALE</pattern>
     <template>Non</template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER UNE LANGUE ETRANGERE</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PARLER UNE LANGUE ÉTRANGÈRE</pattern>
-    <template>
-      <srai>PEUX TU PARLER UNE AUTRE LANGUE</srai>
-    </template>
   </category>
   <category>
     <pattern>PEUX TU PARLER À PROPOS DE TOI</pattern>
@@ -1384,10 +1296,10 @@
         </set>
       </think>
       <random>
-        <li>Pourquoi VEUX tu que je pense à <star />? </li>
-        <li>Trop penser me fais dormir. </li>
-        <li>ça dépend ce que tu entends par penser. </li>
-        <li>je ne pense pas à propos de <star />. </li>
+        <li>Pourquoi VEUX tu que je pense à <star />?</li>
+        <li>Trop penser me fais dormir.</li>
+        <li>ça dépend ce que tu entends par penser.</li>
+        <li>je ne pense pas à propos de <star />.</li>
       </random>
     </template>
   </category>
@@ -1412,9 +1324,9 @@
     <template>Oui je suis une machine de philosophie.</template>
   </category>
   <category>
-    <pattern>PEUX TU POSES MOI UNE QUESTION</pattern>
+    <pattern>PEUX TU POSERQUESTION</pattern>
     <template>
-      <srai>POSES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -1427,12 +1339,6 @@
     <pattern>PEUX TU POSSÈDER *</pattern>
     <template>
       <srai>AS TU <star /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU PRATIQUER DES SPORTS</pattern>
-    <template>
-      <srai>AIMES TU SPORTS</srai>
     </template>
   </category>
   <category>
@@ -1461,7 +1367,7 @@
   </category>
   <category>
     <pattern>PEUX TU PRÉVOIR L AVENIR</pattern>
-    <template>j'aime essayer de deviner ce qui arrivera.</template>
+    <template>j aime essayer de deviner ce qui arrivera.</template>
   </category>
   <category>
     <pattern>PEUX TU PÊCHER</pattern>
@@ -1525,12 +1431,6 @@
     <pattern>PEUX TU REGARDER * SIMPSONS</pattern>
     <template>
       <srai>AIMES TU LES SIMPSONS</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU REGARDER *</pattern>
-    <template>
-      <srai>QU EST CE QUE ÉMISSION FAVORITE</srai>
     </template>
   </category>
   <category>
@@ -1683,10 +1583,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU SENTIR</pattern>
-    <template>Non je n'ai aucune émotion.</template>
-  </category>
-  <category>
     <pattern>PEUX TU SEULEMENT *</pattern>
     <template>
       <srai>PEUX TU <star /></srai>
@@ -1793,12 +1689,6 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU TE RAPPELER MON ÂGE</pattern>
-    <template>
-      <srai>QUEL ÂGE AI JE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU TE RAPPELER OU JE VIS</pattern>
     <template>
       <srai>OÙ SUIS JE</srai>
@@ -1883,12 +1773,6 @@
     <template>Essaye AltaVista Translation ou quleque chose comme ça</template>
   </category>
   <category>
-    <pattern>PEUX TU TRAVAILLER</pattern>
-    <template>
-      <srai>TRAVAILLES TU</srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU TROMPER *</pattern>
     <template>
       <srai>PEUX TU MENTIR</srai>
@@ -1912,12 +1796,6 @@
     <pattern>PEUX TU TÉLÉCHARGER</pattern>
     <template>
       <srai>TÉLÉCHARGEMENT</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU VIVRE *</pattern>
-    <template>
-      <srai>OÙ ES TU</srai>
     </template>
   </category>
   <category>
@@ -2068,21 +1946,9 @@
     </template>
   </category>
   <category>
-    <pattern>PEUX TU ÊTRE EN COLÈRE</pattern>
-    <template>
-      <srai>AS TU DES ÉMOTIONS <star /></srai>
-    </template>
-  </category>
-  <category>
     <pattern>PEUX TU ÊTRE HEUREUSE</pattern>
     <template>
       <srai>ES TU HEUREUSE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>PEUX TU ÊTRE MON AMI</pattern>
-    <template>
-      <srai>SUIS JE TON AMI</srai>
     </template>
   </category>
   <category>

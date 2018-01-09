@@ -1,4 +1,5 @@
 def armsUp():
+  i01.startedGesture()
   i01.setHeadSpeed(1.0,1.0)
   i01.moveHead(180,86)
   sleep(1)
@@ -21,4 +22,6 @@ def armsUp():
   i01.moveHand("left",2,2,2,2,2,33)
   i01.moveHand("right",2,2,2,2,2,180)
   i01.moveTorso(90,90,90)
+  sleep(1)
+  i01.finishedGesture()
 

@@ -1,8 +1,8 @@
 def whataboutstarwars():
-  PlayNeopixelAnimation("Ironman", 255, 255, 255, 1)
+  i01.setNeopixelAnimation("Ironman", 255, 255, 255, 1)
   sleep(3)
-  StopNeopixelAnimation()
-  i01.disableRobotCanMoveHeadRandom(30)
+  i01.stopNeopixelAnimation()
+  i01.startedGesture()
   x = (random.randint(1, 3))
   if x == 1:
       fullspeed()
@@ -16,7 +16,7 @@ def whataboutstarwars():
       sleep(1)
       i01.moveHead(90,90,87,80,100)
       sleep(0.5)
-      i01.moveHead(90,90,87,80,70)
+      i01.moveHead(90,90,87,80,0)
       sleep(1)
       relax()
   if x == 2:
@@ -54,7 +54,5 @@ def whataboutstarwars():
       #i01.mouth.speak("mmmmmmh, from the dark side you are")
       AudioPlayer.playFile(RuningFolder+'/system/sounds/mmmmmmh, from the dark side you are.mp3')
       sleep(4.5)
-      relax()    
-      
-
-      
+  i01.finishedGesture()
+  relax()

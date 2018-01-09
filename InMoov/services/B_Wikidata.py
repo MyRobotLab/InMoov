@@ -9,7 +9,7 @@
 #TODO : english chatbot integration
 
 wdf=Runtime.createAndStart("wdf", "WikiDataFetcher")
-if MyLanguage=="fr":
+if Language=="fr":
    #WikiFile="BDD/WIKI_prop.txt"
    wdf.setLanguage("fr")
    wdf.setWebSite("frwiki")
@@ -22,13 +22,16 @@ else:
 #                 functions called by the chatbot
 # ##############################################################################
 if isChatbotActivated:
-  chatBot.setPredicate("default","particule","")
-  chatBot.setPredicate("default","courant","")
-def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la description du sujet (query)
+  chatBot.setPredicate(chatBot.currentUserName,"articles","")
+  chatBot.setPredicate(chatBot.currentUserName,"courant","")
+def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du sujet (query)
   #Light(1,0,0)
   if query!="":
-    if particule!="":
-      query=particule+" "+query
+    if articles=="unknown" or articles=="":
+      articles=""
+      chatBot.setPredicate(chatBot.currentUserName,"articles","")
+    else:query=articles+" "+query
+
     query = unicode(query,'utf-8')# on force le format de police UTF-8 pour prendre en charge les accents
     if query[1]== "\'" : # Si le sujet contient un apostrophe , on efface tout ce qui est avant ! ( "l'ete" -> "ete")
       query2 = query[2:len(query)]
@@ -82,10 +85,40 @@ def askWiki(particule,query,question,ReturnOk,ReturnNok): # retourne la descript
     if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimédia"): 
       wikiAnswer = wdf.getDescription(wordSingular)
     if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimédia"): # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
-      chatBot.getResponse(ReturnNok)
+      chatBot.getResponse(ReturnNok+query)
     else:
       chatBot.getResponse(ReturnOk + answer)
-    chatBot.setPredicate("default","particule","")
   else:
-    chatBot.getResponse(ReturnNok)
-
+    chatBot.getResponse(ReturnNok+query)
+    
+def getProperty(queryPart, query, whatPart, what, ReturnOk, ReturnNok): # retourne la valeur contenue dans la propriete demandee (what)
+  #Light(1,0,0)
+  query = unicode(query,'utf-8')
+  what = unicode(what,'utf-8')
+  
+  if query[1]== "\'" :
+    query2 = query[2:len(query)]
+    query = query2
+  if what[1]== "\'" :
+    what2 = what[2:len(what)]
+    what = what2
+  
+  ID = "error"
+  # le fichier WIKIprop.txt contient les conversions propriete -> ID . wikidata n'utilise pas des mots mais des codes (monnaie -> P38)  f = codecs.open(unicode('os.getcwd().replace("develop", "").replace("\", "/") + "/proprietes_ID.txt','r',"utf-8") #
+  f = codecs.open(RuningFolder+"system/bdd/"+WikiFile,'r','utf-8') #os.getcwd().replace("develop", "").replace("\\", "/") set you propertiesID.txt path
+  
+  for line in f:
+    line_textes=line.split(":")
+    if line_textes[0]== what:ID= line_textes[1]
+  f.close()
+  print "query = " + query + " - what = " + what + " - ID = " + ID
+  wikiAnswer=""
+  try:wikiAnswer=wdf.getData(query,ID)
+  except:wikiAnswer = "Not Found !"  
+  
+  answer = ( whatPart + what + " " + queryPart + query + " est " + wikiAnswer)
+  print ID,answer,what,query,wikiAnswer
+  if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") : # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
+    chatBot.getResponse(ReturnNok) # on balance au service apprentissage
+  else:
+    chatBot.getResponse(ReturnOk + answer)

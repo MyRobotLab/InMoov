@@ -18,9 +18,17 @@ MyLeftPort=ThisServicePartConfig.get('MAIN', 'MyLeftPort')
 BoardTypeMyRightPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyRightPort')
 BoardTypeMyLeftPort=ThisServicePartConfig.get('MAIN', 'BoardTypeMyLeftPort')
 ForceArduinoIsConnected=ThisServicePartConfig.getboolean('MAIN', 'ForceArduinoIsConnected')
-
+ArefLeftArduino=ThisServicePartConfig.get('MAIN', 'ArefLeftArduino')
+ArefRightArduino=ThisServicePartConfig.get('MAIN', 'ArefRightArduino')
   
-  
+#for noworky
+log.info("ARDUINO.config")
+log.info("MyRightPort : "+str(MyRightPort))
+log.info("MyLeftPort : "+str(MyLeftPort))
+log.info("BoardTypeMyRightPort : "+str(BoardTypeMyRightPort))
+log.info("BoardTypeMyLeftPort : "+str(BoardTypeMyLeftPort))
+log.info("ArefLeftArduino : "+str(ArefLeftArduino))
+log.info("ArefRightArduino : "+str(ArefRightArduino))
 #function to check arduino & mrlcomm
 def CheckArduinos(Card,Port,slave=0):
   

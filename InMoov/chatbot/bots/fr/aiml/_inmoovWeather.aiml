@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovWeather.aiml -->
+  <!-- Authors: InMoov Team -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: moz4r -->
+  <!-- Last modified: 14/12, 2017 -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+<!-- météo -->
+  
+  <category>
+    <pattern># MÉTÉO</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern># est ce # <set>weather</set> #</pattern>
+    <template>
+      <srai>MÉTÉO</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern># est ce # <set>weather</set> $DEMAIN</pattern>
+    <template>
+      <srai>QUEL TEMPS # DEMAIN</srai>
+    </template>
+  </category>
+  
+  <category>
+  <pattern>^ va t il ^ <set>weather</set> ^</pattern>
+    <template>
+      <srai>MÉTÉO</srai>
+    </template>
+  </category>
+  
+  
+  <category>
+    <pattern>QUEL TEMPS *</pattern>
+    <template>
+      <srai># MÉTÉO</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>QUEL TEMPS # DEMAIN</pattern>
+    <template>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,8)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>QUEL TEMPS ^ DANS * JOURS</pattern>
+    <template>
+        <think><set name="jours"><map name="name2number"><star index="2" /></map></set></think>
+        <condition>
+            <li name="jours" value="unknown"><think><set name="jours"><star index="2" /></set></think></li>
+        </condition>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,
+<javascript>
+period = eval( <get name="jours" /> * 8 );
+period;
+</javascript>)
+</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+    <category>
+    <pattern>QUEL TEMPS # À * DANS * JOURS</pattern>
+    <template>
+    <think><set name="jours"><map name="name2number"><star index="3" /></map></set></think>
+    <condition>
+        <li name="jours" value="unknown"><think><set name="jours"><star index="3" /></set></think></li>
+    </condition>
+        
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />",<javascript>
+period = eval( <get name="jours" /> * 8 );
+period;
+</javascript>)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+    <category>
+    <pattern>QUEL TEMPS ^ DEMAIN À *</pattern>
+    <template>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />",8)</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>QUEL TEMPS FAIT IL À *</pattern>
+    <template>
+      <srai># MÉTÉO à <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL TEMPS FAIT IL SUR *</pattern>
+    <template>
+      <srai># MÉTÉO à <star /></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern># MÉTÉO À *</pattern>
+    <template>
+      <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2" />")</param>
+        </mrl>
+      </oob>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM openweathermapError</pattern>
+    <template>
+      Erreur de clé a.p.i. ou cette ville est inconnue
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+    <template>
+      <think>
+        <set name="meteo">
+          <star index="3" />
+        </set>
+      </think>
+      <random>
+        <li>En cette belle journée à <star index="2" />,</li>
+        <li>Concernant la météo de <star index="2" />,</li>
+        <li>Par rapport au temps de <star index="2" />,</li>
+        <li>Je ne me trompe presque jamais concernant la météo,</li>
+        <li>Alors, à <star index="2" />,</li>
+      </random>
+      <random>
+        <li>Je prédis,</li>
+        <li>Je remarque,</li>
+        <li>Je vois,</li>
+        <li>Si tu mets le nez dehors, tu trouvera,</li>
+      </random>
+      <condition>
+        <li name="meteo" value="1000">Rien, car je ne peux pas consulter la météo, vérifie ma clé A. P. I. avant toute chose, ami humain.</li>
+        <li name="meteo" value="200">De l'Orage avec pluie légère.</li>
+        <li name="meteo" value="201">De l'Orage avec pluie.</li>
+        <li name="meteo" value="202">De l'Orage avec de fortes pluies.</li>
+        <li name="meteo" value="210">De l'Orage léger.</li>
+        <li name="meteo" value="211">De l'Orage.</li>
+        <li name="meteo" value="212">Un très gros Orage.</li>
+        <li name="meteo" value="221">Un orage énorme.</li>
+        <li name="meteo" value="230">De l'Orage avec léger crachin.</li>
+        <li name="meteo" value="231">De l'Orage avec du crachin.</li>
+        <li name="meteo" value="232">De l'Orage avec beaucoup de crachin.</li>
+        <li name="meteo" value="300">du crachin léger.</li>
+        <li name="meteo" value="301">du crachin.</li>
+        <li name="meteo" value="302">beaucoup de crachin.</li>
+        <li name="meteo" value="310">de la Pluie légère.</li>
+        <li name="meteo" value="311">de la Pluie légère.</li>
+        <li name="meteo" value="312">de la Pluie intense.</li>
+        <li name="meteo" value="313">de la Pluie intense et crachin.</li>
+        <li name="meteo" value="314">de la Pluie intense.</li>
+        <li name="meteo" value="321">du crachin intense.</li>
+        <li name="meteo" value="500">de la Pluie légère.</li>
+        <li name="meteo" value="501">de la Pluie modérée.</li>
+        <li name="meteo" value="502">de la Pluie intense.</li>
+        <li name="meteo" value="503">Très forte pluie.</li>
+        <li name="meteo" value="504">de la Pluie extrême.</li>
+        <li name="meteo" value="511">de la Pluie verglaçante.</li>
+        <li name="meteo" value="520">de la Pluie modérée.</li>
+        <li name="meteo" value="521">de la Pluie intense.</li>
+        <li name="meteo" value="522">de la Pluie intense.</li>
+        <li name="meteo" value="531">de la Pluie avec innondations.</li>
+        <li name="meteo" value="600">de la neige légère.</li>
+        <li name="meteo" value="601">de la neige.</li>
+        <li name="meteo" value="602">beaucoup de neige.</li>
+        <li name="meteo" value="611">de la neige fondue.</li>
+        <li name="meteo" value="612">de la Pluie et neige.</li>
+        <li name="meteo" value="615">de la Pluie et neige.</li>
+        <li name="meteo" value="616">de la Pluie et neige.</li>
+        <li name="meteo" value="620">de la Pluie légère et neige.</li>
+        <li name="meteo" value="621">beaucoup de neige.</li>
+        <li name="meteo" value="622">énormément de neige.</li>
+        <li name="meteo" value="701">du brouillard.</li>
+        <li name="meteo" value="711">du brouillard.</li>
+        <li name="meteo" value="721">brume.</li>
+        <li name="meteo" value="731">Sable, tourbillons de poussière.</li>
+        <li name="meteo" value="741">du brouillard.</li>
+        <li name="meteo" value="751">Sable, tourbillons de poussière.</li>
+        <li name="meteo" value="761">poussière.</li>
+        <li name="meteo" value="762">cendre volcanique.</li>
+        <li name="meteo" value="771">Squalls.</li>
+        <li name="meteo" value="781">une vilaine tornade, je ne rigole pas, reste à la maison.</li>
+        <li name="meteo" value="800">
+          <random>
+            <li>un magnifique ciel dégagé!</li>
+            <li>Pas un seul nuage,</li>
+            <li>rien, rien qu'un beau ciel bleu!</li>
+            <li>du soleil, ça sent les vacances,</li>
+            <li>du soleil, attention au p.l.a ça fond,</li>
+            <li>du soleil, attention à l'a.b.s. ça jauni,</li>
+          </random>
+</li>
+        <li name="meteo" value="801">Quelques nuages.</li>
+        <li name="meteo" value="802">des nuages ​​dispersés.</li>
+        <li name="meteo" value="803">des nuages éparses.</li>
+        <li name="meteo" value="804">des nuages ​​couverts.</li>
+        <li name="meteo" value="900">une vilaine tornade, je ne rigole pas, reste à la maison.</li>
+        <li name="meteo" value="901">tempête tropicale.</li>
+        <li name="meteo" value="902">un ouragan, je ne rigole pas, reste à la maison.</li>
+        <li name="meteo" value="903">très froid, vraiment.</li>
+        <li name="meteo" value="904">la canicule, pense à prendre de l'eau!</li>
+        <li name="meteo" value="905">du vent.</li>
+        <li name="meteo" value="906">de la grêle.</li>
+        <li name="meteo" value="951">calme.</li>
+        <li name="meteo" value="952">une brise légère.</li>
+        <li name="meteo" value="953">une petite brise.</li>
+        <li name="meteo" value="954">une Brise modérée.</li>
+        <li name="meteo" value="955">une Brise fraîche.</li>
+        <li name="meteo" value="956">une Brise asez forte.</li>
+        <li name="meteo" value="957">des coup de vent.</li>
+        <li name="meteo" value="958">des coup de vent.</li>
+        <li name="meteo" value="959">énormément de vent!</li>
+        <li name="meteo" value="960">De l'Orage.</li>
+        <li name="meteo" value="961">une violente tempête.</li>
+        <li name="meteo" value="962">un ouragan, je ne rigole pas, reste à la maison.</li>
+        <li>Il fait actuelement <star index="1" /> degrés à <star index="2" /> ..</li>
+      </condition>
+      <random>
+        <li>Concernant la température,</li>
+        <li>Si je regarde mon thermomètre, oh ou il est encore. oups,</li>
+        <li>D'après quelques données issues de senseurs thermiques,</li>
+        <li>Autre information,</li>
+        <li>J'alais oublier,</li>
+        <li>Si tu veux tout savoir,</li>
+      </random>
+      <random>
+        <li>je mesure,</li>
+        <li>le mercure indiquera,</li>
+        <li>au pif, je dirais,</li>
+      </random>
+      <li>
+        <star index="1" /> Degrés
+</li>
+      <random>
+        <li>Exactement!</li>
+        <li>Précisément.</li>
+        <li>A peu près.</li>
+        <li>A la louche.</li>
+        <li>Ou pas.</li>
+      </random>
+    </template>
+  </category>
+  
+<!-- end météo -->
+</aiml>

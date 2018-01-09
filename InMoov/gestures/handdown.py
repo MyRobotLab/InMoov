@@ -1,4 +1,5 @@
 def handdown():
+  i01.startedGesture()
   i01.setHandSpeed("left", 0.75, 0.75, 0.75, 0.75, 0.75, 0.75)
   i01.setHandSpeed("right", 0.70, 0.70, 0.70, 0.70, 0.70, 1.0)
   i01.setArmSpeed("right", 0.85, 0.65, 0.65, 0.65)
@@ -8,4 +9,5 @@ def handdown():
   i01.moveHand("left",140,148,140,10,10,0)
   i01.moveHand("right",54,95,66,0,0,11)
   sleep(2)
+  i01.finishedGesture()
 

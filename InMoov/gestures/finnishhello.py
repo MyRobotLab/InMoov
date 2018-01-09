@@ -9,7 +9,6 @@ def finnishhello():
   i01.moveArm("right",90,144,60,75)
   i01.moveHand("left",112,111,105,102,81,10)
   i01.moveHand("right",0,0,0,50,82,180)
-  ear.pauseListening()
   sleep(1)
 
   for w in range(0,3):
@@ -54,5 +53,3 @@ def finnishhello():
         i01.moveArm("right",5,82,28,15)
         i01.moveHand("left",42,58,42,55,71,35)
         i01.moveHand("right",81,50,82,60,105,113)
-        ear.resumeListening()
-

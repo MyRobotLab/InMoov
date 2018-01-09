@@ -1,5 +1,6 @@
 def phonehome():
   relax()
+  i01.startedGesture()
   sleep(1)
   i01.setHeadSpeed(1.0,1.0,1.0,1.0,1.0)
   i01.setArmSpeed("left",1.0,1.0,1.0,1.0)
@@ -17,6 +18,7 @@ def phonehome():
   #i01.mouth.speakBlocking("E,T phone the big home of the inmoov nation")
   AudioPlayer.playFile(RuningFolder+'/system/sounds/E,T phone the big home of the inmoov nation.mp3')
   sleep(2)
+  i01.finishedGesture()
   rest()
   sleep(1)
   relax()

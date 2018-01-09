@@ -1,26 +1,16 @@
 def No():
-  i01.disableRobotCanMoveHeadRandom(30)
-  # WE MOVE THE ROTHEAD OR PISTONMOD
+  # WE MOVE THE ROTHEAD OR ROLLNECK
   if isHeadActivated==1:
+    i01.startedGesture()
     i01.setHeadVelocity(40,40,40)
     
     if random.randint(0,1)==1:
-      #i01.attach()
-      i01.moveHead(80,130)
-      sleep(0.5)
-      i01.moveHead(80,50)
-      sleep(0.8)
-      i01.moveHead(81,130)
-      sleep(0.8)
-      i01.moveHead(79,50)
-      sleep(0.8)
-      i01.moveHead(83,130)
-      sleep(1)
-      i01.moveHead(80,90)
+      i01.moveHeadBlocking(80,130)
+      i01.moveHeadBlocking(80,50)
+      i01.moveHeadBlocking(83,130)
+      i01.moveHeadBlocking(80,90)
     else:
-      rollneck.moveTo(50)
-      sleep(1)
-      rollneck.moveTo(120)
-      sleep(1)
-      rollneck.moveTo(90)
-  
+      rollneck.moveToBlocking(50)
+      rollneck.moveToBlocking(120)
+      rollneck.moveToBlocking(90)
+    i01.finishedGesture()

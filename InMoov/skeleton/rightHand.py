@@ -27,25 +27,8 @@ try:
   
 except:
   errorSpokenFunc('ConfigParserProblem','right hand . config')
-  pass
-    
-try:
-  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'thumb', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'index', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'majeure', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'ringFinger', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'pinky', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'wrist', 1)   
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass  
-  
-  
+  pass    
+ 
 # ##############################################################################
 #                 SERVO FUNCTIONS
 # ##############################################################################
@@ -89,20 +72,16 @@ if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") o
     rightHand.wrist.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'wrist'))
     
     i01.startRightHand(MyRightPort,BoardTypeMyRightPort)
-        
-    rightHand.enableAutoEnable(1)
-    
-    rightHand.thumb.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb'))
-    rightHand.index.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'index'))
-    rightHand.majeure.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'majeure'))
-    rightHand.ringFinger.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'ringFinger'))
-    rightHand.pinky.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'pinky'))
-    rightHand.wrist.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'wrist'))
-        
+
     rightHand.rest()
+    
+    rightHand.thumb.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'thumb'))
+    rightHand.index.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'index'))
+    rightHand.majeure.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'majeure'))
+    rightHand.ringFinger.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'ringFinger'))
+    rightHand.pinky.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'pinky'))
+    rightHand.wrist.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'wrist'))
     
   else:
     #we force parameter if arduino is off
     isRightHandActivated=0
-    
-#todo set inverted

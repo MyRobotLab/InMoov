@@ -3,31 +3,43 @@
 # ##############################################################################
 
 def lookleftside():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.startedGesture()
   i01.setHeadVelocity(60, 60)
-  i01.moveHead(85,160)
-
+  i01.moveHeadBlocking(85,160)
+  i01.finishedGesture()
+  
 def lookrightside():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.startedGesture()
   i01.setHeadVelocity(60, 60)
-  i01.moveHead(85,20)
+  i01.moveHeadBlocking(85,20)
+  i01.finishedGesture()
 
 def lookinmiddle():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.startedGesture()
   i01.setHeadVelocity(60, 60)
-  i01.moveHead(85,90)
+  i01.moveHeadBlocking(85,90)
+  i01.finishedGesture()
+  
+def lookup():
+  i01.startedGesture()
+  i01.setHeadVelocity(60, 60)
+  i01.moveHeadBlocking(175,90)
+  i01.finishedGesture()
+
+def lookdown():
+  i01.startedGesture()
+  i01.setHeadVelocity(60, 60)
+  i01.moveHeadBlocking(10,90) 
+  i01.finishedGesture()  
   
 def tiltHeadLeftSide():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.startedGesture()
   i01.setHeadVelocity(60, 60, 60)
-  i01.moveHead(85,90,0)
+  i01.moveHeadBlocking(85,90,0)
+  i01.finishedGesture()
   
 def tiltHeadRightSide():
-  global RobotCanMoveHeadWhileSpeaking
-  RobotCanMoveHeadWhileSpeaking=0
+  i01.startedGesture()
   i01.setHeadVelocity(60, 60, 60)
-  i01.moveHead(85,90,180)
+  i01.moveHeadBlocking(85,90,180)
+  i01.finishedGesture()

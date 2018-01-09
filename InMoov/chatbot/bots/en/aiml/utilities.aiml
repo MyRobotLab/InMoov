@@ -44,7 +44,8 @@
   <category>
     <pattern>NTH 0 *</pattern>
     <template>
-      <star /> has no zeroth letter.</template>
+      <star /> has no zeroth letter.
+     </template>
   </category>
   <category>
     <pattern>COUNTLETTERS *</pattern>
@@ -53,7 +54,8 @@
         <set var="letters">
           <explode>
             <star />
-          </explode> end</set>
+          </explode> end
+        </set>
         <set var="count">0</set>
       </think>
       <condition>
@@ -80,7 +82,7 @@
     </template>
   </category>
   <category>
-    <pattern>NTH number *</pattern>
+    <pattern>NTH <set>number</set> *</pattern>
     <template>
       <think>
         <set var="nth">
@@ -90,7 +92,8 @@
         <set var="letters">
           <explode>
             <star index="2" />
-          </explode> end</set>
+          </explode> end
+        </set>
       </think>
       <condition>
         <li>
@@ -99,10 +102,8 @@
           <star index="2" /> has only <map><name>predecessor</name><get var="count" /></map> letters.</li>
         <li>
           <var>count</var>
-          <value>
-            <get var="nth" />
-          </value> 
-The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRSTLETTER <get var="letters" /></srai></li>
+          <value><get var="nth" /></value> 
+	The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRSTLETTER <get var="letters" /></srai></li>
         <li>
           <think>
             <set var="letters">
@@ -182,7 +183,7 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
         <li value="true">
           <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai>
         </li>
-        <li>CONS <star index="2" /><srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
+        <li>CONS <star index="2" /> <srai>REMOVEITEM <star /> FROM LIST CONS <star index="3" /></srai></li>
       </condition>
     </template>
   </category>
@@ -339,8 +340,7 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
   <category>
     <pattern>IMPLODE * *</pattern>
     <template>
-      <srai> IMPLODE <star /></srai>
-      <srai>IMPLODE <star index="2" /></srai>
+      <srai> IMPLODE <star /></srai><srai>IMPLODE <star index="2" /></srai>
     </template>
   </category>
   <category>
@@ -445,18 +445,40 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
   <category>
     <pattern>GENERATE PASSWORD</pattern>
     <template>
-      <srai>IMPLODE <srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai><srai>RANDOMCHAR</srai></srai>
+      <srai>
+      	IMPLODE 
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      	<srai>RANDOMCHAR</srai>
+      </srai>
     </template>
   </category>
   <category>
     <pattern>DELETE MY * LIST</pattern>
     <template>Deleting your list.
-<learnf><category><pattern>MY <eval><star /></eval> LIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>DELETE MY LIST</pattern>
     <template>Deleting your list.
-<learnf><category><pattern>MYLIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>ISANEMAILADDRESS UNKNOWN</pattern>
@@ -500,9 +522,9 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
       </think>
       <condition var="star">
         <li>
-          <value>
-            <star index="2" />
-          </value>true</li>
+          <value><star index="2" /></value>
+          true
+        </li>
         <li>false</li>
       </condition>
     </template>
@@ -528,7 +550,7 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
     <template>0</template>
   </category>
   <category>
-    <pattern>SUCCESSOR number</pattern>
+    <pattern>SUCCESSOR <set>number</set></pattern>
     <template>
       <map>
         <name>successor</name>
@@ -556,7 +578,8 @@ The <map><name>number2ordinal</name><get var="nth" /></map> letter is <srai>FIRS
           <star index="2" />
         </set>
         <set name="isamember">
-          <srai>LISTMEMBER <star /> OF LIST <srai><get name="listname" /></srai></srai>
+          <srai>LISTMEMBER <star /> OF LIST <srai>
+          <get name="listname" /></srai></srai>
         </set>
       </think>
       <!--
@@ -565,7 +588,15 @@ List value=<srai><get name="listname"/></srai>.
 -->
       <condition name="isamember">
         <li value="true">Taking <star /> off your list.
-<learnf><category><pattern><eval><get name="listname" /></eval></pattern><template><eval><srai>REMOVEITEM <star /> FROM LIST <srai><get name="listname" /></srai></srai></eval></template></category></learnf></li>
+			<learnf>
+				<category>
+					<pattern><eval><get name="listname" /></eval></pattern>
+					<template>
+						<eval><srai>REMOVEITEM <star /> FROM LIST <srai><get name="listname" /></srai></srai></eval>
+					</template>
+				</category>
+			</learnf>
+		</li>
         <li>
           <oob>
             <dialog>
@@ -603,7 +634,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>PREDECESSOR number</pattern>
+    <pattern>PREDECESSOR <set>number</set></pattern>
     <template>
       <map>
         <name>predecessor</name>
@@ -661,7 +692,7 @@ Which item would you like to remove?
     <template>Here is your list: <srai>COMMASEPARATE <srai>MYLIST</srai></srai></template>
   </category>
   <category>
-    <pattern>ISANUMBER number</pattern>
+    <pattern>ISANUMBER <set>number</set></pattern>
     <template>true</template>
   </category>
   <category>
@@ -669,11 +700,11 @@ Which item would you like to remove?
     <template>false</template>
   </category>
   <category>
-    <pattern>ISAPHONENUMBER number</pattern>
+    <pattern>ISAPHONENUMBER <set>number</set></pattern>
     <template>true</template>
   </category>
   <category>
-    <pattern>ISAPHONENUMBER number *</pattern>
+    <pattern>ISAPHONENUMBER <set>number</set> *</pattern>
     <template>
       <srai>ISAPHONENUMBER <star /></srai>
     </template>
@@ -750,7 +781,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD 1 PLUS number</pattern>
+    <pattern>ADD 1 PLUS <set>number</set></pattern>
     <template>
       <map name="successor">
         <star />
@@ -758,7 +789,7 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD 0 PLUS number</pattern>
+    <pattern>ADD 0 PLUS <set>number</set></pattern>
     <template>
       <star />
     </template>
@@ -771,22 +802,37 @@ Which item would you like to remove?
     </template>
   </category>
   <category>
-    <pattern>ADD _ TO MY * LIST</pattern>
-    <template>
-      <srai>ADD <star /> TO MY <star index="2" /> LIST</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ADD _ TO MY LIST</pattern>
-    <template>I've added <star /> to your list.
-<learnf><category><pattern>MYLIST</pattern><template><eval><srai>CONS <star /><srai>MYLIST</srai></srai></eval></template></category></learnf></template>
-  </category>
-  <category>
-    <pattern>ADD _ TO LIST</pattern>
-    <template>
-      <srai>ADD <star /> TO MY LIST</srai>
-    </template>
-  </category>
+  	<pattern>ADD _ TO MY * LIST</pattern>
+	<template>I've added <star/> to your <star index="2"/> list.
+		<learn>
+			<category>
+				<pattern>MY <eval><star index="2"/></eval> LIST</pattern>
+				<template>
+					<eval>
+						<srai>CONS <star/> <srai>MY <star index="2"/> LIST</srai></srai>
+					</eval>
+				</template>
+			</category>
+		</learn>
+	</template>
+</category>
+<category>
+	<pattern>ADD _ TO MY LIST</pattern>
+	<template>I've added <star/> to your list.
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>
+					<eval><srai>CONS <star/> <srai>MYLIST</srai></srai></eval>
+				</template>
+			</category>
+		</learnf>
+	</template>
+</category>
+<category>
+	<pattern>ADD _ TO LIST</pattern>
+	<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
   <category>
     <pattern>WHAT IS MY LIST CALLED</pattern>
     <template>Your list is called MYLIST.</template>
@@ -899,12 +945,24 @@ Which item would you like to remove?
   <category>
     <pattern>MAKE A * LIST</pattern>
     <template>Initializing your <star /> list.
-<learnf><category><pattern>MY <eval><star /></eval> LIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MY <eval><star /></eval> LIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>MAKE A LIST</pattern>
     <template>Initializing your list.
-<learnf><category><pattern>MYLIST</pattern><template>NIL</template></category></learnf></template>
+		<learnf>
+			<category>
+				<pattern>MYLIST</pattern>
+				<template>NIL</template>
+			</category>
+		</learnf>
+	</template>
   </category>
   <category>
     <pattern>CONS *</pattern>
@@ -918,30 +976,16 @@ Which item would you like to remove?
     <pattern>CONS * CONS *</pattern>
     <template>CONS <star /> CONS <star index="2" /></template>
   </category>
-  <category>
-    <pattern>COUNT TO number</pattern>
-    <template>
-      <think>
-        <set name="count">0</set>
-      </think>
-      <condition name="count">
-        <li>
-          <value>
-            <star />
-          </value>
-        </li>
-        <li>
-          <set name="count">
-            <map>
-              <name>successor</name>
-              <get name="count" />
-            </map>
-          </set>
-          <loop />
-        </li>
-      </condition>
-    </template>
-  </category>
+<category>
+	<pattern>COUNT TO <set>number</set></pattern>
+	<template>
+  		<think><set name="count">0</set></think>
+  		<condition name="count">
+    		<li><value><star/></value></li>
+    		<li><set name="count"><map><name>successor</name><get name="count"/></map></set>  <loop/></li>
+  		</condition>
+	</template>
+</category>
   <category>
     <pattern>REQUEST</pattern>
     <template>

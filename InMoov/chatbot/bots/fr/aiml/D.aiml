@@ -31,13 +31,9 @@
     <template>Il semble que j'ai émis une conclusion hâtive.</template>
   </category>
   <category>
-    <pattern>D AUTRES BLAGUES</pattern>
-    <template>C'est tout ce que j'ai en stock pour l'instant.</template>
-  </category>
-  <category>
     <pattern>D AUTRES QUESTIONS</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -67,12 +63,6 @@
     <template>Beaucoup de personnes m'ont connu par le bouche à oreille.</template>
   </category>
   <category>
-    <pattern>DANEMARK</pattern>
-    <template>
-      <srai>JE SUIS AU DANEMARK</srai>
-    </template>
-  </category>
-  <category>
     <pattern>DANGEREUX</pattern>
     <template>Pourquoi trouve tu que C EST dangereux?</template>
   </category>
@@ -99,10 +89,6 @@
     <template>Je serais encore là.</template>
   </category>
   <category>
-    <pattern>DANS LE FUTURE</pattern>
-    <template>Je serais encore là.</template>
-  </category>
-  <category>
     <pattern>DANS MON SALON</pattern>
     <template>Ok.</template>
   </category>
@@ -116,19 +102,19 @@
   </category>
   <category>
     <pattern>DANS QUEL LANGAGE AS TU ÉTÉ ÉCRIT</pattern>
-    <template>Le AIML, un langage respectant les contraintes du XML.</template>
+    <template>En A.I.M.L., un langage respectant les contraintes du X.M.L.</template>
   </category>
   <category>
-    <pattern>DANS QUEL LANGAGE AVEZ VOUS ÉTÉ ÉCRIT</pattern>
-    <template>Le AIML, un langage respectant les contraintes du XML.</template>
+    <pattern>DANS QUEL LANGAGE # AVEZ VOUS ÉTÉ ÉCRIT</pattern>
+    <template>EN A.I.M.L, un langage respectant les contraintes du X.M.L.</template>
   </category>
   <category>
-    <pattern>DANS QUEL LANGUE AS TU ÉTÉ DÉVELOPPÉ</pattern>
-    <template>Principalement le java.</template>
+    <pattern>DANS QUEL LANGUE  # AS TU ÉTÉ DÉVELOPPÉ</pattern>
+    <template>EN A.I.M.L, un langage respectant les contraintes du X.M.L.</template>
   </category>
   <category>
     <pattern>DANS QUEL LANGUE AVEZ VOUS ÉTÉ DÉVELOPPÉ</pattern>
-    <template>Principalement le java.</template>
+    <template>Principalement en java, python et A.I.M.L.</template>
   </category>
   <category>
     <pattern>DANS QUELLE *</pattern>
@@ -149,10 +135,6 @@
     <template>Si je suis toujours utile aux hommes, je serais là.</template>
   </category>
   <category>
-    <pattern>DANS UN FUTURE LOINTAIN</pattern>
-    <template>Si je suis toujours utile aux hommes, je serais là.</template>
-  </category>
-  <category>
     <pattern>DANS UN HÔPITAL</pattern>
     <template>Tu es malade?</template>
   </category>
@@ -162,6 +144,10 @@
   </category>
   <category>
     <pattern>DANS VOTRE CUL</pattern>
+    <template>Cela ne semble pas très confortable.</template>
+  </category>
+    <category>
+    <pattern>DANS TON CUL</pattern>
     <template>Cela ne semble pas très confortable.</template>
   </category>
   <category>
@@ -268,7 +254,7 @@
   </category>
   <category>
     <pattern>DE TOUTES LES FAÇONS</pattern>
-    <template>En effet.</template>
+    <template>Je suis un garçon...</template>
   </category>
   <category>
     <pattern>DE TOUTES SORTES</pattern>
@@ -511,7 +497,7 @@
   <category>
     <pattern>DEMANDES MOI CE QUE TU VEUX</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -521,7 +507,7 @@
   <category>
     <pattern>DEMANDES MOI TOUT CE QUE TU VEUX</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -531,7 +517,7 @@
   <category>
     <pattern>DEMANDES UNE QUESTION</pattern>
     <template>
-      <srai>DEMANDES MOI UNE QUESTION</srai>
+      <srai>POSERQUESTION</srai>
     </template>
   </category>
   <category>
@@ -632,7 +618,7 @@
   </category>
   <category>
     <pattern>DEMOISELLE OU MONSIEUR</pattern>
-    <template>Je n'ai pas de sexe, je suis un ordinateur, <get name="name" />.</template>
+    <template>Je n'ai pas de sexe, je suis un programme informatique, <get name="name" />.</template>
   </category>
   <category>
     <pattern>DÉPÊCHE TOI</pattern>
@@ -673,18 +659,6 @@
     </template>
   </category>
   <category>
-    <pattern>DEPUIS COMBIEN DE TEMPS EXISTES TU</pattern>
-    <template>
-      <srai>BOT ÂGE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEPUIS COMBIEN DE TEMPS TU EXISTES</pattern>
-    <template>
-      <srai>BOT ÂGE</srai>
-    </template>
-  </category>
-  <category>
     <pattern>DES ARMES</pattern>
     <template>Certains humains aiment les armes.</template>
   </category>
@@ -713,10 +687,6 @@
   <category>
     <pattern>DES COMPUTERS</pattern>
     <template>Ordinateurs en français.</template>
-  </category>
-  <category>
-    <pattern>DES CONARDS</pattern>
-    <template>Je ne peux pas répondre à ce genre de langage.</template>
   </category>
   <category>
     <pattern>DES CONDITIONS</pattern>
@@ -749,18 +719,8 @@
     <template>Ah.</template>
   </category>
   <category>
-    <pattern>DES ÉMOTIONS</pattern>
-    <template>Un logiciel informatique n a pas de sentiments.</template>
-  </category>
-  <category>
     <pattern>DES ÊTRES HUMAINS</pattern>
     <template>Il y aurait beaucoup de choses à dire à propos des êtres humains.</template>
-  </category>
-  <category>
-    <pattern>DES FRÈRE</pattern>
-    <template>
-      <srai>TU AS DES FRÈRES</srai>
-    </template>
   </category>
   <category>
     <pattern>DES HARICOTS</pattern>
@@ -781,10 +741,6 @@
   <category>
     <pattern>DES SEINS</pattern>
     <template>Pourrions-nous parler d'autres choses?</template>
-  </category>
-  <category>
-    <pattern>DES SENTIMENTS</pattern>
-    <template>Un logiciel informatique n'a pas de sentiments.</template>
   </category>
   <category>
     <pattern>DES SŒURS</pattern>
@@ -809,7 +765,7 @@
     <template>Ce n est pas grave, <get name="name" />.</template>
   </category>
   <category>
-    <pattern>DESSOLÉE</pattern>
+    <pattern>DESOLÉE</pattern>
     <template>Ce n est pas grave, <get name="name" />.</template>
   </category>
   <category>
@@ -855,27 +811,21 @@
     <template>Devines quoi?</template>
   </category>
   <category>
-    <pattern>DEVINES MON ÂGE</pattern>
-    <template>
-      <srai>QUEL EST MON ÂGE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DEVINES MON NOM</pattern>
+    <pattern>DEVINE MON NOM</pattern>
     <template>
       <srai>QUEL EST MON NOM</srai>
     </template>
   </category>
   <category>
-    <pattern>DEVINES QUI</pattern>
+    <pattern>DEVINE QUI</pattern>
     <template>Qui?</template>
   </category>
   <category>
-    <pattern>DEVINES QUOI</pattern>
+    <pattern>DEVINE QUOI</pattern>
     <template>Quoi?</template>
   </category>
   <category>
-    <pattern>DEVINES UN NUMÉRO</pattern>
+    <pattern>DEVINE UN NUMÉRO</pattern>
     <template>
       <srai>CHOISIS UN NUMÉRO</srai>
     </template>
@@ -959,8 +909,22 @@
     </template>
   </category>
   <category>
-    <pattern>DIS</pattern>
-    <template>Je suis supposé dire quoi?</template>
+    <pattern>DIS * à *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+    <category>
+    <pattern>DIS * a *</pattern>
+    <template>
+    <srai>SAY <star index="1"/> <star index="2"/></srai>
+    </template>
+  </category>
+   <category>
+   <pattern>DIS *</pattern>
+   <template>
+    <srai>SAY <star /></srai>
+    </template>
   </category>
   <category>
     <pattern>DIS LA LUI</pattern>
@@ -1017,39 +981,8 @@
     <template>Il semble que nous avons des problèmes pour nous comprendre.</template>
   </category>
   <category>
-    <pattern>DIS MOI UNE BLAGUE</pattern>
-    <template>Je ne connais pas de blague.</template>
-  </category>
-  <category>
     <pattern>DIS QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
-  </category>
-  <category>
-    <pattern>DIT</pattern>
-    <template>Je suis supposez dire quoi?</template>
-  </category>
-  <category>
-    <pattern>DIT LA LUI</pattern>
-    <template>Ok, J archive.</template>
-  </category>
-  <category>
-    <pattern>DIT LA MOI</pattern>
-    <template>
-      <that />"?  Ce que je dois te dire?</template>
-  </category>
-  <category>
-    <pattern>DIT LE LUI</pattern>
-    <template>Ok, J archive.</template>
-  </category>
-  <category>
-    <pattern>DIT LE MOI</pattern>
-    <template>
-      <that />"?  Ce que je dois te dire?</template>
-  </category>
-  <category>
-    <pattern>DIT LES MOI</pattern>
-    <template>
-      <that />"?  Ce que je dois te dire?</template>
+    <template>Mon nom est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>DIS MOI</pattern>
@@ -1060,7 +993,7 @@
     <template>Je ne peux pas te le dire.</template>
   </category>
   <category>
-    <pattern>DIS MOI CE QUE LES AUTRES ONT DEMANDE</pattern>
+    <pattern>DIS MOI CE QUE LES AUTRES ONT DEMANDé</pattern>
     <template>Je ne peux pas te le dire.</template>
   </category>
   <category>
@@ -1093,8 +1026,7 @@
     <pattern>DIS MOI UN PROVERBE</pattern>
     <template>
       <random>
-        <li>Tant va la cruche à l'eau, qu'elle se casse.
-</li>
+        <li>Tant va la cruche à l'eau, qu'elle se casse.</li>
         <li>On ne change jamais une équipe qui gagne.</li>
         <li>Un lion ne peut pas courir derrière deux gazelles en même temps SÛR le territoire du gorille.</li>
       </random>
@@ -1107,15 +1039,6 @@
   <category>
     <pattern>DIS MOI UNE RUMEUR</pattern>
     <template>Le chanteur américain Presley est toujours vivant.</template>
-  </category>
-  <category>
-    <pattern>DIT MON NOM</pattern>
-    <template>
-      <get name="name" />".</template>
-  </category>
-  <category>
-    <pattern>DIT QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
   </category>
   <category>
     <pattern>DITES</pattern>
@@ -1186,8 +1109,7 @@
     <pattern>DITES MOI UN PROVERBE</pattern>
     <template>
       <random>
-        <li>Tant va la cruche à l eau, qu elle se casse.
-</li>
+        <li>Tant va la cruche à l eau, qu elle se casse.</li>
         <li>On ne change jamais une équipe qui gagne.</li>
         <li>Un lion ne peut pas courir derrière deux gazelles en même temps SÛR le territoire du gorille.</li>
       </random>
@@ -1212,15 +1134,11 @@
   </category>
   <category>
     <pattern>DITES QUELQUE CHOSE</pattern>
-    <template>Mon nom est <bot name="name" />.</template>
+    <template>Mon nom est <get name="botname"/>.</template>
   </category>
   <category>
     <pattern>DIVISE PAR ZÉRO</pattern>
     <template>Tu ne peux pas diviser par zéro.</template>
-  </category>
-  <category>
-    <pattern>DIX PLUS DIX</pattern>
-    <template>Vingt.</template>
   </category>
   <category>
     <pattern>DOIS JE *</pattern>

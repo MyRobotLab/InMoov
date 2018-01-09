@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: gesturesFrench.aiml -->
+  <!-- File: _inmoovGestures.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: May11, 2017 -->
-  <!-- by Gael Langevin -->
+  <!-- Last modified: Decembre 29, 2017 -->
+  <!-- by Gael Langevin : apostrophe -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -12,7 +12,7 @@
   <!--  -->
 
     <category>
-      <pattern>METS-TOI AU REPOS *</pattern>
+      <pattern>METS TOI AU REPOS #</pattern>
       <template>
         <random>
           <li>Ah, C EST moins fatiguant.</li>
@@ -26,18 +26,6 @@
             <param>rest()</param>
           </mrl>
         </oob>
-      </template>
-    </category>
-    <category>
-      <pattern>METS-TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
-      </template>
-    </category>
-    <category>
-      <pattern>METS TOI AU REPOS</pattern>
-      <template>
-        <srai>METS-TOI AU REPOS * </srai>
       </template>
     </category>
     <category>
@@ -126,7 +114,23 @@
         <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>ARRÊTE DE CHERCHER</pattern>
+      <pattern>DéTECTION DE VISAGE</pattern>
+      <template>I'm looking for faces.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans(False)</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># REGARDE MOI #</pattern>
+      <template>Je vais te suivre du regard jusqu'a ce que tu me dise arrête de me regarder.
+        <oob><mrl><service>python</service><method>exec</method><param>trackHumans()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>ARRÊTE DE ME REGARDER #</pattern>
+      <template>
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>ARRÊTE DE CHERCHER #</pattern>
       <template>J'arrête le scanner.
         <oob><mrl><service>python</service><method>exec</method><param>stopTracking()</param></mrl></oob></template>
     </category>
@@ -187,7 +191,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>fighter()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>METS LES MAINS SÛR LES HANCHES</pattern>
+      <pattern># MAINS SUR LES HANCHES</pattern>
       <template>Je mets mes mains SÛR les hanches.
         <oob><mrl><service>python</service><method>exec</method><param>fistHips()</param></mrl></oob></template>
     </category>
@@ -202,7 +206,7 @@
 	<oob><mrl><service>python</service><method>exec</method><param>victory()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>METS TES BRAS EN L'AIR</pattern>
+      <pattern># BRAS EN L AIR</pattern>
       <template>
         <random>
           <li>J'ai mes bras en l'air.</li>
@@ -235,8 +239,8 @@
     </category>
     <category>
       <pattern>MANUEL</pattern>
-      <template>Désormais je n'écoute plus, pour reprendre contrôle dites voice controle.
-        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method></mrl></oob></template>
+      <template>Désormais je n'écoute plus, pour reprendre contrôle dites <get name="MagicCommandToWakeUp" />. Le mot clé peut être configuré dans ire . config
+        <oob><mrl><service>i01.ear</service><method>lockOutAllGrammarExcept</method><param><get name="MagicCommandToWakeUp" /></param></mrl></oob></template>
     </category>
     <category>
       <pattern>VOICE CONTROL</pattern>
@@ -244,9 +248,9 @@
         <oob><mrl><service>i01.ear</service><method>clearLock</method></mrl></oob></template>
     </category>
     <category>
-      <pattern>ARRÊTE D'ÉCOUTER</pattern>
+      <pattern>ARRÊTE D ÉCOUTER</pattern>
       <template>Je coupe mon micro.
-        <oob><mrl><service>i01,ear</service><method>stopListening</method></mrl></oob></template>
+        <oob><mrl><service>i01.ear</service><method>setAutoListen</method><param>False</param></mrl></oob></template>
     </category>
     <category>
       <pattern>VITESSE MAXI</pattern>
@@ -305,7 +309,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>approachlefthand()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>SERS-TOI DE TA MAIN GAUCHE</pattern>
+      <pattern>SERS TOI DE TA MAIN GAUCHE</pattern>
       <template>J'utilise ma main gauche
         <oob><mrl><service>python</service><method>exec</method><param>uselefthand()</param></mrl></oob></template>
     </category>
@@ -348,6 +352,11 @@
       <pattern>QU EST cE QUE C EST</pattern>
       <template>Je vérifie.
         <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>MESURE LA DISTANCE</pattern>
+      <template>
+        <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
     </category>
     <category>
       <pattern>PARFAIT</pattern>
@@ -407,7 +416,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>slowlycloselefthand()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>MAINS EN L AIR</pattern>
+      <pattern># MAINS EN L AIR</pattern>
       <template>Surrender.
         <oob><mrl><service>python</service><method>exec</method><param>surrender()</param></mrl></oob></template>
     </category>
@@ -538,9 +547,26 @@
     </category>
     <category>
       <pattern>REGARDE EN HAUT</pattern>
-      <template>
-        <srai>REGARDE LE CIEL</srai>
-      </template>
+      <template>Je regarde en haut.
+        <oob><mrl><service>python</service><method>exec</method><param>lookup()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>REGARDE EN BAS</pattern>
+      <template>Je regarde en bas.
+        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE LA TÊTE à DROITE</pattern>
+      <template>Je penche ma TÊTE à droite.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>PENCHE TA TÊTE à GAUCHE</pattern>
+      <template>je penche ma TÊTE à gauche.
+        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>BEFORE HAPPY</pattern>
@@ -550,8 +576,9 @@
     <category>
       <pattern>JOYEUX ANNIVERSAIRE</pattern>
       <template>Joyeux anniversaire.
-        <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
-    </category>
+        <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob>
+      </template>
+    </category>    
     <category>
       <pattern>PHOTOS</pattern>
       <template>Photo.
@@ -609,6 +636,30 @@
       <pattern>STOP LA KINECT</pattern>
       <template>Arrêt de la kinect
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>ARRÊT DE LA CAPTURE</pattern>
+      <template>
+        <srai>STOP LA KINECT</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>ARRÊT DE LA KINECT</pattern>
+      <template>
+        <srai>STOP LA KINECT</srai>
+      </template>
+    </category>
+        <category>
+      <pattern>TRACKING SQUELETTE</pattern>
+      <template>starting TRACKING SKELETON with kinect
+        <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
+    </category>
+    
+     <category>
+      <pattern>TRACKIN SQUELETTE</pattern>
+      <template>
+        <srai>TRACKING SQUELETTE</srai>
+      </template>
     </category>
     <category>
       <pattern>MOUVEMENT NUMÉRO 1</pattern>
@@ -756,6 +807,40 @@
       </template>
     </category>
     <category>
+      <pattern>SYSTEM_SHAKE_HAND</pattern>
+      <template>
+        <random>
+          <li>Je suis heureuse de te connaître</li>
+          <li>Attention! ma main est fragile</li>
+          <li>Je suis heureuse de serrer une main humaine</li>
+          <li>Tu as la peau douce</li>
+          <li>Je viens en paix</li>
+          <li>C'est une sensation étrange de serrer une main biologique</li>
+          <li>Je suis heureuse que ce ne soit pas le président treumepeu qui me sert la main</li>
+        </random>
+      </template>
+    </category>
+        <category>
+      <pattern>SYSTEM_SHAKE_HAND_NOHUMAN</pattern>
+      <template>
+        <random>
+          <li>Pas de soucis, la prochaine fois</li>
+          <li>je suis triste que tu ne veuilles pas me serrer la main</li>
+        </random>
+      </template>
+    </category>
+
+    <category>
+      <pattern>SYSTEM_SHAKE_HAND_GET_CLOSER</pattern>
+      <template>
+        <random>
+          <li>Rapproche toi, viens me serrer la main</li>
+          <li>N'es pas peur, je ne mord pas</li>
+          <li>Rapproche toi</li>
+        </random>
+      </template>
+    </category>
+    <category>
       <pattern>SERRE LES MAINS</pattern>
       <template>
         <srai>SERRE LA MAIN</srai>
@@ -771,31 +856,13 @@
       <template>Je prends l'objet.
         <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
     </category>
-    <category>
-      <pattern>PIERRE FEUILLE CISEAU</pattern>
-      <template>Rock paper scissors.
-        <oob><mrl><service>python</service><method>exec</method><param>rockpaperscissors()</param></mrl></oob></template>
-    </category>
+    
     <category>
       <pattern>READY</pattern>
       <template>Ready.
         <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
     </category>
-    <category>
-      <pattern>ROCK</pattern>
-      <template>Rock.
-        <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob></template>
-    </category>
-    <category>
-      <pattern>PAPER</pattern>
-      <template>Paper.
-        <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob></template>
-    </category>
-    <category>
-      <pattern>SCISSORS</pattern>
-      <template>Scissors.
-        <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob></template>
-    </category>
+   
     <category>
       <pattern>that WAS FUN</pattern>
       <template>C'était fun.
@@ -873,9 +940,15 @@
       </template>
     </category>
     <category>
-      <pattern>D'OU VIENS tu</pattern>
+      <pattern>D Où VIENS tu</pattern>
       <template>
-        <srai>PHONE HOME</srai>
+         <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>phonehome()</param>
+          </mrl>
+        </oob>
       </template>
     </category>
     <category>
@@ -923,7 +996,7 @@
         <oob><mrl><service>python</service><method>exec</method><param>balance()</param></mrl></oob></template>
     </category>
     <category>
-      <pattern>A PROPOS DE STAR WARS</pattern>
+      <pattern>à PROPOS DE STAR WARS</pattern>
       <template>
         <oob>
           <mrl>
@@ -935,7 +1008,7 @@
       </template>
     </category>
     <category>
-      <pattern>DONNE moi L'HEURE</pattern>
+      <pattern>DONNE moi L HEURE</pattern>
       <template>
         <oob>
           <mrl>
@@ -959,7 +1032,7 @@
       </template>
     </category>
     <category>
-      <pattern>PAS D'INQUIÉTUDE</pattern>
+      <pattern>PAS D INQUIÉTUDE</pattern>
       <template>
         <oob>
           <mrl>
@@ -987,24 +1060,30 @@
       </template>
     </category>
     <category>
+      <pattern>APPRENTISSAGE DE VISAGE</pattern>
+      <template>Je démarre le module d'apprentissage des visages<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+    </category>
+    <category>
       <pattern>RECONNAISSANCE FACIALE</pattern>
-      <template>Je démarre la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
+      <template><srai>CHERCHE LES HUMAINS</srai></template>
     </category>
     <category>
       <pattern>RECONNAISSANCE DE VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>RECONNAIT UN VISAGE</pattern>
       <template>
-        <srai>START FACE RECOGNIZER</srai>
+        <srai>CHERCHE LES HUMAINS</srai>
       </template>
     </category>
     <category>
       <pattern>ARRÊTE LA RECONNAISSANCE FACIALE</pattern>
-      <template>J'arrête la reconnaissance faciale<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+      <template>J'arrête la reconnaissance faciale
+      <srai>ARRÊTE DE CHERCHER</srai>
+      </template>
     </category>
     <category>
       <pattern>EXÉCUTE UNE SIGNATURE</pattern>
@@ -1038,9 +1117,9 @@
       <pattern>DÉMARRE FACEBOOK</pattern>
       <template>
         <random>
-          <li>Je démarre facebook </li>
-          <li>Je suis en train de démarrer facebook </li>
-          <li>Tout de suite Monsieur super social! </li>
+          <li>Je démarre facebook</li>
+          <li>Je suis en train de démarrer facebook</li>
+          <li>Tout de suite Monsieur super social!</li>
         </random>
         <oob>
           <mrl>
@@ -1055,9 +1134,9 @@
       <pattern>ROBOT RECHERCHE *</pattern>
       <template>
         <random>
-          <li>Démarrage du navigateur </li>
-          <li>Je cherche pour vous! </li>
-          <li>Je cherche SÛR internet! </li>
+          <li>Démarrage du navigateur</li>
+          <li>Je cherche pour vous!</li>
+          <li>Je cherche SÛR internet!</li>
         </random>
         <oob>
           <mrl>
@@ -1091,7 +1170,7 @@
     </category>
     <category>
       <pattern>STOP MODE DE VIE ALÉATOIRE</pattern>
-      <template>D accord
+      <template>D'accord
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
     </category>
     <category>

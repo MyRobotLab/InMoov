@@ -22,25 +22,11 @@ try:
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()
   ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
   isLeftArmActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'isLeftArmActivated') 
-  
 
 except:
   errorSpokenFunc('ConfigParserProblem','leftarm.config')
   pass
   
-try:
-  test=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep')
-except:
-  ThisSkeletonPartConfig.add_section('SERVO_AUTO_DISABLE')
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'bicep', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'shoulder', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'rotate', 1)
-  ThisSkeletonPartConfig.set('SERVO_AUTO_DISABLE', 'omoplate', 1)  
-  
-  with open(ThisSkeletonPart+'.config', 'wb') as f:
-    ThisSkeletonPartConfig.write(f)
-  ThisSkeletonPartConfig.read(ThisSkeletonPart+'.config')
-  pass   
   
 # ##############################################################################
 #                 SERVO FUNCTIONS
@@ -79,16 +65,13 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or 
     
     i01.startLeftArm(MyLeftPort,BoardTypeMyLeftPort)
     
-    leftArm.enableAutoEnable(1)
-    leftArm.bicep.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep'))
-    leftArm.shoulder.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'shoulder'))
-    leftArm.rotate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rotate'))
-    leftArm.omoplate.enableAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'omoplate'))
-    
     leftArm.rest()
+            
+    leftArm.bicep.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'bicep'))
+    leftArm.shoulder.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'shoulder'))
+    leftArm.rotate.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rotate'))
+    leftArm.omoplate.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'omoplate'))
 
   else:
     #we force parameter if arduino is off
     isLeftArmActivated=0
-    
-#todo set inverted

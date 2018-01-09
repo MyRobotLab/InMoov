@@ -1,4 +1,5 @@
 def approachlefthand():
+  i01.startedGesture()
   i01.setHandSpeed("right", 0.75, 0.75, 0.75, 0.75, 0.75, 0.65)
   i01.setArmSpeed("left", 1.0, 1.0, 1.0, 1.0)
   i01.setArmSpeed("right", 0.25, 0.25, 0.25, 0.25)
@@ -11,4 +12,5 @@ def approachlefthand():
   i01.moveHand("right",180,145,145,3,0,11)
   i01.moveTorso(90,85,90)
   sleep(4)
+  i01.finishedGesture()
 
