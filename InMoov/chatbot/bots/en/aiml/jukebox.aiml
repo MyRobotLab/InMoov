@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+    <pattern>listen to *</pattern> 
+    <template>ok, say STOP JUKEBOX.<oob><mrl><service>python</service><method>exec</method><param>PlayUtub("listen","<star />")</param></mrl></oob></template>
+</category>
+        <category>
+      <pattern>STOP JUKEBOX</pattern>
+      <template>Ok, let's stop it. <oob><mrl><service>python</service><method>exec</method><param>PlayUtub("stop","0")</param></mrl></oob></template>
+    </category>
+</aiml>

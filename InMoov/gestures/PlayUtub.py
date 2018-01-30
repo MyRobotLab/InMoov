@@ -1,8 +1,10 @@
-def PlayUtub(q,num):
-  if q=="stop" and num==0:
-    subprocess.Popen("taskkill /F /T /PID %i"%proc1.pid , shell=True)
-    sleep(2)
-    webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
-  else:
-    webgui.startBrowser("http://www.myai.cloud/utub/?num="+str(num)+"&q="+str(q).encode('utf-8'))
-#print "http://www.myai.cloud/utub/?num="+str(num)+"&q="+str(q).encode('utf-8')
+
+def PlayUtub(q,id):
+  subprocess.call("taskkill /IM vlc.exe /F")
+  if q=="stop":
+    MoveHeadTimer.stopClock()
+    subprocess.call("taskkill /IM vlc.exe /F")
+  if q=="listen":
+    MoveHeadTimer.startClock()
+    p = subprocess.Popen(["C:/Program Files (x86)/VideoLAN/VLC/vlc.exe","http://www.myai.cloud/utub/list/tub.php?num=1&q="+str(id).encode('utf-8'),"--no-video","vlc://quit"])
+#todo watch  
