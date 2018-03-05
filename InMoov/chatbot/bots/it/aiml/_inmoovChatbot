@@ -117,7 +117,7 @@
        </oob></template>
 </category>
 <category><pattern>WAKE_UP</pattern>
-<template><li>
+<template>
         <srai>CIAO</srai>
         <random>
           <li>Sono ai tuoi ordini: ti ascolto.</li>
@@ -157,30 +157,29 @@
 <category><pattern>GESTI *</pattern>
 <template><srai>GESTI</srai></template>
 </category>
-<template><srai>GESTI</srai></template>
-</category>
-<template><srai>GESTI</srai></template>
-</category>
 <category><pattern>SCOLLEGA TUTTO</pattern>
-      <oob><mrl><service>i01</service><method>disabilita</method></mrl></oob></template>
+<template>Sto scollego tutto
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
 </category>
 <category><pattern>ANNULLA TUTTE LE CONNESSIONI</pattern>
 <template><srai>SCOLLEGA TUTTO</srai></template>
 </category>
 <category><pattern>COLLEGA TUTTO</pattern>
+<template>Sto collego tutto
       <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
 </category>
 <category><pattern>COLLEGA LA TUA MANO DESTRA</pattern>
 <template><srai>COLLEGA LA TUA MANO DESTRA</srai></template>
 </category>
 <category><pattern>SCOLLEGA LA MANO DESTRA</pattern>
+<template>Sto scollego la mano destra
       <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
-</category>
 </category>
 <category><pattern>COLLEGA LA TUA MANO SINISTRA</pattern>
 <template><srai>COLLEGA LA  MANO SINISTRA</srai></template>
 </category>
 <category><pattern>SCOLLEGA LA  MANO SINISTRA</pattern>
+<template>Sto scollego la mano sinistra
       <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
 </category>
 <category><pattern>SCOLLEGA LA TUA MANO SINISTRA</pattern>
