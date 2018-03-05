@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- Last modified: Gael Langevin March 05, 2018 -->
+<!-- File: _inmoovChatbot.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: Gael Langevin, 05/03/2018 -->
 <!--  -->
 <!-- This AIML file is part of the IT 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -27,8 +29,8 @@
 		Ciao , questa è la mia prima inizializzazione. Mi occorrono delle informazioni : quale sarà il mio nome?</template>
 </category>
 <topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># QUAL' E' IL MIO NOME  #</that>
-<template><set name="questionfirstinit"> E' <star/>il mio nome? Dimmi sì o no</set>
+<category><pattern>#</pattern><that># QUALE SARÀ IL MIO NOME #</that>
+<template><set name="questionfirstinit">E' il mio nome <star/>, dimmi sì o no</set>
         <think>
           <set name="tmpname">
             <star/>
@@ -38,7 +40,7 @@
 
 <topic name="FIRSTINIT">
 <category><pattern>#</pattern><that># POSSO SAPERE IL TUO NOME #</that>
-<template><set name="questionfirstinit">E' <star/> il tuo nome? Dimmi sì o no</set>
+<template><set name="questionfirstinit">E' il tuo nome <star/>, dimmi sì o no</set>
         <think>
           <set name="tmpname">
             <star/>
@@ -47,20 +49,21 @@
 </category></topic>
 
 <topic name="FIRSTINIT">
-<category><pattern># SI' #</pattern><that># SE IL MIO NOME E'#</that>
+<category><pattern># SI #</pattern><that># IL MIO NOME #</that>
 <template><random>
 			<li>
-			Questo nome mi piace  <get name="tmpname"/>.
+			Questo nome mi piace,  <get name="tmpname"/>.
 			</li>
 			<li>
-			E' un nome molto carino <get name="tmpname"/> è bellissimo.
+			E' un nome molto carino <get name="tmpname"/>, è bellissimo.
 			</li>
         </random>
+   Per favore, posso sapere il tuo nome ?     
 	<think><set name="botname"><get name="tmpname"/></set></think></template>
 </category></topic>
 
 <topic name="FIRSTINIT">
-<category><pattern># SI' #</pattern><that># SE IL TUO NOME#</that>
+<category><pattern># SI #</pattern><that># IL TUO NOME #</that>
 <template><random>
         <li>Felice di conoscerti, <get name="tmpname"/>.</li>
         </random>
@@ -83,26 +86,21 @@
 </category></topic>
 
 <topic name="FIRSTINIT">
-<category><pattern># NO #</pattern><that># SE IL MIO NOME #</that>
-<template> Ricominciamo.
-	Ti ascolto .Cosa vuol dire?</template>
-</category></topic>
-
-<topic name="FIRSTINIT">
-<category><pattern># NO #</pattern><that># SE IL TUO NOME #</that>
+<category><pattern># NO #</pattern><that># IL MIO NOME #</that>
 <template>Ricominciamo.
-	Ti ascolto. Mi dici il tuo nome?</template>
+	Ti ascolto .Quale sarà il mio nome?</template>
 </category></topic>
 
 <topic name="FIRSTINIT">
-<category><pattern>#</pattern><that># DI' SI' O NO #</that>
+<category><pattern># NO #</pattern><that># IL TUO NOME #</that>
+<template>Ricominciamo.Ti ascolto. Posso sapere il tuo nome?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># DIMMI SÌ #</that>
 <template><random>
-          <li>
-	Per favore,rispondimi, è importante
-	</li>
-          <li>
-	Ripeto.
-	</li>
+          <li>Per favore,rispondimi, è importante</li>
+          <li>Ripeto.</li>
         </random>
         <get name="questionfirstinit"/></template>
 </category></topic>
@@ -117,15 +115,61 @@
        </oob></template>
 </category>
 <category><pattern>WAKE_UP</pattern>
-<template>
-        <srai>CIAO</srai>
-        <random>
+<template><random>
           <li>Sono ai tuoi ordini: ti ascolto.</li>
           <li>Cosa vuoi che faccia.</li>
         </random></template>
 </category>
-<category><pattern>SYSTEM_SAY_HELLO</pattern>
-<template><srai>CIAO</srai></template>
+<category><pattern>SYSTEM_NEW_VERSION</pattern>
+<template><think><set name="topic">updater</set></think>
+     Avviso nuovo sistema vuoi che io installi, dimmi sì o no</template>
+</category>
+<topic name="UPDATER">
+<category><pattern># SI #</pattern><that># DIMMI SÌ #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+      <li>
+      Iniziando a scaricare, per favore aspetta.
+      </li>
+  <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern># NO #</pattern><that># DIMMI SÌ #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+  Va bene forse un'altra volta.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern>#</pattern><that># DIMMI SÌ #</that>
+<template>Per favore rispondi alla mia domanda, è importante, dimmi sì o no</template>
+</category></topic>
+
+<category><pattern>* SYSTEM_PERCENT</pattern>
+<template><li>
+        <star/> procent.
+      </li></template>
+</category>
+<category><pattern>SYSTEM_DOWNLOAD_OK</pattern>
+<template><li>
+       Il download è terminato, per favore riavvialo.
+      </li></template>
 </category>
 <category><pattern>SVEGLIATI</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
@@ -133,7 +177,7 @@
 <category><pattern>CHIUDI IL PROGRAMMA</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
 </category>
-<category><pattern>TERMINA  IL PROGRAMMA</pattern>
+<category><pattern>TERMINA IL PROGRAMMA</pattern>
 <template><srai>TERMINA IL PROGRAMMA</srai></template>
 </category>
 <category><pattern>VA' A DORMIRE</pattern>
@@ -178,14 +222,12 @@
 <category><pattern>COLLEGA LA TUA MANO SINISTRA</pattern>
 <template><srai>COLLEGA LA  MANO SINISTRA</srai></template>
 </category>
-<category><pattern>SCOLLEGA LA  MANO SINISTRA</pattern>
+<category><pattern>SCOLLEGA LA MANO SINISTRA</pattern>
 <template>Sto scollego la mano sinistra
       <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
 </category>
 <category><pattern>SCOLLEGA LA TUA MANO SINISTRA</pattern>
 <template><srai>SCOLLEGA LA MANO SINISTRA</srai></template>
-</category>
-<category><pattern>COLLEGA LA TUA TESTA</pattern>
 </category>
 <category><pattern>SCOLLEGA LA TESTA</pattern>
 <template>Vado a scollegare la mia testa
@@ -201,14 +243,14 @@
 <category><pattern>COLLEGA IL TUO BRACCIO SINISTRO</pattern>
 <template><srai>COLLEGA IL BRACCIO SINISTRO</srai></template>
 </category>
-<category><pattern>Scollega IL BRACCIO SINISTRO</pattern>
+<category><pattern>SCOLLEGA IL BRACCIO SINISTRO</pattern>
 <template>Vado a scollegare il mio braccio sinistro
       <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
 </category>
 <category><pattern>COLLEGA IL TUO BUSTO</pattern>
 <template><srai>COLLEGA IL BUSTO</srai></template>
 </category>
-<category><pattern> SCOLLEGA IL BUSTO</pattern>
+<category><pattern>SCOLLEGA IL BUSTO</pattern>
 <template>Vado a scollegare il mio busto
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
 </category>
