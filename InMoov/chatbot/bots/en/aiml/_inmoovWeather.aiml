@@ -1,116 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: _inmoovWeather.aiml -->
-  <!-- Authors: InMoov Team -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: moz4r -->
-  <!-- Last modified: 14/12, 2017 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
-  <!-- weather -->
-  
-  <!-- default town -->
-   <category>
-    <pattern># forecast</pattern>
-    <template>
-      <oob>
+<!-- File: _inmoovWeather.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: марта 11, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<category><pattern># FORECAST</pattern>
+<template><oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>isTheSunShiny()</param>
         </mrl>
-      </oob>
-    </template>
-  </category>
-  
-   <category>
-    <pattern>what is the forecast</pattern>
-    <template>
-     <srai># forecast</srai>
-    </template>
-  </category>
-  
-  <category>
-    <pattern># forecast # $tomorrow</pattern>
-    <template>
-      <oob>
+      </oob></template>
+</category>
+<category><pattern>WHAT IS THE FORECAST</pattern>
+<template><srai># forecast</srai></template>
+</category>
+<category><pattern># FORECAST # $TOMORROW</pattern>
+<template><oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>isTheSunShiny(town,8)</param>
         </mrl>
-      </oob>
-    </template>
-  </category>
-  
-  <category>
-    <pattern># forecast # IN * $DAYS</pattern>
-    <template>
-        <think><set name="nbdays"><map name="name2number"><star index="3" /></map></set></think>
+      </oob></template>
+</category>
+<category><pattern># FORECAST # IN * $DAYS</pattern>
+<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
         <condition>
-            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3" /></set></think></li>
+            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
         </condition>
        <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>isTheSunShiny(town,<javascript>
-period = eval( <get name="nbdays" /> * 8 );
+period = eval( <get name="nbdays"/> * 8 );
 period;
 </javascript>)</param>
         </mrl>
-      </oob>
-    </template>
-  </category>
-  
-    <category>
-    <pattern># forecast $IN * $IN * $DAYS</pattern>
-    <template>
-        <think><set name="nbdays"><map name="name2number"><star index="3" /></map></set></think>
+      </oob></template>
+</category>
+<category><pattern># FORECAST $IN * $IN * $DAYS</pattern>
+<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
         <condition>
-            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3" /></set></think></li>
+            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
         </condition>
        <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
-          <param>isTheSunShiny("<star index="2" />",<javascript>
-period = eval( <get name="nbdays" /> * 8 );
+          <param>isTheSunShiny("<star index="2"/>",<javascript>
+period = eval( <get name="nbdays"/> * 8 );
 period;
 </javascript>)</param>
         </mrl>
-      </oob>
-    </template>
-  </category>
-  
-  <!-- free town -->
- <category>
-    <pattern># forecast $in *</pattern>
-    <template>
-      <oob>
+      </oob></template>
+</category>
+<category><pattern># FORECAST $IN *</pattern>
+<template><oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
           <param>isTheSunShiny("<star index="2"/>")</param>
         </mrl>
-      </oob>
-    </template>
-  </category>
-  
-
-  <!-- return -->
-  <category>
-    <pattern>SYSTEM METEO curtemperature * Town * COMMENTAIRE *</pattern>
-    <template>
-     <think><set name="meteo"> <star index="3"/></set></think>
+      </oob></template>
+</category>
+<category><pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+<template><think><set name="meteo"> <star index="3"/></set></think>
                 <random>
                 <li>In <star index="2"/>, </li>
                 <li>About the forecast in <star index="2"/>, </li>
@@ -209,17 +178,9 @@ period;
                  <random>
                  <li>Exactly! </li>
                  <li>Or maybe not. </li>
-                 </random>
-          
-	</template>
-  </category>
-  
-  <category>
-    <pattern>SYSTEM openweathermapError</pattern>
-    <template>
-      open weathermap a.p.i. error, or maybe this town is unrecognized.
-    </template>
-  </category>
-  
-   <!-- end weather -->
+                 </random></template>
+</category>
+<category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
+<template>open weathermap a.p.i. error, or maybe this town is unrecognized.</template>
+</category>
 </aiml>

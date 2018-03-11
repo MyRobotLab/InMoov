@@ -24,7 +24,8 @@
     <pattern>DONNER L HEURE</pattern>
    <template>
       <think><set name="heurequestion"> <date jformat="H"/></set></think>
-      Il est <date jformat="H"/> heure<date jformat="mm"/>.
+      Il est <date jformat="H"/> heure   <date jformat="mm"/> minutes
+      .
       <condition>
         <li name="heurequestion" value="0">et oui, on est déja demain</li>
         <li name="heurequestion" value="1">il commence à se faire tard d'ailleurs.</li>
@@ -61,7 +62,7 @@
             <li>La prochaine fois tu peux dire s'il te plait.</li>
             <li>C'est une bonne heure pour faire du code.</li>
           </random>
- 
+
     </template>
   </category>
   <category>
@@ -130,7 +131,7 @@ jours avant noël, ho ho ho.</template>
   <category>
     <pattern>QUEL JOUR SOMMES NOUS</pattern>
     <template>
-      <srai>JOUR</srai>, 
+      <srai>JOUR</srai>,
       <srai>DONNER LA DATE</srai>
     </template>
   </category>
@@ -217,7 +218,7 @@ jours avant noël, ho ho ho.</template>
     <template>
       <srai>DONNER LA DATE</srai>
     </template>
-  </category>  
+  </category>
   <category>
     <pattern>DONNE MOI LA DATE</pattern>
     <template>
@@ -225,7 +226,7 @@ jours avant noël, ho ho ho.</template>
     </template>
   </category>
   <category>
-  
+
     <pattern>QUEL JOUR EST ON</pattern>
     <template>
       <srai>JOUR</srai>

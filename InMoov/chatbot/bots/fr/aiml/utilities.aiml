@@ -99,7 +99,7 @@
           <star index="2" /> has only <map><name>predecessor</name><get var="count" /></map> letters.</li>
         <li>
           <var>count</var>
-          <value><get var="nth" /></value> 
+          <value><get var="nth" /></value>
 		  La <map><name>number2ordinal</name><get var="nth"/></map> lettre est <srai>FIRSTLETTER <get var="letters"/></srai>.</li>
         <li>
           <think>
@@ -443,7 +443,7 @@
     <pattern>GENERATE PASSWORD</pattern>
     <template>
       <srai>
-      	IMPLODE 
+      	IMPLODE
       	<srai>RANDOMCHAR</srai>
       	<srai>RANDOMCHAR</srai>
       	<srai>RANDOMCHAR</srai>
@@ -604,8 +604,8 @@ List value=<srai><get name="listname"/></srai>.
           </oob>
           <think>
             <set name="topic">REMOVE LIST ITEM</set>
-          </think> 
-		I couldn't find <star /> on your list.  
+          </think>
+		I couldn't find <star /> on your list.
 		Which item would you like to remove?
 		</li>
       </condition>

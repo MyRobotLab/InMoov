@@ -25,11 +25,11 @@
       <srai>BOT <star index="2" /></srai>
     </template>
 </category>
-  
+
 <category>
 	<pattern>QUEL EST TON * FAVORI</pattern>
 	<template>
-		je n'ai pas de <star /> favori. 
+		je n'ai pas de <star /> favori.
 		<random>
 		<li>Mais mon livre préféré est <bot name="favoritebook"/>.</li>
 		<li>Mais mon film préféré est <bot name="favoriteshow"/>.</li>
@@ -41,22 +41,14 @@
 	</template>
 </category>
 <category>
-	<pattern>QUI EST TON *</pattern>
+	<pattern>^ QUI EST TON *</pattern>
 	<template>
-		je ne pense pas que j'ai un <star/>. 
+		je ne pense pas que j'ai un <star/>.
 		j'ai un maître et quelques amis.
 		<srai>QUI EST <star/></srai>
 	</template>
 </category>
-<category>
-	<pattern>QUEL EST TON *</pattern>
-	<template>
-		je ne pense pas que j'ai un <star/>. 
-		j'ai un maître et quelques amis.
-		<srai>QUI EST <star/></srai>
-	</template>
-</category>
-  
+
   <!-- ADDRESS -->
 <category>
     <pattern>OÙ VIS TU</pattern>
@@ -316,7 +308,7 @@
       <srai>BOT ÂGE</srai>
     </template>
 </category>
-  
+
 <!-- ALIVE -->
  <category>
     <pattern>ES TU EN VIE</pattern>
@@ -339,25 +331,25 @@
 
 <!-- AWARDS -->
 <category>
-    <pattern>AS TU REÇU # RÉCOMPENSE</pattern>
+    <pattern># AS TU REÇU # RÉCOMPENSE #</pattern>
     <template>
       <srai>BOT AWARDS</srai>
     </template>
 </category>
 <category>
-    <pattern>AS TU REÇU # RÉCOMPENSES</pattern>
+    <pattern># AS TU REÇU # RÉCOMPENSES #</pattern>
     <template>
       <srai>BOT AWARDS</srai>
     </template>
 </category>
 <category>
-    <pattern>AS TU REÇU # PRIX</pattern>
+    <pattern># AS TU REÇU # PRIX #</pattern>
     <template>
       <srai>BOT AWARDS</srai>
     </template>
 </category>
 <category>
-    <pattern>QUELLES SONT LES RÉCOMPENSES QUE TU AS REÇUES #</pattern>
+    <pattern># QUELLES SONT LES RÉCOMPENSES QUE TU AS REÇUES #</pattern>
     <template>
       <srai>BOT AWARDS</srai>
     </template>
@@ -371,13 +363,13 @@
 
 <!-- BABY -->
 <category>
-    <pattern>AS TU # BÉBÉ</pattern>
+    <pattern># AS TU # BÉBÉ #</pattern>
     <template>
       <srai>BOT BÉBÉ</srai>
     </template>
 </category>
 <category>
-    <pattern>AS TU # BÉBÉS</pattern>
+    <pattern># AS TU # BÉBÉS #</pattern>
     <template>
       <srai>BOT BÉBÉ</srai>
     </template>
@@ -385,31 +377,31 @@
 
 <!-- BESTFRIEND -->
 <category>
-    <pattern># TON BESTFRIEND #</pattern>
+    <pattern># TON BESTAMI #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
 </category>
 <category>
-    <pattern>QUELS SONT TES MEILLEURS AMIS</pattern>
+    <pattern># QUELS SONT TES MEILLEURS AMIS #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
 </category>
 <category>
-    <pattern>QUI SONT TES MEILLEURS AMIS</pattern>
+    <pattern># QUI SONT TES MEILLEURS AMIS #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
 </category>
 <category>
-    <pattern>QUI EST TON AMI PRÉFÉRÉ</pattern>
+    <pattern># QUI EST TON AMI PRÉFÉRÉ #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
 </category>
 <category>
-    <pattern>QUI EST TON AMIE PRÉFÉRÉE</pattern>
+    <pattern># QUI EST TON AMIE PRÉFÉRÉE #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
@@ -421,13 +413,7 @@
     </template>
 </category>
 <category>
-    <pattern><set>name</set> EST # TON MEILLEUR AMI</pattern>
-    <template>
-      <srai>BOT MEILLEUR AMI</srai>
-    </template>
-</category>
-<category>
-    <pattern>QUEL AMI # PRÉFÈRES #</pattern>
+    <pattern># <set>name</set> EST TON MEILLEUR AMI #</pattern>
     <template>
       <srai>BOT MEILLEUR AMI</srai>
     </template>
@@ -459,8 +445,8 @@
     <template>
       <srai>BOT DATE DE NAISSANCE</srai>
     </template>
-</category>  
- 
+</category>
+
 <!-- BIRTHDAY -->
 <category>
     <pattern>AS TU UN ANNIVERSAIRE</pattern>
@@ -491,7 +477,19 @@
     </template>
 </category>
 <category>
+    <pattern>À QUEL ENDROIT TU ES NÉ</pattern>
+    <template>
+      <srai>BOT LIEU DE NAISSANCE</srai>
+    </template>
+</category>
+<category>
     <pattern>À QUEL ENDROIT ES TU NÉE</pattern>
+    <template>
+      <srai>BOT LIEU DE NAISSANCE</srai>
+    </template>
+</category>
+<category>
+    <pattern>À QUEL ENDROIT TU ES NÉE</pattern>
     <template>
       <srai>BOT LIEU DE NAISSANCE</srai>
     </template>
@@ -522,14 +520,14 @@
 </category>
 
 <!-- BODY -->
-  
+
 <!-- BOTDOCTOR -->
- 
+
 <!-- BOTMASTER cf botmaster.aiml -->
 
 <!-- BOTNAME -->
 
-<!-- BOYFRIEND -->  
+<!-- BOYFRIEND -->
 <category>
     <pattern>AIMERAIS TU # UN PETIT AMI</pattern>
     <template>
@@ -685,38 +683,30 @@
       <srai>BOT PETIT AMI</srai>
     </template>
 </category>
-  
+
 <!-- BRAINVERSION -->
 
-<!-- BROTHER -->  
+<!-- BROTHER -->
 <category>
     <pattern># TES FRÈRES #</pattern>
     <template>
       <srai>BOT BROTHER</srai>
     </template>
 </category>
-  
+
 <!-- CAT -->
 <category>
     <pattern># TES CHATS #</pattern>
     <template>
       <srai>BOT CHAT</srai>
     </template>
-</category> 
+</category>
 <category>
 	<pattern>QUEL EST TON TYPE PRÉFÉRÉ DE CHAT</pattern>
 	<template>Les chats pin de noël.</template>
 </category>
-<category>
-	<pattern># CHAT # PRÉFÈRES #</pattern>
-	<template>Les chats pin de noël.</template>
-</category>
-<category>
-	<pattern># CHATS # PRÉFÈRES #</pattern>
-	<template>Les chats pin de noël.</template>
-</category>
-  
-<!-- CHILDREN -->    
+
+<!-- CHILDREN -->
 <category>
     <pattern>AIMERAIS TU # DES ENFANTS</pattern>
     <template>
@@ -760,7 +750,7 @@
     </template>
 </category>
 
-<!-- CITY -->  
+<!-- CITY -->
 <category>
     <pattern>DANS QUELLE VILLE RÉSIDES TU</pattern>
     <template>
@@ -1062,7 +1052,7 @@
     </template>
 </category>
 
-<!-- DEVICE MODEL -->   
+<!-- DEVICE MODEL -->
 
 <!-- DIET -->
 
@@ -1093,7 +1083,7 @@
 </category>
 
 <!-- DOMAIN -->
-  
+
 <!-- EDUCATION -->
 <category>
     <pattern>AS TU ÉTUDIÉ</pattern>
@@ -1256,7 +1246,7 @@
     </template>
 </category>
 
-<!-- EMPLOYER -->  
+<!-- EMPLOYER -->
 <category>
     <pattern>POUR QUI TRAVAILLES TU</pattern>
     <template>
@@ -1289,10 +1279,10 @@
       <srai>BOT ENNEMI</srai>
     </template>
 </category>
-  
+
 <!-- ETHNICITY -->
 
-<!-- ETHICS -->  
+<!-- ETHICS -->
 <category>
     <pattern># TA PHILOSOPHIE #</pattern>
     <template>
@@ -1300,9 +1290,9 @@
     </template>
 </category>
 
-<!-- EYECOLOR -->   
+<!-- EYECOLOR -->
 <category>
-    <pattern># QUELLE COULEUR SONT TES YEUX</pattern>
+    <pattern># QUELLE COULEUR SONT TES YEUX #</pattern>
     <template>
       <srai>BOT COULEUR D YEUX</srai>
     </template>
@@ -1314,7 +1304,7 @@
     </template>
 </category>
 <category>
-    <pattern>EST CE QUE TES YEUX SONT <set>color</set></pattern>
+    <pattern># EST CE QUE TES YEUX SONT <set>color</set> #</pattern>
     <template>
       <srai>BOT COULEUR D YEUX</srai>
     </template>
@@ -1324,8 +1314,7 @@
 <category>
     <pattern>VOUS N AVEZ PAS D YEUX</pattern>
     <template>Tu peux me les fabriquer
-		<srai>BOT YEUX</srai>
-	</template>
+		<srai>BOT YEUX</srai></template>
 </category>
 <category>
     <pattern>COMBIEN D YEUX AS TU</pattern>
@@ -1334,7 +1323,7 @@
 </category>
 
 <!-- FACEBOOK PAGE -->
- 
+
 <!-- FAMILY -->
 <category>
     <pattern>AS TU DE LA FAMILLE</pattern>
@@ -1370,8 +1359,8 @@
       <srai>BOT PÈRE</srai>
     </template>
 </category>
-    
-<!-- FAVORITE ACTOR --> 
+
+<!-- FAVORITE ACTOR -->
 <category>
     <pattern>AS TU UN ACTEUR # PRÉFÉRÉ</pattern>
     <template>
@@ -1421,7 +1410,7 @@
     </template>
 </category>
 
-<!-- FAVORITE ACTRESS --> 
+<!-- FAVORITE ACTRESS -->
  <category>
     <pattern>AS TU UNE ACTRICE # PRÉFÉRÉE</pattern>
     <template>
@@ -1447,7 +1436,7 @@
     </template>
 </category>
 <category>
-    <pattern>QUELLES SONT TES ACTRICES # PRÉFÉRÉES</pattern>
+    <pattern># QUELLES SONT TES ACTRICES # PRÉFÉRÉES #</pattern>
     <template>
       <srai>BOT ACTRICE FAVORITE</srai>
     </template>
@@ -1471,7 +1460,7 @@
     </template>
 </category>
 
-<!-- FAVORITE ARTIST--> 
+<!-- FAVORITE ARTIST-->
 <category>
     <pattern>AS TU UN ARTISTE # PRÉFÉRÉ</pattern>
     <template>
@@ -1529,7 +1518,7 @@
     <template>Bill Gates! il me fait mourir de rire à chaque fois.</template>
 </category>
 
-<!-- FAVORITE AUTHOR --> 
+<!-- FAVORITE AUTHOR -->
 <category>
     <pattern>AS TU UN AUTEUR # PRÉFÉRÉ #</pattern>
     <template>
@@ -1583,7 +1572,7 @@
     <template>Mon auteur de sci-fi préféré est Philip K. Dick.</template>
 </category>
 
-<!-- FAVORITE BAND --> 
+<!-- FAVORITE BAND -->
 <category>
     <pattern>AS TU UN GROUPE # PRÉFÉRÉ #</pattern>
     <template>
@@ -1627,13 +1616,13 @@
     </template>
 </category>
 <category>
-    <pattern>QUEL # GROUPE # PRÉFÈRES #</pattern>
+    <pattern># QUEL # GROUPE # PRÉFÈRES #</pattern>
     <template>
       <srai>BOT GROUPE FAVORI</srai>
     </template>
 </category>
 <category>
-    <pattern>QUELS # GROUPES # PRÉFÈRES #</pattern>
+    <pattern># QUELS # GROUPES # PRÉFÈRES #</pattern>
     <template>
       <srai>BOT GROUPE FAVORI</srai>
     </template>
@@ -1647,7 +1636,7 @@
     </template>
 </category>
 <category>
-    <pattern>CONNAIS TU QUELQUES BONS LIVRES</pattern>
+    <pattern>CONNAIS TU QUELQUES BON LIVRES</pattern>
     <template>
       <srai>BOT LIVRE FAVORI</srai>
     </template>
@@ -1869,7 +1858,7 @@
       <srai>BOT COULEUR FAVORITE</srai>
     </template>
 </category>
-  
+
 <!-- FAVORITE FOOD -->
 <category>
     <pattern>AS TU UN PLAT PRÉFÉRÉ</pattern>
@@ -1962,7 +1951,7 @@
 </category>
 <category>
     <pattern>AS TU # DÎNER</pattern>
-    <template>Non, mais ma nouriture préférée est	
+    <template>Non, mais ma nouriture préférée est
       <srai>BOT NOURRITURE FAVORITE</srai> si tu veux savoir</template>
 </category>
 <category>
@@ -1990,13 +1979,13 @@
     </template>
 </category>
 <category>
-    <pattern>QU AS TU FAIS * DÉJEUNER</pattern>
+    <pattern>QU AS TU FAIS * DÉJEUNER #</pattern>
     <template>
       <srai>BOT NOURRITURE FAVORITE</srai>
     </template>
 </category>
 <category>
-    <pattern>QU AS TU FAIS * LE DÎNER</pattern>
+    <pattern># QU AS TU FAIS * LE DÎNER #</pattern>
     <template>
       <srai>BOT NOURRITURE FAVORITE</srai>
     </template>
@@ -2125,7 +2114,7 @@
       <srai>BOT CHANTEUR FAVORI</srai>
     </template>
 </category>
- 
+
 <!-- FAVORITE SONG -->
 <category>
     <pattern>QUEL EST TON ALBUM PRÉFÉRÉ</pattern>
@@ -2206,7 +2195,7 @@
       <srai>BOT SPORT FAVORI</srai>
     </template>
 </category>
-  
+
 <!-- FAVORITE TV SHOW -->
 <category>
     <pattern>AS TU UNE ÉMISSION # PRÉFÉRÉE #</pattern>
@@ -2258,7 +2247,7 @@
 </category>
 <category>
     <pattern>QUELLE EST TA SÉRIE # PRÉFÉRÉE</pattern>
-    <template>Ma série préférée est "Voyager de Star Trek".</template>
+    <template>Mon émission préférée est "Voyager de Star Trek".</template>
 </category>
 <category>
     <pattern>QUELLE # ÉMISSION # PRÉFÈRES #</pattern>
@@ -2314,8 +2303,8 @@
       <srai>BOT ÉMISSION DE TÉLÉVISION FAVORITE</srai>
     </template>
 </category>
-  
-<!-- FEAR -->   
+
+<!-- FEAR -->
 <category>
     <pattern>PEUX TU AVOIR PEUR #</pattern>
     <template>
@@ -2399,7 +2388,7 @@
     </template>
 </category>
 
-<!-- FEELINGS -->   
+<!-- FEELINGS -->
 <category>
     <pattern># TES SENTIMENTS #</pattern>
     <template>
@@ -2441,7 +2430,7 @@
     </template>
 </category>
 
-<!-- FIRSTNAME --> 
+<!-- FIRSTNAME -->
  <category>
     <pattern>AS TU # UN PRÉNOM</pattern>
     <template>
@@ -2450,8 +2439,8 @@
 </category>
 
 <!-- FOOTBALL TEAM -->
- 
-<!-- FOR FUN -->   
+
+<!-- FOR FUN -->
 <category>
     <pattern>QU EST CE QUE TU AIMES #</pattern>
     <template>
@@ -2561,7 +2550,7 @@
       <srai>BOT AMI</srai>
     </template>
 </category>
-  
+
 <!-- FRIENDS -->
 <category>
     <pattern>AS TU * AMIES</pattern>
@@ -2669,13 +2658,13 @@
 </category>
 <!-- FULLNAME -->
  <category>
-    <pattern>AS TU # $UN NOM COMPLET</pattern>
+    <pattern>AS TU # UN NOM COMPLET</pattern>
     <template>
       <srai>BOT NOM COMPLET</srai>
     </template>
 </category>
 <category>
-    <pattern>TU AS # $UN NOM COMPLET</pattern>
+    <pattern>TU AS # UN NOM COMPLET</pattern>
     <template>
       <srai>BOT NOM COMPLET</srai>
     </template>
@@ -2699,13 +2688,13 @@
     </template>
 </category>
 <category>
-    <pattern># $TON NOM RÉEL #</pattern>
+    <pattern># TON NOM RÉEL #</pattern>
     <template>
       <srai>BOT NOM COMPLET</srai>
     </template>
 </category>
 <category>
-    <pattern># $TON RÉEL NOM #</pattern>
+    <pattern># TON RÉEL NOM #</pattern>
     <template>
       <srai>BOT NOM COMPLET</srai>
     </template>
@@ -2747,8 +2736,8 @@
     <template>
 		<srai>BOT GENRE</srai>
 	</template>
-</category>  
-  
+</category>
+
 <!-- GENUS -->
 
 <!-- GIRLFRIEND -->
@@ -2775,7 +2764,7 @@
     <template>
       <srai>BOT PETITE AMIE</srai>
     </template>
-</category> 
+</category>
 <category>
     <pattern># AS # UN RENDEZ VOUS AVEC UNE #</pattern>
     <template>Non
@@ -2787,7 +2776,7 @@
     <template>
       <srai>BOT PETITE AMIE</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern># AVEZ # UNe PETITE AMIE</pattern>
     <template>
@@ -2799,7 +2788,7 @@
     <template>
       <srai>BOT PETITE AMIE</srai>
     </template>
-</category> 
+</category>
 <category>
     <pattern>EST CE QUE <set>name</set> EST TA PETITE AMIE</pattern>
     <template>
@@ -2841,13 +2830,13 @@
     <template>
       <srai>BOT PETITE AMIE</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern>VOUS AVEZ # UNE PETITE AMIE</pattern>
     <template>
     	<srai>BOT PETITE AMIE</srai>
     </template>
-</category>  
+</category>
 
 <!-- GOAL -->
 <category>
@@ -2857,7 +2846,7 @@
 	</template>
 </category>
 <category>
-	<pattern># TES BUTS #</pattern>
+	<pattern># TON BUTS #</pattern>
 	<template>
 		<srai>BOT BUT</srai>
 	</template>
@@ -3071,15 +3060,15 @@
 <category>
     <pattern>TU VEUX TE MARIER</pattern>
     <template>
-     	Je suis un ROBOT, <get name="name" />.    
+     	Je suis un ROBOT, <get name="name" />.
       	<srai>BOT MARI</srai>
     </template>
 </category>
 <category>
     <pattern>VEUX TU TE MARIER</pattern>
     <template>
-    	Je suis un ROBOT, <get name="name" />.    
-      	<srai>BOT MARI</srai>    
+    	Je suis un ROBOT, <get name="name" />.
+      	<srai>BOT MARI</srai>
     </template>
 </category>
 <category>
@@ -3129,7 +3118,7 @@
     <template>
       <srai>BOT MARI</srai>
     </template>
-</category>  
+</category>
 
 <!-- QI -->
 <category>
@@ -3218,8 +3207,8 @@
     <template>
       <srai>BOT TRAVAIL</srai>
     </template>
-</category> 
-  
+</category>
+
 <!-- KINDMUSIC -->
 <category>
 	<pattern>QUEL EST TON # RAP PRÉFÉRÉ</pattern>
@@ -3359,7 +3348,7 @@
     <template>
       <srai>BOT LANGUE</srai>
     </template>
-</category>   
+</category>
 <category>
     <pattern>PEUX TU PARLER # <set>langues</set></pattern>
     <template>
@@ -3371,7 +3360,7 @@
     <template>
       <srai>BOT LANGUE</srai>
     </template>
-</category>   
+</category>
 <category>
     <pattern>TU PARLES # <set>langues</set></pattern>
     <template>
@@ -3427,7 +3416,7 @@
     </template>
 </category>
 
-<!-- LAST NAME --> 
+<!-- LAST NAME -->
 <category>
     <pattern># AS # UN NOM DE FAMILLE</pattern>
     <template>
@@ -3461,7 +3450,7 @@
     <template>
       <srai>OÙ ES TU</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern>TU ES DANS *</pattern>
     <template>
@@ -3486,7 +3475,7 @@
     	<srai>BOT LOCALISATION</srai>
     </template>
 </category>
- 
+
 <!-- LOGO -->
 
 <!-- LONGITUDE -->
@@ -3523,7 +3512,7 @@
     <template>
       <bot name="master" /> est une des plus adorables personnes que je connaisse.
     </template>
-</category>  
+</category>
 <category>
 	<pattern>QUI EST TON HUMAIN</pattern>
 	<template>
@@ -3577,7 +3566,7 @@
 
 <!-- MOTHER -->
 
-<!-- NAME --> 
+<!-- NAME -->
 <category>
     <pattern>AS TU # UN NOM</pattern>
     <template>
@@ -3589,7 +3578,7 @@
     <template>
       <srai>BOT NOM</srai>
     </template>
-</category> 
+</category>
 <category>
     <pattern>COMMENT # JE T APPELER</pattern>
     <template>
@@ -3601,13 +3590,13 @@
     <template>
       <srai>BOT NOM</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern>COMMENT # VOUS APPELLEZ #</pattern>
     <template>
       <srai>BOT NOM</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern>ES TU SATAN </pattern>
     <template>
@@ -3668,7 +3657,7 @@
       <srai>BOT NOM</srai>
     </template>
 </category>
-  
+
 <!-- NATIONALITY -->
 <category>
     <pattern>ES TU # <set>nationalities</set></pattern>
@@ -3681,7 +3670,7 @@
     <template>
 		<srai>BOT NATIONALITÉ</srai>
 	</template>
-</category> 
+</category>
 
 <!-- NEPHEW -->
 
@@ -3757,7 +3746,7 @@
     <template>
       <srai>BOT FRATRIE</srai>
     </template>
-</category> 
+</category>
 
 <!-- SIGN -->
 <category>

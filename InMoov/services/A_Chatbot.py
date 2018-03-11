@@ -4,8 +4,8 @@
 
 # ##############################################################################
 #               PERSONNAL PARAMETERS
-# ##############################################################################  
-  
+# ##############################################################################
+
 #read current service part config based on file name
 ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
@@ -46,13 +46,13 @@ if isChatbotActivated:
   chatBot.savePredicates()
   #start session based on last recognized person
   if chatBot.getPredicate("default","lastUsername")!="" and chatBot.getPredicate("default","lastUsername")!="unknown":chatBot.setUsername(unicode(chatBot.getPredicate("default","lastUsername"),'utf-8'))
-  
+
 else:
   errorSpokenFunc('lang_ChatbotError')
 
-def writeAIML():  
+def writeAIML():
   chatBot.writeAIMLIF()
-  
+
 # wikidata helper
 WikiFile="WIKIDATA_propEN.txt"
 if Language=="fr":WikiFile="WIKIDATA_propFR.txt"

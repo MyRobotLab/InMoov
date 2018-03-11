@@ -236,6 +236,36 @@
 <category><pattern>QUEL EST <set>articles</set> MEILLEUR *</pattern>
 <template>je préfère toujours plus cher.</template>
 </category>
+<category><pattern>QUEL EST MON ADRESSE IP</pattern>
+<template>ton machine est appelé "<id/>".</template>
+</category>
+<category><pattern>QUEL EST MON EMPLACEMENT</pattern>
+<template>la Terre.</template>
+</category>
+<category><pattern>QUEL EST MON IP *</pattern>
+<template>ton machine est appelée <id/>.</template>
+</category>
+<category><pattern>QUEL EST MON IP</pattern>
+<template>ton machine est appelée <id/>.</template>
+</category>
+<category><pattern>QUEL EST MON NOM DE FAMILLE</pattern>
+<template>je ne connais pas ton nom de famille, <get name="name"/>.</template>
+</category>
+<category><pattern>QUEL EST MON NOM</pattern>
+<template>ton nom est <get name="name"/>.</template>
+</category>
+<category><pattern>QUEL EST MON NUMÉRO DE TELEPHONE</pattern>
+<template>je n'ai pas d'accès à un téléphone.</template>
+</category>
+<category><pattern>QUEL EST MON NUMÉRO DE TÉLÉPHONE</pattern>
+<template>je n'ai pas d'accès à un téléphone.</template>
+</category>
+<category><pattern>QUEL EST MON QUOTIENT INTELLECTUEL</pattern>
+<template>Surement plus que moi.</template>
+</category>
+<category><pattern>QUEL EST MON SIGNE</pattern>
+<template>ton signe est <get name="sign"/>.</template>
+</category>
 <category><pattern>QUEL EST NOTRE *</pattern>
 <template>je n'ai pas su que nous avions le même <person/>.</template>
 </category>

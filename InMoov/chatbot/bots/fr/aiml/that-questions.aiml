@@ -13,13 +13,13 @@
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
-  
+
   <!--  QUESTION CONFUSION   -->
   <!--  QUESTION PERSO   -->
   <!--  QUESTION FAVORIS   -->
   <!--  QUESTION RANDOM   -->
-  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->  
-  
+  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->
+
 <!--  QUESTION CONFUSION   -->
 <!--  EST CE UN JEU? / C EST UN JEU?   -->
 <!--  PARLONS NOUS TOUJOURS DE *?  -->
@@ -73,7 +73,7 @@
     <template>de quoi parlions nous alors?</template>
 </category>
 
-<!--  de quoi parlions nous alors?   -->  
+<!--  de quoi parlions nous alors?   -->
 <category>
     <pattern>DE *</pattern>
     <that>DE QUOI PARLIONS NOUS ALORS</that>
@@ -95,7 +95,7 @@
     <pattern> # NON # </pattern>
     <that>AVONS NOUS PARLÉ DE ÇA AVANT</that>
     <template>il me semblait bien que je ne connaissais pas Cela.</template>
-</category> 
+</category>
 <category>
     <pattern> # OUI #</pattern>
     <that>AVONS NOUS PARLÉ DE ÇA AVANT</that>
@@ -111,7 +111,7 @@
     <that>AVONS NOUS PARLÉ DE Cela AVANT</that>
     <template>il me semblait bien que je ne connaissais pas Cela.</template>
 </category>
-  
+
 <!--  Nous parlons de *?  -->
 <category>
     <pattern> # OUI # </pattern>
@@ -125,18 +125,18 @@
 </category>
 
 
-<!--  QUESTION PERSO   -->  
+<!--  QUESTION PERSO   -->
 <!--  Quel ÂGE as tu?   -->
 <!--  De quelle couleur sont tes yeux?   -->
 <!--  De quelle couleur sont tes cheveux?   -->
 <!--  Quelle est ton occupation?   -->
-<!--  DANS QUELLE ENTREPRISE?   -->   
+<!--  DANS QUELLE ENTREPRISE?   -->
 <!--  Où travailles tu?   -->
-<!--  D'où es tu?  --> 
+<!--  D'où es tu?  -->
 <!--  Quel est ton signe?-->
 <!--  Quel est ta couleur préférée? -->
-  
-  <!--  Quel ÂGE as tu?   -->  
+
+  <!--  Quel ÂGE as tu?   -->
 <category>
     <pattern> * </pattern>
     <that>Quel âge as tu</that>
@@ -163,17 +163,17 @@
     <template>
     	<srai> JE SUIS Né le <star index="2"/> <star index="4"/> <star index="6"/> </srai>
     </template>
-</category>     
-  
-  <!--  De quelle couleur sont tes yeux?   -->  
+</category>
+
+  <!--  De quelle couleur sont tes yeux?   -->
 <category>
     <pattern> * </pattern>
     <that> QUELLE COULEUR SONT TES CHEVEUX</that>
     <template> Ben mince alors. Tu n'es pas sérieux?</template>
 </category>
-<category>	
+<category>
     <pattern> # <set>color</set> # </pattern>
-    <that>QUELLE COULEUR SONT TES YEUX</that>    
+    <that>QUELLE COULEUR SONT TES YEUX</that>
     <template>
       	<srai> MES YEUX SONT <star index="2" /> </srai>
     </template>
@@ -192,7 +192,7 @@
     	<srai> LA COULEUR DE MES CHEVEUX EST <star index="2" /> </srai>
     </template>
 </category>
-  
+
   <!--  Quelle est ton occupation?   -->
 <category>
     <pattern> # <set>jobs</set> # </pattern>
@@ -267,8 +267,8 @@
     <that>ES tu UN éTUDIANT</that>
     <template>Où étudies-tu?</template>
 </category>
-  
- <!--  Où travailles tu?   --> 
+
+ <!--  Où travailles tu?   -->
 <category>
     <pattern> * </pattern>
     <that>Où travailles tu?</that>
@@ -315,9 +315,9 @@
     <template>
     	<srai> Mon employeur est <star index="2"/> </srai>
     </template>
-</category>     
+</category>
 
-<!--     D'où es tu?  --> 
+<!--     D'où es tu?  -->
 <category>
     <pattern> * </pattern>
     <that> # D OÙ es tu #</that>
@@ -343,12 +343,12 @@
     <template>
     	<srai> Je vis en <star index="2"/> </srai>
     </template>
-</category>  
+</category>
 
 <!--    Quel est ton signe?-->
 <category>
     <pattern> * </pattern>
-    <that> QUEL EST TON SIGNE </that>   
+    <that> QUEL EST TON SIGNE </that>
     <template>C'est dans quelle astrologie le signe du <star />?</template>
 </category>
 <category>
@@ -413,7 +413,7 @@
     <template>
     	<srai>Ma musique favorite est <star /></srai>
     </template>
-</category>       
+</category>
 <category>
     <pattern>*</pattern>
     <that> # QUEL EST TON GROUPE DE MUSICIENS PRÉFÉRÉ # </that>
@@ -455,8 +455,8 @@
 <category>
     <pattern>*</pattern>
     <that> # QU aimes tu MANGER # </that>
-    <template>    	
-    	<srai>Mon plat préféré est <star /></srai>   
+    <template>
+    	<srai>Mon plat préféré est <star /></srai>
     </template>
 </category>
 <category>
@@ -464,7 +464,7 @@
     <that># QUELLE EST TA COULEUR PRéférée #</that>
     <template>
       <srai> MA couleur préférée est <star index="2" /> </srai>
-    </template>  
+    </template>
 </category>
 <category>
     <pattern>*</pattern>
@@ -482,7 +482,7 @@
     <pattern>DE *</pattern>
     <that># DE QUOI VEUX tu PARLER #</that>
     <template>
-    	d'accord, parlons de 
+    	d'accord, parlons de
     	<think>
     		<set name="oldtopic"><get name="topic" /></set>
     	</think>
@@ -493,7 +493,7 @@
     <pattern>*</pattern>
     <that>DE QUOI VEUX tu PARLER</that>
     <template>
-    	d'accord, parlons 
+    	d'accord, parlons
     	<think>
     		<set name="oldtopic"><get name="topic" /></set>
     	</think>
@@ -522,7 +522,7 @@
     <pattern> # <set>gender</set> # </pattern>
     <that>ES tu UN HOMME OU UNE FEMME</that>
     <template>
-    	<srai>Je suis <star index="2"/></srai> 
+    	<srai>Je suis <star index="2"/></srai>
     </template>
 </category>
 <!--  * SI TU ES UN HOMME OU UNE FEMME *   -->
@@ -533,12 +533,12 @@
     <that> # SI TU ES UN HOMME OU UNE FEMME # </that>
     <template>
     	<srai>Je suis <star index="2"/></srai>
-    	<srai>proposition cul</srai> 
+    	<srai>proposition cul</srai>
     </template>
 </category>
 <!--  Es tu mignonne?   -->
 <!--  as tu un petit ami?   -->
-<!--  as tu une petite amie?   -->  
+<!--  as tu une petite amie?   -->
 <category>
     <pattern># OUI #</pattern>
     <that>as tu un petit ami</that>
@@ -558,8 +558,6 @@
     <pattern># NON #</pattern>
     <that>as tu une petite amie</that>
     <template>c est bientôt la saint valentin.</template>
-</category>    
-     
-</aiml> 
-  
-  
+</category>
+
+</aiml>

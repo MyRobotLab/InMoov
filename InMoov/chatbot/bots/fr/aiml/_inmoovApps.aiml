@@ -11,7 +11,7 @@
   <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
 
-<!-- kids game 1 -->  
+<!-- kids game 1 -->
     <category>
     <pattern> # JOUER AUX MOTS # </pattern>
     <template>
@@ -19,28 +19,28 @@
 	<random>
 		<li>
 		Chouette! j aime apprendre avec toi. Quel mot veux-tu apprendre?
-		</li>  
+		</li>
 		<li>
 		Je connais plein de mots tu sais? Va zi, essayes!
-		</li>  
+		</li>
 		<li>
 		Je connais presque tous les mots du monde! Normal, je suis un robot. ALLons zi.
-		</li> 
+		</li>
 	</random>
 	<li>
 	Dis moi, STOP JEUX! pour arrêter
 	</li>
-	
+
     </template>
   </category>
-  
+
 	<category>
     <pattern>jouer au jeu démo</pattern>
     <template>
 	<srai># JOUER AUX MOTS #</srai>
     </template>
 	</category>
-  
+
   <topic name="playwordsgame">
     <category>
       <pattern>*</pattern>
@@ -53,20 +53,20 @@
           </mrl>
         </oob>
       </template>
-    </category>  
+    </category>
   </topic>
-    
-<!-- end kids game -->  
 
-<!-- rockpaperscissors game -->   
+<!-- end kids game -->
+
+<!-- rockpaperscissors game -->
  	<category>
     <pattern># PIERRE FEUILLE CISEAU #</pattern>
     <template>
 	<srai># chifoumi #</srai>
     </template>
 	</category>
- 
- 
+
+
   <category>
   <pattern># chifoumi #</pattern>
   <template>
@@ -76,25 +76,25 @@
 	<random>
 		<li>
 		Jouont à chifoumi!
-		</li>  
+		</li>
 		<li>
 		j aime ce jeu!
-		</li>  
+		</li>
 	</random>
 	<li>
 	3 points pour gagner! Dis moi, STOP JEUX! pour arrêter. Tu commences. Dis PIERRE FEUILLE ou CISEAU.
 	</li>
-	
+
     </template>
   </category>
 
-  
+
   <topic name="rockpaperscissors">
-  
+
     <category>
       <pattern>PIERRE</pattern>
       <template>
-      
+
        <random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
@@ -104,7 +104,7 @@
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-</li>  
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         J'ai des ciseaux, ta pierre les a cassé.
@@ -117,11 +117,11 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         J'ai une pierre aussi.
-</li> 
+</li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
-    </category> 
+    </category>
 
     <category>
       <pattern>FEUILLE</pattern>
@@ -135,7 +135,7 @@
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-</li>  
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         Félicitation, j'ai une pierre, ton papier la recouvre.
@@ -148,33 +148,33 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
         J'ai une feuille aussi.
-</li> 
+</li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
-    </category> 
-    
+    </category>
+
  	<category>
     <pattern>CISEAUX</pattern>
     <template>
 	<srai>CISEAU</srai>
     </template>
 	</category>
- 
+
     <category>
       <pattern>CISEAU</pattern>
       <template>
-      
+
        <random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
-        J'ai une pierre, désolé ça casse les ciseaux! 
+        J'ai une pierre, désolé ça casse les ciseaux!
         <think><set name="rockpaperscissorsRobotPoints">
         <javascript>
         eval( <get name="rockpaperscissorsRobotPoints" /> + 1 );
         </javascript>
         </set></think>
-</li>  
+</li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
         J'ai une feuille, tes ciseaux l'ont coupée
@@ -187,11 +187,11 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         égalité, j'ai des ciseaux aussi.
-</li> 
+</li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai>
       </template>
-    </category> 
+    </category>
 
   <category>
       <pattern>SYSTEM_COUNT_POINTS</pattern>
@@ -205,18 +205,18 @@
       </condition>
       </template>
   </category>
-      
+
      <category>
       <pattern>*</pattern>
       <template>
       J'ai pas compris, Dis PIERRE FEUILLE ou CISEAU.
       </template>
-    </category> 
-    
+    </category>
+
   </topic>
-  
- 
-<!-- end rockpaperscissors  -->  
+
+
+<!-- end rockpaperscissors  -->
 
 	<category>
     <pattern>TOP JEUX</pattern>
@@ -224,23 +224,23 @@
 	<srai>STOP JEUX</srai>
     </template>
 	</category>
-	
+
 	<category>
     <pattern>STOP JE</pattern>
     <template>
 	<srai>STOP JEUX</srai>
     </template>
 	</category>
-    
+
    <category>
     <pattern>STOP JEUX</pattern>
     <template>
 	<think><set name="topic">default</set></think>
     <li>
     A bientôt, j aime jouer!
-</li>  
+</li>
     </template>
 	</category>
 
-    
+
 </aiml>

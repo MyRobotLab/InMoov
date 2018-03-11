@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: dialog.aiml -->
-<!-- Author: Dr. Richard S. Wallace -->
-<!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-<!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-<!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: марта 11, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!--  -->
-<!-- modified: Gael Langevin -->
-<!-- Last modified: December 11, 2017 -->
-<!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-<!-- This file works with ProgramAB service with the software MyRobotLab -->
-<!-- For more information see http://www.myrobotlab.org -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
-<category>
-	<pattern>CLEAR DIALOG HISTORY</pattern>
-	<template>Cleared.
+<category><pattern>CLEAR DIALOG HISTORY</pattern>
+<template>Cleared.
 		<think>
 			<set name="response1"/>
 			<set name="request1"/>
@@ -81,14 +81,10 @@
 			<set name="request30"/>
 			<set name="response31"/>
 			<set name="request31"/>
-		</think>
-	</template>
+		</think></template>
 </category>
-
-<category>
-	<pattern>SEND BUG REPORT</pattern>
-	<template>
-		Sending transcript to callmom-info@pandorabots.com
+<category><pattern>SEND BUG REPORT</pattern>
+<template>Sending transcript to callmom-info@pandorabots.com
 		<oob>
 			<email>
 				<to>callmom-info@pandorabots.com</to>
@@ -97,14 +93,10 @@
 					<srai>DIALOG HISTORY</srai>
 				</body>
 			</email>
-		</oob>
-	</template>
-	</category>
-	
-<category>
-	<pattern>REPORT A PROBLEM</pattern>
-	<template>
-	   <oob>
+		</oob></template>
+</category>
+<category><pattern>REPORT A PROBLEM</pattern>
+<template><oob>
         <dialog>
           <title>Would you like to send a bug report?</title>
           <list>
@@ -114,50 +106,29 @@
         </dialog>
       </oob>
 	  To help the developers understand your problem, you can choose to send us a transcript of your recent conversation with InMoov.
-	  You can add your own comments to the email message too. Would you like to send a report?
-	</template>
+	  You can add your own comments to the email message too. Would you like to send a report?</template>
 </category>
-
-<category>
-	<pattern>YES</pattern>
-	<that>WOULD YOU LIKE TO SEND A REPORT</that>
-	<template>
-		<srai>SEND BUG REPORT</srai>
-	</template>
+<category><pattern>YES</pattern><that>WOULD YOU LIKE TO SEND A REPORT</that>
+<template><srai>SEND BUG REPORT</srai></template>
 </category>
-
-<category>
-	<pattern>XEXCHANGE *</pattern>
-	<template>
-		<think>Badly formatted dialog exchage: <star/></think>
-	</template>
+<category><pattern>XEXCHANGE *</pattern>
+<template><think>Badly formatted dialog exchage: <star/></think></template>
 </category>
-
-<category>
-	<pattern>XEXCHANGE * XHUMAN * XBOT SENDING TRANSCRIPT *</pattern>
-	<template>
-		<think>Badly formatted dialog exchage: <star/></think>
-	</template>
+<category><pattern>XEXCHANGE * XHUMAN * XBOT SENDING TRANSCRIPT *</pattern>
+<template><think>Badly formatted dialog exchage: <star/></think></template>
 </category>
-
-<category>
-	<pattern>XEXCHANGE * XHUMAN * XBOT *</pattern>
-	<template>
-		<think>
+<category><pattern>XEXCHANGE * XHUMAN * XBOT *</pattern>
+<template><think>
         	<set name="request"> <star index="2"/> </set>
         	<set name="response"> <star index="3"/> </set>
       	</think>
       	<condition name="request">
         	<li value="unknown"/>
         	<li> <get name="name"/>: <get name="request"/><get name="botname"/>: <get name="response"/></li>
-      	</condition>
-     </template>
+      	</condition></template>
 </category>
-
-<category>
-	<pattern>DIALOG HISTORY</pattern>
-	<template>
-	  <srai>XEXCHANGE request31 XHUMAN  <request index="31"/> XBOT <response index="31"/></srai>
+<category><pattern>DIALOG HISTORY</pattern>
+<template><srai>XEXCHANGE request31 XHUMAN  <request index="31"/> XBOT <response index="31"/></srai>
       <srai>XEXCHANGE request30 XHUMAN  <request index="30"/> XBOT <response index="30"/></srai>
       <srai>XEXCHANGE request29 XHUMAN  <request index="29"/> XBOT <response index="29"/></srai>
       <srai>XEXCHANGE request28 XHUMAN  <request index="28"/> XBOT <response index="28"/></srai>
@@ -187,20 +158,16 @@
       <srai>XEXCHANGE request4 XHUMAN  <request index="4"/> XBOT <response index="4"/></srai>
       <srai>XEXCHANGE request3 XHUMAN  <request index="3"/> XBOT <response index="3"/></srai>
       <srai>XEXCHANGE request2 XHUMAN  <request index="2"/> XBOT <response index="2"/></srai>
-      <srai>XEXCHANGE request1 XHUMAN  <request index="1"/> XBOT <response index="1"/></srai>
-    </template>
+      <srai>XEXCHANGE request1 XHUMAN  <request index="1"/> XBOT <response index="1"/></srai></template>
 </category>
-
-<category>
-	<pattern>TRANSCRIPT</pattern>
-	<template>Sending transcript to <get name="email"/>.
+<category><pattern>TRANSCRIPT</pattern>
+<template>Sending transcript to <get name="email"/>.
 	  <oob>
 		<email>
 			<to><get name="email"/></to>
 			<subject>Transcript of <get name="botname"/> with <get name="name"/> on <date/></subject>
 			<body><srai>DIALOG HISTORY</srai></body>
 		</email>
-	  </oob>
-	</template>
+	  </oob></template>
 </category>
 </aiml>

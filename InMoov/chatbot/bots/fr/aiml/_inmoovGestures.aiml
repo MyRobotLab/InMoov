@@ -2,8 +2,8 @@
 <aiml>
   <!-- File: _inmoovGestures.aiml -->
   <!-- Author: Gael Langevin -->
-  <!-- Last modified: Decembre 29, 2017 -->
-  <!-- by Gael Langevin : apostrophe -->
+  <!-- Last modified: May 31, 2017 -->
+  <!-- by Anthony Gallot : phonehome -->
   <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the  -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -578,7 +578,7 @@
       <template>Joyeux anniversaire.
         <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob>
       </template>
-    </category>    
+    </category>
     <category>
       <pattern>PHOTOS</pattern>
       <template>Photo.
@@ -654,7 +654,7 @@
       <template>starting TRACKING SKELETON with kinect
         <oob><mrl><service>python</service><method>exec</method><param>startcopygestures()</param></mrl></oob></template>
     </category>
-    
+
      <category>
       <pattern>TRACKIN SQUELETTE</pattern>
       <template>
@@ -856,13 +856,13 @@
       <template>Je prends l'objet.
         <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
     </category>
-    
+
     <category>
       <pattern>READY</pattern>
       <template>Ready.
         <oob><mrl><service>python</service><method>exec</method><param>ready()</param></mrl></oob></template>
     </category>
-   
+
     <category>
       <pattern>that WAS FUN</pattern>
       <template>C'était fun.
@@ -1170,7 +1170,7 @@
     </category>
     <category>
       <pattern>STOP MODE DE VIE ALÉATOIRE</pattern>
-      <template>D'accord
+      <template>D accord
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
     </category>
     <category>
@@ -1179,9 +1179,9 @@
         <srai>STOP MODE DE VIE ALÉATOIRE</srai>
       </template>
     </category>
-    
+
     <!-- deprecated ( enable is automatic ) -->
-    
+
     <category>
      <pattern>CONNECTE LA TÊTE</pattern>
       <template>Je connecte ma tête.
@@ -1338,5 +1338,5 @@
       <template>Je déconnecte mon capteur P.I.R.
         <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
     </category>
-    
+
 </aiml>

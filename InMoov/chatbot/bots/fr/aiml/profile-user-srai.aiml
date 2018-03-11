@@ -13,14 +13,14 @@
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
-  
+
   <!--  CLIENT PROPERTIES   -->
   <!--  QUESTION CONFUSION   -->
   <!--  QUESTION PERSO   -->
   <!--  QUESTION FAVORIS   -->
   <!--  QUESTION RANDOM   -->
-  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)\SEXUAL ORIENTATION  --> 
- 
+  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)\SEXUAL ORIENTATION  -->
+
  <category>
     <pattern>CLIENT PARAMETERS</pattern>
     <template>
@@ -32,8 +32,8 @@
     <template>
       <srai>CLIENT PROPERTIES</srai>
     </template>
-  </category>   
-  
+  </category>
+
 <!--  QUESTION CONFUSION   -->
 
 <!--  QUESTION PERSO   -->
@@ -42,7 +42,7 @@
 <!-- yeux -->
 <!-- cheveux -->
 <!-- occupation -->
-<!-- localisation  --> 
+<!-- localisation  -->
 <!-- signe astrologique -->
 <!-- favorite -->
 <!-- RELATIONS/MARITAL STATUS -->
@@ -54,7 +54,7 @@
     </template>
 </category>
 
-  <!-- Age -->      
+  <!-- Age -->
 <category>
     <pattern> # CONNAIS TU MON ÂGE # </pattern>
     <template>
@@ -124,7 +124,7 @@
 <category>
 	<pattern> # MON ANNIVERSAIRE EST LE <set>number</set> <set>mois</set> </pattern>
 	<template><srai> je suis né le <star index="2"/> <star index="3"/> </srai></template>
-</category>  
+</category>
 <category>
 	<pattern> # MON ANNIVERSAIRE EST en <set>mois</set></pattern>
 	<template><srai> JE SUIS Né en <star index="2"/> </srai></template>
@@ -148,9 +148,9 @@
     <template>
       <srai>MON ANNIVERSAIRE</srai>
     </template>
-</category>   
+</category>
 
-  <!-- yeux -->  
+  <!-- yeux -->
 <category>
     <pattern># J AI DES YEUX <set>color</set></pattern>
     <template>
@@ -184,7 +184,7 @@
     <template>
     	<srai> LA COULEUR DE MES CHEVEUX EST <star index="3" /> </srai>
     </template>
-</category>  
+</category>
 <category>
   	<pattern># MES CHEVEUX SONT <set>color</set> #</pattern>
 	<template>
@@ -202,7 +202,7 @@
     <template>
     	<srai>LA LONGUEUR DE MES CHEVEUX EST <star index="3" /></srai>
     </template>
-</category>  
+</category>
 <category>
   	<pattern># MES CHEVEUX SONT #</pattern>
 	<template>
@@ -222,7 +222,7 @@
 	</template>
 </category>
 
-  <!-- occupation, métier,...  -->  
+  <!-- occupation, métier,...  -->
 <category>
     <pattern>Je suis # <set>jobs</set> # </pattern>
     <template>
@@ -255,17 +255,17 @@
 </category>
 <category>
     <pattern> # JE N AI PAS # EMPLOI # </pattern>
-    <template> 
-    	<srai>JE SUIS AU CHÔMAGE</srai> 
+    <template>
+    	<srai>JE SUIS AU CHÔMAGE</srai>
     </template>
 </category>
-  
+
 <category>
     <pattern>JE # à L ÉCOLE #</pattern>
     <template>
       <srai>JE SUIS ÉTUDIANT</srai>
     </template>
-</category>   
+</category>
 <category>
     <pattern>JE suis # étudiante #</pattern>
     <template>
@@ -367,7 +367,7 @@
     <template>
     	<srai>JE SUIS pensionné</srai>
     </template>
-</category>                
+</category>
 
 <category>
     <pattern># J ENSEIGNE # </pattern>
@@ -394,7 +394,7 @@
     <template>
       <srai>Mon employeur est <star index="3"/></srai>
     </template>
-</category> 
+</category>
 <category>
     <pattern><set>articles</set> #  où je travaille est * </pattern>
     <template>
@@ -452,19 +452,19 @@
 	</template>
 </category>
 
-<!--    signe astrologique --> 
+<!--    signe astrologique -->
 <category>
 	<pattern>MON SIGNE # EST # <set>starsign</set></pattern>
 	<template><srai>Je suis <star index="3"/></srai></template>
 </category>
 <category>
-  	<pattern>C EST QUOI MON SIGNE #</pattern>
+  	<pattern>C EST QUOI MON SIGNE DU ZODIAQUE</pattern>
 	<template>
 		<srai>MON SIGNE ASTROLOGIQUE</srai>
 	</template>
 </category>
 <category>
-	<pattern>QUEL EST MON SIGNE #</pattern>
+  	<pattern>QUEL EST MON SIGNE DU ZODIAQUE</pattern>
 	<template>
 		<srai>MON SIGNE ASTROLOGIQUE</srai>
 	</template>
@@ -517,7 +517,7 @@
     <pattern>LE NOM DE MON MARI EST <set>name</set></pattern>
     <template>
     	<srai>MON MARI <star/></srai>
-    </template>    	
+    </template>
 </category>
 <category>
 	<pattern>QUI EST MON MARI</pattern>
@@ -550,13 +550,13 @@
   <category>
     <pattern>JE SUIS CÉLIBATAIRE AUSSI</pattern>
     <template>Tu es libre de faire toutes les choses que tu aimes.</template>
-  </category> 
+  </category>
   <category>
     <pattern>MON PETIT AMI JUSTE *</pattern>
     <template>
       <srai>MON PETIT AMI <star /></srai>
     </template>
-  </category> 
+  </category>
   <category>
     <pattern>* EST MON PETIT AMI</pattern>
     <template>Depuis combien de temps es tu ensemble?</template>
@@ -599,7 +599,7 @@
     <pattern>JE N AI PAS DE SŒUR</pattern>
     <template>En ce qui concerne ton FRèRE?</template>
   </category>
-  
+
 <category>
 	<pattern>C EST MON FRÈRE</pattern>
 	<template>Vraiment, qui est plus vieux?</template>
@@ -620,7 +620,7 @@
 <!--  Quel est ton film favori?   -->
 <category>
 	<pattern># Mon film préféré EST * </pattern>
-	<template>				
+	<template>
 		<srai>Mon film favori est <star index="2"/></srai>
 	</template>
 </category>
@@ -629,7 +629,7 @@
 	<template>
 		<srai>QUEL est mon film FAVORI</srai>
 	</template>
-</category>  
+</category>
 <category>
 	<pattern>CONNAIS TU mon film PRÉFÉRÉ</pattern>
 	<template>
@@ -659,7 +659,7 @@
     <template>
       <srai>MON FILM PRÉFÉRÉ EST ROBOCOP</srai>
     </template>
-  </category>  
+  </category>
   <category>
     <pattern>Il faut sauver le soldat Ryan</pattern>
     <template>
@@ -670,7 +670,7 @@
 <!--  Quel est ton livre préféré?   -->
 <category>
 	<pattern># mon livre préféré préféré EST * </pattern>
-	<template>				
+	<template>
 		<srai>mon livre favori est <star index="2"/></srai>
 	</template>
 </category>
@@ -685,7 +685,7 @@
 	<template>
 		<srai>QUEL est mon livre FAVORI</srai>
 	</template>
-</category>  
+</category>
 <category>
 	<pattern>CONNAIS TU mon livre PRÉFÉRÉ</pattern>
 	<template>
@@ -712,13 +712,13 @@
     </template>
 </category>
 
-<!--  Quel est ta couleur préférée?   --> 
+<!--  Quel est ta couleur préférée?   -->
 <category>
 	<pattern># MA COULEUR favorite EST # <set>color</set> #</pattern>
 	<template>
 		<think>
 			<set name="color"><star index="3"/></set>
-		</think>		
+		</think>
 		<srai>Ma couleur préférée est <get name="color"/></srai>
 	</template>
 </category>
@@ -727,7 +727,7 @@
 	<template>
 		<think>
 			<set name="color"><star index="3"/></set>
-		</think>		
+		</think>
 		<srai>Ma couleur préférée est <get name="color"/></srai>
 	</template>
 </category>
@@ -736,7 +736,7 @@
 	<template>
 		<srai>QUELLE EST MA COULEUR FAVORITE</srai>
 	</template>
-</category>  
+</category>
 <category>
 	<pattern>CONNAIS TU MA COULEUR PRÉFÉRÉE</pattern>
 	<template>
@@ -748,7 +748,7 @@
 	<template>
 		<srai>QUELLE EST MA COULEUR FAVORITE</srai>
 	</template>
-</category>  
+</category>
 <category>
 	<pattern>CONNAIS TU MA COULEUR FAVORITE</pattern>
 	<template>
@@ -789,19 +789,19 @@
   </category>
 
  <!--  QUESTION RANDOM   -->
- 
-  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->   
+
+  <!--  QUESTION GENRE (DEMANDEGENREQUESTION)  -->
 <category>
 	<pattern>QUEL EST MON GENRE</pattern>
 	<template>
 		<srai>MON GENRE</srai>
-	</template>	
+	</template>
 </category>
 <category>
 	<pattern>QUEL EST MON SEXE</pattern>
 	<template>
 		<srai>MON GENRE</srai>
-	</template>	
+	</template>
 </category>
 <category>
     <pattern>SUIS JE # <set>gender</set></pattern>
@@ -876,7 +876,7 @@
 	</template>
 </category>
 
-  
+
 <category>
     <pattern>SUIS JE # <set>gender</set> # </pattern>
     <template>
@@ -893,47 +893,20 @@
 <category>
     <pattern>JE SUIS UN HOMO</pattern>
     <template>
-      <srai>JE SUIS UN HOMME</srai>	
+      <srai>JE SUIS UN HOMME</srai>
       <srai>JE SUIS GAI</srai>
     </template>
-</category>  
+</category>
 <category>
     <pattern>JE SUIS UN HOMME SEXY</pattern>
     <template>
       <srai>JE SUIS SEXY</srai>
       <srai>je suis un homme</srai>
     </template>
-</category> 
-  
+</category>
+
 <category>
     <pattern>QUEL EST MON QI</pattern>
     <template>Je ne peux pas juger de ton intelligence avec une telle pertinence.</template>
 </category>
-<category><pattern>QUEL EST MON ADRESSE IP</pattern>
-<template>ton machine est appelé "<id/>".</template>
-</category>
-<category><pattern>QUEL EST MON EMPLACEMENT</pattern>
-<template>la Terre.</template>
-</category>
-<category><pattern>QUEL EST MON IP *</pattern>
-<template>ton machine est appelée <id/>.</template>
-</category>
-<category><pattern>QUEL EST MON IP</pattern>
-<template>ton machine est appelée <id/>.</template>
-</category>
-<category><pattern>QUEL EST MON NOM DE FAMILLE</pattern>
-<template>je ne connais pas ton nom de famille, <get name="name"/>.</template>
-</category>
-<category><pattern>QUEL EST MON NOM</pattern>
-<template>ton nom est <get name="name"/>.</template>
-</category>
-<category><pattern>QUEL EST MON NUMÉRO DE TELEPHONE</pattern>
-<template>je n'ai pas d'accès à un téléphone.</template>
-</category>
-<category><pattern>QUEL EST MON NUMÉRO DE TÉLÉPHONE</pattern>
-<template>je n'ai pas d'accès à un téléphone.</template>
-</category>
-<category><pattern>QUEL EST MON QUOTIENT INTELLECTUEL</pattern>
-<template>Surement plus que moi.</template>
-</category>    
 </aiml>

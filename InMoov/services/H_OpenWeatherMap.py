@@ -25,11 +25,11 @@ def isTheSunShiny(townParam="town",period=1):
   if townParam=="town" or townParam=="":townParam=town
   print period,townParam
   weather=OpenWeatherMap.fetchForecast(townParam,period)
-  
+
   if weather:
     print weather[1]
     forecast=weather[3].decode("utf-8")
-    
+
     print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]).split(',')[0] + " COMMENTAIRE " + str(forecast)
     chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]).split(',')[0] + " COMMENTAIRE " + str(forecast))
   else:
