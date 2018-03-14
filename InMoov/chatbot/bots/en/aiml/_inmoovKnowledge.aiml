@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: _inmoovKnowledge.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -153,7 +153,7 @@
 		</learnf></template>
 </category>
 <category><pattern>AN * IS AN *</pattern>
-<template>Ok, I will remember an <star/> is an <star index="2"/>.	
+<template>Ok, I will remember an <star/> is an <star index="2"/>.
 		<learnf>
 			<category>
 				<pattern>WHAT IS AN <eval><star/></eval></pattern>
@@ -478,7 +478,7 @@
 </category>
 <category><pattern>FAMILIARNAMEVERB2SP *</pattern>
 <template><think>
-        <set name="learnpattern">Who <star index="2"/><person><star index="3"/></person></set>?  
+        <set name="learnpattern">Who <star index="2"/><person><star index="3"/></person></set>?
 		<set name="learntemplate">Your <star/></set>.
 		<learnf>
 			<category>
@@ -489,7 +489,7 @@
 	  </think>
 	  Now you can ask me: "<get name="learnpattern"/>"?
 	  <think>
-	  	<set name="learnpattern">What does my <star/><map name="verb2sp2verb1sp"><star index="2"/></map></set>? 
+	  	<set name="learnpattern">What does my <star/><map name="verb2sp2verb1sp"><star index="2"/></map></set>?
 		<set name="learntemplate"><person><star index="3"/></person></set>.
 		<learnf>
 			<category>
@@ -502,7 +502,7 @@
 </category>
 <category><pattern>* VERB2SP *</pattern>
 <template><think>
-        <set name="learnpattern"> <srai>QUESTIONWORD <star/></srai> <star index="2"/> <person> <star index="3"/> </person> </set>?  
+        <set name="learnpattern"> <srai>QUESTIONWORD <star/></srai> <star index="2"/> <person> <star index="3"/> </person> </set>?
 		<set name="learntemplate"><star/></set>.
 		<learnf>
 			<category>
@@ -513,7 +513,7 @@
 	  </think>
 	  Now you can ask me: "<get name="learnpattern"/>"?
 	  <think>
-	  	<set name="learnpattern">What does <star/><map name="verb2sp2verb1sp"><star index="2"/></map></set>? 
+	  	<set name="learnpattern">What does <star/><map name="verb2sp2verb1sp"><star index="2"/></map></set>?
 		<set name="learntemplate"><person><star index="3"/></person></set>.
 		<learnf>
 			<category>

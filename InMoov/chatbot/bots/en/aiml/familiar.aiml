@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: familiar.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -473,7 +473,7 @@
       <condition name="familiarpredicate">
         <li value="UNKNOWN"/>
         <li>
-			I will remember your <lowercase><get name="familiarpredicate"/></lowercase>'s name is 
+			I will remember your <lowercase><get name="familiarpredicate"/></lowercase>'s name is
 			<set name="contactname">
 				<condition name="familiarpredicate">
 					<li value="SON"><set name="son"><get name="contactname"/></set></li>

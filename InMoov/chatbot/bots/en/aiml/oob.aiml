@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: oob.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -17,7 +17,7 @@
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>TEACH ME LANGUAGE</pattern>
-<template><srai>LANGUAGE</srai> Let's try a searching for "learn <star/>". 
+<template><srai>LANGUAGE</srai> Let's try a searching for "learn <star/>".
       <oob><search>LEARN <star/></search></oob></template>
 </category>
 <category><pattern>CLEAR LOG</pattern>
@@ -34,7 +34,7 @@
         <set name="featurerequest">
           <star/>
         </set>
-      </think> Click send to mail your feature request.  
+      </think> Click send to mail your feature request.
 	  <oob>
 	  	<email>
 	  		<to>callmom-info@pandorabots.com</to>
@@ -47,19 +47,19 @@
 	  </oob></template>
 </category>
 <category><pattern>SHOW ME A VIDEO *</pattern>
-<template>I'm looking up videos for you.  
+<template>I'm looking up videos for you.
     	<oob><search>VIDEO <star/></search></oob></template>
 </category>
 <category><pattern>SHOW ME A WEBSITE ABOUT *</pattern>
-<template>Let's try a google search.  
+<template>Let's try a google search.
     	<oob><search><star/></search></oob></template>
 </category>
 <category><pattern>I WANT TO BUY *</pattern>
-<template>Let's try to find a store on the map.  
+<template>Let's try to find a store on the map.
     	<oob><map><star/></map></oob></template>
 </category>
 <category><pattern>I AM FAT</pattern>
-<template>I'm looking for a weight loss center near you.  
+<template>I'm looking for a weight loss center near you.
     	<oob><map>weight loss</map></oob></template>
 </category>
 <category><pattern>I AM HUNGRY</pattern>
@@ -76,7 +76,7 @@
         <search>
           <star/>
         </search>
-      </oob> 
+      </oob>
       I'm opening your browser.</template>
 </category>
 <category><pattern>SEARCH *</pattern>
@@ -113,16 +113,16 @@
 <template>Here are the directions.  <oob><directions><to><star/></to></directions></oob></template>
 </category>
 <category><pattern>DIRECTIONS FROM * TO *</pattern>
-<template>Here are the directions from <star/> to <star index="2"/>.  
+<template>Here are the directions from <star/> to <star index="2"/>.
     	<oob><directions><from><star/></from><to><star index="2"/></to></directions></oob></template>
 </category>
 <category><pattern>LAUNCH CAMERA</pattern>
-<template>Launching the camera.  
+<template>Launching the camera.
     <srai>CAMERA ON</srai></template>
 </category>
 <category><pattern>LAUNCH *</pattern>
-<template>I didn't find <star/> among your installed apps.  Let's try to find it. 
-    	<think><set name="it"><star/></set></think>.  
+<template>I didn't find <star/> among your installed apps.  Let's try to find it.
+    	<think><set name="it"><star/></set></think>.
     	<oob><search><star/></search></oob></template>
 </category>
 <category><pattern>LAUNCH * DOT COM</pattern>
@@ -219,7 +219,7 @@
 <template>Now dialing emergency services from your location.  <oob><dial>911</dial></oob></template>
 </category>
 <category><pattern>PLAY *</pattern>
-<template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
+<template>Now loading your choice of music. I hope you like it. Please wait a moment while I load it up.
     	<oob>
     		<mrl>
     			<service>python</service>
@@ -266,7 +266,7 @@
 <template><oob>
         <url>http://www.facebook.com/dialog/feed?_path=feed&amp;app_id=294334050655455&amp;redirect_uri=https://www.facebook.com&amp;display=touch</url>
       </oob>
-      Now opening a screen for you to update your status. 
+      Now opening a screen for you to update your status.
       Type or speak your message into the status box and press share to post it on your wall.</template>
 </category>
 <category><pattern>OPEN GOOGLE</pattern>

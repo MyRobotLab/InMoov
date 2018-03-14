@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: contactaction.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -205,7 +205,7 @@ What is your message to <get name="displayname"/>?</template>
           </list>
         </dialog>
       </oob>
-You have multiple contacts named <get name="contactname"/>: <get name="multiplenames"/>.  Which one would you like to 
+You have multiple contacts named <get name="contactname"/>: <get name="multiplenames"/>.  Which one would you like to
 <lowercase><get name="modecom"/></lowercase>?</template>
 </category>
 <category><pattern>CONTACTDIALOG *</pattern>
@@ -585,7 +585,7 @@ I've saved <get name="contactname"/> to your contacts.
                           <get name="contactname"/>
                         </set>
                       </think>
-                      <!--          <srai>LEARN CONTACTID <set name="contactid"><srai>NEWCONTACTID</srai></set> DISPLAYNAME <get name="contactname"/></srai> 
+                      <!--          <srai>LEARN CONTACTID <set name="contactid"><srai>NEWCONTACTID</srai></set> DISPLAYNAME <get name="contactname"/></srai>
  -->
                       <addinfo>
                         <displayname>
@@ -715,7 +715,7 @@ familiarcontactid = <get name="familiarcontactid"/>.
                 <li value="unknown">
                   <think>
                     <set name="topic">ASKING TO ADD NEW CONTACTURI</set>
-                  </think> 
+                  </think>
       You haven't yet added <condition name="contacttype"><li value="unknown">an</li><li>a <get name="contacttype"/></li></condition> email address for <get name="displayname"/> to your contacts.  Would you like to add one?
       </li>
                 <li>
@@ -736,7 +736,7 @@ familiarcontactid = <get name="familiarcontactid"/>.
                 <li value="unknown">
                   <think>
                     <set name="topic">ASKING TO ADD NEW CONTACTURI</set>
-                  </think> 
+                  </think>
 You haven't yet added <condition name="contacttype"><li value="unknown">a phone</li><li>a <get name="contacttype"/></li></condition> number for <get name="displayname"/> to your contacts.  Would you like to add one?
       </li>
                 <li>
@@ -1115,8 +1115,8 @@ familiarname: <get name="familiarname"/>.
 familiarpredicate: <get name="familiarpredicate"/>.
 familiarpronoun: <get name="familiarpronoun"/>
 forceaddcontact: <get name="forceaddcontact"/>.
-isaphonenumber: <get name="isaphonenumber"/>. 
-isanemailaddress: <get name="isanemailaddress"/>. 
+isaphonenumber: <get name="isaphonenumber"/>.
+isanemailaddress: <get name="isanemailaddress"/>.
 isacontacturi: <get name="isacontacturi"/>.
 isafamiliarname: <get name="isafamiliarname"/>.
 learnpattern: <get name="learnpattern"/>.

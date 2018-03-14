@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: animal.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -87,7 +87,7 @@
 <template><think>
 			<set var="number1"><star index="2"/></set>
 			<set var="animal1"><srai>SINGULAR <star index="3"/></srai></set>
-			<set var="legs1">		
+			<set var="legs1">
 				<uniq>
 					<subj><get var="animal1"/></subj>
 					<pred>legs</pred>

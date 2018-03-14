@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: _inmoovApps.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: марта 11, 2018 -->
+<!-- Last modified: марта 14, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -21,13 +21,13 @@
 	<random>
 		<li>
 		Owl ! I love learning with you. What word do you want to learn ?
-		</li>  
+		</li>
 		<li>
 		I know a lot of words you know? Go ahead, try!
-		</li>  
+		</li>
 		<li>
 		I know almost every word in the world! Normal, I'm a robot. Let's go.
-		</li> 
+		</li>
 	</random>
 	<li>
 	Tell me, stop playing, to stop the game
@@ -54,10 +54,10 @@
 	<random>
 		<li>
 		Lets play to Rock, paper, scissors !
-		</li>  
+		</li>
 		<li>
 		I like to play this game !
-		</li>  
+		</li>
 	</random>
 	<li>
 	3 points win ! Tell me, stop playing, to stop the game. You start. Say Rock, paper or scissors.
@@ -74,7 +74,7 @@
         eval( <get name="rockpaperscissorsRobotPoints"/> + 1 );
         </javascript>
         </set></think>
-        </li>  
+        </li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         I have scissors, rock breaked them.
@@ -87,7 +87,7 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         I have rock too.
-        </li> 
+        </li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai></template>
 </category></topic>
@@ -103,7 +103,7 @@
         eval( <get name="rockpaperscissorsRobotPoints"/> + 1 );
         </javascript>
         </set></think>
-        </li>  
+        </li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
         Congratulation, I have rock, your paper envelops it.
@@ -116,7 +116,7 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
         I have paper too.
-        </li> 
+        </li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai></template>
 </category></topic>
@@ -126,16 +126,16 @@
 <template><random>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>rock()</param></mrl></oob>
-        I have rock, sorry it break the scissors ! 
+        I have rock, sorry it break the scissors !
         <think><set name="rockpaperscissorsRobotPoints">
         <javascript>
         eval( <get name="rockpaperscissorsRobotPoints"/> + 1 );
         </javascript>
         </set></think>
-        </li>  
+        </li>
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>paper()</param></mrl></oob>
-        I have paper, your scissors cutted it, 
+        I have paper, your scissors cutted it,
         <think><set name="rockpaperscissorsHumanPoints">
         <javascript>
         eval( <get name="rockpaperscissorsHumanPoints"/> + 1 );
@@ -145,7 +145,7 @@
         <li>
         <oob><mrl><service>python</service><method>exec</method><param>scissors()</param></mrl></oob>
         I have scissors too.
-        </li> 
+        </li>
       </random>
       <srai>SYSTEM_COUNT_POINTS</srai></template>
 </category></topic>
