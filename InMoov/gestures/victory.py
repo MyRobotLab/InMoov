@@ -1,5 +1,3 @@
-# -- coding: utf-8 --
-
 def victory():
   i01.startedGesture()
   i01.moveHead(114,90)
