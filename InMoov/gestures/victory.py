@@ -1,6 +1,6 @@
 # -- coding: utf-8 --
 
-def victory()
+def victory():
   i01.startedGesture()
   i01.moveHead(114,90)
   i01.moveArm("left",90,91,106,10)
