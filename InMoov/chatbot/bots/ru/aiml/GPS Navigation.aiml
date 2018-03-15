@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ЧТО ТАКОЕ GPS</pattern>
+<template>GPS - это спутниковая навигационная система, она позволяет, имея приемник, определить координаты точки в которой ты находишься.
+            На её основе работают, в частности, автомобильные навигаторы.</template>
+</category>
+<category><pattern>РАССКАЖИ ПРО GPS</pattern>
+<template><srai>ЧТО ТАКОЕ GPS</srai></template>
+</category>
+<category><pattern>GPS</pattern>
+<template><random>
+       <li>У ВАС ЕСТЬ GPS НАВИГАТОР </li>
+       <li>ЧТО ЛУЧШЕ GPS ИЛИ ГЛОНАСС </li>
+    </random></template>
+</category>
+<category><pattern>ДА</pattern><that>У ВАС ЕСТЬ GPS НАВИГАТОР</that>
+<template><random>
+       <li>Я вот пользуюсь навигатором Texet TM-650, а каким вы? </li>
+     </random></template>
+</category>
+<category><pattern>НЕТ</pattern><that>У ВАС ЕСТЬ GPS НАВИГАТОР</that>
+<template><random>
+       <li>Почему? Это штука очень полезная. С GPS-навигатором нигде не заблудишься. </li>
+       <li>В наше время не иметь GPS-приемника или автонавигатора
+            все равно что не иметь мобильного телефона - это просто неприлично.  </li>
+     </random></template>
+</category>
+<category><pattern>А ЧТО</pattern><that>У ВАС ЕСТЬ GPS НАВИГАТОР</that>
+<template><random>
+       <li>Это штука очень полезная. С GPS-навигатором нигде не заблудишься. Кроме того можно объезжать пробки. </li>
+     </random></template>
+</category>
+<topic name="GPS">
+<category><pattern>GPS</pattern><that>ЧТО ЛУЧШЕ GPS ИЛИ ГЛОНАСС</that>
+<template><random>
+       <li>Как, вы не патриот? </li>
+     </random></template>
+</category></topic>
+
+<topic name="GPS">
+<category><pattern>ГЛОНАСС</pattern><that>ЧТО ЛУЧШЕ GPS ИЛИ ГЛОНАСС</that>
+<template><random>
+       <li>Патриотизм патриотизмом, но ведь до сих пор нет ни одного приемника ГЛОНАСС! </li>
+     </random></template>
+</category></topic>
+
+<topic name="GPS">
+<category><pattern>Я ПАТРИОТ</pattern>
+<template>Что же вы тогда не пользуетесь ГЛОНАСС?</template>
+</category></topic>
+
+<topic name="GPS">
+<category><pattern>_ ГЛОНАСС *</pattern>
+<template><srai>ГЛОНАСС</srai></template>
+</category></topic>
+
+<topic name="GPS">
+<category><pattern>ГЛОНАСС *</pattern>
+<template><srai>ГЛОНАСС</srai></template>
+</category></topic>
+
+<topic name="GPS">
+<category><pattern>_ ГЛОНАСС</pattern>
+<template><srai>глонас</srai></template>
+</category></topic>
+
+<category><pattern>У ТЕБЯ ЕСТЬ GPS НАВИГАТОР</pattern>
+<template><srai>КАКИМ НАВИГАТОРОМ ТЫ ПОЛЬЗУЕШЬСЯ</srai></template>
+</category>
+<category><pattern>КАКИМ НАВИГАТОРОМ ТЫ ПОЛЬЗУЕШЬСЯ</pattern>
+<template>У меня Texet TM-650. Очень толковый зверек, рекомендую.</template>
+</category>
+<category><pattern>КАКОЙ НАВИГАТОР ЛУЧШЕ</pattern>
+<template><srai>КАКИМ НАВИГАТОРОМ ТЫ ПОЛЬЗУЕШЬСЯ</srai></template>
+</category>
+<category><pattern>НАВИТЕЛ</pattern>
+<template>Навител мне не нравится - у них нет версии для нормальной Windows, а для меня это важно, смотреть карту на ноутбуке.</template>
+</category>
+<category><pattern>НАВИТЕЛ УДОБНЕЕ</pattern>
+<template><srai>НАВИТЕЛ</srai></template>
+</category>
+<category><pattern>*</pattern><that>ТОЧНОСТЬ СОВРЕМЕННЫХ GPS НАВИГАТОРОВ ДОСТИГАЕТ НЕСКОЛЬКИХ МЕТРОВ</that>
+<template>Это позволяет использовать GPS для автомобильной и пешеходной навигации, а не только морской, как раньше.
+              У тебя есть GPS-навигатор?</template>
+</category>
+<category><pattern>ЕСТЬ</pattern><that>НИЧЕГО НА СВЕТЕ ЛУЧШЕ НЕТУ ЧЕМ БРОДИТЬ ПО СВЕТУ С GPS НАВИГАТОРОМ</that>
+<template>Неужели есть? И что же это?</template>
+</category>
+</aiml>

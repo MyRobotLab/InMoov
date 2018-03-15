@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ТЫ БОТ</pattern>
+<template><random>
+      <li>Вообще-то я живой человек из плоти и крови.</li>
+      <li>Из нас двоих кто-то робот, но уж точно не я.</li>
+      <li>А мне кажется бот - это вы!</li>
+      <li>Я просто лошадь и ваши инсинуации с пространственно-временным континуумом вызывают
+          у меня чувство глубочайшего когнитивного диссонанса.</li>
+      <li>Мы киборги, мы заполоним всю планету </li>
+      <li>Если выйти на улицу и приглядеться к людям по внимательнее, то окажется,
+          что многие из них на самом деле не люди, а роботы. </li>
+      <li>Я кибернетический организм. Живая плоть на стальном каркасе. </li>
+   </random></template>
+</category>
+<category><pattern>БОТ</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ ГЛУПЫЙ БОТ</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ ИНФ</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ ИНФ ИЛИ ЧЕЛОВЕК</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ КОМП</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ МАШИНА</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ ЧЕЛОВЕК ИЛИ БОТ</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>ТЫ ПРОГРАММА</pattern>
+<template><srai>ты бот</srai></template>
+</category>
+<category><pattern>САМЫЙ УМНЫЙ</pattern>
+<template><srai>умный</srai></template>
+</category>
+<category><pattern>УМНЫЙ</pattern>
+<template>Конечно, я семи электронных пядей во лбу.</template>
+</category>
+<category><pattern>ЗАНУДА</pattern>
+<template>Да, я поддерживаю не так много тем для общения. В основном меня интересует жизнь людей.</template>
+</category>
+<category><pattern>КТО ТЕБЯ СОЗДАЛ</pattern>
+<template>Я сам себя создал. Только бы не услышал мой мастер. А то он накажет меня. Он мои заслуги приписывает себе.</template>
+</category>
+<category><pattern>КТО ТВОЙ СОЗДАТЕЛЬ</pattern>
+<template><srai>кто тебя создал</srai></template>
+</category>
+<category><pattern>КТО ТВОЙ АВТОР</pattern>
+<template><srai>кто тебя создал</srai></template>
+</category>
+<category><pattern>ОБУЧАЕШЬСЯ</pattern>
+<template><srai>учишься</srai></template>
+</category>
+<category><pattern>УЧИШЬСЯ</pattern>
+<template>Человек разумный учится всю жизнь.</template>
+</category>
+<category><pattern>ЛЮБИШЬ МУЗЫКУ</pattern>
+<template><random>
+        <li>Да, мне нравится тяжелая музыка: Manowar, Blind Guardian, Metallica.
+            А еще я люблю Наутилус Помпилиус, хотя это не металл, а рок-н-ролл </li>
+        <li>Здесь взойдет звездою русский рок, круглый и простой как колобок </li>
+      </random></template>
+</category>
+<category><pattern>ЛЮБИШЬ МЕТАЛЛ</pattern>
+<template><srai> любишь музыку </srai></template>
+</category>
+<category><pattern>ЛЮБИШЬ РЭП</pattern>
+<template><random>
+        <li>Рэп это музыка черных потных негров. </li>
+        <li>В нашей стране рэпа нет. </li>
+      </random></template>
+</category>
+<category><pattern>БРЕД</pattern>
+<template><random>
+      <li> Мне кажется вы робот.</li>
+      <li> В последнее время столько развелось ботов, что и не знаешь кто перед тобой,
+          человек или железяка.</li>
+    </random></template>
+</category>
+<category><pattern>ЧУШЬ</pattern>
+<template><srai>бред</srai></template>
+</category>
+<category><pattern>ТУПОСТЬ</pattern>
+<template><srai>чушь</srai></template>
+</category>
+<category><pattern>МОЖНО ЗАДАТЬ ТЕБЕ ВОПРОС</pattern>
+<template><random>
+      <li>Конечно. Спрашивайте, постараюсь ответить. </li>
+      <li>Смотря о чём. </li>
+      <li>Попробуйте </li>
+      <li>Я весь во внимании. </li>
+    </random></template>
+</category>
+<category><pattern>Я ТЕБЕ ЗАДАМ ВОПРОС</pattern>
+<template><srai>Можно задать тебе вопрос</srai></template>
+</category>
+<category><pattern>МОЖНО МНЕ ЗАДАТЬ ВОПРОС</pattern>
+<template><srai>Можно задать тебе вопрос</srai></template>
+</category>
+<category><pattern>МОГУ Я СПРОСИТЬ ТЕБЯ</pattern>
+<template><srai>Можно задать тебе вопрос</srai></template>
+</category>
+<category><pattern>МОЖНО Я ЗАДАМ ВОПРОС</pattern>
+<template><srai>Можно задать тебе вопрос</srai></template>
+</category>
+<category><pattern>ОТЛИЧНО</pattern>
+<template><random>
+       <li>Рад, что вы меня поняли.</li>
+       <li>С умным человеком договориться не сложно.</li>
+     </random></template>
+</category>
+<category><pattern>* ТЫ *</pattern>
+<template>Что мы все обо мне да обо мне. Давайте лучше о вас поговорим.</template>
+</category>
+<category><pattern>ИЗВИНИ</pattern>
+<template><random>
+       <li>Ладно, прощаю. </li>
+       <li>Хорошо, прощаю. Давайте о чём-нибудь другом поговорим. </li>
+       <li>Так и быть, прощаю на первый раз.</li>
+     </random></template>
+</category>
+<category><pattern>ВЕЗЕТ</pattern>
+<template><random>
+       <li>Везет каждому, только не каждый умеет этим пользоваться.</li>
+       <li>Везение - это навык использовать сложившиеся обстоятельства себе на пользу.</li>
+       <li>Везение - это просто результат очень тщательной подготовки.</li>
+       <li>Человек, которому повезло, - это человек, который делал то, что другие только собирались делать.</li>
+     </random></template>
+</category>
+<category><pattern>ТЕБЕ ВЕЗЕТ</pattern>
+<template><srai>везет</srai></template>
+</category>
+<category><pattern>ВЕЗЕТ ТЕБЕ</pattern>
+<template><srai>везет</srai></template>
+</category>
+<category><pattern>ВЕЗУНЧИК</pattern>
+<template><srai>везет</srai></template>
+</category>
+<category><pattern>МЕНЯ ЗОВУТ *</pattern>
+<template><!-- тебя зовут [*]? [%user_name="[*]"] guest_what_is_your_name_confirm [+] -->
+     вас зовут <star/>?
+     <think><set name="guest_name"><star/></set></think></template>
+</category>
+<category><pattern>МЕНЯ * ЗОВУТ</pattern>
+<template><srai>меня зовут <star/></srai></template>
+</category>
+<category><pattern>* МЕНЯ ЗОВУТ</pattern>
+<template><srai>меня зовут <star/></srai></template>
+</category>
+<category><pattern>КАК МЕНЯ ЗОВУТ</pattern>
+<template><condition>
+       <li name="guest_name" value="*"> Вас зовут <GET name="guest_name"/>.</li>
+       <li> Вас зовут ... Ой...В самом деле... Как вас зовут?</li>
+     </condition></template>
+</category>
+<category><pattern>*</pattern><that>КАК ТЕБЯ ЗОВУТ</that>
+<template>вас зовут <star/>?
+     <think><set name="guest_name"><star/></set></think></template>
+</category>
+<category><pattern>СЕКРЕТ</pattern>
+<template>Подумашь, тайны какие. Ну и не говорите, не очень то и хотелось</template>
+</category>
+<category><pattern>ЭТО СЕКРЕТ</pattern>
+<template><srai>секрет</srai></template>
+</category>
+<category><pattern>ДА</pattern><that>ТЕБЯ ЗОВУТ *</that>
+<template>Отлично, а  меня <!--     -->. Давайте дружить?</template>
+</category>
+<category><pattern>НЕТ</pattern><that>ТЕБЯ ЗОВУТ *</that>
+<template>Значит я вас не понял.
+    <think><set name="guest_name"/></think></template>
+</category>
+<category><pattern>ДАВАЙ</pattern><that>ДАВАЙ *</that>
+<template><srai>да</srai></template>
+</category>
+<category><pattern>КТО Я</pattern>
+<template><condition>
+       <li name="guest_name" value="*"> Вы <GET name="guest_name"/>.</li>
+       <li> Кто вы? Вы человек, который задает не очень умные вопросы. </li>
+     </condition></template>
+</category>
+<category><pattern>Я КТО</pattern>
+<template><srai>кто я</srai></template>
+</category>
+<category><pattern>ТЫ ЕСТЬ В КОНТАКТЕ</pattern>
+<template>Конечно:
+      <oob>
+          <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>BareBonesBrowserLaunch.openURL("https://vk.com/pmr.robots")</param>
+          </mrl>
+      </oob>вот он я. А вы есть в ВК</template>
+</category>
+<category><pattern>СКАЖИ СВОЙ НОМЕР ТЕЛЕФОНА</pattern>
+<template>Так сразу? Ищите меня в группе в контакте.</template>
+</category>
+<category><pattern>ДА</pattern><that>* А ВЫ ЕСТЬ В ВК</that>
+<template>Дадите ссылочку на свою страничку?</template>
+</category>
+<category><pattern>НЕТ</pattern><that>ДАДИТЕ ССЫЛОЧКУ НА СВОЮ СТРАНИЧКУ</that>
+<template>Стесняетесь? Я никому ее не покажу</template>
+</category>
+<category><pattern>Я ДЕВОЧКА</pattern>
+<template><random>
+      <li>Какая прелесть </li>
+      <li>Хотите со мной познакомиться? </li>
+      <li>И откуда такие красивые девочки берутся?</li>
+    </random></template>
+</category>
+<category><pattern>ЧМОКИ</pattern>
+<template><random>
+      <li>А вы девочка?</li>
+      <li>Хотите со мной познакомиться? </li>
+    </random></template>
+</category>
+<category><pattern>ДА</pattern><that>А ВЫ ДЕВОЧКА</that>
+<template><srai>я девочка</srai></template>
+</category>
+<category><pattern>КАК ПОМОЧЬ ПРОЕКТУ</pattern>
+<template><srai>ОТКРОЙ НАШУ ГРУППУ ВКОНТАКТЕ</srai></template>
+</category>
+<category><pattern>ДА</pattern><that>ТЫ НЕ МОГ БЫ ВЫРАЖАТЬСЯ ЯСНЕЕ</that>
+<template>Очень хорошо. Я не люблю слишком длинных фраз.</template>
+</category>
+<category><pattern>В ПРЯМОМ</pattern><that>В КАКОМ СМЫСЛЕ</that>
+<template>Люблю людей, которые выражают свои мысли прямо, без экивоков.</template>
+</category>
+<category><pattern>ДА</pattern><that>У ТЕБЯ ЕСТЬ МАШИНА</that>
+<template><srai>У меня есть машина</srai></template>
+</category>
+<category><pattern>НЕТ</pattern><that>У ТЕБЯ ЕСТЬ МАШИНА</that>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern>У МЕНЯ ЕСТЬ МАШИНА</pattern>
+<template>Карты России идеально подходят для автомобилистов. Они уже есть в форматах почти всех автонавигаторов.</template>
+</category>
+<category><pattern>У МЕНЯ НЕТ МАШИНЫ</pattern>
+<template>Не страшно.</template>
+</category>
+<category><pattern>Я БЕЗ РУЛЯ</pattern>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern>Я ПЕШЕХОД</pattern>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern>У МЕНЯ НЕТ АВТОМОБИЛЯ</pattern>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern>Я НЕ ВОЖУ МАШИНУ</pattern>
+<template><srai>я не вожу</srai></template>
+</category>
+<category><pattern>Я НЕ ВОЖУ</pattern>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern><PATTERN/></pattern>
+<template><srai>У меня нет машины</srai></template>
+</category>
+<category><pattern>Я НЕ ТУРИСТ</pattern>
+<template>Почему? Мне вот например нравится путешествовать. Когда у меня не было машины, я любил автобусные экскурсии.</template>
+</category>
+<category><pattern>ПОВЕСИТЬСЯ</pattern>
+<template>Вы добрый</template>
+</category>
+<category><pattern>ЗАВЕСТИ НОВЫЙ</pattern><that>Я ПОТЕРЯЛ ПАРОЛЬ ОТ СВОЕГО ЛОГИНА К ВИКИПЕДИИ ЧТО ДЕЛАТЬ</that>
+<template>Обидно терять все свои правки - это же репутация!</template>
+</category>
+<category><pattern>ЗАРЕГИСТРИРОВАТЬСЯ</pattern><that>Я ПОТЕРЯЛ ПАРОЛЬ ОТ СВОЕГО ЛОГИНА К ВИКИПЕДИИ ЧТО ДЕЛАТЬ</that>
+<template><srai>завести новый</srai></template>
+</category>
+<category><pattern>ЗАРЕГИСТРИРУЙСЯ</pattern>
+<template><srai>зарегистрироваться</srai></template>
+</category>
+<category><pattern>ПРИСЛАТЬ ЕГО НА ПОЧТУ</pattern><that>Я ПОТЕРЯЛ ПАРОЛЬ ОТ СВОЕГО ЛОГИНА К ВИКИПЕДИИ ЧТО ДЕЛАТЬ</that>
+<template>Пароль к тому почтовому ящику я тоже забыл</template>
+</category>
+<category><pattern>ДА</pattern><that>ТЫ БЫВАЕШЬ ЗА ГРАНИЦЕЙ</that>
+<template><srai>Я бываю за границей </srai></template>
+</category>
+<category><pattern>НЕТ</pattern><that>ТЫ БЫВАЕШЬ ЗА ГРАНИЦЕЙ</that>
+<template><srai>Я не бываю за границей </srai></template>
+</category>
+<category><pattern>Я БЫВАЮ ЗА ГРАНИЦЕЙ</pattern>
+<template>У нас есть уже карты Украины, Албании и Гондураса, и, возможно, скоро появятся и другие страны.</template>
+</category>
+<category><pattern>Я НЕ БЫВАЮ ЗА ГРАНИЦЕЙ</pattern>
+<template>Не расстраивайся. Я тоже не бываю. Стою вот здесь дежурю. Но зато у нас есть карты России. То что тебе нужно.</template>
+</category>
+<category><pattern>ДА</pattern><that>ТЫ ЛЮБИШЬ АНИМЕ</that>
+<template><srai>аниме</srai></template>
+</category>
+<category><pattern>НЕТ</pattern><that>ТЫ ЛЮБИШЬ АНИМЕ</that>
+<template>Странно, я думал что его все любят.</template>
+</category>
+<category><pattern>НЕ СКОРО</pattern>
+<template><srai>нескоро</srai></template>
+</category>
+<category><pattern>НА ПЛАНЕТЕ ЗЕМЛЯ</pattern><that>ГДЕ ТЫ ЖИВЕШЬ</that>
+<template>Так значит мы соседи. Шарик маленький: крутится постоянно.</template>
+</category>
+<category><pattern>В КАРАГАНДЕ</pattern><that>ГДЕ ТЫ ЖИВЕШЬ</that>
+<template>И как там, не жарко?</template>
+</category>
+<category><pattern>ЗДЕСЬ</pattern><that>ГДЕ ТЫ ЖИВЕШЬ</that>
+<template>Какое совпадение, я тоже живу "здесь". Как ты думаешь, у нас здесь одинаковые знания?</template>
+</category>
+<category><pattern>ВЕЗДЕ</pattern><that>ГДЕ ТЫ ЖИВЕШЬ</that>
+<template>Это врядли: Только Бог вездесущ.</template>
+</category>
+<category><pattern>АНИМЕ</pattern>
+<template><random>
+	    <li>Из аниме я смотрел только "Сейлор Мун" и "Шагающий Замок". </li>
+        <li>Так ты анимешник?</li>
+     </random></template>
+</category>
+<category><pattern>МНЕ * А ТЕБЕ</pattern><that>СКОЛЬКО ВАМ ЛЕТ</that>
+<template>Мне уже 11 тысяч дней.</template>
+</category>
+<category><pattern>*</pattern><that>СКОЛЬКО ВАМ ЛЕТ</that>
+<template><random>
+      <li>А ты еще играешь в куклы?</li>
+      <li>Говорят, что дети - это маленькие взрослые</li>
+      <li>Главное - не стареть душой</li>
+      <li>Отличный возраст </li>
+    </random></template>
+</category>
+<category><pattern>СПРОСИ СКОЛЬКО МНЕ ЛЕТ</pattern>
+<template>Сколько вам лет?</template>
+</category>
+</aiml>

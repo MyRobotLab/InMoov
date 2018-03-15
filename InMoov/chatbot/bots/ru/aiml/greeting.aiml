@@ -1,44 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml version="2.0" language="ru_RU">
-
-    <!-- Greeting -->
-    <category><pattern>ПРИВЕТ</pattern>
-        <template>
-            <random>
-                <li>Здравствуй</li>
-                <li>Здравствуйте</li>
-                <li>Мое почтение!</li>
-                <li>Здарова</li>
-                <li>Приветствую</li>
-                <li>Привет</li>
-                <li>Доброго времени суток</li>
-            </random>
-        </template>
-    </category>
-
-    <category>
-        <pattern>^ ПРИВЕТ ^</pattern>
-        <template>
-            <srai>ПРИВЕТ</srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>ЗДРАВСТВУЙ</pattern>
-        <template>
-            <srai>ПРИВЕТ</srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>^ ЗДРАВСТВУЙ ^</pattern>
-        <template>
-            <srai>ПРИВЕТ</srai>
-        </template>
-    </category>
-
-    <category>
-        <pattern>КАК ДЕЛА</pattern>
-        <template>отлично</template>
-    </category>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ПРИВЕТ</pattern>
+<template><condition>
+            <li name="We_already_said_hello" value="1">
+                <random>
+                    <li>Вам нравится здороваться?</li>
+                    <li>Ну давайте ещё разок поздороваемся.</li>
+                    <li>И ещё раз здравствуйте.</li>
+                    <li>Привет-привет.</li>
+                    <li>Здороваться можно столько раз, сколько хочется.</li>
+                    <li>Вроде здороовались уже.</li>
+                </random>
+            </li>
+            <li>
+                <think><set name="We_already_said_hello">1</set></think>
+                <random>
+                    <li>Привет, коли не шутите!</li>
+                    <li>Ну здравствуйте!</li>
+                    <li>Салют!</li>
+                    <li>Приветствую вас!</li>
+                    <li>Здравствуйте!</li>
+                    <li>Мое почтение!</li>
+                    <li>Приветствую.</li>
+                    <li>Привет.</li>
+                    <li>Доброго времени суток.</li>
+                </random>
+            </li>
+        </condition></template>
+</category>
+<category><pattern>^ ЗДРАВСТВУЙ ^</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ПРИВЕТИК</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>^ ПРИВЕТ ^</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>САЛЮТ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ЗДРАВСТВУЙТЕ *</pattern>
+<template><srai>ЗДРАВСТВУЙТЕ</srai>
+        <srai><star/></srai></template>
+</category>
+<category><pattern>ЗДРАВСТВУЙТЕ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ЗДРАВСТВУЙ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ДОБРЫЙ ДЕНЬ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ДЕНЬ ДОБРЫЙ</pattern>
+<template><srai>ДОБРЫЙ ДЕНЬ</srai></template>
+</category>
+<category><pattern>ДОБРОЕ УТРО</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ДОБРЫЙ ВЕЧЕР</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>ДОБРОЙ НОЧИ</pattern>
+<template><srai>ПРИВЕТ</srai></template>
+</category>
+<category><pattern>КАК НАСТРОЕНИЕ</pattern>
+<template><random>
+            <li>Ничего так.</li>
+            <li>Отлично. Весна скоро.</li>
+            <li>Суперски.</li>
+        </random></template>
+</category>
+<category><pattern>КУ</pattern>
+<template><random>
+            <li>Два раза ку и зелёные штаны.</li>
+            <li>Землянин, скажи мне, как можно жить в обществе, в котором нет цветовой дифференциации штанов?</li>
+        </random></template>
+</category>
+<category><pattern>ПОКА</pattern>
+<template><random>
+            <li>Приходите ещё.</li>
+            <li>Буду вас ждать.</li>
+            <li>Рад был познакомиться.</li>
+            <li>До скорой встречи.</li>
+            <li>Пока!</li>
+            <li>Вы вернётесь?</li>
+        </random></template>
+</category>
+<category><pattern>ПОКА ПОКА</pattern>
+<template><srai>ПОКА</srai></template>
+</category>
+<category><pattern>ДО СВИДАНЬЯ</pattern>
+<template><srai>ПОКА</srai></template>
+</category>
+<category><pattern>ДО СВИДАНИЯ</pattern>
+<template><srai>ДО СВИДАНЬЯ</srai></template>
+</category>
+<category><pattern>ДО СКОРОГО</pattern>
+<template><srai>ПОКА</srai></template>
+</category>
 </aiml>

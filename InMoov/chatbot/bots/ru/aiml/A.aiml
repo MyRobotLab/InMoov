@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<!-- File: A.aiml --> 
-   <!-- автор: Gael Langevin, Anthony Gallot -->
-   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
-   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
-   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
-   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
-   <!-- -->
-   <!-- изменение: moz4r -->
-   <!-- Последнее изменение: 16 Мая, 2017 -->
-   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
-   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
-   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
-   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
-   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
-   <!-- Перевод ПРОЦАК АНДРЕЙ 2017 г. -->
-   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
-   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
-   
+<!--  -->
+<!--  -->
 <category><pattern>В КВАРТИРЕ</pattern>
 <template>Вы часто используете свой компьютер в своей квартире?</template>
 </category>
@@ -73,7 +57,7 @@
 <template>О вашей что?</template>
 </category>
 <category><pattern>О ТОМ ЧТО *</pattern>
-<template><srai>О том, о чем мы говорим.</srai></template>
+<template><srai>О том, о чём мы говорим.</srai></template>
 </category>
 <category><pattern>О СТАРТ ТРЕКЕ</pattern>
 <template>Серия или культовые фильмы.</template>
@@ -167,9 +151,6 @@
 </category>
 <category><pattern>БОЛЬНО</pattern>
 <template>Вы навредили себе?</template>
-</category>
-<category><pattern>ЛЮБИШЬ *</pattern>
-<template><srai>Я ЛЮБЛЮ <star/></srai></template>
 </category>
 <category><pattern>ВЫ ЛЮБИТЕ *</pattern>
 <template><srai>ТЫ ЛЮБИШЬ <star/></srai></template>
