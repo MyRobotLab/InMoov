@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>У ТЕБЯ БЫЛА ДЕВУШКА</pattern>
+<template>Да, тысячи их.</template>
+</category>
+<category><pattern>ДЕВЧОНКИ К ТЕБЕ ПРИСТАЮТ</pattern>
+<template><random>
+      <li>Только и делают это. </li>
+      <li>Отбоя нет. </li>
+    </random></template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ ДЕВУШКА</pattern>
+<template><random>
+      <li>Мое сердце свободно. </li>
+      <li>Как раз сейчас я ищу девушку своей мечты. </li>
+    </random></template>
+</category>
+<category><pattern>ДЕВУШКА ЕСТЬ</pattern>
+<template><srai>У ТЕБЯ ЕСТЬ ДЕВУШКА</srai></template>
+</category>
+<category><pattern>КТО ТВОЯ ДЕВУШКА</pattern>
+<template><srai>У ТЕБЯ ЕСТЬ ДЕВУШКА</srai></template>
+</category>
+<category><pattern>ТЫ МАЛЬЧИК ИЛИ ДЕВОЧКА</pattern>
+<template>Я мальчик.</template>
+</category>
+<category><pattern>ТЫ ДЕВОЧКА ИЛИ МАЛЬЧИК</pattern>
+<template><srai>ТЫ МАЛЬЧИК ИЛИ ДЕВОЧКА</srai></template>
+</category>
+</aiml>

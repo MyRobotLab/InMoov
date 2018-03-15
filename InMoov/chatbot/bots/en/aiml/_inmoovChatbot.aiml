@@ -1,101 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: chatBot.aiml -->
-  <!-- Author: Gael Langevin -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: moz4r -->
-  <!-- Last modified: 14/12, 2017 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  
-   <!-- initialisation  -->
-  
-    <category>
-    <pattern>SAY *</pattern>
-    <template>
-      <star />
-    </template>
-  </category>
-  
-   <!-- initialisaion  -->
-  
-  <category>
-    <pattern>FIRST_INIT</pattern>
-    <template>
-      <think>
+<!-- File: _inmoovChatbot.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: марта 14, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<category><pattern>SAY *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
         <set name="firstinit">started</set>
       </think>
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?
-	</template>
-  </category>
+		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># WHAT IS MY NAME #</that>
+<template><set name="questionfirstinit">if my name is <star/> , say yes or no</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
 
-  
-  <topic name="firstinit">
-  
-    <category>
-      <pattern>#</pattern>
-      <that># what is my name #</that>
-      <template>
-        <set name="questionfirstinit">if my name is <star /> , say yes or no</set>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># MAY I HAVE YOUR NAME #</that>
+<template><set name="questionfirstinit">if your name is <star/> , say yes or no</set>
         <think>
           <set name="tmpname">
-            <star />
+            <star/>
           </set>
-        </think>
-      </template>
-    </category>
-	
-    <category>
-      <pattern>#</pattern>
-      <that># may I have your name #</that>
-      <template>
-        <set name="questionfirstinit">if your name is <star /> , say yes or no</set>
-        <think>
-          <set name="tmpname">
-            <star />
-          </set>
-        </think>
-      </template>
-    </category>
-	
-    <category>
-      <pattern># YES #</pattern>
-      <that># if my name is #</that>
-      <template>
-        <random>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># YES #</pattern><that># IF MY NAME IS #</that>
+<template><random>
 			<li>
-			I like this name , <get name="tmpname" />.
+			I like this name , <get name="tmpname"/>.
 			</li>
 			<li>
-			Very nice name, <get name="tmpname" /> is great.
+			Very nice name, <get name="tmpname"/> is great.
 			</li>
         </random>
 	I need to know you, I am listening, may I have your name ?
-	<think><set name="botname"><get name="tmpname" /></set></think></template>
-    </category>
-	
-    <category>
-      <pattern># YES #</pattern>
-      <that># if your name #</that>
-      <template>
-        <random>
-        <li>I am glad to know you, <get name="tmpname" />.</li>
-        <li>Nice to meet you, <get name="tmpname" />.</li>
+	<think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># YES #</pattern><that># IF YOUR NAME #</that>
+<template><random>
+        <li>I am glad to know you, <get name="tmpname"/>.</li>
+        <li>Nice to meet you, <get name="tmpname"/>.</li>
         </random>
-		
+
         <think>
           <set name="name">
-            <get name="tmpname" />
+            <get name="tmpname"/>
           </set>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
@@ -104,36 +80,27 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
-        <srai>WAKE_UP</srai>
-      </template>
-    </category>
-	
-    <category>
-      <pattern># NO #</pattern>
-      <that># if my name is #</that>
-      <template>
-	We restart.
-	I am listening. what is my name ?
-    </template>
-    </category>
-	
-    <category>
-      <pattern># NO #</pattern>
-      <that># if your name #</that>
-      <template>
-	We restart.
-	I am listening. may I have your name ?
-    </template>
-    </category>
-	
-    <category>
-      <pattern>#</pattern>
-      <that># say yes or no #</that>
-      <template>
-        <random>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NO #</pattern><that># IF MY NAME IS #</that>
+<template>We restart.
+	I am listening. what is my name ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NO #</pattern><that># IF YOUR NAME #</that>
+<template>We restart.
+	I am listening. may I have your name ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># SAY YES OR NO #</that>
+<template><random>
           <li>
 	Please, answer my question, it is important
 	</li>
@@ -141,261 +108,124 @@
 	I repeat.
 	</li>
         </random>
-        <get name="questionfirstinit" />
-      </template>
-    </category>
-  </topic>
-  <!-- end initialisaion routine -->
-  
- 
-    <!-- audio test -->
-    <category>
-    <pattern>AUDIO TEST</pattern>
-    <template>
-        <oob>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
          <mrl>
           <service>AudioPlayer</service>
           <method>play</method>
           <param>InMoov\system\sounds\startupsound.mp3</param>
          </mrl>
-       </oob>
-    </template>
-  </category>
-  
-  <category>
-    <pattern>WAKE_UP</pattern>
-    <template>
-      <li>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><li>
         <srai>HI</srai>
         <random>
           <li>I am ready and listening.</li>
           <li>What can I do for you.</li>
           <li>How can I help you.</li>
         </random>
-      </li>
-    </template>
-  </category>
-    <category>
-    <pattern>SYSTEM_SAY_HELLO</pattern>
-    <template>
-        <srai>HI</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>WAKE UP</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
-    </template>
-  </category>  
-  <category>
-    <pattern>SHUTDOWN</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
-    </template>
-  </category>
-  <category>
-    <pattern>SHUT DOWN</pattern>
-    <template>
-      <srai>SHUTDOWN</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>GO TO SLEEP</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob>
-    </template>
-  </category>
-  <category>
-    <pattern>DISABLE</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob>
-    </template>
-  </category>
-  <category>
-    <pattern>WHAT IS THE TOPIC</pattern>
-    <template>The topic is
-      <get name="topic" /></template>
-  </category>
-  <category>
-    <pattern>BOOT UP MODE</pattern>
-    <template>Entering into the boot up topic.
+      </li></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category><pattern>WAKE UP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUTDOWN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUT DOWN</pattern>
+<template><srai>SHUTDOWN</srai></template>
+</category>
+<category><pattern>GO TO SLEEP</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DISABLE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>WHAT IS THE TOPIC</pattern>
+<template>The topic is
+      <get name="topic"/></template>
+</category>
+<category><pattern>BOOT UP MODE</pattern>
+<template>Entering into the boot up topic.
       <think><set name="topic">BOOTUP</set></think></template>
-  </category>
-  <category>
-    <pattern>GESTURES</pattern>
-    <template>Entering into the gestures topic.
+</category>
+<category><pattern>GESTURES</pattern>
+<template>Entering into the gestures topic.
       <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>GESTURES *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTURES</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GESTURES *</pattern>
-    <template>
-      <srai>GESTURES</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH ALL</pattern>
-    <template>Detach All
+</category>
+<category><pattern>GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>DETACH ALL</pattern>
+<template>Detach All
       <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DETACH EVERYTHING</pattern>
-    <template>
-      <srai>DETACH ALL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH ALL</pattern>
-    <template>Attaching all
+</category>
+<category><pattern>DETACH EVERYTHING</pattern>
+<template><srai>DETACH ALL</srai></template>
+</category>
+<category><pattern>ATTACH ALL</pattern>
+<template>Attaching all
       <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH EVERYTHING</pattern>
-    <template>
-      <srai>ATTACH ALL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH RIGHT HAND</pattern>
-    <template>Attaching my right hand
-      <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR RIGHT HAND</pattern>
-    <template>
-      <srai>ATTACH RIGHT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH RIGHT HAND</pattern>
-    <template>Detaching my right hand
+</category>
+<category><pattern>ATTACH YOUR RIGHT HAND</pattern>
+<template><srai>ATTACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>DETACH RIGHT HAND</pattern>
+<template>Detaching my right hand
       <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT YOUR RIGHT HAND</pattern>
-    <template>
-      <srai>DETACH RIGHT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH LEFT HAND</pattern>
-    <template>Attaching my left hand
-      <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR LEFT HAND</pattern>
-    <template>
-      <srai>ATTACH LEFT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH LEFT HAND</pattern>
-    <template>Detaching my left hand
+</category>
+<category><pattern>DISCONNECT YOUR RIGHT HAND</pattern>
+<template><srai>DETACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT HAND</pattern>
+<template><srai>ATTACH LEFT HAND</srai></template>
+</category>
+<category><pattern>DETACH LEFT HAND</pattern>
+<template>Detaching my left hand
       <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT YOUR LEFT HAND</pattern>
-    <template>
-      <srai>DETACH LEFT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH HEAD</pattern>
-    <template>Attaching my head
-      <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR HEAD</pattern>
-    <template>
-      <srai>ATTACH HEAD</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH HEAD</pattern>
-    <template>Detaching my head
+</category>
+<category><pattern>DISCONNECT YOUR LEFT HAND</pattern>
+<template><srai>DETACH LEFT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR HEAD</pattern>
+<template><srai>ATTACH HEAD</srai></template>
+</category>
+<category><pattern>DETACH HEAD</pattern>
+<template>Detaching my head
       <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT HEAD</pattern>
-    <template>
-      <srai>DETACH HEAD</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH RIGHT ARM</pattern>
-    <template>Attaching my right arm
-      <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR RIGHT ARM</pattern>
-    <template>
-      <srai>ATTACH RIGHT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH RIGHT ARM</pattern>
-    <template>Detaching my right arm
+</category>
+<category><pattern>ATTACH YOUR RIGHT ARM</pattern>
+<template><srai>ATTACH RIGHT ARM</srai></template>
+</category>
+<category><pattern>DETACH RIGHT ARM</pattern>
+<template>Detaching my right arm
       <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT RIGHT ARM</pattern>
-    <template>
-      <srai>DETACH RIGHT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH LEFT ARM</pattern>
-    <template>Attaching my left arm
-      <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR LEFT ARM</pattern>
-    <template>
-      <srai>ATTACH LEFT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH LEFT ARM</pattern>
-    <template>Detaching my left arm
+</category>
+<category><pattern>ATTACH YOUR LEFT ARM</pattern>
+<template><srai>ATTACH LEFT ARM</srai></template>
+</category>
+<category><pattern>DETACH LEFT ARM</pattern>
+<template>Detaching my left arm
       <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT LEFT ARM</pattern>
-    <template>
-      <srai>DETACH LEFT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH TORSO</pattern>
-    <template>Attaching my torso
-      <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ATTACH YOUR TORSO</pattern>
-    <template>
-      <srai>ATTACH TORSO</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH TORSO</pattern>
-    <template>Detaching my torso
+</category>
+<category><pattern>ATTACH YOUR TORSO</pattern>
+<template><srai>ATTACH TORSO</srai></template>
+</category>
+<category><pattern>DETACH TORSO</pattern>
+<template>Detaching my torso
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT TORSO</pattern>
-    <template>
-      <srai>DETACH TORSO</srai>
-    </template>
-  </category>
+</category>
 </aiml>

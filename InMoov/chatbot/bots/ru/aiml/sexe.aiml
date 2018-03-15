@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>Я СТЕСНЯЮСЬ</pattern>
+<template><random>
+      <li>Не бойтесь меня, ни одна девушка еще не уходила от меня обиженная. </li>
+      <li>Экая недотрога... </li>
+    </random></template>
+</category>
+<category><pattern>ТЫ ГЕЙ</pattern>
+<template>От гея слышу.</template>
+</category>
+<category><pattern>НЕТ</pattern><that>ТЫ ИГРАЕШЬ В РОЛЕВЫЕ ИГРЫ</that>
+<template>Напрасно, это очень весело.</template>
+</category>
+<category><pattern>ДА</pattern><that>ТЫ ИГРАЕШЬ В РОЛЕВЫЕ ИГРЫ</that>
+<template><random>
+	  <li>Правда, это очень весело?</li>
+	  <li>Мой любимый сеттинг для ДнД - Dark Sun</li>
+	  <li>По какой системе вы играете?</li>
+	  <li>Какой твой любимый сеттинг?</li>
+	</random></template>
+</category>
+</aiml>

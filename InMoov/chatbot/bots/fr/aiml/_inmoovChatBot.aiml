@@ -21,11 +21,11 @@
       <star />
     </template>
   </category>
-  
+
   <!-- initialisaion routine -->
   <!-- wakeup action -->
   <!-- random action -->
-  
+
   <category>
     <pattern>FIRST_INIT</pattern>
     <template>
@@ -41,7 +41,7 @@
       Je t'écoute. quel est mon nom?
     </template>
   </category>
-  
+
   <topic name="firstinit">
     <category>
       <pattern>#</pattern>
@@ -133,7 +133,7 @@
     </category>
   </topic>
   <!-- end initialisaion routine -->
-  
+
   <!-- wakeup action ( WAKE_UP is globalized )-->
   <category>
     <pattern>WAKE_UP</pattern>
@@ -157,7 +157,7 @@
 </li>
     </template>
   </category>
-  
+
   <category>
     <pattern>SYSTEM_SAY_HELLO</pattern>
     <template>
@@ -187,11 +187,11 @@
     <template>
       <think>
         <set name="topic">SLEEPMODE</set>
-      </think>	
+      </think>
 			Veux tu oui ou non que je me mette en veille
 		</template>
   </category>
-  
+
   <topic name="SLEEPMODE">
     <category>
       <pattern># OUI #</pattern>
@@ -203,7 +203,7 @@
       <pattern># NON #</pattern>
       <that># ME METTE EN VEILLE #</that>
       <template>
-			Annulation de la mise en veille. 
+			Annulation de la mise en veille.
 			<think><set name="topic"> default</set></think></template>
     </category>
     <category>
@@ -243,9 +243,9 @@
     <category>
       <pattern># NON #</pattern>
       <that># ME METTE HORS TENSION #</that>
-      <template>Annulation de l'arrêt du système. 
+      <template>Annulation de l'arrêt du système.
 			<think><set name="topic">default</set></think></template>
-    </category>  
+    </category>
     <category>
       <pattern>#</pattern>
       <that># ME METTE HORS TENSION #</that>
@@ -254,24 +254,24 @@
       </template>
     </category>
   </topic>
-  
+
   <!-- end wakeup action -->
-  
-  <!-- random & to sort -->  
-  
+
+  <!-- random & to sort -->
+
 	<category>
 		<pattern>TEST AUDIO</pattern>
 		<template>
 			<oob>
-	        	<mrl> 
+	        	<mrl>
 	        		<service>AudioPlayer</service>
-	            	<method>play</method> 
+	            	<method>play</method>
 	            	<param>InMoov\system\sounds\startupsound.mp3</param>
 	         	</mrl>
 	    	</oob>
 	    </template>
 	</category>
-  
+
   <category>
     <pattern>RANDOM</pattern>
     <template>

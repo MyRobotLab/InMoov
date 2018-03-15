@@ -1,53 +1,46 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: roman.aiml -->
-  <!-- Author: Dr. Richard S. Wallace -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  <!--  -->
-  <category>
-    <pattern>ROMAN numbername</pattern>
-    <template>
-      <srai>ROMAN <map><name>name2number</name><star /></map></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ROMAN *</pattern>
-    <template>
-      <think>
+<!-- File: roman.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: марта 14, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<category><pattern>ROMAN NUMBERNAME</pattern>
+<template><srai>ROMAN <map><name>name2number</name><star/></map></srai></template>
+</category>
+<category><pattern>ROMAN *</pattern>
+<template><think>
         <set var="ex">
           <explode>
-            <star />
+            <star/>
           </explode>
         </set>
       </think>
       <condition var="ex">
         <li>
           <value>
-            <star />
-          </value>I don't know what <srai>IMPLODE <star /></srai> is in Roman.</li>
+            <star/>
+          </value>I don't know what <srai>IMPLODE <star/></srai> is in Roman.</li>
         <li>
-          <srai>ROMAN <explode><star /></explode></srai>
+          <srai>ROMAN <explode><star/></explode></srai>
         </li>
-      </condition>
-    </template>
-  </category>
-  <category>
-    <pattern>ROMAN digit</pattern>
-    <template>
-      <think>
+      </condition></template>
+</category>
+<category><pattern>ROMAN DIGIT</pattern>
+<template><think>
         <set var="d">
-          <star />
+          <star/>
         </set>
       </think>
       <condition var="d">
@@ -60,16 +53,13 @@
         <li value="7">VII</li>
         <li value="8">VIII</li>
         <li value="9">IX</li>
-        <li />
-      </condition>
-    </template>
-  </category>
-  <category>
-    <pattern>ROMAN digitdigit</pattern>
-    <template>
-      <think>
+        <li/>
+      </condition></template>
+</category>
+<category><pattern>ROMAN DIGITDIGIT</pattern>
+<template><think>
         <set var="d">
-          <star />
+          <star/>
         </set>
       </think>
       <condition var="d">
@@ -82,17 +72,14 @@
         <li value="7">LXX</li>
         <li value="8">LXXX</li>
         <li value="9">XC</li>
-        <li />
+        <li/>
       </condition>
-      <srai>ROMAN <star index="2" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ROMAN digitdigitdigit</pattern>
-    <template>
-      <think>
+      <srai>ROMAN <star index="2"/></srai></template>
+</category>
+<category><pattern>ROMAN DIGITDIGITDIGIT</pattern>
+<template><think>
         <set var="d">
-          <star />
+          <star/>
         </set>
       </think>
       <condition var="d">
@@ -105,17 +92,14 @@
         <li value="7">DCC</li>
         <li value="8">DCCC</li>
         <li value="9">CM</li>
-        <li />
+        <li/>
       </condition>
-      <srai>ROMAN <star index="2" /><star index="3" /></srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ROMAN digitdigitdigitdigit</pattern>
-    <template>
-      <think>
+      <srai>ROMAN <star index="2"/><star index="3"/></srai></template>
+</category>
+<category><pattern>ROMAN DIGITDIGITDIGITDIGIT</pattern>
+<template><think>
         <set var="d">
-          <star />
+          <star/>
         </set>
       </think>
       <condition var="d">
@@ -128,9 +112,8 @@
         <li value="7">MMMMMM</li>
         <li value="8">MMMMMMM</li>
         <li value="9">MMMMMMMM</li>
-        <li />
+        <li/>
       </condition>
-      <srai>ROMAN <star index="2" /><star index="3" /><star index="4" /></srai>
-    </template>
-  </category>
+      <srai>ROMAN <star index="2"/><star index="3"/><star index="4"/></srai></template>
+</category>
 </aiml>

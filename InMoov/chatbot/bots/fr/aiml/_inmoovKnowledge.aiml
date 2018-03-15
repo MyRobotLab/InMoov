@@ -14,7 +14,7 @@
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
-  
+
   <!-- *** INMOOV KNOWLEDGE ( french ) :  *** -->
   <!-- local database -->
   <!-- wikidata database -->
@@ -22,7 +22,7 @@
   <!-- shared knowledge TODO -->
 
   <!-- there is no local awnsers we ask wikidata -->
-  
+
 <!-- 1 we check global wikidata -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
 <template><think><set name="determinantinterogatif"><star index="2"/></set></think>
@@ -92,7 +92,7 @@
 <condition name="articles2">
     <li value="unknown"><think><set name="courant2"><star index="2"/></set></think></li>
     <li><think><set name="courant2"><get name="articles2" /> <star index="2"/></set></think></li>
-</condition>  
+</condition>
 <random>
     <li>Désormais je saurrais que <star index="1"/> est <get name="courant2"/>.</li>
     <li>J'étais presque sure que <star index="1"/> était <get name="courant2"/>. Merci pour la confirmation.</li>
@@ -136,8 +136,8 @@
 <template>
 <condition name="articles">
     <li value="unknown"></li>
-    <li><star index="3"/></li>    		
-</condition>  
+    <li><star index="3"/></li>
+</condition>
     <person><star index="4"/></person> <star index="5"/>?
     <random>
         <li>

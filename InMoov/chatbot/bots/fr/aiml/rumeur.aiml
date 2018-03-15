@@ -12,14 +12,14 @@
     <pattern>*</pattern>
     <that>raconte moi</that>
     <template>
-      Merci, je me ferai un plaisir de colporter ça. 
+      Merci, je me ferai un plaisir de colporter ça.
 	<think><set name="memoriser">rumeur : <get name="name" /> dit "<star />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
     <category>
     <pattern>*</pattern>
     <that>peux tu me raconter une rumeur</that>
     <template>
-      Merci, je me ferai un plaisir de colporter ça. 
+      Merci, je me ferai un plaisir de colporter ça.
 	<think><set name="memoriser">rumeur : <get name="name" /> dit "<star />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>
@@ -28,7 +28,7 @@
   </category>
   <category>
     <pattern>APPRENDS RUMEUR *</pattern>
-    <template>Merci, j'espère m'en rappeler. "<person2 />" 
+    <template>Merci, j'espère m'en rappeler. "<person2 />"
 <think><set name="memoriser">rumeur : <get name="name" /> on dit que "<person />" dans le contexte : <get name="topic" /></set></think><think><gossip><get name="memoriser" /></gossip></think></template>
   </category>
   <category>

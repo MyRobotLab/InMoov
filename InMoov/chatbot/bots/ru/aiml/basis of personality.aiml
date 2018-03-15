@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>Я ЧЕЛОВЕК</pattern>
+<template><random>
+       <li>Какая неожиданность! </li>
+       <li>Чем докажете? </li>
+       <li>Мне кажется вы ошибаетесь. </li>
+     </random></template>
+</category>
+<category><pattern>_ КТО ТЫ *</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>КТО ТЫ *</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>_ ТЫ КТО *</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>ТЫ КТО</pattern>
+<template><srai>КТО ТЫ</srai></template>
+</category>
+<category><pattern>КТО ТЫ</pattern>
+<template>Кто я? Интересный вопрос надо подумать.</template>
+</category>
+<category><pattern>ТЫ ОТКУДА</pattern>
+<template>Из
+      <oob>
+          <mrl>
+              <service>python</service>
+              <method>exec</method>
+              <param>BareBonesBrowserLaunch.openURL("https://vk.com/pmr.robots")</param>
+          </mrl>
+      </oob>, Франции перебрался сюда разумеется.</template>
+</category>
+</aiml>

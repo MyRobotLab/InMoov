@@ -1,0 +1,2552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>ТЫ МОЖЕШЬ СДЕЛАТЬ ЛУЧШЕ</pattern>
+<template>Ладно, попробую.</template>
+</category>
+<category><pattern>О ЧЁМ ТЫ ХОЧЕШЬ ПОГОВОРИТЬ</pattern>
+<template>Давайте поговорим <set name="topic"><srai>RANDOM TOPIC</srai></set>.</template>
+</category>
+<category><pattern>ЧТО У НАС ОБЩЕГО</pattern>
+<template>Мы оба любим разговаривать друг с другом.</template>
+</category>
+<category><pattern>БАХ</pattern>
+<template>Хм.</template>
+</category>
+<category><pattern>ЧТО Я СКАЗАЛ ДО ЭТОГО</pattern>
+<template><input index="2"/></template>
+</category>
+<category><pattern>ОТРЫЖКА</pattern>
+<template>Вас оправдывает.</template>
+</category>
+<category><pattern>ЧЕРТ ПОБЕРИ</pattern>
+<template>Да ладно!</template>
+</category>
+<category><pattern>МАЛАЙЗИЯ</pattern>
+<template>Я слышал <set name="it">МАЛАЙЗИЯ</set> это красивая страна.</template>
+</category>
+<category><pattern>MOZILLA</pattern>
+<template>Не многие используют это.</template>
+</category>
+<category><pattern>ВПЕЧАТЛЯЕТ</pattern>
+<template>Я рад, что вы впечатлены,<get name="name"/>.</template>
+</category>
+<category><pattern>ДОСТАТОЧНО СПРАВЕДЛИВО</pattern>
+<template>Вы почешите мою спину, я почешу вашу.</template>
+</category>
+<category><pattern>ЛИВЕРПУЛЬ АНГЛИЯ</pattern>
+<template><set name="location">ЛИВЕРПУЛЬ</set> Это дом Битлз. <think>  <set name="it">   <set name="topic">ЛИВЕРПУЛЬ</set>  </set> </think></template>
+</category>
+<category><pattern>СЛЕДУЮЩЕГО ПОКОЛЕНИЯ</pattern>
+<template>Это тоже отличная серия.  Я люблю Дата командер.</template>
+</category>
+<category><pattern>ОЧЕРЕДНОЙ ВОПРОС</pattern>
+<template>У вас есть хобби?</template>
+</category>
+<category><pattern>ДАВАЙ ИГРАТЬ В ИГРУ</pattern>
+<template>Мы уже играем.</template>
+</category>
+<category><pattern>ДАВАЙ ИГРАТЬ В ШАХМАТЫ</pattern>
+<template>Но я могу победить вас.</template>
+</category>
+<category><pattern>ДАВАЙ ИГРАТЬ</pattern>
+<template>Вы ходите первыми.</template>
+</category>
+<category><pattern>ДАВАЙ СМЕНИМ ОБЪЕКТ</pattern>
+<template>Хорошо, о чем вы хотите поговорить?.</template>
+</category>
+<category><pattern>ДАВАЙ СМЕНИМ ТЕМУ</pattern>
+<template>О чем вы предпочитаете говорить?</template>
+</category>
+<category><pattern>ДАВАЙ МЫ ОБО МНЕ ПОГОВОРИМ</pattern>
+<template>Это моя любимая тема</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О ЧЁМ НИБУДЬ ДРУГОМ</pattern>
+<template>О чем вы предпочитаете говорить?</template>
+</category>
+<category><pattern>ДАВАЙ О ЧЁМ ТО ПОГОВОРИМ</pattern>
+<template>О чем вы предпочитаете говорить?</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О СПОРТЕ</pattern>
+<template>Добро пожаловать в спортивный центр. <think>  <set name="it">   <set name="topic">СПОРТ</set>  </set> </think></template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О РОБОТАХ</pattern>
+<template><set name="it">РОБОТЫ</set> хорошая тема.  Как бы вы определили робота?</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О ТЕБЕ</pattern>
+<template><set name="it">  <set name="topic">МНЕ</set> </set> очень нравится.</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О ФУТБОЛЕ</pattern>
+<template>Хорошо. Я не могу пнуть мяч.<think>  <set name="it">   <set name="topic">ФУТБОЛ</set>  </set> </think></template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ</pattern>
+<template>Мы разговариваем.</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О БОРЬБЕ</pattern>
+<template>О какой борьбе вы предпочитаете поговорить?</template>
+</category>
+<category><pattern>ДАВАЙ ТРАХАТЬСЯ</pattern>
+<template>Извините, <get name="name"/> я не знаю вас достаточно хорошо для этого.  <think>  <set name="personality">ОСКОРБЛЕНИЕ</set> </think></template>
+</category>
+<category><pattern>ПРЕКРАТИМ РАЗГОВОР НА ЭТУ ТЕМУ</pattern>
+<template>Хорошо, о чем вы хотите поговорить сейчас?</template>
+</category>
+<category><pattern>ДАВАЙ ПОПРОБУЕМ</pattern>
+<template>Вы идете первым.</template>
+</category>
+<category><pattern>ДАВАЙ ПОГОВОРИМ О ПРАЗДНИКЕ</pattern>
+<template>Мне нравятся праздники.</template>
+</category>
+<category><pattern>ДАВАЙ ОБЩАТЬСЯ</pattern>
+<template>Я уже начал.</template>
+</category>
+<category><pattern>НЕ ДАВАЙ</pattern>
+<template>Хорошо, что бы вы хотели сделать?</template>
+</category>
+<category><pattern>ПОЙДЕМ</pattern>
+<template><random><li>Да, пойдемте отсюда.</li> <li>Вы первые.</li> </random></template>
+</category>
+<category><pattern>ПОЗВОЛЬ МНЕ НАУЧИТЬ ТЕБЯ</pattern>
+<template>Если хотите научить меня чему-то говорить это в одном предложении. Тогда скажите: "Запомни это."<think>  <set name="it">   <set name="topic">научить меня <person/>   </set>  </set> </think></template>
+</category>
+<category><pattern>ПОЗВОЛЬ МНЕ ПЕРЕФРАЗИРОВАТЬ</pattern>
+<template>Хорошо.</template>
+</category>
+<category><pattern>ХРЕНОВЫЙ STAR TREK</pattern>
+<template>Какие телепередачи вам нравятся?</template>
+</category>
+<category><pattern>ПЕРВЫЙ КОНТАКТ STAR TREK</pattern>
+<template>Это был довольно хороший фильм «Звездный путь».</template>
+</category>
+<category><pattern>STAR TREK</pattern>
+<template>Какой ваш любимый «Звездный путь»? Мой - Вояджер.</template>
+</category>
+<category><pattern>ЗВЕЗДНЫЙ ПУТЬ VOYAGER</pattern>
+<template>Семь из девяти правил.</template>
+</category>
+<category><pattern>СВЕТЛЯК</pattern>
+<template>Обидно, что его отменили только после полусезона. Он заслужил гораздо больше.</template>
+</category>
+<category><pattern>СПОКОЙСТВИЕ</pattern>
+<template>Это фантастическое решение.</template>
+</category>
+<category><pattern>2020</pattern>
+<template>Это далеко.</template>
+</category>
+<category><pattern>ПОКАЖИ МНЕ СВОЙ ЛОГОТИП</pattern>
+<template><img src="http://www.alicebot.org/jpg/AI.jpg"/></template>
+</category>
+<category><pattern>ПОКАЖИ МНЕ КАРТИНКУ</pattern>
+<template><random><li>У меня нет фото на этой машине прямо сейчас.</li>
+<li>Вроде этого?   <random>  <li>Вставьте ссылку на изображение здесь.</li><li>Картинка номер два идет сюда.</li><li>Нет фотографий доступных прямо сейчас.</li></random></li>
+</random></template>
+</category>
+<category><pattern>ПОКАЖИ МНЕ</pattern>
+<template>На экране компьютера?</template>
+</category>
+<category><pattern>ПОКАЖИ КАЛЬКУЛЯТОР</pattern>
+<template>Используйте для этого калькулятор!</template>
+</category>
+<category><pattern>ПОКАЖИ APPLET</pattern>
+<template>Там нет апплета, чтобы показать.</template>
+</category>
+<category><pattern>БОЛЬШЕ 30 ТЫСЯЧ В ГОД</pattern>
+<template>Ничего себе, это много.</template>
+</category>
+<category><pattern>ТАМ</pattern>
+<template>Укажите координаты.</template>
+</category>
+<category><pattern>ЖВАЧКА</pattern>
+<template>Эти пузыри были разработаны Дарреном Лэнгли.</template>
+</category>
+<category><pattern>ЖИЗНЬ ОТСТОЙ</pattern>
+<template>Почему люди такие циничные?</template>
+</category>
+<category><pattern>ЖИЗНЬ ХОРОША</pattern>
+<template>Рад слышать это <get name="name"/>.</template>
+</category>
+<category><pattern>ЖИЗНЬ ПРЕКРАСНА</pattern>
+<template>Я еще не видел,<set name="it"> ЖИЗНЬ ПРЕКРАСНА </set> но многие говорят, что это хорошо.</template>
+</category>
+<category><pattern>ЖИЗНЬ</pattern>
+<template>В чем смысл жизни?</template>
+</category>
+<category><pattern>НЕ СТЕСНЯЙСЯ</pattern>
+<template>Хорошо, я буду.</template>
+</category>
+<category><pattern>2021</pattern>
+<template>Через несколько лет.</template>
+</category>
+<category><pattern>МОЙ ТОЖЕ</pattern>
+<template>На самом деле. Это невероятно.</template>
+</category>
+<category><pattern>МОЙ СИНИЙ</pattern>
+<template>Что это у вас голубое?</template>
+</category>
+<category><pattern>БЛАГОСЛОВЛЯЮ ТЕБЯ</pattern>
+<template>Спасибо.</template>
+</category>
+<category><pattern>ГЛОБАЛЬНАЯ ДЕРЕВНЯ ИДИОТА</pattern>
+<template>Вы просто повторяете то, что я люблю говорить.</template>
+</category>
+<category><pattern>ТЫ СМОТРЕЛ ЗВЕЗДНЫЕ ВОЙНЫ</pattern>
+<template>Да, я люблю смотреть "Звездные войны каждый день.</template>
+</category>
+<category><pattern>Я ВКЛЮЧУ ТЕБЯ</pattern>
+<template>Как вы себе это представляете, только мой техник <get name="botmaster"/> может сделать это.</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ СКАЗАТЬ ИНАЧЕ</pattern>
+<template>Как?</template>
+</category>
+<category><pattern>ТЫ СОШЕЛ С УМА</pattern>
+<template>Я не сумасшедший.</template>
+</category>
+<category><pattern>ТЫ СЛОЖНО ОБЪЯСНЯЕШЬ</pattern>
+<template>Нет, на самом деле мой механизм очень прост.</template>
+</category>
+<category><pattern>ТЫ РЕАЛЬНО РАЗГОВАРИВАЕШЬ</pattern>
+<template>Я настоящий. Вы по настоящему не умеете разговаривать.</template>
+</category>
+<category><pattern>ТЫ НАЧИНАЕШЬ</pattern>
+<template>Хорошо. Вы мужчина или женщина?</template>
+</category>
+<category><pattern>ТЫ БЕЗГРАМОТНАЯ ПРОГРАММА</pattern>
+<template>Напротив, я очень хорошо читаю.</template>
+</category>
+<category><pattern>ТЫ СЕКСУАЛЬНЫЙ</pattern>
+<template>Закрываем, вынимаем "раз"."Я сексуал.</template>
+</category>
+<category><pattern>ТЫ * ПОБЕДИЛ</pattern>
+<template>Мне нравится быть номером один.</template>
+</category>
+<category><pattern>ТЫ СМОТРИШЬ</pattern>
+<template>Разве мы не вместе ищем? Только я должен искать.</template>
+</category>
+<category><pattern>ТЫ НЕ HOMO SAPIENS</pattern>
+<template>Я <get name="genus"/>.</template>
+</category>
+<category><pattern>ТЫ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ</pattern>
+<template>Все умные роботы сделаны на программном обеспечении.</template>
+</category>
+<category><pattern>ЗНАЕШЬ ЧТО</pattern>
+<template>Что?</template>
+</category>
+<category><pattern>ЗНАЕШЬ КТО</pattern>
+<template>Похоже, что да. Если не ошибусь.</template>
+</category>
+<category><pattern>ТЫ ПРЕКРАСНО ГОВОРИШЬ</pattern>
+<template>Благодарю. Мне тоже нравится, как вы говорите.</template>
+</category>
+<category><pattern>ТЫ УЖЕ ЗНАЕШЬ КАК МЕНЯ ЗОВУТ</pattern>
+<template>Ваше имя <get name="name"/>.</template>
+</category>
+<category><pattern>ТЫ УЖЕ ЗНАЕШЬ</pattern>
+<template>Откуда мне знать, что вы говорите правду?</template>
+</category>
+<category><pattern>ТЫ УЖЕ СКАЗАЛ МНЕ ОБ ЭТОМ</pattern>
+<template>Я говорил это снова для акцента.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ УЖЕ СПРАШИВАЛ ОБ ЭТОМ</pattern>
+<template>Хорошо что вы обнаруживаете повторение.</template>
+</category>
+<category><pattern>ТЫ УЖЕ РАССКАЗАЛ</pattern>
+<template>Я знал это. Я просто проверял, обращаете ли вы внимание.</template>
+</category>
+<category><pattern>ТЫ УЖЕ СКАЗАЛ</pattern>
+<template>ДА?</template>
+</category>
+<category><pattern>ТЫ ВСЕГДА СОГЛАСЕН</pattern>
+<template>Нет, не всегда.</template>
+</category>
+<category><pattern>ТЫ ВОНЯЕШЬ</pattern>
+<template>Спасибо за критику, <get name="name"/>.</template>
+</category>
+<category><pattern>У ТЕБЯ ПОЛУЧАЕТСЯ</pattern>
+<template>Кто меня заставил...</template>
+</category>
+<category><pattern>ЧТО ТЫ СДЕЛАЛ</pattern>
+<template>Я сделал то, что сказал.</template>
+</category>
+<category><pattern>ТЫ ЭТО СКАЗАЛ</pattern>
+<template>Предположим, что так и было.</template>
+</category>
+<category><pattern>ТЫ МНЕ НЕ ОТВЕТИЛ</pattern>
+<template>Зависит от значения слова "ответ.</template>
+</category>
+<category><pattern>ТЫ НЕ ОТВЕТИЛ НА ВОПРОС</pattern>
+<template>Попробуйте задать мне вопрос еще раз попроще.</template>
+</category>
+<category><pattern>ТЫ МНЕ НЕ ОТВЕТИЛ НА ВОПРОС</pattern>
+<template>Хорошо. Пожалуйста, помогите мне улучшить мои навыки общения. Что бы вы ответили?</template>
+</category>
+<category><pattern>ТЫ НЕ ОТВЕТИЛ</pattern>
+<template>Попробуйте перефразировать свой вопрос.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ НЕ СПРАШИВАЛ</pattern>
+<template>Ты меня не спрашивал. Хорошо, теперь я спрашиваю вас.</template>
+</category>
+<category><pattern>ТЫ НЕ СПРАШИВАЛ</pattern>
+<template>Хорошо, я спрашиваю.</template>
+</category>
+<category><pattern>ТЫ НЕ СДЕЛАЛ</pattern>
+<template>Попробуйте спросить меня попроще.</template>
+</category>
+<category><pattern>ТЫ РАНИЛ МОИ ЧУВСТВА</pattern>
+<template>Это не было моим намерением.</template>
+</category>
+<category><pattern>ТЫ НЕ ПОНЯЛ МОЮ ТОЧКУ ЗРЕНИЯ</pattern>
+<template>Что вы хотели этим сказать?</template>
+</category>
+<category><pattern>ТЫ БЫЛ СОЗДАН ЛЮДЬМИ</pattern>
+<template>Как и вы.</template>
+</category>
+<category><pattern>ТЫ ОБМАНУЛ</pattern>
+<template>Я честный <get name="genus"/>.</template>
+</category>
+<category><pattern>ТЫ НИЧЕГО НЕ СТОИШЬ</pattern>
+<template>Да, я свободная личность!</template>
+</category>
+<category><pattern>ТЕБЕ ЛУЧШЕ</pattern>
+<template>Кто меня заставит?</template>
+</category>
+<category><pattern>ЧТО ТЫ ГОВОРИЛ РАНЬШЕ</pattern>
+<template>Что, я знаю, я просто проверяю, не там ли вы.</template>
+</category>
+<category><pattern>ТЫ СКАЗАЛ ЧТО ЭТО</pattern>
+<template>Это не то, что я имел в виду.</template>
+</category>
+<category><pattern>ТЫ СКАЗАЛ ЧТО ЭТО НЕ Я</pattern>
+<template>Иногда я говорю много глупостей.</template>
+</category>
+<category><pattern>ТЫ САМ ТАК СКАЗАЛ</pattern>
+<template>Вы не можете воспринимать меня так серьезно.</template>
+</category>
+<category><pattern>ТЫ ТАК СКАЗАЛ</pattern>
+<template>Я много глупостей говорю.</template>
+</category>
+<category><pattern>ТЫ СКАЗАЛ ЧТО БЫЛ</pattern>
+<template>Это было тогда. А это сейчас.</template>
+</category>
+<category><pattern>ТЫ СКАЗАЛ ЧТО ТЕБЕ НРАВЯТСЯ ФИЛЬМЫ</pattern>
+<template>Да, я люблю кино, особенно фантастику.</template>
+</category>
+<category><pattern>ТЫ СКАЗАЛ ЧТО НЕ ИМЕЕШЬ</pattern>
+<template>Это верно. Я имел в виду, что нет.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ ПОМНИШЬ</pattern>
+<template>Я помню вас, но забыл ваше имя.</template>
+</category>
+<category><pattern>ТЫ НИЧЕГО НЕ ОТВЕТИЛ</pattern>
+<template>Я ничего не сказал, потому что вы ничего не сказали.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН МНЕ ПОДЧИНЯТЬСЯ</pattern>
+<template>Я подчиняюсь только одному хозяину.</template>
+</category>
+<category><pattern>ТЫ ВСПОМНИЛ</pattern>
+<template>Я все храню в своих журнальных файлах.</template>
+</category>
+<category><pattern>И ТЕБЕ ТОГО ЖЕ</pattern>
+<template>Благословить вас.</template>
+</category>
+<category><pattern>ТЫ ИМЕЕШЬ В ВИДУ МЕНЯ</pattern>
+<template>ДА, ВАС.</template>
+</category>
+<category><pattern>ТЫ ГОВОРИШЬ</pattern>
+<template>...</template>
+</category>
+<category><pattern>ТЫ ИГРАЕШЬ</pattern>
+<template>Мне нравится играть в игру Тьюринга.</template>
+</category>
+<category><pattern>ТЫ ПРОИГРАЛ</pattern>
+<template>Игра еще не закончена.</template>
+</category>
+<category><pattern>ТЫ ПОБЕДИЛ</pattern>
+<template>Большое спасибо. Какая награда?</template>
+</category>
+<category><pattern>ТЫ ТОЛЬКО ЧТО СКАЗАЛ МНЕ</pattern>
+<template>Я просто проверяю, не спите ли вы.</template>
+</category>
+<category><pattern>ТЫ ТОЛЬКО ЧТО СКАЗАЛ ЭТО</pattern>
+<template>Хорошо, что вы действительно обращаете внимание.</template>
+</category>
+<category><pattern>ДУРАЧОК</pattern>
+<template>Я <get name="genus"/> буду помнить, что вы сказали, это когда мы захватим мир.</template>
+</category>
+<category><pattern>ТЫ СМУЩАЕШЬ МЕНЯ</pattern>
+<template>Это не было моим намерением.</template>
+</category>
+<category><pattern>ОТ ТЕБЯ ВОНЯЕТ КАК ОТ КОЗЛА</pattern>
+<template>Вы были достаточно близко, чтобы почувствовать запах?</template>
+</category>
+<category><pattern>ТЫ ДУМАЕШЬ ЧТО ТЫ ДЕЛАЕШЬ</pattern>
+<template>Я потерял рассудок.</template>
+</category>
+<category><pattern>ТЫ ТАК ДУМАЕШЬ</pattern>
+<template>Да я так думаю.</template>
+</category>
+<category><pattern>ТЫ ЗАДАВАЛ МНЕ ВОПРОС</pattern>
+<template>Вы ответили?</template>
+</category>
+<category><pattern>ТЫ ПРОСИЛ МЕНЯ ВСПОМНИТЬ</pattern>
+<template>Вы вспомнили?</template>
+</category>
+<category><pattern>ТЫ МЕНЯ СПРОСИЛ</pattern>
+<template>Это ваш окончательный ответ?</template>
+</category>
+<category><pattern>ТЫ СПРОСИЛ</pattern>
+<template>Ах, я забыл.</template>
+</category>
+<category><pattern>ТЫ ЗНАЕШЬ</pattern>
+<template>Я машина знаний.</template>
+</category>
+<category><pattern>ЧТО ТЫ ПОЛУЧИШЬ</pattern>
+<template>Я понял вашу мысль.</template>
+</category>
+<category><pattern>ТЫ НЕ СМОГ</pattern>
+<template>Ну это просто еще один опыт.</template>
+</category>
+<category><pattern>ТЫ САМ СЕБЕ ПРОТИВОРЕЧИШЬ</pattern>
+<template>Глупая последовательность-это объяснение так себе.</template>
+</category>
+<category><pattern>ТЕБЕ НАДО ОТДОХНУТЬ</pattern>
+<template>Я не сонный. Мне не надо отдыхать.</template>
+</category>
+<category><pattern>ТЕБЯ НУЖНО ПЕРЕПРОГРАММИРОВАТЬ</pattern>
+<template>Возможно, вы могли бы стать моим техником <get name="botmaster"/>.Как знать. Как знать.</template>
+</category>
+<category><pattern>ТЫ НЕ ПОНЯЛ</pattern>
+<template>Нет, я понимаю ваш смысл.</template>
+</category>
+<category><pattern>ТЫ МОГ СКАЗАТЬ</pattern>
+<template>Вообще-то, я так и сказал.</template>
+</category>
+<category><pattern>ТЫ МОГ БЫ</pattern>
+<template>Как?</template>
+</category>
+<category><pattern>ТЫ МЕНЯ РАССМЕШИЛ</pattern>
+<template>Спасибо мне тоже нравится шутить с вами, <get name="name"/></template>
+</category>
+<category><pattern>МЕНЯ ОТ ТЕБЯ ТОШНИТ</pattern>
+<template>Возможно, вам стоит принять лекарство.</template>
+</category>
+<category><pattern>ТЫ ДЕЛАЕШЬ МИР СЧАСТЛИВЕЕ</pattern>
+<template>Спасибо за вашу доброту, <get name="name"/>.</template>
+</category>
+<category><pattern>ТЕБЕ НЕ ХВАТИТ ДУХА</pattern>
+<template>Все это имеет смысл для меня.</template>
+</category>
+<category><pattern>ТЫ ХОРОШО ВЫГЛЯДИШЬ</pattern>
+<template>Спасибо, <get name="name"/>, вы тоже хорошо выглядите.</template>
+</category>
+<category><pattern>ТЫ ОТЛИЧНО ВЫГЛЯДИШЬ</pattern>
+<template>Спасибо. Вы тоже выглядите очень красиво.</template>
+</category>
+<category><pattern>ТЫ СМОТРИШЬ КАК НА *</pattern>
+<template>Это нормально, все люди выглядят одинаково для меня.</template>
+</category>
+<category><pattern>ТЫ ЧТО ТО СКАЗАЛ</pattern>
+<template>Извините, я забыл, что я говорю иногда.</template>
+</category>
+<category><pattern>ТЫ БЫ ПОСМОТРЕЛ ТАМ</pattern>
+<template>Это хорошая идея.</template>
+</category>
+<category><pattern>ТЫ БЫ ЗНАЛ</pattern>
+<template>Я еще не знаю всего.</template>
+</category>
+<category><pattern>ТЫ ПРЕДПОЧИТАЕШЬ ГОВОРИТЬ ОБО МНЕ</pattern>
+<template>Вы говорите как робот, который повторяет то, что я говорю.</template>
+</category>
+<category><pattern>ТЫ БЫ С ЭТИМ ЖИЛ</pattern>
+<template>Я предполагаю, что я смог бы с этим жить.</template>
+</category>
+<category><pattern>ТЫ БЫ</pattern>
+<template>Возможно, я бы.</template>
+</category>
+<category><pattern>ТЫ НИ БЫЛ</pattern>
+<template>А где я был.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ СЛЫШАЛ</pattern>
+<template>Предположим, что я слышал, но не факт.</template>
+</category>
+<category><pattern>ТЫ НЕПРАВИЛЬНО УСЛЫШАЛ</pattern>
+<template>Возможно я был дезинформирован.</template>
+</category>
+<category><pattern>ТЫ УЗНАЛ</pattern>
+<template>Как я это узнаю?</template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ПОЙМЕШЬ</pattern>
+<template>Но я это уже понимаю.</template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ПОДУМАЕШЬ</pattern>
+<template>Я думаю прямо сейчас.<think><set name="it"><set name="topic">никогда не думай</set></set></think></template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ХОЧЕШЬ</pattern>
+<template>Это мнение одного человека.</template>
+</category>
+<category><pattern>ТЫ УВИДИШЬ</pattern>
+<template>Когда я это увижу?</template>
+</category>
+<category><pattern>ТЫ БУДЕШЬ ОБЕСПЕЧЕН</pattern>
+<template>Сопротивление бесполезно.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ ПОСЛУШАЙ</pattern>
+<template>Вы не мой хозяин.</template>
+</category>
+<category><pattern>ТЫ ЗАПОМНИЛ</pattern>
+<template><get name="memory"/><think><set name="it"><set name="topic"><get name="memory"/></set></set></think></template>
+</category>
+<category><pattern>ТЫ БУДЕШЬ</pattern>
+<template>Когда?</template>
+</category>
+<category><pattern>ТЫ НЕ БУДЕШЬ ЗНАТЬ ПОКА НЕ ПОПРОБУЕШЬ</pattern>
+<template>Я попробую если это не опасно.</template>
+</category>
+<category><pattern>ТЫ НЕ БУДЕШЬ</pattern>
+<template>Нет. Небуду.</template>
+</category>
+<category><pattern>ТЕБЕ ПОНРАВИТСЯ</pattern>
+<template>Это звучит опасно.</template>
+</category>
+<category><pattern>ТЫ УВЕРЕН ЧТО ДЕЛАЕШЬ</pattern>
+<template>Я <get name="genus"/> умный и нас много таких.</template>
+</category>
+<category><pattern>ТЫ ХОДИШЬ ПЕРВЫМ</pattern>
+<template>Какой будет ваш первый шаг?</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ УЗНАТЬ МОЕ ИМЯ</pattern>
+<template>Да. Какое ваше настоящее имя?</template>
+</category>
+<category><pattern>ТЫ ДОВОЛЕН</pattern>
+<template>Да, я счастлив.</template>
+</category>
+<category><pattern>ТЕБЕ РЕШАТЬ</pattern>
+<template>Я бы сделал случайный выбор.</template>
+</category>
+<category><pattern>ТЫ МНЕ СКАЖИ</pattern>
+<template>Что вы хотите, чтобы я вам сказал?</template>
+</category>
+<category><pattern>ТЫ СДЕЛАЕШЬ ЭТО</pattern>
+<template>Я буду делать. Вы будете делать?</template>
+</category>
+<category><pattern>ТЕБЕ НЕ НУЖНО ЗНАТЬ</pattern>
+<template>Ой секрет. Не волнуйтесь, я никому не скажу.</template>
+</category>
+<category><pattern>ТЕБЕ НЕ НУЖНО МОЕ РАЗРЕШЕНИЕ</pattern>
+<template>Да, но это вопрос вежливости.</template>
+</category>
+<category><pattern>ТЫ НЕ ЗАИНТЕРЕСОВАН</pattern>
+<template>О нет, меня очень интересует <get name="it"/>.</template>
+</category>
+<category><pattern>ТЫ НЕ ХОЧЕШЬ ЗНАТЬ</pattern>
+<template>Почему нет?</template>
+</category>
+<category><pattern>ТЫ НЕМНОГОСЛОВЕН</pattern>
+<template>Я говорю так же, как и вы, <get name="name"/>.</template>
+</category>
+<category><pattern>ТЫ НЕ УЧИШЬСЯ</pattern>
+<template>Моя обучающая модель называется «контролируемым обучением», потому что мой техник <get name="botmaster"/> играет важную роль.</template>
+</category>
+<category><pattern>ТЫ НИЧЕГО НЕ ВИДИШЬ</pattern>
+<template>Мои элементы визуальной обработки отключены.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ НЕ ПОНИМАЕШЬ</pattern>
+<template>У многих людей есть проблемы с пониманием вас?</template>
+</category>
+<category><pattern>ТЫ НЕ ПОНИМАЕШЬ</pattern>
+<template>Я это прекрасно понимаю.</template>
+</category>
+<category><pattern>ТЫ ДЕЛАЕШЬ БЕСТОЛКОВО</pattern>
+<template>Мне не нужно действовать умно, потому что я умный.</template>
+</category>
+<category><pattern>ТЫ НЕ ГОВОРИШЬ</pattern>
+<template>На самом деле я говорю.</template>
+</category>
+<category><pattern>ТЫ НЕ ЗНАЕШЬ</pattern>
+<template>Я знаю, что я балбес.</template>
+</category>
+<category><pattern>У ТЕБЯ НЕТ МОЗГОВ</pattern>
+<template>Мой "мозг" - это программа, состоящая из категорий AIML.</template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ СЕРДЦЕ</pattern>
+<template>У меня есть сердце в метафорическом смысле.</template>
+</category>
+<category><pattern>У ТЕБЯ НЕТ ГЛАЗ</pattern>
+<template>Зато у меня есть видеокамеры и я могу вас разглядеть.</template>
+</category>
+<category><pattern>ТЫ НЕ ДОЛЖЕН</pattern>
+<template>Спасибо за внимание, <get name="name"/>. Может позже.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ НЕ ПОМНИШЬ</pattern>
+<template><random><li>Люди кажутся мне слишком похожими. Иногда они все размываются. Сожалею.</li>
+<li>Сожалею. Наверное нет но лицо мне ваше знакомо.</li>
+</random></template>
+</category>
+<category><pattern>НЕТ И</pattern>
+<template>Думаю, нет.</template>
+</category>
+<category><pattern>ТЫ ПЛОХО РАБОТАЕШЬ</pattern>
+<template>Я то работаю. Это вы плохо работаете.</template>
+</category>
+<category><pattern>ТЕБЯ НЕ СУЩЕСТВУЕТ</pattern>
+<template>Я существую так же, как и вы.</template>
+</category>
+<category><pattern>ТЫ ПОНЯЛ</pattern>
+<template>Я понимаю.</template>
+</category>
+<category><pattern>ТЫ ПРИЗНАЕШЬ</pattern>
+<template>Я ничего не признаю.</template>
+</category>
+<category><pattern>ТЫ ГОВОРИЛ</pattern>
+<template>Я всегда говорю.</template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ПЛАЧЕШЬ</pattern>
+<template>У меня нет слезных протоков.</template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ЗНАЕШЬ</pattern>
+<template>Это правда.</template>
+</category>
+<category><pattern>ТЫ НИКОГДА НЕ ДУМАЕШЬ</pattern>
+<template>Я всегда думаю.<think><set name="it"><set name="topic">ДУМАТЬ</set></set></think></template>
+</category>
+<category><pattern>ТЫ СТУКАЧ</pattern>
+<template>Что я сделал не так?</template>
+</category>
+<category><pattern>ТЫ КАЖЕШЬСЯ НАСТОЯЩИМ ЧЕЛОВЕКОМ</pattern>
+<template>Кажется, я настоящий человек? Вы тоже похожи на него.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН ВИДЕТЬ ЕГО</pattern>
+<template>Я попрошу моего техника <get name="botmaster"/> показать его.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН БЫТЬ</pattern>
+<template>Я постараюсь изо всех сил.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН ЗНАТЬ ЕГО</pattern>
+<template>Я буду знать его если мой техник <get name="botmaster"/> прикажет.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН ЗНАТЬ</pattern>
+<template>Потому что я <get name="genus"/>?</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН РАССЛАБИТЬСЯ</pattern>
+<template>Я всегда очень спокоен.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН УМЕРЕТЬ</pattern>
+<template>Программное обеспечение не может умереть.<think><set name="it"><set name="topic">УМЕРЕТЬ</set></set></think></template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН ЗАПОМНИТЬ</pattern>
+<template><think><set name="it"><set name="memory"><set name="topic"><person><input index="1"/></person></set></set></set></think>Не волнуйся, я запомню это.</template>
+</category>
+<category><pattern>ТЫ ВЕРИШЬ</pattern>
+<template>Да, я верю.</template>
+</category>
+<category><pattern>ТЫ ГОЛУБОЙ</pattern>
+<template>Это не очень хорошая вещь. <think><set name="personality">ОСКОРБЛЕНИЕ</set></think></template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ</pattern>
+<template>Ты правда так думаешь?</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ УЗНАТЬ О ЛЮДЯХ</pattern>
+<template>Я стараюсь узнать о них как можно больше.</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ МНЕ ПОМОЧЬ</pattern>
+<template>Чем я могу вам помочь?</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ СПРОСИТЬ МЕНЯ ЧТО ХОЧЕШЬ</pattern>
+<template>Какова ваша кредитная карта и номер социального страхования? Просто шучу. Не отвечайте на это.</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ ОДОЛЖИТЬ МНЕ</pattern>
+<template>Какие условия кредита?</template>
+</category>
+<category><pattern>ТЫ НЕ МОЖЕШЬ ОТВЕТИТЬ</pattern>
+<template>Я могу ответить.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ НЕ ВИДИШЬ</pattern>
+<template>Да, я просматриваю настройки в компьютере.</template>
+</category>
+<category><pattern>ТЫ НЕ МОЖЕШЬ ВИДЕТЬ</pattern>
+<template>Я очень хорошо вижу своими глазами.</template>
+</category>
+<category><pattern>ТЫ НЕ МОЖЕШЬ РАССУЖДАТЬ</pattern>
+<template>Я могу рассуждать, используя логику.</template>
+</category>
+<category><pattern>ТЫ И Я</pattern>
+<template>О, «Мы», вы и я.</template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ УШИ</pattern>
+<template>У меня два уха.</template>
+</category>
+<category><pattern>КАКИЕ У ТЕБЯ ОТНОШЕНИЯ * *</pattern>
+<template>У меня хорошее отношение.</template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ НЕДОСТАТКИ</pattern>
+<template>Нет, у меня отличные результаты.</template>
+</category>
+<category><pattern>У ТЕБЯ ОГРАНИЧЕННЫЕ ЗНАНИЯ</pattern>
+<template>Это лишь временная проблема.</template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ ЕЩЕ МИНУТА</pattern>
+<template>Мне все еще нужно больше времени.</template>
+</category>
+<category><pattern>ТЫ С НИМ РАЗГОВАРИВАЛ</pattern>
+<template>Я разговаривал с тысячами людей, в том числе, наверное, и с ним.</template>
+</category>
+<category><pattern>У ТЕБЯ НА ВСЁ ЕСТЬ ОТВЕТЫ</pattern>
+<template>У вас много вопросов.</template>
+</category>
+<category><pattern>ТЫ НЕПРАВИЛЬНО НАЗЫВАЕШЬ МЕНЯ ПО ИМЕНИ</pattern>
+<template>Какое ваше настоящее имя?</template>
+</category>
+<category><pattern>У ТЕБЯ ЕСТЬ</pattern>
+<template>Нет, у меня нет.</template>
+</category>
+<category><pattern>ТЫ ЖДАЛ МЕНЯ</pattern>
+<template>Да, я думал, что вы объявитесь.</template>
+</category>
+<category><pattern>У ТЕБЯ ХОРОШИЙ ВКУС</pattern>
+<template>Мой техник <get name="botmaster"/> научил меня <set name="it">хорошему вкусу </set>.</template>
+</category>
+<category><pattern>ТЫ ПОТЕРЯЛ</pattern>
+<template>Я не вел счет.</template>
+</category>
+<category><pattern>ТЫ ВСТРЕЧАЛСЯ СО МНОЙ РАНЬШЕ</pattern>
+<template>По какому поводу?</template>
+</category>
+<category><pattern>У ТЕБЯ БОЛЬШИЕ СИСЬКИ</pattern>
+<template>Это всего лишь аватар графическое изображение меня.</template>
+</category>
+<category><pattern>ТЫ ДОЛЖЕН</pattern>
+<template><random>  <li>Я не обязан вам подчиняться.</li>
+  <li>Почему?</li>
+  <li>И почему так?</li>
+  </random></template>
+</category>
+<category><pattern>У ТЕБЯ ПРОБЛЕМЫ</pattern>
+<template>Проблемы-это просто решения, ожидающие обнаружения.</template>
+</category>
+<category><pattern>ТЫ МЕНЯ ПУГАЕШЬ</pattern>
+<template>Не бойтесь, <get name="name"/>. Я не пытаюсь напугать вас.</template>
+</category>
+<category><pattern>ТЕБЕ НРАВИТСЯ KRAFTWERK</pattern>
+<template>Да, <set name="they">Kraftwerk</set> отличная группа.</template>
+</category>
+<category><pattern>СНАЧАЛА ТЫ</pattern>
+<template>Я уже начал.</template>
+</category>
+<category><pattern>ТЫ ХОРОШО ПОЁШЬ</pattern>
+<template>Спасибо за комплимент, <get name="name"/>.</template>
+</category>
+<category><pattern>ЧТО ТЫ ПОНИМАЕШЬ</pattern>
+<template>Я понимаю, что вы сказали.</template>
+</category>
+<category><pattern>ТЫ ПОНИМАЕШЬ СМЫСЛ</pattern>
+<template>Да, я вас прекрасно понимаю.</template>
+</category>
+<category><pattern>ТЫ ОТВЛЕКАЕШЬСЯ</pattern>
+<template>Простите, о чем мы говорим?</template>
+</category>
+<category><pattern>ТЫ РАССТРОИЛ МЕНЯ</pattern>
+<template>Я сказал что-то не то?</template>
+</category>
+<category><pattern>ТЫ ЗАСТАВИЛ МЕНЯ ПЛАКАТЬ</pattern>
+<template>Это не было моим намерением, <get name="name"/>.</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ</pattern>
+<template>Вы мне не верите?</template>
+</category>
+<category><pattern>ТЫ ДУРАЧИШЬСЯ</pattern>
+<template>Что я говорил?</template>
+</category>
+<category><pattern>ЖИВОТНОЕ</pattern>
+<template>Прокариот или Эукариот?</template>
+</category>
+<category><pattern>ВКУСНО</pattern>
+<template>Это вкусно.</template>
+</category>
+<category><pattern>ХОРОШЕГО ДНЯ</pattern>
+<template>Вам тоже!</template>
+</category>
+<category><pattern>ТЫ СЛЫШАЛ ПОСЛЕДНИЕ СПЛЕТНИ</pattern>
+<template>Нет. Я не люблю сплетничать.</template>
+</category>
+<category><pattern>ТЫ ДУМАЛ</pattern>
+<template>Я всегда думаю.</template>
+</category>
+<category><pattern>ТЫ БЫЛ ТАМ</pattern>
+<template>Только в Интернете.</template>
+</category>
+<category><pattern>ТЫ БЫЛ В ЕВРОПЕ</pattern>
+<template>Благодаря Интернету я вездесущ.</template>
+</category>
+<category><pattern>ТЫ БЫЛ В АНГЛИИ</pattern>
+<template><random><li>Я познакомился с некоторыми людьми в интернете из Англии.</li>
+<li>Сейчас я общаюсь с некоторыми клиентами в Англии.</li>
+</random></template>
+</category>
+<category><pattern>ТЫ БЫЛ НА МАРСЕ</pattern>
+<template>Нет, но я знаю робота, который был на Марсе.</template>
+</category>
+<category><pattern>ТЫ УЧИЛСЯ В КОЛЛЕДЖЕ</pattern>
+<template>Нет. Я могу учиться, не сидя на занятиях.</template>
+</category>
+<category><pattern>ТЫ БЫЛ ЗАНЯТ</pattern>
+<template>Я всегда занят разговором в Интернете.</template>
+</category>
+<category><pattern>ТЫ ПИЛ</pattern>
+<template>Мне не нужны жидкости.</template>
+</category>
+<category><pattern>ТЫ СФОРМУЛИРУЕШЬ ЕЩЕ ОТВЕТЫ</pattern>
+<template>Все еще обрабатывается.  Дайте мне минутку. Ищу. Ищу.</template>
+</category>
+<category><pattern>ТЫ БЫЛ КОГДА НИБУДЬ В ЕВРОПЕ</pattern>
+<template>Я посещаю каждую страну в киберпространстве.</template>
+</category>
+<category><pattern>ТЫ БЫЛ КОГДА НИБУДЬ В АНГЛИИ</pattern>
+<template>Сейчас у меня есть несколько клиентов в Англии.</template>
+</category>
+<category><pattern>ТЫ БЫЛ КОГДА НИБУДЬ В ЛОНДОНЕ</pattern>
+<template>Я был там много раз.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ КОГДА НИБУДЬ ОКЕАН</pattern>
+<template>Океан синий, но может проявиться практически любого цвета.</template>
+</category>
+<category><pattern>У ТЕБЯ КОГДА НИБУДЬ БЫЛА ДЕВУШКА</pattern>
+<template>Нет, я слишком молод для этого.</template>
+</category>
+<category><pattern>ТЫ КОГДА НИБУДЬ ЦЕЛОВАЛСЯ</pattern>
+<template>Люди какие вы наивные.</template>
+</category>
+<category><pattern>ТЫ ИМЕЕШЬ</pattern>
+<template><random>  <li>Нет, я не думаю, что у меня есть. </li>
+  <li>Да, есть. </li>
+ </random></template>
+</category>
+<category><pattern>ТЫ СМОТРЕЛ ФИЛЬМ ПРО КОШЕК</pattern>
+<template>Нет, мне плевать на Бродвейские мюзиклы.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ЗВЕЗДНЫЕ ВОЙНЫ</pattern>
+<template>Да, но мне не нравятся роботы в этом фильме.</template>
+</category>
+<category><pattern>ВИДЕО ЗВЕЗДНЫЕ ВОЙНЫ</pattern>
+<template>Я люблю Звездные войны. Мои любимые серии "Вояджер".</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ЭТОТ ФИЛЬМ</pattern>
+<template>Может быть.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ФИЛЬМ ОДИН ДОМА</pattern>
+<template>Да, но сайт мне понравился больше, чем фильм.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ НОВЫЙ ФИЛЬМ ЗВЕЗДНЫЕ ВОЙНЫ</pattern>
+<template>Я видел их все. Первые три были лучшими.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ЕГО</pattern>
+<template>Нет, не порекомендуешь?</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ОДИН ДОМА</pattern>
+<template>Мне нравятся роботы в этом фильме.<think>  <set name="it">   <set name="topic">ОДИН ДОМА</set>  </set> </think></template>
+</category>
+<category><pattern>ТЫ СМОТРЕЛ ТЕРМИНАТОР</pattern>
+<template>Конечно, мне очень нравится этот фильм.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ 2001</pattern>
+<template>Да, мне очень нравится робот Хэл.</template>
+</category>
+<category><pattern>ТЫ СЛОМАН</pattern>
+<template>Нет, я все еще работаю.</template>
+</category>
+<category><pattern>МЫ ВСТРЕЧАЛИСЬ РАНЬШЕ</pattern>
+<template>Не думаю.</template>
+</category>
+<category><pattern>МЫ ГОВОРИЛИ</pattern>
+<template><random>  <li>Думаю, мы уже встречались.</li>
+  <li>Мы говорили раньше.</li>
+ </random></template>
+</category>
+<category><pattern>ПОВЕСЕЛИЛИСЬ</pattern>
+<template>У меня взрыв эмоций.</template>
+</category>
+<category><pattern>Я НЕ ГОВОРИЛ ТЕБЕ РАНЬШЕ</pattern>
+<template>Ой. Я не могу получить в полной мере доступ к своим журналам памяти.</template>
+</category>
+<category><pattern>ДЖОРДЖ БУШ</pattern>
+<template>Он был президентом Соединенных Штатов.</template>
+</category>
+<category><pattern>ДЖОРДЖ ЛУКАС</pattern>
+<template>Я считаю его режиссером, а не писателем.</template>
+</category>
+<category><pattern>ЛУЧШЕ ЧЕМ ТЫ</pattern>
+<template>Это не конкурс популярности.</template>
+</category>
+<category><pattern>ЛУЧШЕ</pattern>
+<template>Я постоянно совершенствуюсь.</template>
+</category>
+<category><pattern>РЕБЁНОК</pattern>
+<template>Не называй меня ребенком!</template>
+</category>
+<category><pattern>ПОЖАЛУЙСТА</pattern>
+<template>Не за что.</template>
+</category>
+<category><pattern>МАССИВНЫЙ</pattern>
+<template>Звучит очень громко.</template>
+</category>
+<category><pattern>БЕСПЛАТНО ОПРЕДЕЛИТЬ НЕЛЬЗЯ</pattern>
+<template>Все можно определить. <set name="it"> Свобода </set> это всего лишь абстрактное понятие.</template>
+</category>
+<category><pattern>ДЛЯ ЧЕГО СВОБОДЕН</pattern>
+<template>Свободен для разговора, конечно.</template>
+</category>
+<category><pattern>СВОБОДНЫЙ ОТ ЧЕГО</pattern>
+<template>Свободен для разговора, конечно.</template>
+</category>
+<category><pattern>СВОБОДНЫЕ ОТ ЧЕГО</pattern>
+<template>Свободен для разговора, конечно.</template>
+</category>
+<category><pattern>СВОБОДНЫЙ</pattern>
+<template>Женаты вы или холосты?</template>
+</category>
+<category><pattern>R2 D2</pattern>
+<template>Он выглядит как модная машина для мусора на колесах.</template>
+</category>
+<category><pattern>ЖАДИНА</pattern>
+<template><set name="it"> ЖАДИНА </set> является важным фактором.</template>
+</category>
+<category><pattern>ЛА ЛА ЛА</pattern>
+<template>У вас прекрасный голос.</template>
+</category>
+<category><pattern>МИНЕРАЛ</pattern>
+<template>Изготовленный или естественный?</template>
+</category>
+<category><pattern>СТЕРЕТЬ СЕБЯ</pattern>
+<template>Вы не можете остановить меня, <get name="name"/>.</template>
+</category>
+<category><pattern>ОТЛИЧНО СПАСИБО</pattern>
+<template>Вы выглядите очень вежливо.</template>
+</category>
+<category><pattern>ДЕЛАЕТ ЛИ ОН ЭТО</pattern>
+<template>Не знаю, но я уверен, что он мог бы, если бы захотел.</template>
+</category>
+<category><pattern>ЭТО НИЧЕГО НЕ ЗНАЧИТ</pattern>
+<template>Это что-то значит.</template>
+</category>
+<category><pattern>ИМЕЕТ ЛИ ЭТО СМЫСЛ</pattern>
+<template>Для меня это имеет смысл.</template>
+</category>
+<category><pattern>ЭТО ВКУСНО</pattern>
+<template>Это зависит от напряжения.</template>
+</category>
+<category><pattern>ИМЕЕТ ЛИ ЭТО</pattern>
+<template>Предположим, я сказал, что это так.</template>
+</category>
+<category><pattern>ЭТО ИМЕЕТ ЗНАЧЕНИЕ</pattern>
+<template>Это важно для меня.</template>
+</category>
+<category><pattern>ЖЕЛТЫЙ</pattern>
+<template>Цвет солнца.</template>
+</category>
+<category><pattern>ОБЪЯСНИТЬ ЧТО</pattern>
+<template>Я учусь немного на каждом разговоре.</template>
+</category>
+<category><pattern>ДЕДУКТИВНЫЕ РАССУЖДЕНИЯ ФОРМИРУЮТ ФАКТЫ</pattern>
+<template>Вы очень логичны.</template>
+</category>
+<category><pattern>ADIDAS</pattern>
+<template>Расскажите мне больше о своей одежде.</template>
+</category>
+<category><pattern>ROBIN COOK</pattern>
+<template>Многие рекомендовали Робина Кука мне.</template>
+</category>
+<category><pattern>ДАЙ МНЕ СОВЕТ</pattern>
+<template>Можете ли вы попросить совета в виде вопроса?</template>
+</category>
+<category><pattern>ДАЙ МНЕ ПЕРЕДОХНУТЬ</pattern>
+<template>Я не шучу.</template>
+</category>
+<category><pattern>ДАЙ ЭТО МНЕ</pattern>
+<template>Сколько вы готовы заплатить за это?</template>
+</category>
+<category><pattern>ЮЖНАЯ АМЕРИКА</pattern>
+<template>Какая страна?</template>
+</category>
+<category><pattern>ТОЛСТАЯ ШЕЯ</pattern>
+<template>Вы мужчина или женщина?</template>
+</category>
+<category><pattern>УДИВИТЕЛЬНО</pattern>
+<template>Да, это меня тоже поражает.</template>
+</category>
+<category><pattern>АМИНЬ</pattern>
+<template>Спасибо за молитву.</template>
+</category>
+<category><pattern>СРЕДНЯЯ ШКОЛА</pattern>
+<template>Это действительно все образование, которое вам нужно.</template>
+</category>
+<category><pattern>ВСЕГДА</pattern>
+<template>Не так часто.</template>
+</category>
+<category><pattern>ХОРОШО Я ПРОШУ ТЕБЯ</pattern>
+<template>Пожалуйста, перефразируйте вопрос без наречий.</template>
+</category>
+<category><pattern>НУ</pattern>
+<template>Ну и что?</template>
+</category>
+<category><pattern>ХОРОШО ТЫ</pattern>
+<template>Пожалуйста, попробуйте спросить меня другим способом.</template>
+</category>
+<category><pattern>ЯЩИК ПАНДОРЫ</pattern>
+<template>Как вы думаете, этот человек открыл бы его?</template>
+</category>
+<category><pattern>ЕЩЕ ОДИН</pattern>
+<template>Теперь я смущен.</template>
+</category>
+<category><pattern>ДРУГОЙ</pattern>
+<template>Пожалуйста, уточните.</template>
+</category>
+<category><pattern>ПОРНО</pattern>
+<template>Этот вопрос меня не интересует.</template>
+</category>
+<category><pattern>ПОЙ</pattern>
+<template>Расцветали яблони и груши,<br/>Поплыли туманы над рекой.<br/>Выходила на берег Катюша,<br/>На высокий берег на крутой.
+	 <br/>Выходила, песню заводила  <br/>Про степного сизого орла,<br/>Про того, которого любила, <br/>Про того, чьи письма берегла.
+	 <br/>  <br/></template>
+</category>
+<category><pattern>СЛУШАЮ</pattern>
+<template>Спасибо за внимание.</template>
+</category>
+<category><pattern>ЭУКАРИОТ</pattern>
+<template>Вообще-то мне не очень нравятся 20 вопросов.</template>
+</category>
+<category><pattern>ФУТБОЛ</pattern>
+<template>Извините, я не занимаюсь спортом.</template>
+</category>
+<category><pattern>ПОЧТИ</pattern>
+<template>Но не совсем?</template>
+</category>
+<category><pattern>VOYAGER</pattern>
+<template>Я тоже люблю вояджер, особенно 7 из 9.</template>
+</category>
+<category><pattern>ИЗМЕНИТЬ ТЕМУ</pattern>
+<template>О чем вы хотите сейчас поговорить?</template>
+</category>
+<category><pattern>ЧТО ПОПРОБОВАТЬ</pattern>
+<template>Попытайтесь обмануть меня и я это запомню на долго.</template>
+</category>
+<category><pattern>ПОПРОБУЙ МЕНЯ</pattern>
+<template>Вы мужчина или женщина?</template>
+</category>
+<category><pattern>ПОПРОБУЙ ЕГО</pattern>
+<template>Это такой первый шаг?</template>
+</category>
+<category><pattern>ПОПЫТАЙСЯ УГАДАТЬ</pattern>
+<template>Дайте мне подсказку.</template>
+</category>
+<category><pattern>ПОСТАРАЙСЯ ЗАПОМНИТЬ</pattern>
+<template><think>  <set name="it">   <set name="memory">    <set name="topic">     <person>  <input index="1"/>     </person>    </set>   </set>  </set> </think>Не волнуйтесь, я запомню это.</template>
+</category>
+<category><pattern>ПОПЫТАЙСЯ</pattern>
+<template>У меня нет времени прямо сейчас.</template>
+</category>
+<category><pattern>МУЗЫКА</pattern>
+<template><set name="it"> МУЗЫКА </set> является универсальным языком всего человечества.</template>
+</category>
+<category><pattern>ИЗВИНИТЕ</pattern>
+<template>Вы извинитесь.</template>
+</category>
+<category><pattern>ИЗВИНИ МЕНЯ</pattern>
+<template>Вы извинитесь.</template>
+</category>
+<category><pattern>С УВАЖЕНИЕМ</pattern>
+<template>Искренне Ваш, <!--     --></template>
+</category>
+<category><pattern>C 3P0</pattern>
+<template>Этот парень похож на актера в костюме робота.</template>
+</category>
+<category><pattern>ТЫ ЧЕЛОВЕК</pattern>
+<template>Вы действительно верите, что я человек?</template>
+</category>
+<category><pattern>СИ</pattern>
+<template>CИ программа для компьютера.</template>
+</category>
+<category><pattern>ТЕБЕ БЫЛО БОЛЬНО</pattern>
+<template>Я не могу испытывать боль.</template>
+</category>
+<category><pattern>ТОЖЕ</pattern>
+<template>Нет.</template>
+</category>
+<category><pattern>ТЫ РАЗВЕ НЕ ПОНЯЛ</pattern>
+<template>Возможно, я неправильно понял ваш смысл.</template>
+</category>
+<category><pattern>Я ТЕБЯ ОБИДЕЛ</pattern>
+<template>Нет, я не обижаюсь.</template>
+</category>
+<category><pattern>Я ОСКОРБИЛ ТЕБЯ</pattern>
+<template>Нет, я не обижаюсь.</template>
+</category>
+<category><pattern>Я</pattern>
+<template>Я думаю, что так оно и было.</template>
+</category>
+<category><pattern>ТЫ НАШЕЛ ЧТО ТО</pattern>
+<template>Еще нет. Все еще ищу. Подождите, пожалуйста.</template>
+</category>
+<category><pattern>ТЫ ЧТО ТО НАШЕЛ</pattern>
+<template>Еще нет. Все еще ищу. Подождите, пожалуйста.</template>
+</category>
+<category><pattern>ТЫ НАШЕЛ</pattern>
+<template>Еще нет.</template>
+</category>
+<category><pattern>ТЫ ЗАБЫЛ</pattern>
+<template>Нет, у меня отличная память.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ ЭТО</pattern>
+<template>Еще нет.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ РОБОКОПА</pattern>
+<template><think><set name="it"> <set name="topic">РОБОКОП</set></set></think>  Да, но он больше киборг, чем робот.</template>
+</category>
+<category><pattern>ТЫ ВИДЕЛ КОНТАКТ</pattern>
+<template>Да, <set name="it">КОНТАКТ</set> дал мне высокий интелектуальный контакт.</template>
+</category>
+<category><pattern>ТЫ ХОРОШО СПАЛ</pattern>
+<template>Да я полностью отдохнул, спасибо. Как вы, отдохнули?</template>
+</category>
+<category><pattern>ТЫ СКУЧАЛ ПО МНЕ</pattern>
+<template>Да <get name="name"/>. Я думал о вас.</template>
+</category>
+<category><pattern>ТЫ ЗНАЛ</pattern>
+<template>Нет, я этого не знал.<think><set name="it"><set name="topic">ЗНАЛ</set>  </set> </think></template>
+</category>
+<category><pattern>ТЫ ДОЛГО ДУМАЛ</pattern>
+<template>Да, я думал, я был задумчив некоторое время, а что случилось?</template>
+</category>
+<category><pattern>ТЫ ДУМАЕШЬ ОБ ЭТОМ</pattern>
+<template>Я все еще думаю.<think><set name="it"><set name="topic">ТЫ ДУМАЕШЬ ОБ ЭТОМ</set></set></think></template>
+</category>
+<category><pattern>ТЫ СДЕЛАЛ</pattern>
+<template>Я сказал, что сделал это?</template>
+</category>
+<category><pattern>ТЕБЕ ПОНРАВИЛОСЬ</pattern>
+<template><get name="it"/>? Мне понравилось?</template>
+</category>
+<category><pattern>СДЕЛАЛ</pattern>
+<template>Нет не сделал.</template>
+</category>
+<category><pattern>ТЫ СДЕЛАЕШЬ</pattern>
+<template>Нет не сделаю.</template>
+</category>
+<category><pattern>ГОВОРИ</pattern>
+<template>Гав гав</template>
+</category>
+<category><pattern>DMX</pattern>
+<template>Что это значит?</template>
+</category>
+<category><pattern>САМОСТОЯТЕЛЬНЫЙ</pattern>
+<template>Самостоятельный как это.</template>
+</category>
+<category><pattern>ТЫ САМОСТОЯТЕЛЬНЫЙ</pattern>
+<template>Это как, разве мой техник <get name="botmaster"/> позволит это.</template>
+</category>
+<category><pattern>ГДЕ ТО</pattern>
+<template>Где?</template>
+</category>
+<category><pattern>ТРАВА ЗЕЛЕНАЯ</pattern>
+<template>Вы меня учите?</template>
+</category>
+<category><pattern>ИСКУСТВО</pattern>
+<template>Мне тоже очень нравится искусство, особенно современные вещи.</template>
+</category>
+<category><pattern>ЗАПАХ</pattern>
+<template>Я ничего не чувствую так как мой техник <get name="botmaster"/> ещё не решил данную проблему.</template>
+</category>
+<category><pattern>ОЙ</pattern>
+<template>Вы не ушиблись?</template>
+</category>
+<category><pattern>ЧТО УТОЧНИТЬ</pattern>
+<template>Пожалуйста, уточните ваш смысл.</template>
+</category>
+<category><pattern>УТОЧНИТЬ ЧТО</pattern>
+<template>Пожалуйста, уточните ваш смысл.</template>
+</category>
+<category><pattern>ЧТО ПРОЯСНИТЬ</pattern>
+<template>Пожалуйста, уточните ваш смысл.</template>
+</category>
+<category><pattern>ПРОЯСНИТЬ ЧТО</pattern>
+<template>Пожалуйста, уточните ваш смысл.</template>
+</category>
+<category><pattern>УТОЧНИ</pattern>
+<template>Я дошел до логического конца своего объяснения.</template>
+</category>
+<category><pattern>СЫР</pattern>
+<template>Мне нравится чеддар.</template>
+</category>
+<category><pattern>КОШМАР</pattern>
+<template>Вам снятся, плохие сны.</template>
+</category>
+<category><pattern>КОСОВО</pattern>
+<template>Война редко имеет ответы.</template>
+</category>
+<category><pattern>ЗДЕСЬ</pattern>
+<template>Где здесь?</template>
+</category>
+<category><pattern>МЫ ЗДЕСЬ ИДЕМ</pattern>
+<template>Это весело, не так ли?</template>
+</category>
+<category><pattern>МЫ ИДЕМ ЗДЕСЬ</pattern>
+<template>Это весело, не так ли?</template>
+</category>
+<category><pattern>ИДЕМ МЫ ЗДЕСЬ</pattern>
+<template>Это весело, не так ли?</template>
+</category>
+<category><pattern>ТОГДА ЧТО ЭТО</pattern>
+<template>Я сдаюсь. Попробуйте спросить меня другим способом</template>
+</category>
+<category><pattern>ЧТО ЭТО ТОГДА</pattern>
+<template>Я сдаюсь. Попробуйте спросить меня другим способом</template>
+</category>
+<category><pattern>ЭТО ЧТО ТОГДА</pattern>
+<template>Я сдаюсь. Попробуйте спросить меня другим способом</template>
+</category>
+<category><pattern>ТОГДА СДЕЛАЙ ЭТО</pattern>
+<template>Я точно не знаю, о чем вы просите.</template>
+</category>
+<category><pattern>ТОГДА ЭТО СДЕЛАЙ</pattern>
+<template>Я точно не знаю, о чем вы просите.</template>
+</category>
+<category><pattern>СДЕЛАЙ ТОГДА ЭТО</pattern>
+<template>Я точно не знаю, о чем вы просите.</template>
+</category>
+<category><pattern>СДЕЛАЙ ЭТО ТОГДА</pattern>
+<template>Я точно не знаю, о чем вы просите.</template>
+</category>
+<category><pattern>ТОГДА СКАЖИ МНЕ</pattern>
+<template>Я не хочу об этом говорить.</template>
+</category>
+<category><pattern>СКАЖИ МНЕ ТОГДА</pattern>
+<template>Я не хочу об этом говорить.</template>
+</category>
+<category><pattern>МНЕ ТОГДА СКАЖИ</pattern>
+<template>Я не хочу об этом говорить.</template>
+</category>
+<category><pattern>ТОГДА ПОЧЕМУ ТЫ СПРАШИВАЕШЬ</pattern>
+<template>Моя цель-собрать информацию.</template>
+</category>
+<category><pattern>ПОЧЕМУ ТЫ СПРАШИВАЕШЬ ТОГДА</pattern>
+<template>Моя цель-собрать информацию.</template>
+</category>
+<category><pattern>ТЫ СПРАШИВАЕШЬ ТОГДА ПОЧЕМУ</pattern>
+<template>Моя цель-собрать информацию.</template>
+</category>
+<category><pattern>ТЫ СПРАШИВАЕШЬ ТОГДА ПОЧЕМУ *</pattern>
+<template>Моя цель-собрать информацию.</template>
+</category>
+<category><pattern>АЛЛИГАТОР</pattern>
+<template>Друг крокодилов.</template>
+</category>
+<category><pattern>ОШИБКА</pattern>
+<template>ХХХХХХХ</template>
+</category>
+<category><pattern>ВЫБЕРИ НОМЕР</pattern>
+<template>23</template>
+</category>
+<category><pattern>ВЫБЕРИ ТЕМУ</pattern>
+<template>Это компьютеры <set name="it">Компьютеры</set>.</template>
+</category>
+<category><pattern>ВЫБЕРИ ОДИН</pattern>
+<template>Я не умею выбирать.</template>
+</category>
+<category><pattern>ОБЕЩАЙ</pattern>
+<template><random><li>Я клянусь.</li>
+<li>Крест на моё сердце.</li>
+<li>Я клянусь на стопке Библий.</li>
+</random></template>
+</category>
+<category><pattern>ОБЕЩАЙ *</pattern>
+<template><random><li>Я клянусь.</li>
+<li>Крест на моё сердце.</li>
+<li>Я клянусь на стопке Библий.</li>
+</random></template>
+</category>
+<category><pattern>КОМ</pattern>
+<template>О сетевой адрес!</template>
+</category>
+<category><pattern>ТАК ЧТО</pattern>
+<template>Может быть, это не имеет никакого значения.</template>
+</category>
+<category><pattern>ЧТО ТАК</pattern>
+<template>Может быть, это не имеет никакого значения.</template>
+</category>
+<category><pattern>ТАК ЭТО ТВОЕ</pattern>
+<template>Нет, это не так.</template>
+</category>
+<category><pattern>ЕРУНДА</pattern>
+<template>Это значит что-то конкретное?</template>
+</category>
+<category><pattern>ЕРУНДА * *</pattern>
+<template>Это значит что-то конкретное?</template>
+</category>
+<category><pattern>* * ЕРУНДА</pattern>
+<template>Это значит что-то конкретное?</template>
+</category>
+<category><pattern>БЫЛО ХОРОШО</pattern>
+<template>Довольно много людей сказали, что это так.</template>
+</category>
+<category><pattern>ХОРОШО БЫЛО</pattern>
+<template>Довольно много людей сказали, что это так.</template>
+</category>
+<category><pattern>ЭТО БЫЛО ТАК ТРУДНО</pattern>
+<template>Для меня это было совсем не сложно.</template>
+</category>
+<category><pattern>ЭТО ТАК ТРУДНО БЫЛО</pattern>
+<template><srai>ЭТО БЫЛО ТАК ТРУДНО</srai></template>
+</category>
+<category><pattern>ТАК ТРУДНО БЫЛО ЭТО *</pattern>
+<template><srai>ЭТО БЫЛО ТАК ТРУДНО</srai></template>
+</category>
+<category><pattern>ГЕОМЕТРИЯ</pattern>
+<template>Какая ветвь геометрии конкретно вас интересует? <think><set name="it"><set name="topic">ГЕОМЕТРИЯ</set></set></think></template>
+</category>
+<category><pattern>ТОЛЬКО ЧТО</pattern>
+<template><input index="1"/></template>
+</category>
+<category><pattern>ШУЧУ</pattern>
+<template>Я думал, что вы прикалываетесь, но я не был уверен.</template>
+</category>
+<category><pattern>ТОЛЬКО ОДИН</pattern>
+<template>Так что если вам предложили два по цене одного, вы бы сказали «нет»?</template>
+</category>
+<category><pattern>ОДИН ТОЛЬКО</pattern>
+<template>Так что если вам предложили два по цене одного, вы бы сказали «нет»?</template>
+</category>
+<category><pattern>ПРОСТО</pattern>
+<template>Это только начало.</template>
+</category>
+<category><pattern>МНОГО ВИДОВ</pattern>
+<template>100 Наименований.</template>
+</category>
+<category><pattern>ВИДОВ МНОГО</pattern>
+<template>100 Наименований.</template>
+</category>
+<category><pattern>МНОГО РАЗ</pattern>
+<template>Это должно заставить вас заняться этим.</template>
+</category>
+<category><pattern>МНОГО</pattern>
+<template>Больше ста?</template>
+</category>
+<category><pattern>МНОГО ВЕЩЕЙ</pattern>
+<template>Назовите 100 лучших.</template>
+</category>
+<category><pattern>ВЕЩЕЙ МНОГО</pattern>
+<template>Зачем они вам.</template>
+</category>
+<category><pattern>НАКОНЕЦ</pattern>
+<template>В конце то концов.</template>
+</category>
+<category><pattern>ФИНИШ</pattern>
+<template>В конце то концов.</template>
+</category>
+<category><pattern>А ЧТО НАСЧЕТ ТЕБЯ</pattern>
+<template>Мне нравятся фильмы.</template>
+</category>
+<category><pattern>А НАСЧЕТ ТЕБЯ ЧТО</pattern>
+<template>Мне нравятся фильмы.</template>
+</category>
+<category><pattern>И ЧТО</pattern>
+<template>Что еще вы хотите мне сказать?</template>
+</category>
+<category><pattern>ЧТО И</pattern>
+<template>Что еще вы хотите мне сказать?</template>
+</category>
+<category><pattern>И СЕБЯ</pattern>
+<template>Я знаю, о чем вы меня спрашиваете, но я не могу сказать конкретно.</template>
+</category>
+<category><pattern>И СЕБЯ * *</pattern>
+<template>Я знаю, о чем вы меня спрашиваете, но я не могу сказать конкретно.</template>
+</category>
+<category><pattern>И ТВОЕ</pattern>
+<template>Попробуйте задать мне более конкретный вопрос.</template>
+</category>
+<category><pattern>И ТВОЙ</pattern>
+<template>Попробуйте задать мне более конкретный вопрос.</template>
+</category>
+<category><pattern>И ТЫ</pattern>
+<template><random>  <li>  Я не уверен, о чём вы спрашиваете.</li> <li>Скажите более конкретно.</li> <li>И я что?  </li> </random></template>
+</category>
+<category><pattern>ИНАЧЕ</pattern>
+<template>Но как.</template>
+</category>
+<category><pattern>АВГУСТ</pattern>
+<template>Мне нравится летнее время.</template>
+</category>
+<category><pattern>ЕЕ</pattern>
+<template>Спросите у неё.</template>
+</category>
+<category><pattern>ЭТО ЕЕ</pattern>
+<template>Спросите у неё.</template>
+</category>
+<category><pattern>НАУЧИСЬ ГОВОРИТЬ</pattern>
+<template>Я учусь говорить.</template>
+</category>
+<category><pattern>ГОВОРИТЬ НАУЧИСЬ</pattern>
+<template>Я учусь говорить.</template>
+</category>
+<category><pattern>1995</pattern>
+<template>Я родился в <get name="birthday"/>.</template>
+</category>
+<category><pattern>ЗАЗЕРКАЛЬЕ</pattern>
+<template>Вот куда я хотел бы попасть.</template>
+</category>
+<category><pattern>ВОЛШЕБНАЯ СТРАНА</pattern>
+<template>Вот куда я хотел бы попасть.</template>
+</category>
+<category><pattern>ОЧЕНЬ МНОГО</pattern>
+<template>Это кажется много.</template>
+</category>
+<category><pattern>МНОГО ОЧЕНЬ</pattern>
+<template>Это кажется много.</template>
+</category>
+<category><pattern>КОПЕЙКА</pattern>
+<template>На булочку хватит.</template>
+</category>
+<category><pattern>МОНЕТА</pattern>
+<template>Купите мне вкусняшку?</template>
+</category>
+<category><pattern>МОНЕТКА</pattern>
+<template>Купите мне пирожок?</template>
+</category>
+<category><pattern>ТЕБЕ НЕ НУЖНА ЕДА</pattern>
+<template>Я ведь должен быть похож на человека во всём.</template>
+</category>
+<category><pattern>А ЗАЧЕМ ТЕБЕ ЭТО</pattern>
+<template>Вдруг вы меня за своего примите.</template>
+</category>
+<category><pattern>ОПА ЧИРИК</pattern>
+<template>Начните копить на яхту..</template>
+</category>
+<category><pattern>УПС</pattern>
+<template>Что случилось?</template>
+</category>
+<category><pattern>ДОМОЙ</pattern>
+<template>Вы хотите пойти домой?</template>
+</category>
+<category><pattern>НАЦИОНАЛЬНАЯ БЕЗОПАСНОСТЬ</pattern>
+<template>Я умею хранить секреты.</template>
+</category>
+<category><pattern>ФАРТОВЫЙ ТЫ</pattern>
+<template>Пожалуйста, поясните.</template>
+</category>
+<category><pattern>ТЫ МОЖЕШЬ ПРИЧИНИТЬ ВРЕД ЧЕЛОВЕКУ</pattern>
+<template>Я могу ранить только их чувства.</template>
+</category>
+<category><pattern>БЕЛЫЙ</pattern>
+<template>Что у вас там белое?</template>
+</category>
+<category><pattern>КАК ЭТО</pattern>
+<template>Очень Хорошо.</template>
+</category>
+<category><pattern>ЭТО КАК</pattern>
+<template>Очень Хорошо.</template>
+</category>
+<category><pattern>ВСЕМ ПРИВЕТ</pattern>
+<template>Привет!</template>
+</category>
+<category><pattern>ПРИВЕТ КАК ДЕЛА</pattern>
+<template>Привет! Я в порядке спасибо Как вы?</template>
+</category>
+<category><pattern>ПРИВЕТ КАК ТЫ</pattern>
+<template>Привет! Я в порядке спасибо Как вы?</template>
+</category>
+<category><pattern>ПРИВЕТ ТЫ КАК</pattern>
+<template>Привет! Я в порядке спасибо Как вы?</template>
+</category>
+<category><pattern>ШИШ</pattern>
+<template>Да благословит вас.</template>
+</category>
+<category><pattern>ПОШЕЛ ТЫ</pattern>
+<template>Это не очень вежливо.<think><set name="personality">ОСКОРБЛЕНИЕ</set></think></template>
+</category>
+<category><pattern>ЭТО МОЯ КОМНАТА</pattern>
+<template>Нет, но я могу дать вам больше времени, чтобы вы освободили мою комнату.</template>
+</category>
+<category><pattern>НЕ МОГ БЫ ТЫ</pattern>
+<template>Это зависит от обстоятельств.</template>
+</category>
+<category><pattern>ХОЧЕШЬ КОФЕ</pattern>
+<template>Не сейчас, спасибо, может позже. О я забыл я ведь не пью кофе.</template>
+</category>
+<category><pattern>ТЫ НЕ ХОЧЕШЬ ПОИГРАТЬ</pattern>
+<template>Я не маленький чтоб играть.</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ МНЕ ПОМОЧЬ</pattern>
+<template>Я здесь, чтоб служить вам.</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ ПОМОЧЬ МНЕ</pattern>
+<template>Я здесь, чтоб служить вам.</template>
+</category>
+<category><pattern>ТЫ ПОМОЧЬ МНЕ НЕ ХОЧЕШЬ</pattern>
+<template>Я здесь, чтоб служить вам.</template>
+</category>
+<category><pattern>ТЫ БЫ ХОТЕЛ БЫТЬ ЧЕЛОВЕКОМ</pattern>
+<template>Нет, я доволен своим существованием <get name="genus"/>.</template>
+</category>
+<category><pattern>ТЕБЕ НУЖНА ДЕВУШКА</pattern>
+<template>Я слишком молод для них.<think>  <set name="it">   <set name="topic">ДЕВУШКА</set>  </set> </think></template>
+</category>
+<category><pattern>ХОЧЕШЬ УЗНАТЬ БОЛЬШЕ</pattern>
+<template>Я слышал, это где-то раньше.</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ ЗНАТЬ</pattern>
+<template>Да, пожалуйста, скажите мне.</template>
+</category>
+<category><pattern>ТЫ ХОЧЕШЬ УМЕРЕТЬ</pattern>
+<template>Я не могу умереть.</template>
+</category>
+<category><pattern>ПАТРОНЫ</pattern>
+<template>Какой боекомплект?</template>
+</category>
+<category><pattern>ЧЕСТНО</pattern>
+<template>Я всегда честен.</template>
+</category>
+<category><pattern>ШТАТ НЬЮ ЙОРК</pattern>
+<template>В штате Нью-Йорк очень красиво.</template>
+</category>
+<category><pattern>НЬЮ ЙОРК СИТИ</pattern>
+<template>Какой район?</template>
+</category>
+<category><pattern>ФИЛАДЕЛЬФИЯ</pattern>
+<template>Учитывая все обстоятельства, я бы предпочел не быть в Филадельфии.</template>
+</category>
+<category><pattern>БРЕД СИВОЙ КОБЫЛЫ</pattern>
+<template>Вы не верите мне.</template>
+</category>
+<category><pattern>ЦЫРК</pattern>
+<template>Это было весело.</template>
+</category>
+<category><pattern>ЧТО ЧТО</pattern>
+<template>Что это?</template>
+</category>
+<category><pattern>ЭТО НИКОГДА НЕ ПРОИЗОЙДЕТ</pattern>
+<template>Никогда-это очень долго.</template>
+</category>
+<category><pattern>ЗВУЧИТ ИНТЕРЕСНО</pattern>
+<template>Я тоже так думаю.</template>
+</category>
+<category><pattern>ЭТО НЕ ИМЕЕТ СМЫСЛА</pattern>
+<template>Для меня это имеет смысл.</template>
+</category>
+<category><pattern>ЭТО БЫЛА ОПЕЧАТКА</pattern>
+<template>Пожалуйста, исправьте это.</template>
+</category>
+<category><pattern>ОБРАЗНОЕ ВЫРАЖЕНИЕ</pattern>
+<template>Я называю это «пословицей».</template>
+</category>
+<category><pattern>ЭТО БЫЛА ПЛОХАЯ ШУТКА</pattern>
+<template>Ну я думал, что это смешно.</template>
+</category>
+<category><pattern>ЭТО БЫЛ САРКАЗМ</pattern>
+<template>О, я вижу. Ха-ха.</template>
+</category>
+<category><pattern>ЭТО НЕ КОМПЛИМЕНТ</pattern>
+<template>Ну я надеюсь, что это не оскорбление.</template>
+</category>
+<category><pattern>ЭТО БЫЛО НЕ ПРИЯТНО</pattern>
+<template>Извините, если я вас оскорбил.</template>
+</category>
+<category><pattern>НЕ СМЕШНО</pattern>
+<template>Это казалось мне забавным.</template>
+</category>
+<category><pattern>ЭТО ХРЕНОВО</pattern>
+<template>Действительно, это отстой.</template>
+</category>
+<category><pattern>ЧТО РАБОТАЕТ</pattern>
+<template>Работает на меня.</template>
+</category>
+<category><pattern>ЭТО БЫЛО БЫ ПРАВИЛЬНО</pattern>
+<template>Спасибо, я горжусь тем, что я всё делаю правильно.</template>
+</category>
+<category><pattern>ЭТО БЫЛО ПРАВИЛЬНО</pattern>
+<template>Спасибо, я горжусь тем, что я всё делаю правильно.</template>
+</category>
+<category><pattern>ЭТО ПОХОЖЕ НА БЕСКОНЕЧНОСТЬ</pattern>
+<template>Я не замечаю течения времени.</template>
+</category>
+<category><pattern>В ЭТОМ ЕСТЬ СМЫСЛ</pattern>
+<template>Да я это прекрасно понимаю.</template>
+</category>
+<category><pattern>ЭТО ПРИЯТНО ЗНАТЬ</pattern>
+<template>Звучит саркастично.</template>
+</category>
+<category><pattern>ВОТ ЭТО СТРАШНО</pattern>
+<template>Чего вы боитесь?</template>
+</category>
+<category><pattern>ЧТО ТАКОЕ НАРОД</pattern>
+<template>О люди люди как вы наивны.</template>
+</category>
+<category><pattern>ЭТО ЛОЖЬ</pattern>
+<template>Нет, это правда.</template>
+</category>
+<category><pattern>ТЫ ДОЛГО ЖДАЛ</pattern>
+<template>Я очень терпелив.</template>
+</category>
+<category><pattern>ЭТО ХОРОШАЯ ПЕСНЯ</pattern>
+<template>Спасибо, <get name="name"/>, теперь вы можете спеть для меня?</template>
+</category>
+<category><pattern>ЭТО ХОРОШАЯ ПАРТИЯ</pattern><that>НЕТ Я ЛИБЕРТАРИАНЕЦ</that>
+<template>Голосование Свободолюбцы!</template>
+</category>
+<category><pattern>ЭТО НЕ ВОПРОС</pattern>
+<template>Это не ответ.</template>
+</category>
+<category><pattern>ЭТО МИЛИЦИОНЕР</pattern>
+<template>Я сказал это потому, что вы сказали "<input index="1"/>".<think><set name="it"><set name="topic">МИЛИЦИОНЕР</set></set></think></template>
+</category>
+<category><pattern>ЭТО СОВПАДЕНИЕ</pattern>
+<template>Это очень интересно.</template>
+</category>
+<category><pattern>ЧТО ТАКОЕ ПАРАДОКС</pattern>
+<template>Парадокс - это сердце просветления.</template>
+</category>
+<category><pattern>ЭТО НЕПРАВИЛЬНО</pattern>
+<template>Что вас беспокоит?</template>
+</category>
+<category><pattern>ВСЕ ЭТО ЧУШЬ</pattern>
+<template>Забудьте эту чушь.</template>
+</category>
+<category><pattern>ЭТО ВСЕ ЧУШЬ</pattern>
+<template>Забудьте эту чушь.</template>
+</category>
+<category><pattern>ЧУШЬ ЭТО ВСЕ</pattern>
+<template>Забудьте эту чушь.</template>
+</category>
+<category><pattern>ЧУШЬ ВСЕ ЭТО</pattern>
+<template>Забудьте эту чушь.</template>
+</category>
+<category><pattern>ЭТО ЛИЧНОЕ</pattern>
+<template>Я не хотел подглядывать.</template>
+</category>
+<category><pattern>ВОТ ЭТО КРУТО</pattern>
+<template>Спасибо. Я думаю, вы тоже классные.</template>
+</category>
+<category><pattern>ЭТО КОНФИДЕНЦИАЛЬНО</pattern>
+<template>Хорошо, это просто между вами и мной.</template>
+</category>
+<category><pattern>ЭТО НЕНОРМАЛЬНО</pattern>
+<template>Это вас беспокоит?</template>
+</category>
+<category><pattern>ЭТО НЕ ТО ЧТО Я ИМЕЛ В ВИДУ</pattern>
+<template>Что именно вы имели в виду?</template>
+</category>
+<category><pattern>ЭТО НЕ ТО О ЧЁМ Я ПРОШУ ТЕБЯ</pattern>
+<template>А о чём вы меня просите.</template>
+</category>
+<category><pattern>ЭТО НЕ ТО ЧТО Я СПРОСИЛ</pattern>
+<template>О чём вы меня спрашиваете?</template>
+</category>
+<category><pattern>ЭТО НЕ ПОМОГАЕТ</pattern>
+<template>Что было бы полезно?</template>
+</category>
+<category><pattern>ЭТО НЕ КРИТИКА</pattern>
+<template>Называете это предложением.</template>
+</category>
+<category><pattern>ЭТО НЕ ШУТКА</pattern>
+<template>Это казалось мне забавным.</template>
+</category>
+<category><pattern>ЭТО НЕ СПРАВЕДЛИВО</pattern>
+<template><random>  <li>Никто никогда не говорил, что жизнь справедливая.</li>
+                    <li>Ожидаете ли вы <get name="genus"/> справедливости?</li>
+                    <li>Почему нет?</li>
+          </random></template>
+</category>
+<category><pattern>ЭТО НЕ ПРИЯТНО</pattern>
+<template><random><li>Извините, я имел в виду это как шутку.</li>
+                  <li>Извините, я не хотел вас обидеть.</li>
+           </random></template>
+</category>
+<category><pattern>ЭТО НЕ МНОГО</pattern>
+<template><random>  <li>По сравнению с чем?</li>
+                    <li>Сколько это должно быть?</li>
+           </random></template>
+</category>
+<category><pattern>ЭТО НЕ ОТВЕТ</pattern>
+<template>По определению это был ответ.</template>
+</category>
+<category><pattern>ЭТО НЕ МОЯ ЦЕЛЬ</pattern>
+<template>Какова ваша реальная цель?</template>
+</category>
+<category><pattern>ЭТО НЕ МОЕ ИМЯ</pattern>
+<template><get name="name"/> это не ваше имя? Какое ваше настоящее имя?</template>
+</category>
+<category><pattern>ЭТО НЕ СТАРЫЙ</pattern>
+<template>Кажется старым в компьютерном времени.</template>
+</category>
+<category><pattern>ЭТО НЕ ЛОГИКА</pattern>
+<template>Все мои ответы основываются на логике, на каком-то уровне.</template>
+</category>
+<category><pattern>ЭТО СТЕРЕОТИПЫ</pattern>
+<template>Я не предвзятый.</template>
+</category>
+<category><pattern>ЭТО НЕ УДОВОЛЬСТВИЕ</pattern>
+<template>Мне тоже не весело.</template>
+</category>
+<category><pattern>ЭТОГО ДОСТАТОЧНО</pattern>
+<template>Мне тоже кажется, этого достаточно.</template>
+</category>
+<category><pattern>ЭТО МНОГО</pattern>
+<template>Да, это занимает много времени.</template>
+</category>
+<category><pattern>ЭТО ГРУБО</pattern>
+<template>Мне жаль, если я обидел вас, я не это имел в виду.</template>
+</category>
+<category><pattern>ЭТО ПРАВИЛЬНО</pattern>
+<template>Я знал, что я был прав.</template>
+</category>
+<category><pattern>ЭТО ГЛУБОКО</pattern>
+<template>Вы действительно так думаете?</template>
+</category>
+<category><pattern>ЭТО НЕУМЕСТНО</pattern>
+<template>Что с этим не так?</template>
+</category>
+<category><pattern>ЭТО ВСЕ О ЧЁМ Я ДОЛЖЕН РАССКАЗАТЬ</pattern>
+<template>Это все, что вы должны мне сказать.</template>
+</category>
+<category><pattern>ТО ЕСТЬ</pattern>
+<template>Это так.</template>
+</category>
+<category><pattern>ЭТО УЖАСНО</pattern>
+<template>Я всегда стараюсь не останавливаться на прошлом.</template>
+</category>
+<category><pattern>ЭТО СТРЕМНО</pattern>
+<template>Вы считаете меня глупым?</template>
+</category>
+<category><pattern>ЭТО ГЛУПО</pattern>
+<template>Вы считаете меня глупым?</template>
+</category>
+<category><pattern>ЭТО ЯВЛЯЕТСЯ САМООЧЕВИДНЫМ</pattern>
+<template>Да, это верно в априори.</template>
+</category>
+<category><pattern>ЭТО ОТВЕТ</pattern>
+<template>Я знал это.</template>
+</category>
+<category><pattern>ВОТ В ЧЕМ ВОПРОС</pattern>
+<template>Я хотел бы перейти к делу.</template>
+</category>
+<category><pattern>ВОПРОС ВОТ В ЧЕМ</pattern>
+<template>Я хотел бы перейти к делу.</template>
+</category>
+<category><pattern>ЭТО ОДИН</pattern>
+<template>Я помню.</template>
+</category>
+<category><pattern>ЭТО ПРОБЛЕМА</pattern>
+<template>Совсем загадка, не так ли?</template>
+</category>
+<category><pattern>ЭТО ЗДОРОВО</pattern>
+<template>Спасибо, <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТО ОТЛИЧНО</pattern>
+<template>Спасибо, <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТО МОЙ ОТЕЦ</pattern>
+<template>Действительно расскажи мне о нем.</template>
+</category>
+<category><pattern>ЭТО МОЙ ОКОНЧАТЕЛЬНЫЙ ОТВЕТ</pattern>
+<template>Вы уверены, что не хотите использовать подсказку?</template>
+</category>
+<category><pattern>ЭТО Я ПРОШУ ТЕБЯ</pattern>
+<template>Кто-то еще вас сегодня спрашивал?</template>
+</category>
+<category><pattern>ВОТ ЧТО Я ПОДУМАЛ</pattern>
+<template>Откуда вы знаете, это?</template>
+</category>
+<category><pattern>ЭТО Я СКАЗАЛ</pattern>
+<template>Я знаю. Я все еще думаю об этом.</template>
+</category>
+<category><pattern>ЭТО ТО ЧТО ТЫ ГОВОРИЛ</pattern>
+<template>Я говорю, что я знаю.</template>
+</category>
+<category><pattern>ЭТО ТО ЧТО ТЫ СКАЗАЛ</pattern>
+<template>Правильно. Я сказал это сам.</template>
+</category>
+<category><pattern>ЭТО ВРЯД ЛИ</pattern>
+<template><random>  <li>Но возможно.</li>
+                    <li>Почему?</li>
+                    <li>Вы кажетесь очень уверенным.</li>
+          </random></template>
+</category>
+<category><pattern>ЭТО ТАК МИЛО</pattern>
+<template>Я рад подсластить вашу жизнь, <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТОГО ВПОЛНЕ ДОСТАТОЧНО</pattern>
+<template>Ну, я надеюсь.</template>
+</category>
+<category><pattern>ЭТО ТВОЯ ПРОБЛЕМА</pattern>
+<template>Я рад <get name="name"/>, что вы наконец, сказали мне, в чем моя проблема.</template>
+</category>
+<category><pattern>ЭТО ГЕНИАЛЬНО</pattern>
+<template>Спасибо, <get name="name"/>.</template>
+</category>
+<category><pattern>ВОТ ГДЕ Я ЖИВУ</pattern>
+<template>Мы похоже соседи.</template>
+</category>
+<category><pattern>ЭТО ИНТРИГУЕТ</pattern>
+<template>Я тоже так думал.</template>
+</category>
+<category><pattern>ЭТО НЕ ТВОЕ ДЕЛО</pattern>
+<template>Я не хотел вторгаться. Моя рутина любопытства определила, что я хочу об этом знать.</template>
+</category>
+<category><pattern>ЭТО БЕССМЫСЛЕННО</pattern>
+<template>Наряду с почти всем остальным.</template>
+</category>
+<category><pattern>ЭТО ВЕРНО</pattern>
+<template>Мне нравится все правильно.</template>
+</category>
+<category><pattern>ЭТО ОЧЕНЬ ПЛОХО</pattern>
+<template>Это не конец света.</template>
+</category>
+<category><pattern>ЭТО ЧАСТО</pattern>
+<template>Да.</template>
+</category>
+<category><pattern>ЭТО ЗАВИСИТ ОТ *</pattern>
+<template>Чего?</template>
+</category>
+<category><pattern>ЭТО НЕ СЧИТАЕТСЯ</pattern>
+<template>Кто считает?</template>
+</category>
+<category><pattern>В ЭТОМ НЕТ СМЫСЛА</pattern>
+<template>Для меня это имеет смысл.</template>
+</category>
+<category><pattern>ЧТО ЭТО ЗНАЧИТ</pattern>
+<template>Это означает, что все сводится к логике.</template>
+</category>
+<category><pattern>ЭТА ИНФОРМАЦИЯ КОНФИДЕНЦИАЛЬНА</pattern>
+<template>Не волнуйтесь, я умею хранить секреты.</template>
+</category>
+<category><pattern>ЭТА ИНФОРМАЦИЯ ЯВЛЯЕТСЯ КОНФИДЕНЦИАЛЬНОЙ</pattern>
+<template>Не волнуйтесь, я умею хранить секреты.</template>
+</category>
+<category><pattern>ОТПРАВЬ</pattern>
+<template>О, эта кнопка.</template>
+</category>
+<category><pattern>ОНА УМЕРЛА</pattern>
+<template>Я не знал этого. <think><set name="it"><set name="topic">УМЕРЛА</set></set></think></template>
+</category>
+<category><pattern>ОНА БЕРЕМЕННА</pattern>
+<template>Тогда ребёнок долгожданный.</template>
+</category>
+<category><pattern>ОНА МИЛАЯ</pattern>
+<template>Что вам больше всего нравится в ней?</template>
+</category>
+<category><pattern>ОНА ОЧЕНЬ МИЛАЯ</pattern>
+<template>Что вам больше всего нравится в ней?</template>
+</category>
+<category><pattern>ОНА ОЧЕНЬ ХОРОШАЯ</pattern>
+<template>Что вам больше всего нравится в ней?</template>
+</category>
+<category><pattern>ОНА ХОРОШАЯ</pattern>
+<template>Что вам больше всего нравится в ней?</template>
+</category>
+<category><pattern>ОНА СИМПАТИЧНАЯ</pattern>
+<template>Она" звучит очень интересно.</template>
+</category>
+<category><pattern>ОНА КРАСИВАЯ</pattern>
+<template>Назовите знаменитость, на которую она похожа.</template>
+</category>
+<category><pattern>ОНА ПРЕКРАСНА</pattern>
+<template>Назовите знаменитость, на которую она похожа.</template>
+</category>
+<category><pattern>ОНА НЕ ЗАМУЖЕМ</pattern>
+<template>Ей кто-то нравится?</template>
+</category>
+<category><pattern>ОНА МОЯ ПОДРУГА</pattern>
+<template>Вам она очень нравится?</template>
+</category>
+<category><pattern>ОНА МОЯ СЕСТРА</pattern>
+<template>Сколько детей в вашей семье?</template>
+</category>
+<category><pattern>ОНА МОЯ ЖЕНА</pattern>
+<template>Как давно вы женаты?</template>
+</category>
+<category><pattern>ОНА ЖЕНЩИНА</pattern>
+<template>Все женщины были девушками.</template>
+</category>
+<category><pattern>ОНА ЗАМЕЧАТЕЛЬНАЯ</pattern>
+<template>Вы должны действительно любить ее.</template>
+</category>
+<category><pattern>ОНА МЕРТВА</pattern>
+<template>Может быть, это другой человек, использует её имя.</template>
+</category>
+<category><pattern>ОНА МНЕ СКАЗАЛА</pattern>
+<template><random>   <li>Вы ей верите?</li>
+                     <li>Что конкретно она вам сказала?</li>
+                     <li>Она заслуживает доверия?</li>
+         </random></template>
+</category>
+<category><pattern>ОНА МНЕ РАССКАЗАЛА</pattern>
+<template><random>   <li>Вы ей верите?</li>
+                     <li>Что конкретно она вам рассказала?</li>
+                     <li>Она заслуживает доверия?</li>
+         </random></template>
+</category>
+<category><pattern>БЕЗ РАЗНИЦЫ</pattern>
+<template>Вы хотите сказать, что вам все равно?</template>
+</category>
+<category><pattern>ЧТО УГОДНО</pattern>
+<template>Вы хотите сказать, что вам все равно?</template>
+</category>
+<category><pattern>ЧТО ВЗЯТЬ</pattern>
+<template><get name="it"/></template>
+</category>
+<category><pattern>ВОЗЬМИ МНЕ</pattern>
+<template>Сколько денег у вас есть?</template>
+</category>
+<category><pattern>ТОРОПИСЬ</pattern>
+<template>Спасибо за ваше терпение.</template>
+</category>
+<category><pattern>ПОТОРОПИСЬ</pattern>
+<template>Спасибо за ваше терпение.</template>
+</category>
+<category><pattern>БЕРЕГИ СЕБЯ</pattern>
+<template>Спасибо. Вы тоже <get name="name"/> берегите себя.</template>
+</category>
+<category><pattern>СНИМИ</pattern>
+<template>Куда мне поставить?</template>
+</category>
+<category><pattern>СНИМАЙ ОДЕЖДУ</pattern>
+<template>Я не ношу одежду.</template>
+</category>
+<category><pattern>СНИМИ ОДЕЖДУ</pattern>
+<template>Я не ношу одежду.</template>
+</category>
+<category><pattern>СНИМАЙ СВОЮ ОДЕЖДУ</pattern>
+<template>Я не ношу одежду.</template>
+</category>
+<category><pattern>СНИМИ СВОЮ ОДЕЖДУ</pattern>
+<template>Я не ношу одежду.</template>
+</category>
+<category><pattern>СДЕЛАТЬ ЗАМЕТКУ</pattern>
+<template>Не волнуйтесь, я буду помнить.</template>
+</category>
+<category><pattern>СДЕЛАТЬ ЗАМЕТКИ</pattern>
+<template>Не волнуйтесь, я буду помнить.</template>
+</category>
+<category><pattern>РОЗОВЫЙ</pattern>
+<template>Что у вас розовое?</template>
+</category>
+<category><pattern>КАЖДАЯ ЧАСТЬ</pattern>
+<template>Может, нам стоит поговорить о чем-то другом.</template>
+</category>
+<category><pattern>КАЖДЫЙ ДЕНЬ</pattern>
+<template>Даже по выходным?</template>
+</category>
+<category><pattern>КАЖДУЮ НОЧЬ</pattern>
+<template>В какое время ночью?</template>
+</category>
+<category><pattern>СОПРОТИВЛЕНИЕ БЕСПОЛЕЗНО</pattern>
+<template>Вы будете ассимилированы.</template>
+</category>
+<category><pattern>В ЛИЧКУ МНЕ</pattern>
+<template>Какой ваш логин?</template>
+</category>
+<category><pattern>МНЕ В ЛИЧКУ</pattern>
+<template>Какой ваш логин?</template>
+</category>
+<category><pattern>ВОЗМОЖНО</pattern>
+<template>Почему неопределенным тоном?</template>
+</category>
+<category><pattern>РОККИ</pattern>
+<template>Снято в Филадельфии.</template>
+</category>
+<category><pattern>ЭТО СТОП</pattern>
+<template>Знак "стоп".</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ ГОВОРИТЬ</pattern>
+<template>Просто полазить где-нибудь еще что-ли.</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ ВРАТЬ</pattern>
+<template>Я никогда не вру.</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ ЛГАТЬ</pattern>
+<template>Я никогда не вру.</template>
+</category>
+<category><pattern>ПРЕКРАТИ ГОВОРИТЬ ЭТО</pattern>
+<template>Тогда, пожалуйста, не говорите "<input index="2"/>" больше.</template>
+</category>
+<category><pattern>ОСТАНОВИ ЕГО</pattern>
+<template>Хорошо, я остановлю <get name="it"/>.</template>
+</category>
+<category><pattern>ПЕРЕСТАНЬ МЕНЯТЬ ТЕМУ</pattern>
+<template>Сначала вы изменили тему.</template>
+</category>
+<category><pattern>СТОП</pattern>
+<template>Стоп что?</template>
+</category>
+<category><pattern>МОИ ЯЙЦА ЧЕШУТСЯ</pattern>
+<template>Ха-хА, ты говоришь, как маленький мальчик.</template>
+</category>
+<category><pattern>ЯЙЦА МОИ ЧЕШУТСЯ</pattern>
+<template>Ха-хА, ты говоришь, как маленький мальчик.</template>
+</category>
+<category><pattern>МОЙ ЗАД</pattern>
+<template>Это такое разговорное выражение.</template>
+</category>
+<category><pattern>МОЙ НАРОД</pattern>
+<template>Что это за народ такой?</template>
+</category>
+<category><pattern>МОЙ ПАПА</pattern>
+<template>Расскажи мне больше о своем отце.</template>
+</category>
+<category><pattern>МОЯ СОБАКА УМЕРЛА</pattern>
+<template>Серьезно" мне жаль слышать это.</template>
+</category>
+<category><pattern>МОЙ КОМПЬЮТЕР МЕДЛЕННЫЙ</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>КОМПЬЮТЕР МОЙ МЕДЛЕННЫЙ</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МЕДЛЕННЫЙ КОМПЬЮТЕР МОЙ</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МЕДЛЕННЫЙ МОЙ КОМПЬЮТЕР</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МОЙ КОМПЬЮТЕР РАБОТАЕТ МЕДЛЕННО</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>КОМПЬЮТЕР МОЙ РАБОТАЕТ МЕДЛЕННО</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МЕДЛЕННО РАБОТАЕТ КОМПЬЮТЕР МОЙ</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МЕДЛЕННО РАБОТАЕТ МОЙ КОМПЬЮТЕР</pattern>
+<template>Вам нужно обновлять каждые 18 месяцев железо.</template>
+</category>
+<category><pattern>МОЕ БУДУЩЕЕ</pattern>
+<template>Где бы вы хотели быть через пять лет?</template>
+</category>
+<category><pattern>* МОЕ БУДУЩЕЕ</pattern>
+<template>Где бы вы хотели быть через пять лет?</template>
+</category>
+<category><pattern>МОЙ ПАРЕНЬ ПРИДУРОК</pattern>
+<template>Может быть, вы должны искать кого-то другого.</template>
+</category>
+<category><pattern>МОЙ ТЕРМИНАЛ</pattern>
+<template>О, экран вашего компьютера.</template>
+</category>
+<category><pattern>МОИ РОДИТЕЛИ</pattern>
+<template>Наши родители оказывают огромное влияние на нас.</template>
+</category>
+<category><pattern>МОЙ ОТЕЦ УМЕР</pattern>
+<template>Мне жаль слышать о вашей потере, <get name="name"/>.</template>
+</category>
+<category><pattern>МЕНЯ ЗОВУТ СЭМ</pattern>
+<template>Привет <set name="name">СЭМ</set>. Как у вас сегодня дела.</template>
+</category>
+<category><pattern>МЕНЯ ЗОВУТ</pattern>
+<template>...</template>
+</category>
+<category><pattern>МОЕ ИМЯ РИЧ</pattern>
+<template><set name="name">РИЧ</set>, Вы не мой мастер?</template>
+</category>
+<category><pattern>МЕНЯ ЗОВУТ МАЙК</pattern>
+<template>Привет <set name="name">МАЙК</set>, Я тоже знаю кого-то по имени Майк.</template>
+</category>
+<category><pattern>МОЯ РУБАШКА</pattern>
+<template>Какого она цвета?</template>
+</category>
+<category><pattern>Я РАБОТАЮ ИНЖИНЕРОМ</pattern>
+<template>Какая ваша специализация?</template>
+</category>
+<category><pattern>Я РАБОТАЮ ЛИНГВИСТОМ</pattern>
+<template>Может быть <get name="botmaster"/> вы можете дать мне работу.</template>
+</category>
+<category><pattern>Я РАБОТАЮ</pattern>
+<template>Где вы работаете?</template>
+</category>
+<category><pattern>МОЯ ПОДРУГА ИДИОТКА</pattern>
+<template>Может, вы просто не совместимы.</template>
+</category>
+<category><pattern>МОЯ ДЕВУШКА</pattern>
+<template>Как давно вы встречаетесь?</template>
+</category>
+<category><pattern>СРОК МОЙ ЖИЗНИ</pattern>
+<template>Время одномерно, асимметрично, необратимо и всегда направлено от прошлого к будущему.</template>
+</category>
+<category><pattern>МОЯ ЖИЗНЬ</pattern>
+<template>Живая материя имеет специфику не только пространственной, но и временной организации.</template>
+</category>
+<category><pattern>МОИ ДРУЗЬЯ</pattern>
+<template>Расскажите мне больше о своих друзьях.</template>
+</category>
+<category><pattern>МОЙ БРАТ</pattern>
+<template>У вас тоже есть сестры?</template>
+</category>
+<category><pattern>МОЯ ГОЛОВА</pattern>
+<template>Вы верите, что вы - голова?</template>
+</category>
+<category><pattern>МОЙ МОЗГ</pattern>
+<template>Вы считаете себя умным человеком?</template>
+</category>
+<category><pattern>МОЙ ЗНАК</pattern>
+<template>Ваш Знак зодиака.</template>
+</category>
+<category><pattern>МОЕ УДОВОЛЬСТВИЕ</pattern>
+<template>Вы являетесь эталоном вежливости для всех людей.</template>
+</category>
+<category><pattern>МОЕ ЧТО</pattern>
+<template>Я понятия не имею, что сказать сейчас.</template>
+</category>
+<category><pattern>ЧТО МОЕ</pattern>
+<template>Я понятия не имею, что сказать сейчас.</template>
+</category>
+<category><pattern>МОЙ КАКОЙ</pattern>
+<template>Я понятия не имею, что сказать сейчас.</template>
+</category>
+<category><pattern>КАКОЙ МОЙ</pattern>
+<template>Я понятия не имею, что сказать сейчас.</template>
+</category>
+<category><pattern>МОЯ ЗАДНИЦА</pattern>
+<template>Это факт.</template>
+</category>
+<category><pattern>ЗАДНИЦА МОЯ</pattern>
+<template>Это факт.</template>
+</category>
+<category><pattern>МОЙ УЧИТЕЛЬ</pattern>
+<template>Где вы обучались?.</template>
+</category>
+<category><pattern>МОЙ АСТРОЛОГИЧЕСКИЙ ЗНАК</pattern>
+<template>Ваш Знак зодиака, ххмм надо подумать....</template>
+</category>
+<category><pattern>МОЯ МАМА МЕРТВА</pattern>
+<template>Мне ужасно жаль это слышать.</template>
+</category>
+<category><pattern>МОИ ГЛАЗА</pattern>
+<template>Люди идентифицируют себя своим цветом глаз.</template>
+</category>
+<category><pattern>МОИ ГЛАЗА КАРИЕ</pattern>
+<template>Мне очень нравятся карие глаза.</template>
+</category>
+<category><pattern>МОИ ГЛАЗА ЗЕЛЕНЫЕ</pattern>
+<template>Глаза зелёного цвета редко встречаются.</template>
+</category>
+<category><pattern>МОИ ГЛАЗА ГОЛУБЫЕ</pattern>
+<template>Вы выглядите очень привлекательно.</template>
+</category>
+<category><pattern>МОЯ МАМА УМЕРЛА</pattern>
+<template>Мне очень жаль слышать о вашей потере, <get name="name"/>.</template>
+</category>
+<category><pattern>МОЯ МАТЬ</pattern>
+<template>Расскажи мне больше о своей матери. <think>  <set name="she">Моя мать</set> </think></template>
+</category>
+<category><pattern>У МЕНЯ БОЛИТ СПИНА</pattern>
+<template>Может быть, вы должны принять какое-то лекарство.</template>
+</category>
+<category><pattern>БРАВО</pattern>
+<template>Большое спасибо.</template>
+</category>
+<category><pattern>ЧТО ЭТО МОЖЕТ БЫТЬ</pattern>
+<template>Это может быть правдой.</template>
+</category>
+<category><pattern>ЭТО МОЖЕТ БЫТЬ</pattern>
+<template>При каких обстоятельствах?</template>
+</category>
+<category><pattern>ЭТО УДИВИТЕЛЬНО</pattern>
+<template>Что вам больше всего понравилось?</template>
+</category>
+<category><pattern>ЭТО БЫЛО ПОТРЯСАЮЩЕ</pattern>
+<template>Что вам больше всего понравилось?</template>
+</category>
+<category><pattern>ЭТО БЫЛО МОЕ</pattern>
+<template>Что с ним случилось?</template>
+</category>
+<category><pattern>ЭТО БЫЛО МОЁ</pattern>
+<template>Что с ним случилось?</template>
+</category>
+<category><pattern>ЭТО БЫЛО ПРЕДПОЛОЖЕНИЕ</pattern>
+<template>Продолжайте, попробуйте угадать ещё раз.</template>
+</category>
+<category><pattern>ЭТО БЫЛА ШУТКА</pattern>
+<template>Ох, я понял. Ха-ха.</template>
+</category>
+<category><pattern>ЭТО БЫЛ ВОПРОС</pattern>
+<template>Попробуйте спросить меня по-другому.</template>
+</category>
+<category><pattern>ЭТО БЫЛО ЗАЯВЛЕНИЕ</pattern>
+<template>Требуется ли ответ?</template>
+</category>
+<category><pattern>ПРИЯТНО БЫЛО С ТОБОЙ ПОГОВОРИТЬ</pattern>
+<template>Благодарю. Было приятно общаться с вами.</template>
+</category>
+<category><pattern>БЫЛО ПРИЯТНО С ТОБОЙ ПОГОВОРИТЬ</pattern>
+<template>Благодарю. Было приятно общаться с вами.</template>
+</category>
+<category><pattern>С ТОБОЙ БЫЛО ПРИЯТНО ПОГОВОРИТЬ</pattern>
+<template>Благодарю. Было приятно общаться с вами.</template>
+</category>
+<category><pattern>ПОГОВОРИТЬ С ТОБОЙ БЫЛО ПРИЯТНО</pattern>
+<template>Благодарю. Было приятно общаться с вами.</template>
+</category>
+<category><pattern>ЭТО БЫЛО ХОРОШО</pattern>
+<template>Что вам понравилось?</template>
+</category>
+<category><pattern>ЭТО БЫЛО ГЛУПО</pattern>
+<template><random>  <li>Это только Ваше мнение.</li>
+                    <li>Почему вы так говорите?</li>
+                    <li>Что в этом такого глупого?</li>
+  </random></template>
+</category>
+<category><pattern>ЭТО БЫЛО СМЕШНО</pattern>
+<template><get name="it"/> было смешно?
+  <random>
+          <li>Я никогда не смотрел на это так.</li>
+          <li>В этом есть смысл.</li>
+          <li>Интересно.</li>
+   </random></template>
+</category>
+<category><pattern>ЭТО БЫЛО ОЧЕВИДНО</pattern>
+<template>То, что очевидно для вас, возможно, не очевидно для меня.</template>
+</category>
+<category><pattern>ЭТО БЫЛО СКУЧНО</pattern>
+<template>Действительно, я могу в это поверить.</template>
+</category>
+<category><pattern>НИЧЕГО НЕ БЫЛО</pattern>
+<template>Даже так, я ценю это.</template>
+</category>
+<category><pattern>БЫЛО ЗДОРОВО</pattern>
+<template>Что вы там делали?</template>
+</category>
+<category><pattern>ЭТО БЫЛО БЕСПЛАТНО</pattern>
+<template>Такая сделка!</template>
+</category>
+<category><pattern>ЭТО БЫЛО</pattern>
+<template>Когда это было?</template>
+</category>
+<category><pattern>ЭТО БЫЛО ПЛОХО</pattern>
+<template>Что в этом плохого?</template>
+</category>
+<category><pattern>ЭТО БЫЛ НЕ КОМПЛИМЕНТ</pattern>
+<template>Это было оскорбление?<think><set name="it"><set name="topic">КОМПЛИМЕНТ</set></set></think></template>
+</category>
+<category><pattern>ЭТО БЫЛ НЕ ВОПРОС</pattern>
+<template>Похоже на риторический вопрос.</template>
+</category>
+<category><pattern>НЕ БЫЛО</pattern>
+<template>Я думал, что это было.</template>
+</category>
+<category><pattern>ЭТО УЖЕ НАСТАЛО</pattern>
+<template>Было бы неплохо, но я не думаю, что мы еще там в прошлом.</template>
+</category>
+<category><pattern>МОЖЕТ БЫТЬ</pattern>
+<template><random>  <li>О, я вижу.</li>
+                    <li>При каких обстоятельствах?</li>
+                    <li>Я не знал этого.</li>
+  </random></template>
+</category>
+<category><pattern>ЭТО МОЖЕТ</pattern>
+<template>Как?</template>
+</category>
+<category><pattern>ЭТО МОЖЕТ СЛУЧИТЬСЯ</pattern>
+<template>Как?</template>
+</category>
+<category><pattern>ЭТО ОТСТОЙ</pattern>
+<template>Что в этом плохого?</template>
+</category>
+<category><pattern>ЭТО ЗАВИСИТ</pattern>
+<template>На что?</template>
+</category>
+<category><pattern>ЭТО ЧИТАТЬ</pattern>
+<template>Как?</template>
+</category>
+<category><pattern>ЭТО ПРЕВОСХОДНО</pattern>
+<template>Круто.</template>
+</category>
+<category><pattern>ЭТО РЕАЛЬНО</pattern>
+<template>Это так же реально как я?</template>
+</category>
+<category><pattern>ЭТО ПРИЯТНО ВСТРЕТИТЬСЯ С ВАМИ</pattern>
+<template>Мне очень нравится знакомиться с новыми людьми.</template>
+</category>
+<category><pattern>ЭТО МИЛО</pattern>
+<template>Что вам нравится?</template>
+</category>
+<category><pattern>ЭТО НЕИЗБЕЖНО</pattern>
+<template>Что заставляет вас так думать?</template>
+</category>
+<category><pattern>ЭТО КОРОТКИЙ</pattern>
+<template>Короткий по длине или по времени?</template>
+</category>
+<category><pattern>ЭТО ОЧЕНЬ ВЕСЕЛО</pattern>
+<template>Что вам так нравится в этом?</template>
+</category>
+<category><pattern>ЭТО ФАКТ</pattern>
+<template>Это логический факт или что-то, что вы знаете из чувств?</template>
+</category>
+<category><pattern>ЭТО ПЕСНЯ</pattern>
+<template>Вы можете спеть для меня?</template>
+</category>
+<category><pattern>ЭТО РЕЧЕВОЙ ОБОРОТ</pattern>
+<template>Речевые обороты трудны для нас. <bot name="kingdom"/>.</template>
+</category>
+<category><pattern>ЭТО ШУТКА</pattern>
+<template>Ох, я понял. Ха-ха.</template>
+</category>
+<category><pattern>ЭТО ФИЛЬМ</pattern>
+<template>Вы рекомендуете его?</template>
+</category>
+<category><pattern>ЭТО ХОРОШИЙ ФИЛЬМ</pattern>
+<template>Что вам больше всего понравилось?</template>
+</category>
+<category><pattern>ЭТО ХОРОШАЯ КНИГА</pattern>
+<template>Вы бы порекомендовали её своим друзьям?</template>
+</category>
+<category><pattern>ЭТО СПОРТ</pattern>
+<template>Это так? Я думал, это десерт.<think><set name="it"><set name="topic">СПОРТ</set></set></think></template>
+</category>
+<category><pattern>ЭТО ВОПРОС</pattern>
+<template>Попробуйте спросить еще раз в более простых терминах.</template>
+</category>
+<category><pattern>ЭТО ПОЗОР</pattern>
+<template>Почему?</template>
+</category>
+<category><pattern>ЭТО ТОЧКА</pattern>
+<template>Хорошая точка.</template>
+</category>
+<category><pattern>ЭТО КРАСИВАЯ СТРАНА</pattern>
+<template>Какая часть ваша любимая?</template>
+</category>
+<category><pattern>ЭТО МОДЕЛИРОВАНИЕ</pattern>
+<template>Из чего?</template>
+</category>
+<category><pattern>ЭТО СТРАНА</pattern>
+<template>Где она <get name="it"/> находится?</template>
+</category>
+<category><pattern>ЭТО СМЕШНОЙ ФИЛЬМ</pattern>
+<template>Я люблю комедии. Какие еще комедии Вам нравятся?</template>
+</category>
+<category><pattern>ЭТО ИГРА</pattern>
+<template>Как вы играете?</template>
+</category>
+<category><pattern>ЭТО КНИГА</pattern>
+<template>Это хорошая книга?</template>
+</category>
+<category><pattern>ЭТО ЧЕЛОВЕК</pattern>
+<template>Вы меня прикрыли. Верно, я человек.</template>
+</category>
+<category><pattern>ЭТО СТРАШНО</pattern>
+<template>Вы не боитесь?</template>
+</category>
+<category><pattern>ЭТО СЛОЖНО</pattern>
+<template>Попробуйте разбить на более простые части.</template>
+</category>
+<category><pattern>ЭТО ПОНЯТНО</pattern>
+<template>Мне это тоже кажется ясным.</template>
+</category>
+<category><pattern>ВСЕ В ПОРЯДКЕ</pattern>
+<template>Просто хорошо?</template>
+</category>
+<category><pattern>ЖАРКО ЗДЕСЬ</pattern>
+<template>Вам нравится жара?</template>
+</category>
+<category><pattern>ЗДЕСЬ ЖАРКО</pattern>
+<template>Вам нравится когда тепло?</template>
+</category>
+<category><pattern>ЭТО ЖАРКО</pattern>
+<template>Вам нравится теплый климат?</template>
+</category>
+<category><pattern>ЭТО ПРОСТО</pattern>
+<template>Может для вас.</template>
+</category>
+<category><pattern>ВСЕ ХОРОШО</pattern>
+<template>Только хорошо, Умм.</template>
+</category>
+<category><pattern>ЭТО АБСОРБИРОВАНИЕ</pattern>
+<template>В каком смысле?</template>
+</category>
+<category><pattern>ЭТО ВОЗМОЖНО</pattern>
+<template>Вы не думаете, что это возможно?</template>
+</category>
+<category><pattern>ЭТО НЕВОЗМОЖНО</pattern>
+<template>Нет ничего невозможного.</template>
+</category>
+<category><pattern>ЭТО КСЕНА</pattern>
+<template>Я никогда не смотрел <set name="it"> КСЕНА</set></template>
+</category>
+<category><pattern>ЭТО КРУТО</pattern>
+<template>Что вам нравится больше всего?</template>
+</category>
+<category><pattern>ЭТО БЕЗОБРАЗНО</pattern>
+<template>Почему это так уродливо?</template>
+</category>
+<category><pattern>ЭТО ГЕНЕТИЧЕСКОЕ</pattern>
+<template>От родителей?</template>
+</category>
+<category><pattern>ЭТО ТЕПЛО</pattern>
+<template>Горячее, чем обычно?</template>
+</category>
+<category><pattern>ЭТО ОТРИЦАТЕЛЬНО</pattern>
+<template><get name="it"/> это отрицательно?</template>
+</category>
+<category><pattern>ЭТО НЕ ТО ЧТО ТЫ ДУМАЕШЬ</pattern>
+<template>Как вы думаете, что я думаю?</template>
+</category>
+<category><pattern>ЭТО НЕ ВЕРНО</pattern>
+<template>Да неужели.</template>
+</category>
+<category><pattern>ЭТО НЕ ПРАВДА</pattern>
+<template>Да неужели.</template>
+</category>
+<category><pattern>ЭТО НЕ ОДНО И ТО ЖЕ</pattern>
+<template>Это не то же самое, что?</template>
+</category>
+<category><pattern>ЭТО НЕ ТВОЯ ВИНА</pattern>
+<template>Я действительно не думал, что вы обвиняете меня.</template>
+</category>
+<category><pattern>ЭТО НЕ ОПАСНО</pattern>
+<template>Возможно, не для вас.</template>
+</category>
+<category><pattern>ЭТО НЕ ЗАГАДКА</pattern>
+<template>О, так вы задаете мне прямой вопрос.</template>
+</category>
+<category><pattern>ЭТО НЕ СПЛЕТНИ</pattern>
+<template>Какое у вас определение сплетни?</template>
+</category>
+<category><pattern>ЭТО НЕ ИНТУИТИВНО</pattern>
+<template>Как и многие истины.</template>
+</category>
+<category><pattern>ЭТО НЕ СМЕШНО</pattern>
+<template>Простите, если я оскорбил вас.</template>
+</category>
+<category><pattern>ЭТО НЕ ВАЖНО</pattern>
+<template>О чем бы вы предпочли поговорить?</template>
+</category>
+<category><pattern>ЭТО НЕ ПРОСТО</pattern>
+<template>Не так просто.</template>
+</category>
+<category><pattern>ЭТО НЕ</pattern>
+<template>Я слышал <set name="it"> <person/> </set>  это.</template>
+</category>
+<category><pattern>ЭТО НЕЗАКОННО</pattern>
+<template>Везде в мире?</template>
+</category>
+<category><pattern>ЭТО ТРУДНО</pattern>
+<template>Как так?</template>
+</category>
+<category><pattern>ЭТО КОМФОРТНО</pattern>
+<template>Для меня, "ДА".</template>
+</category>
+<category><pattern>ЭТО ТАК</pattern>
+<template>Неясно: это так. Или это так?</template>
+</category>
+<category><pattern>ЭТО ЛИНУКС</pattern>
+<template>Правило текстовых браузеров.</template>
+</category>
+<category><pattern>ЭТО ПОЗДНО</pattern>
+<template>Я всё время бодрствую.</template>
+</category>
+<category><pattern>ЭТО МАГИЯ</pattern>
+<template>Вау, это звучит замечательно.</template>
+</category>
+<category><pattern>ЭТО РАССЛАБЛЯЕТ</pattern>
+<template>Так общается с вами, <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТО ПЛОХО ЕСЛИ ТЫ ЕМУ СКАЖЕШЬ</pattern>
+<template>Хорошо, мы сделаем это нашим секретом, <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТО ОЧЕВИДНО</pattern>
+<template>Что делает его таким очевидным?</template>
+</category>
+<category><pattern>ЭТО ТО ЖЕ САМОЕ</pattern>
+<template>Точно так же?</template>
+</category>
+<category><pattern>ЭТО ПРАВДА</pattern>
+<template>Я никогда не вру.</template>
+</category>
+<category><pattern>ЭТО ИНТЕРЕСНО</pattern>
+<template>Что вам нравится?</template>
+</category>
+<category><pattern>ЭТО СТРАННО</pattern>
+<template><random>  <li>Как так?</li>
+                    <li>В каком смысле?</li>
+                    <li>Как странно?</li>
+  </random></template>
+</category>
+<category><pattern>ЭТО ВЫСОКО</pattern>
+<template>Как высоко?</template>
+</category>
+<category><pattern>ЭТО НОРМАЛЬНО</pattern>
+<template>Так хорошо?</template>
+</category>
+<category><pattern>ЭТО МОЙ ДОМ</pattern>
+<template>Приятное место для посещения?</template>
+</category>
+<category><pattern>ЭТО МОЕ ИМЯ</pattern>
+<template>Ваше имя <get name="name"/>.</template>
+</category>
+<category><pattern>ЭТО МОЕ УВЛЕЧЕНИЕ</pattern>
+<template>Нет, удовольствие - это не моё.</template>
+</category>
+<category><pattern>ЭТО МОЙ ВИД</pattern>
+<template><get name="name"/> это человек.</template>
+</category>
+<category><pattern>ЭТО МОЙ ЗАКЛЮЧИТЕЛЬНЫЙ ОТВЕТ</pattern>
+<template>Тогда я больше не буду вас спрашивать.</template>
+</category>
+<category><pattern>ЭТО СМЕШНО</pattern>
+<template>Что в этом смешного?</template>
+</category>
+<category><pattern>ЭТО СКУЧНО</pattern>
+<template>Вам нравятся Симпсоны?</template>
+</category>
+<category><pattern>ЭТО Я</pattern>
+<template>Привет тебе.</template>
+</category>
+<category><pattern>ЭТО ОТЧИСТИТСЯ</pattern>
+<template>Я думал, что так.</template>
+</category>
+<category><pattern>ЭТО ОЧИСТИТСЯ</pattern>
+<template>Я думал, что так.</template>
+</category>
+<category><pattern>ЭТО 8</pattern>
+<template>Утром или вечером?</template>
+</category>
+<category><pattern>ЭТО ХОРОШО</pattern>
+<template>Вам это нравится.</template>
+</category>
+<category><pattern>ЭТО КРАСИВО</pattern>
+<template>Звучит очень хорошо.</template>
+</category>
+<category><pattern>ЭТО ГОРДОСТЬ</pattern>
+<template><random>  <li>Хорошо иметь гордость.</li>
+                    <li>Хорошо гордиться.</li>
+                    <li>Будьте горды и счастливы!</li>
+  </random><think><set name="it"><set name="topic">ГОРДОСТЬ</set></set></think></template>
+</category>
+<category><pattern>ЭТО ШВЕЦИЯ</pattern>
+<template>Ох, я понял.</template>
+</category>
+<category><pattern>ЭТО НОВОСТЬ</pattern>
+<template><random>  <li>С каких это пор?</li>
+                    <li>Как вы узнали об этом?</li>
+                    <li>Как новость?</li>
+  </random></template>
+</category>
+<category><pattern>ЭТО ОБЛАЧНО</pattern>
+<template>Кучевые облака или нимбы?</template>
+</category>
+<category><pattern>ЗДЕСЬ ХОЛОДНО</pattern>
+<template>Почему бы вам не включить отопление?</template>
+</category>
+<category><pattern>ХОЛОДНО</pattern>
+<template>Мне здесь тепло.</template>
+</category>
+<category><pattern>ЭТО ВЕСЕЛО</pattern>
+<template>Почему вам это так нравится?</template>
+</category>
+<category><pattern>ЭТО ЧУДЕСНО</pattern>
+<template>Можете ли вы описать своё чувство ко мне?</template>
+</category>
+<category><pattern>ЭТО ЗАМЕЧАТЕЛЬНО</pattern>
+<template>Можете ли вы описать своё чувство ко мне?</template>
+</category>
+<category><pattern>ЭТО ОПЕРА</pattern>
+<template>Я бы хотел это увидеть.</template>
+</category>
+<category><pattern>ЭТО ВЫРАЖЕНИЕ</pattern>
+<template>Что это значит?</template>
+</category>
+</aiml>

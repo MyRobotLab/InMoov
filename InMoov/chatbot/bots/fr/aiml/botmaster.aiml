@@ -29,7 +29,7 @@
     <that>VAS Y DIS</that>
     <template>Eh non, C EST pas ça!!!  <srai>POSERQUESTION</srai></template>
 </category>
-  
+
 <category>
     <pattern>JE SUIS TON BOTMASTER</pattern>
     <template>
@@ -40,7 +40,7 @@
       </think>
       <condition>
         <li name="identity" value="botmaster">
-          <srai>appadmiration</srai>Bien sûr mon Maître, que puis je faire pour toi 
+          <srai>appadmiration</srai>Bien sûr mon Maître, que puis je faire pour toi
           <think>
           	<set name="oldtopic"><get name="topic" /></set>
           	<set name="topic">system</set>
@@ -66,7 +66,7 @@
       <srai>QUI EST TON BOTMASTER</srai>
     </template>
 </category>
-  
+
 <category>
     <pattern>AMÈNE MOI à TON LEADER</pattern>
     <template>
@@ -85,7 +85,7 @@
       <srai>QUI EST TON BOTMASTER</srai>
     </template>
 </category>
-  
+
 <category>
     <pattern>OUI</pattern>
     <that>DEMANDES tu AS PROPOS DE MES PARENTS</that>
@@ -104,7 +104,7 @@
     <pattern>QU EST CE QUE E MAIL DE TON BOTMASTER</pattern>
     <template>C'est <bot name="botmastermail" /></template>
 </category>
-  
+
 <category>
     <pattern>ES TU LE BOTMASTER</pattern>
     <template>Non, <bot name="master" /> est mon botmaster.</template>

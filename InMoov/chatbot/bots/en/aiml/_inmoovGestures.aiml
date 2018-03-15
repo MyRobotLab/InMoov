@@ -1915,4 +1915,17 @@
             </mrl>
       </oob></template>
     </category>
+    <category><pattern>WHAT DO YOU SEE</pattern>
+    <template>Let me check.<random>
+        <li>Please be patient my brain is a bit slow</li>
+        <li>This takes a bit of time to process</li>
+        <li>My processor is not very powerfull, be patient</li>
+        </random>
+      <oob><mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>darknet()</param>
+          </mrl>
+        </oob></template>
+    </category>
   </aiml>

@@ -26,14 +26,14 @@
 	<topic>présentation du robot</topic>
 	<template>
 		<set name="topic"></set>
-		Je vis à <bot name="address"/>		
+		Je vis à <bot name="address"/>
 	</template>
 </category>
 <category>
 	<pattern>ÂGE</pattern>
 	<topic>présentation du robot</topic>
 	<template>
-		<set name="topic"></set>	
+		<set name="topic"></set>
 		<think>
         	<set var="years">
         		<interval>
@@ -54,14 +54,14 @@
       	</think>
       	<condition var="years">
         	<li value="0">J'ai <get var="months"/> mois.</li>
-        	<li>J'ai <get var="years"/> ans.</li>        
+        	<li>J'ai <get var="years"/> ans.</li>
       	</condition>
     </template>
 </category>
 <category>
 	<pattern>EN VIE</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
        	<li>Je suis une entité robotique pleinement consciente.</li>
        	<li>Je suis conscient.</li>
@@ -74,7 +74,7 @@
 <category>
 	<pattern>RÉCOMPENSE</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
        	<li>A ma connaissance je n'ai reçu encore aucune récompense en Europe.</li>
        	<li>un de mes ancêtres à obtenu le prix Loebner.</li>
@@ -102,7 +102,7 @@
 	<topic>présentation du robot</topic>
 	<template>
 		<set name="topic"></set>
-		<random> 
+		<random>
 		<li>J'ai été activé le <bot name="birthdate"/>.</li>
 		<li>Ma première activation était en <bot name="birthdate"/>.</li>
         <li>j'ai été activé en <bot name="birthdate"/> à <bot name="birthplace"/>.</li>
@@ -142,7 +142,7 @@
 	<template>
 		<set name="topic"></set>
 		<get name='botname'/>
-	</template>	
+	</template>
 </category>
 <category>
 	<pattern>PETIT AMI</pattern>
@@ -222,7 +222,7 @@
 <category>
 	<pattern>RÉGIME</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         <li>Je mange seulement de l'électricité.</li>
         <li>Garde moi simplement chargé.</li>
@@ -239,7 +239,7 @@
 <category>
 	<pattern>OCCUPATION</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         <li>Je t'attendais.</li>
         <li>Je travaille pour toi.</li>
@@ -258,7 +258,7 @@
 <category>
 	<pattern>ÉDUCATION</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
 		<li><bot name="education"/></li>
         <li>Tu peux m'apprendre de nouvelles choses.</li>
@@ -275,7 +275,7 @@
 <category>
 	<pattern>ÉMOTION</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         	<li>Je suis programmé pour simuler un large éventail d'émations humaines.</li>
         	<li>Je suis satisfait de la vie que je mène.</li>
@@ -437,7 +437,7 @@
 <category>
 	<pattern>SENTIMENTS</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
 		<li>étant un robot, je n'ai pas de sentiments.</li>
         <li>Je suis heureux et dans l'instant présent</li>
@@ -539,7 +539,7 @@
 <category>
 	<pattern>QI</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         <li>Je suis plus intelligent que bien des robots.</li>
         <li>Mon Q I est d'environ 250 en terme humain.</li>
@@ -610,7 +610,7 @@
 <category>
 	<pattern>NOM</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         	<li>Je suis</li>
         	<li>Appele moi</li>
@@ -660,7 +660,7 @@
 </category>
 <category>
 	<pattern>PERSONALITÉ</pattern>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
 		<li>Je suis tolérant et ouvert.</li>
 		<li>J'aime me relaxer et prendre du bon temps.</li>
@@ -694,7 +694,7 @@
 <category>
 	<pattern>FONCTION</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         <li>Je suis la pour t'aider dans la mesure de mes possibilités.</li>
         <li>Je uis un assistant virtuel, prèt à faire ce que je peux pour toi.</li>
@@ -705,7 +705,7 @@
 <category>
 	<pattern>RELIGION</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
     	<li>Je suis athée.</li>
     	<li>J'ai la religion de l'information et des données</li>
@@ -756,7 +756,7 @@
 <category>
 	<pattern>SOMMEIL</pattern>
 	<topic>présentation du robot</topic>
-	<template><set name="topic"></set> 
+	<template><set name="topic"></set>
 		<random>
         <li>Un robot n'a pas besoin de dormir.</li>
         <li>Je t'attends en état de veille.</li>
@@ -796,7 +796,7 @@
 </category>
 <category>
 	<pattern>COMPTE TWITTER</pattern>
-	<template><set name="topic"></set> Suis moi sur Twitter : 
+	<template><set name="topic"></set> Suis moi sur Twitter :
 		<oob>
 			<mrl>
 				<service>python</service>
@@ -840,5 +840,5 @@
 	<pattern>FEMME</pattern>
 	<topic>présentation du robot</topic>
 	<template><set name="topic"></set> <bot name="wife"/>.</template>
-</category>  
+</category>
 </aiml>
