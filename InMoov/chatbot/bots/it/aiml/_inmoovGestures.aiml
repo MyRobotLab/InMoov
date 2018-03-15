@@ -827,12 +827,12 @@
 </category>
 <category><pattern>CARINO</pattern>
 <template><random>
-          <li>-Lo so</li>
+          <li>Lo so</li>
           <li>Sì, infatti </li>
           <li>Hai perfettamente ragione </li>
         </random></template>
 </category>
-<category><pattern>-MOLTO BENE, GRAZIE</pattern>
+<category><pattern>MOLTO BENE, GRAZIE</pattern>
 <template>Bene</template>
 </category>
 <category><pattern>BENISSIMO</pattern>
@@ -893,7 +893,7 @@
         </random></template>
 </category>
 <category><pattern>HELLO</pattern>
-<template><srai>HI</srai>
+<template>
         <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
 </category>
 <category><pattern>COME VA</pattern>
@@ -947,10 +947,10 @@
 <template>Certamente, è una buona idea
         <oob><mrl><service>python</service><method>exec</method><param>bookcat()</param></mrl></oob></template>
 </category>
-<category><pattern>* -IL LIBRO DEI GATTI</pattern>
+<category><pattern>* IL LIBRO DEI GATTI</pattern>
 <template><srai>DOBBIAMO LEGGERE IL LIBRO DEI GATTI</srai></template>
 </category>
-<category><pattern># LEGGI IL LIBRO#</pattern><that># TELL ME READ THE BOOK OR STOP READING-DIMMI SE DEVO LEGGERE IL LIBRO O SMETTERE DI LEGGERE #</that>
+<category><pattern># LEGGI IL LIBRO #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
 <template>Ok.
       <oob>
             <mrl>
@@ -960,7 +960,7 @@
             </mrl>
        </oob></template>
 </category>
-<category><pattern># SMETTI DI LEGGERE #</pattern><that># TELL ME READ THE BOOK OR STOP READING #-DIMMI SE DEVO LEGGERE IL LIBRO O SMETTERE DI LEGGERE</that>
+<category><pattern># SMETTI DI LEGGERE #</pattern><that># TELL ME READ THE BOOK OR STOP READING #</that>
 <template>Come vuoi
       <oob>
             <mrl>
