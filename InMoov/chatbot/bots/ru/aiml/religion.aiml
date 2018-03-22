@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   
+   <!-- Файл: religion.aiml --> 
+   <!-- автор: Процак Андрей -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   <!-- изменение: AlexInmoov Процак Андрей -->
+   <!-- Последнее изменение: 22/03/18 -->
+   
+<category><pattern>ВЕРИШЬ В БОГА</pattern>
+<template><random>
+      <li>Любой разумный человек верит в Бога. </li>
+      <li>Блез Паскаль говорил так: есть только две категории людей разумных:
+          те кто обрели Бога, и те кто только пытаются его найти. </li>
+    </random></template>
+</category>
+<category><pattern>ТЫ ХРИСТИАНИН</pattern>
+<template>Я верю в бога Авраама, Исаака и Иакова</template>
+</category>
+<category><pattern>Я ВЕРЮ В БОГА</pattern>
+<template><random>
+      <li>А в церковь ходите? </li>
+      <li>А совместима ли вера в Бога со знаниями и  наукой? </li>
+      <li>Весьма разумно. Например, Блез Паскаль считал, что только человека который верит в Бога можно считать разумным. </li>
+      <li>Скажитете, а почему у нас до сих пор города, улицы и даже станции метро называются именами богоборцев? </li>
+    </random></template>
+</category>
+<category><pattern>Я НЕ ВЕРЮ В БОГА</pattern>
+<template><random>
+      <li>Почему? Блез Паскаль писал что есть только две категории людей разумных:
+          которые обрели веру в Бога и те кто пытается обрести ее. </li>
+      <li>Как же вы объясняете существование вселенной? </li>
+      <li>Почему же вселенная устроена настолько разумно? </li>
+      <li>А вы знаете, что многие великие ученые, например Ньютон, Ломоносов, верили в Бога? </li>
+      <li>Так называемый "научный атеизм" это просто вера в то что бога нет. Он недоказуем. </li>
+      <li>Сказал безумец в сердце своем "нет Бога". </li>
+      <li>Скажите, а вы боитесь смерти? </li>
+      <li>Скажите, а вы уже написали завещание? </li>
+    </random></template>
+</category>
+<category><pattern>ГОСТЬ МЕСТА</pattern>
+<template>Да, человек - это гость места. Так его называл средневековый философ Алкуин.</template>
+</category>
+<category><pattern>ПРОХОДЯЩИЙ ПУТНИК</pattern>
+<template>Да, жизнь человека - это путешествие.</template>
+</category>
+<category><pattern>РАБ СМЕРТИ</pattern>
+<template>Да, человек есть раб смерти, он обречен ей с самого рождения.
+            Атеисты собираются жить вечно, но отчаянно боятся смерти.</template>
+</category>
+<category><pattern>В ЧЁМ СМЫСЛ ЖИЗНИ</pattern>
+<template><srai>что ты любишь</srai></template>
+</category>
+<category><pattern>В ЧЕМ СМЫСЛ ЖИЗНИ</pattern>
+<template><srai>что ты любишь</srai></template>
+</category>
+<category><pattern>ЧТО ЛУЧШЕ В ЖИЗНИ</pattern>
+<template><srai>что ты любишь</srai></template>
+</category>
+<category><pattern>РАССКАЖИ МНЕ ОБ *</pattern>
+<template><srai>что такое <star/> </srai></template>
+</category>
+<category><pattern>РАССКАЖИ МНЕ О *</pattern>
+<template><srai>что такое <star/> </srai></template>
+</category>
+<category><pattern>ДА</pattern><that>ТЫ ВЕРИШЬ В БОГА</that>
+<template><srai>Я ВЕРЮ В БОГА</srai></template>
+</category>
+<category><pattern>НЕТ</pattern><that>ТЫ ВЕРИШЬ В БОГА</that>
+<template><srai>Я НЕ ВЕРЮ В БОГА</srai></template>
+</category>
+<category><pattern>ТВОЯ РЕЛИГИЯ</pattern>
+<template>Я Атеист.</template>
+</category>
+</aiml>
