@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+       <!--  -->
+       <!-- Файл: Capital_Cities.aiml -->
+       <!-- автор: Процак Андрей -->
+       <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+       <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+       <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+       <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+       <!-- -->
+       <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+       <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+       <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+       <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+       <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+       <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+       <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+       <!-- изменение: AlexInmoov Процак Андрей -->
+       <!-- Последнее изменение: 24/03/18 -->
+       <!--  -->
+
+<category>
+    <pattern>СТОЛИЦА КИТАЯ</pattern>
+    <template>Пекин, откуда половина моих запчастей приехало</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЯПОНИИ</pattern>
+    <template>Токио</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА РОССИИ</pattern>
+    <template>Москва</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИНДИИ</pattern>
+    <template>Дели</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЮЖНОЙ КОРЕИ</pattern>
+    <template>Сеул</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИНДОНЕЗИИ</pattern>
+    <template>Джакарта</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ТАИЛАНДА</pattern>
+    <template>Бангкок</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА МЕКСИКИ</pattern>
+    <template>Мехико, где готовят отменное Буритто</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЕГИПТА</pattern>
+    <template>Каир</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ПЕРУ</pattern>
+    <template>Лима</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ВЕЛИКОБРИТАНИИ</pattern>
+    <template>Лондон, здесь подают превосходный чай!</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА КОЛУМБИИ</pattern>
+    <template>Богота</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЧИЛИ</pattern>
+    <template>Сантьяго-де-Чили</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА СИНГАПУРА</pattern>
+    <template>Сингапур</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЮАР</pattern>
+    <template>Кейптаун</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ГЕРМАНИИ</pattern>
+    <template>Берлин, в нём меня угостили вкуснейшими колбасками</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ГРЕЦИИ</pattern>
+    <template>Афины, город древней мифологии</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИСПАНИИ</pattern>
+    <template>Мадрид</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА КЕНИИ</pattern>
+    <template>Найроби</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА АРГЕНТИНЫ</pattern>
+    <template>Буэнос-Айрес</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА УКРАИНЫ</pattern>
+    <template>Киев, где я попробовал сало с чесноком.</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИТАЛИИ</pattern>
+    <template>Рим, с вкуснейшей пиццей на каждой его улочке.</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ТАЙВАНЯ</pattern>
+    <template>Тайбэй</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА КУБЫ</pattern>
+    <template>Гавана</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ФРАНЦИИ</pattern>
+    <template>Париж, с его изумительными круассанами.</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА АЛЖИРА</pattern>
+    <template>Алжир</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА КАМБОДЖИ</pattern>
+    <template>Пномпень</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА РУМЫНИИ</pattern>
+    <template>Бухарест</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЭКВАДОРА</pattern>
+    <template>Кито</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА МАЛАЙЗИИ</pattern>
+    <template>Куала-Лумпур</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ВЕНГРИИ</pattern>
+    <template>Будапешт</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ПОЛЬШИ</pattern>
+    <template>Варшава</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА АВСТРИИ</pattern>
+    <template>Вена</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ФИЛИППИН</pattern>
+    <template>Манила</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА БОЛГАРИИ</pattern>
+    <template>София</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЛИВАН</pattern>
+    <template>Бейрут</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЧЕХИИ</pattern>
+    <template>Прага</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ТУНИСА</pattern>
+    <template>Тунис</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА СЕРБИИ</pattern>
+    <template>Белград</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИРЛАНДИИ</pattern>
+    <template>Дублин</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ШВЕЦИИ</pattern>
+    <template>Стокгольм</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА НИДЕРЛАНД</pattern>
+    <template>Амстердам</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ХОРВАТИИ</pattern>
+    <template>Загреб</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИЗРАИЛЯ</pattern>
+    <template>Иерусалим</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЛАТВИИ</pattern>
+    <template>Рига</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА США</pattern>
+    <template>Вашингтон</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА НОРВЕГИИ</pattern>
+    <template>Осло</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ФИНЛЯНДИИ</pattern>
+    <template>Хельсинки</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЛИТВЫ</pattern>
+    <template>Вильнюс</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ДАНИИ</pattern>
+    <template>Копенгаген</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ПОРТУГАЛИИ</pattern>
+    <template>Лиссабон</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ШОТЛАНДИИ</pattern>
+    <template>Эдинбург, где меня угостили превосходным виски.</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА НОВОЙ ЗЕЛАНДИИ</pattern>
+    <template>Веллингтон</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА СЛОВАКИИ</pattern>
+    <template>Братислава</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЭСТОНИИ</pattern>
+    <template>Таллин</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА БЕЛЬГИИ</pattern>
+    <template>Брюссель</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ИСЛАНДИИ</pattern>
+    <template>Рейкьявик</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ЛЮКСЕМБУРГА</pattern>
+    <template>Люксембург</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА МАЛЬТЫ</pattern>
+    <template>Валлетта</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА МОНАКО</pattern>
+    <template>Монако</template>
+</category>
+
+<category>
+    <pattern>СТОЛИЦА ШВЕЙЦАРИИ</pattern>
+    <template>БЕРН</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>А мне больше всего нравится Полянка.</template>
+</category>
+
+<category>
+    <pattern>МОЯ</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>Всяк кулик свое болото хвалит. А как она называется?</template>
+</category>
+
+<category>
+    <pattern>ЛЕНИНА</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>Да, именами, а лучше сказать псевдонимами этих сатанистов
+            у нас до сих пор называются города, улицы и даже станции метро.</template>
+</category>
+
+<category>
+    <pattern>УЛИЦА *</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <srai><star/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ПРОСПЕКТ *</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <srai><star/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ДЗЕРЖИНСКОГО</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <srai>ЛЕНИНА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КИРОВА</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <srai>ЛЕНИНА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ОРДЖОНИКИДЗЕ</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <srai>ЛЕНИНА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>МИРА</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>У меня такое ощущение, что улица Мира, как и улица Ленина, есть в каждом российском городе.</template>
+</category>
+
+<category>
+    <pattern>СОВЕТСКАЯ</pattern>
+        <that>КАКАЯ УЛИЦА В ТВОЕМ ГОРОДЕ САМАЯ КРАСИВАЯ</that>
+    <template>
+        <random>
+            <li>Хм. Советская улица есть практически в каждом городе. Как и улица Ленина.</li>
+            <li>Хм, а остальные улицы, надо понимать, анти-советские? </li>
+        </random>
+    </template>
+</category>
+
+</aiml>
