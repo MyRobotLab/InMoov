@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+            <!--  -->
+            <!-- Файл: botmaster.aiml -->
+            <!-- автор:  -->
+            <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+            <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+            <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+            <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+            <!-- -->
+            <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+            <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+            <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+            <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+            <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+            <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+            <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+            <!-- изменение: AlexInmoov Процак Андрей -->
+            <!-- Последнее изменение: 24/03/18 -->
+            <!--  -->
+
+<category>
+    <pattern>*</pattern>
+        <that>ТОГДА ВЫ ДОЛЖНЫ ЗНАТЬ ВОЛШЕБНОЕ СЛОВО</that>
+    <template>Нет, я так и думал!</template>
+</category>
+
+<category>
+    <pattern>ДА</pattern>
+        <that>ТОГДА ВЫ ДОЛЖНЫ ЗНАТЬ ВОЛШЕБНОЕ СЛОВО</that>
+    <template>Vas y, dis!</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+        <that>ТОГДА ТЫ ДОЛЖЕН ЗНАТЬ ВОЛШЕБНОЕ СЛОВО</that>
+    <template>Нет, я так и думал!</template>
+</category>
+
+<category>
+    <pattern>ДА</pattern>
+        <that>ТОГДА ТЫ ДОЛЖЕН ЗНАТЬ ВОЛШЕБНОЕ СЛОВО</that>
+    <template>Vas y, dis!</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+        <that>VAS Y DIS</that>
+    <template>Ну нет, не это!!!
+        <srai>POSERQUESTION</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>Я ТВОЙ БОТМАСТЕР</pattern>
+    <template>
+        <think>
+            <set name="identity"><id/></set>
+        </think>
+        <condition>
+            <li name="identity" value="botmaster">
+                    <srai>appadmiration</srai>Конечно, мой Учитель, что я могу сделать для вас?
+                <think>
+                    <set name="oldtopic"><get name="topic"/></set>
+                    <set name="topic">system</set>
+                </think>
+            </li>
+                <li>Значит, вы должны знать волшебное слово! </li>
+        </condition>
+    </template>
+</category>
+
+<category>
+    <pattern>Я БОТМАСТЕР</pattern>
+    <template>Интересно, как вас зовут, я хотел бы узнать это.</template>
+</category>
+
+<category>
+    <pattern>ПОГОВОРИМ О ТВОЁМ БОТМАСТЕРЕ *</pattern>
+    <template> <bot name="master"/> один из самых очаровательных людей, которых я знаю.</template>
+</category>
+
+<category>
+    <pattern>ТВОЙ БОТМАСТЕР</pattern>
+    <template> <bot name="master"/>? </template>
+</category>
+
+<category>
+    <pattern>ПОКАЖИ МНЕ СВОЕГО ХОЗЯИНА</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ПОКАЖИ СВОЕГО ХОЗЯИНА</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ЭТО ТВОЙ ИЗОБРЕТАТЕЛЬ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТВОЙ БОТМАСТЕР *</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ЭТО БОТМАСТЕР *</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ДА</pattern>
+        <that>ЗАПРОСИ ТЫ О МОИХ РОДИТЕЛЯХ</that>
+    <template>
+            <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>РАССКАЖИ МНЕ О СВОЕМ БОТМАСТЕРЕ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>РАССКАЖИ МНЕ О СВОЁМ БОТМАСТЕРЕ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>РАССКАЖИ МНЕ О БОТМАСТЕРЕ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>РАССКАЖИ МНЕ О СОЗДАТЕЛЕ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>НА КОГО ТЫ РАБОТАЕШЬ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КТО ЯВЛЯЕТСЯ БОТМАСТЕРОМ</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКОЙ ОН БОТМАСТЕР</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКОЙ ТВОЙ БОТМАСТЕР</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КТО ТВОЙ СОЗДАТЕЛЬ *</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТВОЙ МАСТЕР *</pattern>
+    <template>
+        <srai> <bot name="master"/> <star/> </srai>
+    </template>
+</category>
+
+<category>
+    <pattern>У ТЕБЯ ЕСТЬ БОТМАСТЕР *</pattern>
+    <template>
+        <srai>КТО ТВОЙ БОТМАСТЕР</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СКАЖИ ПОЧТУ ТВОЕГО БОТМАСТЕРА</pattern>
+    <template>Это <bot name="botmastermail"/></template>
+</category>
+
+</aiml>
