@@ -1,5 +1,5 @@
 # -- coding: utf-8 --
-
+# todo use opencv filter
 from java.lang import String
 from org.myrobotlab.service import Runtime
 from org.myrobotlab.service import OpenCV
@@ -16,8 +16,6 @@ yolo = Runtime.createAndStart("yolo","Yolo")
 ImageYolo = Runtime.createAndStart("ImageYolo", "ImageDisplay")
 
 # ##############################################################################
-def displayPic(pic):
-  r = ImageYolo.displayFullScreen(pic)
 
 # ##############################################################################
 def takeFotoForYolo():
