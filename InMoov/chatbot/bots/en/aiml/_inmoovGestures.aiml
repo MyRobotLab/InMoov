@@ -1418,15 +1418,9 @@
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF A *</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
-    </category>
-
-
-    <category>
       <pattern>SHOW ME A PICTURE OF THE *</pattern>
       <template>
-        <srai>SHOW ME A PICTURE OF A * </srai>
+        <srai>PICTURELAB </star></srai>
       </template>
     </category>
 
