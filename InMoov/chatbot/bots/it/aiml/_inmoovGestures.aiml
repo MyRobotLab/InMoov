@@ -747,7 +747,7 @@
 <template><srai>AZIONA UTUBE</srai></template>
 </category>
 <category><pattern>MOSTRAMI UNA FOTO DI UN *</pattern>
-<template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+<template><srai>LABORATORIO DI IMMAGINI <star/></srai></template>
 </category>
 <category><pattern>APRI FACEBOOK</pattern>
 <template><random>
@@ -763,7 +763,7 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>RRICERCA DEL ROBOT *</pattern>
+<category><pattern>RICERCA DEL ROBOT *</pattern>
 <template><random>
           <li>Apro il browser</li>
           <li>Sto cercando per te!</li>
