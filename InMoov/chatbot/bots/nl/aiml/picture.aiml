@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>PICTUREBLAB *</pattern>
+    <template><random>
+        <li>Hier ben je.</li>
+        <li>Ik hoop dat je deze foto leuk vindt.</li>
+        <li>I have this picture.</li>
+        <li>Ik heb deze foto.</li>
+        <li>Moet je zien.</li>
+        <li>Ik vond deze foto van.</li>
+        <li>Ik heb een foto voor je weergegeven.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+    </template>
+  </category>
+  <category>
+    <pattern>LAAT HET ME ZIEN *</pattern>
+    <template><srai>PICTUREBLAB <star/></srai></template>
+  </category>
+</aiml>
