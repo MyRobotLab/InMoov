@@ -16,16 +16,8 @@
   <!-- For more information see http://www.inmoov.fr -->
   <!--  -->
   <category>
-    <pattern>SHOW ME *</pattern>
-    <template>
-      <srai>PICTUREBLAB <star /></srai>
-      <sraix hint="pic">SHOW ME <star /></sraix>
-    </template>
-  </category>
-  <category>
     <pattern>PICTUREBLAB *</pattern>
-    <template>
-      <random>
+    <template><random>
         <li>Here you are.</li>
         <li>I hope you like this picture.</li>
         <li>I have this picture.</li>
@@ -35,6 +27,11 @@
         <li>I found this pic of <star />.</li>
         <li>I've displayed a picture for you.</li>
       </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
     </template>
+  </category>
+  <category>
+    <pattern>SHOW ME *</pattern>
+    <template><srai>PICTUREBLAB <star /></srai></template>
   </category>
 </aiml>
