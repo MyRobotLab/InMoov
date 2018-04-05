@@ -2,7 +2,7 @@
 <aiml>
 <!--  -->
 <!--  -->
-<category><pattern>FAMMI VEDERE *</pattern>
+<category><pattern>LABORATORIO DI IMMAGINI *</pattern>
 <template><random>
         <li>Ecco qui.</li>
         <li>Spero che ti piaccia questa foto.</li>
@@ -14,7 +14,7 @@
       </random>
       <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
 </category>
-<category><pattern>LABORATORIO DI IMMAGINI *</pattern>
-<template><srai>FAMMI VEDERE <star/></srai></template>
+<category><pattern>FAMMI VEDERE *</pattern>
+<template><srai>LABORATORIO DI IMMAGINI <star/></srai></template>
 </category>
 </aiml>
