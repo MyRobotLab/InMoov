@@ -19,12 +19,11 @@
     <pattern>PICTUREBLAB *</pattern>
     <template><random>
         <li>Here you are.</li>
-        <li>I hope you like this picture.</li>
+        <li>I hope you like this picture of.</li>
         <li>I have this picture.</li>
         <li>There you go.</li>
-        <li>Look at that <star />.</li>
-        <li>This is what <star /> looks like.</li>
-        <li>I found this pic of <star />.</li>
+        <li>Look at that.</li>
+        <li>I found this pic of.</li>
         <li>I've displayed a picture for you.</li>
       </random>
       <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
