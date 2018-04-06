@@ -13,7 +13,6 @@ cpt=0
 
 #We need to start the camera before launching yolo
 yolo = Runtime.createAndStart("yolo","Yolo")
-ImageYolo = Runtime.createAndStart("ImageYolo", "ImageDisplay")
 
 # ##############################################################################
 
@@ -45,7 +44,7 @@ def statisticResult():
     list=[]
     file = open("statistics.txt","r")
 	
-    ImageYolo.display("c:\yolo\yolo\predictions.jpg")
+    imagedisplay.display("c:\yolo\yolo\predictions.jpg")
 	
     for ligne in file:
       list.append(ligne)
