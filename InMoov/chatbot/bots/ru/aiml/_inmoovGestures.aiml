@@ -226,14 +226,7 @@
         </oob></template>
 </category>
 <category><pattern>ПОКАЖИ ИЗОБРАЖЕНИЕ *</pattern>
-<template>Хорошо
-        <oob>
-            <mrl>
-                <service>python</service>
-                <method>exec</method>
-                <param>FindImage("<star/>")</param>
-            </mrl>
-        </oob></template>
+<template><srai>ИЗОБРАЖЕНИЕ <star/></srai></template>
 </category>
 <category><pattern>ПОКАЗАТЬ ИЗОБРАЖЕНИЕ *</pattern>
 <template><srai>ПОКАЖИ ИЗОБРАЖЕНИЕ * </srai></template>
