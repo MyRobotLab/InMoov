@@ -198,4 +198,11 @@
     <pattern>FROID</pattern>
     <template>Couvre toi bien</template>
   </category>
+  <category><pattern>FERME * IMAGE</pattern>
+    <template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+  </category>
+  <category><pattern>FERME * PHOTO</pattern>
+    <template><srai>FERME <star/> IMAGE</srai></template>
+</category>
 </aiml>
