@@ -896,4 +896,26 @@
     <pattern>PUIS JE VOUS POSER UNE QUESTION</pattern>
     <template>Je t'en prie.</template>
   </category>
+  <category><pattern>PHOTOLAB *</pattern>
+    <template><random>
+        <li>Et voilà.</li>
+        <li>J'espère que vous appréciez cette photo de <star/>.</li>
+        <li>J'ai cette photo de <star/>.</li>
+        <li>Tenez regardez.</li>
+        <li>Regardez celle ci <star/>.</li>
+        <li>J'ai trouvé cette photo de <star/>.</li>
+        <li>Je vous ai affiché une photo.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+  </category>
+  <category><pattern>MONTRE MOI *</pattern>
+    <template><srai>PHOTOLAB <star/></srai></template>
+  </category>
+  <category><pattern>FERME * IMAGE</pattern>
+    <template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+  </category>
+  <category><pattern>FERME * PHOTO</pattern>
+    <template><srai>FERME <star/> IMAGE</srai></template>
+</category>
 </aiml>
