@@ -21,10 +21,6 @@
    <!-- Последнее изменение: 22/03/18 -->
    <!--  -->
 
-<category><pattern>ПОКАЖИ МНЕ *</pattern>
-<template><srai>ИЗОБРАЖЕНИЕ <star/></srai>
-      <sraix hint="pic">ПОКАЖИ МНЕ <star/></sraix></template>
-</category>
 <category><pattern>ИЗОБРАЖЕНИЕ *</pattern>
 <template><random>
         <li>Вот вы где.</li>
@@ -35,6 +31,17 @@
         <li>Вот как <star/> это выглядит.</li>
         <li>Я нашёл этот рисунок <star/>.</li>
         <li>Я показал вам фотографию.</li>
-      </random></template>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>ПОКАЖИ МНЕ *</pattern>
+<template><srai>ИЗОБРАЖЕНИЕ <star/></srai></template>
+</category>
+<category><pattern>СМОТРИТЕ ИЗОБРАЖЕНИЕ</pattern>
+<template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+</category>
+<category><pattern>COSE ВСЕ ФОТОГРАФИИ</pattern>
+<template><srai>СМОТРИТЕ ИЗОБРАЖЕНИЕ</srai></template>
 </category>
 </aiml>
