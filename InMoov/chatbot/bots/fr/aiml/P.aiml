@@ -907,15 +907,5 @@
         <li>Je vous ai affiché une photo.</li>
       </random>
       <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
-  </category>
-  <category><pattern>MONTRE MOI *</pattern>
-    <template><srai>PHOTOLAB <star/></srai></template>
-  </category>
-  <category><pattern>FERME * IMAGE</pattern>
-    <template>Okay
-      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
-  </category>
-  <category><pattern>FERME * PHOTO</pattern>
-    <template><srai>FERME <star/> IMAGE</srai></template>
 </category>
 </aiml>
