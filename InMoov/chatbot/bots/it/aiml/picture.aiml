@@ -17,4 +17,11 @@
 <category><pattern>FAMMI VEDERE *</pattern>
 <template><srai>LABORATORIO DI IMMAGINI <star/></srai></template>
 </category>
+<category><pattern>CHUIDI * FOTO</pattern>
+<template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+</category>
+<category><pattern>CHUIDI * IMMAGINE</pattern>
+<template><srai>CHUIDI <star/> FOTO</srai></template>
+</category>
 </aiml>
