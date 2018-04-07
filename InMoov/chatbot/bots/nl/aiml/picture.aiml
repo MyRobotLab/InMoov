@@ -20,4 +20,11 @@
     <pattern>LAAT HET ME ZIEN *</pattern>
     <template><srai>PICTUREBLAB <star/></srai></template>
   </category>
+  <category><pattern>SLUIT * IMAGE</pattern>
+  <template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+  </category>
+  <category><pattern>SLUIT * PICTURE</pattern>
+  <template><srai>SLUIT <star/> IMAGE</srai></template>
+</category>
 </aiml>
