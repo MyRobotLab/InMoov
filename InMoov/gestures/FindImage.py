@@ -4,7 +4,6 @@ def FindImage(image):
     image = image.decode( "utf8" )
   except: 
     pass
-  mouth.speak(image)
   a = Parse("http://www.myai.cloud/bot1.php?type=pic&pic="+urllib2.quote(image).replace(" ", "%20"))
   
   displayPic(a)
