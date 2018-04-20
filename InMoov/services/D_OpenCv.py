@@ -65,8 +65,13 @@ def openCvInit():
   if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv.SarxosFrameGrabber")
   if DisplayRender=="VideoInputFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.VideoInputFrameGrabber")
   if DisplayRender=="OpenCVFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.OpenCVFrameGrabber")
-  
-  opencv.setCameraIndex(CameraIndex)
+  #raspi fix ?
+  if DisplayRender=="FFmpegFrameGrabber":
+    opencv.setFrameGrabberType("org.bytedeco.javacv.FFmpegFrameGrabber")
+    opencv.setInputSource("file")
+    opencv.setInputFileName("/dev/video0")
+  else:
+    opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
   opencv.capture()
   #worky open cv camera detection
