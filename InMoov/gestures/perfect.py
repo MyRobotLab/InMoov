@@ -1,12 +1,11 @@
-# -- coding: utf-8 --
 
 def perfect():
   i01.startedGesture()
-  i01.setHandSpeed("left", 0.80, 0.80, 1.0, 1.0, 1.0, 1.0)
-  i01.setHandSpeed("right", 1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
-  i01.setArmSpeed("left", 0.95, 0.95, 0.95, 1.0)
-  i01.setArmSpeed("right", 1.0, 1.0, 1.0, 1.0)
-  i01.setHeadSpeed(0.65, 0.75)
+  i01.setHandVelocity("left", 36, 36, -1, -1, -1, -1)
+  i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
+  i01.setArmVelocity("left", 59, 59, 59, -1)
+  i01.setArmVelocity("right", -1.0, -1.0, -1.0, -1.0)
+  i01.setHeadVelocity(22.0, 31.0)
   i01.moveHead(88,79)
   i01.moveArm("left",89,75,93,11)
   i01.moveArm("right",0,91,28,17)

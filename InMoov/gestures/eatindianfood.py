@@ -1,14 +1,13 @@
-# -- coding: utf-8 --
 
 def eatindianfood():
   fullspeed()
   i01.startedGesture()
-  i01.setHeadSpeed(0.85, 0.80, 0.90, 0.90, 1.0)
+  i01.setHeadVelocity(43.0, 36, 50, 50, -1)
   i01.moveHead(60,40,7,85,52)
   sleep(1)
   i01.moveHead(80,40,7,85,52)
   sleep(2)
-  i01.setHeadSpeed(0.92, 0.80, 0.90, 0.90, 1.0)
+  i01.setHeadVelocity(0.92, 36, 50, 50, -1)
   i01.moveHead(100,40,7,85,52)
   sleep(0.4)
   i01.moveArm("left",85,106,25,18)

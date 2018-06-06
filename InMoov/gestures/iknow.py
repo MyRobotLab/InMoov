@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 
 def iknow():
   x = (random.randint(1, 3))

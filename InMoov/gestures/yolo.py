@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 # todo use opencv filter
 from java.lang import String
 from org.myrobotlab.service import Runtime

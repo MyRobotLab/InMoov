@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 
 def showitanyway():
   x = (random.randint(1, 3))

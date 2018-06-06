@@ -1,5 +1,3 @@
-# -- coding: utf-8 --
-
 def notTrue():
   x = (random.randint(1, 3))
   i01.mouth.speak("oh")

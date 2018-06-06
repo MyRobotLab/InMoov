@@ -1,13 +1,12 @@
-# -- coding: utf-8 --
 
 def givetheglass():
   i01.startedGesture()
   sleep(2)
-  i01.setHandSpeed("left", 0.60, 0.60, 0.60, 0.60, 0.60, 0.60)
-  i01.setHandSpeed("right", 0.60, 0.80, 0.60, 0.60, 0.60, 0.60)
-  i01.setArmSpeed("left", 0.60, 1.0, 0.60, 0.60)
-  i01.setArmSpeed("right", 0.60, 0.60, 0.60, 0.60)
-  i01.setHeadSpeed(0.65, 0.65)
+  i01.setHandVelocity("left", 19, 19, 19, 19, 19, 19)
+  i01.setHandVelocity("right", 19, 36, 19, 19, 19, 19)
+  i01.setArmVelocity("left", 19, -1, 19, 19)
+  i01.setArmVelocity("right", 19, 19, 19, 19)
+  i01.setHeadVelocity(22.0, 22.0)
   i01.moveHead(84,79)
   i01.moveArm("left",77,75,45,17)
   i01.moveArm("right",21,80,77,10)

@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 
 def lookatpeople():
   i01.setHeadVelocity(40, 40, 40)

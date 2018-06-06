@@ -1,7 +1,7 @@
 def negative():
-  i01.setHandSpeed("left", 0.75, 0.75, 0.75, 0.75, 0.75, 0.75)
-  i01.setHandSpeed("right", 0.70, 0.70, 0.70, 0.70, 0.70, 1.0)
-  i01.setArmSpeed("right", 0.85, 0.65, 0.65, 0.65)
+  i01.setHandVelocity("left", 31.0, 31.0, 31.0, 31.0, 31.0, 31.0)
+  i01.setHandVelocity("right", 26.00, 26.00, 26.00, 26.00, 26.00, -1)
+  i01.setArmVelocity("right", 43.0, 22.0, 22.0, 22.0)
   i01.moveHead(18,75)
   sleep(1)
   i01.moveHead(120,75)
