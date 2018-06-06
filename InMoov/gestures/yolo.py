@@ -1,17 +1,18 @@
+# BROKEN
 # todo use opencv filter
-from java.lang import String
-from org.myrobotlab.service import Runtime
-from org.myrobotlab.service import OpenCV
-from time import sleep
-from shutil import copyfile
-import os, sys
+#from java.lang import String
+#from org.myrobotlab.service import Runtime
+#from org.myrobotlab.service import OpenCV
+#from time import sleep
+#from shutil import copyfile
+#import os, sys
 
-list=[]
-list2=[]
-cpt=0
+#list=[]
+#list2=[]
+#cpt=0
 
 #We need to start the camera before launching yolo
-yolo = Runtime.createAndStart("yolo","Yolo")
+#yolo = Runtime.createAndStart("yolo","Yolo")
 
 # ##############################################################################
 
