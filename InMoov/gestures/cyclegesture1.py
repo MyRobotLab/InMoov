@@ -1,7 +1,7 @@
 def cyclegesture1():
-  i01.startedGesture()
+  inMoov.startedGesture()
   welcome()
   sleep(1)
   relax()
   servos()
-  i01.finishedGesture()
+  inMoov.finishedGesture()

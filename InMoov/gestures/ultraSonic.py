@@ -1,3 +1,3 @@
 
 def ultraSonic(returnText):
-  i01.mouth.speakBlocking(unicode(returnText,'utf-8')+str(i01.getUltrasonicSensorDistance()).replace(".0", ""))
+  inMoov.mouth.speakBlocking(unicode(returnText,'utf-8')+str(inMoov.getUltrasonicSensorDistance()).replace(".0", ""))

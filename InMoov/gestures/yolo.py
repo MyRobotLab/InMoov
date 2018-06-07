@@ -53,15 +53,15 @@ def statisticResult():
     NbElement=len(list)
     print "Number of recognized elements:", NbElement
 
-    #i01.mouth.speak("I see")
+    #inMoov.mouth.speak("I see")
 
     for val in list:
       print val
-      #i01.mouth.speak(unicode(val, 'utf-8'))
+      #inMoov.mouth.speak(unicode(val, 'utf-8'))
       #sleep(2)
   else:
     print "Nothing found !!"
-    #i01.mouth.speak("I see nothing")
+    #inMoov.mouth.speak("I see nothing")
   
 # ##############################################################################
 def analyseResult():
@@ -84,15 +84,15 @@ def analyseResult():
 	
     print "Number of recognized elements:", NbElement
 
-    i01.mouth.speak("I see")
+    inMoov.mouth.speak("I see")
   
     for val in list:
       print val
-      i01.mouth.speak(unicode(val, 'utf-8'))
+      inMoov.mouth.speak(unicode(val, 'utf-8'))
       sleep(2)
   else:
     print "Nothing found !!"
-    i01.mouth.speak("I see nothing")
+    inMoov.mouth.speak("I see nothing")
 
 ##################################################################################
 # Timer ...

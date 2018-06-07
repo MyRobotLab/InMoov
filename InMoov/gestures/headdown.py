@@ -1,3 +1,3 @@
 def headdown():
-  i01.head.neck.moveTo(0)
+  inMoov.head.neck.moveTo(0)
 

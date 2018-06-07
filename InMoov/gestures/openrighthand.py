@@ -1,3 +1,3 @@
 def openrighthand():
-  i01.moveHand("right",0,0,0,0,0)
+  inMoov.moveHand("right",0,0,0,0,0)
 

@@ -1,3 +1,3 @@
 def headleft():
-  i01.head.rothead.moveTo(180)
+  inMoov.head.rothead.moveTo(180)
 

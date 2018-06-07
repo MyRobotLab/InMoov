@@ -1,17 +1,17 @@
 
 def lookatpeople():
-  i01.setHeadVelocity(40, 40, 40)
+  inMoov.setHeadVelocity(40, 40, 40)
   x = (random.randint(1, 5))
   if x == 1:
     fullspeed()
-    i01.head.rothead.moveTo(100)
+    inMoov.head.rothead.moveTo(100)
     sleep(2)
     trackHumans()
     sleep(10)
     stopTracking()
   if x == 2:
     fullspeed()
-    i01.head.rothead.moveTo(80)
+    inMoov.head.rothead.moveTo(80)
     sleep(2)
     trackHumans()
     sleep(10)
@@ -39,5 +39,5 @@ def lookatpeople():
   sleep(1)
   lookinmiddle()
   sleep(3)
-  i01.mouth.speak("nice to meet you all")
-  #i01.mouth.speak(u"Приятно с вами познакомиться")
+  inMoov.mouth.speak("nice to meet you all")
+  #inMoov.mouth.speak(u"Приятно с вами познакомиться")

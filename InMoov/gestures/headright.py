@@ -1,3 +1,3 @@
 def headright():
-  i01.head.rothead.moveTo(0)
+  inMoov.head.rothead.moveTo(0)
 

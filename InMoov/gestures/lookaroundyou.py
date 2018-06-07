@@ -1,15 +1,15 @@
 def lookaroundyou(data):
-  i01.setHeadVelocity(36.0, 36.0, 19.0, 19.0, -1)
+  inMoov.setHeadVelocity(36.0, 36.0, 19.0, 19.0, -1)
   for y in range(0, 3):
     if (data == "can i have your attention"):
-      i01.mouth.speak("ok you have my attention")
+      inMoov.mouth.speak("ok you have my attention")
       stopit()
       x = (random.randint(1, 6))
       if x == 1:
-        i01.head.neck.moveTo(90)
+        inMoov.head.neck.moveTo(90)
         eyeslooking(data)
       if x == 2:
-        i01.head.rothead.moveTo(80)
+        inMoov.head.rothead.moveTo(80)
         eyeslooking(data)
       if x == 3:
         headdown()
@@ -26,13 +26,13 @@ def lookaroundyou(data):
       sleep(1)
     x = (random.randint(1, 4))
     if x == 1:
-      i01.mouth.speak("looking nice")
+      inMoov.mouth.speak("looking nice")
     if x == 2:
-      i01.mouth.speak("i like it here")
+      inMoov.mouth.speak("i like it here")
     if x == 3:
-      i01.mouth.speak("time just flies away")
+      inMoov.mouth.speak("time just flies away")
     if x == 4:
-      i01.mouth.speak("ok let's do something")
+      inMoov.mouth.speak("ok let's do something")
       sleep(2)
       x = (random.randint(1, 4))
       if x == 1:

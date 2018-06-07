@@ -2,8 +2,8 @@
 def sorryiforgot():
   x = (random.randint(1, 2))
   if x == 1:
-    i01.mouth.speak("that's alright")
-	#i01.mouth.speak(u"все в порядке")
+    inMoov.mouth.speak("that's alright")
+	#inMoov.mouth.speak(u"все в порядке")
   if x == 2:
-    i01.mouth.speak("you forget all the time")
-	#i01.mouth.speak(u"Вы всё время забываете")
+    inMoov.mouth.speak("you forget all the time")
+	#inMoov.mouth.speak(u"Вы всё время забываете")

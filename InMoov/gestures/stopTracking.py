@@ -1,7 +1,7 @@
 def stopTracking():
-  if (i01.RobotIsTrackingSomething()):
-    if i01.headTracking:i01.stopHeadTracking()
-    if i01.eyesTracking:i01.eyesTracking.stopTracking()
+  if (inMoov.RobotIsTrackingSomething()):
+    if inMoov.headTracking:inMoov.stopHeadTracking()
+    if inMoov.eyesTracking:inMoov.eyesTracking.stopTracking()
     # restore "autoDisable" original user status
-    i01.head.rollNeck.setOverrideAutoDisable(False)
+    inMoov.head.rollNeck.setOverrideAutoDisable(False)
     stopfacerecognizer()

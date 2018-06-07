@@ -2,7 +2,7 @@ def power_up():
   ##sleep(2)
   ##rightSerialPort.digitalWrite(53, Arduino.HIGH)
   ##leftSerialPort.digitalWrite(53, Arduino.HIGH)
-  i01.mouth.speakBlocking("I was sleeping")
+  inMoov.mouth.speakBlocking("I was sleeping")
   lookrightside()
   sleep(2)
   lookleftside()

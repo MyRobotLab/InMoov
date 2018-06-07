@@ -1,6 +1,6 @@
 def cyclegesture2():
   ##for x in range(5):
-  i01.startedGesture()
+  inMoov.startedGesture()
   welcome()
   sleep(1)
   relax()
@@ -35,5 +35,5 @@ def cyclegesture2():
   madeby()
   relax()
   sleep(5)
-  i01.finishedGesture()
+  inMoov.finishedGesture()
   
