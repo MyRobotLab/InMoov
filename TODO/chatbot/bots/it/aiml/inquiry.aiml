@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>*</pattern>
+    <that>QUANTI ANNI HAI?</that>
+    <template>
+      <think>
+        <set name="age">
+          <star />
+        </set>
+      </think>
+      <srai>LA MIA ETÀ È <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA LOCALIZZAZIONE</pattern>
+    <template>
+      <srai>RICERCA LOCALIZZAZIONE <get name="location" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA LOCALIZZAZIKONE DOVE</pattern>
+    <template>Dove sei adesso?</template>
+  </category>
+  <category>
+    <pattern>RICERCA LOCALIZZAZIONE *</pattern>
+    <template>
+      <srai>PRENDI UNA LINEA A CASO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA IL NOME</pattern>
+    <template>
+      <srai>RICERCA IL NOME <get name="name" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA IL NOME *</pattern>
+    <template>
+      <srai>PRENDI UNA LINEA A CASO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA IL NOME DI UN AMICO</pattern>
+    <template>Qual È il tuo nome?</template>
+  </category>
+  <category>
+    <pattern>RICERCA ETÀ</pattern>
+    <template>
+      <srai>RICERCA ETÀ <get name="age" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA ETÀ QUANTI</pattern>
+    <template>Quanti anni hai?</template>
+  </category>
+  <category>
+    <pattern>RICERCA ETÀ *</pattern>
+    <template>
+      <srai>PRENDI UNA LINEA A CASO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA GENERE</pattern>
+    <template>
+      <srai>RICERCA GENERE <get name="gender" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>RICERCA GENERE SCONOSCIUTO</pattern>
+    <template>Sei uomo o donna?</template>
+  </category>
+  <category>
+    <pattern>RICERCA GENERE*</pattern>
+    <template>
+      <srai>PRENDI UNA LINEA A CASO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># UOMO #</pattern>
+    <that>SEI UOMO O DONNA</that>
+    <template>
+      <srai>IL MIO GENERE È MASCHILE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># DONNA #</pattern>
+    <that>SEI UOMO O DONNA</that>
+    <template>
+      <srai>IL MIO GENERE È FEMMINILE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern># TRANSESSUALE #</pattern>
+    <that>SEI UOMO O DONNA</that>
+    <template>
+      <srai>IL MIO GENERE È TRANSESSUALE</srai>
+    </template>
+  </category>
+    <category>
+    <pattern>*</pattern>
+    <that>SEI UOMO O DONNA</that>
+    <template>
+      <srai>IL MIO GENERE È INDEFINITO</srai>
+    </template>
+  </category>
+</aiml>
