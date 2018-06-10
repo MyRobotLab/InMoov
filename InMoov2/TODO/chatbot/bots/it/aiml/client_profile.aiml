@@ -247,7 +247,7 @@ Ti chiamo  <get name="name" />.</template>
     <template>Preferisci che ti chiamino con il tuo nome o con il tuo cognome? <think><set name="lastname"><star /></set></think></template>
   </category>
   <category>
-    <pattern IL MIO  *</pattern>
+    <pattern> IL MIO  *</pattern>
     <that>* NOME O COGNOME</that>
     <template>
       <srai> CHIAMAMI PER COGNOME</srai>
