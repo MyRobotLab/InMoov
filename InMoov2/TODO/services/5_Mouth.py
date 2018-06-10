@@ -180,7 +180,7 @@ def setRobotLanguage():
     if tmplanguage=="nl":tmplanguage="nl-nl"
     if tmplanguage=="ru":tmplanguage="ru-ru"
     if tmplanguage=="it":tmplanguage="it-it"
-    if tmplanguage=="it":tmplanguage="fi-fi"
+    if tmplanguage=="fi":tmplanguage="fi-fi"
   
   try:
     if Speechengine=="VoiceRss":i01.mouth.setKey(apiKey1)
