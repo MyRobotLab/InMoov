@@ -389,7 +389,7 @@ Ti chiamo  <get name="name" />.</template>
     	<think><set name="it"><set name="topic"><star /></set></set></think>
     </template>
   </category>
-  <category
+  <category>
     <pattern>IL MIO BRANO  PREFERITO è *</pattern>
     <template>
     	Ce l' hai sul tuo cellulare? 
@@ -642,7 +642,7 @@ Ti chiamo  <get name="name" />.</template>
     </template>
   </category>
   <category>
-  <pattern>LA MIA VIA</pattern
+  <pattern>LA MIA VIA</pattern>
    <template>
       <get name="street" />
     </template>
@@ -925,7 +925,7 @@ Ti chiamo  <get name="name" />.</template>
     </template>
   </category>
   <category>
-    <pattern>CHIAMAMI * *</pattern
+    <pattern>CHIAMAMI * *</pattern>
     <template>
       <srai> RANDOM INTRO</srai>
       <formal>
@@ -1163,7 +1163,7 @@ Ti chiamo  <get name="name" />.</template>
           <lowercase>
             <get name="gender" />
           </lowercase>
-        </set
+        </set>
       </think> 
       Tu rassomigli a un 
       	<condition name="gender">
@@ -1209,11 +1209,8 @@ Ti chiamo  <get name="name" />.</template>
     <template>Credo che tu abiti a <get name="location" />.</template>
   </category>
   <category>
-    <pattern>COGNOME</pattern>
-    <that>* NOME O COGNOME</that>
-    <template
-<srai>CHIAMAMI PER COGNOME</srai>  
-  </template>
+    <pattern>COGNOME</pattern><that>* NOME O COGNOME</that>
+    <template><srai>CHIAMAMI PER COGNOME</srai>  </template>
   </category>
   <category>
     <pattern>PROFILO DEL CLIENTE</pattern>
