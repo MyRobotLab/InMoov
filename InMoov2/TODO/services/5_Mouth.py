@@ -138,8 +138,8 @@ def onStartSpeaking(text):
       pass
   if i01.RobotIsStarted:
 
-    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="oui":Yes()
-    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="non":No()
+    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
+    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
 
     #force random move while speaking, to avoid conflict with random life gesture
     if random.randint(0,1)==1:
