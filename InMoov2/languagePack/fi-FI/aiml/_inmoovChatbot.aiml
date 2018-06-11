@@ -8,22 +8,233 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael -->
-  <!-- Last modified: 09/06, 2018 -->
+  <!-- Last modified: henrikmyl 11/06, 2018 -->
   <!-- This inmoovFinnish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
   <!-- For more information see http://www.myrobotlab.org -->
   <!-- For more information see http://www.inmoov.fr -->
   
+   <!-- Finnish language works only Voice RSS speechengine. Change speechengine in service_5_Mouth file.  -->
+   <!-- Get free Voice RSS apikey: http://www.voicerss.org/ -->
+   
    <!-- initialisation  -->
-  
-    <category>
-    <pattern>SAY *</pattern>
-    <template>
-      <star />
-    </template>
-  </category>
-  
-<!-- initialisaion -->
+   
+   
+<category><pattern>SAY *</pattern>
+<template><star/></template>
+</category>
 
-to be continued...
+	<!-- initialisaion -->
+
+
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+		Hei! Tämä on ensimmäinen alustukseni. Näin ollen tarvitsenkin lisätietoja. Kertoisitko ensiksi mikä on nimeni? Kuuntelen.</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># MIKÄ ON NIMENI #</that>
+<template><set name="questionfirstinit">jos nimeni on <star/> , sano kyllä vai ei</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># VOINKO SAADA NIMESI #</that>
+<template><set name="questionfirstinit">onko sinun nimesi <star/> , sano kyllä vai ei</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># KYLLÄ #</pattern><that># JOS NIMENI ON #</that>
+<template><random>
+			<li>
+			Pidän  tästä <get name="tmpname"/> nimestä.
+			</li>
+			<li>
+			Todella kaunis nimi, <get name="tmpname"/> kiitos.
+			</li>
+        </random>
+	Minun tulee tuntea myös sinut. Mikä on sinun nimesi? Kuuntelen.
+	<think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># KYLLÄ #</pattern><that># ONKO SINUN NIMESI #</that>
+<template><random>
+        <li>Olen iloinen tutustuessani sinuun, <get name="tmpname"/>.</li>
+        <li>Hauska tavata, <get name="tmpname"/>.</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># EI #</pattern><that># JOS NIMENI ON #</that>
+<template>Käynnistetään järjestelmät uudelleen.
+	Mikä minun nimeni on? Kuuntelen.</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># EI #</pattern><that># JOS NIMESI ON #</that>
+<template>Käynnistetään järjestelmät uudelleen.
+	Voinko saada sinun etunimesi? Kuuntelen.</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># SANO KYLLÄ VAI EI #</that>
+<template><random>
+          <li>
+	Ole kiltti ja vastaa kysymykseeni, kysymys on tärkeää minulle.
+	</li>
+          <li>
+	Toistan.
+	</li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>ÄÄNITESTI</pattern>
+<template><oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><li>
+        <srai>HEI</srai>
+        <random>
+          <li>Olen nyt valmis. Kuuntelen.</li>
+          <li>Mitä voin tehdä puolestasi?</li>
+          <li>Kuinka voisin auttaa sinua?</li>
+        </random>
+      </li></template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>HEI</srai></template>
+</category>
+<category><pattern>HERÄÄ</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>SAMMU</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUT DOWN</pattern>
+<template><srai>SHUTDOWN</srai></template>
+</category>
+<category><pattern>LEPOTILA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DISABLE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>MISTÄ HALUAISIT KESKUSTELLA?</pattern>
+<template>Aiheeni on
+      <get name="topic"/></template>
+</category>
+<category><pattern>BOOT UP MODE</pattern>
+<template>Entering into the boot up topic.
+      <think><set name="topic">BOOTUP</set></think></template>
+</category>
+<category><pattern>GESTURES</pattern>
+<template>Entering into the gestures topic.
+      <think><set name="topic">GESTURES</set></think></template>
+</category>
+<category><pattern>GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>* GESTURES *</pattern>
+<template><srai>GESTURES</srai></template>
+</category>
+<category><pattern>DETACH ALL</pattern>
+<template>Detach All
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DETACH EVERYTHING</pattern>
+<template><srai>DETACH ALL</srai></template>
+</category>
+<category><pattern>ATTACH ALL</pattern>
+<template>Attaching all
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT HAND</pattern>
+<template><srai>ATTACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>DETACH RIGHT HAND</pattern>
+<template>Detaching my right hand
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR RIGHT HAND</pattern>
+<template><srai>DETACH RIGHT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT HAND</pattern>
+<template><srai>ATTACH LEFT HAND</srai></template>
+</category>
+<category><pattern>DETACH LEFT HAND</pattern>
+<template>Detaching my left hand
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DISCONNECT YOUR LEFT HAND</pattern>
+<template><srai>DETACH LEFT HAND</srai></template>
+</category>
+<category><pattern>ATTACH YOUR HEAD</pattern>
+<template><srai>ATTACH HEAD</srai></template>
+</category>
+<category><pattern>DETACH HEAD</pattern>
+<template>Detaching my head
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR RIGHT ARM</pattern>
+<template><srai>ATTACH RIGHT ARM</srai></template>
+</category>
+<category><pattern>DETACH RIGHT ARM</pattern>
+<template>Detaching my right arm
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR LEFT ARM</pattern>
+<template><srai>ATTACH LEFT ARM</srai></template>
+</category>
+<category><pattern>DETACH LEFT ARM</pattern>
+<template>Detaching my left arm
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ATTACH YOUR TORSO</pattern>
+<template><srai>ATTACH TORSO</srai></template>
+</category>
+<category><pattern>DETACH TORSO</pattern>
+<template>Detaching my torso
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+</aiml>
