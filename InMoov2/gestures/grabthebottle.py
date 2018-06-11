@@ -1,0 +1,17 @@
+def grabthebottle():
+  inMoov.startedGesture()
+  inMoov.setHandVelocity("left", -1, 36, 36, 36, -1, 36)
+  inMoov.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
+  inMoov.setArmVelocity("left", -1.0, -1.0, -1.0, -1.0)
+  inMoov.setArmVelocity("right", -1.0, -1.0, -1.0, -1.0)
+  inMoov.setHeadVelocity(50, 36)
+  inMoov.setTorsoVelocity(-1,36,-1)
+  inMoov.moveHead(20,107)
+  inMoov.moveArm("left",77,85,45,20)
+  inMoov.moveArm("right",5,90,30,10)
+  inMoov.moveHand("left",180,138,140,164,180,60)
+  inMoov.moveHand("right",0,0,0,0,0,90)
+  inMoov.moveTorso(90,84,90)
+  sleep(1)
+  inMoov.finishedGesture()
+

@@ -1,0 +1,17 @@
+
+def rollHead():
+  inMoov.startedGesture()
+  inMoov.setHeadVelocity(70, 70, 70)
+  inMoov.moveHead(90,90,20)
+  sleep(0.5)
+  inMoov.moveHead(90,90,170)
+  sleep(1)
+  inMoov.moveHead(90,90,20)
+  sleep(1)
+  inMoov.moveHead(90,90,170)
+  sleep(1)
+  inMoov.moveHead(90,90,90)
+  sleep(1)
+  inMoov.mouth.speakBlocking("thanks a lot, it feels great. doctor")
+  #inMoov.mouth.speakBlocking(u"Большое спасибо, он чувствует себя прекрасно. Доктор")
+  inMoov.finishedGesture()

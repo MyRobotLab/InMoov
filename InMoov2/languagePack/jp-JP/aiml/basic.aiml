@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<aiml version="1.0">
+ 
+<topic name="42">
+ 
+<category>
+<pattern>GREETINGS</pattern>
+<template>
+誰もこたえない。呼び鈴がそのあたりにありません？
+</template>
+</category>
+ 
+<category><pattern>こんにちは</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>*名前*</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>*誰*</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>やあ</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>はろー</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>ごめんください</pattern>
+<template><srai>GREETINGS</srai></template></category>
+ 
+<category><pattern>すみません</pattern>
+<template>誰にあやまっているのだ？</template></category>
+ 
+<category><pattern>どうしたらいい</pattern>
+<template>考えてね</template></category>
+ 
+<category><pattern>_どうしたらいい</pattern>
+<template>考えてね</template></category>
+ 
+<category><pattern>*どうしたらいい*</pattern>
+<template>考えろってば</template></category>
+ 
+<category><pattern>ありがとう</pattern>
+<template>誰に話しかけているのだ?</template></category>
+ 
+<category>
+<pattern>ベルを鳴らす</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルをならす</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルを鳴ら  *</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルをなら*</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルをなら*ない</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルを鳴ら*ない</pattern>
+<template>
+<p>どこからともなく人があらわれた</p>
+<p>この屋敷の執事だろうか</p>
+<think> <set name="deadMan">ON</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>ベルを*</pattern>
+<template>
+<p><star/>?? ベルは鳴らすもんです</p>
+</template>
+</category>
+ 
+<category><pattern>執事*はなす</pattern>
+<template><srai>TALKWITHTHEMAN</srai></template></category>
+ 
+<category><pattern>執事*話す</pattern>
+<template><srai>TALKWITHTHEMAN</srai></template></category>
+ 
+<category><pattern>執事*はなしかける</pattern>
+<template><srai>TALKWITHTHEMAN</srai></template></category>
+ 
+<category><pattern>執事*よぶ</pattern>
+<template><srai>TALKWITHTHEMAN</srai></template></category>
+ 
+<category>
+<pattern>TALKWITHTHEMAN</pattern>
+<template>
+<think> <set name="previousTopic">42</set></think>
+<think> <set name="deadMan"></set></think>
+<think> <set name="topic">help</set></think>
+<srai>EXPLANATIONOFGAME</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>look</pattern>
+<template>
+<p>リビングルーム</p>
+埃のかぶったソファーとロココ調の壁<br/>
+天井は高く、シャンデリアが誇らしげだ<br/>
+南側には今入ってきた玄関の入り口の扉がある<br/>
+突き当たりには螺旋階段がみえているが、何処に繋がっているのは見えない　2階だろうか？<br/>
+左手には扉があるが、その上に「開けるな！」と大書してある<br/>
+右手には場にそぐわない昔の酒場の入り口の回転扉のような中途半端な入り口がある<br/>
+右手奥には、小さなテーブルがある<br/>
+この上にベルが置いてある<br/>
+ 
+<condition><li name="deadMan" value="ON">執事とおぼしき人物がこちらをじっと見ている<br/>
+</li></condition>
+</template>
+</category>
+ 
+<category>
+<pattern>左*行く</pattern>
+<template>
+単に左と言われてもねえ
+</template>
+</category>
+ 
+<category>
+<pattern>左*いく</pattern>
+<template>
+単に左と言われてもねえ
+</template>
+</category>
+ 
+<category>
+<pattern>右*行く</pattern>
+<template>
+単に右と言われてもねえ
+</template>
+</category>
+ 
+<category>
+<pattern>右*いく</pattern>
+<template>
+単に右と言われてもねえ
+</template>
+</category>
+ 
+<category>
+<pattern>螺旋階段をのぼる</pattern>
+<template>
+螺旋階段をのぼった
+<think> <set name="topic">32</set></think>
+<srai>look</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>螺旋階段を上がる</pattern>
+<template>
+螺旋階段を上がった
+<think> <set name="topic">32</set></think>
+<srai>look</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>螺旋階段をあがる</pattern>
+<template>
+螺旋階段をあがった
+<think> <set name="topic">32</set></think>
+<srai>look</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>螺旋階段を登る</pattern>
+<template>
+螺旋階段をのぼった
+<think> <set name="topic">32</set></think>
+<srai>look</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>螺旋階段を進む</pattern>
+<template>
+螺旋階段をのぼった
+<think> <set name="topic">32</set></think>
+<srai>look</srai>
+</template>
+</category>
+ 
+<category>
+<pattern>north</pattern>
+<template>
+螺旋階段をのぼった
+<think> <set name="topic">32</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>west</pattern>
+<template>
+左手の扉を開ける
+<think> <set name="topic">41</set></think>
+</template>
+</category>
+ 
+<category>
+<pattern>south</pattern>
+<template>
+南にいこうとしたけど、出られない
+</template>
+</category>
+ 
+<category>
+<pattern>east</pattern>
+<template>
+右手の回転扉を通る
+<think> <set name="topic">43</set></think>
+</template>
+</category>
+ 
+</topic>
+</aiml>

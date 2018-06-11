@@ -1,0 +1,2 @@
+def startkinect():
+  inMoov.startOpenNI()

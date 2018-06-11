@@ -1,0 +1,36 @@
+;----------------------------- BASIC CONFIGURATION ----------------------------------------
+
+[MAIN]
+ScriptType=Virtual
+; RightSide: Also called FINGERSTARTER : connect one arduino ( called right ) to use FingerStarter + inmoov right side
+; LeftSide: connect one arduino ( called left) to use head / inmoov left side
+; setup your com ports inside service_6_Arduino.config
+; NoArduino: vocal Only
+; Full: Both side arduinos connected
+; Virtual: virtual arduino and inmoov !
+debug=False
+
+Language=en
+; en,fr,es,de,nl,ru,hi,it,fi
+
+;----------------------------------- END --------------------------------------------------
+
+
+
+;----------------------------- ADVANCED & OPTIONAL CONFIGURATION -------------------------------------
+
+
+[VOCAL]
+IsMute=False
+;if True : robot don't talk about starting actions
+
+[GENERAL]
+LoadingPicture=False
+StartupSound=True
+IuseLinux=False
+;some things dont work on mac and linux like marytts voice automatic download
+LaunchSwingGui=True
+;usefull to speedup the system sometime
+betaversion = False
+;develop branch updates
+;----------------------------------- END --------------------------------------------------

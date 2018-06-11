@@ -1,0 +1,15 @@
+def beforehappy():
+  inMoov.startedGesture()
+  inMoov.setHandVelocity("left", -1, -1, -1, -1, -1, -1)
+  inMoov.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
+  inMoov.setArmVelocity("right", 43.0, 43.0, 43.0, -1)
+  inMoov.setArmVelocity("left", -1.0, -1.0, -1.0, -1.0)
+  inMoov.setHeadVelocity(22.0, 22.0)
+  inMoov.moveHead(84,88)
+  inMoov.moveArm("left",5,82,36,11)
+  inMoov.moveArm("right",74,112,61,29)
+  inMoov.moveHand("left",0,88,135,94,96,90)
+  inMoov.moveHand("right",81,79,118,47,0,90)
+  sleep(1)
+  inMoov.finishedGesture()
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>TRADUZIONE IN *</pattern>
+<template><think>
+        <set name="topic">TRADUTTORE</set>
+      </think>
+      <think>
+        <set name="languetraduction">
+          <star/>
+        </set>
+      </think>
+      <li>
+        Sto traducendo in <star/>, dimmi: ferma la traduzione ed io la fermerò
+      </li></template>
+</category>
+<category><pattern>TRADUZIONE A*</pattern>
+<template><srai>TRADUZIONE IN <star index="1"/></srai></template>
+</category>
+<category><pattern>TRADUCI *</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1"/>","<get name="languetraduction"/>")</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>TRADUCI * IN *</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>translateText("<star index="1"/>","<star index="2"/>")</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>TRADUCI * A *</pattern>
+<template><srai>TRADUCI <star index="1"/> IN <star index="2"/></srai></template>
+</category>
+<category><pattern>AZURE_ERROR_1</pattern>
+<template>Scusami, c'è un problema di comunicazione con il servere Azure, prova di nuovo e controlla la chiave</template>
+</category>
+<category><pattern>AZURE_ERROR_2 *</pattern>
+<template>Non parlo questa lingua<star index="1"/>, o forse la sintassi del file azure non è corretta</template>
+</category>
+<category><pattern>AZURE_ERROR_3</pattern>
+<template>Sembra che ci siano delle difficoltà nella mia connessione con il server.</template>
+</category>
+<topic name="TRANSLATOR">
+<category><pattern># INTERROMPI LA TRADUZIONE #</pattern>
+<template><think>
+        <set name="topic">GESTI</set>
+      </think>
+      <think>
+        <set name="languetraduction">en</set>
+      </think>
+      <li>Va bene, interrompo la traduzione, mi ha fatto piacere parlare quella lingua</li></template>
+</category></topic>
+
+<topic name="TRANSLATOR">
+<category><pattern>#</pattern>
+<template><oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>translateText("<star index="1"/>","<get name="languetraduction"/>")</param>
+          </mrl>
+        </oob></template>
+</category></topic>
+
+</aiml>

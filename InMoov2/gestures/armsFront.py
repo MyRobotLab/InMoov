@@ -1,0 +1,10 @@
+def armsFront():
+  inMoov.startedGesture()
+  inMoov.moveHead(90,90)
+  inMoov.moveArm("left",13,115,100,50)
+  inMoov.moveArm("right",13,115,100,50)
+  inMoov.moveHand("left",50,24,54,50,82,0)
+  inMoov.moveHand("right",50,24,54,50,82,180)
+  inMoov.moveTorso(90,90,90)
+  sleep(1)
+  inMoov.finishedGesture()
