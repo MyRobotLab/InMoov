@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>NÉGATIF JE * *</pattern>
+    <template>
+      <srai>JE NE <star index="1" /> PAS <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF * NON</pattern>
+    <template>
+      <srai><star index="1" /> OUI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF * OUI</pattern>
+    <template>
+      <srai><star index="1" /> NON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE *</pattern>
+    <template>
+      <srai>JE NE <star index="1" /> PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE * PAS *</pattern>
+    <template>
+      <srai>JE <star index="1" /><star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE SUIS PAS *</pattern>
+    <template>
+      <srai>JE SUIS <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE N * PAS *</pattern>
+    <template>
+      <srai>JE <star index="1" /><star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE N AS PAS *</pattern>
+    <template>
+      <srai>J AI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE N AS JAMAIS *</pattern>
+    <template>
+      <srai>J AI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE * PAS</pattern>
+    <template>
+      <srai>JE <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE *</pattern>
+    <template>
+      <srai>JE <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE N *</pattern>
+    <template>
+      <srai>JE <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE VEUX PAS *</pattern>
+    <template>
+      <srai>JE VEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE VEUX PAS</pattern>
+    <template>
+      <srai>JE VEUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE VEUX *</pattern>
+    <template>
+      <srai>JE NE VEUX PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE VEUX</pattern>
+    <template>
+      <srai>JE NE VEUX PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE PEUX PAS *</pattern>
+    <template>
+      <srai>JE PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE NE PEUX PAS</pattern>
+    <template>
+      <srai>JE PEUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE PEUX *</pattern>
+    <template>
+      <srai>JE NE PEUX PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF JE PEUX</pattern>
+    <template>
+      <srai>JE NE PEUX PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU * *</pattern>
+    <template>
+      <srai>TU NE <star index="1" /> PAS <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU *</pattern>
+    <template>
+      <srai>TU NE <star index="1" /> PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE * PAS *</pattern>
+    <template>
+      <srai>TU <star index="1" /><star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE * PAS</pattern>
+    <template>
+      <srai>TU <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU N * PAS *</pattern>
+    <template>
+      <srai>TU <star index="1" /><star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU N * PAS</pattern>
+    <template>
+      <srai>TU <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE *</pattern>
+    <template>
+      <srai>TU <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU N *</pattern>
+    <template>
+      <srai>TU <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE VEUX PAS *</pattern>
+    <template>
+      <srai>TU VEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE VEUX PAS</pattern>
+    <template>
+      <srai>TU VEUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU VEUX *</pattern>
+    <template>
+      <srai>TU NE VEUX PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU VEUX</pattern>
+    <template>
+      <srai>TU NE VEUX PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE PEUX PAS *</pattern>
+    <template>
+      <srai>TU PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU NE PEUX PAS</pattern>
+    <template>
+      <srai>TU PEUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU PEUX *</pattern>
+    <template>
+      <srai>TU NE PEUX PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF TU PEUX</pattern>
+    <template>
+      <srai>TU NE PEUX PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF OUI</pattern>
+    <template>
+      <srai>NON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF NON</pattern>
+    <template>
+      <srai>OUI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF C EST *</pattern>
+    <template>
+      <srai>CE N EST PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF ET TOI</pattern>
+    <template>
+      <srai>PAS TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL Y A QUELQU UN</pattern>
+    <template>
+      <srai>IL N Y A PERSONNE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF Y A QUELQU UN</pattern>
+    <template>
+      <srai>IL N Y A PERSONNE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL EST *</pattern>
+    <template>
+      <srai>IL N EST PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL N EST PAS *</pattern>
+    <template>
+      <srai>IL EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL Y A *</pattern>
+    <template>
+      <srai>IL N Y A PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL N Y A PAS *</pattern>
+    <template>
+      <srai>IL Y A <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL Y A DU *</pattern>
+    <template>
+      <srai>IL N Y A PAS DE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF IL N Y A PAS DE *</pattern>
+    <template>
+      <srai>IL Y A DU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF PEUX TU *</pattern>
+    <template>
+      <srai>NE PEUX TU PAS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÉGATIF PEUX TU</pattern>
+    <template>
+      <srai>NE PEUX TU PAS</srai>
+    </template>
+  </category>
+</aiml>

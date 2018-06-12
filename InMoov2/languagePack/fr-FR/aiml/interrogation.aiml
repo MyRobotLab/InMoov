@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>À QUOI TU *</pattern>
+<template><srai>À QUOI <star/> TU. </srai></template>
+</category>
+<category><pattern>AVEC COMBIEN * TU *</pattern>
+<template><srai>AVEC COMBIEN <star index="1"/><star index="2"/> TU</srai></template>
+</category>
+<category><pattern>C EST *</pattern>
+<template><srai>EST CE <star/></srai></template>
+</category>
+<category><pattern>C EST COMBIEN *</pattern>
+<template><srai>COMBIEN <star/></srai></template>
+</category>
+<category><pattern>C EST COMMENT *</pattern>
+<template><srai>COMMENT <star/></srai></template>
+</category>
+<category><pattern>C EST QUAND *</pattern>
+<template><srai>QUAND EST CE QUE <star/> EST</srai></template>
+</category>
+<category><pattern>C EST QUI *</pattern>
+<template><srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>C EST QUOI UN *</pattern>
+<template><srai>QU EST CE QU UN <star/></srai></template>
+</category>
+<category><pattern>C EST QUOI UNE *</pattern>
+<template><srai>QU EST CE QU UNE <star/></srai></template>
+</category>
+<category><pattern>COMBIEN TU *</pattern>
+<template><srai>COMBIEN <star/> TU</srai></template>
+</category>
+<category><pattern>COMMENT TU *</pattern>
+<template><srai>COMMENT <star/> TU</srai></template>
+</category>
+<category><pattern>IL A *</pattern>
+<template><srai>A IL <star/></srai></template>
+</category>
+<category><pattern>IL EST *</pattern>
+<template><srai>EST IL <star/></srai></template>
+</category>
+<category><pattern>IL EST QUEL *</pattern>
+<template><srai>QUEL <star/> EST IL</srai></template>
+</category>
+<category><pattern>IL EST QUELLE *</pattern>
+<template><srai>QUELLE <star/> EST IL</srai></template>
+</category>
+<category><pattern>ILS * *</pattern>
+<template><srai><star index="1"/> ILS <star index="2"/></srai></template>
+</category>
+<category><pattern>ILS ONT *</pattern>
+<template><srai>ONT ILS <star/></srai></template>
+</category>
+<category><pattern>ILS SONT *</pattern>
+<template><srai>SONT ILS <star/></srai></template>
+</category>
+<category><pattern>J AI *</pattern>
+<template><srai>AI JE <star/></srai></template>
+</category>
+<category><pattern>JE *</pattern>
+<template><srai>EST CE QUE JE <star index="1"/></srai></template>
+</category>
+<category><pattern>JE SUIS *</pattern>
+<template><srai>SUIS JE <star/></srai></template>
+</category>
+<category><pattern>JE T *</pattern>
+<template><srai>EST CE QUE JE T <star index="1"/></srai></template>
+</category>
+<category><pattern>JE TE *</pattern>
+<template><srai>EST CE QUE JE TE <star index="1"/></srai></template>
+</category>
+<category><pattern>NE LE * TU PAS</pattern>
+<template><srai><star/> TU <get name="QUOI"/></srai></template>
+</category>
+<category><pattern>NOUS * *</pattern>
+<template><srai><star index="1"/> NOUS <star index="2"/></srai></template>
+</category>
+<category><pattern>NOUS AVONS *</pattern>
+<template><srai>AVONS NOUS <star/></srai></template>
+</category>
+<category><pattern>NOUS SOMMES *</pattern>
+<template><srai>SOMMES NOUS <star/></srai></template>
+</category>
+<category><pattern>OÙ JE * *</pattern>
+<template><srai>OÙ <star index="1"/> JE <star index="2"/></srai></template>
+</category>
+<category><pattern>TU ÉTAIS *</pattern>
+<template><srai>ÉTAIS TU <star/></srai></template>
+</category>
+<category><pattern>TU ÉTAIT *</pattern>
+<template><srai>ÉTAIS TU <star/></srai></template>
+</category>
+<category><pattern>TU * * * * * *</pattern>
+<template><srai><star index="1"/> TU <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/> <star index="6"/></srai></template>
+</category>
+<category><pattern>TU * * * * *</pattern>
+<template><srai><star index="1"/> TU <star index="2"/> <star index="3"/> <star index="4"/> <star index="5"/></srai></template>
+</category>
+<category><pattern>TU * * * *</pattern>
+<template><srai>
+       <star index="1"/> TU <star index="2"/> <star index="3"/> <star index="4"/></srai></template>
+</category>
+<category><pattern>TU * * *</pattern>
+<template><srai><star index="1"/> TU <star index="2"/> <star index="3"/></srai></template>
+</category>
+<category><pattern>TU * *</pattern>
+<template><srai><star index="1"/> TU <star index="2"/></srai></template>
+</category>
+<category><pattern>TU *</pattern>
+<template><srai><star/> TU</srai></template>
+</category>
+<category><pattern>TU AIMES *</pattern>
+<template><srai>AIMES TU <star/></srai></template>
+</category>
+<category><pattern>TU ME *</pattern>
+<template><srai>ME <star/> TU</srai></template>
+</category>
+<category><pattern>TU PARLE *</pattern>
+<template><srai>PARLES TU <star/></srai></template>
+</category>
+<category><pattern>TU PARLES *</pattern>
+<template><srai>PARLES TU <star/></srai></template>
+</category>
+<category><pattern>TU PEUX *</pattern>
+<template><srai>PEUX TU <star/></srai></template>
+</category>
+<category><pattern>VOUS ÊTES *</pattern>
+<template><srai>ÊTES VOUS <star/></srai></template>
+</category>
+<category><pattern>VOUS * *</pattern>
+<template><srai><star index="1"/> VOUS <star index="2"/></srai></template>
+</category>
+</aiml>

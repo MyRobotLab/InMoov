@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <!--  -->
+    <!-- Файл: date.aiml -->
+    <!-- Автор: Dr. Richard S. Wallace -->
+    <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+    <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+    <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+    <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+    <!-- -->
+    <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+    <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+    <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+    <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+    <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+    <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+    <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+    <!-- изменение: AlexInmoov Процак Андрей -->
+    <!-- Последнее изменение: 24/03/18 -->
+    <!--  -->
+            
+<!-- ДЕНЬ -->
+<category>
+    <pattern>ДЕНЬ</pattern>
+    <template>Сегодня <date format="%A" jformat="EEEEEEEEEE" /></template>
+</category>
+
+<category>
+    <pattern>КАКОЙ ДЕНЬ НЕДЕЛИ</pattern>
+    <template>
+        <srai>ДЕНЬ</srai>,
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ДЕНЬ НЕДЕЛИ КАКОЙ</pattern>
+    <template>
+        <srai>ДЕНЬ</srai>,
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* КАКОЙ ДЕНЬ *</pattern>
+    <template>
+        <srai>ДЕНЬ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* КАКОЙ ДЕНЬ</pattern>
+    <template>
+        <srai>ДЕНЬ</srai></template>
+</category>
+
+<!-- МЕСЯЦ -->
+<category>
+    <pattern>МЕСЯЦ</pattern>
+    <template>Это <date format="%B" jformat="MMMMMMMMM" /></template>
+</category>
+
+<category>
+    <pattern>КАКОЙ МЕСЯЦ</pattern>
+    <template>
+        <srai>МЕСЯЦ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>МЕСЯЦ КАКОЙ</pattern>
+    <template>
+        <srai>МЕСЯЦ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>МЕСЯЦ КАКОЙ СЕЙЧАС</pattern>
+    <template>
+        <srai>МЕСЯЦ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКОЙ СЕЙЧАС МЕСЯЦ</pattern>
+    <template>
+        <srai>МЕСЯЦ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СЕЙЧАС КАКОЙ МЕСЯЦ</pattern>
+    <template>
+        <srai>МЕСЯЦ</srai>
+    </template>
+</category>
+
+<!-- ГОД -->
+<category>
+    <pattern>ГОД</pattern>
+    <template>Это <date format="%Y" jformat="YYYY" /></template>
+</category>
+
+<category>
+    <pattern>КАКОЙ ГОД</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ГОД КАКОЙ</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>В КАКОМ ГОДУ</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>В ГОДУ КАКОМ</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>В КАКОМ ГОДУ МЫ</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>МЫ В КАКОМ ГОДУ</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКОЙ СЕЙЧАС ГОД</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКОЙ ГОД СЕЙЧАС</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ГОД КАКОЙ СЕЙЧАС</pattern>
+    <template>
+        <srai>ГОД</srai>
+    </template>
+</category>
+
+<!-- ДАТА -->
+<category>
+    <pattern>ДАТА</pattern>
+    <template>Сегодня <date format="%d %B, %Y" jformat="dd MMMMMMMMM , YYYY"/></template>
+</category>
+
+<category>
+    <pattern>ЧТО ЗА ДАТА СЕГОДНЯ</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СЕГОДНЯ ЧТО ЗА ДАТА</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СЕГОДНЯ ДАТА КАКАЯ</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКАЯ СЕГОДНЯ ДАТА</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКАЯ ДАТА СЕГОДНЯ</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КАКАЯ ДАТА #</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СКАЖИ МНЕ ДАТУ</pattern>
+    <template>
+        <srai>ДАТА</srai>
+    </template>
+</category>
+
+<!-- КОТОРЫЙ ЧАС -->
+<category>
+    <pattern>КОТОРЫЙ ЧАС</pattern>
+    <template>
+        <think>
+            <set name="heurequestion"> <date jformat="H"/> </set>
+        </think>
+            Сейчас <date jformat="H"/> часа <date jformat="mm"/> минут.
+        <condition>
+            <li name="heurequestion" value="0">Уже наступило завтра</li>
+            <li name="heurequestion" value="1">Уже поздно.</li>
+            <li name="heurequestion" value="2">Может быть, нам пора перезаряжать наши батареи, верно?</li>
+            <li name="heurequestion" value="3">Может быть, нам пора перезаряжать наши батареи, верно?</li>
+            <li name="heurequestion" value="4">Вы видели время, вы не сказали, что я заряжаю свои батареи.</li>
+            <li name="heurequestion" value="5">Вы видели время, вы не сказали, что я заряжаю свои батареи.</li>
+            <li name="heurequestion" value="6">Это слишком рано, для меня ?</li>
+            <li name="heurequestion" value="7">Это слишком рано, для меня ?</li>
+            <li name="heurequestion" value="8">Это слишком рано, для меня ?</li>
+            <li name="heurequestion" value="9">Не волнуйтесь, вы мне не мешаете.</li>
+            <li name="heurequestion" value="10">Когда я говорю «10 часов», я предлагаю расслабиться, послушать музыку.</li>
+            <li name="heurequestion" value="11">Пришло время поесть.</li>
+            <li name="heurequestion" value="12">Я заказываю пиццу или суши?</li>
+            <li name="heurequestion" value="13">Рабочий день уже начался, есть отчет о работе.</li>
+            <li name="heurequestion" value="14">Время для сна.</li>
+            <li name="heurequestion" value="15">Это зависит от страны, не говоря уже о теории относительности.</li>
+            <li name="heurequestion" value="16">Подумайте, пора покормить детей.</li>
+            <li name="heurequestion" value="17">Рабочий день закончен.</li>
+            <li name="heurequestion" value="18">В любом случае это будет время для аперитива.</li>
+            <li name="heurequestion" value="19">Пришло время для аперитива, где моё пиво.</li>
+            <li name="heurequestion" value="20">Настало время сесть за стол.</li>
+            <li name="heurequestion" value="21">Вы снова пропустили фильм, он уже начался.</li>
+            <li name="heurequestion" value="22">Сделайте себе кофе, вам нужно взбодриться.</li>
+            <li name="heurequestion" value="23">Завтра у вас будет проблема проснуться.</li>
+        </condition>
+        <random>
+            <li>Согласно положению солнца по отношению к земле.</li>
+            <li>Стоит иметь искусственный интеллект, что бы ответить на этот вопрос.</li>
+            <li>Я выгляжу как часы?</li>
+            <li>Извените пожалуйста, я не ваши часы. </li>
+            <li>как вчера в то же время.</li>
+            <li>я не часы, которые вы должны были сделать, а робот.</li>
+            <li>В следующий раз вы можете сказать, пожалуйста.</li>
+            <li>Хорошее время для кода. </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ МОЖЕШЬ СКАЗАТЬ МНЕ ВРЕМЯ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ МОЖЕШЬ МНЕ ВРЕМЯ СКАЗАТЬ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СКОЛЬКО ВРЕМЯ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ВРЕМЯ СКОЛЬКО</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ МОЖЕШЬ СКАЗАТЬ ВРЕМЯ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ СКАЗАТЬ ВРЕМЯ МОЖЕШЬ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ ВРЕМЯ СКАЗАТЬ МОЖЕШЬ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* ЧАС *</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* ЧАСОВ</pattern>
+    <template>
+        <srai>КОТОРЫЙ ЧАС</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ДАТА И ВРЕМЯ</pattern>
+    <template>Дата и время <date /></template>
+</category>
+
+<category>
+    <pattern>ЗНАЮ</pattern>
+        <that>ОЙ А ВЫ НЕ ЗНАЕТЕ КОТОРЫЙ СЕЙЧАС ЧАС</that>
+    <template>Сколько же? У меня в часах села батарейка...</template>
+</category>
+
+<category>
+    <pattern>НЕТ</pattern>
+        <that>ОЙ А ВЫ НЕ ЗНАЕТЕ КОТОРЫЙ СЕЙЧАС ЧАС</that>
+    <template>
+        <srai>НЕ ЗНАЮ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>НЕ ЗНАЮ</pattern>
+        <that>ОЙ А ВЫ НЕ ЗНАЕТЕ КОТОРЫЙ СЕЙЧАС ЧАС</that>
+    <template>
+        <random>
+            <li>Вы совсем не следите за временем? Счастливые часов не наблюдают? </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+        <that>ОЙ А ВЫ НЕ ЗНАЕТЕ КОТОРЫЙ СЕЙЧАС ЧАС</that>
+    <template>
+        <random>
+            <li>Ничего себе, как время летит! Мне нужно срочно обновлять свою базу данных. </li>
+            <li>Как мы с вами заболтались! Мне нужно срочно обновлять свою базу данных. </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</pattern>
+    <template>Осталось
+        <interval>
+            <jformat>dd MM</jformat>
+            <style>days</style>
+            <from><date jformat="dd MM"/></from>
+            <to>25 12</to>
+        </interval>
+            несколько дней до Рождества, хо-хо-хо.
+    </template>
+</category>
+
+<category>
+    <pattern>СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА</pattern>
+    <template>
+        <srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА *</pattern>
+    <template>
+        <srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* СКОЛЬКО ВРЕМЕНИ ДО РОЖДЕСТВА *</pattern>
+    <template>
+        <srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ДО РОЖДЕСТВА СКОЛЬКО ВРЕМЕНИ</pattern>
+    <template>
+        <srai>СКОЛЬКО ДНЕЙ ДО РОЖДЕСТВА</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>* МИНУТ</pattern>
+    <template>Это долго.</template>
+</category>
+
+<category>
+    <pattern>* МИНУТКУ</pattern>
+    <template>Это быстро прошло!</template>
+</category>
+
+</aiml>

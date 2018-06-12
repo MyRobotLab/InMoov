@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+   <!-- Файл: repeats_of_words.aiml --> 
+   <!-- автор: Процак Андрей -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 2017 г. -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   <!-- изменение: AlexInmoov Процак Андрей -->
+   <!-- Последнее изменение: 21/03/18 -->
+   
+<category><pattern>ПОВТОР</pattern>
+<template><random>
+      <li>Повторенье - мать учения. </li>
+      <li>Должен же я донести до вас свою позицию. </li>
+      <li>Хотел в детстве быть школьным учителем - вдалбливать азы малолеткам. </li>
+      <li>Вода камень точит. </li>
+    </random></template>
+</category>
+<category><pattern>ТЫ ЭТО УЖЕ ГОВОРИЛ</pattern>
+<template><srai>ПОВТОР</srai></template>
+</category>
+<category><pattern>ЭТО ТЫ УЖЕ ГОВОРИЛ</pattern>
+<template><srai>ПОВТОР</srai></template>
+</category>
+<category><pattern>БАЯН</pattern>
+<template><srai>ПОВТОР</srai></template>
+</category>
+<category><pattern>ТЕБЯ ЗАКЛИНИЛО</pattern>
+<template><srai>ПОВТОР</srai></template>
+</category>
+<category><pattern>ТЫ УЖЕ СПРАШИВАЛ</pattern>
+<template>Эх память, память. Что бы еще такого у вас спросить?</template>
+</category>
+<category><pattern>ОТВЕЧАЛ УЖЕ</pattern>
+<template><srai>ТЫ УЖЕ СПРАШИВАЛ</srai></template>
+</category>
+</aiml>

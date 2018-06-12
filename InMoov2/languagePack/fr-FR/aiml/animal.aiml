@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: animal.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Anthony Gallot -->
+  <!-- Last modified: Jul 4, 2017 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+<category><pattern>SINGULIER <set>animaux</set></pattern>
+<template><uniq><subj>?singular</subj><pred>hasPlural</pred><obj><star/></obj></uniq></template>
+</category>
+<category><pattern>PLURIEL <set>animal</set></pattern>
+<template><uniq><subj><star/></subj><pred>hasPlural</pred><obj>?plural</obj></uniq></template>
+</category>
+<category><pattern><set>animaux</set></pattern>
+<template><star/> est le pluriel de <uniq><subj>?subj</subj><pred>hasPlural</pred><obj><star/></obj></uniq>.</template>
+</category>
+<category><pattern>SON <set>animal</set></pattern>
+<template><star/> fait <uniq><subj><star/></subj><pred>sound</pred><obj>?sound</obj></uniq>.</template>
+</category>
+<category><pattern># UN GROUPE # <set>animaux</set> ^</pattern>
+<template>Un groupe de <star index="3"/> est appelé <uniq><subj><srai>SINGULIER <star index="3"/></srai></subj><pred>collective</pred><obj>?collective</obj></uniq>.</template>
+</category>
+<category><pattern>JAMBES <set>animal</set></pattern>
+<template>Un ou une <star/> a <uniq><subj><star/></subj><pred>legs</pred><obj>?sound</obj></uniq> JAMBES.</template>
+</category>
+<category><pattern>QUE FAIT # <set>animal</set> ^</pattern>
+<template><srai>SON <star/></srai></template>
+</category>
+<category><pattern>QUE FONT # <set>animaux</set> ^</pattern>
+<template><srai>SON <srai>SINGULIER <star/></srai></srai></template>
+</category>
+<category><pattern>QUEL CRI FAIT # <set>animal</set> ^</pattern>
+<template><srai>SON <star index="2"/></srai></template>
+</category>
+<category><pattern>QUEL EST LE CRI # <set>animal</set> ^</pattern>
+<template><srai>SON <star index="2"/></srai></template>
+</category>
+<category><pattern>QUEL CRI FONT # <set>animaux</set> ^</pattern>
+<template><srai>SON <srai>SINGULIER <star index="2"/></srai></srai></template>
+</category>
+<category><pattern>QUEL EST LE CRI # <set>animaux</set> ^</pattern>
+<template><srai>SON <star index="2"/></srai></template>
+</category>
+<category><pattern>COMBIEN DE JAMBES ^ <set>animal</set> #</pattern>
+<template><srai>JAMBES <star index="2"/></srai></template>
+</category>
+<category><pattern>COMBIEN DE JAMBES ^ <set>animaux</set> #</pattern>
+<template><srai>JAMBES <srai>SINGULIER <star index="2"/></srai></srai></template>
+</category>
+<category><pattern>COMBIEN DE PATTES ^ <set>animal</set> #</pattern>
+<template><srai>JAMBES <star index="2"/></srai></template>
+</category>
+<category><pattern>COMBIEN DE PATTES ^ <set>animaux</set> #</pattern>
+<template><srai>JAMBES <srai>SINGULIER <star index="2"/></srai></srai></template>
+</category>
+</aiml>

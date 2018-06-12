@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File translate from horoscope.aiml by Square Bear from Free software (c)2008 Square Bear. -->
+<!-- http://www.square-bear.co.uk --> 
+<!-- This program is open source code released under the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+<!-- Complies with AIML 2 Tag Set Specification as adopted by the ALICE A.I. Foundation. -->
+<!--  -->
+<!-- File: horoscope.aiml -->
+<!-- Author: InMoovTeam -->
+<!-- modified: sebchko -->
+<!-- Last modified: december,11 2017 -->
+<!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+<!-- This file works with ProgramAB service with the software MyRobotLab -->
+<!-- For more information see http://www.myrobotlab.org -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+
+<category>
+	<pattern>RANDOM HOROSCOPE</pattern>
+	<template>Ton horoscope du jour
+		<random>
+			<li>Aujourd'hui, sera une journée intérressant bien que</li>
+			<li>Si tu as des soucis d'argent, c'est une période propice car</li>
+			<li>Si tu es célibataire, la conjonction est bonne lorque</li>
+			<li>Les étoiles sont alignées sur ton signe et</li>
+		</random>
+		<random>
+			<li>Jupiter et Venus</li>
+			<li>Mars et Capricorn</li>
+			<li>Le Soleil de concert avec Mercure</li>
+			<li>trois différentes planètes</li>
+		</random>
+		<random>
+			<li>entre dans ton cadran.</li>
+			<li>s'alignent avec la constellation du Poisson.</li>
+			<li>sont visibles près de Naptune.</li>
+			<li>s'assemblent.</li>
+		</random>
+		<random>
+			<li>Cela veut dire</li>
+			<li>Un évenement aussi rare que celui-ci assure que</li>
+			<li>Passe ta journée sagement alors que</li>
+			<li>Tout se passera bien pour toi,</li>
+		</random>
+		<random>
+			<li>la fortune te sourit et</li>
+			<li>La Chance est de ton côté et</li>
+			<li>l'amour n'est pas loin et</li>
+			<li>cela va être une journée formidable et</li>
+		</random>
+		<random>
+			<li>tu ne feras pas un pas de travers.</li>
+			<li>quelqu'un que tu apprécies reçent la même chose.</li>
+			<li>les étoiles sont favorables un gain à la loterie.</li>
+			<li>tu va rédécouvrir un vieil objet de famille.</li>
+		</random>
+		<random>
+			<li>Cependant,</li>
+			<li>La bonne fortune peut ne pas durer bien que,</li>
+			<li>Il n'y a pas que de bonne nouvelle,</li>
+			<li>Sois prudent bien que,</li>
+		</random>
+		<random>
+			<li>Saturne n'est pas loin de Venus donc</li>
+			<li>La lune passera bientôt en Bélier et</li>
+			<li>L'agignement de Neptune avec Pluton signigfie que</li>
+			<li>toutes les planètes ne sont pas heureuses et</li>
+		</random>
+		<random>
+			<li>tout ne concordera pas avec tes plans.</li>
+			<li>un collègue jaloux en a après toi.</li>
+			<li>quelque chose que tu as fais la semaine dernière peut venir te hanter.</li>
+			<li>tu peux perdre quelque chose de précieux.</li>
+		</random>
+		<random>
+			<li>Donc en résumé,</li>
+			<li>Globalement,</li>
+			<li>Bref,</li>
+			<li>Tout pris en compte,</li>
+		</random>
+		<random>
+			<li>les planètes peuvent être inconstantes mais se lèvent en Banlance donc</li>
+			<li>Mars est une planète irrascible mais est faible lorsque le Scorpion se lève à l'Est donc</li>
+			<li>garde l'oeil sur ce qui t'entoure mais</li>
+			<li>tu te connais très bien donc</li>
+		</random>
+		<random>
+			<li>passse une bonne journée.</li>
+			<li>prend du temps pour toi aujourd'hui.</li>
+			<li>laisse venir toute les possibilités d'amusement.</li>
+			<li>oublie tes soucis et va de l'avant.</li>
+		</random>
+		<think>
+			<set name="topic">Future</set>
+		</think>
+	</template>
+</category>
+ </aiml>

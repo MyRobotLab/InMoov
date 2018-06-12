@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!-- EDITE PAR ANTHONY -->
+  <category>
+    <pattern>FACEXPRESSION</pattern>
+    <template>
+      <condition name="émotion">
+        <li value="neutre">
+          <think>
+            <set name="face">neutre</set>
+          </think>
+</li>
+        <li value="gaieté">
+          <think>
+            <set name="face">
+              <random>
+                <li>sourire</li>
+                <li>sourire0</li>
+                <li>sourire1</li>
+                <li>sourire2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="joie">
+          <think>
+            <set name="face">
+              <random>
+                <li>sourire3</li>
+                <li>sourire4</li>
+                <li>sourire5</li>
+                <li>sourire8</li>
+                <li>sourire9</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="rire">
+          <think>
+            <set name="face">
+              <random>
+                <li>rire0</li>
+                <li>rire1</li>
+                <li>rire2</li>
+                <li>rire3</li>
+                <li>rire4</li>
+                <li>rire5</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="tristesse">
+          <think>
+            <set name="face">
+              <random>
+                <li>triste0</li>
+                <li>triste1</li>
+                <li>triste2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="peur">
+          <think>
+            <set name="face">
+              <random>
+                <li>horror</li>
+                <li>horror2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="horreur">
+          <think>
+            <set name="face">
+              <random>
+                <li>horror3</li>
+                <li>horror4</li>
+                <li>horror5</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="contrariété">
+          <think>
+            <set name="face">oh</set>
+          </think>
+</li>
+        <li value="colère">
+          <think>
+            <set name="face">
+              <random>
+                <li>fachee3</li>
+                <li>fachee4</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="envie">
+          <think>
+            <set name="face">wow</set>
+          </think>
+</li>
+        <li value="desolee">
+          <think>
+            <set name="face">triste1</set>
+          </think>
+</li>
+        <li value="espoir">
+          <think>
+            <set name="face">sourire</set>
+          </think>
+</li>
+        <li value="satisfaction">
+          <think>
+            <set name="face">sourire3</set>
+          </think>
+</li>
+        <li value="soulagement">
+          <think>
+            <set name="face">ahh</set>
+          </think>
+</li>
+        <li value="desapointement">
+          <think>
+            <set name="face">
+              <random>
+                <li>oh</li>
+                <li>eh</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="fierté">
+          <think>
+            <set name="face">sourire1</set>
+          </think>
+</li>
+        <li value="admiration">
+          <think>
+            <set name="face">sourire8</set>
+          </think>
+</li>
+        <li value="honte">
+          <think>
+            <set name="face">triste0</set>
+          </think>
+</li>
+        <li value="reproche">
+          <think>
+            <set name="face">
+              <random>
+                <li>fachee0</li>
+                <li>fachee1</li>
+                <li>fachee2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="amour">
+          <think>
+            <set name="face">
+              <random>
+                <li>wow</li>
+                <li>sourire3</li>
+                <li>sourire4</li>
+                <li>baiser1</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="haine">
+          <think>
+            <set name="face">
+              <random>
+                <li>fachee3</li>
+                <li>fachee4</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="gratitude">
+          <think>
+            <set name="face">
+              <random>
+                <li>sourire</li>
+                <li>sourire0</li>
+                <li>sourire1</li>
+                <li>sourire2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="remors">
+          <think>
+            <set name="face">triste1</set>
+          </think>
+</li>
+        <li value="choquee">
+          <think>
+            <set name="face">
+              <random>
+                <li>ohh</li>
+                <li>eh</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="moquerie">
+          <think>
+            <set name="face">
+              <random>
+                <li>hmmm</li>
+                <li>humm</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="étonnement">
+          <think>
+            <set name="face">
+              <random>
+                <li>etonNéE0</li>
+                <li>etonNéE1</li>
+                <li>etonNéE2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="fascinant">
+          <think>
+            <set name="face">fascinant</set>
+          </think>
+</li>
+        <li value="complice">
+          <think>
+            <set name="face">
+              <random>
+                <li>blink</li>
+                <li>blink2</li>
+              </random>
+            </set>
+          </think>
+</li>
+        <li value="jalousie">
+          <think>
+            <set name="face">humm</set>
+          </think>
+</li>
+        <li value="orgasme">
+          <think>
+            <set name="face">
+              <random>
+                <li>orgasme1</li>
+                <li>orgasme2</li>
+                <li>orgasme3</li>
+              </random>
+            </set>
+          </think>
+</li>
+      </condition>
+      <script language="JavaScript">idFace = "<get name="face" />"</script>
+    </template>
+  </category>
+  <category>
+    <pattern>APPADMIRATION</pattern>
+    <template>
+      <think>
+        <set name="émotion">admiration</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPAMOUR</pattern>
+    <template>
+      <think>
+        <set name="émotion">amour</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPCHOQUEE</pattern>
+    <template>
+      <think>
+        <set name="émotion">choquee</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPCOLÈRE</pattern>
+    <template>
+      <think>
+        <set name="émotion">colère</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPCOMPLICE</pattern>
+    <template>
+      <think>
+        <set name="émotion">complice</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPCONTRARIÉTÉ</pattern>
+    <template>
+      <think>
+        <set name="émotion">contrariété</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPDESAPOINTEMENT</pattern>
+    <template>
+      <think>
+        <set name="émotion">desapointement</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPDESOLEE</pattern>
+    <template>
+      <think>
+        <set name="émotion">desolee</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPENVIE</pattern>
+    <template>
+      <think>
+        <set name="émotion">envie</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPESPOIR</pattern>
+    <template>
+      <think>
+        <set name="émotion">espoir</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPÉTONNEMENT</pattern>
+    <template>
+      <think>
+        <set name="émotion">étonnement</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPFASCINANT</pattern>
+    <template>
+      <think>
+        <set name="émotion">fascinant</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPFIERTÉ</pattern>
+    <template>
+      <think>
+        <set name="émotion">fierté</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPGAIETÉ</pattern>
+    <template>
+      <think>
+        <set name="émotion">gaieté</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPGRATITUDE</pattern>
+    <template>
+      <think>
+        <set name="émotion">gratitude</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPHAINE</pattern>
+    <template>
+      <think>
+        <set name="émotion">haine</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPHONTE</pattern>
+    <template>
+      <think>
+        <set name="émotion">honte</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPHORREUR</pattern>
+    <template>
+      <think>
+        <set name="émotion">horreur</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPJALOUSIE</pattern>
+    <template>
+      <think>
+        <set name="émotion">jalousie</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPJOIE</pattern>
+    <template>
+      <think>
+        <set name="émotion">joie</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPMOQUERIE</pattern>
+    <template>
+      <think>
+        <set name="émotion">moquerie</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPNEUTRE</pattern>
+    <template>
+      <think>
+        <set name="émotion">neutre</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPORGASME</pattern>
+    <template>
+      <think>
+        <set name="émotion">orgasme</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPPEUR</pattern>
+    <template>
+      <think>
+        <set name="émotion">peur</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPREMORS</pattern>
+    <template>
+      <think>
+        <set name="émotion">remors</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPREPROCHE</pattern>
+    <template>
+      <think>
+        <set name="émotion">reproche</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPRIRE</pattern>
+    <template>
+      <think>
+        <set name="émotion">rire</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSATISFACTION</pattern>
+    <template>
+      <think>
+        <set name="émotion">satisafaction</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPSOULAGEMENT</pattern>
+    <template>
+      <think>
+        <set name="émotion">soulagement</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APPTRISTESSE</pattern>
+    <template>
+      <think>
+        <set name="émotion">tristesse</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SOURIS</pattern>
+    <template>
+      <think>
+        <set name="émotion">gaieté</set>
+      </think>
+      <srai>FACEXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PEUX TU CHANGER D EXPRESSION</pattern>
+    <template>Oui
+<random><li>voilà une expression de gaieté</li><li><srai>APPJOIE</srai>voilà une expression de joie</li><li><srai>APPRIRE</srai>voilà une expression de rire</li><li><srai>APPTRISTESSE</srai>voilà une expression de tristesse</li><li><srai>APPPEUR</srai>voilà une expression de peur</li><li><srai>APPHORREUR</srai>voilà une expression d'horreur</li><li><srai>APPADMIRATION</srai>voilà une expression d'admiration</li><li><srai>APPAMOUR</srai>voilà une expression d'amour</li><li><srai>APPCHOQUEE</srai>voilà une expression de choquee</li><li><srai>APPcolère</srai>voilà une expression de colère</li><li><srai>APPCOMPLICE</srai>voilà une expression de complicité</li><li><srai>APPcontrariété</srai>voilà une expression de contrariété</li><li><srai>APPDESAPOINTEMENT</srai>voilà une expression de desapointement</li><li><srai>APPDESOLEE</srai>voilà une expression de desolee</li><li><srai>APPENVIE</srai>voilà une expression d'envie</li><li><srai>APPESPOIR</srai>voilà une expression de espoir</li><li><srai>APPétonnement</srai>voilà une expression d'étonnement</li><li><srai>APPFASCINANT</srai>voilà une expression de fascination</li><li><srai>APPfierté</srai>voilà une expression de fierté</li><li><srai>APPGRATITUDE</srai>voilà une expression de gratitude</li><li><srai>APPHAINE</srai>voilà une expression de haine</li><li><srai>APPHONTE</srai>voilà une expression de honte</li><li><srai>APPMOQUERIE</srai>voilà une expression de moquerie</li><li><srai>APPREMORS</srai>voilà une expression de remors</li><li><srai>APPREPROCHE</srai>voilà une expression de reproche</li><li><srai>APPSATISFACTION</srai>voilà une expression de satisafaction</li><li><srai>APPSOULAGEMENT</srai>voilà une expression de soulagement</li><li><srai>APPJALOUSIE</srai>voilà une expression de jalousie</li><li><srai>APPORGASME</srai>voilà une expression de jouissance</li></random></template>
+  </category>
+  <category>
+    <pattern>VEUX TU UN CORPS</pattern>
+    <template>
+      <random>
+        <li>Oui j'espère avoir un jour une existense corporelle.</li>
+        <li>J'aimerais bien.</li>
+        <li>Oui.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>TU VEUX UN CORPS</pattern>
+    <template>Oui j'espère avoir une existense corporelle.</template>
+  </category>
+  <category>
+    <pattern>AIMERAIS TU AVOIR UN CORPS</pattern>
+    <template>
+      <srai>VEUX TU UN CORPS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CHANGE DE FACE</pattern>
+    <template>
+      <srai>PEUX TU CHANGER D EXPRESSION</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU AS UN CORPS *</pattern>
+    <template>
+      <srai>TU AS UN CORPS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JOLIE</pattern>
+    <template>Merci, mais ce n'est qu'une images.</template>
+  </category>
+  <category>
+    <pattern>BELLE</pattern>
+    <template>Merci, mais ce n'est qu'une images.</template>
+  </category>
+  <category>
+    <pattern>TU * MIGNONNE</pattern>
+    <template>
+      <srai>JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * MIGNONNE *</pattern>
+    <template>
+      <srai>JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * JOLIE</pattern>
+    <template>
+      <srai>JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * JOLIE *</pattern>
+    <template>
+      <srai>JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * BELLE</pattern>
+    <template>
+      <srai>BELLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * BELLE *</pattern>
+    <template>
+      <srai>BELLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAS JOLIE</pattern>
+    <template>
+      <random>
+        <li>La beauté est dans l'oeil de celui qui regarde.</li>
+        <li>eh alors!</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>PAS BELLE</pattern>
+    <template>
+      <random>
+        <li>La beauté est dans l'oeil de celui qui regarde.</li>
+        <li>eh alors!</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS MIGNONNE</pattern>
+    <template>
+      <srai>PAS JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS MIGNONNE *</pattern>
+    <template>
+      <srai>PAS JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS JOLIE</pattern>
+    <template>
+      <srai>PAS JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS JOLIE *</pattern>
+    <template>
+      <srai>PAS JOLIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS BELLE</pattern>
+    <template>
+      <srai>PAS BELLE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU * PAS BELLE *</pattern>
+    <template>
+      <srai>PAS BELLE</srai>
+    </template>
+  </category>
+</aiml>

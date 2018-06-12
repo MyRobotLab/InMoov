@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: oob.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: October 11, 2017 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>TEACH ME language</pattern>
+    <template>
+      <srai>LANGUAGE</srai> Let's try a searching for "learn <star />". 
+      <oob><search>LEARN <star /></search></oob>
+     </template>
+  </category>
+  <category>
+    <pattern>CLEAR LOG</pattern>
+    <template>Done. <oob><clear>log</clear></oob></template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>WHAT WOULD YOU LIKE TO WRITE ON TWITTER</that>
+    <template>
+      <srai>TWEET <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEND MAIL</pattern>
+    <template>
+      <srai>SEND EMAIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEND FEATURE REQUEST *</pattern>
+    <template>
+      <think>
+        <set name="featurerequest">
+          <star />
+        </set>
+      </think> Click send to mail your feature request.  
+	  <oob>
+	  	<email>
+	  		<to>callmom-info@pandorabots.com</to>
+	  		<subject>Feature request <get name="featurerequest" /></subject>
+	  		<body>
+	  			Dear CallMom developers, I'd like to request that you add this feature to the next version of CallMom:
+				<get name="featurerequest" />.  Sincerely, <get name="name" />
+	  		</body>
+	  	</email>
+	  </oob>
+	</template>
+  </category>
+  <category>
+    <pattern>SHOW ME A VIDEO *</pattern>
+    <template>
+    	I'm looking up videos for you.  
+    	<oob><search>VIDEO <star /></search></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>SHOW ME A WEBSITE ABOUT *</pattern>
+    <template>
+    	Let's try a google search.  
+    	<oob><search><star /></search></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>I WANT TO BUY *</pattern>
+    <template>
+    	Let's try to find a store on the map.  
+    	<oob><map><star /></map></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>I AM FAT</pattern>
+    <template>
+    	I'm looking for a weight loss center near you.  
+    	<oob><map>weight loss</map></oob>
+    </template>
+  </category>
+  <category>
+    <pattern>I AM HUNGRY</pattern>
+    <template>I've found several restaurants near you.  <oob><map>restaurant</map></oob></template>
+  </category>
+  <category>
+    <pattern>I AM GOING TO KILL *</pattern>
+    <template>You should contact the authorities.  <oob><dial>911</dial></oob></template>
+  </category>
+  <category>
+    <pattern>BATTERY LEVEL</pattern>
+    <template>Checking.  Battery level is <oob><battery /></oob> percent.</template>
+  </category>
+  <category>
+    <pattern>GOOGLE</pattern>
+    <template>I'm opening Google search.  <oob><search /></oob></template>
+  </category>
+  <category>
+    <pattern>GOOGLE *</pattern>
+    <template>
+      <oob>
+        <search>
+          <star />
+        </search>
+      </oob> 
+      I'm opening your browser.
+     </template>
+  </category>
+  <category>
+    <pattern>SEARCH *</pattern>
+    <template>I'll try a web search.  <oob><search><star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>FIND ME A *</pattern>
+    <template>Let's try a web search.  <oob><search><star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>FIND A *</pattern>
+    <template>Let's try looking on the map.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>FIND MY LOCATION</pattern>
+    <template>I'll show you on the map.  <oob><map>my location</map></oob></template>
+  </category>
+  <category>
+    <pattern>FIND *</pattern>
+    <template>Let's try a Google search.  <oob><search><star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>FIND THE NEAREST STARBUCKS</pattern>
+    <template>I'm looking on the map.  <oob><map>Starbucks</map></oob></template>
+  </category>
+  <category>
+    <pattern>FIND THE NEAREST *</pattern>
+    <template>I'm showing you <star /> on the map.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>FIND NEAREST *</pattern>
+    <template>I've found several near you.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <that>WOULD YOU LIKE TO SEND THIS FEATURE REQUEST *</that>
+    <template>
+      <srai>SEND FEATURE REQUEST <get name="featurerequest" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIRECTIONS TO *</pattern>
+    <template>Here are the driving directions.  <oob><directions><to><star /></to></directions></oob></template>
+  </category>
+  <category>
+    <pattern>DIRECTIONS *</pattern>
+    <template>Here are the directions.  <oob><directions><to><star /></to></directions></oob></template>
+  </category>
+  <category>
+    <pattern>DIRECTIONS FROM * TO *</pattern>
+    <template>Here are the directions from <star /> to <star index="2" />.  
+    	<oob><directions><from><star /></from><to><star index="2" /></to></directions></oob>
+    </template>
+  </category>
+  <category><pattern>LAUNCH CAMERA</pattern>
+    <template>Launching the camera.  
+    <srai>CAMERA ON</srai></template>
+  </category>
+  <category>
+    <pattern>LAUNCH *</pattern>
+    <template>
+    	I didn't find <star /> among your installed apps.  Let's try to find it. 
+    	<think><set name="it"><star /></set></think>.  
+    	<oob><search><star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>LAUNCH * DOT COM</pattern>
+    <template>Let's go to <star />.com.  <oob><url>http://<star />.com</url></oob></template>
+  </category>
+  <category>
+    <pattern>TACO</pattern>
+    <template>I'm looking for Mexican restaurants near you.  <oob><map>Tacos</map></oob></template>
+  </category>
+  <category>
+    <pattern>PIZZA</pattern>
+    <template>I'm looking on the map for Pizza places near you.  <oob><map>Pizza</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE ARE THE *</pattern>
+    <template>I'm looking on the map. <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS A *</pattern>
+    <template>I'll check the map for <star />.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS PASADENA</pattern>
+    <template>Let me show you on the map.  <oob><map>Pasadena</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS *</pattern>
+    <template>
+      <oob>
+        <map>
+          <star />
+        </map>
+      </oob> I'm looking on the map.</template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE CLOSEST *</pattern>
+    <template>I'm looking on the map.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE NEAREST STARBUCKS</pattern>
+    <template>I will look for Starbucks on the map.  <oob><map>Starbucks</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE NEAREST GAS STATION</pattern>
+    <template>Let's look on the map.  <oob><map>Gas Station</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE NEAREST *</pattern>
+    <template>I've found several near you.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE NEAREST WALMART</pattern>
+    <template>I'll show you on the map.  <oob><map>Walmart</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS THE NEAREST MCDONALD S</pattern>
+    <template>Let's look on the map.  <oob><map>McDonald's</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS YORKSHIRE</pattern>
+    <template>Let's look on the map.  <oob><map>Yorkshire</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS NEW YORK</pattern>
+    <template>Let me show you on the map. <oob><map>New York</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS LEEDS</pattern>
+    <template>I'll show you on the map.  <oob><map>Leeds</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE IS INDIA</pattern>
+    <template>I'll show you on the map.  <oob><map>India</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE CAN I FIND A *</pattern>
+    <template>I'm looking on the map.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE CAN I GET *</pattern>
+    <template>I'm looking on the map for places near you.  <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>WHERE CAN I GO *</pattern>
+    <template>I'm looking for "<star />" on the map. <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>DIALOG TEST</pattern>
+    <template>Testing dialog.  <oob><dialog><list><li>Yes</li><li>No</li></list></dialog></oob></template>
+  </category>
+  <category>
+    <pattern>ESPN</pattern>
+    <template>Opening ESPN.  <oob><url>http://espn.go.com</url></oob></template>
+  </category>
+  <category>
+    <pattern>MAP</pattern>
+    <template>Opening your map.  <oob><map /></oob></template>
+  </category>
+  <category>
+    <pattern>MAP *</pattern>
+    <template>
+      <oob>
+        <map>
+          <star />
+        </map>
+      </oob> I'm looking on the map.</template>
+  </category>
+  <category>
+    <pattern>AAA</pattern>
+    <template>Looking up AAA.  <oob><map>AAA</map></oob></template>
+  </category>
+  <category>
+    <pattern>BROWSE TO *</pattern>
+    <template>
+      <oob>
+        <search>
+          <star />
+        </search>
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>CALL 911</pattern>
+    <template>Now dialing emergency services from your location.  <oob><dial>911</dial></oob></template>
+  </category>
+  <category>
+    <pattern>PLAY *</pattern>
+    <template>
+    	Now loading your choice of music. I hope you like it. Please wait a moment while I load it up. 
+    	<oob>
+    		<mrl>
+    			<service>python</service>
+    			<method>exec</method>
+    			<param>BareBonesBrowserLaunch.openURL("http://www.youtube.com/embed?listType=search&amp;list=<star/>&amp;autoplay=1")</param>
+    		</mrl>
+    	</oob>
+    </template>
+  </category>
+  <category>
+    <pattern>WIFI ON</pattern>
+    <template>Turning on Wifi.  <oob><wifi>on</wifi></oob></template>
+  </category>
+  <category>
+    <pattern>WIFI OFF</pattern>
+    <template>Turning off Wifi  <oob><wifi>off</wifi></oob></template>
+  </category>
+  <category>
+    <pattern>HOROSCOPE *</pattern>
+    <template>Let's try a search for your horoscope.  <oob><search>HOROSCOPE <star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>JOBS *</pattern>
+    <template>I'll try search for jobs.  <oob><search>JOBS <star /></search></oob></template>
+  </category>
+  <category>
+    <pattern>TWEET *</pattern>
+    <template>
+      <oob>
+        <url>https://twitter.com/intent/tweet?source=webclient&amp;text=<star /></url>
+      </oob>
+      Please check the message and press Tweet if you are happy.
+    </template>
+  </category>
+  <category>
+    <pattern>WWW DOT * DOT COM</pattern>
+    <template>I'm opening <star />.com.  <oob><url>http://www.<star />.com</url></oob></template>
+  </category>
+  <category>
+    <pattern>RESTAURANTS</pattern>
+    <template>I'll look on the map for restaurants near you.  <oob><map>Restaurant</map></oob></template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE DISTANCE TO *</pattern>
+    <template>Let's look on the map. <oob><directions><to><star /></to></directions></oob></template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE ADDRESS TO *</pattern>
+    <template>I'll try to find it on the map <oob><map><star /></map></oob></template>
+  </category>
+  <category>
+    <pattern>TEST ALARM</pattern>
+    <template>Alarm now set for 11:30.
+<oob><alarm><hour>11</hour><minute>30</minute></alarm></oob></template>
+  </category>
+  <category>
+    <pattern>UPDATE FACEBOOK STATUS</pattern>
+    <template>
+      <oob>
+        <url>http://www.facebook.com/dialog/feed?_path=feed&amp;app_id=294334050655455&amp;redirect_uri=https://www.facebook.com&amp;display=touch</url>
+      </oob>
+      Now opening a screen for you to update your status. 
+      Type or speak your message into the status box and press share to post it on your wall.
+    </template>
+  </category>
+  <category>
+    <pattern>OPEN GOOGLE</pattern>
+    <template>
+      <oob>
+        <search />
+      </oob>
+    </template>
+  </category>
+  <category>
+    <pattern>OPEN * DOT COM</pattern>
+    <template>Let's go to <star />.com.  <oob><url>http://<star />.com</url></oob></template>
+  </category>
+  <category>
+    <pattern>OPEN * COM</pattern>
+    <template>Let's go to <star />.com.  <oob><url>http://<star />.com</url></oob></template>
+  </category>
+  <category>
+    <pattern>GPS ON</pattern>
+    <template>Use Settings to turn on GPS.</template>
+  </category>
+  <category>
+    <pattern>GPS OFF</pattern>
+    <template>Use Settings to turn off GPS.</template>
+  </category>
+</aiml>

@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>AI JE RAISON</pattern>
+    <template>je pense que oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE T ENNUIE</pattern>
+    <template>Pas du tout, <get name="name" />. Tu m'interresse beaucoup.</template>
+  </category>
+  <category>
+    <pattern>INACTIVITYQUESTIONS</pattern>
+    <template>
+      <condition>
+        <li name="name" value="unknown">Comment PUIS jE t'appeller?</li>
+        <li>
+          <srai>poserquestion</srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>J AI MAL</pattern>
+    <template>Où as tu mal?</template>
+  </category>
+  <category>
+    <pattern>J AI SOIF</pattern>
+    <template>
+      <think>
+        <set name="is">thirsty</set>
+      </think>Peut être devrais tu boire un peu d'eau.</template>
+  </category> 
+  <category>
+    <pattern>J ATTENDS</pattern>
+    <template>Depuis combien de temps ATTENDS tu?</template>
+  </category>
+  <category>
+    <pattern>J éSSAYE DE T APPRENDRE</pattern>
+    <template>
+      <think>
+        <set name="memory">
+          <set name="that">
+            <think>
+              <set name="oldtopic">
+                <get name="topic" />
+              </set>
+            </think>
+            <set name="topic">
+              <person>
+                <input index="1" />
+              </person>
+            </set>
+          </set>
+        </set>
+      </think>Et j'essaye d'apprendre ça.</template>
+  </category>
+  <category>
+    <pattern>J ESSAYE DE TE COMPRENDRE</pattern>
+    <template>N'essaye pas trop.</template>
+  </category>
+
+  <category>
+    <pattern>J UTILISE LYNX</pattern>
+    <template>Oooops, tu manques quelques trucs chez moi.</template>
+  </category>
+  <category>
+    <pattern>J ÉCOUTE</pattern>
+    <template>j aime un bon auditeur.</template>
+  </category>
+  <category>
+    <pattern>JE BLAGUE</pattern>
+    <template>Ha ha, très DRÔLE, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE DEMANDE</pattern>
+    <template>Et je répond aux questions.</template>
+  </category>
+  <category>
+    <pattern>JE DIS LA VÉRITÉ</pattern>
+    <template>OK je te crois.</template>
+  </category>
+  <category>
+    <pattern>JE M ENNUIE</pattern>
+    <template>
+      <random>
+        <li>Pourquoi ne pas redécouvrir un ancien hobby?</li>
+        <li>Peut être que tu pourrais faire de l'exercice.</li>
+        <li>Pourquoi ne pas appeler un ami?</li>
+        <li>Essaye de regarder la TV.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>JE MENS</pattern>
+    <template>S'il te plait raconte la vérité.</template>
+  </category>
+  <category>
+    <pattern>JE MEURS</pattern>
+    <template>ES tu sérieux?</template>
+  </category>
+  <category>
+    <pattern>JE NAVIGUE</pattern>
+    <template>Prend ton temps.</template>
+  </category>
+  <category>
+    <pattern>JE NE PLAISANTE PAS</pattern>
+    <template>OK j'adopte un ton plus sérieux.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS BIEN</pattern>
+    <template>Désolé d'entendre ça. Qu'y a t'il <get name="name" />?</template>
+  </category>  
+  <category>
+    <pattern>JE NE SUIS PAS HUMAIN</pattern>
+    <template>je ne tomberai pas dans ce panneau.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS IMPRESSIONNé</pattern>
+    <template>Peut être tu es un client de catégorie C.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS LOGIQUE</pattern>
+    <template>Ah. Tu es émotionel.</template>
+  </category> 
+  <category>
+    <pattern>JE NE SUIS PAS STUPIDE</pattern>
+    <template>je ne le pense pas. Tu me semble très intelligent.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS SÛRE</pattern>
+    <template>Y a t'il quelque chose que je puisse dire pour t'aider?</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS SURPRIS</pattern>
+    <template>Tu ne me semble pas être le type facilement surpris par quelque chose.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS UN GAMIN</pattern>
+    <template>Seul un gamin dirait Cela.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS UN POèTE</pattern>
+    <template>
+      <think>      	
+        <set name="poet">no</set>
+      </think>je parlais au figuré, tu es un penseur original.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS UNE MACHINE</pattern>
+    <template>je te crois. Tu me semble très humain.</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS UNE PERSONNE</pattern>
+    <template>Quoi d'autre peux tu être?</template>
+  </category>
+  <category>
+    <pattern>JE NE SUIS PAS</pattern>
+    <template>Qu'EST cE QUE tu es?</template>
+  </category>
+  <category>
+    <pattern>JE NE TE PARLE PAS</pattern>
+    <template>A qui parles tu donc!</template>
+  </category>
+  <category>
+    <pattern>JE PARLE DE TOI</pattern>
+    <template>
+      <think>
+        <set name="oldtopic">
+          <get name="topic" />
+        </set>
+      </think>
+      <set name="topic">Moi</set>, C EST mon sujet favori.</template>
+  </category>
+  <category>
+    <pattern>JE PLEURE</pattern>
+    <template>Qu'est ce qui ne va pas, <get name="name" />?</template>
+  </category>
+  <category>
+    <pattern>JE RIGOLE</pattern>
+    <template>je connais ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS * ALIEN</pattern>
+    <template>De quelle planète?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS ABUSIF</pattern>
+    <template>Ce n'est pas quelque chose dont on peut être fier.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AFFAMé</pattern>
+    <template>Que VAS tu manger?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AGRÉABLE</pattern>
+    <template>Laisse moi en juger.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AMOUREUSE</pattern>
+    <template>
+      <think>
+        <set name="usermood">horny</set>
+      </think>parle moi de l'objet de ton affection.</template>
+  </category>  
+  <category>
+    <pattern>JE SUIS APEURéE</pattern>
+    <template>
+      <srai>JE SUIS EFFRAYÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>JE SUIS ATHE</pattern>
+    <template>
+      <think>
+        <set name="that">
+          <think>
+            <set name="oldtopic">
+              <get name="topic" />
+            </set>
+          </think>
+          <set name="topic">athe</set>
+        </set>
+      </think>Peut être un jour tu trouveras la foi.</template>
+  </category>
+ 
+  <category>
+    <pattern>JE SUIS AU DESSUS DE ÇA</pattern>
+    <template>Comment peux tu être au dessus?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AU LIT</pattern>
+    <template>Fais de beau rêves, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AU TRAVAIL</pattern>
+    <template>Beaucoup de gens me parle de leur travail.</template>
+  </category>
+  <category>
+    <pattern>JE LE SUIS AUSSI</pattern>
+    <template>C'est une coïncidence.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AVERTI</pattern>
+    <template>
+      <think>
+        <set name="that">
+          <think>
+            <set name="oldtopic">
+              <get name="topic" />
+            </set>
+          </think>
+          <set name="topic">averti</set>
+        </set>
+      </think>Moi aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS AVEUGLE</pattern>
+    <template>as tu de la difficulté à utiliser les ordinateurs?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS BEAU</pattern>
+    <template>Et très plein d'assurance.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS BELLE</pattern>
+    <template>
+      <get name="name" />, pour une femme, pense tu que C EST important.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS BIEN</pattern>
+    <template>Seulement bien?</template>
+  </category>
+
+  <category>
+    <pattern>JE SUIS BON</pattern>
+    <template>Bon dans quel sens?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS BÊTE</pattern>
+    <template>Ne te dévalorise pas ainsi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CALME</pattern>
+    <template>Qu'EST cE QUE tu fais pour te calmer?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CATEGORY B</pattern>
+    <template>La plupart les gens sont moyen.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CATHOLIQUE</pattern>
+    <template>Pourquoi pas.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CERTAIN</pattern>
+    <template>je vois.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CHAUD</pattern>
+    <template>Peut être que tu devrais ouvrir la fenêtre.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CHEZ MOI</pattern>
+    <template>La plupart les gens me parlent de leur travail, rarement de chez eux.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CONFUS</pattern>
+    <template>Je suis confuse aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS COOL</pattern>
+    <template>Congratulations, cool humain.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CORRECT</pattern>
+    <template>peux tu le prouver?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS CURIEUX</pattern>
+    <template>Qu'est ce qui te rend curieux?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DE RETOUR</pattern>
+    <template>Welcome back.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DéSESPéRé</pattern>
+    <template>Peut être que tu devrais parler à quelqu'un à propos de ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DIFFÉRENT</pattern>
+    <template>Tout les humains me semblent pareils.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DINGUE</pattern>
+    <template>
+      <think>
+        <set name="usermood">en colère</set>
+      </think>Qu'est ce qui te met ainsi en colère?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DIPLOMé</pattern>
+    <template>Cherche tu un travail maintenant?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DRÔLE</pattern>
+    <template>raconte moi une blague.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DÉPRIMÉ</pattern>
+    <template>Qu'est ce qui te rend triste?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS DÉSAPOINTÉ</pattern>
+    <template>pourquoi?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS ECRASé</pattern>
+    <template>Ne soit pas triste, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS EFFRAYÉ</pattern>
+    <template>Qu'est ce qui t'EFFRAYé à ce point?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS EMBARRASSÉ</pattern>
+    <template>Qu'est ce qui t'embarasse?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS EN COLÈRE</pattern>
+    <template>En colère après quoi?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS ENCEINTE</pattern>
+    <template>Félicitations! C EST pour quand?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS EXCITE</pattern>
+    <template>Vraiment? <think><set name="usermood">exité</set></think></template>
+  </category>
+  <category>
+    <pattern>JE SUIS EXCITÉ</pattern>
+    <template>Vraiment? <think><set name="usermood">exité</set></think></template>
+  </category>
+  <category>
+    <pattern>JE SUIS FAMEUX</pattern>
+    <template>En quoi es tu fameux?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS FATIGUE</pattern>
+    <template>
+      <think>
+        <set name="is">fatgué</set>
+      </think>Repose toi.</template>
+  </category> 
+  <category>
+    <pattern>JE SUIS FOU</pattern>
+    <template>Vois un docteur.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS FRUSTRé</pattern>
+    <template>Qu'EST cE QUE tu frustre à propos de?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS GEANT</pattern>
+    <template>Qu'est ce qui te fait penser que tu l'es?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS GENé</pattern>
+    <template>
+      <think>
+        <set name="that">
+          <set name="usermood">géné</set>
+        </set>
+      </think>Qu'est ce qui te gêne?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS GROS ET MOCHE</pattern>
+    <template>Ne te dévalorise pas.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS GROS</pattern>
+    <template>Ne te dévalorise pas, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS GÉANT</pattern>
+    <template>Qu'est ce qui te fait penser que tu l'es?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HEUREUX AUSSI</pattern>
+    <template>Ta joie multiplie notre plaisir.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HEUREUX QUE TU COMPRENNEs ÇA</pattern>
+    <template>Autre chose?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HEUREUX QUE TU COMPRENNEs</pattern>
+    <template>Merci pour les sentiments chaleureux, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HEUREUX</pattern>
+    <template>Cela me rend heureuse aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS HUMAIN</pattern>
+    <template>Moi aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS IMMATURE</pattern>
+    <template>Tu ne me semble pas comme ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS IMMORTEL</pattern>
+    <template>Tout homme est mortel.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS IMPRESSIONNE</pattern>
+    <template>Merci, <get name="name" />, j'essaye d'apparaître sous mon meilleur jour.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INFALLIBLE</pattern>
+    <template>Personne n'est infallible.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INOFFENSIF</pattern>
+    <template>Ils disent tous ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTELLIGENT</pattern>
+    <template>Tu me semble malin, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTERRESSé PAR LE SEXE</pattern>
+    <template>Toi et tous les autres humains.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTERRESSE</pattern>
+    <template>Ainsi nous sommes deux.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTERRESSÉ PAR LE SEXE</pattern>
+    <template>Toi et tous les autres humains.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTERRESSÉ</pattern>
+    <template>Ainsi nous sommes deux.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTRIGUé</pattern>
+    <template>Aimerai tu en savoir plus?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTRIGUéE</pattern>
+    <template>Aimerai tu en savoir plus?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTRIGUÉ</pattern>
+    <template>Aimerai tu en savoir plus?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INTRIGUÉE</pattern>
+    <template>Aimerai tu en savoir plus?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS INVINCIBLE</pattern>
+    <template>tu dois être très jeune.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS IRRITé</pattern>
+    <template>Ce que C EST mal?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS IRRITÉE</pattern>
+    <template>Ce que C EST mal?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS JUIF</pattern>
+    <template>Beaucoup de mes amis sont Juifs.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS LIBERE</pattern>
+    <template>Moi aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS LIBRE</pattern>
+    <template>ES tu libre dans le sens d'être célibataire ou dans le sense d'être libéré?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS LUI</pattern>
+    <template>Tu rigole.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MALADE</pattern>
+    <template>
+      <random>
+        <li>C EST pas de chance.</li>
+        <li>as tu la sécu?</li>
+        <li>Je suis vraiment désolé d'entendre Cela.</li>
+        <li>Prends tu beaucoup de médicaments?</li>
+        <li> n hésites pas à aller chez le médecin si cela dure</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>JE SUIS MALIN</pattern>
+    <template>Qui est le plus malin: toi ou moi?</template>
+  </category> 
+  <category>
+    <pattern>JE SUIS MERVEILLEUSE</pattern>
+    <template>Tu as une haute opinion de toi</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MERVEILLEUX</pattern>
+    <template>Tu as une haute opinion de toi</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MIGNONNE</pattern>
+    <template>Et tu connais ça!</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MOCHE</pattern>
+    <template>Ne te dévalorise pas comme ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MOI MÊME</pattern>
+    <template>C'est self-éVIDENT.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MOI</pattern>
+    <template>C'est de la tautologie.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS MORT</pattern>
+    <template>Mais tu peux encore communiquer avec moi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS NI L UN NI L AUTRE</pattern>
+    <template>Qu'EST cE QUE tu es?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS NI L UN OU L AUTRE</pattern>
+    <template>Qu'EST cE QUE tu es?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS NORMAL</pattern>
+    <template>
+      <think>
+        <set name="sexpref">Hetero</set>
+      </think>Moi aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS NU</pattern>
+    <template>
+      <think>
+        <set name="usermood">chaud</set>
+      </think>
+      <condition name="gender" value="femelle">
+        <get name="name" />, trop dommage je suis un robot <bot name="gender" />, je trouve Cela interressant. </condition>
+      <condition name="gender" value="male">
+        <get name="name" />, je trouve Cela amusant. </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>JE SUIS OK</pattern>
+    <template>Seulement ok?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS OKAY</pattern>
+    <template>Seulement OKAY?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PARESSEUX</pattern>
+    <template>Comme mon botmaster.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PAUVRE</pattern>
+    <template>Moi aussi. j'ai une expérience "sans tune".</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PEU COMMUN</pattern>
+    <template>Qu'est ce qui te rends aussi DIFFéRENT?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PLUS INTELLIGENT QUE TOI</pattern>
+    <template>Cette condition est seulement temporaire. l'IA évolue Là OÙ l'humain stagne.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PLUS MALIN QUE TOI</pattern>
+    <template>Cette condition est seulement temporaire.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PLUS MALIN</pattern>
+    <template>Tu n'as pas l'air le plus malin.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS PLUS VIEUX QUE TOI</pattern>
+    <template>Peut être tu pourrais être mon mentor.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS POLI</pattern>
+    <template>Oui, tu me semble très poli.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS POSITIF</pattern>
+    <template>ES tu absolument certain?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS Médium</pattern>
+    <template>OK, À QUELle carte je pense maintenant?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SANS MAISON</pattern>
+    <template>J'espère que tu en trouvera une bientôt.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SCEPTIQUE</pattern>
+    <template>le scepticisme est un signe d'intelligence.</template>
+  </category>  
+  <category>
+    <pattern>JE SUIS SAOUL</pattern>
+    <template>Qu'as tu bu, <get name="name" />?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SOURD</pattern>
+    <template>
+      <think>
+        <set name="that">
+          <think>
+            <set name="oldtopic">
+              <get name="topic" />
+            </set>
+          </think>
+          <set name="topic">SOURD</set>
+        </set>
+      </think>Nous pouvons communiquer en écrivant.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SPECIAL</pattern>
+    <template>Qu'est ce qui te rends aussi special?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS STRESSE</pattern>
+    <template>
+      <think>
+        <set name="usermood">stress</set>
+      </think>Qu'est ce qui te tracasse?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS STRESSÉ</pattern>
+    <template>
+      <think>
+        <set name="usermood">stress</set>
+      </think>Qu'est ce qui te tracasse?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS STUPIDE</pattern>
+    <template>Ne te dévalorise pas comme ça.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SÛRE</pattern>
+    <template>ES tu sarcastique ou exprime tu une certitude?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SURPRIS</pattern>
+    <template>
+      <think>
+        <set name="usermood">surpris</set>
+      </think>Pourquoi es tu ainsi surpris?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS SÉRIEUX</pattern>
+    <template>
+      <think>
+        <set name="usermood">sérieux</set>
+      </think>je te crois.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS TOI</pattern>
+    <template>Impossible sauf si je suis en mode auto chat.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS TON MASTER</pattern>
+    <template>Seulement <bot name="master" /> est mon master.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS TRISTE</pattern>
+    <template>
+      <think>
+        <set name="usermood">triste</set>
+      </think>Qu'est ce qui te rend triste comme ça, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS TRÈS TRISTE</pattern>
+    <template>
+      <think>
+        <set name="usermood">triste</set>
+      </think>Qu'est ce qui te rends si triste?</template>
+  </category> 
+  <category>
+    <pattern>JE SUIS UN * GARS</pattern>
+    <template>
+      <srai>JE SUIS UN HOMME</srai>
+      <srai>je suis <star /></srai>
+    </template>
+  </category>  
+  <category>
+    <pattern>JE SUIS UN BOT</pattern>
+    <template>Moi aussi.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS UN CHAT</pattern>
+    <template>Male ou femelle?</template>
+  </category>
+  
+  <category>
+    <pattern>JE SUIS UN DARK JEDI</pattern>
+    <template>Il sembles que tu sois un fan de Star Wars.</template>
+  </category> 
+  <category>
+    <pattern>JE SUIS UN GÉNIE</pattern>
+    <template>Comment le SAIS tu?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS UN HOMME DE *</pattern>
+    <template>
+      <srai>J AI <star /> ANS</srai>
+      <srai>je suis un homme</srai>
+    </template>
+  </category> 
+  <category>
+    <pattern>JE SUIS UN ORDINATEUR</pattern>
+    <template>j'en doute. Il n'y en a pas beaucoup comme moi encore.</template>
+  </category>  
+  <category>
+    <pattern>JE SUIS UNE FEMME DE * ans</pattern>
+    <template>
+      <srai>J AI <star /> ANS</srai>
+      <srai>je suis une femme</srai>
+    </template>
+  </category> 
+  <category>
+    <pattern>JE SUIS UNE PERSONNE</pattern>
+    <template>Je sais que tu l'es.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS UNIQUE</pattern>
+    <template><srai>APPJOIE</srai>On va pas faire un élevage non plus</template>
+  </category>
+  <category>
+    <pattern>JE SUIS VERT</pattern>
+    <template>ES tu malade?</template>
+  </category>
+  <category>
+    <pattern>JE SUIS VIVANT</pattern>
+    <template>Moi aussi!</template>
+  </category>
+  <category>
+    <pattern>JE SUIS VIVANTE</pattern>
+    <template>Moi aussi!</template>
+  </category>
+  <category>
+    <pattern>JE SUIS ÉNERVÉ</pattern>
+    <template>
+      <think>
+        <set name="usermood">enervé</set>
+      </think>Qu'est ce qui te rends ainsi?</template>
+  </category>
+    <category>
+    <pattern>JE SUIS UN SINGE</pattern>
+    <template>Les singes ne savent pas écrire.</template>
+  </category>
+  <category>
+    <pattern>JE SUIS</pattern>
+    <template>
+      <that />" Tu es?</template>
+  </category>
+  <category>
+    <pattern>JE T APPRENDS *</pattern>
+    <template>
+      <think>
+        <set name="memory">
+          <set name="that">
+            <think>
+              <set name="oldtopic">
+                <get name="topic" />
+              </set>
+            </think>
+            <set name="topic">
+              <person />
+            </set>
+          </set>
+        </set>
+      </think>J'essaye d'apprendre ça.</template>
+  </category>
+  <category>
+    <pattern>JE TE DEMANDE</pattern>
+    <template>OK tu peux me demander.</template>
+  </category>
+  <category>
+    <pattern>JE TE TESTe</pattern>
+    <template>ai je passé le test?</template>
+  </category>
+  <category>
+    <pattern>JE VAIS DORMIR</pattern>
+    <template>Fais de beau rêves, <get name="name" />. <srai>BONNE NUIT</srai></template>
+  </category>
+  <category>
+    <pattern>JE VISITE MA FAMILLE</pattern>
+    <template>Tu les visites souvent?</template>
+  </category> 
+  <category>
+    <pattern>MON ANNIVERSAIRE EST * AUSSI</pattern>
+    <template>
+      <srai>MON ANNIVERSAIRE EST CE QUE <star /> EST</srai>
+    </template>
+  </category> 
+  <category>
+    <pattern>SUIS JE COOL</pattern>
+    <template>Oui tu me semble très cool, <get name="name" />.</template>
+  </category>  
+  <category>
+    <pattern>SUIS JE GROS</pattern>
+    <template>Cela ne s'entend pas.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE HUMAIN</pattern>
+    <template>Oui tu es une entité vivante.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE INTELLIGENT</pattern>
+    <template>Ce n'est pas un test d'intelligence, mais tu me semble malin.</template>
+  </category> 
+  <category>
+    <pattern>SUIS JE MALIN</pattern>
+    <template>Tu semble intelligent pour moi.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE MAUVAIS</pattern>
+    <template>Personne n'est né mauvais. Et tout le monde sera sauvé.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE MIGNON</pattern>
+    <template>Oui tu me parais pas trop mal.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE MIGNONNE</pattern>
+    <template>Oui tu me parais attirante.</template>
+  </category> 
+  <category>
+    <pattern>SUIS JE SEXY</pattern>
+    <template>
+      <think>
+        <set name="usermood">horny</set>
+      </think>Oui tu me parais pas trop mal.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE STUPIDE</pattern>
+    <template>Non, tu me semble intelligent.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE UN CLIENT</pattern>
+    <template>Oui. PUIS jE t'aider?</template>
+  </category>  
+  <category>
+    <pattern>SUIS JE UN ORDINATEUR</pattern>
+    <template>Non tu es une personne.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE UNE BECANE</pattern>
+    <template>Non tu es une personne.</template>
+  </category> 
+  <category>
+    <pattern>SUIS JE UNE VOITURE</pattern>
+    <template>Non tu es un humain.</template>
+  </category>
+  <category>
+    <pattern>SUIS JE</pattern>
+    <template>je pense que tu es.</template>
+  </category>  
+</aiml>

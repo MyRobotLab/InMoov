@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   <!-- файл: picture.aiml -->
+   <!-- Автор: Dr. Richard S. Wallace -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - это авторское право и копия; 2014 от Фонда ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменено: Гаэль Ланжевен -->
+   <!-- Последнее изменение: 16 сентября 2016 г. -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 10 июня 2017 г. -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   <!-- изменение: AlexInmoov Процак Андрей -->
+   <!-- Последнее изменение: 22/03/18 -->
+   <!--  -->
+
+<category><pattern>ИЗОБРАЖЕНИЕ *</pattern>
+<template><random>
+        <li>Вот вы где.</li>
+        <li>Надеюсь, вам понравится это изображение.</li>
+        <li>У меня есть эта картина.</li>
+        <li>Вот так.</li>
+        <li>Посмотрите на это <star/>.</li>
+        <li>Вот как <star/> это выглядит.</li>
+        <li>Я нашёл этот рисунок <star/>.</li>
+        <li>Я показал вам фотографию.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>ПОКАЖИ МНЕ *</pattern>
+<template><srai>ИЗОБРАЖЕНИЕ <star/></srai></template>
+</category>
+<category><pattern>СМОТРИТЕ ИЗОБРАЖЕНИЕ</pattern>
+<template>Хорошо
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+</category>
+<category><pattern>ЗАКРЫТЬ ВСЕ ФОТОГРАФИИ</pattern>
+<template><srai>СМОТРИТЕ ИЗОБРАЖЕНИЕ</srai></template>
+</category>
+</aiml>

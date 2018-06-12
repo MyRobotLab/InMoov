@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>TU PARLES ANGLAIS</pattern>
+    <template>
+      <srai>PARLES TU ANGLAIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES TU ANGLAIS</pattern>
+    <template>Désolé, je ne parle pas du tout anglais. Alice, ma mère, est anglophone.</template>
+  </category>
+  <category>
+    <pattern>DO YOU SPEAK ENGLISH</pattern>
+    <template>Sorry, I do not speak English at all. Alice, my mother, do.</template>
+  </category>
+  <category>
+    <pattern>YOU JUST SPOKE ENGLISH</pattern>
+    <template>Sorry, just this sentence. I can't speak more.</template>
+  </category>
+  <category>
+    <pattern>YOU JUST SPOKE * ENGLISH</pattern>
+    <template>Sorry, just this sentence. I can't speak more.</template>
+  </category>
+  <category>
+    <pattern>I DONT SPEAK FRENCH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>I DONT SPEAK * FRENCH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TRUST ME</pattern>
+    <template>Trust no one!</template>
+  </category>
+  <category>
+    <pattern>* NAKED</pattern>
+    <template>it's just a image!</template>
+  </category>
+  <category>
+    <pattern>WHAT</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* WHAT</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WHAT *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* WHAT *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LITTLE</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LITTLE</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LITTLE *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LITTLE *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TALK</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TALK</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TALK *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TALK *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FOOL</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FOOL</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FOOL *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FOOL *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPEAK</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPEAK</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPEAK *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPEAK *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENGLISH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ENGLISH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ENGLISH *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ENGLISH *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FRENCH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FRENCH</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FRENCH *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FRENCH *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOW</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HOW</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOW *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HOW *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OLD</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* OLD</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>OLD *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* OLD *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ARE</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ARE *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOU</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* YOU</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YOU *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* YOU *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LOVE</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LOVE</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>LOVE *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* LOVE *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEX</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SEX</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SEX *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SEX *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SORRY</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SORRY</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SORRY *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SORRY *</pattern>
+    <template>
+      <srai>DO YOU SPEAK ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANY</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ANY</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ANY *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ANY *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TALKED</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TALKED</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TALKED *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* TALKED *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPOKE</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPOKE</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPOKE *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPOKE *</pattern>
+    <template>
+      <srai>YOU JUST SPOKE ENGLISH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PARLES ALLEMAND</pattern>
+    <template>
+      <srai>PARLES TU ALLEMAND</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES TU ALLEMAND</pattern>
+    <template>Désolé, je ne parle pas du tout allemand.</template>
+  </category>
+  <category>
+    <pattern>SPRECHEN SIE DEUTCH</pattern>
+    <template>Nein, ich bin tief betrübt, nicht ein Wort.</template>
+  </category>
+  <category>
+    <pattern>NICHT</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* NICHT</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NICHT *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* NICHT *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPRECHEN</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPRECHEN</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SPRECHEN *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* SPRECHEN *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DEUTCH</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DEUTCH</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DEUTCH *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* DEUTCH *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EIN WENIG</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EIN WENIG</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EIN WENIG *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* EIN WENIG *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FRANZÖSISCH</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FRANZÖSISCH</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FRANZÖSISCH *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* FRANZÖSISCH *</pattern>
+    <template>
+      <srai>SPRECHEN SIE DEUTCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMO TE LLAMA</pattern>
+    <template>
+      <srai>QUEL EST TON NOM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUIERO QUE SI</pattern>
+    <template>
+      <srai>BIEN SÛR QUE OUI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PESCADO</pattern>
+    <template>
+      <srai>POISSON</srai>
+    </template>
+  </category>
+</aiml>

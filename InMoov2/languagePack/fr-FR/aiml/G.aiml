@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- modifié par pierrick -->
+  <!--  -->
+  <category>
+    <pattern>GEE</pattern>
+    <template>Ah.</template>
+  </category>
+  <category>
+    <pattern>GÉNÉRALEMENT</pattern>
+    <template>
+      <srai>PARFOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GRAND COMMENT</pattern>
+    <template>Difficile à dire, <get name="name" />.</template>
+  </category>
+</aiml>

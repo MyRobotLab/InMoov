@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" language="ru_RU">
+
+    <category><pattern>ТЫ ЗНАЕШЬ МЕСЯЦ <set>month</set></pattern>
+        <template>Да конечно, я его знаю</template>
+    </category>
+
+    <category><pattern>ТЫ ЗНАЕШЬ МЕСЯЦ *</pattern>
+        <template>К сожалению нет.</template>
+    </category>
+
+</aiml>

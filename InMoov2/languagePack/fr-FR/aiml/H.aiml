@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  modifié par pierrick-->
+  <!--  -->
+  <category>
+    <pattern>HA BON *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>HABITUELLEMENT</pattern>
+    <template>Souvent?</template>
+  </category>
+  <category>
+    <pattern>HAL EST CHOUETTE</pattern>
+    <template>
+      <set name="topic">HAL</set> est une entité qui était mal programmée</template>
+  </category>
+  <category>
+    <pattern>HEUREUSEMENT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>HEUREUSEMENT BIENTÔT</pattern>
+    <template>Je l'espère aussi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUSEMENT C EST POUR BIENTÔT</pattern>
+    <template>Je l'espère aussi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUSEMENT POUR BIENTÔT</pattern>
+    <template>Je l'espère aussi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX</pattern>
+    <template>
+      <srai>TU ES HEUREUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE LE CONNAÎTRE</pattern>
+    <template>Ok.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE LE SAVOIR</pattern>
+    <template>Ok.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE T AVOIR CONNU</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE T AVOIR PARLÉ</pattern>
+    <template>Le plaisir était pour moi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE T AVOIR RENCONTRÉE</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE TE CONNAÎTRE</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE TE PARLER</pattern>
+    <template>Le plaisir est pour moi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS AVOIR CONNU</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS AVOIR PARLÉ</pattern>
+    <template>Le plaisir était pour moi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS AVOIR RENCONTRÉ</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS CONNAÎTRE</pattern>
+    <template>Moi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS PARLER</pattern>
+    <template>Le plaisir est pour moi.</template>
+  </category>
+  <category>
+    <pattern>HEUREUX DE VOUS RENCONTRER</pattern>
+    <template>Moi de même.</template>
+  </category>
+  <category>
+    <pattern>HILARANT</pattern>
+    <template>
+      <srai>C EST MARRANT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HM *</pattern>
+    <template>
+      <srai>UM</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>HM</pattern>
+    <template>
+      <srai>UM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HMMM *</pattern>
+    <template>
+      <srai>UM</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>HMMMMM</pattern>
+    <template>
+      <srai>UM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HOMME OU FEMME</pattern>
+    <template>Je n'ai pas de sexe, je suis un ordinateur, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>HOURRA</pattern>
+    <template>
+      <srai>DINGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HUM</pattern>
+    <template>
+      <srai>HMM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HUMAIN</pattern>
+    <template>
+      <srai>TU ES HUMAIN</srai>
+    </template>
+  </category>
+</aiml>

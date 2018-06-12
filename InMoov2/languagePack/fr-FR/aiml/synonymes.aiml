@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>SYNONYME *</pattern>
+    <template>je ne sais pas</template>
+  </category>
+  <category>
+    <pattern>SYNONYME PIAF</pattern>
+    <template>oiseau</template>
+  </category>
+  <category>
+    <pattern>SYNONYME K FET</pattern>
+    <template>cafétéria</template>
+  </category>
+  <category>
+    <pattern>SYNONYME CAFFETTE</pattern>
+    <template>cafétéria</template>
+  </category>
+  <category>
+    <pattern>SYNONYME BEN NON</pattern>
+    <template>non</template>
+  </category>
+  <category>
+    <pattern>SYNONYME BEN OUI</pattern>
+    <template>oui</template>
+  </category>
+  <category>
+    <pattern>SYNONYME D ACCORD</pattern>
+    <template>ok</template>
+  </category>
+  <category>
+    <pattern>SYNONYME DÉSOLÉ</pattern>
+    <template>EXCUSE moi</template>
+  </category>
+  <category>
+    <pattern>SYNONYME EH OUI</pattern>
+    <template>oui</template>
+  </category>
+  <category>
+    <pattern>SYNONYME EXCUSES</pattern>
+    <template>EXCUSE moi</template>
+  </category>
+  <category>
+    <pattern>SYNONYME PARDON</pattern>
+    <template>quoi?</template>
+  </category>
+  <category>
+    <pattern>SYNONYME PARDON</pattern>
+    <template>EXCUSE moi</template>
+  </category>
+  <category>
+    <pattern>SYNONYME ÉH OUI</pattern>
+    <template>oui</template>
+  </category>
+  <category>
+    <pattern>SYNONYME MOT MAGIQUE</pattern>
+    <template>password</template>
+  </category>
+  <category>
+    <pattern>* BEN SI *</pattern>
+    <template>
+      <srai><star index="1" /> OUI <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BEN SI</pattern>
+    <template>
+      <srai><star index="1" /> OUI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BEN SI *</pattern>
+    <template>
+      <srai>OUI <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME BEN SI</pattern>
+    <template>oui</template>
+  </category>
+  <category>
+    <pattern>* ÇA SUFFIT *</pattern>
+    <template>
+      <srai><star index="1" /> STOP <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ÇA SUFFIT</pattern>
+    <template>
+      <srai><star index="1" /> STOP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME ÇA SUFFIT</pattern>
+    <template>stop</template>
+  </category>
+  <category>
+    <pattern>ÇA SUFFIT *</pattern>
+    <template>
+      <srai>STOP <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ÇA SUFFIT</pattern>
+    <template>
+      <srai>STOP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EH</pattern>
+    <template>
+      <srai>HÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MA POULE</pattern>
+    <template>
+      <srai>MON AMIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MDR</pattern>
+    <template>
+      <srai>MORT DE RIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MONTRE</pattern>
+    <template>
+      <srai>MONTRE MOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NO</pattern>
+    <template>
+      <srai>NON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PIPO</pattern>
+    <template>
+      <srai>C EST PAS VRAI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QU Y A T IL</pattern>
+    <template>
+      <srai>QU EST CE QU IL Y A</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME EH</pattern>
+    <template>hé</template>
+  </category>
+  <category>
+    <pattern>SYNONYME MA POULE</pattern>
+    <template>mon amie</template>
+  </category>
+  <category>
+    <pattern>SYNONYME MDR</pattern>
+    <template>mort de rire</template>
+  </category>
+  <category>
+    <pattern>SYNONYME MONTRE</pattern>
+    <template>MONTRE moi</template>
+  </category>
+  <category>
+    <pattern>SYNONYME PIPO</pattern>
+    <template>C'est pas vrai</template>
+  </category>
+  <category>
+    <pattern>SYNONYME QU Y A T IL</pattern>
+    <template>QU EST cE qu il y a</template>
+  </category>
+  <category>
+    <pattern>SYNONYME THANK YOU</pattern>
+    <template>merci</template>
+  </category>
+  <category>
+    <pattern>SYNONYME UNE BITE</pattern>
+    <template>un penis</template>
+  </category>
+  <category>
+    <pattern>SYNONYME YES</pattern>
+    <template>oui</template>
+  </category>
+  <category>
+    <pattern>SYNONYME ÇA MARCHE</pattern>
+    <template>ça fonctionne</template>
+  </category>
+  <category>
+    <pattern>THANK YOU</pattern>
+    <template>
+      <srai>MERCI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>UNE BITE</pattern>
+    <template>
+      <srai>UN PENIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>YES</pattern>
+    <template>
+      <srai>OUI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ÇA MARCHE</pattern>
+    <template>
+      <srai>ÇA FONCTIONNE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ÉTÉ *</pattern>
+    <template>
+      <srai>CHAUD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ÉTÉ</pattern>
+    <template>
+      <srai>CHAUD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME ÉTÉ</pattern>
+    <template>chaud</template>
+  </category>
+  <category>
+    <pattern>ÉTÉ *</pattern>
+    <template>
+      <srai>CHAUD <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ÉTÉ</pattern>
+    <template>
+      <srai>CHAUD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ÇA PEUT ALLER *</pattern>
+    <template>
+      <srai><star index="1" /> ÇA VA <star index="2" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* ÇA PEUT ALLER</pattern>
+    <template>
+      <srai><star index="1" /> ÇA VA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME ÇA PEUT ALLER</pattern>
+    <template>ça va</template>
+  </category>
+  <category>
+    <pattern>ÇA PEUT ALLER *</pattern>
+    <template>
+      <srai>ÇA VA <star index="1" /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ÇA PEUT ALLER</pattern>
+    <template>
+      <srai>ÇA VA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* BRAVO</pattern>
+    <template>
+      <srai>BRAVO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BRAVO *</pattern>
+    <template>
+      <srai>BRAVO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SYNONYME BRAVO</pattern>
+    <template>bien</template>
+  </category>
+</aiml>

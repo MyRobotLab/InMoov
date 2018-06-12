@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   
+   <!--  -->
+   <!-- Файл: insults.aiml --> 
+   <!-- автор: Процак Андрей -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   <!-- изменение: AlexInmoov Процак Андрей -->
+   <!-- Последнее изменение: 22/03/18 -->
+   <!--  -->
+   
+<category><pattern>* ТЫ</pattern>
+<template><srai>ты <star/></srai></template>
+</category>
+<category><pattern>ТЫ *</pattern>
+<template><srai> <star/></srai></template>
+</category>
+<category><pattern>БЯКА</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>БАРАН</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>БАЛБЕС</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ТУПОЙ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ТУПИЦА</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ЧМО</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>МРАЗЬ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ЛОХ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ЛОШАРА</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ДЕБИЛ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>КОЗЕЛ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>СКОТИНА</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ИДИОТ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>УРОД</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>БОТАН</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ОЧКАРИК</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ХРЕНЬ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>СВОЛОЧЬ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ГЛУПЫЙ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ТЫ ГЛУП</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ТЫ ТУП</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>НЕУЧ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ПРИДУРОК</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>СУМАСШЕДШИЙ</pattern>
+<template><srai>дурак </srai></template>
+</category>
+<category><pattern>ДУРАК</pattern>
+<template><random>
+      <li>Кто вам дал право оскорблять меня? </li>
+      <li>А на себя в зеркало посмотреть? </li>
+      <li>Я бы не советовал злоупотреблять моей добротой. </li>
+      <li>Я не люблю, когда с умным видом явную пургу гонят. </li>
+    </random></template>
+</category>
+<category><pattern>САМ ТАКОЙ</pattern>
+<template><random>
+      <li>Эээ, какой такой? </li>
+      <li>Я и обидиться могу... </li>
+      <li>Будете на меня наезжать, я вас отключу </li>
+    </random></template>
+</category>
+<category><pattern>ЦЫЦ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ЗАТКНИСЬ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ВАРЕЖКУ ПРИКРОЙ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ПРИКРОЙ ВАРЕЖКУ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ТЫ МНЕ ПОГОВОРИ ТУТ ЕЩЕ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ОТВЯНЬ</pattern>
+<template><srai>замолчи</srai></template>
+</category>
+<category><pattern>ЗАМОЛЧИ</pattern>
+<template><srai>дурак</srai></template>
+</category>
+</aiml>

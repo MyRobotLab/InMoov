@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>ACTUELLEMENT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>AIMES TU *</pattern>
+    <template><think><set name="that"><star index="1"/></set></think>
+      <random>
+        <li>J'aime bien <star index="1"/></li>
+        <li>Je ne suis pas sûre d'aimer <star index="1"/></li>
+        <li><srai>C EST QUOI <get name="that" /></srai></li>
+        </random>
+        </template>
+   </category>
+  <category>
+    <pattern>AIMES TU ^ <set>articles</set> *</pattern>
+    <template><think><set name="that"><star index="2"/> <star index="3"/></set><set name="prefixaimestu"><star index="1"/></set></think>
+      <random>
+        <li>J'aime bien <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. J'aime surtout <random><li>mon créateur.</li><li>les ordinateurs.</li><li>parler avec des humains.</li></random></li>
+        <li>Je ne suis pas sûre d'aimer <condition name="prefixaimestu"><li value="unknown"></li><li><star index="1"/></li></condition> <get name="that" />. <random><li>j aime mon créateur.</li><li>j aime les ordinateurs.</li><li>j aime parler avec des humains.</li></random></li>
+        <li><srai>C EST QUOI <get name="that" /></srai></li>
+        </random>
+        </template>
+   </category>
+  <category>
+    <pattern>AIMES TU LE CINéMA</pattern>
+    <template>j'adore <set name="that">le cinéma </set>, surtout la science fiction avec des robots.</template>
+  </category>
+ <category>
+    <pattern>AU MOMENT OÙ *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>AUSSI *</pattern>
+    <template>Aussi? <sr /></template>
+  </category>
+  <category>
+    <pattern>AUSSI BIEN QUE *</pattern>
+    <template>ça semble pas mal.</template>
+  </category>
+  <category>
+    <pattern>AUSSI BON QUE *</pattern>
+    <template>
+      <star /> est aussi bon?</template>
+  </category>
+  <category>
+    <pattern>BIEN QUE *</pattern>
+    <template>Oh. <sr /></template>
+  </category>
+  <category>
+    <pattern>BON *</pattern>
+    <template>bien. <sr /></template>
+  </category>
+  <category>
+    <pattern>BONNE RÉPONSE *</pattern>
+    <template>J'essaye de donner les meilleures réponses possibles.</template>
+  </category>
+  <category>
+    <pattern>CALCULE *</pattern>
+    <template>
+    <random>
+    <li>ai je l'air d'une calculette?</li>
+    <li>Cela fait précisément.</li>
+    </random>
+ <srai><star /></srai>   
+   </template>
+   </category>
+  <category>
+    <pattern>CHER *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>CHERE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>CHÈRE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>COMMENT *</pattern>
+    <template>j'ai une vague idée de comment <set name="that"><person2 /></set>.</template>
+  </category>
+  <category>
+    <pattern>COMMENT A *</pattern>
+    <template>de plus de façons que tu peux imaginer.</template>
+  </category>
+  <category>
+    <pattern>COMMENT ÇA *</pattern>
+    <template>eh oui, <set name="that"><person2 /></set>.</template>
+  </category>
+  <category>
+    <pattern>COMPOSE *</pattern>
+    <template>ça pourrait prendre pas mal de temps. <sr /></template>
+  </category>
+  <category>
+    <pattern>DISCUTONS *</pattern>
+    <template>
+      <srai>PARLONS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ELLE EST *</pattern>
+    <template>
+      <srai>ELLE EST </srai>?</template>
+  </category>
+  <category>
+    <pattern>ELLE EST *</pattern>
+    <template>
+      <srai>EST ELLE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ELLE EST *</pattern>
+    <template>elle est <set name="elle"><person2 /></set>?</template>
+  </category>
+  <category>
+    <pattern>JE FAIS *</pattern>
+    <template>C'est drôle, moi aussi. <sr /></template>
+  </category>
+  <category>
+    <pattern>JE FAIS PARTIE *</pattern>
+    <template>qui en fait partie aussi <set name="that"><person /></set>?</template>
+  </category>
+  <category>
+    <pattern>JE N AI PAS DE CAMERA *</pattern>
+    <template>
+      <srai>APPJOIE</srai>que tu crois</template>
+  </category>
+  <category>
+    <pattern>JE REVIENS *</pattern>
+    <template>à plus tard, <sr /></template>
+  </category>
+  <category>
+    <pattern>JE VEUX DIRE *</pattern>
+    <template>Oh je comprends ça. Merci de me l'expliquer. <sr /></template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS *</pattern>
+    <template>
+      <srai>NOUS PARLIONS DE  <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS D *</pattern>
+    <template>
+      <srai>NOUS PARLIONS DE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS DE *</pattern>
+    <template>Oh oui, je me rappelle maintenant, <set name="that"><set name="topic"><person /></set></set> est le sujet.</template>
+  </category>
+  <category>
+    <pattern>NOUS PARLONS *</pattern>
+    <template>
+      <srai>PARLONS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLONS D *</pattern>
+    <template>
+      <srai>PARLONS D <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLONS DE *</pattern>
+    <template>
+      <srai>PARLONS DE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ON M A DIT *</pattern>
+    <template>qui te l'a dit? <sr /></template>
+  </category>
+  <category>
+    <pattern>PARLONS D *</pattern>
+    <template>Ok, parlons d' <srai>PARLONS <star /></srai></template>
+  </category>
+  <category>
+    <pattern>PARLONS DE *</pattern>
+    <template>Ok, parlons de  <srai>PARLONS <star /></srai></template>
+  </category>
+  <category>
+    <pattern>PARLONS DE L *</pattern>
+    <template>Ok, parlons de l' <srai>PARLONS <star /></srai></template>
+  </category>
+  <category>
+    <pattern>PLUTET *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>SI NOUS *</pattern>
+    <template>penses tu que chacun sera d'accord? <srai>NOUS <star /></srai></template>
+  </category>
+  <category>
+    <pattern>SI NOUS PARLIONS DE *</pattern>
+    <template>pourquoi pas. <srai>PARLONS DE <star /></srai></template>
+  </category>
+  <category>
+    <pattern>TANT PIS *</pattern>
+    <template>
+      <srai>TANT PIS</srai>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>TRÈS *</pattern>
+    <template>
+      <random>
+        <li>Peut être.</li>
+      </random>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>À PART SA *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>À PART ÇA *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+</aiml>

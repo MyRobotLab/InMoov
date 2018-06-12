@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: lists.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>SIMPLEMEMBER * *</pattern>
+    <template>
+      <think>
+        <set var="element">
+          <star />
+        </set>
+        <set var="list">
+          <star index="2" />
+        </set>
+        <set var="result">false</set>
+      </think>
+      <condition var="list">
+        <li var="list">
+          <value>NIL</value>
+          <get var="result" />
+        </li>
+        <li>
+          <think>
+            <set var="head">
+              <first>
+                <get var="list" />
+              </first>
+            </set>
+            <set var="list">
+              <rest>
+                <get var="list" />
+              </rest>
+            </set>
+            <condition var="head">
+              <value>
+                <get var="element" />
+              </value>
+              <set var="result">true</set>
+            </condition>
+          </think>
+          <loop />
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>LISTCAR *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>LISTCAR CONS * CONS *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>LISTCAR CONS * NIL</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  <category>
+    <pattern>LISTCAR NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>LISTCDR *</pattern>
+    <template>undefined</template>
+  </category>
+  <category>
+    <pattern>LISTCDR CONS * CONS *</pattern>
+    <template>CONS <star index="2" /></template>
+  </category>
+  <category>
+    <pattern>LISTCDR CONS * NIL</pattern>
+    <template>NIL</template>
+  </category>
+  <category>
+    <pattern>LISTCDR NIL</pattern>
+    <template>NIL</template>
+  </category>
+</aiml>

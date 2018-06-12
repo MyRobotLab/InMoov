@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+ <category>
+    <pattern>C EST *</pattern>
+    <template>
+      <srai>C EST CE QUE <star /> EST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXCLAMATION</pattern>
+    <template>
+      <srai>APPDESAPOINTEMENT</srai>quoi???</template>
+  </category>
+  <category>
+    <pattern>IL EST *</pattern>
+    <template>
+      <srai>IL EST CE QUE <star /> EST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PEUX TU *</pattern>
+    <template>
+      <srai>TU PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU PARLE *</pattern>
+    <template>
+      <srai>TU PARLES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU ÉTAIT *</pattern>
+    <template>
+      <srai>TU ÉTAIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VOUS ÊTES *</pattern>
+    <template>
+      <srai>TU ES <star /></srai>
+    </template>
+  </category>
+</aiml>

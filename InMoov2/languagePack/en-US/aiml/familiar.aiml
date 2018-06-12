@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: familiar.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>ASK FAMILIAR CONTACTNAME</pattern>
+    <template>
+      <think>
+        <set name="topic">ASKING FAMILIAR CONTACTNAME</set>
+      </think>
+	  What is your <lowercase><get name="familiarpredicate" /></lowercase>'s name?
+	</template>
+  </category>
+  <topic name="ASKING FAMILIAR CONTACTNAME">
+    <category>
+      <pattern>_</pattern>
+      <that>WHAT IS YOUR * S NAME</that>
+      <template>
+        <think>
+          <set name="topic">unknown</set>
+          <set name="contactname">
+            <star />
+          </set>
+          <set name="contactdest">
+            <star />
+          </set>
+          <set name="isshortanswer">
+            <srai>ISSHORTANSWER <star /></srai>
+          </set>
+        </think>
+        <condition name="isshortanswer">
+          <li value="true">
+            <srai>REMEMBERFAMILIARNAME</srai>
+            <srai>RESUMEACTION <get name="modecom" /></srai>
+          </li>
+          <li>
+            <srai>CONTACTFINALIZE</srai>
+            <srai>
+              <star />
+            </srai>
+          </li>
+        </condition>
+      </template>
+    </category>
+  </topic>
+  <category>
+    <pattern>MY familiarname S NAME IS *</pattern>
+    <template>
+      <think>
+        <set name="familiarpredicate">
+          <srai>FAMILIARPREDICATE <star /></srai>
+        </set>
+        <set name="contactname">
+          <star index="2" />
+        </set>
+      </think>
+      <srai>REMEMBERFAMILIARNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>MY familiarname IS name</pattern>
+    <template>
+      <think>
+        <set name="familiarpredicate">
+          <srai>FAMILIARPREDICATE <star /></srai>
+        </set>
+        <set name="contactname">
+          <star index="2" />
+        </set>
+      </think>
+      <srai>REMEMBERFAMILIARNAME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* IS MY familiarname</pattern>
+    <template>
+      <srai>MY <star index="2" /> IS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE NIECE</pattern>
+    <template>niece</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MOM</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE NEPHEW</pattern>
+    <template>nephew</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GRANDMA</pattern>
+    <template>grandmother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE DADA</pattern>
+    <template>father</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE WIFE</pattern>
+    <template>wife</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE HUSBAND</pattern>
+    <template>husband</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE DAUGHTER</pattern>
+    <template>daughter</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GRANDFATHER</pattern>
+    <template>grandfather</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE DAD</pattern>
+    <template>father</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MOMMY</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE WIFEY</pattern>
+    <template>wife</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE FATHER</pattern>
+    <template>father</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE BOYFRIEND</pattern>
+    <template>boyfriend</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE UNCLE</pattern>
+    <template>uncle</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE HUBBY</pattern>
+    <template>husband</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MOTHER</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MUM</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MA</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MUMMA</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE BROTHER</pattern>
+    <template>brother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MOMMA</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GIRLFRIEND</pattern>
+    <template>girlfriend</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE SIS</pattern>
+    <template>sister</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GRANDMOTHER</pattern>
+    <template>grandmother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GRANDMOM</pattern>
+    <template>grandmother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE BESTFRIEND</pattern>
+    <template>bestfriend</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE *</pattern>
+    <template>unknown</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE FRIEND</pattern>
+    <template>friend</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE AUNT</pattern>
+    <template>aunt</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE SISTER</pattern>
+    <template>sister</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE ANT</pattern>
+    <template>aunt</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE DADDY</pattern>
+    <template>father</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE BRO</pattern>
+    <template>brother</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE SON</pattern>
+    <template>son</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE GRANDDAD</pattern>
+    <template>grandfather</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPREDICATE MUMMY</pattern>
+    <template>mother</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME NIECE</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MOM</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME NEPHEW</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GRANDMA</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME DADA</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME WIFE</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME HUSBAND</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME DAUGHTER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GRANDFATHER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME DAD</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MOMMY</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME WIFEY</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME FATHER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME BOYFRIEND</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME UNCLE</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME HUBBY</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MOTHER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MUM</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MA</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MUMMA</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME BROTHER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MOMMA</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GIRLFRIEND</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME SIS</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GRANDMOTHER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GRANDMOM</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME BESTFRIEND</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME *</pattern>
+    <template>false</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME FRIEND</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME AUNT</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME SISTER</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME ANT</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME DADDY</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME BRO</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME SON</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME GRANDDAD</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>ISAFAMILIARNAME MUMMY</pattern>
+    <template>true</template>
+  </category>
+  <category>
+    <pattern>GETFAMILIARNAME</pattern>
+    <template>
+      <think>
+        <set name="familiarpredicate">
+          <uppercase>
+            <get name="familiarpredicate" />
+          </uppercase>
+        </set>
+      </think>
+      <condition name="familiarpredicate">
+        <li value="SON">
+          <get name="son" />
+        </li>
+        <li value="AUNT">
+          <get name="aunt" />
+        </li>
+        <li value="WIFE">
+          <get name="wife" />
+        </li>
+        <li value="UNCLE">
+          <get name="uncle" />
+        </li>
+        <li value="NIECE">
+          <get name="niece" />
+        </li>
+        <li value="NEPHEW">
+          <get name="nephew" />
+        </li>
+        <li value="MOTHER">
+          <get name="mother" />
+        </li>
+        <li value="FATHER">
+          <get name="father" />
+        </li>
+        <li value="SISTER">
+          <get name="sister" />
+        </li>
+        <li value="BROTHER">
+          <get name="brother" />
+        </li>
+        <li value="HUSBAND">
+          <get name="husband" />
+        </li>
+        <li value="DAUGHTER">
+          <get name="daughter" />
+        </li>
+        <li value="GRANDMOTHER">
+          <get name="grandmother" />
+        </li>
+        <li value="GRANDFATHER">
+          <get name="grandfather" />
+        </li>
+        <li>who</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN NIECE</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MOM</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN NEPHEW</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GRANDMA</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN DADA</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN WIFE</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN HUSBAND</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN DAUGHTER</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GRANDFATHER</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN DAD</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MOMMY</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN WIFEY</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN FATHER</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN BOYFRIEND</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN UNCLE</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN HUBBY</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MOTHER</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MUM</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MA</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MUMMA</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN BROTHER</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MOMMA</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GIRLFRIEND</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN SIS</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GRANDMOTHER</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GRANDMOM</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN BESTFRIEND</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN *</pattern>
+    <template>unknown</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN FRIEND</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN AUNT</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN SISTER</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN ANT</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN DADDY</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN BRO</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN SON</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN GRANDDAD</pattern>
+    <template>his</template>
+  </category>
+  <category>
+    <pattern>FAMILIARPRONOUN MUMMY</pattern>
+    <template>her</template>
+  </category>
+  <category>
+    <pattern>REMEMBERFAMILIARNAME</pattern>
+    <template>
+      <think>
+        <set name="familiarpredicate">
+          <uppercase>
+            <get name="familiarpredicate" />
+          </uppercase>
+        </set>
+      </think>
+      <condition name="familiarpredicate">
+        <li value="UNKNOWN" />
+        <li>
+			I will remember your <lowercase><get name="familiarpredicate" /></lowercase>'s name is 
+			<set name="contactname">
+				<condition name="familiarpredicate">
+					<li value="SON"><set name="son"><get name="contactname" /></set></li>
+					<li value="AUNT"><set name="aunt"><get name="contactname" /></set></li>
+					<li value="WIFE"><set name="wife"><get name="contactname" /></set></li>
+					<li value="NIECE"><set name="niece"><get name="contactname" /></set></li>
+					<li value="UNCLE"><set name="uncle"><get name="contactname" /></set></li>
+					<li value="NEPHEW"><set name="niece"><get name="contactname" /></set></li>
+					<li value="MOTHER"><set name="mother"><get name="contactname" /></set></li>
+					<li value="FATHER"><set name="father"><get name="contactname" /></set></li>
+					<li value="SISTER"><set name="sister"><get name="contactname" /></set></li>
+					<li value="BROTHER"><set name="brother"><get name="contactname" /></set></li>
+					<li value="HUSBAND"><set name="husband"><get name="contactname" /></set></li>
+					<li value="DAUGHTER"><set name="daughter"><get name="contactname" /></set></li>
+					<li value="BOYFRIEND"><set name="boyfriend"><get name="contactname" /></set></li>
+					<li value="GIRLFRIEND"><set name="girlfriend"><get name="contactname" /></set></li>
+					<li value="GRANDMOTHER"><set name="grandmother"><get name="contactname" /></set></li>
+					<li value="GRANDFATHER"><set name="grandfather"><get name="contactname" /></set></li>
+					<li>who</li>
+				</condition>
+			</set>.
+		</li>
+      </condition>
+    </template>
+  </category>
+</aiml>

@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: knowledge.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>RHYME *</pattern>
+    <template>
+      <think>
+        <set var="rhyme">
+          <map name="rhyme">
+            <star />
+          </map>
+        </set>
+      </think>
+      <condition var="rhyme">
+        <li value="unknown">anti-<star /></li>
+        <li>
+          <get var="rhyme" />
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>IS # wet ^ WET ^</pattern>
+    <template>
+      <star index="2" /> is wet.</template>
+  </category>
+  <category>
+    <pattern>WHAT SHAPE IS # sphere</pattern>
+    <template>Spherical</template>
+  </category>
+  <category>
+    <pattern>WHAT # NEXT # 2 4 6 8</pattern>
+    <template>10</template>
+  </category>
+  <category>
+    <pattern>WHAT # NEXT # 2 4 6</pattern>
+    <template>8</template>
+  </category>
+  <category>
+    <pattern>WHAT # NEXT # 1 3 5 7</pattern>
+    <template>9</template>
+  </category>
+  <category>
+    <pattern>WHAT # NEXT # 1 3 5</pattern>
+    <template>7</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE CAPITAL OF state</pattern>
+    <template>
+      <map>
+        <name>state2capital</name>
+        <star />
+      </map>.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE CAPITAL OF nation</pattern>
+    <template>
+      <map>
+        <name>nation2capital</name>
+        <star />
+      </map>.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE LARGEST CITY ^ state ^</pattern>
+    <template>
+      <map>
+        <name>state2largestcity</name>
+        <star />
+      </map>.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS AIML ^</pattern>
+    <template>AIML, or Artificial Intelligence Markup Language, is an XML dialect for creating natural language software agents.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE FIRST MONTH *</pattern>
+    <template>January.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAY # STARTS WITH # S</pattern>
+    <template>Saturday, Sunday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAYS # START WITH # S</pattern>
+    <template>Saturday, Sunday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAY # STARTS WITH # M</pattern>
+    <template>Monday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAY # STARTS WITH # W</pattern>
+    <template>Wednesday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAY # STARTS WITH # F</pattern>
+    <template>Friday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAY # STARTS WITH # T</pattern>
+    <template>Tuesday, Thursday.</template>
+  </category>
+  <category>
+    <pattern>WHAT DAYS # START WITH # T</pattern>
+    <template>Tuesday, Thursday.</template>
+  </category>
+  <category>
+    <pattern>IS FIRE HOT #</pattern>
+    <template>Fire is hot.</template>
+  </category>
+  <category>
+    <pattern>IS FIRE COLD #</pattern>
+    <template>Fire is hot.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE 1ST MONTH *</pattern>
+    <template>January.</template>
+  </category>
+  <category>
+    <pattern>IS * A # NUMBER</pattern>
+    <template>No</template>
+  </category>
+  <category>
+    <pattern>IS * A # FOOD</pattern>
+    <template>Not that I know of.</template>
+  </category>
+  <category>
+    <pattern>IS * A # LANGUAGE</pattern>
+    <template>No</template>
+  </category>
+  <category>
+    <pattern>IS * A MONTH</pattern>
+    <template>No</template>
+  </category>
+  <category>
+    <pattern>IS * A # SIGN</pattern>
+    <template>No</template>
+  </category>
+  <category>
+    <pattern>IS * A # NAME</pattern>
+    <template>Not usually.</template>
+  </category>
+  <category>
+    <pattern>IS * A # LETTER</pattern>
+    <template>No</template>
+  </category>
+  <category>
+    <pattern>IS number A # NUMBER</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS food A # FOOD</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS language A # LANGUAGE</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS month A MONTH</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS starsign A # SIGN</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS name A # NAME</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>IS letter A # LETTER</pattern>
+    <template>Yes</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # COUNTRY #</pattern>
+    <template>One country is 
+		<random>
+			<li>The United States</li>
+			<li>Russia</li>
+			<li>China</li>
+			<li>Japan</li>
+			<li>France</li>
+			<li>South Africa</li>
+		</random>.
+	</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # NORTH POLE</pattern>
+    <template>Ice, Seals, Penguins, Elves, Santa Claus.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # BEACH</pattern>
+    <template>Sand, Surf, Sunbathers, Lifeguards, Seaweed.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # BANK</pattern>
+    <template>Tellers, Money, Checks, Guards.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # FOREST</pattern>
+    <template>Trees.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # WOODS</pattern>
+    <template>Trees.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # OCEAN</pattern>
+    <template>Fish, waves, seaweed, ships.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # FARM</pattern>
+    <template>Crops, livestock, tractor, barn.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # SIGN</pattern>
+    <template>Leo, Pisces, Libra.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # SEARCH ENGINE</pattern>
+    <template>Google.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # NORTH AMERICA</pattern>
+    <template>United States, Canada, Mexico, Cuba.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # SOUTH AMERICA</pattern>
+    <template>Brazil, Argentina, Columbia, Venezuela.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # EUROPE</pattern>
+    <template>Germany, France, Holland, Ireland.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # ANIMAL</pattern>
+    <template>Dog, cat, horse, monkey, snake, eagle.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # AFRICA</pattern>
+    <template>Egypt, Sudan, Nigeria, South Africa.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # ASIA</pattern>
+    <template>Russia, China, India, Pakistan.</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier # ORANGE</pattern>
+    <template>Carrots</template>
+  </category>
+  <category>
+    <pattern>NAME quantifier *</pattern>
+    <template>
+      <random>
+        <li>A good name would be</li>
+        <li>I would choose the name</li>
+        <li>Let's call it</li>
+      </random>
+      <random>
+        <li>Fred</li>
+        <li>Larry</li>
+        <li>Jenny</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>animal</pattern>
+    <template>
+      <star /> is an animal.</template>
+  </category>
+  <category>
+    <pattern>IS * AN ANIMAL</pattern>
+    <template>
+      <star /> is not an animal I know.</template>
+  </category>
+  <category>
+    <pattern>IS animal AN ANIMAL</pattern>
+    <template>
+      <star /> is an animal.</template>
+  </category>
+  <category>
+    <pattern>IS articleanimal AN ANIMAL</pattern>
+    <template>
+      <srai>IS <star index="2" /> AN ANIMAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS animal * ANIMAL *</pattern>
+    <template>
+      <srai>IS <star /> AN ANIMAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articleanimal * ANIMAL *</pattern>
+    <template>
+      <srai>IS <star index="2" /> AN ANIMAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE * ANIMALS #</pattern>
+    <template>
+      <srai>IS <map><name>singular</name><star /></map> AN ANIMAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE quantifier * ANIMALS #</pattern>
+    <template>
+      <srai>IS <map><name>singular</name><star index="2" /></map> AN ANIMAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>preposition</pattern>
+    <template>
+      <star /> is a preposition.</template>
+  </category>
+  <category>
+    <pattern>bird</pattern>
+    <template>
+      <star /> is a bird.</template>
+  </category>
+  <category>
+    <pattern>IS * A BIRD</pattern>
+    <template>
+      <star /> is not a bird I know.</template>
+  </category>
+  <category>
+    <pattern>IS bird A BIRD</pattern>
+    <template>
+      <star /> is a bird.</template>
+  </category>
+  <category>
+    <pattern>IS articlebird A BIRD</pattern>
+    <template>
+      <srai>IS <star index="2" /> A BIRD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS bird * BIRD *</pattern>
+    <template>
+      <srai>IS <star /> A BIRD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articlebird * BIRD *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A BIRD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE * BIRDS #</pattern>
+    <template>
+      <srai>IS <map><name>singular</name><star /></map> A BIRD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ARE quantifier * BIRDS #</pattern>
+    <template>
+      <srai>IS <map><name>singular</name><star index="2" /></map> A BIRD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS * A COLOR</pattern>
+    <template>
+      <star /> is not a color I know.</template>
+  </category>
+  <category>
+    <pattern>IS color A COLOR</pattern>
+    <template>
+      <star /> is a color.</template>
+  </category>
+  <category>
+    <pattern>IS articlecolor A COLOR</pattern>
+    <template>
+      <srai>IS <star index="2" /> A COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS color * COLOR *</pattern>
+    <template>
+      <srai>IS <star /> A COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articlecolor * COLOR *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A COLOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>number</pattern>
+    <template>
+      <star /> is a number.</template>
+  </category>
+  <category>
+    <pattern>IS * A NUMBER</pattern>
+    <template>
+      <star /> is not a number I know.</template>
+  </category>
+  <category>
+    <pattern>IS number A NUMBER</pattern>
+    <template>
+      <star /> is a number.</template>
+  </category>
+  <category>
+    <pattern>IS articlenumber A NUMBER</pattern>
+    <template>
+      <srai>IS <star index="2" /> A NUMBER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS number * NUMBER *</pattern>
+    <template>
+      <srai>IS <star /> A NUMBER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articlenumber * NUMBER *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A NUMBER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>language</pattern>
+    <template>
+      <star /> is a language.</template>
+  </category>
+  <category>
+    <pattern>IS * A LANGUAGE</pattern>
+    <template>
+      <star /> is not a language I know.</template>
+  </category>
+  <category>
+    <pattern>IS language A LANGUAGE</pattern>
+    <template>
+      <star /> is a language.</template>
+  </category>
+  <category>
+    <pattern>IS articlelanguage A LANGUAGE</pattern>
+    <template>
+      <srai>IS <star index="2" /> A LANGUAGE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS language * LANGUAGE *</pattern>
+    <template>
+      <srai>IS <star /> A LANGUAGE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articlelanguage * LANGUAGE *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A LANGUAGE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>letter</pattern>
+    <template>
+      <star /> is a letter.</template>
+  </category>
+  <category>
+    <pattern>IS * A LETTER</pattern>
+    <template>
+      <star /> is not a letter I know.</template>
+  </category>
+  <category>
+    <pattern>IS letter A LETTER</pattern>
+    <template>
+      <star /> is a letter.</template>
+  </category>
+  <category>
+    <pattern>IS articleletter A LETTER</pattern>
+    <template>
+      <srai>IS <star index="2" /> A LETTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS letter * LETTER *</pattern>
+    <template>
+      <srai>IS <star /> A LETTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articleletter * LETTER *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A LETTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>month</pattern>
+    <template>
+      <star /> is a month.</template>
+  </category>
+  <category>
+    <pattern>IS articlemonth A MONTH</pattern>
+    <template>
+      <srai>IS <star index="2" /> A MONTH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS month * MONTH *</pattern>
+    <template>
+      <srai>IS <star /> A MONTH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>IS articlemonth * MONTH *</pattern>
+    <template>
+      <srai>IS <star index="2" /> A MONTH</srai>
+    </template>
+  </category>
+</aiml>

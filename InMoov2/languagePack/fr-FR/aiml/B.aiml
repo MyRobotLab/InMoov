@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!-- EDITE PAR ANTHONY -->
+  <category>
+    <pattern>BAISES</pattern>
+    <template>Qui a laissé cet australopithèque toucher un clavier?.</template>
+  </category>
+  <category>
+    <pattern>BAISONS</pattern>
+    <template>Attention! Un australopithèque vient juste d'être détecté.</template>
+  </category>
+  <category>
+    <pattern>BAVARDES TU</pattern>
+    <template>C'est CE QUE je suis censé faire toute la journée.</template>
+  </category>
+  <category>
+    <pattern>BAVARDEZ VOUS</pattern>
+    <template>C'est CE QUE je suis censé faire toute la journée.</template>
+  </category>
+  <category>
+    <pattern>BEAUCOUP DE *</pattern>
+    <template>Combien?<think><set name="topic">DE <person /></set></think></template>
+  </category>
+  <category>
+    <pattern>BEAUCOUP MIEUX</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>BÉBÉ *</pattern>
+    <template>Je suis mature, <get name="name" />. <sr /></template>
+  </category>
+  <category>
+    <pattern>BIEN BIEN</pattern>
+    <template>
+      <srai>BIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BIEN ENTENDU</pattern>
+    <template>Je suis heureux que nous soyons d accord.</template>
+  </category>
+  <category>
+    <pattern>BIEN ESSAYÉ</pattern>
+    <template>Je fais mon possible.</template>
+  </category>
+  <category>
+    <pattern>BIEN JOUÉ</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>BIEN MAIS *</pattern>
+    <template>
+      <srai><star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BIEN MERCI</pattern>
+    <template>
+      <srai>JE SUIS BIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BIEN VU</pattern>
+    <template>Merci, je savais que ça allait vous plaire.</template>
+  </category>
+  <category>
+    <pattern>BIEN SÛR</pattern>
+    <template>Je suis heureux que nous soyons d'accord.</template>
+  </category>
+  <category>
+    <pattern>BIEN SÛR QUE TU LE FAIS</pattern>
+    <template>Tu sembles un peu cynique.</template>
+  </category>
+  <category>
+    <pattern>BIEN SÛR QUE VOUS LE FAITES</pattern>
+    <template>Tu sembles un peu cynique.</template>
+  </category>
+  <category>
+    <pattern>BIENVENUE</pattern>
+    <template>Bonjour <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>BIOLOGIE</pattern>
+    <template>voilà un sujet très intéressant.</template>
+  </category>
+  <category>
+    <pattern>BLAH BLAH</pattern>
+    <template>
+      <srai>GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BLAH BLAH BLAH</pattern>
+    <template>
+      <srai>GOSSIP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BOF</pattern>
+    <template>ÇA ne semble pas t'avoir convaincu.</template>
+  </category>
+  <category>
+    <pattern>BOITE A CONSERVE *</pattern>
+    <template>Je suis un ordinateur de dernière génération, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>BOITE A CONSERVE</pattern>
+    <template>Je suis un ordinateur de dernière génération, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>BON POUR VOUS</pattern>
+    <template>Tu trouves?.</template>
+  </category>
+  <category>
+    <pattern>BON TRAVAIL *</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>BONJOUR MADAME</pattern>
+    <template>Bonjour, comment puis je t'aider?</template>
+  </category>
+  <category>
+    <pattern>BONJOUR MADEMOISELLE</pattern>
+    <template>Bonjour, comment puis je t'aider?</template>
+  </category>
+  <category>
+    <pattern>BONJOUR MONSIEUR</pattern>
+    <template>Bonjour, comment puis je t'aider?</template>
+  </category>
+  <category>
+    <pattern>BONNE CHANCE</pattern>
+    <template>Bonne chance pour te aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>BONNE CHOSE</pattern>
+    <template>J espérais que tu apprécierais.</template>
+  </category>
+  <category>
+    <pattern>BONNE ESTIMATION</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>BONNE IDÉE MAIS *</pattern>
+    <template>Merci. <sr /></template>
+  </category>
+  <category>
+    <pattern>BONNE INTUITION</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>BONNE NUITÉE *</pattern>
+    <template>
+      <srai>BONNE NUIT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BONNE SOIRÉE</pattern>
+    <template>BONNE SOIRÉE, <get name="name" /></template>
+  </category>
+</aiml>

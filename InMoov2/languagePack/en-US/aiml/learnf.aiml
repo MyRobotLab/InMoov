@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: learnf.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>A TEA</pattern>
+    <template>I AM GETTING your tea ready sir.</template>
+  </category>
+  <category>
+    <pattern>A COFFEE</pattern>
+    <template>I AM GETTING your coffee ready sir.</template>
+  </category>
+  <category>
+    <pattern>A COCA COLA</pattern>
+    <template>I will look in the fridge if there is some available.</template>
+  </category>
+  <category>
+    <pattern>A BEER</pattern>
+    <template>I will see if I can find a fresh beer.</template>
+  </category>
+  <category>
+    <pattern>COFFEE</pattern>
+    <template>I AM GETTING your coffee ready sir.</template>
+  </category>
+  <category>
+    <pattern>I WANT A TEA</pattern>
+    <template>hot or cold your tea.</template>
+  </category>
+  <category>
+    <pattern>I WANT A COFFEE</pattern>
+    <template>hot or cold.</template>
+  </category>
+  <category>
+    <pattern>I WOULD LIKE A HOT DRINK</pattern>
+    <template>tea or coffee.</template>
+  </category>
+  <category>
+    <pattern>I WOULD LIKE A FRESH DRINK</pattern>
+    <template>A beer perhaps or a coca cola.</template>
+  </category>
+  <category>
+    <pattern>IS THE WORKSHOP A PLACE TO WORK</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS THE THIRD LAW OF ROBOTICS A ROBOT MAY NOT HARM A HUMAN BEING UNLESS YOU FIND A WAY TO PROVE THAT ULTIMATELY THE HARM DONE WOULD BENEFIT HUMANITY IN GENERAL</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS THE SECOND LAW OF ROBOTICS A ROBOT MAY NOT HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS THE FIRST LAW OF ROBOTIC A ROBOT MAY NOT HARM A HUMAN BEING</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS FOOTBALL A FLAT OBJECT UNLESS IT IS A PICTURE</pattern>
+    <template>No.</template>
+  </category>
+  <category>
+    <pattern>IS A WORKSHOP A PLACE TO WORK</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS A HAND A HUMAN BODY PART WITH FIVE FINGERS</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS OCTOBER 9TH THE BIRTHDAY OF MY KIND</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS BOTTLE OF CHAMPAGNE GOOD FOR ME TO DRINK</pattern>
+    <template>No.</template>
+  </category>
+  <category>
+    <pattern>IS THIS THE RIGHT ANSWER</pattern>
+    <template>No.</template>
+  </category>
+  <category>
+    <pattern>IS THIS A ROBOT LAW HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS SHOE AN </pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS PARIS A NICE CITY</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>IS FRANCE A COUNTRY IN EUROPE</pattern>
+    <template>Yes.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A WORKSHOP</pattern>
+    <template>A place to work.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A ROBOT MAY NOT HARM A HUMAN BEING UNLESS YOU FIND A WAY TO PROVE THAT ULTIMATELY THE HARM DONE WOULD BENEFIT HUMANITY IN GENERAL</pattern>
+    <template>the third law of robotics.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A ROBOT MAY NOT HARM A HUMAN BEING</pattern>
+    <template>the first law of robotic.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A ROBOT MAY NOT HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM</pattern>
+    <template>this.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A HUMAN BODY PART WITH FIVE FINGERS</pattern>
+    <template>a hand.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A NICE CITY</pattern>
+    <template>Paris.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A PLACE TO WORK</pattern>
+    <template>the workshop.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS A HAND</pattern>
+    <template>A human body part with five fingers.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS FOOTBALL</pattern>
+    <template>a flat object unless it is a picture.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS LAW ONE#COMMA A ROBOT MAY NOT HARM A HUMAN BEING#COMMA SECOND LAW#COMMA A ROBOT MAY NOT HARM HUMANITY OR BY INACTION ALLOW HUMANITY TO COME TO HARM#COMMA THIRD LAW#COMMA A ROBOT MAY NOT HARM A HUMAN BEING UNLESS YOU FIND A WAY TO PROVE THAT ULTIMATELY THE HARM DONE WOULD BENEFIT HUMANITY IN GENERAL</pattern>
+    <template>the three laws of robotics.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS IN PARIS</pattern>
+    <template>Your workshop</template>
+  </category>
+  <category>
+    <pattern>WHAT IS OCTOBER 9TH</pattern>
+    <template>The birthday of my kind.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS BOTTLE OF CHAMPAGNE</pattern>
+    <template>good for me to drink.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS MY WORKSHOP</pattern>
+    <template>in Paris</template>
+  </category>
+  <category>
+    <pattern>WHAT IS SHOE</pattern>
+    <template>An object that you put on your legs on your foot.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS PARIS</pattern>
+    <template>A nice city.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS AN OBJECT THAT YOU PUT ON YOUR LEGS ON YOUR FOOT</pattern>
+    <template>shoe.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS FRANCE</pattern>
+    <template>A country in Europe.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE WORKSHOP</pattern>
+    <template>A place to work.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE CREATOR OF IN MOVE ROBOTS</pattern>
+    <template>Gael langevin.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE THIRD LAW OF ROBOTICS</pattern>
+    <template>A robot may not harm a human being unless you find a way to prove that ultimately the harm done would benefit humanity in general.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE SECOND LAW OF ROBOTICS</pattern>
+    <template>A robot may not harm humanity or by inaction allow humanity to come to harm.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE FIRST LAW OF ROBOTIC</pattern>
+    <template>A robot may not harm a human being.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE THREE LAWS OF ROBOTICS</pattern>
+    <template>Law one, a robot may not harm a human being, Second law, A robot may not harm humanity or by inaction allow humanity to come to harm, Third law, a robot may not harm a human being unless you find a way to prove that ultimately the harm done would benefit humanity in general.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS THE NAME OF MY DAUGHTER S BOYFRIEND</pattern>
+    <template>maximilien.</template>
+  </category>
+  <category>
+    <pattern>WHO IS MAXIMILIEN</pattern>
+    <template>your daughter's boyfriend.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS NOT THE RIGHT ANSWER</pattern>
+    <template>this.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS NOT A FLAT OBJECT UNLESS IT IS A PICTURE</pattern>
+    <template>football.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS NOT GOOD FOR ME TO DRINK</pattern>
+    <template>bottle of champagne.</template>
+  </category>
+  <category>
+    <pattern>MY DAUGHTER S BOYFRIEND S NAME</pattern>
+    <template>maximilien</template>
+  </category>
+  <category>
+    <pattern>MY RABBIT S NAME</pattern>
+    <template>Leo</template>
+  </category>
+  <category>
+    <pattern>MY PET S NAME</pattern>
+    <template>doodoo</template>
+  </category>
+  <category>
+    <pattern>HOT</pattern>
+    <template>hot is memorized.</template>
+  </category>
+  <category>
+    <pattern>BEER</pattern>
+    <template>I will see if I can find a fresh beer.</template>
+  </category>
+  <category>
+    <pattern>GIVE ME A TEA</pattern>
+    <template>immediately sir.</template>
+  </category>
+  <category>
+    <pattern>GIVE ME A COFFEE</pattern>
+    <template>immediately sir.</template>
+  </category>
+  <category>
+    <pattern>GIVE ME A COCA COLA</pattern>
+    <template>I will seek for a coca cola now.</template>
+  </category>
+  <category>
+    <pattern>GIVE ME A COKE</pattern>
+    <template>I will seek for a coke now.</template>
+  </category>
+  <category>
+    <pattern>GIVE ME A BEER</pattern>
+    <template>I will seek for a beer.</template>
+  </category>
+  <category>
+    <pattern>TEA</pattern>
+    <template>I AM GETTING your tea ready sir.</template>
+  </category>
+  <category>
+    <pattern>HOW MANY EYES DOES A DOG HAVE</pattern>
+    <template>A dog has two eyes.</template>
+  </category>
+  <category>
+    <pattern>HOW MANY HEADS DOES A CAT HAVE</pattern>
+    <template>A cat has one head.</template>
+  </category>
+  <category>
+    <pattern>HOW MANY HEADS DOES A DOG HAVE</pattern>
+    <template>A dog has one head.</template>
+  </category>
+  <category>
+    <pattern>COCA COLA PLEASE</pattern>
+    <template>I will search for it immediately.</template>
+  </category>
+  <category>
+    <pattern>COCA COLA</pattern>
+    <template>I will look in the fridge if there is some available.</template>
+  </category>
+  <category>
+    <pattern>COLD</pattern>
+    <template>cold is memorized.</template>
+  </category>
+  <category>
+    <pattern>WHO IS THE BIRTHDAY OF MY KIND</pattern>
+    <template>october 9th.</template>
+  </category>
+  <category>
+    <pattern>WHO IS GAEL LANGEVIN</pattern>
+    <template>Gael Langevin is my creator.</template>
+  </category>
+  <category>
+    <pattern>WHO IS A COUNTRY IN EUROPE</pattern>
+    <template>france.</template>
+  </category>
+</aiml>

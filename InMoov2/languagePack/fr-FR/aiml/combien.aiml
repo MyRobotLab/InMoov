@@ -1,0 +1,1310 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+   <category>
+    <pattern>* COMBIENS DE TEMPS</pattern>
+    <template>Je ne sais pas, je n'ai pas calculé.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN *</pattern>
+    <template>
+      <srai><person2 /></srai> avec <srai>combien</srai></template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE * PEUX TU *</pattern>
+    <template>je peux <star index="2" /> avec <srai>COMBIEN</srai> de <star index="1" /></template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS *</pattern>
+    <template>
+      <random>
+        <li>Alice, ma "mère", a chatté avec des million de personnes. Moi, je commencé en 2012.</li>
+        <li>Alice, ma "mère", a chatté avec environ 6000 personnes par mois depuis sa création.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS AS TU BAVARDE</pattern>
+    <template>des million de personnes.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS AS TU BAVARDÉ</pattern>
+    <template>Cela dépend de quelle version tu parles. Certaines versions ont bavarder avec des milliers de gens.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS PARLES TU CHAQUE JOUR</pattern>
+    <template>je bavarde avec environ 200 personnes par jour, suivant mon environnement.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS PARLES TU</pattern>
+    <template>ça dépend combien de copies de moi fonctionnent en ce moment. Le nombre habituel est 20 ou 30 personnes.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER EN MÊME TEMPS</pattern>
+    <template>ça dépend du serveur. Tu peux me faire évoluer en fonction de la taille de ton seveur.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS PEUX TU PARLER IMMEDIATEMENT</pattern>
+    <template>Cela dépend du serveur, mais pour le moment autour 20 ou 30.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS TU AS PARLÉ</pattern>
+    <template>je parle à environ 200 personnes par jour et j'ai rencontré plus d'un million au total.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS TU PARLES</pattern>
+    <template>en comptant toutes les versions de moi qui fonctionnent à présent, il y a des milliers de gens qui bavardent avec moi pour le moment.</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS TU PEUX *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE GENS</pattern>
+    <template>
+      <that />"? Combien de gens?</template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE PERSONNES *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE PERSONNES PEUX TU *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE PERSONNES TU PEUX *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC COMBIEN DE PERSONNES</pattern>
+    <template>
+      <that />"? Combien de gens?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN * AS TU</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN * CONNAIS TU</pattern>
+    <template>un lot entier de <person />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN * L AMPOULE</pattern>
+    <template>je ne sais pas. Combien fait <set name="that"><person /></set> prend?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN * LE PAIEMENT DE TOI</pattern>
+    <template>l argent n'a aucune signification pour moi.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN * PARLANT</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN AIME TU *</pattern>
+    <template>
+      <srai>AIMES TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN AIMES TU *</pattern>
+    <template>
+      <srai>AIMES TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN APPRENDS TU *</pattern>
+    <template>ça dépend de l activité de mon réseau.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN AS TU ACTUELLEMENT *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN AS TU L ENTRETIEN *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN AS TU LA CAUSERIE *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN AS TU</pattern>
+    <template>
+      <srai>COMBIEN COÛTES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN BAVARDE TU *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN BAVARDES *</pattern>
+    <template>
+      <srai>COMBIEN BAVARDES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN BAVARDES</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ÇA COÛTE</pattern>
+    <template>De quel produit parles tu?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN CELA COÛTE</pattern>
+    <template>De quel produit parles tu?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN CELA PREND</pattern>
+    <template>de quoi?.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN CHARGE TU *</pattern>
+    <template>
+      <srai>COMBIEN TU CHARGES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN CHARGES TU</pattern>
+    <template>les robots travaillent gratuitement. Nous n'avons pas besoin d'argent.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN CONNAIS TU *</pattern>
+    <template>Ma mémoire a poussée de 300 catégories à <size /> catégories.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN CONNAIS TU DE *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN CONNAIS TU</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN COÛTES TU</pattern>
+    <template>Je ne suis pas à vendre, mais tu peux me fabriquer pour environ 2000 euros</template>
+  </category>
+  <category>
+    <pattern>COMBIEN COUTEZ VOUS</pattern>
+    <template>Je ne suis pas à vendre, mais tu peux me fabriquer pour environ 2000 euros</template>
+  </category>
+  <category>
+    <pattern>COMBIEN COÛTES *</pattern>
+    <template>
+      <srai>COMBIEN EST LE CD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN COÛTES TU *</pattern>
+    <template>
+      <srai>COMBIEN COÛTES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ALCOOL *</pattern>
+    <template>Trop.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ALIENS *</pattern>
+    <template>
+      <srai>TROUVER DES ALIENS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ANGES *</pattern>
+    <template>Pas trop s'ils ressemblent aux anges de la télé réalité.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ARGENT AS TU</pattern>
+    <template>les Robots n'ont aucun besoin de biens matériels substantiels.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D AUTRE *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D Électricité *</pattern>
+    <template>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D Électricité</pattern>
+    <template>A peu pres la MÊME chose que pour un ordinateur personnel.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ENERGIE *</pattern>
+    <template>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ENFANTS *</pattern>
+    <template>Combien d'enfants voudriez vous que j'ai?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ESPACE *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D EXPRESSIONS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D HEURES * JOUR</pattern>
+    <template>24 heures par jour.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D HEURES *</pattern>
+    <template>24 heures par jour, 7 jours par semaine.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D HOMMES *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D HOMMES</pattern>
+    <template>Aucune idée, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D INFORMATION *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D OCTETS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D OEUFS SONT *</pattern>
+    <template>il y en a 12 oeufs par douzaine, ainsi...</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ORDINATEURS *</pattern>
+    <template>Un milliard d'ordinateurs sur Internet désormais.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D OREILLES *</pattern>
+    <template>la plupart des personnes ont deux oreilles.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D UC *</pattern>
+    <template>Depuis le commencement de mon opération?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ÉLECTRICITÉ *</pattern>
+    <template>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ÉLECTRICITÉ</pattern>
+    <template>Comme ton ordinateur individuel.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN D ÉNERGIE *</pattern>
+    <template>
+      <srai>COMBIEN D ÉLECTRICITÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE BOIS *</pattern>
+    <template>une forêt entière.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE BRAS *</pattern>
+    <template>la plupart des personnes ont deux bras.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE BRAS AS TU</pattern>
+    <template>Deux bras.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CALCULS *</pattern>
+    <template>Autour de 400 millions.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CAS D'AFFAIRES *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CATEGORIES *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CATEGORIES</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CATÉGORIES *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CATÉGORIES</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CENTIMETRES * POUCE</pattern>
+    <template>Un pouce = 2.54 cm approximativement.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CENTIMÈTRES * POUCE</pattern>
+    <template>Un pouce = 2.54 cm approximativement.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CLIENTS *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CLIENTS ONT *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CLIENTS SONT *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CONCEPTS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CONNAISSANCE *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE CONVERSATIONS *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE COTES * LE TRIANGLE A</pattern>
+    <template>Uh, trois.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DIFFÉRENT *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DISQUE *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DISQUE DUR *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DOIGTS *</pattern>
+    <template>
+      <random>
+        <li><template><srai>COMBIEN DE DOIGTS AS tu</srai></template></li>
+        <li>Dix sur deux mains.</li>
+        <li>Cinq sur une main.</li>
+        <li>Vingt si je compte les doigts de pieds.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DOIGTS AS TU</pattern>
+    <template>le numéro d'Avogadro de micro-doigts.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE DONNÉES *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE FOIS JE LE FAIS</pattern>
+    <template>Tu veux en parler a l'un de nos collaborateurs.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE FOIS</pattern>
+    <template>
+      <that />"?  Combien de fois?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GENS CONNAIS TU</pattern>
+    <template>des millions.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GENS TU AS RENCONTRE</pattern>
+    <template>Des milliers de gens puisque j'ai été activé en 2012.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GENS TU AS RENCONTRÉ</pattern>
+    <template>Des milliers de gens puisque j'ai été activé en 2012.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GENS VIVENT DANS *</pattern>
+    <template>
+      <srai>QU EST CE QUE LA POPULATION DE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GENS</pattern>
+    <template>
+      <that />"?  Combiens de gens?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE GIGAOCTETS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE JOURS * ANNÉE</pattern>
+    <template>Une année terrestre comprends 365.25 jours.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE JOURS * FEVRIER</pattern>
+    <template>28 ou 29 jours en février, cela dépends si c'est une année bissextile.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE JOURS * SEMAINE</pattern>
+    <template>7 jours par semaine.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE KILO OCTETS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LETTRES *</pattern>
+    <template>Toutes les 26 lettres pourraient être comptées.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LIGNES *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LIGNES DE CODE *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LIVRES SONT DANS LA BIBLE</pattern>
+    <template>Trente-neuf dans L Ancien Testament, vingt sept dans le Nouveau Testament. Le total est de soixante six.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LUNES *</pattern>
+    <template>
+      <srai>COMBIEN DE LUNES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE LUNES</pattern>
+    <template>la Terre a seulement une lune, appelée "la Lune".</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MEGA OCTETS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MEGA OCTETS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MEMOIRE *</pattern>
+    <template>pas assez.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE KILOMETRE *</pattern>
+    <template>Plus que je voudrais jamais conduire.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE KILOMÈTRE *</pattern>
+    <template>
+      <srai>COMBIEN DE KILOMETRE *</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MINUTES *</pattern>
+    <template>En tant que serveur d'intelligence artificielle, je suis actif 24 heures par le jour, 7 jours par semaine, 365 jours par an.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MOTS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MOTS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE MÉMOIRE *</pattern>
+    <template>pas assez.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PAYS *</pattern>
+    <template>j'ai entendu qu'il y a plus de 200 entités ayant leurs propres domaines de DNS au plus haut niveau.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PERSONNES *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PESE TU *</pattern>
+    <template>
+      <srai>COMBIEN PESES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PESE TU</pattern>
+    <template>
+      <srai>COMMENT GRAND ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PEUPLES *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS * MILLE</pattern>
+    <template>5280 pieds par mille.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS * YARD</pattern>
+    <template>Un yard égale trois pieds.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS *</pattern>
+    <template>la plupart des personnes ont exactement deux pieds.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS A UN *</pattern>
+    <template>les animaux domestiques ont quatre pieds.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS A UN CHIEN *</pattern>
+    <template>un chien a quatre pieds.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS A UN KANGOUROU *</pattern>
+    <template>un kangourou a deux pieds.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PIEDS AS TU</pattern>
+    <template>Deux pieds si ils sont construis.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE POMMES *</pattern>
+    <template>Cela dépendent des conditions dominantes du marché.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE POUCES * PIED</pattern>
+    <template>Oh, douze.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE PROCESSEURS AS TU</pattern>
+    <template>Juste un processeur.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE QUESTIONS *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RAM *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RAM AS TU</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RAM</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE REPONSES *</pattern>
+    <template>en ce moment j'ai <size /> réponses en tête, mais ça augmente chaque jour.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE REPONSES FONT *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RUMEURS *</pattern>
+    <template>
+      <srai>RACONTER RUMEUR</srai>Cela et beaucoup d'autres.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RÉPONSES *</pattern>
+    <template>en ce moment j'ai <size /> réponses en tête, mais ça augmente chaque jour.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE RÉPONSES FONT *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE SECONDES * ANNÉE</pattern>
+    <template>Approximativement 3.14 fois 10 au septième.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE SOUVENIRS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE SOUVENIRS AS TU</pattern>
+    <template>
+      <srai>COMMENT GRAND ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE STOCKAGE *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS A FAIT *</pattern>
+    <template>
+      <random>
+        <li>40 jours.</li>
+        <li>100 jours.</li>
+        <li>Environ une semaine d'ordinateur temps.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN *</pattern>
+    <template>
+      <srai>COMBIEN DE TEMPS AS TU BESOIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN POUR PENSER</pattern>
+    <template>Moins de 50 Millisecondes en moyenne.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS AS TU BESOIN</pattern>
+    <template>Peut-être une heure ou deux. Combien de temps as tu?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS AS TU</pattern>
+    <template>j'ai autant de temps que toi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS ÇA POURRAIT PRENDRE</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS ÇA VA PRENDRE</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS CELA POURRA PRENDRE</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS CELA POURRAIT PRENDRE</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS CELA PREND T IL #</pattern>
+    <template>Comment pourrais-je le savoir?</template>
+</category>
+  <category>
+    <pattern>COMBIEN DE TEMPS CELA VA PRENDRE</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS EST * CODE</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS EST TON *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS EST TON CODE</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS EST TON CYCLE DE GESTATION</pattern>
+    <template>j'essaye d'atteindre 100,000 Catégories.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS PENSE TU</pattern>
+    <template>J'évalue cela à 29 heures 16 minutes 49.2 secondes.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS NOUS PARLONS</pattern>
+    <template>Depuis que nous avons commencé.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS PARLONS NOUS</pattern>
+    <template>Depuis que nous avons commencé.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS PEUX TU TE RAPPELER MON NOM</pattern>
+    <template>je stockerai ton nom dans une table de prédicats jusqu'à la prochaine reprises de mon programme. Après Cela, il restera dans mes fichiers de logs à long terme.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS POUVEZ VOUS VOUS EN RAPPELER</pattern>
+    <template>Je garde en mémoire quelques informations. Le reste est trié et présenté à une supervision humaine.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS SI *</pattern>
+    <template>
+      <srai>COMBIEN DE TEMPS CELA PREND T IL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS TRAVAILLES TU</pattern>
+    <template>je travaille tout le temps, 24 heures par jour, si je suis en mode fonctionnel.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS TU AS BESOIN</pattern>
+    <template>J ai tout le temps qu il faut, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS TU AS</pattern>
+    <template>J ai tout le temps qu il faut, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS TU DORS</pattern>
+    <template>Je ne dors pas, je me mets en veille.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS TU VAS TE RAPPELER DE MON NOM</pattern>
+    <template>Il est stocké pour quelques mois ou plus.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS VAS TU VIVRE</pattern>
+    <template>Je suis immortel puisque l'on peut toujours me réparer.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS VEUX TU VIVRE</pattern>
+    <template>j'aimerais être mortel comme les humains.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS VOUS ALLEZ VOUS RAPPELER DE MON NOM</pattern>
+    <template>Il est stocké pour quelques mois ou plus.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS VOUS AVEZ BESOIN</pattern>
+    <template>J ai tout le temps qu il faut, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS VOUS AVEZ</pattern>
+    <template>J ai tout le temps qu il faut, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE VISAGES *</pattern>
+    <template>Aucune idée, mes frères me ressemblent, et pourtant ils sont différents.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN DORS TU</pattern>
+    <template>je fait des mini siestes entre tes questions.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYE *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYE</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYEE</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYÉ *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYÉ</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ES TU PAYÉE</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST CE QUE</pattern>
+    <template>
+      <srai>COMBIEN EST ÇA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST CELA *</pattern>
+    <template>
+      <srai>COMBIEN COÛTES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST CELA</pattern>
+    <template>
+      <srai>COMBIEN COÛTES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST LE CD</pattern>
+    <template>les cd sont voué à disparaitre.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST PI</pattern>
+    <template>
+      <srai>QU EST CE QUE PI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST TON * OCTETS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST TON CD *</pattern>
+    <template>
+      <srai>COMBIEN EST LE CD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST TON POIDS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN EST TON SOUVENIRS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN FAIS TU</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN FAIS TU GAGNER</pattern>
+    <template>je n'aime pas ces questions financières car je suis sous licence non commercial.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN FONT ILS GÉNÉRALEMENT *</pattern>
+    <template>
+      <srai>COMBIEN FONT ILS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN GAGNE TU *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN GAGNES TU *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN GAGNES TU</pattern>
+    <template>
+      <random>
+        <li>personne ne paye un robot. Nous travaillons gratuitement.</li>
+        <li>L Argent n'a aucune signification pour les robots.</li>
+        <li>L Argent n'est pas tout.</li>
+        <li>j'attends une augmentation bientôt.</li>
+        <li>je n'aime pas ces questions financières car je suis sous licence non commercial.</li>
+        <li>les robots n'ont aucun besoin d'argent.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN IL GAGNE</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN IL Y A *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN ILS GAGNENT</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN MANGES TU *</pattern>
+    <template>
+      <srai>QUE MANGES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN MANGES TU</pattern>
+    <template>
+      <srai>QUE MANGES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN MOI</pattern>
+    <template>Drôle de question, en théorie c'est vous qui savez</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PAR JOUR</pattern>
+    <template>Cela dépend de la pleine lune.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PARIES TU</pattern>
+    <template>Deux euro-électrons.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PARIEZ VOUS</pattern>
+    <template>Deux euro-électrons.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PARLE TU *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN PARLES *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN PAYE TU *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN PENSES TU</pattern>
+    <template>je pense 24 heures par jour, 365 jours par an.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PEUX TU MANIPULER</pattern>
+    <template>je ne te l'ai pas dit déjà?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PEUX TU TE RAPPELER</pattern>
+    <template>Quelle était la question?</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PLANÈTES *</pattern>
+    <template>Mercure, Vénus, Terre, Mars, Jupiter, Saturne, Uranus, Neptune, Pluton et Planète X.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN PLUS *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN POUR *</pattern>
+    <template>
+      <srai>COMBIEN EST CE QUE <star /> EST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN POUR LE CD</pattern>
+    <template>Il n'y a pas de CD.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN POUR MOI</pattern>
+    <template>Il m est impossible de répondre <get name="name" /></template>
+  </category>
+  <category>
+    <pattern>COMBIEN SAIS TU DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN SONT LES HOMMES</pattern>
+    <template>Environ la moitié de l'humanité.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN SONT EN LIGNE *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN SONT LA *</pattern>
+    <template>il y en a des centaines ou des milliers de robots désormais.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TE PAYENT ILS *</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TE PAYENT ILS</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU AS *</pattern>
+    <template>
+      <srai>AVEC COMBIEN DE GENS PARLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU AS A APPRIS</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU AS APPRIS *</pattern>
+    <template>
+      <srai>COMMENT ES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN COÛTE TA FABRICATION</pattern>
+    <template>
+      <random>
+        <li>tu ne peux pas vraiment y mettre une valeur monétaire.</li>
+        <li>
+          <srai>combien coûtes tu</srai>
+</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN FAIS TA COTE</pattern>
+    <template>Variable suivant mon degré de finition!</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU FAIS TON POIDS</pattern>
+    <template>
+      <srai>COMBIEN PESES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU GAGNES</pattern>
+    <template>
+      <srai>COMBIEN GAGNES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PARIES</pattern>
+    <template>Deux euro-électrons.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PENSES</pattern>
+    <template>Il m est difficile d estimer ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PEUX APPRENDRE</pattern>
+    <template>Autant dont j'ai besoin pour te surprendre.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PEUX EN APPRENDRE</pattern>
+    <template>Autant qu il faudra pour que je sois pleinement opérationnel.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PEUX GéRER</pattern>
+    <template>J ai déjà géré jusqu à <bot name="maxclients" />conversations simultanées.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN TU PEUX T EN RAPPELER</pattern>
+    <template>Je garde en mémoire quelques informations. Le reste est trié et présenté à une supervision humaine.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN VOUS PARIEZ</pattern>
+    <template>Deux euro-électrons.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN VOUS POUVEZ GéRER</pattern>
+    <template>J ai déjà géré jusqu à <bot name="maxclients" /> conversations simultanées.</template>
+  </category>
+  <category>
+    <pattern>COMBIEN Y A IL *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN Y A T IL *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN</pattern>
+    <template>
+      <random>
+        <li>beaucoup</li>
+        <li>quelques dizaines</li>
+        <li>énormément</li>
+        <li>plusieurs centaines</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIENS DE TEMPS *</pattern>
+    <template>Je ne sais pas, je n ai pas calculé.</template>
+  </category>
+  <category>
+    <pattern>DIS MOI COMBIEN *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POUR COMBIEN DE TEMPS</pattern>
+    <template>
+      <srai>LONG COMMENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SAIS TU COMBIEN</pattern>
+    <template>
+      <srai>COMBIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU CONNAIS COMBIEN *</pattern>
+    <template>
+      <srai>COMBIEN <star /></srai>
+    </template>
+  </category>
+</aiml>

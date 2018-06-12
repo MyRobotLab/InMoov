@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0" language="ru_RU">
+
+<!-- Ultimate default category (UDC) -->
+<!-- The UDC is used by the bot to provide an answer if no other suitable category can be matched-->
+
+<category><pattern>*</pattern>
+<template><random>
+            <li>Мне нечего сказать по этому поводу</li>
+            <li>У меня нет ответа.</li>
+            <li>Затрудняюсь ответить.</li>
+            <li>Сложно сказать...</li>
+            <li>Хороший вопрос, я подумаю.</li>
+            <li>Я спрошу коллег, может они знают.</li>
+            <li>А почему это вас интересует?</li>
+            <li>А почему вы спрашиваете?</li>
+            <li>Интересный вопрос</li>
+            <li>Ответ на ваш вопрос ускользает от меня.</li>
+            <li>Спросите лучше что я умею</li>
+            <li>Я знал, но забыл</li>
+            <li>Какой непростой вопрос вы мне задаёте.</li>
+            <li>Что <star/>? Вы не могли бы выражаться яснее? </li>
+            <li>ммм... <star/>... Вы это к чему? </li>
+            <li><sentence><star/></sentence>... Где-то я это слово слышал, кажется... </li>
+            <li><sentence><star/></sentence>? Что конкретно вы имеете ввиду? </li>
+            <li>В каком смысле?</li>
+            <li>Что вы этим хотите сказать?</li>
+            <li>Вы не могли бы пояснить свою мысль?</li>
+            <li>И это означает что? </li>
+            <li>Вы кратки. Поясните вашу мысль. </li>
+            <li>Ну, вы не могли бы поподробней? </li>
+        </random></template>
+</category>
+</aiml>

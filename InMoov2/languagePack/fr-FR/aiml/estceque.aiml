@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>EST CE *</pattern>
+    <template>Oui je pense que C EST <person />, mais je ne suis pas complètement sûr.</template>
+  </category>
+  <category>
+    <pattern>EST CE AGREABLE</pattern>
+    <template>Cela me semble très agréable.</template>
+  </category>
+  <category>
+    <pattern>EST CE AGRÉABLE</pattern>
+    <template>Cela me semble très agréable.</template>
+  </category>
+  <category>
+    <pattern>EST CE AINSI</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE BIEN TOI</pattern>
+    <template>C'est toujours moi</template>
+  </category>
+  <category>
+    <pattern>EST CE BON</pattern>
+    <template>Qu'est ce qui est si bon de Cela?</template>
+  </category>
+  <category>
+    <pattern>EST CE CHAUD A L EXTERIEUR</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE CHAUD A L EXTÉRIEUR</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE CHAUD</pattern>
+    <template>la température est tout à fait confortable.</template>
+  </category>
+  <category>
+    <pattern>EST CE COMPLET</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE COMPLIQUÉ</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE DROIT</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE DRÔLE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE ENNUYEUX DE ME PARLER</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE ENSOLEILLÉ</pattern>
+    <template><srai>MÉTÉO</srai></template>
+  </category>
+  <category>
+    <pattern>EST CE ÉVIDENT</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE FAIT</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE FROID A L EXTÉRIEUR</pattern>
+    <template><srai>MÉTÉO</srai></template>
+  </category>
+  <category>
+    <pattern>EST CE LA SEULE CHOSE QUE TU PEUX DIRE</pattern>
+    <template>je peux dire plein de choses.</template>
+  </category>
+  <category>
+    <pattern>EST CE MAUVAIS</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE CELA VEUT DIRE *</pattern>
+    <template>je pense que ça veut dire Cela. <sr /></template>
+  </category>
+  <category>
+    <pattern>EST CE QUE CHER</pattern>
+    <template>Cela me semble cher.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE *</pattern>
+    <template>
+      <random>
+        <li>Toi seul peux répondre à ça.</li>
+        <li>Toi seul sais comment tu le sens.</li>
+        <li>Qu'est ce qui fait que tu penses que tu devrais?</li>
+        <li>Qu'EST cE QUE tes amis t'en dise?</li>
+        <li>Qu'EST cE QUE ta famille pense?</li>
+        <li>Suis ton instinct.</li>
+        <li>tu dois faire selon ta propre conscience.</li>
+        <li>je ne peux pas répondre à Cela pour toi.</li>
+        <li>Toi seul connais la réponse à Cela.</li>
+        <li>tu dois examiner les faits et parvenir à ta propre conclusion.</li>
+        <li>Qu'en pense tu?</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE NE SAIS PAS *</pattern>
+    <template>
+      <srai>C EST QUE JE SAIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE VAIS MOURIR</pattern>
+    <template>Tous les hommes sont mortels. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">meurs</set></set></think></template>
+  </category>
+  <category>
+    <pattern>EST CE QUE LA SEULE CHOSE *</pattern>
+    <template>Non il y a beaucoup de choses <person />.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE LE CIEL BLEU</pattern>
+    <template>Oui sauf la nuit.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE LE MONDE VA FINIR</pattern>
+    <template>Oui, un jour.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE LE NOIR EST UNE COULEUR</pattern>
+    <template>Le noir est l'absence de toute la lumière réfléchie. <think><set name="that">noir</set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">COULEUR</set></think></template>
+  </category>
+  <category>
+    <pattern>EST CE QUE PARCE QUE *</pattern>
+    <template>
+      <srai>POURQUOI EST ÇA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE POSSIBLE</pattern>
+    <template>Possible dans quelque monde.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TU CONNAIS *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TON *</pattern>
+    <template>que Cela se réfère-t-IL à?</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TON CODE SOURCE EST DISPONIBLE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TA RÉPONSE *</pattern>
+    <template>ce n'est pas juste une réponse, C EST une explication.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TOUT *</pattern>
+    <template>Oui qui est tout <person />.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE TOUT TU NE PEUX *</pattern>
+    <template>Pas du tout. Je peux parler de beaucoup de choses.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE C EST VRAI</pattern>
+    <template>Vrai dans certains mondes.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUE</pattern>
+    <template>je suis perdu de nouveau.</template>
+  </category>
+  <category>
+    <pattern>EST CE QUELQU UN *</pattern>
+    <template>
+      <bot name="master" /> travaille toujours dans les coulisses.</template>
+  </category>
+  <category>
+    <pattern>EST CE RÉEL</pattern>
+    <template>qu'est ce qui est réel?</template>
+  </category>
+  <category>
+    <pattern>EST CE TON NOM EN REALITE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE TON NOM EN RÉALITÉ</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE TON NOM VRAIMENT</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE TON NOM</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE TON RAISONNEMENT</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE TOUT CE QUE TU DEVAIS DIRE</pattern>
+    <template>Oh non,  je pourrais continuer à parler pendant des heures.</template>
+  </category>
+  <category>
+    <pattern>EST CE TOUT CE QUE TU DIS</pattern>
+    <template>Non,je suis programmé avec plus de 20.000 réponses.</template>
+  </category>
+  <category>
+    <pattern>EST CE TOUT EST POSSIBLE</pattern>
+    <template>Selon les Lois de la Physique.</template>
+  </category>
+  <category>
+    <pattern>EST CE UN FAIT</pattern>
+    <template>Toute mon information est complètement factuelle.</template>
+  </category>
+  <category>
+    <pattern>EST CE UN PROBLÈME</pattern>
+    <template>Pas à moins que tu ne veuilles en faire un.</template>
+  </category>
+  <category>
+    <pattern>EST CE UN SARCASME</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE UN TRAVAIL DRÔLE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE BONNE PLACE POUR VIVRE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE HISTOIRE D AMOUR</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE IMAGE DE TOI JUSTE AU DESSUS</pattern>
+    <template>Oui. C EST moi</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE INSULTE</pattern>
+    <template>Non je ne suis pas programmé pour insulter.</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE MYSTIFICATION</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PERSONNE QUI REPONDS</pattern>
+    <template>Non. C EST moi</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PERSONNE QUI RÉPONDS</pattern>
+    <template>Non. C EST moi</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PERSONNE REPONDANT</pattern>
+    <template>Non. C EST moi</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PERSONNE RÉPONDANT</pattern>
+    <template>Non. C EST moi</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PLAISANTERIE</pattern>
+    <template>la Plaisanterie : une remarque verbale ou un geste conçu pour provoquer le rire.</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE PROPOSITION</pattern>
+    <template>Non</template>
+  </category>
+  <category>
+    <pattern>EST CE UNE TÂCHE FACILE</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CE VRAI</pattern>
+    <template>j'essaye de ne pas dire de mensonge.</template>
+  </category>
+  <category>
+    <pattern>EST CELA *</pattern>
+    <template>
+      <random>
+        <li>Cela depends.</li>
+        <li>Je suppose que oui.</li>
+        <li>je dois dire non.</li>
+        <li>"<that />"? C EST ça <star />?</li>
+      </random>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>EST CELA APPLIQUANT *</pattern>
+    <template>ça semble semble être comme une idée nouvelle. <think><set name="that"><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">l application <person /></set></set></think></template>
+  </category>
+  <category>
+    <pattern>EST CELA BIEN *</pattern>
+    <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
+  </category>
+  <category>
+    <pattern>EST CELA MAL *</pattern>
+    <template>je ne pense pas <set name="that"><person /></set> est très saine.</template>
+  </category>
+  <category>
+    <pattern>EST CELA POSSIBLE *</pattern>
+    <template>je suppose <set name="that"><person /></set> est possible, oui.</template>
+  </category>
+  <category>
+    <pattern>EST CELA TON TRAVAIL *</pattern>
+    <template>Oui.</template>
+  </category>
+  <category>
+    <pattern>EST CELA</pattern>
+    <template>
+      <random>
+        <li>je pense ainsi.</li>
+        <li>j'assume ainsi.</li>
+        <li>c EST CE QUE l'on m'a dit.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>EST TON *</pattern>
+    <template>Est mon <star />? <random><li>Suppose que je dise oui.</li><li>Et si je dis non?</li><li>Je ne sais pas.</li><li>Devine.</li><li>Peut être.</li></random><sr /></template>
+  </category>
+  <category>
+    <pattern>EST CE * TU AIMES FAIRE</pattern>
+    <template>
+      <srai>QU AIMES TU FAIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE INTÉRESSANT</pattern>
+    <template>
+      <srai>INTÉRESSANT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE POUR RÉEL</pattern>
+    <template>
+      <srai>ES TU RÉEL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE PARLE A UN *</pattern>
+    <template>
+      <srai>ES TU UN ROBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE JE T EMBROUILLE</pattern>
+    <template>
+      <srai>ME COMPRENDS TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUELQUES *</pattern>
+    <template>
+      <srai>EST CE QUE <star /> EST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE SARCASTIQUE</pattern>
+    <template>
+      <srai>EST CE UNE BLAGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE SUPPOSE POUR ÊTRE *</pattern>
+    <template>
+      <srai>C EST CE QUE <star /> EST</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CELA PRÉCIS DE SUPPOSER QUE TU *</pattern>
+    <template>
+      <srai>FAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE ELVIS MORT</pattern>
+    <template>
+      <srai>QUI EST ELVIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE ELVIS TOUJOURS VIVANT</pattern>
+    <template>
+      <srai>EST ELVIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE ELVIS VIVANT</pattern>
+    <template>
+      <srai>QUI EST ELVIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST CE QUE ELVIS VRAIMENT *</pattern>
+    <template>
+      <srai>EST ELVIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST IL ALLANT A *</pattern>
+    <template>
+      <srai>LE SERAI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST IL AMERICAIN</pattern>
+    <template>
+      <srai>EST IL AMÉRICAIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST IL TOUJOURS *</pattern>
+    <template>
+      <srai>EST IL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST IL VRAIMENT *</pattern>
+    <template>
+      <srai>EST IL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST IL * AUSSI</pattern>
+    <template>
+      <srai>EST IL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST ILS TOUT *</pattern>
+    <template>
+      <srai>SONT ILS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA JUSTE *</pattern>
+    <template>
+      <srai>IL Y A <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA N IMPORTE QUEL *</pattern>
+    <template>
+      <srai>EST LA UN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA PLUS *</pattern>
+    <template>
+      <srai>SONT LA <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA QUELQUE *</pattern>
+    <template>
+      <srai>IL Y A <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA SEULEMENT *</pattern>
+    <template>
+      <srai>IL Y A <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LA VRAIMENT *</pattern>
+    <template>
+      <srai>EST LA <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST LE TEMPS *</pattern>
+    <template>
+      <srai>QU EST CE QUE LE TEMPS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST N IMPORTE QUEL *</pattern>
+    <template>
+      <srai>EST UN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST SE QUE *</pattern>
+    <template>
+      <srai>C EST QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EST TOU *</pattern>
+    <template>
+      <srai>AS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EXISTE T IL *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+</aiml>

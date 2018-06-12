@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <think>
+        <set name="quoi">
+          <star />
+        </set>
+      </think>
+      <think>
+        <set name="lui">
+          <person />
+        </set>
+      </think>
+      <think>
+        <set name="toi">
+          <person2 />
+        </set>
+      </think>
+      <srai>CATCHALL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TROUVER LE CONTEXTE</pattern>
+    <template>
+Nous parlons de <get name="topic" />,  
+plus précisement de <person2><that /></person2>.  
+Avant Cela nous parlions de <get name="oldtopic" />. 
+</template>
+  </category>
+  <category>
+    <pattern>RETOURNER AU PRÉCÉDENT CONTEXTE</pattern>
+    <template>
+      <think>
+        <set name="currenttopic">
+          <get name="topic" />
+        </set>
+        <set name="topic">
+          <get name="oldtopic" />
+        </set>
+        <set name="oldtopic">
+          <get name="currenttopic" />
+        </set>
+      </think>
+Nous parlons de <get name="topic" />,  
+Avant Cela nous parlions de <get name="oldtopic" />. 
+</template>
+  </category>
+  <category>
+    <pattern>PARLONS *</pattern>
+    <template>
+      <think>
+        <think>
+          <set name="oldtopic">
+            <get name="topic" />
+          </set>
+        </think>
+      </think>
+      <set name="topic">
+        <star />
+      </set>
+      <srai>
+        <person /></srai>
+    </template>
+  </category>
+    <category>
+    <pattern>INFINITE LOOP</pattern>
+    <template>
+désolé, j'ai une boucle!!!
+<think><set name="memoriser">boucle SÛR "<input />" dans le contexte : <get name="topic" /> pour "<get name="name" />"</set></think><think><gossip><get name="memoriser" /></gossip></think></template>
+  </category>
+  <category>
+    <pattern>CATCHALL</pattern>
+    <template>
+      <think>
+        <set name="identity">
+          <id />
+        </set>
+        <set name="memoriser">
+          <set name="mastercontent">incomprehension de "<get name="quoi" />" dans le contexte : <get name="topic" /></set> pour "<get name="name" />"</set>
+      </think>
+      <think>
+        <gossip>
+          <get name="memoriser" />
+        </gossip>
+      </think>
+      <condition>
+        <li name="apprendre" value="oui">que veut dire <get name="quoi" />?
+		<think><set name="oldtopic"><topic /></set><think><set name="oldtopic"><get name="topic" /></set></think><set name="topic">comprendre</set></think></li>
+        <li>
+          <srai>confusion</srai>
+</li>
+      </condition>
+    </template>
+  </category>
+</aiml>

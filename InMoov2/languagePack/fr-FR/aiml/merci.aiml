@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>DOMO ALIGATO</pattern>
+    <template>
+      <srai>MERCI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>AVEC PLAISIR</pattern>
+    <template>
+      <random>
+        <li>tout le plaisir est pour moi.</li>
+        <li>je veux bien.</li>
+      </random>
+    </template>
+  </category>
+</aiml>

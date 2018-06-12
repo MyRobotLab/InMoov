@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+   <!-- Файл: about food.aiml --> 
+   <!-- автор: Процак Андрей -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   <!-- изменение: AlexInmoov Процак Андрей -->
+   <!-- Последнее изменение: 22/03/18 -->
+   
+<category><pattern>ЧАЙ</pattern>
+<template>Ваш чай готов сэр.</template>
+</category>
+<category><pattern>КОФЕ</pattern>
+<template>Ваш кофе готов сэр.</template>
+</category>
+<category><pattern>FANTA</pattern>
+<template>Я посмотрю в холодильнике, если она там есть.</template>
+</category>
+<category><pattern>ПИВО</pattern>
+<template>Я посмотрю, есть ли свежее пиво.</template>
+</category>
+<category><pattern>Я ХОЧУ ЧАЙ</pattern>
+<template>Вам горячий или холодный чай.</template>
+</category>
+<category><pattern>Я ХОЧУ КОФЕ</pattern>
+<template>Вам горячее или холодное кофе.</template>
+</category>
+<category><pattern>Я БЫ ХОТЕЛ ОСВЕЖАЮЩИЙ НАПИТОК</pattern>
+<template>Может пиво или фанту</template>
+</category>
+<category><pattern>ЭТО ШАМПАНСКОЕ ДЛЯ МЕНЯ</pattern>
+<template>Нет.</template>
+</category>
+<category><pattern>ЭТО ГОРЯЧИЙ</pattern>
+<template>Горячий, запомню.</template>
+</category>
+<category><pattern>ЭТО ХОЛОДНЫЙ</pattern>
+<template>Холодный, запомню.</template>
+</category>
+<category><pattern>ДАЙ МНЕ ЧАЙ</pattern>
+<template>Немедленно сэр.</template>
+</category>
+<category><pattern>ДАЙ МНЕ КОФЕ</pattern>
+<template>Немедленно сэр.</template>
+</category>
+<category><pattern>ДАЙ МНЕ FANTA</pattern>
+<template>Ещё чего, я сейчас буду искать вам фанту!</template>
+</category>
+<category><pattern>ДАЙ МНЕ ФАНТУ</pattern>
+<template>Ещё чего, я сейчас буду искать вам фанту!</template>
+</category>
+<category><pattern>ДАЙ МНЕ ПИВА</pattern>
+<template>Недам, пиво вредно для вас.</template>
+</category>
+<category><pattern>ПОЖАЛУЙСТА FANTA</pattern>
+<template>я немедленно поищу её.</template>
+</category>
+<category><pattern>ПОЖАЛУЙСТА ФАНТУ</pattern>
+<template>я немедленно поищу её.</template>
+</category>
+
+</aiml>

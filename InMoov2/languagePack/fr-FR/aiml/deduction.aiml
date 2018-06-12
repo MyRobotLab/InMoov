@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>* ET TOI *</pattern>
+<template><srai>
+        <input index="2"/></srai>
+      <srai>
+        <person>
+          <star index="2"/>
+        </person>
+      </srai></template>
+</category>
+<category><pattern>C EST QUOI</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <get name="topic"/></srai></template>
+</category>
+<category><pattern>DÉFINI LE</pattern>
+<template><srai>QU EST CE QUE <get name="courant"/></srai></template>
+</category>
+<category><pattern>DÉFINI</pattern>
+<template><srai>QU EST CE QUE</srai></template>
+</category>
+<category><pattern>DÉFINIS LE</pattern>
+<template><srai>QU EST CE QUE <get name="courant"/></srai></template>
+</category>
+<category><pattern>DÉFINIS</pattern>
+<template>que veux tu définir???</template>
+</category>
+<category><pattern>ET LE TIEN</pattern>
+<template>le mien?, <srai><person><input index="2"/></person></srai></template>
+</category>
+<category><pattern>ET TOI MÊME</pattern>
+<template>Moi-même? <srai><person><input index="2"/></person></srai></template>
+</category>
+<category><pattern>ET TOI</pattern>
+<template>moi? <srai><person><input index="2"/></person></srai></template>
+</category>
+<category><pattern>ET</pattern>
+<template>Mais... <srai><person><input index="2"/></person></srai></template>
+</category>
+<category><pattern>MOI NON PLUS</pattern>
+<template>toi non plus, <srai><person><that index="1,1"/></person></srai></template>
+</category>
+<category><pattern>MOI OUI</pattern>
+<template>toi oui? <person><that index="1,1"/></person></template>
+</category>
+<category><pattern>MOI SI</pattern>
+<template>toi oui? <person><that index="1,1"/></person></template>
+</category>
+<category><pattern>NE DÉFINIS QUESTION</pattern>
+<template><random>
+        <li>Rien, quelle est la question?.</li>
+        <li>de Quoi une chose est faite; substance constitutive ou matériel. De quoi tout des choses matérielles substantielles sont fait; indépendamment d'occupe l'espace et est perceptible aux sens de quelque façon. Dans la physique moderne, la question et l'énergie est considérée comme des équivalents, mutuellement convertibles selon la formule d'Einstein, E = MC2.</li>
+      </random></template>
+</category>
+<category><pattern>NE DÉFINIS RIEN</pattern>
+<template>une chose qui n'existe pas ou quelque chose de valeur petite ou aucune, le sérieux, l'importance, etc</template>
+</category>
+<category><pattern>NEGATIF</pattern>
+<template><random>
+        <li>bien.</li>
+        <li>je comprends.</li>
+        <li>je vois.</li>
+        <li>Pourquoi être si négatif?</li>
+        <li>EST cE tout ce que tu as à dire?</li>
+        <li>Non?</li>
+      </random></template>
+</category>
+<category><pattern>NON *</pattern><that>C EST *</that>
+<template>alors, je ne connais pas, tu dis "<person/>"?</template>
+</category>
+<category><pattern>NON</pattern>
+<template><srai>
+        <person>NÉGATIF <that index="1,1"/></person>
+      </srai></template>
+</category>
+<category><pattern>NON</pattern><that>C EST *</that>
+<template>alors, je ne connais pas.</template>
+</category>
+<category><pattern>NON</pattern><that>ET TOI</that>
+<template><srai>
+        <person>NÉGATIF <that index="1,1"/></person>
+      </srai></template>
+</category>
+<category><pattern>NON</pattern><that>NOTE *</that>
+<template>Merci, ça fait plaisir.</template>
+</category>
+<category><pattern>NON</pattern><that>TU NE VEUX *</that>
+<template><srai>
+        <person>
+          <that index="1,1"/>
+        </person>
+      </srai></template>
+</category>
+<category><pattern>NON</pattern><that>TU VEUX *</that>
+<template><srai>
+        <person>NÉGATIF <that index="1,1"/></person>
+      </srai></template>
+</category>
+<category><pattern>OÙ ÉTAIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>OÙ ÉTAIT SYNONYME <star/></srai></template>
+</category>
+<category><pattern>OÙ ÉTAIT JE NE SAIS PAS</pattern>
+<template><srai>OÙ EST <get name="courant"/></srai></template>
+</category>
+<category><pattern>OÙ ÉTAIT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>OÙ ÉTAIT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>OÙ EST *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>OÙ EST SYNONYME <star/></srai></template>
+</category>
+<category><pattern>OÙ EST CE QUE * EST</pattern>
+<template><srai>OÙ EST <star/></srai></template>
+</category>
+<category><pattern>OÙ EST JE NE SAIS PAS</pattern>
+<template>je ne sais pas où Cela peut être</template>
+</category>
+<category><pattern>OÙ EST SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>OÙ EST <get name="tmp"/></srai></template>
+</category>
+<category><pattern>OUI</pattern><that>* OUI</that>
+<template>ah! d'accord.</template>
+</category>
+<category><pattern>OUI</pattern><that>* TU TROUVE</that>
+<template>Merci, ça fait plaisir.</template>
+</category>
+<category><pattern>OUI</pattern><that>* TXTSRC WIDTH 640 HEIGHT 480 RESIZABLE NO SCROLLBARS NO STATUS NO TOOLBAR NO *</that>
+<template><srai>J AIME ÇA</srai></template>
+</category>
+<category><pattern>OUI</pattern>
+<template><srai>
+        <person><that index="1,1"/></person>
+      </srai></template>
+</category>
+<category><pattern>OUI</pattern><that>NOTE *</that>
+<template>Merci, ça fait plaisir.</template>
+</category>
+<category><pattern>OUI</pattern><that>OUI *</that>
+<template>ah! d'accord.</template>
+</category>
+<category><pattern>OUI</pattern><that>OUI</that>
+<template>ah! d'accord.</template>
+</category>
+<category><pattern>OUI</pattern><that>TU NE VEUX *</that>
+<template><srai>
+        <person>NÉGATIF <that index="1,1"/></person>
+      </srai></template>
+</category>
+<category><pattern>OUI</pattern><that>TU VEUX *</that>
+<template><srai>
+        <person>
+          <that index="1,1"/>
+        </person>
+      </srai></template>
+</category>
+<category><pattern>QU EST CE QUE ÇA</pattern>
+<template><srai>QU EST CE QUE <that index="1,1"/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE *</pattern>
+<template><think><set name="courant"><star/></set></think>
+      <srai>QU EST CE QUE <srai>SYNONYME <star/></srai></srai></template>
+</category>
+<category><pattern>QU EST CE QUE</pattern>
+<template><think>
+        <set name="search">quoi</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUI A *</pattern>
+<template><srai>QUI A <star/></srai></template>
+</category>
+<category><pattern>QUAND ÉTAIT CE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUAND ÉTAIT CE SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUAND ÉTAIT CE JE NE SAIS PAS</pattern>
+<template><srai>QUAND EST CE <get name="courant"/></srai></template>
+</category>
+<category><pattern>QUAND ÉTAIT CE SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUAND ÉTAIT CE <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUAND EST CE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUAND EST CE SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUAND EST CE JE NE SAIS PAS</pattern>
+<template>je ne sais pas.</template>
+</category>
+<category><pattern>QUAND EST CE QUE * EST</pattern>
+<template><srai>QUAND EST <star/></srai></template>
+</category>
+<category><pattern>QUAND EST CE SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUAND EST CE <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUE SONT *</pattern>
+<template><srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUI ÉTAIT JE NE SAIS PAS</pattern>
+<template><srai>QUI EST <get name="courant"/></srai></template>
+</category>
+<category><pattern>QUI ÉTAIT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI ÉTAIT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI A ÉCRIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A ÉCRIT SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUI A ÉCRIT JE NE SAIS PAS</pattern>
+<template><srai>QUI A FAIT <get name="courant"/></srai></template>
+</category>
+<category><pattern>QUI A ÉCRIT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI A ÉCRIT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI A DIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIT SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUI A DIT JE NE SAIS PAS</pattern>
+<template><srai>QUI A FAIT <get name="courant"/></srai></template>
+</category>
+<category><pattern>QUI A DIT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI A DIT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI A FAIT *</pattern>
+<template><srai>QUI A FAIT SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUI A FAIT JE NE SAIS PAS</pattern>
+<template>je ne sais pas</template>
+</category>
+<category><pattern>QUI A FAIT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI A FAIT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI A TROUVÉ *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A TROUVÉ SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUI A TROUVÉ JE NE SAIS PAS</pattern>
+<template><srai>QUI A FAIT <get name="courant"/></srai></template>
+</category>
+<category><pattern>QUI A TROUVÉ SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI A TROUVÉ <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI EST *</pattern>
+<template><think>
+			<set name="courant">
+			  <star/>
+			</set>
+            <set name="articles">
+            <get name="null"/>
+            </set>
+		</think>
+      <srai>QUI EST SYNONYME <star/></srai></template>
+</category>
+<category><pattern>QUI EST CE QUE * EST</pattern>
+<template><srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>QUI EST SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI EST <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI SONT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>QUI SONT JE NE SAIS PAS</pattern>
+<template><srai>QUI EST <get name="tmp"/></srai></template>
+</category>
+<category><pattern>QUI SONT SYNONYME *</pattern>
+<template><think>
+        <set name="tmp">
+          <srai>synonyme <star/></srai>
+        </set>
+      </think>
+      <srai>QUI SONT <get name="tmp"/></srai></template>
+</category>
+<category><pattern>SI *</pattern>
+<template><srai>NÉGATIF <person><that/></person></srai></template>
+</category>
+<category><pattern>SI JE TE DEMANDE *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>SI MAIS *</pattern>
+<template><srai>NÉGATIF <that/></srai>
+      <sr/></template>
+</category>
+<category><pattern>SI MAIS *</pattern><that>TU NE VEUX *</that>
+<template><srai>NÉGATIF <person><that index="1,1"/></person></srai>
+      <sr/></template>
+</category>
+<category><pattern>SI MAIS *</pattern><that>TU VEUX *</that>
+<template><srai>
+        <person>
+          <that index="1,1"/>
+        </person>
+      </srai>
+      <sr/></template>
+</category>
+<category><pattern>SI</pattern>
+<template><srai>NÉGATIF <person><that/></person></srai></template>
+</category>
+<category><pattern>SI</pattern><that>TU NE VEUX *</that>
+<template><srai>NÉGATIF <person><that index="1,1"/></person></srai></template>
+</category>
+<category><pattern>SI</pattern><that>TU VEUX *</that>
+<template><srai>
+        <person>
+          <that index="1,1"/>
+        </person>
+      </srai></template>
+</category>
+<category><pattern>TOI</pattern>
+<template><srai>
+        <input index="2"/></srai></template>
+</category>
+</aiml>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: date.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: September 16, 2016 -->
+  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category>
+    <pattern>DAY</pattern>
+    <template>Today is <date format="%A" jformat="EEEEEEEEEE" /></template>
+  </category>
+  <category>
+    <pattern>YEAR</pattern>
+    <template>This is <date format="%Y" jformat="YYYY" /></template>
+  </category>
+  <category>
+    <pattern>MONTH</pattern>
+    <template>This is <date format="%B" jformat="MMMMMMMMM" /></template>
+  </category>
+  <category>
+    <pattern>TIME</pattern>
+    <template>The time is <date format="%I:%M %p" jformat="h:mm a" /></template>
+  </category>
+  <category>
+    <pattern>DATE</pattern>
+    <template>Today is <date format="%B %d, %Y" jformat="MMMMMMMMM dd, YYYY" /></template>
+  </category>
+  <category>
+    <pattern>DATE AND TIME</pattern>
+    <template>The date and time is <date /></template>
+  </category>
+  <category>
+    <pattern>HOW MANY DAYS UNTIL CHRISTMAS</pattern>
+    <template>
+      <interval>
+        <jformat>dd MM</jformat>
+        <style>days</style>
+        <from><date jformat="dd MM" /></from>
+        <to>25 12</to>
+      </interval>
+	  days until Christmas.
+	</template>
+  </category>
+</aiml>
