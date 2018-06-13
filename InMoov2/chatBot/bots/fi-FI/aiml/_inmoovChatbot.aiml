@@ -35,9 +35,9 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hei! Tämä on ensimmäinen alustukseni. Näin ollen tarvitsenkin lisätietoja. Kertoisitko ensiksi mikä on nimeni? Kuuntelen.</template>
+		Hei! Tämä on ensimmäinen alustukseni. Näin ollen tarvitsenkin lisätietoja. Kertoisitko ensiksi. Kuuntelen. mikä on nimeni?</template>
 </category>
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern>#</pattern><that># MIKÄ ON NIMENI #</that>
 <template><set name="questionfirstinit">jos nimeni on <star/> , sano kyllä vai ei</set>
         <think>
@@ -47,7 +47,7 @@
         </think></template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern>#</pattern><that># VOINKO SAADA NIMESI #</that>
 <template><set name="questionfirstinit">onko sinun nimesi <star/> , sano kyllä vai ei</set>
         <think>
@@ -57,7 +57,7 @@
         </think></template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern># KYLLÄ #</pattern><that># JOS NIMENI ON #</that>
 <template><random>
 			<li>
@@ -67,11 +67,11 @@
 			Todella kaunis nimi, <get name="tmpname"/> kiitos.
 			</li>
         </random>
-	Minun tulee tuntea myös sinut. Mikä on sinun nimesi? Kuuntelen.
+	Minun tulee tuntea myös sinut. VOINKO SAADA NIMESI?
 	<think><set name="botname"><get name="tmpname"/></set></think></template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern># KYLLÄ #</pattern><that># ONKO SINUN NIMESI #</that>
 <template><random>
         <li>Olen iloinen tutustuessani sinuun, <get name="tmpname"/>.</li>
@@ -95,19 +95,19 @@
         <srai>WAKE_UP</srai></template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern># EI #</pattern><that># JOS NIMENI ON #</that>
 <template>Käynnistetään järjestelmät uudelleen.
 	Mikä minun nimeni on? Kuuntelen.</template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern># EI #</pattern><that># JOS NIMESI ON #</that>
 <template>Käynnistetään järjestelmät uudelleen.
 	Voinko saada sinun etunimesi? Kuuntelen.</template>
 </category></topic>
 
-<topic name="FIRSTINIT">
+<topic name="firstinit">
 <category><pattern>#</pattern><that># SANO KYLLÄ VAI EI #</that>
 <template><random>
           <li>
