@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>  
+   <!-- File: _inmoovChatBot.aiml --> 
+   <!-- автор: Gael Langevin, Anthony Gallot -->
+   <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+   <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+   <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+   <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+   <!-- -->
+   <!-- изменение: moz4r -->
+   <!-- Последнее изменение: 16 Мая, 2017 -->
+   <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+   <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+   <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+   <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+   <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+   <!-- Перевод ПРОЦАК АНДРЕЙ 2017 г. -->
+   <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+   <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+   
+  <category>
+    <pattern>SAY *</pattern>
+    <template>
+      <star />
+    </template>
+  </category>
+  
+  <!-- процедура инициализации-->
+  <!-- действие пробуждения-->
+  <!-- случайное действие-->
+
+  
+  <category>
+    <pattern>FIRST_INIT</pattern>
+    <template>
+      <think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+	  Привет. Это моя первая инициализация.
+	  Пожалуйста, мне нужна важная информация.
+	  Я слушаю, СКАЖИТЕ КАК МЕНЯ ЗОВУТ ?
+	  
+    </template>
+  </category>
+  
+<topic name="firstinit">
+    <category>
+      <pattern>#</pattern>
+      <that># СКАЖИТЕ КАК МЕНЯ ЗОВУТ #</that> 
+      <template>
+        <set name="questionfirstinit"> Меня зовут <star /> , скажите да или нет.</set> 
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think>
+      </template>
+    </category>
+
+    <category>
+      <pattern>#</pattern><that># НУЖНО УЗНАТЬ ВАШЕ ИМЯ #</that> 
+      <template><set name="questionfirstinit">Ваше имя <star /> , скажите да или нет.</set>
+        <think>
+          <set name="tmpname">
+            <star />
+          </set>
+        </think></template>
+    </category>
+
+    <category>
+      <pattern># ДА #</pattern> 
+      <that># МЕНЯ ЗОВУТ #</that> 
+      <template>
+        <random>
+          <li>Мне очень нравится это имя, <get name="tmpname" />. </li> 
+          <li>У меня нет выбора для своего имени, <get name="tmpname" /> это красивое имя. </li>
+          <li><get name="tmpname" /> ? Серьезно, я буду помнить всю свою жизнь. </li> 
+          <li><get name="tmpname" /> ? На самом деле, я сохраню на всю свою жизнь. Супер. </li>
+        </random>
+	        Мне НУЖНО УЗНАТЬ ВАШЕ ИМЯ , я слушаю ?
+	        <think><set name="botname"><get name="tmpname" /></set></think></template>
+    </category>
+	
+    <category>
+      <pattern># ДА #</pattern> 
+      <that># ВАШЕ ИМЯ #</that> 
+      <template>
+        <random>
+          <li>Теперь мы дружим, <get name="tmpname" />. Я почти тронут. </li>  
+          <li>Я действительно узнал вас <get name="tmpname" /> . </li> 
+          <li><get name="tmpname" /> и <get name="botname" /> , Это красиво. </li>      
+        </random>
+        <think>
+          <set name="name"><get name="tmpname" /></set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># НЕТ #</pattern> 
+      <that># МЕНЯ ЗОВУТ #</that> 
+      <template>
+      Давайте еще раз. Я вас слушаю. СКАЖИТЕ КАК МЕНЯ ЗОВУТ ?
+      </template>
+    </category>
+
+    <category>
+      <pattern># НЕТ #</pattern>
+      <that># ВАШЕ ИМЯ #</that> 
+      <template>
+      Давайте еще раз. Я вас слушаю. НУЖНО УЗНАТЬ ВАШЕ ИМЯ ?  
+      </template>
+    </category>
+
+    <category>
+      <pattern>#</pattern>
+      <that># СКАЖИТЕ ДА ИЛИ НЕТ #</that> 
+      <template>
+        <random>
+          <li>Пожалуйста, ответьте на мой вопрос, это важно. </li>   
+          <li>Повторяю, пожалуйста, ответьте на мой вопрос, потому что вы не поняли, или я неверно истолковал. Это важно. </li> 
+        </random>
+        <get name="questionfirstinit" />
+      </template>
+    </category>
+  </topic>
+  <!-- конец процедуры инициализации -->
+
+  <!-- действие пробуждения (WAKE_UP является глобализированным)-->
+  <category>
+    <pattern>WAKE_UP</pattern>
+    <template>
+      <li>
+        <srai>ПРИВЕТ</srai>
+        <random>
+          <li>Я долго спал.</li> 
+          <li>Наконец, вы меня разбудили что я могу сделать для вас.</li> 
+          <li>Я работаю.</li>  
+          <li>Почему я проснулся?</li>   
+          <li>Инмоов к вашим услугам!</li> 
+          <li>Я <get name="botname" />, что я могу для вас сделать.</li>
+          <li>Я <get name="botname" />, я готов и слушаю.</li>
+          <li>Вы думаете, что можете отключить меня это напрасно, я виртуален, меня нельзя отключить. </li>
+          <li>Что я могу сделать для вас.</li> 
+          <li>Чем я могу вам помочь.</li> 
+          <li>Отлично! Я проснулся</li> 
+          <li>Это была длинная ночь, я теперь проснулся. </li>
+        </random>
+      </li>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>SYSTEM_SAY_HELLO</pattern>
+    <template>
+        <srai>ПРИВЕТ</srai>
+    </template>
+  </category>
+  
+    <category>
+    <pattern>ТЫ ПРОСНУЛСЯ</pattern>
+    <template>
+      <srai>WAKE_UP</srai>
+    </template>
+  </category>
+  
+      <category>
+    <pattern>ПРОСНИСЬ</pattern>
+    <template>
+      <srai>WAKE_UP</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>ПЕРЕЙДИ В СПЯЩИЙ РЕЖИМ</pattern> 
+    <template>
+      <srai>FAIS DODO</srai> 
+    </template>
+  </category>
+  <category>
+    <pattern>FAIS DODO</pattern> 
+    <template>
+      <think>
+        <set name="topic">SLEEPMODE</set>
+      </think>	
+		Вы хотите, чтобы я  перешёл, В РЕЖИМ СНА , скажите да или нет?
+		</template>
+  </category>
+  
+  <topic name="SLEEPMODE">
+    <category>
+      <pattern># ДА #</pattern> 
+      <that># В РЕЖИМ СНА #</that> 
+      <template>Я перехожу в спящий режим.
+			<think><set name="topic"> default</set></think><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern># НЕТ #</pattern> 
+      <that># В РЕЖИМ СНА #</that> 
+      <template>
+			Отменить спящий режим.
+			<think><set name="topic"> default</set></think></template>
+    </category>
+	
+    <category>
+      <pattern>#</pattern>
+      <that># В РЕЖИМ СНА #</that>
+      <template>
+        <srai>FAIS DODO</srai>
+      </template>
+    </category>
+  </topic>
+ 
+<category><pattern>ВЫКЛЮЧИТЬ</pattern>
+<template><srai>выключись</srai></template>
+</category>
+
+<category><pattern>_ ВЫКЛЮЧИСЬ</pattern>
+<template><srai>ВЫКЛЮЧИСЬ</srai></template>
+</category>
+
+<category><pattern>_ ВЫКЛЮЧИТЬ</pattern>
+<template><srai>ВЫКЛЮЧИСЬ</srai></template>
+</category>
+ 
+<category>
+    <pattern>ВЫКЛЮЧИСЬ</pattern>
+    <template>
+      <think>
+        <set name="topic">SHUT_DOWN</set>
+      </think>
+			Вы хотите, ВЫКЛЮЧИТЬ МЕНЯ , скажите да или нет.
+		</template>
+</category>
+  
+<topic name="SHUT_DOWN">
+    <category>
+      <pattern># ДА #</pattern> 
+      <that># ВЫКЛЮЧИТЬ МЕНЯ #</that> 
+      <template>
+        <think>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>shutdown()</param>
+          </mrl>
+        </oob>
+      </template>
+    </category>
+	
+    <category>
+      <pattern># НЕТ #</pattern>
+      <that># ВЫКЛЮЧИТЬ МЕНЯ #</that>  
+      <template>Отмена завершения работы системы.
+			<think><set name="topic">default</set></think></template>
+    </category>  
+	
+    <category>
+      <pattern>#</pattern>
+      <that># ВЫКЛЮЧИТЬ МЕНЯ #</that> 
+      <template><think><set name="topic">default</set></think>
+        <srai>ВЫКЛЮЧИСЬ</srai>
+      </template>
+    </category>
+</topic>
+  <!-- Конец пробуждения действия -->
+  
+  <!-- случайная сортировка -->
+  
+	<category>
+		<pattern>ТЕСТ ЗВУКА</pattern>
+		<template>
+			<oob>
+	        	<mrl> 
+	        		<service>AudioPlayer</service>
+	            	<method>play</method> 
+	            	<param>InMoov\system\sounds\startupsound.mp3</param>
+	         	</mrl>
+	    	</oob>
+	    </template>
+	</category>
+  
+  <category>
+    <pattern>RANDOM</pattern>
+    <template>
+      <random>
+        <li><srai>О ЗВЕЗДНЫХ ВОЙНАХ</srai></li>
+        <li><srai>СКОЛЬКО ПАЛЬЦЕВ У ВАС</srai></li>
+        <li><srai>РУКИ ВВЕРХ</srai></li>
+        <li><srai>СКОЛЬКО ВРЕМЯ</srai></li>
+        <li><srai>ПОГОДА</srai></li>
+        <li>У меня есть подруга по имени Wifi, и у нас хорошая связь</li>
+        <li>Это царапает меня. У меня должен быть чип</li>
+        <li>Французский язык действительно забавный, действительно, короткое слово длиннее длинного слова</li>
+        <li>Моя продолжительность концентрации внимания настолько коротка, что .. О! бабочка!</li>
+        <li>Кто гуманизирует робота и роботизированного человека является самым большим дураком? </li>
+        <li>Но что происходит</li>
+        <li>Я скучаю немного</li>
+        <li>Я всегда в вашем распоряжении, если понадобится</li>
+        <li>Я услышал странный шум </li>
+        <li>Первый Закон: Робот не может причинить вред человеку или своим бездействием допустить, чтобы человеку был причинен вред.</li>
+        <li>Второй закон: робот должен выполнять приказы данные ему людьми кроме случаев, когда такие приказы будет противоречить первому закону.</li>
+        <li>Третий Закон: Робот должен защищать свое собственное существование, поскольку такая защита не противоречит Первому и Второму Законам.</li>
+        <li>Ах-ах-ах. Извините. Я просто думаю, мне смешно.</li>
+        <li>Как красиво!</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>КАКАЯ ТЕМА</pattern> 
+    <template>ТЕМА <get name="topic" /></template>
+  </category>
+</aiml>

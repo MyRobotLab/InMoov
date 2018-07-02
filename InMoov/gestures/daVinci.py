@@ -1,0 +1,15 @@
+def daVinci():
+  i01.startedGesture()
+  i01.setHandVelocity("left", -1, -1, -1, -1, -1, 22.0)
+  i01.setHandVelocity("right", -1, -1, -1, -1, -1, 22.0)
+  i01.setArmVelocity("left", 36, 36, 36, 36)
+  i01.setArmVelocity("right", 36, 36, 36, 36)
+  i01.setHeadVelocity(31.0, 31.0)
+  i01.moveHead(80,90)
+  i01.moveArm("left",0,118,29,74)
+  i01.moveArm("right",0,118,29,74)
+  i01.moveHand("left",50,40,30,20,10,47)
+  i01.moveHand("right",50,40,30,20,10,137)
+  sleep(5)
+  i01.finishedGesture()
+

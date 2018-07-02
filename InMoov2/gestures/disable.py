@@ -1,2 +1,0 @@
-def disable():
-  inMoov.disable()

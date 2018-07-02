@@ -1,0 +1,33 @@
+;----------------------------- OPENCV CONFIGURATION ----------------------------------------
+[MAIN]
+isOpenCvActivated=False
+;Activate OpenCv service...
+faceRecognizerActivated=True
+;Activate faceRecognizer filter if tracking activated ...
+
+CameraIndex=0
+DisplayRender=SarxosFrameGrabber
+;Available DisplayRender :
+;SarxosFrameGrabber
+;VideoInputFrameGrabber
+;OpenCVFrameGrabber
+
+streamerenabled=False
+
+[TRACKING]
+eyeXPidKp=20.0
+eyeXPidKi=5.0
+eyeXPidKd=0.1
+eyeYPidKp=20.0
+eyeYPidKi=5.0
+eyeYPidKd=0.1
+rotheadPidKp=12.0
+rotheadPidKi=5.0
+rotheadPidKd=0.1
+neckPidKp=12.0
+neckPidKi=5.0
+neckPidKd=0.1
+
+;----------------------------------- END --------------------------------------------------
+
+

@@ -11,7 +11,7 @@
     <!-- Create the time stamp -->
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
-    <mkdir dir="${build}/InMoov2"/>
+    <mkdir dir="${build}/InMoov"/>
   </target>
 
   <target name="dist" depends="init" description="generate the distribution">
@@ -19,14 +19,16 @@
     <mkdir dir="${dist}"/>
 
     <!-- copy files to build/where ever then zip into dist/inmoov.zip -->
-    <copy todir="${build}/InMoov2">
-      <fileset dir="InMoov2"/>
+    <copy todir="${build}/InMoov">
+      <fileset dir="InMoov"/>
     </copy>
     <copy todir="${build}/tools">
       <fileset dir="tools"/>
     </copy>
+    <copy file="start_inmoov.sh" todir="${build}" />
+    <copy file="START_INMOOV.bat" todir="${build}" />
 
-    <zip destfile="${dist}/inmoov.zip" basedir="${build}" encoding="UTF-8"/>
+    <zip destfile="${dist}/InMoov.zip" basedir="${build}" encoding="UTF-8"/>
        
   </target>
 

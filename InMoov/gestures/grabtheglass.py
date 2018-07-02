@@ -1,0 +1,17 @@
+def grabtheglass():
+  i01.startedGesture()
+  i01.setHandVelocity("left", 19, 19, -1, -1, -1, -1)
+  i01.setHandVelocity("right", -1, 19, 19, -1, -1, 36)
+  i01.setArmVelocity("left", -1.0, -1.0, -1.0, -1.0)
+  i01.setArmVelocity("right", -1.0, -1.0, -1.0, -1.0)
+  i01.setHeadVelocity(22.0, 22.0)
+  i01.setTorsoVelocity(-1,43.0,-1)
+  i01.moveHead(20,68)
+  i01.moveArm("left",77,85,45,15)
+  i01.moveArm("right",48,91,72,20)
+  i01.moveHand("left",180,138,140,164,180,50)
+  i01.moveHand("right",140,112,127,105,143,140)
+  i01.moveTorso(105,105,90)
+  sleep(1)
+  i01.finishedGesture()
+
