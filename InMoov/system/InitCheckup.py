@@ -61,9 +61,10 @@ i01.halfSpeed()
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
-if virtualInmoovActivated:
-  talkEvent(lang_startingVirtual)
-  i01.startVinMoov()
+#startVinMoov seem borked
+#if virtualInmoovActivated:
+#talkEvent(lang_startingVirtual)
+#i01.startVinMoov()
   
 if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
   talkEvent(lang_noSkeleton)

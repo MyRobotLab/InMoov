@@ -12,8 +12,9 @@ list2=[]
 cpt=0
 
 #We need to start the camera before launching yolo
-yolo = Runtime.createAndStart("yolo","Yolo")
-ImageYolo = Runtime.createAndStart("ImageYolo", "ImageDisplay")
+#this break inmoov1 from nixie
+#yolo = Runtime.createAndStart("yolo","Yolo")
+#ImageYolo = Runtime.createAndStart("ImageYolo", "ImageDisplay")
 
 # ##############################################################################
 def displayPic(pic):

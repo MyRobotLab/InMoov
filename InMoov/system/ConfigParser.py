@@ -28,6 +28,7 @@ ScriptType=BasicConfig.get('MAIN', 'ScriptType')
 try:
   MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
   Language=MyLanguage
+
 except:
   pass
   
@@ -35,6 +36,15 @@ try:
   Language=BasicConfig.get('MAIN', 'Language')
 except:
   pass
+  
+if Language=="fr":tmplanguage="fr-fr"
+if Language=="en":tmplanguage="en-us"
+if Language=="es":tmplanguage="es-es"
+if Language=="de":tmplanguage="de-de"
+if Language=="nl":tmplanguage="nl-nl"
+if Language=="ru":tmplanguage="ru-ru"
+if Language=="it":tmplanguage="it-it"
+if Language=="fi":tmplanguage="fi-fi"
 
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
