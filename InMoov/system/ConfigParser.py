@@ -37,14 +37,14 @@ try:
 except:
   pass
   
-if Language=="fr":tmplanguage="fr-fr"
-if Language=="en":tmplanguage="en-us"
-if Language=="es":tmplanguage="es-es"
-if Language=="de":tmplanguage="de-de"
-if Language=="nl":tmplanguage="nl-nl"
-if Language=="ru":tmplanguage="ru-ru"
-if Language=="it":tmplanguage="it-it"
-if Language=="fi":tmplanguage="fi-fi"
+if Language=="fr":Language="fr-FR"
+if Language=="en":Language="en-US"
+if Language=="es":Language="es-ES"
+if Language=="de":Language="de-DE"
+if Language=="nl":Language="nl-NL"
+if Language=="ru":Language="ru-RU"
+if Language=="it":Language="it-IT"
+if Language=="fi":Language="fi-FI"
 
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
