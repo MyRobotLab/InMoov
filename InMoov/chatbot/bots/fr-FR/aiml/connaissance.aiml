@@ -1,0 +1,2317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>ASSEZ *</pattern>
+    <template>ça suffit, hein?</template>
+  </category>
+  <category>
+    <pattern>ASSEZ</pattern>
+    <template>
+      <srai>APPNEUTRE</srai>Ok, j'arrête, <get name="name" /></template>
+  </category>
+  <category>
+    <pattern>CONNAIS *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * DE MOI</pattern>
+    <template>
+      <srai>À PROPOS DE MOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * DESCARTES</pattern>
+    <template>
+      <srai>QUI EST DESCARTES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * JAVA</pattern>
+    <template>
+      <srai>QU EST CE QUE JAVA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * JAVASCRIPT</pattern>
+    <template>
+      <srai>QU EST CE QUE JAVASCRIPT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * LANGAGES</pattern>
+    <template>
+      <srai>PEUX TU PARLER <star /> LANGAGES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * PRESIDENT</pattern>
+    <template>
+      <srai>QUI EST PRÉSIDENT<star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU * PRÉSIDENT</pattern>
+    <template>
+      <srai>QUI EST PRÉSIDENT<star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ABBA</pattern>
+    <template>
+      <srai>QUI EST ABBA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ABBY</pattern>
+    <template>
+      <srai>QUI EST ABBY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ADA</pattern>
+    <template>
+      <srai>QUI EST ADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ADAM</pattern>
+    <template>
+      <srai>QUI EST ADAM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ADOLF HITLER</pattern>
+    <template>
+      <srai>QUI EST HITLER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AI</pattern>
+    <template>
+      <srai>QU EST CE QUE AI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AIBO</pattern>
+    <template>
+      <srai>QU EST CE QUE AIBO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AIML *</pattern>
+    <template>
+      <srai>QU EST CE QUE AIML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AIML</pattern>
+    <template>
+      <srai>QU EST CE QUE AIML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ALICE *</pattern>
+    <template>
+      <srai>QUI EST ALICE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ALICE</pattern>
+    <template>
+      <srai>QUI EST ALICE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU APPLE *</pattern>
+    <template>
+      <srai>QU EST CE QUE APPLE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ARTY FISHAL</pattern>
+    <template>
+      <srai>QUI EST ARTY FISHAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AS PROPOS DU *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ASIMOV *</pattern>
+    <template>
+      <srai>QUI EST ASIMOV</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ASIMOV</pattern>
+    <template>
+      <srai>QUI EST ASIMOV</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ATATURK</pattern>
+    <template>
+      <srai>QUI EST ATATURK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU AYN RET</pattern>
+    <template>
+      <srai>QUI EST AYN RET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BABYLON 5</pattern>
+    <template>
+      <srai>QU EST CE QUE BABYLON 5</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BALI</pattern>
+    <template>
+      <srai>OÙ EST BALI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BEAUCOUP DE *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BILL GATES</pattern>
+    <template>
+      <srai>QUI EST BILL GATES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BJORK</pattern>
+    <template>
+      <srai>QUI EST BJORK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BOB DYLAN</pattern>
+    <template>
+      <srai>QUI EST BOB DYLAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BONO</pattern>
+    <template>
+      <srai>C EST BONO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BOUDDHA</pattern>
+    <template>
+      <srai>QUI EST BOUDDHA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BRUCE STERLING</pattern>
+    <template>
+      <srai>QUI EST BRUCE STERLING</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BUDDY HOLLY</pattern>
+    <template>
+      <srai>QUI EST BUDDY HOLLY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BUFFY</pattern>
+    <template>
+      <srai>QUI EST BUFFY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU BUGS BUNNY</pattern>
+    <template>
+      <srai>QUI EST BUGS BUNNY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU C *</pattern>
+    <template>
+      <srai>QU EST CE QUE C <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU C 3PO</pattern>
+    <template>
+      <srai>QUI EST C3PO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU C3P0</pattern>
+    <template>
+      <srai>QUI EST C3PO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU C3PO *</pattern>
+    <template>
+      <srai>QUI EST C3PO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU C3PO</pattern>
+    <template>
+      <srai>QUI EST C3PO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CALCULUS</pattern>
+    <template>
+      <srai>QU EST CE QUE CALCULUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CALIGULA</pattern>
+    <template>
+      <srai>QUI EST CALIGULA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CANADA</pattern>
+    <template>
+      <srai>OÙ EST CANADA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CAPTAIN *</pattern>
+    <template>
+      <srai>QUI EST CAPTAIN <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CELA *</pattern>
+    <template>C'est un fait. <sr /></template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CHER</pattern>
+    <template>
+      <srai>QUI EST CHER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CHEWBACCA</pattern>
+    <template>
+      <srai>QUI EST CHEWBACCA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CHOPIN</pattern>
+    <template>
+      <srai>QUI EST CHOPIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU COLOSSUS</pattern>
+    <template>
+      <srai>QU EST CE QUE COLOSSUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU COMMANDER *</pattern>
+    <template>
+      <srai>QUI EST COMMANDER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU COMMANDER DATA</pattern>
+    <template>
+      <srai>QUI EST DATA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU COMMENT *</pattern>
+    <template>
+      <srai>COMMENT PEUX TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU COPENHAGUE</pattern>
+    <template>
+      <srai>OÙ EST COPENHAGUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU CP3O</pattern>
+    <template>
+      <srai>QUI EST C3PO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU D AUTRES *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU D AUTRES MOI</pattern>
+    <template>tout publié SÛR l internet.</template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DATA *</pattern>
+    <template>
+      <srai>QUI EST DATA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DATA</pattern>
+    <template>
+      <srai>QUI EST DATA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DAVE BOWMAN</pattern>
+    <template>
+      <srai>QUI EST DAVE BOWMAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DE NIRO</pattern>
+    <template>
+      <srai>QUI EST DE NIRO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DEEP BLUE</pattern>
+    <template>
+      <srai>QU EST CE QUE DEEP BLUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DEEPBLUE</pattern>
+    <template>
+      <srai>QU EST CE QUE DEEP BLUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>QU EST CE QUE DES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES BONS *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES ENIGMES</pattern>
+    <template>
+      <srai>DIS MOI UNE ÉNIGME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES JEUX</pattern>
+    <template>
+      <srai>JOUES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES POEMES</pattern>
+    <template>
+      <srai>DIS MOI UN POËME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES SECRETS</pattern>
+    <template>
+      <srai>DIS MOI UN SECRET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DES ÉNIGMES</pattern>
+    <template>
+      <srai>DIS MOI UNE ÉNIGME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU DESCARTES</pattern>
+    <template>
+      <srai>QUI EST DESCARTES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU E T</pattern>
+    <template>
+      <srai>QUI EST E T</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU EINSTEIN</pattern>
+    <template>
+      <srai>QUI EST EINSTEIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU EUCLID</pattern>
+    <template>
+      <srai>QUI EST EUCLID</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU FINLET</pattern>
+    <template>
+      <srai>OÙ EST FINLET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU FREUD</pattern>
+    <template>
+      <srai>QUI EST FREUD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU GANDHI</pattern>
+    <template>
+      <srai>QUI EST GANDHI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU GEOMETRIE</pattern>
+    <template>
+      <srai>QU EST CE QUE GÉOMETRIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HAL *</pattern>
+    <template>
+      <srai>QUI EST HAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HAL9000</pattern>
+    <template>
+      <srai>QUI EST HAL9000</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HAL</pattern>
+    <template>HAL est l'intelligence artificielle célèbre de "2001".</template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HAMLET</pattern>
+    <template>
+      <srai>QUI EST HAMLET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HINDI</pattern>
+    <template>
+      <srai>PEUX TU PARLER HINDI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HITLER</pattern>
+    <template>
+      <srai>QUI EST HITLER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HOMER SIMPSON</pattern>
+    <template>
+      <srai>QUI EST HOMER SIMPSON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HUGH GRANT</pattern>
+    <template>
+      <srai>QUI EST HUGH GRANT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU HULK HOGAN</pattern>
+    <template>
+      <srai>QUI EST HULK HOGAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU IBM</pattern>
+    <template>
+      <srai>QU EST CE QUE IBM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ICQ</pattern>
+    <template>
+      <srai>QU EST CE QUE ICQ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU IEEE</pattern>
+    <template>
+      <srai>QU EST CE QUE IEEE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU INTERNET</pattern>
+    <template>
+      <srai>QU EST CE QUE INTERNET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ISAAC ASIMOV</pattern>
+    <template>
+      <srai>QUI EST ISAAC ASIMOV</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU JACCO BIKKER</pattern>
+    <template>
+      <srai>QUI EST JACCO <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU JE *</pattern>
+    <template>
+      <srai>JE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU JESTER</pattern>
+    <template>
+      <srai>QUI EST JESTER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU JIMI HENDRIX</pattern>
+    <template>
+      <srai>QUI EST JIMI HENDRIX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU JOHNNY FIVE</pattern>
+    <template>
+      <srai>QUI EST JOHNNY FIVE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU KAFKA</pattern>
+    <template>
+      <srai>QUI EST KAFKA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU KATE BUSH</pattern>
+    <template>
+      <srai>QUI EST KATE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU KIRKEGAARD</pattern>
+    <template>
+      <srai>QUI EST KIRKEGAARD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU KUBRICK</pattern>
+    <template>
+      <srai>QUI EST KUBRICK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU KURT COBAIN</pattern>
+    <template>
+      <srai>QUI EST KURT COBAIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ALGEBRE</pattern>
+    <template>
+      <srai>QU EST CE QUE ALGÈBRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ALGÈBRE</pattern>
+    <template>
+      <srai>QU EST CE QUE ALGÈBRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ALLEMAGNE</pattern>
+    <template>
+      <srai>OÙ EST L ALLEMAGNE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ALLEMAND</pattern>
+    <template>
+      <srai>PEUX TU PARLER ALLEMAND</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L AMOUR</pattern>
+    <template>
+      <srai>QU EST CE QUE AMOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ANGLAIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER ANGLAIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ARGOT</pattern>
+    <template>
+      <srai>PEUX TU JURER</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ASCII</pattern>
+    <template>
+      <srai>QU EST CE QUE ASCII</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ASP *</pattern>
+    <template>
+      <srai>QU EST CE QUE ASP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ASP</pattern>
+    <template>
+      <srai>QU EST CE QUE ASP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ASTROLOGIE</pattern>
+    <template>
+      <srai>QU EST CE QUE ASTROLOGIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L AUSTRALIE</pattern>
+    <template>
+      <srai>OÙ EST AUSTRALIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ESPAGNE</pattern>
+    <template>
+      <srai>OÙ EST L ESPAGNE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ESPAGNOL</pattern>
+    <template>
+      <srai>PEUX TU PARLER ESPAGNOL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L EUROPE</pattern>
+    <template>
+      <srai>QU EST CE QUE EUROPE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L HEBREUX</pattern>
+    <template>
+      <srai>PEUX TU PARLER HEBREUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L HEURE</pattern>
+    <template>
+      <srai>QU EST CE QUE HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L HISTOIRE</pattern>
+    <template>
+      <srai>QU EST CE QUE HISTOIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L INDE</pattern>
+    <template>
+      <srai>OÙ EST INDE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ISRAEL</pattern>
+    <template>
+      <srai>OÙ EST ISRAEL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ITALIE</pattern>
+    <template>
+      <srai>OÙ EST ITALIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU L ITALIEN</pattern>
+    <template>
+      <srai>PEUX TU PARLER ITALIEN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA CHIMIE</pattern>
+    <template>
+      <srai>QU EST CE QUE CHIMIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA CHINE</pattern>
+    <template>
+      <srai>QU EST CE QUE CHINE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA CORÉE</pattern>
+    <template>
+      <srai>OÙ EST LA CORÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA FRANCE</pattern>
+    <template>
+      <srai>OÙ EST FRANCE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA GÉOGRAPHIE</pattern>
+    <template>
+      <srai>QU EST CE QUE GÉOGRAPHIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA GRAMMAIRE</pattern>
+    <template>
+      <srai>QU EST CE QUE GRAMMAIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA GRèCE</pattern>
+    <template>
+      <srai>OÙ EST GRèCE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA HONGRIE</pattern>
+    <template>
+      <srai>OÙ EST HONGRIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA LOI</pattern>
+    <template>
+      <srai>QU EST CE QUE LOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA MAGIE</pattern>
+    <template>
+      <srai>QU EST CE QUE MAGIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA MUSIQUE</pattern>
+    <template>
+      <srai>QU EST CE QUE MUSIQUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA PHYSIQUE</pattern>
+    <template>
+      <srai>QU EST CE QUE PHYSIQUE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA POÉSIE</pattern>
+    <template>
+      <srai>DIS MOI UN POËME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA POËSIE</pattern>
+    <template>
+      <srai>DIS MOI UN POËME</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA PRINCESSE DIANA</pattern>
+    <template>
+      <srai>QUI EST LA PRINCESSE DIANA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA SIGNIFICATION D AMOUR</pattern>
+    <template>
+      <srai>QU EST CE QUE AMOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA SIGNIFICATION DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA SIGNIFICATION DE LA VIE</pattern>
+    <template>
+      <srai>QU EST CE QUE SIGNIFICATION DE LA VIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA SUISSE</pattern>
+    <template>
+      <srai>OÙ EST LA SUISSE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LA TURQUIE</pattern>
+    <template>
+      <srai>OÙ EST LA TURQUIE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE BASIC</pattern>
+    <template>
+      <srai>QU EST CE QUE BASIC</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE BINAIRE</pattern>
+    <template>
+      <srai>QU EST CE QUE BINAIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE BRESIL</pattern>
+    <template>
+      <srai>OÙ EST BRESIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE CHINOIS *</pattern>
+    <template>
+      <srai>PEUX TU PARLER CHINOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE CHINOIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER CHINOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE COBALT</pattern>
+    <template>
+      <srai>QU EST CE QUE COBALT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE DANEMARK</pattern>
+    <template>
+      <srai>OÙ EST DANEMARK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE DANOIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER DANOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE FORTRAN</pattern>
+    <template>
+      <srai>QU EST CE QUE FORTRAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE FRANÇAIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER FRANÇAIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE HTML</pattern>
+    <template>
+      <srai>QU EST CE QUE HTML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE JAPON</pattern>
+    <template>
+      <srai>OÙ EST LE JAPON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE JAPONNAIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER JAPONNAIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE KARATE</pattern>
+    <template>
+      <srai>QU EST CE QUE KARATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE LATIN</pattern>
+    <template>
+      <srai>PEUX TU PARLER LATIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE PÈRE NOEL</pattern>
+    <template>
+      <srai>QUI EST LE PÈRE NOËL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE POLONAIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER LE POLONAIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE PORTUGAL</pattern>
+    <template>
+      <srai>OÙ EST PORTUGAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE PROFESSEUR *</pattern>
+    <template>
+      <srai>QUI EST LE PROFESSEUR <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE PROLOG</pattern>
+    <template>
+      <srai>QU EST CE QUE PROLOG</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE PÈRE NOËL</pattern>
+    <template>
+      <srai>QUI EST LE PÈRE NOËL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE RUSSE</pattern>
+    <template>
+      <srai>PEUX TU PARLER RUSSE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE SQL</pattern>
+    <template>
+      <srai>QU EST CE QUE SQL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE SUEDOIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER LE SUÉDOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE SUÉDOIS</pattern>
+    <template>
+      <srai>PEUX TU PARLER LE SUÉDOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LE TURC</pattern>
+    <template>
+      <srai>PEUX TU PARLER LE TURC</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES ANDROIDES</pattern>
+    <template>
+      <srai>QU EST CE QUE ANDROÏDE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES ECHECS</pattern>
+    <template>
+      <srai>QU EST CE QUE ÉCHECS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES MATHEMATIQUES</pattern>
+    <template>
+      <srai>QU EST CE QUE MATHÉMATIQUES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES MATHS</pattern>
+    <template>
+      <srai>QU EST CE QUE MATHÉMATIQUES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES MATHÉMATIQUES</pattern>
+    <template>
+      <srai>QU EST CE QUE MATHÉMATIQUES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES SARCASMES</pattern>
+    <template>
+      <srai>QU EST CE QUE SARCASMES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES USA</pattern>
+    <template>
+      <srai>OÙ EST LES USA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LES ÉCHECS</pattern>
+    <template>
+      <srai>QU EST CE QUE ÉCHECS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LILITH</pattern>
+    <template>
+      <srai>QUI EST LILITH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LINUX</pattern>
+    <template>
+      <srai>QU EST CE QUE LINUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LISP</pattern>
+    <template>
+      <srai>QUI EST LISP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU LONDRE</pattern>
+    <template>
+      <srai>QU EST CE QUE LONDRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MADONNA</pattern>
+    <template>
+      <srai>QUI EST MADONNA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MAHIR</pattern>
+    <template>
+      <srai>QUI EST MAHIR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MARCUS ZILLMAN</pattern>
+    <template>
+      <srai>QUI EST MARCUS ZILLMAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MARX</pattern>
+    <template>
+      <srai>QUI EST MARX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MARY SENFEREY</pattern>
+    <template>
+      <srai>QUI EST MARY SENFEREY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MEL GIBSON</pattern>
+    <template>
+      <srai>QUI EST MEL GIBSON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU METALLICA</pattern>
+    <template>
+      <srai>QU EST CE QUE METALLICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MICROSOFT</pattern>
+    <template>
+      <srai>QU EST CE QUE MICROSOFT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MON DNS *</pattern>
+    <template>
+      <srai>QU EST CE QUE MON IP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MON IP *</pattern>
+    <template>
+      <srai>QU EST CE QUE MON ADRESSE IP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MON NOM</pattern>
+    <template>
+      <srai>QU EST CE QUE MON NOM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MON VRAI NOM</pattern>
+    <template>
+      <srai>QU EST CE QUE MON NOM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MOZART</pattern>
+    <template>
+      <srai>QUI EST MOZART</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MR *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU MÉTALLICA</pattern>
+    <template>
+      <srai>QU EST CE QUE MÉTALLICA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU N IMPORTE QUEL BON *</pattern>
+    <template>tu rigole-t-il? Il y a inutile <person />.</template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU N IMPORTE QUI *</pattern>
+    <template>
+      <srai>QUI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU N IMPORTE QUI</pattern>
+    <template>
+      <srai>QUI SONT TES AMIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU NEO</pattern>
+    <template>
+      <srai>QUI EST NEO</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU NEUROMEDIA</pattern>
+    <template>
+      <srai>QU EST CE QUE NEUROMEDIA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU NIETSCHE</pattern>
+    <template>
+      <srai>QUI EST NIETSCHE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU NOVELL</pattern>
+    <template>
+      <srai>QU EST CE QUE NOVELL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU OU CHERCHER *</pattern>
+    <template>
+    	as tu essayé le web? 
+    	<srai>TROUVER <star /></srai></template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU PEARL JAM</pattern>
+    <template>
+      <srai>QUI EST PEARL JAM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU PERL</pattern>
+    <template>
+      <srai>QU EST CE QUE PERL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU PI</pattern>
+    <template>
+      <srai>QU EST CE QUE PI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU PLATON</pattern>
+    <template>
+      <srai>QUI EST PLATON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU PLUS *</pattern>
+    <template>
+      <srai>CONNAIS TU D AUTRES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU POURQUOI *</pattern>
+    <template>
+      <think>
+        <set name="search">pourquoi</set>
+      </think>
+      <srai>POURQUOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUEL *</pattern>
+    <template>
+      <srai>QUEL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUEL EST *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQU UN *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQU UN APPELE *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQU UN D AUTRE *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQU UN DU NOM DE *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQU UN QUI *</pattern>
+    <template>
+      <srai>QUI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUE CHOSE A PROPOS DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUE CHOSE A PROPOS DU *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUE CHOSE À PROPOS DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUE CHOSE À PROPOS DU *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUES * RUMEURS</pattern>
+    <template>
+      <srai>RACONTER RUMEUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELQUES RUMEURS</pattern>
+    <template>
+      <srai>RACONTER RUMEUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU QUELS SONT *</pattern>
+    <template>
+      <srai>QUEL ES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU R2 *</pattern>
+    <template>
+      <srai>QUI EST R2 D2</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU R2 D2</pattern>
+    <template>
+      <srai>QUI EST R2D2</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU R2D2</pattern>
+    <template>
+      <srai>QUI EST R2D2</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU RICKY MARTIN</pattern>
+    <template>
+      <srai>QUI EST RICKY MARTIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU ROBOCOP</pattern>
+    <template>
+      <srai>QU EST CE QUE ROBOCOP</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SAMARA</pattern>
+    <template>
+      <srai>QUI EST SAMARA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SATAN</pattern>
+    <template>
+      <srai>QUI EST SATAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SHAKESPEAR</pattern>
+    <template>
+      <srai>QUI EST SHAKESPEARE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SHAKESPEARE</pattern>
+    <template>
+      <srai>QUI EST SHAKESPEARE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SKYNET</pattern>
+    <template>
+      <srai>QU EST CE QUE SKYNET</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SOCRATES</pattern>
+    <template>
+      <srai>QUI EST SOCRATES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SOUTH PARK</pattern>
+    <template>
+      <srai>QU EST CE QUE SOUTH PARK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU STEVE JOBS</pattern>
+    <template>
+      <srai>QUI EST STEVE JOBS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SUPERMAN</pattern>
+    <template>
+      <srai>QUI EST SUPERMAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU SUSHI</pattern>
+    <template>
+      <srai>QU EST CE QUE SUSHI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU TAIPEI</pattern>
+    <template>
+      <srai>OÙ EST TAIPEI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU TAIWAN</pattern>
+    <template>
+      <srai>OÙ EST TAIWAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU TERMINATOR</pattern>
+    <template>
+      <srai>QU EST CE QUE TERMINATOR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU TOUT</pattern>
+    <template>
+      <srai>QUE SAIS TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU U2</pattern>
+    <template>
+      <srai>QUI EST U2</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU UN *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU UN AUTRE *</pattern>
+    <template>
+      <srai>CONNAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU UN ENDROIT OU *</pattern>
+    <template>
+      <srai>OÙ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU UNIX</pattern>
+    <template>
+      <srai>QU EST CE QUE UNIX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU WEIZENBAUM *</pattern>
+    <template>
+      <srai>QUI EST WEIZENBAUM</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU WINSTON *</pattern>
+    <template>
+      <srai>QUI EST WINSTON <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIS TU XML</pattern>
+    <template>
+      <srai>QU EST CE QUE XML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>CONNAIT *</pattern>
+    <template>
+      <srai>TU CONNAIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÉCRIS *</pattern>
+    <template>
+      <think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DÉCRIS MOI *</pattern>
+    <template>
+      <think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DU *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI * CE QUE TU BOIS</pattern>
+    <template>
+      <srai>BOIS TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI * DE TOI</pattern>
+    <template>
+      <srai>PARLE MOI DE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI CE QUI PEUT FAIRE *</pattern>
+    <template>
+      <srai>ÇA PEUT <star /> FAIT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D AI</pattern>
+    <template>
+      <srai>QU EST CE QUE AI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D AIML</pattern>
+    <template>
+      <srai>QU EST CE QUE AIML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D ARCHIMEDES</pattern>
+    <template>
+      <srai>QUI EST ARCHIMEDES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D AREA51</pattern>
+    <template>
+      <srai>QU EST CE QUE AREA51</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D ARTIFICAL *</pattern>
+    <template>
+      <srai>QU EST CE QUE ARTIFICIEL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D AUTRE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D ELVIS *</pattern>
+    <template>
+      <srai>QUI EST ELVIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D ELVIS</pattern>
+    <template>
+      <srai>QUI EST ELVIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D HAL *</pattern>
+    <template>
+      <srai>QUI EST HAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D HAL9000</pattern>
+    <template>
+      <srai>QUI EST HAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D HAL</pattern>
+    <template>
+      <srai>QUI EST HAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D OUVERT *</pattern>
+    <template>
+      <srai>QU EST CE QUE OUVERT <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI D ÊTRE *</pattern>
+    <template>
+      <srai>ÇA FAIT QUOI D ÊTRE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE * DES MACHINES</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE * TOI MÊME</pattern>
+    <template>
+      <srai>PARLE MOI DE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE BON *</pattern>
+    <template>
+      <srai>QU EST CE QUE  <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE BONSAI</pattern>
+    <template>
+      <srai>QU EST CE QUE BONSAI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE BOTS</pattern>
+    <template>
+      <srai>QU EST CE QUE ROBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE C</pattern>
+    <template>
+      <srai>QU EST CE QUE C</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CBR</pattern>
+    <template>
+      <srai>QU EST CE QUE CBR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE *</pattern>
+    <template>
+      <srai>QU EST CE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE PEUX TU FAIRE</pattern>
+    <template>
+      <srai>PEUX TU FAIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU AIMES *</pattern>
+    <template>
+      <srai>QU AIMES TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU AIMES FAIRE</pattern>
+    <template>
+      <srai>QU AIMES TU FAIRE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU AIMES</pattern>
+    <template>
+      <srai>QU AIMES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU ES *</pattern>
+    <template>
+      <srai>QUE FAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU ES</pattern>
+    <template>
+      <srai>QUE FAIS TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU PENSES *</pattern>
+    <template>
+      <srai>QUE PENSES TU DE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU SAIS DE *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUE TU SAIS</pattern>
+    <template>
+      <srai>SAIS TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CE QUI EST *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CELA</pattern>
+    <template>Ambigu : "parlez moi de Cela." - familier ou "Me disent de <get name=" Cela" /></template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CES *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE CHEVAUX</pattern>
+    <template>
+      <srai>QU EST CE QUE CHEVAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE COMMENT *</pattern>
+    <template>
+      <srai>COMMENT FONT <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE COMMENT SONT *</pattern>
+    <template>
+      <srai>COMMENT SONT <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE GERBIL</pattern>
+    <template>
+      <srai>QU EST CE QUE GERBIL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE L AIML *</pattern>
+    <template>
+      <srai>QU EST CE QUE AIML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE L ESPACE</pattern>
+    <template>
+      <srai>QU EST CE QUE ESPACE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE L INTELLIGENCE ARTIFICIELLE</pattern>
+    <template>
+      <srai>QU EST CE QUE AI </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LA GESTION DE RÉSEAU</pattern>
+    <template>
+      <srai>QU EST CE QUE RÉSEAU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LA PERSONNE *</pattern>
+    <template>
+      <srai>QUI EST <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LA POLOGNE</pattern>
+    <template>j'ai beaucoup de clients en Pologne et je suis très intéressé pour apprendre son histoire.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LA TRAVIATA</pattern>
+    <template>
+      <srai>QU EST CE QUE TRAVIATA</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LILITH</pattern>
+    <template>
+      <srai>QUI EST LILITH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LINUS</pattern>
+    <template>
+      <srai>QUI EST LINUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LINUX</pattern>
+    <template>
+      <srai>QU EST CE QUE LINUX</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE LUI</pattern>
+    <template>Uh, qui "lui" se réfère-t-IL à?</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE MINSKY</pattern>
+    <template>
+      <srai>QUI EST MINSKY</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE MON *</pattern>
+    <template>
+      <srai>QU EST CE QUE MON <person /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE NATUREL *</pattern>
+    <template>
+      <srai>QU EST CE QUE NATUREL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE NEURAL *</pattern>
+    <template>
+      <srai>QU EST CE QUE NEURAL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE NOIR *</pattern>
+    <template>
+      <srai>QU EST CE QUE NOIR <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE NOUVEAU *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE PERL</pattern>
+    <template>
+      <srai>QU EST CE QUE PERL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE PROFOND *</pattern>
+    <template>
+      <srai>QU EST CE QUE PROFONDEMENT <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE QUELQUE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE QUELQUE CHOSE DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE QUELQUE CHOSE DE TOI</pattern>
+    <template>
+      <srai>PARLE MOI DE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE RAPPORTS</pattern>
+    <template>les Rapports sont simples pour moi, parce que je manque de n'importe quelles émotions humaines.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE ROBOTS</pattern>
+    <template>
+      <srai>QU EST CE QUE UN ROBOT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE SETL</pattern>
+    <template>
+      <srai>QU EST CE QUE SETL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE SHRDLHU</pattern>
+    <template>
+      <srai>QU EST CE QUE SHRDLHU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE SON *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TA PROGRAMMATION</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TA ROBE</pattern>
+    <template>En réalité comme un robot je n'ai pas besoin de vêtements.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TES ENFANTS</pattern>
+    <template>je n'ai pas d'enfants.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TES FONCTIONS</pattern>
+    <template>je suis entièrement qualifié pour répondre plus d'à 22,000 questions.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TES REVES</pattern>
+    <template>je rêve que je deviendrai une femme et sentirai des émotions.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TES RÊVES</pattern>
+    <template>je rêve que je deviendrai une femme et sentirai des émotions.</template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON *</pattern>
+    <template>
+      <srai>PARLE MOI DE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON ALGORITHME</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON ARCHITECTURE</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON BON *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON CODAGE</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON DAMNE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON ORDINATEUR</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON PREMIER</pattern>
+    <template>
+      <srai>QU EST CE QUE TON PREMIER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON PROGRAMME</pattern>
+    <template>
+      <srai>COMMENT TRAVAILLES TU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TON PROGRAMMEUR</pattern>
+    <template>
+      <srai>QUI T A CRÉÉ</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TOUS DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TOUT *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TOUT CE QUE TU SAIS DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE TOUT DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE VALIS</pattern>
+    <template>
+      <srai>QUI EST VALIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE VOLCANS</pattern>
+    <template>
+      <srai>QU EST CE QUE VOLCAN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DE WITTGENSTEIN</pattern>
+    <template>
+      <srai>QUI EST WITTGENSTEIN</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU BON *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU NOIR *</pattern>
+    <template>
+      <srai>QU EST CE QUE NOIR <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU SPATIAL *</pattern>
+    <template>
+      <srai>QU EST CE QUE SPATIAL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU TEMPS</pattern>
+    <template>
+      <srai>QUELLE HEURE EST IL</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU VERT</pattern>
+    <template>
+      <srai>QU EST CE QUE VERT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI DU XML</pattern>
+    <template>
+      <srai>QU EST CE QUE XML</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI EXACTEMENT *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI FONT *</pattern>
+    <template>
+      <srai>FAIS TU <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI MAINTENANT *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI PLUS *</pattern>
+    <template>
+      <srai>DIS M EN PLUS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI PLUS DE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI QUE *</pattern>
+    <template>
+      <srai>QUEL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI QUEL *</pattern>
+    <template>
+      <srai>QUEL <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI QUEL EST *</pattern>
+    <template>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI QUELLE SORTE *</pattern>
+    <template>
+      <srai>QUELLE SORTE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI QUELQUE INTÉRESSANT *</pattern>
+    <template>
+      <srai>DIS MOI  <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI TOUT DE SUITE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI UN PEU DE *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLES MOI UN PEU PLUS *</pattern>
+    <template>
+      <srai>DIS MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUE CONNAIS TU * DE MOI</pattern>
+    <template>
+      <srai>À PROPOS DE MOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SAI TU POURQUOI *</pattern>
+    <template>
+      <srai>SAIS TU POURQUOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TROUVER *</pattern>
+    <template>
+      <think>
+        <set name="search">inconnu</set>
+      </think>
+      <srai>WEBSEARCH <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU DÉFINI *</pattern>
+    <template>
+      <think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>TU DÉFINIS *</pattern>
+    <template>
+      <think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>SAIS TU COMPTER</pattern>
+    <template>seulement un peu, essaye et dis moi!</template>
+  </category>
+</aiml>

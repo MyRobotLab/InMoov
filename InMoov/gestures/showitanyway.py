@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def showitanyway():
   x = (random.randint(1, 3))
   if x == 1:

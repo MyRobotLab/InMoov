@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def rollHead():
   i01.startedGesture()
   i01.setHeadVelocity(70, 70, 70)

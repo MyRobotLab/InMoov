@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>LABORATORIO DI IMMAGINI *</pattern>
+<template><random>
+        <li>Ecco qui.</li>
+        <li>Spero che ti piaccia questa foto.</li>
+        <li>Ho questa foto.</li>
+        <li>Ecco qua.</li>
+        <li>Guarda quello.</li>
+        <li>Ho trovato questa foto di.</li>
+        <li>Ho mostrato un'immagine per te.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>FAMMI VEDERE *</pattern>
+<template><srai>LABORATORIO DI IMMAGINI <star/></srai></template>
+</category>
+<category><pattern>CHUIDI * FOTO</pattern>
+<template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+</category>
+<category><pattern>CHUIDI * IMMAGINE</pattern>
+<template><srai>CHUIDI <star/> FOTO</srai></template>
+</category>
+</aiml>

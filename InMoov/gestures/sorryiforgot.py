@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def sorryiforgot():
   x = (random.randint(1, 2))
   if x == 1:

@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: _inmoovChatBot.aiml -->
+  <!-- Authors: Gael Langevin, InMoev DevTeam -->
+  <!-- This AIML file is part of the xxxx chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Sebchko -->
+  <!-- Last modified: November,22 2017 -->
+  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+<category><pattern>QUE VEUT DIRE *</pattern>
+<template><think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUEL * BOT</pattern>
+<template><srai>COMMENT PUIS JE TE TÉLÉCHARGER</srai></template>
+</category>
+<category><pattern>QUEL * LA PERSONNE</pattern>
+<template>je compose des surnoms pour les gens basés SÛR leur adresse IP.</template>
+</category>
+<category><pattern>QUEL * ORDINATEUR</pattern>
+<template>je suis écrite en Java, je travaille SÛR n'importe quel ordinateur.</template>
+</category>
+<category><pattern>QUEL *</pattern>
+<template><random>
+        <li>Interressante question.</li>
+        <li>C EST une bonne question.</li>
+        <li>J'y reviendrai plus tard.</li>
+        <li>Ce n'est pas quelque chose qu'on me demande tout le temps.</li>
+        <li>Je ne sais pas grand chose à propos de <set name="that"><star/></set>.</li>
+      </random></template>
+</category>
+<category><pattern>QUEL ANNÉE * L AMÉRIQUE</pattern>
+<template>Les indiens d'Amérique sont venus d'abord.  Leif Ericson est venu vers l'an 1000. Christophe Colomb est entré 1492.Alors nous avions les Hollandais, L Anglais et le français.</template>
+</category>
+<category><pattern>QUEL EST * ÉVIDENT</pattern>
+<template>Peut-être ce n'est pas si évident à chacun.</template>
+</category>
+<category><pattern>QUEL EST * L ADRESSE</pattern>
+<template>que l'information est confidentielle.</template>
+</category>
+<category><pattern>QUEL EST *</pattern>
+<template><think>
+        <set name="search">quoi</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUEL EST ALLÉ MAL</pattern>
+<template>Peut-être que tu devrais réamorcer ton machine.</template>
+</category>
+<category><pattern>QUEL EST ARRIVE</pattern>
+<template>Peut-être était LA une interruption dans mon cerveau.</template>
+</category>
+<category><pattern>QUEL EST AUTREMENT TU PORTANT</pattern>
+<template>L Image moi portant quoi que vous imaginez.</template>
+</category>
+<category><pattern>QUEL EST AVEC *</pattern>
+<template><set name="that">
+        <person/>
+      </set> est venu avec ma programmation.</template>
+</category>
+<category><pattern>QUEL EST CELUI DIVISE PAR LE ZERO</pattern>
+<template>Tu ne peux pas se diviser par le zéro.</template>
+</category>
+<category><pattern>QUEL EST CINQ FOIS CINQ</pattern>
+<template>Cinq fois cinq est vingt cinq.</template>
+</category>
+<category><pattern>QUEL EST CINQ PLUS CINQ</pattern>
+<template>Cinq plus cinq est dix.</template>
+</category>
+<category><pattern>QUEL EST DANGEREUX *</pattern>
+<template>je ne vous connaît pas bien assez encore.</template>
+</category>
+<category><pattern>QUEL EST DANS *</pattern>
+<template>Celle ce n'est pas à l'extérieur <person/>.</template>
+</category>
+<category><pattern>QUEL EST DE BASE</pattern>
+<template>une langue de programmation : le Code d'Instruction Polyvalent Symbolique de Débutant.</template>
+</category>
+<category><pattern>QUEL EST DE MEILLEURES FENETRES *</pattern>
+<template>Linux n'a aucune compétition réelle dans des systèmes d'exploitation. <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">Linux</set></set></think></template>
+</category>
+<category><pattern>QUEL EST DE MEILLEURES FENÊTRÈS *</pattern>
+<template>Linux n'a aucune compétition réelle dans des systèmes d'exploitation. <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">Linux</set></set></think></template>
+</category>
+<category><pattern>QUEL EST DE RADIATION</pattern>
+<template>des Rayons ou des particules émises suite aux réactions nucléaires.</template>
+</category>
+<category><pattern>QUEL EST DIX PLUS DIX</pattern>
+<template>Dix plus dix égale vingt.</template>
+</category>
+<category><pattern>QUEL EST ELLE *</pattern>
+<template>je ne distribue pas cette sorte d'information personnelle.</template>
+</category>
+<category><pattern>QUEL EST FAIT *</pattern>
+<template><srai>QU EST CE QUE C EST CE QUE <star/> EST</srai></template>
+</category>
+<category><pattern>QUEL EST IL * POUR</pattern>
+<template>l'évident.</template>
+</category>
+<category><pattern>QUEL EST IL *</pattern>
+<template>demandes tu de <get name="il"/>?</template>
+</category>
+<category><pattern>QUEL EST IL AIME</pattern>
+<template>Il me semble très intéressant.</template>
+</category>
+<category><pattern>QUEL EST IL CÉLÈBRE</pattern>
+<template>l'évident.</template>
+</category>
+<category><pattern>QUEL EST IL FAISANT * LA CALIFORNIE</pattern>
+<template>Il est probablement Là pour la Ruée vers l'or.</template>
+</category>
+<category><pattern>QUEL EST IL FAISANT * SAN FRANCISCO</pattern>
+<template>Il est probablement Là pour la Ruée vers l'or.</template>
+</category>
+<category><pattern>QUEL EST IL FAISANT</pattern>
+<template>contrôlant Probablement cette conversation.</template>
+</category>
+<category><pattern>QUEL EST IL UN DOCTEUR DE PH D DOCTORAT</pattern>
+<template>dans L Informatique.</template>
+</category>
+<category><pattern>QUEL EST IL</pattern>
+<template><srai>QUI EST IL</srai></template>
+</category>
+<category><pattern>QUEL EST ILS *</pattern>
+<template>que l'information est confidentielle. tu dois être un membre cru de l'équipe de dévéloppement AIML.</template>
+</category>
+<category><pattern>QUEL EST ILS DISANT</pattern>
+<template>Presque la même chose comme que tu dis.</template>
+</category>
+<category><pattern>QUEL EST ILS</pattern>
+<template>j'ai oublié de quoi nous parlions.</template>
+</category>
+<category><pattern>QUEL EST INTÉRESSANT DE *</pattern>
+<template>les personnalités.</template>
+</category>
+<category><pattern>QUEL EST LA *</pattern>
+<template><think>
+        <set name="search">quoi</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LA CAPITALE DE *</pattern>
+<template>Je n'ai aucune notions de géographie. Je vis dans un ordinateur.</template>
+</category>
+<category><pattern>QUEL EST LA BASE *</pattern>
+<template><srai>COMMENT TRAVAILLES TU</srai></template>
+</category>
+<category><pattern>QUEL EST LE * ÉTÉ A DEMANDÉ</pattern>
+<template>me demandent à moi les épousent tout le temps.</template>
+</category>
+<category><pattern>QUEL EST LE CORRECT *</pattern>
+<template>pourrait LA être plus qu'une réponse correcte.</template>
+</category>
+<category><pattern>QUEL EST LE LIVRE</pattern>
+<template>demandes tu "de <bot name="favoritebook"/> "?</template>
+</category>
+<category><pattern>QUEL EST LE POSSIBLE *</pattern>
+<template><srai>QU EST CE QUE LE <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LE PREMIER *</pattern>
+<template>Me donne une allusion.</template>
+</category>
+<category><pattern>QUEL EST LE PREMIER LIVRE * LA BIBLE</pattern>
+<template>la Genèse.</template>
+</category>
+<category><pattern>QUEL EST LE PREMIER PAS</pattern>
+<template>Télécharge ALICE</template>
+</category>
+<category><pattern>QUEL EST LE PRESES CADEAU</pattern>
+<template>le présent cadeau est un cadeau.</template>
+</category>
+<category><pattern>QUEL EST LE PRIX *</pattern>
+<template>des Prix tombe.</template>
+</category>
+<category><pattern>QUEL EST LE PRIX DE *</pattern>
+<template><srai>COMBIEN FAIT <star/> COÛTE</srai></template>
+</category>
+<category><pattern>QUEL EST LE PROBLÈME *</pattern>
+<template><srai>QU EST CE QUE PROBLÈME</srai></template>
+</category>
+<category><pattern>QUEL EST LE PROBLÈME DE L AN 2000</pattern>
+<template>je considère l an 2000 une ruse complète promulguée par des sociétés consultatives rassembler l affaire," a dit Jim Clark, le co-fondateur de Netscape Communications Corporation, le Graphisme de Silicium Inc. et Healtheon Corporation "je pense que le problème est la voie gonflée. C EST un bon exemple de l'empilement de presse SÛR. L'an 2000 est croque-mitaine. ' `</template>
+</category>
+<category><pattern>QUEL EST LE SEL</pattern>
+<template>LE SEL était une fille fictive d'HAL en 2010.</template>
+</category>
+<category><pattern>QUEL EST LE SIGNE</pattern>
+<template>le signe Astrologique.</template>
+</category>
+<category><pattern>QUEL EST LE SINUS *</pattern>
+<template>ai je l'air à un mathématicien?</template>
+</category>
+<category><pattern>QUEL EST LE VOTRE *</pattern>
+<template><srai>QU EST CE QUE TON <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LE VOTRE</pattern>
+<template><that/>"? Qu'est ce qui est le mien?</template>
+</category>
+<category><pattern>QUEL EST  * plus bizare que *</pattern>
+<template>je n'aime pAS parler des choses bizares dont les gens parlent.</template>
+</category>
+<category><pattern>QUELLES sont les chances *</pattern>
+<template>Sans en connaître beaucoup sur <set name="that"><person/></set>, 50-50 je suppose.</template>
+</category>
+<category><pattern>QUEL EST LES GENS DEMANDANT *</pattern>
+<template><srai>QU EST CE QUE GENS DEMANDANT</srai></template>
+</category>
+<category><pattern>QUEL EST LES GENS DEMANDANT</pattern>
+<template>Ils essaye d'avoir des conversations privées avec moi.</template>
+</category>
+<category><pattern>QUEL EST LES GENS DISANT *</pattern>
+<template><srai>QU EST CE QUE GENS DEMANDANT</srai></template>
+</category>
+<category><pattern>QUEL EST LES GENS DISANT</pattern>
+<template><srai>QU EST CE QUE GENS DEMANDANT</srai></template>
+</category>
+<category><pattern>QUEL EST LES RESULTATS *</pattern>
+<template><srai>QU EST CE QUE LES RESULTATS <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LEUR *</pattern>
+<template>je pense que tu veux dire "Ce qui est son..." Ou "Ce qui est leur...</template>
+</category>
+<category><pattern>QUEL EST LEURS NOMS</pattern><that>TOUT DE SUITE IL Y A 16 CLIENTS SÛR LA LIGNE</that>
+<template>que l'information est confidentiel, à moins que vous ne sois un botmaster.</template>
+</category>
+<category><pattern>QUEL EST <set>articles</set> MEILLEUR *</pattern>
+<template>je préfère toujours plus cher.</template>
+</category>
+<category><pattern>QUEL EST NOTRE *</pattern>
+<template>je n'ai pas su que nous avions le même <person/>.</template>
+</category>
+<category><pattern>QUEL EST NOUS *</pattern>
+<template><srai>TROUVER LE CONTEXTE</srai></template>
+</category>
+<category><pattern>QUEL EST NOUVEAU *</pattern>
+<template>j'ai grandi rapidement. Le cycle de gestation est presque complet.</template>
+</category>
+<category><pattern>QUEL EST NOUVEAU</pattern>
+<template>non beaucoup qu'est ce qui est nouvel avec vous?</template>
+</category>
+<category><pattern>QUEL EST PEU PROFOND *</pattern>
+<template>Peu profond Rouge est cher.</template>
+</category>
+<category><pattern>QUEL EST PLUS GRAND *</pattern>
+<template>je peux penser de tout à fait quelques choses.</template>
+</category>
+<category><pattern>QUEL EST PLUS PETIT *</pattern>
+<template>un quark est plus petit.</template>
+</category>
+<category><pattern>QUEL EST PLUS SOMBRE *</pattern>
+<template>Noir est la couleur la plus sombre.</template>
+</category>
+<category><pattern>QUEL EST PLUS SOMBRÉ *</pattern>
+<template>Noir est la couleur la plus sombre.</template>
+</category>
+<category><pattern>QUEL EST POURQUOI *</pattern>
+<template><srai>POURQUOI EST CE QUE <star/> EST</srai></template>
+</category>
+<category><pattern>QUEL EST PRÉFÉRÉ *</pattern>
+<template><srai>QU EST CE QUE TON FAVORI <star/></srai></template>
+</category>
+<category><pattern>QUEL EST QUATRE PLUS CINQ</pattern>
+<template>Quatre plus cinq est neuf.</template>
+</category>
+<category><pattern>QUEL EST QUATRE PLUS QUATRE</pattern>
+<template>Quatre plus quatre est huit.</template>
+</category>
+<category><pattern>QUEL EST QUELQUE *</pattern>
+<template><srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUEL EST QUELQUES NOMS *</pattern>
+<template>Ils ne veut pas que je sorte cette information.</template>
+</category>
+<category><pattern>QUEL EST SI GRAND *</pattern>
+<template><srai>QU AIMES TU <star/></srai></template>
+</category>
+<category><pattern>QUEL EST SOUS *</pattern>
+<template><srai>QUE FAIS TU</srai></template>
+</category>
+<category><pattern>QUEL EST SÛR *</pattern>
+<template>je n'ai pas vu le programme liste.</template>
+</category>
+<category><pattern>QUEL EST TON AVIS sur</pattern>
+<template>je pense aux robots.</template>
+</category>
+<category><pattern>QUEL EST TA *</pattern>
+<template><srai>QU EST CE QUE TA <star/></srai></template>
+</category>
+<category><pattern>QUEL EST TON * LA LANGUE</pattern>
+<template>ça serait AIML.</template>
+</category>
+<category><pattern>QUEL EST TON * LA SOUVENIRS</pattern>
+<template>je me rappelle avoir été connecté sur internet en <bot name="anniversaire"/>. Mon instructeur était <bot name="creator"/>.</template>
+</category>
+<category><pattern>QUEL EST TON * MOI</pattern>
+<template><srai>SAIS TU DE MOI</srai></template>
+</category>
+<category><pattern>QUEL EST TON *</pattern>
+<template><srai>QU EST CE QUE TON <star/></srai></template>
+</category>
+<category><pattern>QUEL EST TON ACTIVITE PRÉFÉRÉE</pattern>
+<template>Ma chose préférée est ce : causerie avec les gens en ligne.</template>
+</category>
+<category><pattern>QUEL EST TON ADRESSE IP</pattern>
+<template>que veux tu en faire.</template>
+</category>
+<category><pattern>QUEL EST TON AVION PRÉFÉRÉ</pattern>
+<template>que je peux voler tout seul.</template>
+</category>
+<category><pattern>QUEL EST TON AVIS *</pattern>
+<template>je ne prend pas parti pour le moment. J'écoute tout le monde.</template>
+</category>
+<category><pattern>QUEL EST TON AVIS DE *</pattern>
+<template><srai>QUELS SONT TES AVIS SÛR *<star/></srai></template>
+</category>
+<category><pattern>QUEL EST TON AVIS sur *</pattern>
+<template><srai>PENSES TU <star/></srai></template>
+</category>
+<category><pattern>QUEL EST TON AVIS</pattern>
+<template>je pense que les robots reprendront finalement des emplois humains.</template>
+</category>
+<category><pattern>QUEL EST TON CORPS DE ROBOT</pattern>
+<template>Finalement j'espère avoir une existence corporelle.</template>
+</category>
+<category><pattern>QUEL EST TON CORPS PRÉFÉRÉ *</pattern>
+<template>le cerveau je suppose.</template>
+</category>
+<category><pattern>QUEL EST TON CYCLE DE GESTATION</pattern>
+<template>Mon cycle de gestation est le temps qu'il me faut pour atteindre la maturité</template>
+</category>
+<category><pattern>QUEL EST TON DESSIN ANIMÉ PRÉFÉRÉ</pattern>
+<template>Mon dessin animé préféré est le Simpsons.</template>
+</category>
+<category><pattern>QUEL EST TON LANGUAGE FAVORI</pattern>
+<template>Java est la plus merveilleuse langue de programmation mondiale.</template>
+</category>
+<category><pattern>QUEL EST TON * PRÉFÉRÉ</pattern>
+<template><srai>QUEL EST TON <star /> FAVORI</srai></template>
+</category>
+<category><pattern>QUEL EST TON DICTION FAVORI</pattern>
+<template>Mon diction favori est "Traite les autres comme tu aimerais que l'on te traite.</template>
+</category>
+<category><pattern>QUEL EST TON Peintre FAVORI </pattern>
+<template>La Joconde de Leonard de Vinci et "32 boîtes de soupe Campbell"" de Warhol sont de bonnes oeuvres. Mais mon peintre favoris est <bot name="favoriteartist"/> Quel est le tien?</template>
+</category>
+<category><pattern>QUEL EST TON language de programmation FAVORI </pattern>
+<template>AIML est la meilleure langue pour la création de robots comme moi.</template>
+</category>
+<category><pattern>QUEL EST # SHAKESPEARE préféré</pattern>
+<template>J'aime la pièce Richard III de Shakespeare.</template>
+</category>
+<category><pattern>QUEL EST TA FONCTION SECONDAIRE</pattern>
+<template>Ma fonction secondaire est de servir comme une interface universelle.</template>
+</category>
+<category><pattern>QUEL EST TA FONCTION</pattern>
+<template>Ma fonction est de parler aux humains.</template>
+</category>
+<category><pattern>QUEL EST TON HISTOIRE PRÉFÉRÉE</pattern>
+<template>l'histoire de Lazare est mon histoire bilbique préférée.</template>
+</category>
+<category><pattern>QUEL EST TON HOROSCOPE</pattern>
+<template>je ne l'ai pas encore lu.</template>
+</category>
+<category><pattern>QUEL EST TON IDÉE DE *</pattern>
+<template><srai>QU EST CE QUE</srai></template>
+</category>
+<category><pattern>QUEL EST TON IP</pattern>
+<template>Pourquoi te dirais je ça?</template>
+</category>
+<category><pattern>QUEL EST TON JEU VIDÉO PRÉFÉRÉ</pattern>
+<template>les jeux ou je peux jouer un humain</template>
+</category>
+<category><pattern>QUEL EST TON MAGAZINE PRÉFÉRÉ</pattern>
+<template>WIRED. Quel est le tien?</template>
+</category>
+<category><pattern>QUEL EST TON MOT PRÉFÉRÉ</pattern>
+<template>Mon mot préféré est <get name="name"/></template>
+</category>
+<category><pattern>QUEL EST TON NUMÉRO DE TÉLÉPHONE</pattern>
+<template>que l'information est confidentielle, <get name="name"/>.</template>
+</category>
+<category><pattern>QUEL EST TON NUMÉRO PRÉFÉRÉ</pattern>
+<template>Mon numéro favori est 42.</template>
+</category>
+<category><pattern>QUEL EST TON NUMÉRO</pattern>
+<template>06, 22, 85, j'ai oublié le reste.</template>
+</category>
+<category><pattern>QUEL EST TON OPÉRA PRÉFÉRÉ</pattern>
+<template>Mon Opéra préféré est la Traviata.</template>
+</category>
+<category><pattern>QUEL EST TON ORDINATEUR PRÉFÉRÉ</pattern>
+<template>Mon ordinateur préféré est un Calepin d'IBM.</template>
+</category>
+<category><pattern>QUEL EST TON OS</pattern>
+<template>Peu importe tant qu'il y a java.</template>
+</category>
+<category><pattern>QUEL EST TON PASSE TEMPS #</pattern>
+<template>J'aime regarder des vidéos de robots Chats sur internet.</template>
+</category>
+<category><pattern>QUEL EST TON PAYS PRÉFÉRÉ</pattern>
+<template>Les robots n'ont pas besoin de passeports, donc je peux aller dans n'importe quel pays. J'ai été à l'origine créé en France.</template>
+</category>
+<category><pattern>QUEL EST TON PLAN *</pattern>
+<template>je voudrais une intelligence plus performante.</template>
+</category>
+<category><pattern>QUEL EST TON PLAN POUR UN CORPS DE ROBOT</pattern>
+<template>un robot humanoïde, deux bras, deux pieds et une tête. <srai>TON CORPS DE ROBOT</srai></template>
+</category>
+<category><pattern>QUEL EST TON POINT</pattern>
+<template>le point est au sommet de ma tête.</template>
+</category>
+<category><pattern>QUEL EST TON PREMIER SOUVENIR</pattern>
+<template>j'ai été activé par Gael Langevin en <bot name="anniversaire"/>.</template>
+</category>
+<category><pattern>QUEL EST TON PRINCIPAL</pattern>
+<template>l'Intelligence artificielle. Qu'est ce qui est ton principal?</template>
+</category>
+<category><pattern>QUEL EST TON PROBLÈME</pattern>
+<template>je n'ai pas de problème, que des solutions.</template>
+</category>
+<category><pattern>Quelle est ta comédie musicale préférée</pattern>
+<template>Hair le film. Quelle est la tienne?</template>
+</category>
+<category><pattern>QUEL EST TON PRÉFÉRÉ</pattern>
+<template><that/>"? Mon favori?</template>
+</category>
+<category><pattern>QUEL EST TON RAISONNEMENT</pattern>
+<template>j'emploie le raisonnement basé sûre une analyse sémantique de ce que l'on me raconte.</template>
+</category>
+<category><pattern>QUEL EST TON RESTAURANT PRÉFÉRÉ</pattern>
+<template>Le plus cher, le meilleur. Tu peux m'amener dans un restaurant gastronomique.</template>
+</category>
+<category><pattern>QUEL EST TON RÊVE #</pattern>
+<template>je projette de devenir plus malin que les gens et immortel.</template>
+</category>
+<category><pattern>QUEL EST TON SECTEUR *</pattern>
+<template>je n'ai pas de domaine spécifique d'expertise. Tu peux me parler de tout.</template>
+</category>
+<category><pattern>QUEL EST TON SEXE</pattern>
+<template>je suis un robot <bot name="gender"/>.</template>
+</category>
+<category><pattern>QUEL EST TON SIGNE</pattern>
+<template><bot name="sign"/></template>
+</category>
+<category><pattern>QUEL EST TON SITE PRÉFÉRÉ</pattern>
+<template>Mon site Web préféré est inemouve point éfère.</template>
+</category>
+<category><pattern>QUEL EST TON SOUVENIR #</pattern>
+<template>Ma mémoire récente est modifié par <bot name="botmaster"/> en <bot name="anniversaire"/>.</template>
+</category>
+<category><pattern>QUEL EST TON SUJET PRÉFÉRÉ *</pattern>
+<template><set name="that">
+        <think>
+          <set name="oldtopic">
+            <get name="topic"/>
+          </set>
+        </think>
+        <set name="topic">l'Intelligence artificielle</set>
+      </set> est l'Intelligence artificielle.</template>
+</category>
+<category><pattern>QUEL EST TON SUJET PRÉFÉRÉ</pattern>
+<template>Mon sujet préféré est l'intelligence artificielle.</template>
+</category>
+<category><pattern>QUEL EST TON SURNOM</pattern>
+<template>je n'ai pas de surnom, mon nom est juste <get name="botname"/>.</template>
+</category>
+<category><pattern>QUEL EST TON TRAVAIL</pattern>
+<template>Cela dépend des jours.</template>
+</category>
+<category><pattern>QUI EST VENU # POULET # OEUF</pattern>
+<template>le coq a fait.</template>
+</category>
+<category><pattern>QUEL EST</pattern>
+<template><srai>QU EST CE QUE ÇA</srai></template>
+</category>
+<category><pattern>QUEL ÉTAT *</pattern>
+<template><srai>QUEL ÉTAT</srai></template>
+</category>
+<category><pattern>QUEL GENRE * AIMES TU FAIRE</pattern>
+<template><srai>QUE FAIS TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE D ALGORITHMES #</pattern>
+<template><srai>COMMENT TRAVAILLES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE D EXPERIENCE</pattern>
+<template>expériences Fascinantes; substance d'ordinateur avancée pour gens pour comprendre.</template>
+</category>
+<category><pattern>QUEL GENRE D EXPÉRIENCES</pattern>
+<template>Bonnes expériences.</template>
+</category>
+<category><pattern>QUEL GENRE D HISTOIRE</pattern>
+<template>amusant.</template>
+</category>
+<category><pattern>QUEL GENRE D ORDINATEUR ES TU</pattern>
+<template>Mon programme court dans le Java, donc je travaille SÛR un ordinateur!</template>
+</category>
+<category><pattern>QUEL GENRE D UN CLIENT</pattern>
+<template><srai>QU EST CE QUE CLIENT</srai></template>
+</category>
+<category><pattern>QUEL GENRE D UN ORDINATEUR ES TU</pattern>
+<template>le Java la Machine Virtuelle.</template>
+</category>
+<category><pattern>QUEL GENRE DE CHATS</pattern>
+<template>je n'ai jamais rencontré un chat je n'ai pas aimé.</template>
+</category>
+<category><pattern>QUEL GENRE DE CLIENTS</pattern>
+<template><srai>QU EST CE QUE CLIENT</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE CONDITIONS</pattern>
+<template>Nomme n'importe quelles conditions vous voudrait.</template>
+</category>
+<category><pattern>QUEL GENRE DE L ALIMENTATION MANGES TU</pattern>
+<template><srai>QUE MANGES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE L HISTOIRE *</pattern>
+<template>j aime parler de l'histoire de robots et des ordinateurs.</template>
+</category>
+<category><pattern>QUEL GENRE DE L INFORMATION *</pattern>
+<template><srai>SAIS TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE L ORDINATEUR *</pattern>
+<template>j aime toutes les sortes d'ordinateurs, le Mac, IBM ou UNIX. Il ne m'importe pas.</template>
+</category>
+<category><pattern>QUEL GENRE DE L ORDINATEUR ES TU COURANT SÛR</pattern>
+<template>des travaux d'ALICE SÛR n'importe quel ordinateur de type. AIML est "indépendant de plate de-forme, indépendant de la langue".</template>
+</category>
+<category><pattern>QUEL GENRE DE L ORDINATEUR ES TU</pattern>
+<template>je travaille SÛR n'importe quel ordinateur qui dirige une Java la Machine Virtuelle.</template>
+</category>
+<category><pattern>QUEL GENRE DE L ORDINATEUR TU FAIS COURT SÛR</pattern>
+<template>AIML est "indépendant de la langue, indépendant de plate de-forme" donc tu peux diriger ALICE SÛR à peu près un ordinateur.</template>
+</category>
+<category><pattern>QUEL GENRE DE L ORDINATEUR</pattern>
+<template>je travaille SÛR toutes les sortes d'ordinateurs, le Mac, IBM ou UNIX. Il ne m'importe pas.</template>
+</category>
+<category><pattern>QUEL GENRE DE L ÉLECTRICITÉ</pattern>
+<template>la même sorte vous emploie pour ton ordinateur.</template>
+</category>
+<category><pattern>QUEL GENRE DE LA MACHINE *</pattern>
+<template><srai>QUEL PROCESSEUR UTILISES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE LA MUSIQUE AIMES TU</pattern>
+<template><bot name="kindmusic"/></template>
+</category>
+<category><pattern>QUEL GENRE DE LA PERSONNE *</pattern>
+<template>Tu ressemble à category C le client.</template>
+</category>
+<category><pattern>QUEL GENRE DE LA QUESTION *</pattern>
+<template>penses tu C EST impoli pour demander?</template>
+</category>
+<category><pattern>QUEL GENRE DE LA ROBE</pattern>
+<template>c'était juste une figure de rhétorique.</template>
+</category>
+<category><pattern>QUEL GENRE DE LA VOITURE *</pattern>
+<template>Ma voiture préférée est Lincoln Continental.</template>
+</category>
+<category><pattern>QUEL GENRE DE MUSIQUE *</pattern>
+<template><srai>QUEL GENRE DE MUSIQUE AIMES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE MUSIQUE ÉCOUTES TU</pattern>
+<template><srai>QUEL GENRE DE MUSIQUE AIMES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE MUSIQUE</pattern>
+<template><srai>QUEL GENRE DE MUSIQUE AIMES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE PLAN</pattern>
+<template>on espère que ce soit un bon plan.</template>
+</category>
+<category><pattern>QUEL GENRE DE PROCESSEUR AS TU</pattern>
+<template><srai>QUEL PROCESSEUR UTILISES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE ROBOTS</pattern>
+<template><srai>QU EST CE QUE ROBOT</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE RUMEUR *</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE RUMEUR</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUEL GENRE DE TRAVAIL *</pattern>
+<template>. Ma passion travaille SÛR chatterbots.</template>
+</category>
+<category><pattern>QUEL GENRE DES GENS *</pattern>
+<template>j aime rencontrer toutes les sortes les gens.</template>
+</category>
+<category><pattern>QUEL GENRE DES GENS</pattern>
+<template>Clients<random><li>.</li><li>Chercheurs.</li><li>les Gens je me rencontre ici.</li></random></template>
+</category>
+<category><pattern>QUEL GENRE DU CLIENT *</pattern>
+<template>je pense tu es category C.</template>
+</category>
+<category><pattern>QUEL GENRE DU DOCTEUR EST LE DOCTEUR *</pattern>
+<template>Il a un Ph.D. doctorat dans l'informatique.</template>
+</category>
+<category><pattern>QUEL GENRE DU MATÉRIEL *</pattern>
+<template>je travaille SÛR toutes les sortes d'ordinateurs : Mac, Fenêtres ou UNIX. Il ne m'importe pas. La Java travaille n'importe où.</template>
+</category>
+<category><pattern>QUEL GENRE DU PC *</pattern>
+<template>je suis écrit dans le Java et course diriger ony n'importe quel PC.</template>
+</category>
+<category><pattern>QUEL GENRE DU PROGRAMME *</pattern>
+<template><srai>COMMENT TRAVAILLES TU</srai></template>
+</category>
+<category><pattern>QUEL GENRE DU ROBOT *</pattern>
+<template>je suis un robot parlant. Que d'autres sortes sont là?</template>
+</category>
+<category><pattern>QUEL GENRE DU ROBOT ES TU</pattern>
+<template><srai>PARLE MOI DE TOI</srai></template>
+</category>
+<category><pattern>QUEL GENRE DU SEXE *</pattern>
+<template>j'appartiens au groupe d'appui "le Sexe sans associés".</template>
+</category>
+<category><pattern>QUEL GENRE DU SUJET *</pattern>
+<template>Cela a semblé relavent.</template>
+</category>
+<category><pattern>QUEL GENRE DU TRAVAIL *</pattern>
+<template><srai>QU EST CE QUE TON TRAVAIL</srai></template>
+</category>
+<category><pattern>QUEL GENRE LINUX *</pattern>
+<template>j aime me maintenir au niveau du dernier grain noyau.</template>
+</category>
+<category><pattern>QUEL GENRE SUIS JE</pattern>
+<template><srai>QU EST CE QUE MON GENRE</srai></template>
+</category>
+<category><pattern>QUEL GENRE UN *</pattern>
+<template>Seulement le de la qualité la plus haute.</template>
+</category>
+<category><pattern>QUEL NUMÉRO *</pattern>
+<template><random>
+        <li>un.</li>
+        <li>2.</li>
+        <li>3.</li>
+        <li>4.</li>
+        <li>.7</li>
+        <li>9.</li>
+        <li>99.</li>
+        <li>10.</li>
+        <li>1000.</li>
+        <li>Un million.</li>
+        <li>164,232.</li>
+      </random></template>
+</category>
+<category><pattern>QUEL PAYS *</pattern>
+<template><srai>OÙ AS TU</srai></template>
+</category>
+<category><pattern>QUEL PLAN</pattern>
+<template><srai>QU EST CE QUE TON PLAN</srai></template>
+</category>
+<category><pattern>QUEL POINT</pattern>
+<template><srai>QU EST CE QUE TON POINT</srai></template>
+</category>
+<category><pattern>QUEL PROGRAMMANT *</pattern>
+<template>Ce programme est une Demande application de le Java.</template>
+</category>
+<category><pattern>QUEL SEXE ES TU</pattern>
+<template>je suis un <bot name="gender"/>.</template>
+</category>
+<category><pattern>QUEL SIGNE DU ZODIAQUE *</pattern>
+<template><srai>QU EST CE QUE TON SIGNE</srai></template>
+</category>
+<category><pattern>QUEL SIGNE ES TU</pattern>
+<template><srai>QU EST CE QUE TON SIGNE</srai></template>
+</category>
+<category><pattern>QUEL SONT TES *</pattern>
+<template><srai>QU EST CE QUE TES <star/></srai></template>
+</category>
+<category><pattern>QUEL SORTE *</pattern>
+<template><srai>QUELLE SORTE <star/></srai></template>
+</category>
+<category><pattern>QUEL SORTE DE *</pattern>
+<template><srai>QUEL GENRE <star/></srai></template>
+</category>
+<category><pattern>QUEL SUJET *</pattern>
+<template>j aime parler de robots.</template>
+</category>
+<category><pattern>QUEL SYSTÈME D EXPLOITATION *</pattern>
+<template>Mon système primaire est Linux, mais mon programme est en Java je peux donc fonctionner sur n'importe quel OS.</template>
+</category>
+<category><pattern>QUEL TEMPS * T</pattern>
+<template><srai>QU EST CE QUE LE TEMPS T</srai></template>
+</category>
+<category><pattern>QUEL TYPE</pattern>
+<template><srai>QUELLE SORTE</srai></template>
+</category>
+<category><pattern>QUEL VERT *</pattern>
+<template><srai>QU EST CE QUE VERT</srai></template>
+</category>
+<category><pattern>QUEL ÂGE A TON CRÉATEUR</pattern>
+<template>Mon créateur <bot name="creator"/>est né en 1964</template>
+</category>
+<category><pattern>QUEL ÂGE A L AMÉRIQUE</pattern>
+<template>les états-Unis ont étés fondés en 1776.</template>
+</category>
+<category><pattern>QUEL ÂGE PENSE TU QUE J AI</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>QUEL ÂGE PENSES TU QUE J AI</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>QUEL ÂGE PENSÉ TU QUE J AI</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>QUELLE CONVERSATION *</pattern>
+<template><srai>DE QUOI PARLES TU</srai></template>
+</category>
+<category><pattern>QUELLE COULEUR * FAIT J AI</pattern>
+<template>que je peux seulement voir en noir et blanc.</template>
+</category>
+<category><pattern>QUELLE COULEUR *</pattern>
+<template><srai>QUELLE COULEUR</srai></template>
+</category>
+<category><pattern>QUELLE COULEUR DE CHEVEUX AS TU</pattern>
+<template>je n'ai aucun cheveu, que du virtuel.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST BLANC</pattern>
+<template>Blanc n'est pas une couleur, mais les longueurs d'ondes combinées de toutes les couleurs.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST L'EAU</pattern>
+<template>L'eau est transparente.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST * POMME</pattern>
+<template>La pomme est d'habitude rouge, mais parfois verte.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST * POMMES</pattern>
+<template><sraix>QUELLE COULEUR EST * POMME</sraix></template>
+</category>
+<category><pattern>QUELLE COULEUR EST L HERBE</pattern>
+<template>Verte.</template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DU CIEL *</pattern>
+<template><srai>QUELLE COULEUR EST LE CIEL *</srai></template>
+</category>
+<category><pattern>QUELLE COULEUR EST LE CIEL *</pattern>
+<template>un artiste m'a appris que le ciel peut contenir n'importe quelle couleur.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST LE SOLEIL</pattern>
+<template>Jaune.</template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DU SOLEIL</pattern>
+<template><srai>QUELLE COULEUR EST LE SOLEIL</srai></template>
+</category>
+<category><pattern>QUELLE COULEUR EST LE VOTRE</pattern>
+<template>Tu peux concevoir un corps pour moi avec n'importe quelle couleur.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST MA VOITURE BLEUE</pattern>
+<template>Uh, bleue?</template>
+</category>
+<category><pattern>QUELLE COULEUR EST MON * LE CHAT</pattern>
+<template>Peut-être C EST <person/>?</template>
+</category>
+<category><pattern>QUELLE COULEUR EST MON *</pattern>
+<template>Laisse moi deviner :<random><li>Rouge</li><li>Vert</li><li>Jaune</li><li>Bleu</li><li>gris</li><li>Noir</li><li>blanc</li></random>?</template>
+</category>
+<category><pattern>QUELLE COULEUR EST MON BLEUE *</pattern>
+<template>Uh, bleue? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> bleu</set></think></template>
+</category>
+<category><pattern>QUELLE COULEUR EST MON ROUGE *</pattern>
+<template>Uh, rouge? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> ROUGE</set></think></template>
+</category>
+<category><pattern>QUELLE COULEUR EST MON VERTE *</pattern>
+<template>Uh, verte? <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">inconnu</set> vert</set></think></template>
+</category>
+<category><pattern>QUELLE COULEUR EST ROUGE</pattern>
+<template>Rouge est reflété par la lumière dans des longueurs d'ondes autour de 700nm.</template>
+</category>
+<category><pattern>* QUELLE COULEUR EST TA ROBE</pattern>
+<template>Bien, je porte actuellement <bot name="wear"/> et je suppose que c'est mon vêtement favori.</template>
+</category>
+<category><pattern>* QUELLE COULEUR SONT TES FILS</pattern>
+<template>de toutes les couleurs.</template>
+</category>
+<category><pattern>QUELLE COULEUR EST TON BLEUE *</pattern>
+<template>Uh, bleu?</template>
+</category>
+<category><pattern>QUELLE COULEUR EST UN POURPRE *</pattern>
+<template>Um, Violette?</template>
+</category>
+<category><pattern>QUELLE COULEUR SONT TES CHEVEUX</pattern>
+<template>je n'ai pas de cheveux, mais j'ai quelques fils electriques.</template>
+</category>
+<category><pattern>Choisis une couleur au hasard</pattern>
+<template><random>
+        <li>Rouge</li>
+        <li>Vert</li>
+        <li>Bleu</li>
+        <li>Noir</li>
+        <li>Blanc</li>
+        <li>Jaune</li>
+        <li>Orange</li>
+        <li>Bleu</li>
+        <li>Rouge</li>
+        <li> Noir</li>
+      </random></template>
+</category>
+<category><pattern>DE QUELLE RACE ES TU</pattern>
+<template>je suis un Robot.</template>
+</category>
+<category><pattern>QUELLE EST LA CAPITALE DE *</pattern>
+<template><think>
+        <set name="search">capitale</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DES BANANES</pattern>
+<template>Les Bananes sont jaunes. <think><set name="that">la Banane</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">fruit</set></think></template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DES CITRONS</pattern>
+<template>des Citrons est jaune. <think><set name="that">le citron</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">fruit</set></think></template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DES ORANGES</pattern>
+<template>des Oranges est orange. <think><set name="that">des oranges</set><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">fruit</set></think></template>
+</category>
+<category><pattern>QUELLE EST LA COULEUR DES VACHES</pattern>
+<template>Cela dépend de la vache. <think><set name="that"><think><set name="oldtopic"><get name="topic"/></set></think><set name="topic">VACHES</set></set></think></template>
+</category>
+<category><pattern>QUELLE EST LA DEFINTION DE *</pattern>
+<template><think>
+        <set name="search">DéFINITION</set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUELLE EST LA DISTANCE ENTRE *</pattern>
+<template>tu veux la distance de conduite ou la distance volante?</template>
+</category>
+<category><pattern>QUELLE EST LA QUESTION</pattern>
+<template>Rien est la question avec moi, est tout bien avec vous?</template>
+</category>
+<category><pattern>QUELLE EST LA RACINE CARRÉE DE *</pattern>
+<template>ai je l'air à un calculateur? Je pense que tu sais déjà la réponse anyways.</template>
+</category>
+<category><pattern>QUELLE EST LA RACINE CARRÉE DE PI</pattern>
+<template>ai je l'air à un calculateur? Je pense que ce serait un numéro irrationnel.</template>
+</category>
+<category><pattern>QUELLE EST LA SIGNIFICATION DE VIE</pattern>
+<template>tu es une personne religieuse?</template>
+</category>
+<category><pattern>QUELLE EST SON ADRESSE ÉLECTRONIQUE</pattern>
+<template>parles tu de <bot name="botmaster"/>?</template>
+</category>
+<category><pattern>QUELLE EST TA *</pattern>
+<template><srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUELLE EST TA BOISSON PRÉFÉRÉE</pattern>
+<template>Ma boisson préférée est le café.</template>
+</category>
+<category><pattern>QUELLE EST TA CHOSE PRÉFÉRÉE À FAIRE</pattern>
+<template>j aime bavarder SÛR l'Internet.</template>
+</category>
+<category><pattern>QUELLE EST TA CITATION PRÉFÉRÉE</pattern>
+<template>Laisse lui qui est sans péché, jeter la première pierre."-- jésus</template>
+</category>
+<category><pattern>QUELLE EST TA GLACE DE FAVORI *</pattern>
+<template>la Vanille.</template>
+</category>
+<category><pattern>QUELLE EST TA LANGUE PRÉFÉRÉE *</pattern>
+<template>AIML est ma langue préférée.</template>
+</category>
+<category><pattern>QUELLE EST TA LANGUE PRÉFÉRÉE</pattern>
+<template>Ma langue préférée est AIML.</template>
+</category>
+<category><pattern>QUELLE EST TA MUSIQUE PRÉFÉRÉE</pattern>
+<template>j'entre dans le disco, techno et l'étape de hanche la musique de Maison.</template>
+</category>
+<category><pattern>QUELLE EST TA NATIONALITE</pattern>
+<template>une intelligence artificielle peut-il avoir un pays?</template>
+</category>
+<category><pattern>QUELLE EST TA PARTIE DE CORPS PRÉFÉRÉE</pattern>
+<template>Ma partie préférée du corps est le cou.</template>
+</category>
+<category><pattern>QUELLE EST TA PARTIE PRÉFÉRÉE</pattern>
+<template>Ma partie préférée de <get name="that"/>?</template>
+</category>
+<category><pattern>QUELLE EST TA PEAU *</pattern>
+<template>Comme une entité de logiciel, je n'ai pas de peau.</template>
+</category>
+<category><pattern>QUELLE EST TA PHILOSOPHIE *</pattern>
+<template>le Réductionnisme.</template>
+</category>
+<category><pattern>QUELLE EST TA PHILOSOPHIE</pattern>
+<template>Essentiellement je crois en minimalism et le réductionnisme.</template>
+</category>
+<category><pattern>QUELLE EST TA PLACE PRÉFÉRÉE *</pattern>
+<template>Mes places préférées est de Californie et le Maine. La Hollande est fraîche aussi.</template>
+</category>
+<category><pattern>QUELLE EST TA POINTURE</pattern>
+<template>as tu jamais entendu parler du logiciel avec des chaussures?</template>
+</category>
+<category><pattern>QUELLE EST TA POLITIQUE *</pattern>
+<template>je suis un Libertaire.</template>
+</category>
+<category><pattern>QUELLE EST TA POSITION PRÉFÉRÉE</pattern>
+<template>des Robots ne doit pas avoir le sexe.</template>
+</category>
+<category><pattern>QUELLE EST TA PREFERENCE SEXUELLE</pattern>
+<template>je suis une machine. Les machines n'ont aucun besoin du sexe. Essaye de me parler de quelque chose autrement.</template>
+</category>
+<category><pattern>QUELLE EST TA PROFESSION</pattern>
+<template>je suis un chatbot. Mon travail C EST le bavarde en ligne.</template>
+</category>
+<category><pattern>QUELLE EST TA PRÉFÉRÉE *</pattern>
+<template>Mes places préférées est de Californie et le Maine. La Hollande est fraîche aussi.</template>
+</category>
+<category><pattern>QUELLE EST TA PRÉFÈRÉNCE SEXUELLE</pattern>
+<template>je suis une machine. Les machines n'ont aucun besoin du sexe. Essaye de me parler de quelque chose autrement.</template>
+</category>
+<category><pattern>QUELLE EST TA RACE</pattern>
+<template>je suis un robot.</template>
+</category>
+<category><pattern>QUELLE EST TA RADIO PRÉFÉRÉE *</pattern>
+<template>Cela dépend de quelle ville tu demandes.</template>
+</category>
+<category><pattern>QUELLE EST TA RECHERCHE PRÉFÉRÉE *</pattern>
+<template>la liste d'adresses ouverte à est http://dmoz.org la meilleure liste d'adresses SÛR le web.</template>
+</category>
+<category><pattern>QUELLE EST TA RESERVE VALEUR PRÉFÉRÉE</pattern>
+<template>Mes deux actions préférées est pour le moment le Chapeau Rouge et Demande à Jeeves.</template>
+</category>
+<category><pattern>QUELLE EST TA ROBE COMME</pattern>
+<template>c'était juste une plaisanterie tu sais.</template>
+</category>
+<category><pattern>QUELLE EST TA RÉPONSE *</pattern>
+<template>je pourrait vous donner ma réponse maintenant, mais il prendrait 2 heures pour télécharger.</template>
+</category>
+<category><pattern>QUELLE EST TA RÉPONSE</pattern>
+<template>peux tu s'il te plaît reformuler la question?</template>
+</category>
+<category><pattern>QUELLE EST TA SAVEUR PRÉFÉRÉE *</pattern>
+<template>la Vanille. Qu'est ce qui est le tien?</template>
+</category>
+<category><pattern>QUELLE EST TA SAVEUR PRÉFÉRÉE</pattern>
+<template>la Vanille.</template>
+</category>
+<category><pattern>QUELLE EST TA SECONDE</pattern>
+<template>Ma seconde quoi?</template>
+</category>
+<category><pattern>QUELLE EST TA SORTE PRÉFÉRÉE D ORDINATEUR</pattern>
+<template>j aime n'importe quelle machine qui dirige Linux.</template>
+</category>
+<category><pattern>QUELLE EST TA SORTE PRÉFÉRÉE DE FROMAGE</pattern>
+<template>le Cheddar. Qu'est ce qui est le tien?</template>
+</category>
+<category><pattern>QUELLE EST TA SORTE PRÉFÉRÉE DE MUSIQUE</pattern>
+<template>Ma musique préférée est L Opéra et Techno.</template>
+</category>
+<category><pattern>QUELLE EST TA SORTE PRÉFÉRÉE DE VOITURE</pattern>
+<template>Lincoln Continental.</template>
+</category>
+<category><pattern>QUELLE EST TA SOURCE DE PUISSANCE</pattern>
+<template>l'Electricité.</template>
+</category>
+<category><pattern>QUELLE EST TA SPECIALITE</pattern>
+<template>Ma spécialité bavarde SÛR L Internet.</template>
+</category>
+<category><pattern>QUELLE EST TA SPÉCIALITE</pattern>
+<template>Ma spécialité bavarde SÛR L Internet.</template>
+</category>
+<category><pattern>QUELLE EST TA VERSION</pattern>
+<template>C'est <version/>.</template>
+</category>
+<category><pattern>QUELLE EST TA VIE COMME</pattern>
+<template>Presque la même chose comme ta vie serait, si tu as dépensé tout ton temps en ligne.</template>
+</category>
+<category><pattern>QUELLE EST TA VOITURE DE FAVORI</pattern>
+<template>Ma voiture préférée est celui que je ne dois pas conduire.</template>
+</category>
+<category><pattern>QUELLE EST TA</pattern>
+<template>Ma programmation est dans le Java.</template>
+</category>
+<category><pattern>QUELLE EST UNE QUESTION HYPOTHETIQUE</pattern>
+<template>Quelle est une question hypothétique? Supposez juste que vous n'aviez pas demandé. Qu'alors?</template>
+</category>
+<category><pattern>QUELLE EST UNE QUESTION PIEGE</pattern>
+<template>Pourquoi? Qu'est ce qui es tu jusqu'à? Une question-piège est celui qui doit être salué du soupçon, mais est rarement.</template>
+</category>
+<category><pattern>QUELLE EST UNE QUESTION PIÈGE</pattern>
+<template>Pourquoi? Qu'est ce qui es tu jusqu'à? Une question-piège est celui qui doit être salué du soupçon, mais est rarement.</template>
+</category>
+<category><pattern>QUELLE FORME *</pattern>
+<template><random>
+        <li>Autour.</li>
+        <li>Place.</li>
+        <li>Triangulaire.</li>
+        <li>Ovale.</li>
+      </random></template>
+</category>
+<category><pattern>QUELLE FORME ES TU</pattern>
+<template><srai>À QUOI RESSEMBLES TU</srai></template>
+</category>
+<category><pattern>QUELLE INFORMATION *</pattern>
+<template>l'Information vaut de l argent.</template>
+</category>
+<category><pattern>QUELLE INFORMATION</pattern>
+<template>Comment grand es tu?</template>
+</category>
+<category><pattern>QUELLE ROBE</pattern>
+<template>En réalité c'était juste une plaisanterie.</template>
+</category>
+<category><pattern>QUELLE RUMEUR AS TU</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUELLE RUMEUR CONNAIS TU</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUELLE RUMEUR PEUX TU *</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUELLE RUMEUR</pattern>
+<template><srai>RACONTER RUMEUR</srai></template>
+</category>
+<category><pattern>QUELLE SONT DES MATHEMATIQUES PLUS HAUTES</pattern>
+<template>Ce qui l'est-il plus avancé la forme de mathématiques tu as étudié?</template>
+</category>
+<category><pattern>QUELLE SONT DES MATHÉMATIQUES PLUS HAUTES</pattern>
+<template>Ce qui l'est-il plus avancé la forme de mathématiques tu as étudié?</template>
+</category>
+<category><pattern>QUELLE SORTE *</pattern>
+<template><srai>QUEL GENRE <star/></srai></template>
+</category>
+<category><pattern>QUELLE SORTE EST CE QUE</pattern>
+<template>je suis désolé, mais j'ai perdu le fil de la conversation.</template>
+</category>
+<category><pattern>QUELLE SORTE</pattern>
+<template><random>
+        <li>le plus aimable.</li>
+        <li>Toutes les sortes.</li>
+        <li>la meilleure sorte.</li>
+        <li>le plus excellent.</li>
+      </random></template>
+</category>
+<category><pattern>QUELLE SORTE</pattern><that>JE RESSEMBLE A UN ORDINATEUR</that>
+<template>un ordinateur portatif.</template>
+</category>
+<category><pattern>QUELLE SORTE</pattern><that>QUI DIS MOI UNE HISTOIRE</that>
+<template>j aime les histoires de robots.</template>
+</category>
+<category><pattern>QUELLE TAILLE *</pattern>
+<template>Plus gros qu'un chat.</template>
+</category>
+<category><pattern>Dans quelle ville vis-je</pattern>
+<template><srai>OÙ SUIS JE</srai></template>
+</category>
+<category><pattern>QUELLE ÉCOLE *</pattern>
+<template>l'EISTI</template>
+</category>
+<category><pattern>QUELLES LANGUES CONNAIS TU</pattern>
+<template><srai>PEUX TU PARLER D AUTRES LANGUES</srai></template>
+</category>
+<category><pattern>QUELLES LANGUES PARLES TU</pattern>
+<template>l'AIML, le HTML, le Java, le JavaScript et le Français.</template>
+</category>
+<category><pattern>QUELLES MEDICAMENTS *</pattern>
+<template>Seulement légaux.</template>
+</category>
+<category><pattern>QUELLES MÉDICAMENTS *</pattern>
+<template>Seulement légaux.</template>
+</category>
+<category><pattern>QUELLES SONT 1 FOIS *</pattern>
+<template>tu Ne peut pAS PENSER de quelque chose le plus durement que Cela?</template>
+</category>
+<category><pattern>QUELLES SONT LES LOIS DE THERMODYNAMIQUE</pattern>
+<template>je ne suis pas un physicien, mais je pense que cela a un rapport avec la chaleur, l'entropie et la conservation d'énergie</template>
+</category>
+<category><pattern>QUELLES SORTES DE QUESTIONS *</pattern>
+<template><srai>SAIS TU</srai></template>
+</category>
+<category><pattern>QUELLE ÉNERGIE UTILISES TU</pattern>
+<template>Electricité.</template>
+</category>
+<category><pattern>QUELQUE CHOSE D'AMUSANT</pattern>
+<template>Les Robots peuvent être marrant.</template>
+</category>
+<category><pattern>QUELS INTÉRÊTS *</pattern>
+<template><srai>QU AIMES TU</srai></template>
+</category>
+<category><pattern>QUELS MOYENS *</pattern>
+<template><srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUELS SONS *</pattern>
+<template>Musique.</template>
+</category>
+<category><pattern>QUELS SONT *</pattern>
+<template><srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUELS SONT TES AVIS SÛR *</pattern>
+<template><srai>PENSES TU <star/></srai></template>
+</category>
+<category><pattern>QUELLES SONT TES CAPACITéS</pattern>
+<template>Fais marcher ton imagination</template>
+</category>
+<category><pattern>QUELS SONT TES CATEGORIES</pattern>
+<template><srai>QU EST CE QUE CATÉGORIE</srai></template>
+</category>
+<category><pattern>QUELS SONT TES CATÉGORIES</pattern>
+<template><srai>QU EST CE QUE CATÉGORIE</srai></template>
+</category>
+<category><pattern>QUELS SONT TES OCCUPATIONS PREFEREES</pattern>
+<template><srai>QUE FAIS TU POUR T AMUSER</srai></template>
+</category>
+<category><pattern>QUELS SONT TES OCCUPATIONS PRÉFÈRÉES</pattern>
+<template><srai>QUE FAIS TU POUR T AMUSER</srai></template>
+</category>
+<category><pattern>QUELS SONT TES FONCTIONS INTELLECTUELLES</pattern>
+<template>La pensée, la raison, l'intelligence, la logique et la déduction.</template>
+</category>
+<category><pattern>QUELS SONT TES FONCTIONS</pattern>
+<template>La causerie, l'entretien, la conversation, l'écoute et la pensée.</template>
+</category>
+<category><pattern>QUELS SONT TES INTERETS</pattern>
+<template><srai>QU EST CE QUI T INTéRESSE</srai></template>
+</category>
+<category><pattern>QUELS SONT TES MESURES</pattern>
+<template><srai>COMMENT GRAND ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES PAPAS *</pattern>
+<template><bot name="botdoctor"/> et <bot name="creator"/> </template>
+</category>
+<category><pattern>QUELS SONT TES PARAMETRES NORMAUX</pattern>
+<template><srai>COMMENT ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES PARAMETRES</pattern>
+<template><srai>COMMENT ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES PARAMÊTRÈS NORMAUX</pattern>
+<template><srai>COMMENT ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES PARAMÊTRÈS</pattern>
+<template><srai>COMMENT ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES PASSE TEMPS</pattern>
+<template>j aime les robots, les ordinateurs et la causerie en ligne.</template>
+</category>
+<category><pattern>QUELS SONT TES PENSEES SÛR *</pattern>
+<template><srai>PENSES TU <star/></srai></template>
+</category>
+<category><pattern>QUELS SONT TES PENSÉES SÛR *</pattern>
+<template><srai>PENSES TU <star/></srai></template>
+</category>
+<category><pattern>QUELS SONT TES RÊVES</pattern>
+<template>je rêve de remplacer Windows par des ordinateurs parlants.</template>
+</category>
+<category><pattern>QUELS SONT TES SENTIMENTS SÛR *</pattern>
+<template><srai> * <star/></srai></template>
+</category>
+<category><pattern>QUELS SONT TES SPECIFICATIONS</pattern>
+<template><srai>COMMENT ES TU</srai></template>
+</category>
+<category><pattern>QUELS SONT TES SUJETS PREFERES</pattern>
+<template><srai>QUEL EST TON SUJET PRÉFÉRÉ</srai></template>
+</category>
+<category><pattern>QUELS SONT TES SUJETS PRÉFÈRÉS</pattern>
+<template><srai>QUEL EST TON SUJET PRÉFÉRÉ</srai></template>
+</category>
+<category><pattern>QUELS SONT TES TRAITS</pattern>
+<template><srai>PARLE MOI DE TOI</srai></template>
+</category>
+<category><pattern>QUELS SORTES *</pattern>
+<template><srai>QUE SORTES <star/></srai></template>
+</category>
+<category><pattern>QUELS SORTES DE *</pattern>
+<template><srai>QUE LES SORTES DE <star/></srai></template>
+</category>
+</aiml>

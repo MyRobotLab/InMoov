@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 
 def welcomeToDance1():
   MoveEyesTimer.startClock()
@@ -7,10 +6,10 @@ def welcomeToDance1():
   #welcome
   t = (random.randint(1, 2))
   if t == 1:
-    i01.setHandSpeed("left", 0.80, 0.80, 0.80, 0.80, 0.80, 0.80)
-    i01.setHandSpeed("right", 0.80, 0.80, 0.80, 0.80, 0.80, 0.80)
-    i01.setArmSpeed("left", 0.60, 0.60, 0.60, 0.60)
-    i01.setArmSpeed("right", 0.60, 0.60, 0.60, 0.60)
+    i01.setHandVelocity("left", 36, 36, 36, 36, 36, 36)
+    i01.setHandVelocity("right", 36, 36, 36, 36, 36, 36)
+    i01.setArmVelocity("left", 19, 19, 19, 19)
+    i01.setArmVelocity("right", 19, 19, 19, 19)
     i01.setHeadVelocity(10, 10, 20)
     i01.setTorsoVelocity(5, 10, 20)
     i01.moveHead(90,90,10)
@@ -18,8 +17,8 @@ def welcomeToDance1():
     i01.moveHead(90,70,100)
     sleep(1)
     i01.moveHead(60,90,120)
-    i01.moveHand("left",180,180,180,180180,90)
-    i01.moveHand("right",180,180,180,180180,90)
+    i01.moveHand("left",180,180,180,180,180,90)
+    i01.moveHand("right",180,180,180,180,180,90)
     sleep(1)
     i01.moveTorso(85,93,90)
     i01.moveHead(80,60,80)
@@ -35,10 +34,10 @@ def welcomeToDance1():
     sleep(2)
     i01.disable()
   if t == 2:
-    i01.setHandSpeed("left", 0.80, 0.80, 0.80, 0.80, 0.80, 0.80)
-    i01.setHandSpeed("right", 0.80, 0.80, 0.80, 0.80, 0.80, 0.80)
-    i01.setArmSpeed("left", 0.60, 0.60, 0.60, 0.60)
-    i01.setArmSpeed("right", 0.60, 0.60, 0.60, 0.60)
+    i01.setHandVelocity("left", 36, 36, 36, 36, 36, 36)
+    i01.setHandVelocity("right", 36, 36, 36, 36, 36, 36)
+    i01.setArmVelocity("left", 19, 19, 19, 19)
+    i01.setArmVelocity("right", 19, 19, 19, 19)
     i01.setHeadVelocity(25, 25, 20)
     i01.setTorsoVelocity(10, 10, 20)
     i01.moveHead(90,90,160)

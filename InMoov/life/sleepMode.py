@@ -16,8 +16,9 @@ def sleepModeWakeUp():
   
   if i01.RobotIsStarted:
     
-    ImageDisplay.exitFS()
-    ImageDisplay.closeAll()
+    imagedisplay.exitFS()
+    sleep(1)
+    imagedisplay.closeAll()
     
     #displayPic(RuningFolder+'/system/pictures/loading_1024-600.jpg')
     
@@ -51,8 +52,9 @@ def sleepModeWakeUp():
 def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
   stopTracking()
-  ImageDisplay.exitFS()
-  ImageDisplay.closeAll()
+  imagedisplay.exitFS()
+  sleep(1)
+  imagedisplay.closeAll()
   i01.RobotIsSleeping=True
   i01.halfSpeed()
   rest()

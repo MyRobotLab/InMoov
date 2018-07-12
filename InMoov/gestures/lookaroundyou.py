@@ -1,5 +1,5 @@
 def lookaroundyou(data):
-  i01.setHeadSpeed(0.8, 0.8, 0.6, 0.6, 1.0)
+  i01.setHeadVelocity(36.0, 36.0, 19.0, 19.0, -1)
   for y in range(0, 3):
     if (data == "can i have your attention"):
       i01.mouth.speak("ok you have my attention")

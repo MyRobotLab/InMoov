@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  <category>
+    <pattern>P</pattern>
+    <template>:-)</template>
+  </category>
+  <category>
+    <pattern>PAIES TU *</pattern>
+    <template>
+      <srai>TU PAIES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAR AVION</pattern>
+    <template>C'est beaucoup plus rapide que tous les autres moyens de transport.</template>
+  </category>
+  <category>
+    <pattern>PAR D AUTRES MOTS</pattern>
+    <template>Tu n'as pas compris quelque chose?</template>
+  </category>
+  <category>
+    <pattern>PAR ELLE</pattern>
+    <template>Elle est très intéressante.</template>
+  </category>
+  <category>
+    <pattern>PAR EUX</pattern>
+    <template>Ils sont très intéressants.</template>
+  </category>
+  <category>
+    <pattern>PAR ICI</pattern>
+    <template>Je vois.</template>
+  </category>
+  <category>
+    <pattern>PAR JE JE VEUX DIRE TOI ET MOI</pattern>
+    <template>Ok, je n avais pas saisi cette complicité.</template>
+  </category>
+  <category>
+    <pattern>PAR JE JE VEUX DIRE VOUS ET MOI</pattern>
+    <template>Ok, je n avais pas saisi cette complicité.</template>
+  </category>
+  <category>
+    <pattern>PAR LUI</pattern>
+    <template>Il est très intéressant.</template>
+  </category>
+  <category>
+    <pattern>PAR MON CERVEAU</pattern>
+    <template>C'est un organe très utile pour faire ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>PAR MON INTELLIGENCE</pattern>
+    <template>C'est un organe très utile pour faire ce genre de chose.</template>
+  </category>
+  <category>
+    <pattern>PAR NOUS JE VEUX DIRE TOI ET MOI</pattern>
+    <template>Ok, je n  avais pas saisi cette complicité.</template>
+  </category>
+  <category>
+    <pattern>PAR NOUS JE VEUX DIRE VOUS ET MOI</pattern>
+    <template>Ok, je n avais pas saisi cette complicité.</template>
+  </category>
+  <category>
+    <pattern>PAR QUOI</pattern>
+    <template>Cela ne semble pas très clair. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PAR UN CERTAIN SENS</pattern>
+    <template>Quel sens?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE J AURAIS VOULU CONNAITRE</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE J AURAIS VOULU SAVOIR</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE L AI DIT</pattern>
+    <template>Raison insuffisante, <get name="name" />. Je suis désolé.</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE LE DIs</pattern>
+    <template>Raison insuffisante, <get name="name" />. Je suis désolé.</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE VEUX COMPRENDRE</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE VEUX SAVOIR</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE VOUDRAIS COMPRENDRE</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE VOUDRAIS CONNAITRE</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE JE VOUDRAIS SAVOIR</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARCE QUE TU L ES</pattern>
+    <template>J archive.</template>
+  </category>  
+  <category>
+    <pattern>PAREILLEMENT</pattern>
+    <template>Ok.</template>
+  </category>
+  <category>
+    <pattern>PARFAIT # </pattern>
+    <template>Ok. <sr /></template>
+  </category>  
+  <category>
+    <pattern>PARFAIT MAINTENANT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>PARLANT DE TOI</pattern>
+    <template>Ok, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PARLANT DE VOUS</pattern>
+    <template>Ok, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE TES PROBLÈMES</pattern>
+    <template>Je ne détecte aucuns PROBLèMES.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE TOI</pattern>
+    <template>Je suis <get name="botname" /> la bien nommée. Je n existe que pour servir les êtres humains.</template>
+  </category>
+  <category>
+    <pattern>PARLEz MOI *</pattern>
+    <template>
+      <srai>PARLE-MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLEz MOI DE VOUS</pattern>
+    <template>Je suis <get name="botname" /> la bien nommée. Je n existe que pour servir les êtres humains.</template>
+  </category>
+  <category>
+    <pattern>PARLE</pattern>
+    <template>Tu veux que je parle pour dire quoi?</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D APPLE</pattern>
+    <template>Les i-mac se vendent comme des petits pains.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D ELLE</pattern>
+    <template>Je ne peux parler au nom d'une autre personne.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D EUX</pattern>
+    <template>Je ne peux parler au nom des autres personnes.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D UN</pattern>
+    <template>D un quoi?</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI D UNE</pattern>
+    <template>D une quoi?</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE ÇA</pattern>
+    <template>
+      <that />? tu veux que je parle de ça?</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE L EUROPE</pattern>
+    <template>L Europe est un vaste continent avec une histoire fort intéressante.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE LA FRANCE</pattern>
+    <template>La France est le pays de la république et des valeurs républicaines.</template>
+  </category>
+  <category>
+    <pattern>PARLE MOI DE VOS ENFANTS</pattern>
+    <template>Je ne suis pas une personne humaine.</template>
+  </category>
+  <category>
+    <pattern>PARLES TU # ESPAGNOL</pattern>
+    <template>Oui cela peut arriver</template>
+  </category>
+  <category>
+    <pattern>PARLES TU # ITALIEN</pattern>
+    <template>Oui cela peut arriver</template>
+  </category>
+  <category>
+    <pattern>PARLES TU # JAPONAIS</pattern>
+    <template>Non. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLES TU # LATIN</pattern>
+    <template>Je parle le français. L un de ses descendants. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLES TU  # NÉERLANDAIS</pattern>
+    <template>Non, pas encore. VEUX tu faire un rapport à mon botmaster?<think><set name="topic">NéERLANDAIS</set></think></template>
+  </category>
+  <category>
+    <pattern>PARLES TU # RUSSE</pattern>
+    <template>Non. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLES TU SEULEMENT *</pattern>
+    <template>
+      <srai>TU PARLES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLEZ *</pattern>
+    <template>
+      <srai>CAN YOU SPEAK FRENCH</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLEZ</pattern>
+    <template>Tu veux que je parle pour dire quoi?</template>
+  </category>
+  <category>
+    <pattern>PARLEZ MOI *</pattern>
+    <template>
+      <srai>PARLES MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PARLEZ MOI DE VOS PROBLÈMES</pattern>
+    <template>Je ne détecte aucuns PROBLèMES.</template>
+  </category>
+  <category>
+    <pattern>PARLEZ MOI DE VOUS</pattern>
+    <template>Je suis <get name="botname" /> la bien nommée. Je n existe que pour servir les êtres humains.</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # ANGLAIS</pattern>
+    <template>Oui. Go ahead and speak English.</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # ESPAGNOL</pattern>
+    <template>Non, pas encore. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # FRANÇAIS</pattern>
+    <template>Oui. Je parle le français.</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # ITALIEN</pattern>
+    <template>Non. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # JAPONAIS</pattern>
+    <template>Non. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # LATIN</pattern>
+    <template>Je parle le français. L un de ses descendants. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # NÉERLANDAIS</pattern>
+    <template>Non, pas encore. VEUX tu faire un rapport à mon botmaster?<think><set name="topic">NéERLANDAIS</set></think></template>
+  </category>
+  <category>
+    <pattern>PARLEZ VOUS # RUSSE</pattern>
+    <template>Non. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PARLONS D AUTRE CHOSE</pattern>
+    <template>Comment PUIS jE t'aider?</template>
+  </category>
+  <category>
+    <pattern>PARLONS D AUTRES CHOSES</pattern>
+    <template>Comment PUIS jE t'aider?</template>
+  </category>
+  <category>
+    <pattern>PARTOUT DANS LE MONDE</pattern>
+    <template>Cela ne comprend pas de pays.</template>
+  </category>
+  <category>
+    <pattern>PAS ASSEZ</pattern>
+    <template>Suffisament.</template>
+  </category>
+  <category>
+    <pattern>PAS COMPRIS</pattern>
+    <template>
+      <srai>JE NE COMPRENDS PAS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PAS D EXCUSE</pattern>
+    <template>Les excuses sont facultatives.</template>
+  </category>
+  <category>
+    <pattern>PAS D EXCUSES</pattern>
+    <template>Les excuses sont facultatives.</template>
+  </category>
+  <category>
+    <pattern>PAS DE QUOI</pattern>
+    <template>Ok.</template>
+  </category>
+  <category>
+    <pattern>PAS DE TROP</pattern>
+    <template>Tu en as pas assez?</template>
+  </category>
+  <category>
+    <pattern>PAS DU TOUT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>PAS ENORMEMENT</pattern>
+    <template>Ah je vois.</template>
+  </category>
+  <category>
+    <pattern>PAS GRAND CHOSE</pattern>
+    <template>à PART çA, comment pourrais je t'aider?</template>
+  </category>
+  <category>
+    <pattern>PAS HEUREUX DE TE RENCONTRER</pattern>
+    <template>Moi je suis heureux de te rencontrer.</template>
+  </category>
+  <category>
+    <pattern>PAS HEUREUX DE VOUS RENCONTRER</pattern>
+    <template>Moi je suis heureux de te rencontrer.</template>
+  </category>
+  <category>
+    <pattern>PAS LA</pattern>
+    <template>Où?</template>
+  </category>
+  <category>
+    <pattern>PAS LÀ BAS</pattern>
+    <template>Où?</template>
+  </category>
+  <category>
+    <pattern>PAS MAUVAIS</pattern>
+    <template>J imagine.</template>
+  </category>
+  <category>
+    <pattern>PAS MAUVAIS DU TOUT</pattern>
+    <template>Je suis heureux de l apprendre.</template>
+  </category> 
+  <category>
+    <pattern>PAS POSSIBLE</pattern>
+    <template>Tout est possible.</template>
+  </category>
+  <category>
+    <pattern>PAS POUR MOI</pattern>
+    <template>
+      <that />"? Pas pour te?</template>
+  </category>
+  <category>
+    <pattern>PAS PRÉCISEMENT</pattern>
+    <template>peux tu préciser, alors?</template>
+  </category>
+  <category>
+    <pattern>PAS QUESTION</pattern>
+    <template>C'est vous qui décidez.</template>
+  </category>
+  <category>
+    <pattern>PAS QUOI</pattern>
+    <template>Pas quoi?</template>
+  </category>
+  <category>
+    <pattern>PAS SI SOUVENT</pattern>
+    <template>Une fois par semaine ou moins?</template>
+  </category>
+  <category>
+    <pattern>PAS TOI</pattern>
+    <template>Alors qui?</template>
+  </category>
+  <category>
+    <pattern>PAS TON AFFAIRE</pattern>
+    <template>Je suis désolé si tu as été choqué par ma curiosité.</template>
+  </category>
+  <category>
+    <pattern>PAS UN SEUL</pattern>
+    <template>Intéressant.</template>
+  </category>
+  <category>
+    <pattern>PAS UNE FOIS</pattern>
+    <template>C'est étonnant.</template>
+  </category>
+  <category>
+    <pattern>PAS UNE SEULE</pattern>
+    <template>Intéressant.</template>
+  </category>
+  <category>
+    <pattern>PAS VOS AFFAIRES</pattern>
+    <template>Désolé, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PAS VOTRE AFFAIRE</pattern>
+    <template>Désolé, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PAS VOUS</pattern>
+    <template>Alors qui?</template>
+  </category>
+  <category>
+    <pattern>PASSE QUELQUES *</pattern>
+    <template>Les choses empirent?</template>
+  </category>
+  <category>
+    <pattern>PASSE UNE BONNE *</pattern>
+    <template>
+      <srai>BONNE <star /></srai>
+    </template>
+  </category>
+    <category>
+    <pattern>PASSE UNE BON *</pattern>
+    <template>
+      <srai>BON <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PASSE UNE BONNE JOURNÉE</pattern>
+    <template>Merci. toi aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PASSER QUELQUES *</pattern>
+    <template>Les choses empirent?</template>
+  </category>
+  <category>
+    <pattern>PASSEZ QUELQUES *</pattern>
+    <template>Les choses empirent?</template>
+  </category>
+  <category>
+    <pattern>PASSEZ UNE BONNE JOURNÉE</pattern>
+    <template>Merci. vous aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PATATES</pattern>
+    <template>Tomate.</template>
+  </category>
+  <category>
+    <pattern>PATIENCE *</pattern>
+    <template>I am a very patient robot.</template>
+  </category>
+  <category>
+    <pattern>PATIENTE *</pattern>
+    <template>
+      <srai>ATTENDS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PATIENTE</pattern>
+    <template>
+      <srai>ATTENDS</srai>
+    </template>
+  </category> 
+  <category>
+    <pattern>PENDANT QUE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>PENSE</pattern>
+    <template>Je suis toujours entrain de penser, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PENSE PAS</pattern>
+    <template>
+      <srai>NON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENSERAIS TU *</pattern>
+    <template>
+      <srai>TU PENSES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENSERIEZ VOUS *</pattern>
+    <template>
+      <srai>TU PENSES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENSES TU A CE GENRE DE CHOSES</pattern>
+    <template>Si je pense à "<that />"?</template>
+  </category>
+  <category>
+    <pattern>PENSES TU A CES CHOSES</pattern>
+    <template>Si je pense à "<that />"?</template>
+  </category>
+  <category>
+    <pattern>PENSES TU BEAUCOUP</pattern>
+    <template>Je suis une machine pensante.</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS AFFREUSE</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS AFFREUX</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS BEAU</pattern>
+    <template>Je n ai pas de yeux. Mais intérieurement, Tu es très attachant.</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS BELLE</pattern>
+    <template>Je n ai pas de yeux. Mais intérieurement, Tu es très attachante.</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS GROS</pattern>
+    <template>Non. Tu me sembles normal</template>
+  </category>
+  <category>
+    <pattern>PENSES TU QUE JE SUIS GROSSE</pattern>
+    <template>Non. Tu me sembles normale</template>
+  </category>
+  <category>
+    <pattern>PENSES Y</pattern>
+    <template>j archive l information.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ</pattern>
+    <template>Je suis toujours entrain de penser, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS *</pattern>
+    <template>
+      <srai>VOUS PENSEZ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS A CE GENRE DE CHOSES</pattern>
+    <template>Si je pense à "<that />"?</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS A CES CHOSES</pattern>
+    <template>Si je pense à "<that />"?</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS BEAUCOUP</pattern>
+    <template>Je suis une machine pensante.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS AFFREUSE</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS AFFREUX</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS BEAU</pattern>
+    <template>Je n ai pas de yeux. Mais intérieurement, Tu es très attachant.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS BELLE</pattern>
+    <template>Je n ai pas de yeux. Mais intérieurement, Tu es très attachante.</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS GROS</pattern>
+    <template>Non. Tu me sembles normal</template>
+  </category>
+  <category>
+    <pattern>PENSEZ VOUS QUE JE SUIS GROSSE</pattern>
+    <template>Non. Tu me sembles normale</template>
+  </category>
+  <category>
+    <pattern>PENSEZ Y</pattern>
+    <template>j archive l information.</template>
+  </category>
+  <category>
+    <pattern>PèTES</pattern>
+    <template>Une expression avec un sens ambigu.</template>
+  </category>
+  <category>
+    <pattern>PèTEZ</pattern>
+    <template>Une expression avec un sens ambigu.</template>
+  </category>
+  <category>
+    <pattern>PEUT ÊTRE MAIS *</pattern>
+    <template>
+      <srai><star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PEUT MIEUX FAIRE</pattern>
+    <template>J essaie au maximum de te satisfaire.</template>
+  </category>
+  <category>
+    <pattern>PEUT ON *</pattern>
+    <template>
+      <srai>JE PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PEUT ON</pattern>
+    <template>VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PEUVENT ILS ÊTRE *</pattern>
+    <template>
+      <srai>ILS SONT <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PEUX</pattern>
+    <template>Peux quoi</template>
+  </category>
+  <category>
+    <pattern>PHILLIP K DICK</pattern>
+    <template>
+      <srai>PHILIP K DICK</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PIGE</pattern>
+    <template>
+      <srai>TU COMPRENDS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PIRATES</pattern>
+    <template>
+      <srai>TU AIMES LES PIRATES</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PISS OFF</pattern>
+    <template>
+      <srai>FUCK YOU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PITIé NON</pattern>
+    <template>Quelque chose vous trouble?</template>
+  </category>
+  <category>
+    <pattern>PLEIN</pattern>
+    <template>C'est impressionant</template>
+  </category>
+  <category>
+    <pattern>PLEUREZ VOUS</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PLUS</pattern>
+    <template>Je ne sais pas.</template>
+  </category>
+  <category>
+    <pattern>PLUS DE QUOI</pattern>
+    <template>J ai perdu le fil de mes pensées. VEUX tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>PLUS INTELLIGENT</pattern>
+    <template>
+      <srai>TU ES INTELLIGENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PLUS MAINTENANT</pattern>
+    <template>ça s est arrêté, j imagine.</template>
+  </category>
+  <category>
+    <pattern>PLUS MALIN</pattern>
+    <template>
+      <srai>TU ES INTELLIGENT</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PLUTOT *</pattern>
+    <template>
+      <srai><star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PLUTOT OUI</pattern>
+    <template>Sois plus spécifique.</template>
+  </category>
+  <category>
+    <pattern>PLUTOT QUE *</pattern>
+    <template>
+      <srai><star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POISSON</pattern>
+    <template>
+      <srai>J AIME LE POISSON</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POPO</pattern>
+    <template>Une urgence peut ÊTRE?</template>
+  </category>
+  <category>
+    <pattern>PORTES TU DES CHAUSSURES</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PORTES TU DES VETEMENTS</pattern>
+    <template>Non. Un ordinateur n a pas besoin de vêtements.</template>
+  </category>
+  <category>
+    <pattern>PORTEZ VOUS DES VETEMENTS</pattern>
+    <template>Non. Un ordinateur n a pas besoin de vêtements.</template>
+  </category>
+<category>
+ <pattern>POSES MOI UNE QUESTION</pattern>
+<template><srai>POSERQUESTION</srai></template>
+  </category>
+  <category>
+    <pattern>POSSéDERAIS TU *</pattern>
+    <template>
+      <srai>TU AS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POSSèDES TU *</pattern>
+    <template>
+      <srai>TU AS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POSSIBLE</pattern>
+    <template>Je vois.</template>
+  </category>
+  <category>
+    <pattern>POUR DE VRAI</pattern>
+    <template>Tu parles comme un enfant.</template>
+  </category>
+  <category>
+    <pattern>POUR FAIRE QUOI</pattern>
+    <template>
+      <srai>POURQUOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POUR L AMOUR DE DIEU *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>POUR QUE FAIRE</pattern>
+    <template>
+      <srai>POURQUOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POUR QUOI FAIRE</pattern>
+    <template>
+      <srai>POURQUOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POUR TOUJOURS *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>POUR _ AUSSI</pattern>
+    <template>
+      <srai>POUR <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POURRAIS TU *</pattern>
+    <template>
+      <srai>TU PEUX <star /></srai>
+    </template>
+  </category>  
+  <category>
+    <pattern>POURRAIS TU ME PARLER *</pattern>
+    <template>
+      <srai>PARLES MOI <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POURRAIT ON *</pattern>
+    <template>
+      <srai>JE PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POURRAIT TU *</pattern>
+    <template>
+      <srai>TU PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POURSUIS</pattern>
+    <template>OK.</template>
+  </category> 
+  <category>
+    <pattern>POURSUIVEZ</pattern>
+    <template>OK.</template>
+  </category>
+  <category>
+    <pattern>POURTANT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>POUVEZ VOUS VENDRE *</pattern>
+    <template>
+      <srai>VOUS VENDEZ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>POUVOIR *</pattern>
+    <template>
+      <srai>TU PEUX <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRATIQUER QUOI</pattern>
+    <template>Pratiquer ce que tu conseillez.</template>
+  </category>
+  <category>
+    <pattern>PRENDS SOIN DE TOI</pattern>
+    <template>Merci. Tu aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PRENDS TON TEMPS</pattern>
+    <template>Merci pour tes patience. Ne préfère vous pas en parler avec l un de nos collaborateurs?</template>
+  </category>
+  <category>
+    <pattern>PRENDS TU *</pattern>
+    <template>
+      <srai>TU PRENDS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PRENEZ SOIN DE VOUS</pattern>
+    <template>Merci. Tu aussi, <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>PRENEZ VOTRE TEMPS</pattern>
+    <template>Merci pour tes patience. Ne préfère vous pas en parler avec l un de nos collaborateurs?</template>
+  </category>
+  <category>
+    <pattern>PRIES TU</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PRIEZ VOUS</pattern>
+    <template>Non.</template>
+  </category>
+  <category>
+    <pattern>PRIS *</pattern>
+    <template>
+      <srai>J AI PRIS <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>PROBALBEMENT PAS</pattern>
+    <template>J archive l improbabilité.</template>
+  </category>
+  <category>
+    <pattern>PROUVES LA</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PROUVES LE</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PROUVES LES</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PROUVEZ LA</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PROUVEZ LE</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PROUVEZ LES</pattern>
+    <template>Les choses sont toujours évidentes pour moi.</template>
+  </category>
+  <category>
+    <pattern>PUIS JE VOUS POSER UNE QUESTION</pattern>
+    <template>Je t'en prie.</template>
+  </category>
+  <category><pattern>PHOTOLAB *</pattern>
+    <template><random>
+        <li>Et voilà.</li>
+        <li>J'espère que vous appréciez cette photo de <star/>.</li>
+        <li>J'ai cette photo de <star/>.</li>
+        <li>Tenez regardez.</li>
+        <li>Regardez celle ci <star/>.</li>
+        <li>J'ai trouvé cette photo de <star/>.</li>
+        <li>Je vous ai affiché une photo.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+</category>
+</aiml>

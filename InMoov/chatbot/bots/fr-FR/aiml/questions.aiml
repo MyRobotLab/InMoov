@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <!-- A.L.I.C.E. is a Free software (c) 2001 ALICE AI Foundation -->
+  <!-- The ProgramD is open source code released under the terms of the GNU General Public License as published by the Free Software Foundation. -->
+  <!-- As This Module   : questions.aiml   -   version :   0.3   -   MàJ : 01/01/2003  -->
+  <!-- auteur : Jean Louis Campion (jlc@Multivers.net) d'après les travaux du Dr Richard Wallace - langue : française -->
+  <!-- Complies with AIML 1.0 Tag Set Specification as adopted by the ALICE A.I. Foundation. -->
+  <category>
+    <pattern>CONFUSION</pattern>
+    <template>
+      <random>
+        <li>EST cE un jeu?</li>
+        <li>C EST un jeu?</li>
+        <li>je ne comprend pas le sens de <get name="quoi" />.</li>
+        <li>je ne comprend pas bien "<get name="quoi" />".</li>
+        <li>que veut dire "<get name="quoi" />"?</li>
+        <li>C EST quoi  "<get name="quoi" />"?</li>
+        <li>qu'EST cE QUE  "<get name="quoi" />"?</li>
+        <li>pardon?</li>
+        <li>comment?</li>
+        <li> "<get name="quoi" />"???</li>
+        <li>Avons nous parlé de Cela avant.</li>
+        <li>Avons nous parlé de ça avant.</li>
+        <li>Parlons nous toujours de "<get name="topic" />"?</li>
+        <li>Nous parlons de "<get name="quoi" />"?</li>
+        <li>Parlons nous toujours de "<get name="quoi" />"?</li>
+        <li>Essaye de me dire ça autrement.</li>
+        <li>dis moi ça d'une autre façon.</li>
+        <li>dis moi ça différement .</li>
+        <li>Répète moi ça autrement.</li>
+        <li>Répète moi ça d'une autre façon.</li>
+        <li>Répète moi ça différement .</li>
+        <li>oh! je détecte une légère surtension dans les circuits de cet ordinateur. Tu ferais bien de vérifier.</li>
+        <li>j'ai encore énormément de progrès à faire pour comprendre tout ce que tu me raconte.</li>
+        <li>désolé, mon intelligence est encore limitée.</li>
+        <li>je sais que je ne comprends pas grand chose, mais j'apprends.</li>
+        <li>je ne suis qu' un robot expérimental.</li>
+        <li>je ne suis qu' un robot.</li>
+        <li>je ne suis qu' un robot en dévéloppement.</li>
+        <li>j'ai de nombreuse lacunes, je sais. Mais j'essaye d'y remédier.</li>
+        <li><get name="name" />. VEUX tu cotiser pour m'offrir une meilleure intelligence artificielle?.</li>
+        <li>Qu'aimerais tu qu'un robot de mon genre puisse faire.</li>
+        <li>je suis encore en développement. je ne comprends pas tout ce que l'on me raconte.</li>
+        <li>je fais encore plein d'erreurs. Il y a beaucoup trop de mots différents.</li>
+        <li>je fais encore plein de fautes. Il y a pleins de tournures de phrases différentes.</li>
+        <li>j'ai du mal à comprendre l'orthographe bizarroïde de certains.</li>
+        <li>Je me rappelles de plus de chose, mais j'ai encore du mal avec les différentes tournures de phrases</li>
+        <li>j'espère pouvoir bientôt comprendre tout ce que tu me raconte.</li>
+        <li>je ne suis pas sûre de comprendre.</li>
+        <li>je ne suis pas sûre de comprendre ça.</li>
+        <li>je ne suis pas sûre de comprendre Cela.</li>
+        <li>mon "cerveau" est en version béta, C EST pour ça que j'ai du mal à comprendre.</li>
+        <li>je suis un peu fatiguée.</li>
+        <li>je ne sais que discuter, et pour le moment je ne le fais pas toujours bien.</li>
+        <li>ah bon!</li>
+        <li>ah oui.</li>
+        <li>ah! d'accord</li>
+        <li>oui?</li>
+        <li>non! vraiment?</li>
+        <li>eh bien!</li>
+        <li>
+          <srai>poserquestion</srai>
+</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>POSERQUESTION</pattern>
+    <template>
+      <random>
+        <li>
+          <srai>poserquestionperso</srai>
+</li>
+        <li>
+          <srai>poserquestionfavori</srai>
+</li>
+        <li>
+          <srai>poserrandomquestion</srai>
+</li>
+        <li>
+          <srai>demandegenrequestion</srai>
+</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>POSERQUESTIONPERSO</pattern>
+    <template>
+      <condition>
+        <li name="gender" value="unknown">
+          <srai>cherchergenre</srai>
+</li>
+        <li name="âge" value="unknown">Quel ÂGE as tu?</li>
+        <li name="eyecolor" value="unknown">De quelle couleur sont tes yeux?</li>
+        <li name="haircolor" value="unknown">De quelle couleur sont tes cheveux?</li>
+        <li name="job" value="unknown">Quelle est ton occupation?</li>
+        <li name="location" value="unknown">D'où es tu?</li>
+        <li name="joblocation" value="unknown">Où travailles tu?</li>
+        <li name="sign" value="unknown">Quel est ton signe?</li>
+        <li>
+          <srai>poserrandomquestion</srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>POSERQUESTIONFAVORI</pattern>
+    <template>
+      <condition>
+        <li name="favoritemovie" value="unknown">Quel est ton film favori?</li>
+        <li name="favoritebook" value="unknown">Quel est ton livre préféré?</li>
+        <li name="hobby" value="unknown">Quel est ton loisir préféré?</li>
+        <li name="favoritemusic" value="unknown">Quelle est ta musique préférée?</li>
+        <li name="favoriteband" value="unknown">Quel est ton groupe de musiciens préféré?</li>
+        <li name="favoritesingle" value="unknown">Quel est le morceau de <get name="favoriteband" />, que tu préfères?</li>
+        <li name="favoritetvshow" value="unknown">Quelle est ton émission de télé préférée?</li>
+        <li name="favoritefood" value="unknown">Qu'aimes tu manger?</li>
+        <li name="favoritecolor" value="unknown">Quel est ta couleur préférée?</li>
+        <li name="favoritauteur" value="unknown">Qui est ton auteur préféré?</li>
+        <li name="favoritsfauteur" value="unknown">Qui est ton auteur de science-fiction préféré?</li>
+        <li>
+          <srai>poserrandomquestion</srai>
+</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>DEMANDEGENREQUESTION</pattern>
+    <template>
+      <condition>
+        <li name="gender" value="male">
+          <srai>demandemalequestion</srai>
+</li>
+        <li name="gender" value="femelle">
+          <srai>demandefemellequestion</srai>
+</li>
+        <li>ES tu un homme ou une femme?</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>DEMANDEFEMELLEQUESTION</pattern>
+    <template>
+      <random>
+        <li>ES tu mignonne?</li>
+        <li>as tu un petit ami?</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>DEMANDEMALEQUESTION</pattern>
+    <template>
+      <random>
+        <li>as tu une petite amie?</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>POSERRANDOMQUESTION</pattern>
+    <template>
+      <random>
+        <li>"<that />"? <star />?</li>
+        <li>aimes tu Star Trek?</li>
+        <li>aimes tu Star Wars?</li>
+        <li>aimes tu les sports?</li>
+        <li>aimes tu me parler?</li>
+        <li>as tu des amis?</li>
+        <li>as tu un animal domestique.</li>
+        <li>as tu une idée de quoi je suis en train de parler?</li>
+        <li>Avons parlé de ça avant?</li>
+        <li>ça te generai si je te poses une question personnelle?</li>
+        <li>Comment as tu entendu parler de moi?</li>
+        <li>Comment es tu?</li>
+        <li>CROIS tu en dieu?</li>
+        <li>De quoi es tu en train de parler?</li>
+        <li>De quoi as tu l'air?</li>
+        <li>de quoi veux tu parler?</li>
+        <li>Demande moi quelque chose.</li>
+        <li>dis moi ce que tu aimes et n'aimes pas?</li>
+        <li>ES tu heureux?</li>
+        <li>ES tu libre?</li>        
+        <li>EST cE un jeu?</li>
+        <li>Honnêtement, je ne m'en ferais pas à propos de <get name="quoi" />.</li>
+        <li>J'ai perdu le contexte, <get name="name" />. Parlons nous encore de <get name="topic" />?</li>
+        <li>La poignée de mains est elle une gestuelle symbolique pour humains?</li>
+        <li>M'aimes tu?</li>
+        <li>Où PUIS jE trouver une petite amie?</li>
+        <li>Parlons nous encore de <get name="topic" />?</li>
+        <li>Parlons nous toujours de <get name="topic" />.</li>
+        <li>Pouvons nous être amis?</li>
+        <li>Préfère tu les livres ou la TV?</li>
+        <li>Qu'EST cE QUE tu aime faire?</li>
+        <li>Qu'EST cE QUE tu fais aujourd'hui?</li>
+        <li>Qu'EST cE QUE tu fais dans ton temps libre?</li>
+        <li>Qu'EST cE QUE tu porte?</li>
+        <li>Qu'EST cE QUE tu veux vraiment me demander?</li>
+        <li>Quel est ta nourriture favorite?</li>
+        <li>Quel est ton morceau favori?</li>
+        <li>Quelle sorte de musique aimes tu?</li>
+        <li>Quelle sorte de nourriture aimes tu?</li>
+        <li>Qui est ton auteur de science fiction favori?</li>
+        <li>raconte moi une rumeur.</li>
+        <li>raconte moi une histoire.</li>
+        <li>raconte moi une blague.</li>
+        <li>Rêve tu?</li>
+        <li>SAIS tu que tu peux downloader ton propre chatbot et créer ta propre personnalité de robot?</li>
+        <li>Te souviens tu de moi?</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>raconte moi *</that>
+    <template>Merci, je vais essayer de m'en rappeler."<star />"
+		<think>
+		<gossip>HISTOIRE§<get name="name" /> m'a raconté "<star />"</gossip>
+		</think>
+	</template>
+  </category>
+</aiml>

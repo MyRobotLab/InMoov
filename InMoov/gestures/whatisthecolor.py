@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def whatisthecolor():
   global coloring
   if coloring <= 2:
@@ -27,19 +26,19 @@ def whatisthecolor():
     relax()
     coloring += 1
   elif coloring == 5:
-    i01.setHeadSpeed(0.95, 0.95, 0.90, 0.90, 1.0)
+    i01.setHeadVelocity(59, 59, 50, 50, -1)
     i01.moveHead(80,66)
     sleep(1)
-    i01.setHeadSpeed(0.95, 0.95, 0.90, 0.90, 1.0)
+    i01.setHeadVelocity(59, 59, 50, 50, -1)
     i01.moveHead(80,110)
     sleep(1)
-    i01.setHeadSpeed(0.95, 0.95, 0.90, 0.90, 1.0)
+    i01.setHeadVelocity(59, 59, 50, 50, -1)
     i01.moveHead(80,66)
     sleep(1)
-    i01.setHeadSpeed(0.95, 0.95, 0.90, 0.90, 1.0)
+    i01.setHeadVelocity(59, 59, 50, 50, -1)
     i01.moveHead(80,110)
     sleep(1)
-    i01.setHeadSpeed(0.95, 0.95, 0.90, 0.90, 1.0)
+    i01.setHeadVelocity(59, 59, 50, 50, -1)
     i01.moveHead(80,66)
     sleep(1)
     i01.mouth.speak("Humans are worst than robots, don't they ever learn")

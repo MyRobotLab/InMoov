@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>SINGOLARE <set>animali</set></pattern>
+<template><uniq>
+            <subj>?singular</subj>
+            <pred>hasPlural</pred>
+            <obj><star/></obj>
+        </uniq></template>
+</category>
+<category><pattern>PLURALE <set>animale</set></pattern>
+<template><uniq>
+            <subj><star/></subj>
+            <pred>hasPlural</pred>
+            <obj>?plural</obj>
+        </uniq></template>
+</category>
+<category><pattern><set>animali</set></pattern>
+<template><star/> è il plurale di
+        <uniq>
+            <subj>?subj</subj>
+            <pred>hasPlural</pred>
+            <obj><star/></obj>
+        </uniq>.</template>
+</category>
+<category><pattern>VERSO <set>animale</set></pattern>
+<template><star/> dice
+        <uniq>
+            <subj><star/></subj>
+            <pred>sound</pred>
+            <obj>?sound</obj>
+        </uniq>.</template>
+</category>
+<category><pattern>COLLETTIVO <set>animale</set></pattern>
+<template>Un gruppo di <star/> si chiama
+        <uniq>
+            <subj><star/></subj>
+            <pred>collective</pred>
+            <obj>?collective</obj>
+        </uniq>.</template>
+</category>
+<category><pattern>ZAMPE<SET>ANIMALE</SET></pattern>
+<template>A <star/> ha
+        <uniq>
+            <subj><star/></subj>
+            <pred>legs</pred>
+            <obj>?verso</obj>
+        </uniq> zampe.</template>
+</category>
+<category><pattern>COSA DICE UN <set>animale</set> SAY ^</pattern>
+<template><srai>VERSO <star/></srai></template>
+</category>
+<category><pattern>COSA DICONO<SET>animali</SET> SAY ^</pattern>
+<template><srai>VERSO <srai>SINGOLARE <star/></srai></srai></template>
+</category>
+<category><pattern>CHE VERSO FA # <set>animale</set> ^</pattern>
+<template><srai>VERSO <star index="2"/></srai></template>
+</category>
+<category><pattern>CHE VERSO FANNO # <set>animale</set> ^</pattern>
+<template><srai>VERSO <srai>SINGOLARE <star index="2"/></srai></srai></template>
+</category>
+<category><pattern>COME FA # <set>animale</set> ^</pattern>
+<template><srai>VERSO <star index="2"/></srai></template>
+</category>
+<category><pattern>QUANTE ZAMPE ^ <set>animale</set> #</pattern>
+<template><srai>ZAMPE <star index="2"/></srai></template>
+</category>
+<category><pattern>QUANTE ZAMPE ^ <set>animals</set> #</pattern>
+<template><srai>ZAMPE <srai>SINGOLARE <star index="2"/></srai></srai></template>
+</category>
+<category><pattern>*</pattern>
+<template><think>
+            <set var="number1"><star index="2"/></set>
+            <set var="animale1"><srai>SINGOLARE <star index="3"/></srai></set>
+            <set var="zampe1">      
+                <uniq>
+                    <subj><get var="animal1"/></subj>
+                    <pred>zampe</pred>
+                    <obj>?zampe1</obj>
+                </uniq>
+            </set>
+            <set var="number2"><star index="5"/></set>
+            <set var="animale2"><srai>SINGOLARE <star index="6"/></srai></set>
+            <set var="zampe2">
+                <uniq>
+                    <subj><get var="animal2"/></subj>
+                    <pred>zampe</pred>
+                    <obj>?zampe2</obj>
+                </uniq>
+            </set>
+            <set var="formula"><get var="number1"/>*<get var="zampe1"/>+<get var="number2"/>*<get var="zampe2"/></set>
+        </think>
+        <srai>TONDO <srai>COSA È <get var="formula"/></srai></srai> zampe.</template>
+</category>
+<category><pattern>ZAMPE # <set>number</set> <set>animali</set> ^</pattern>
+<template><think>
+            <set var="number1"><star index="2"/></set>
+            <set var="animale1"><srai>SINGOLARE <star index="3"/></srai></set>
+            <set var="zampe1">
+                <uniq>
+                    <subj><get var="animale1"/></subj>
+                    <pred>legs</pred>
+                    <obj>?legs1</obj>
+                </uniq>
+            </set>
+            <set var="formula"><get var="number1"/>*<get var="zampe1"/></set>
+        </think>
+        <srai>TONDO <srai>COSA È <get var="formula"/></srai></srai> zampe.</template>
+</category>
+<category><pattern>_ 1 <set>animale</set> *</pattern>
+<template><srai><star/> 1 <srai>PLURALE <star index="2"/></srai> <star index="3"/></srai></template>
+</category>
+<category><pattern>_ 1 <set>animale</set></pattern>
+<template><srai><star/> 1 <srai>PLURALE <star index="2"/></srai></srai></template>
+</category>
+</aiml>

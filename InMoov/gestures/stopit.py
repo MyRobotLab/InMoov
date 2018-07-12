@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def stopit():
   lookinmiddle()
   sleep(1)

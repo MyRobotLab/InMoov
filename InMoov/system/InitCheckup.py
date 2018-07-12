@@ -61,6 +61,8 @@ i01.halfSpeed()
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
+sleep(2) 
+
 if virtualInmoovActivated:
   talkEvent(lang_startingVirtual)
   i01.startVinMoov()
