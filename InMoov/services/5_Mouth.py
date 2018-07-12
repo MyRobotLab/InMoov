@@ -154,18 +154,6 @@ def onStartSpeaking(text):
 # MOUTH RELATED FUNCTIONS
 # ##############################################################################
 
-#to know what is marytts version
-def getMaryttsVersion():
-  try:
-    versionMary="5.2"
-  except:
-    versionMary=0
-    pass
-  return versionMary
-  
-#to check if marytts voice exist
-def CheckMaryTTSVoice(voiceCheck):
-  return os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+voiceCheck+'-'+getMaryttsVersion()+'.jar', os.R_OK)
 
 #mouth functions
 def setRobotLanguage():
@@ -196,21 +184,7 @@ def setRobotLanguage():
     LanguageError=True
     pass
   
-      
-def checkAndDownloadVoice():        
-  if MyvoiceTTS=="MarySpeech":
-    if not CheckMaryTTSVoice(VoiceName):
-      try:
-        mouth.installComponentsAcceptLicense(VoiceName)
-      except:
-        pass
-      if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+VoiceName+'-'+getMaryttsVersion()+'.jar', os.R_OK):
-        errorSpokenFunc('VoiceDownloaded')
-        sleep(4)
-        runtime.restart()
-      else:
-        errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',VoiceName)
-        
+   
     
 def setCustomVoice():  
   global VoiceError
@@ -228,10 +202,6 @@ i01.startMouth()
 
 setRobotLanguage()
 
-#check and update marytts voices  
-#no worky on linux
-if not IuseLinux:
-  checkAndDownloadVoice()
 #set CustomVoice
 setCustomVoice()
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
@@ -260,4 +230,3 @@ if not languagePackLoaded:
 
 talkEvent(lang_whatIsThisLanguage)
 talkEvent(lang_startingEar+", "+EarEngine)
-
