@@ -5,10 +5,11 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='1.0.0'
+version='1.1.0'
 
-# this will run with versions of MRL above :
-mrlCompatible='2685'
+# this will run with Nixie versions of MRL above :
+# THIS IS NOT FOR MANTICORE
+mrlCompatible='2686'
 
 # ###################################################################################
 # This is the full configurable launcher script for Inmoov service :

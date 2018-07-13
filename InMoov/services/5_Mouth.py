@@ -3,6 +3,11 @@
 #                 MOUTH SERVICE FILE
 # ##############################################################################
 
+# -- coding: utf-8 --
+# ##############################################################################
+#                 MOUTH SERVICE FILE
+# ##############################################################################
+
 
 # ##############################################################################
 #               PERSONNAL PARAMETERS
@@ -161,7 +166,7 @@ def setRobotLanguage():
   LanguageError=False
   
   try:
-    if Speechengine=="VoiceRss":i01.mouth.setKey("VOICERSS_API_KEY",apiKey1)
+    if Speechengine=="VoiceRss":i01.mouth.setKey(i01.mouth.VOICERSS_API_KEY,apiKey1)
   except:
     pass
     
@@ -215,9 +220,9 @@ except:
   mouth=subconsciousMouth
   pass
   
-credentialsError=False
-if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":credentialsError=mouth.credentialsError
-if credentialsError:
+isReady=True
+if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":isReady=mouth.isReady()
+if not isReady:
   errorSpokenFunc('lang_VoiceRssNoWorky')
   VoiceError=1
   mouth=subconsciousMouth
