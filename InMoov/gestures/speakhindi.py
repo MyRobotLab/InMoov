@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def speakhindi():
   i01.mouth.speak("yes, i can speak any language")
   #i01.mouth.speak(u"Да, я могу говорить на любом языке")

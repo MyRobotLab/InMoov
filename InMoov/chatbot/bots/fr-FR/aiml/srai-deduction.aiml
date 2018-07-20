@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>C EST QUOI *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>CONNAIS TU *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>DÉFINI *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>DÉFINIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>ON FAIT QUOI À *</pattern>
+<template><srai>QUE FAIT ON À <star/></srai></template>
+</category>
+<category><pattern>ON FAIT QUOI A *</pattern>
+<template><srai>QUE FAIT ON À <star/></srai></template>
+</category>
+<category><pattern>ON Y FAIT QUOI</pattern>
+<template><srai>QUE FAIT ON À <get name="courant"/></srai></template>
+</category>
+<category><pattern>QU EST CE QU *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QU A *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QU UN *</pattern>
+<template><think>
+		<set name="articles">UN</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QU UNE *</pattern>
+<template><think>
+		<set name="articles">UNE</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE <set>articles</set> _</pattern>
+<template><think>
+		<set name="articles"> <star/></set>
+        <set name="courant">
+          <star index="2"/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star index="2"/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE # <set>possessifs</set> _</pattern>
+<template><think><set name="articles"> <star index="1"/></set></think>
+<srai>QU EST CE QUE <star index="1"/> <star index="2"/> <star index="3"/> JE NE SAIS PAS</srai></template>
+</category>
+<category><pattern>QU EST CE QUE C ÉTAIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C ÉTAIT QUE ÇA</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE ÇA</srai></template>
+</category>
+<category><pattern>QU EST CE QUE C ÉTAIT QUE CELA</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE ÇA</srai></template>
+</category>
+<category><pattern>QU EST CE QUE C ÉTAIT TA *</pattern>
+<template><think>
+		<set name="articles">TA</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE TA <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C ÉTAIT TON *</pattern>
+<template><think>
+		<set name="articles">TON</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE TON <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST DU *</pattern>
+<template><think>
+		<set name="articles">DU</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST L *</pattern>
+<template><think>
+		<set name="articles">L</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST LA *</pattern>
+<template><think>
+		<set name="articles">LA</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST LE *</pattern>
+<template><think>
+		<set name="articles">LE</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QU UN *</pattern>
+<template><think>
+		<set name="articles">UN</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QU UNE *</pattern>
+<template><think>
+		<set name="articles">UNE</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE DU *</pattern>
+<template><think>
+		<set name="articles">DU</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE L *</pattern>
+<template><think>
+		<set name="articles">L</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE LA *</pattern>
+<template><think>
+		<set name="articles">LA</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE LE *</pattern>
+<template><think>
+		<set name="articles">LE</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE UN *</pattern>
+<template><think>
+		<set name="articles">UN</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE C EST QUE UNE *</pattern>
+<template><think>
+		<set name="articles">UNE</set>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE CE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE CELA *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE ÇA</srai></template>
+</category>
+<category><pattern>QU EST CE QUE CES *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE D *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QU EST CE QUE DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QU EST CE QUE <star/></srai></template>
+</category>
+<category><pattern>QUE SONT DES *</pattern>
+<template><srai>QUE SONT <star/></srai></template>
+</category>
+<category><pattern>QUE SONT LES *</pattern>
+<template><srai>QUE SONT <star/></srai></template>
+</category>
+<category><pattern>QUEL EST L AUTEUR DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A ÉCRIT <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LE COMPOSITEUR DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A COMPOSÉ <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LE RÉALISATEUR DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIRIGÉ <star/></srai></template>
+</category>
+<category><pattern>QUEL EST LE REALISATEUR DE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIRIGÉ <star/></srai></template>
+</category>
+<category><pattern>QUI ÉTÉ *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>C ÉTAIT <star/></srai></template>
+</category>
+<category><pattern>QUI ÉTAIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>C ÉTAIT <star/></srai></template>
+</category>
+<category><pattern>QUI ÉTAIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>C ÉTAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A ÉCRIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A ÉCRIT <star/></srai></template>
+</category>
+<category><pattern>QUI A ASSASSINÉ *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A TUÉ <star/></srai></template>
+</category>
+<category><pattern>QUI A ASSASSINE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A TUÉ <star/></srai></template>
+</category>
+<category><pattern>QUI A COMPOSE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A COMPOSÉ <star/></srai></template>
+</category>
+<category><pattern>QUI A CONSTRUIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A CRÉÉ *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A CRÉE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A DÉCOUVERT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A TROUVÉ <star/></srai></template>
+</category>
+<category><pattern>QUI A DIRIGE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIRIGÉ <star/></srai></template>
+</category>
+<category><pattern>QUI A DIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIT <star/></srai></template>
+</category>
+<category><pattern>QUI A ECRIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A ÉCRIT <star/></srai></template>
+</category>
+<category><pattern>QUI A FAIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A INVENTÉ *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI A INVENTE *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI AI *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>QUI DIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIT <star/></srai></template>
+</category>
+<category><pattern>QUI DIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A DIT <star/></srai></template>
+</category>
+<category><pattern>QUI ES *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI EST <star/></srai></template>
+</category>
+<category><pattern>QUI FAIS *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+<category><pattern>QUI FAIT *</pattern>
+<template><think>
+        <set name="courant">
+          <star/>
+        </set>
+      </think>
+      <srai>QUI A FAIT <star/></srai></template>
+</category>
+</aiml>

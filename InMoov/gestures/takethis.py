@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def takethis():
   fullspeed()
   i01.startedGesture()

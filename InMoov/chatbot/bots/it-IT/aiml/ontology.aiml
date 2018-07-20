@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>È UN MAMMIFERO UN MAMMIFERO</pattern>
+<template>si</template>
+</category>
+<category><pattern>È UN * UN MAMMIFERO</pattern>
+<template>sconosciuto</template>
+</category>
+<category><pattern>È UN UCCELLO UN UCCELLO</pattern>
+<template>si</template>
+</category>
+<category><pattern>È UN * UN UCCELLO</pattern>
+<template>sconosciuto</template>
+</category>
+<category><pattern>UN MAMMIFERO HA UNA CARATTERISTICA MAMMIFERA</pattern>
+<template>si</template>
+</category>
+<category><pattern>HA UN MADONCINO *</pattern>
+<template>sconosciuto</template>
+</category>
+<category><pattern>FA UNA CARATTERISTICA DI UCCELLO</pattern>
+<template>si</template>
+</category>
+<category><pattern>FA UN UCCELLO *</pattern>
+<template>sconosciuto</template>
+</category>
+</aiml>

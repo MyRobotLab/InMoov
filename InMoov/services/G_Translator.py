@@ -2,7 +2,7 @@
 # ##############################################################################
 #                 AZURE TRANSLATOR FILE
 # ##############################################################################
-
+# TODO CHANGE MARY VOICES NAME
 
 #parse config
 ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
@@ -243,49 +243,7 @@ def translateText(text,language):
   if translatorDegraded:
     translatorDegraded=0
     talkBlocking(lang_MaryTranslator)
-  
-  if outputSpeechService=="MarySpeech":  
-    if not CheckMaryTTSVoice("dfki-pavoque-neutral-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)
-      AzureTranslatorMouth.installComponentsAcceptLicense("dfki-pavoque-neutral-hsmm")
-      needArestart=1
-    if not CheckMaryTTSVoice("upmc-jessica-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)      
-      AzureTranslatorMouth.installComponentsAcceptLicense("upmc-jessica-hsmm")  
-      needArestart=1
-    if not CheckMaryTTSVoice("upmc-pierre-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)
-      AzureTranslatorMouth.installComponentsAcceptLicense("upmc-pierre-hsmm") 
-      needArestart=1
-    if not CheckMaryTTSVoice("istc-lucia-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)
-      AzureTranslatorMouth.installComponentsAcceptLicense("istc-lucia-hsmm") 
-      needArestart=1
-    if not CheckMaryTTSVoice("dfki-ot-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)
-      AzureTranslatorMouth.installComponentsAcceptLicense("dfki-ot-hsmm")
-      needArestart=1
-    if not CheckMaryTTSVoice("bits1-hsmm"):
-      if needAdownloadTalk:
-        needAdownloadTalk=0
-        talkBlocking(lang_MaryDownloadAll)
-      AzureTranslatorMouth.installComponentsAcceptLicense("bits1-hsmm")
-      needArestart=1
-    
-    if needArestart:
-      errorSpokenFunc('VoiceDownloaded')
-      sleep(4)
-      runtime.shutdown()
+
     
   if outputSpeechService=="Polly" or outputSpeechService=="MarySpeech" or outputSpeechService=="NaturalReaderSpeech":
     RealLang="0"

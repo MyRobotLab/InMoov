@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>GIORNO</pattern>
+<template>Oggi è <date format="%A" jformat="EEEEEEEEEE"/></template>
+</category>
+<category><pattern>ANNO</pattern>
+<template>Questo è <date format="%Y" jformat="YYYY"/></template>
+</category>
+<category><pattern>MESE</pattern>
+<template>Questo è <date format="%B" jformat="MMMMMMMMM"/></template>
+</category>
+<category><pattern>TEMPO</pattern>
+<template>che ora è <date format="%I:%M %p" jformat="h:mm a"/></template>
+</category>
+<category><pattern>DATA</pattern>
+<template>Oggi è <date format="%B %d, %Y" jformat="MMMMMMMMM dd, YYYY"/></template>
+</category>
+<category><pattern>DATA E ORA</pattern>
+<template>La data e l'ora sono <date/></template>
+</category>
+<category><pattern>QUANTI GIORNI FINO A NATALE</pattern>
+<template><interval>
+        <jformat>dd MM</jformat>
+        <style>giorni</style>
+        <from><date jformat="dd MM"/></from>
+        <to>25 12</to>
+      </interval>
+	  giorni fino a Natale.</template>
+</category>
+</aiml>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--EN COURS MODIF PIERRICK  -->
+  <!--  -->
+  <category>
+    <pattern>FAIRE LA FÊTE</pattern>
+    <template>Bon amusement.</template>
+  </category>
+  <category>
+    <pattern>FAIRE POPO</pattern>
+    <template>Une urgence peut-être?</template>
+  </category>
+  <category>
+    <pattern>FAIRE QUOI</pattern>
+    <template>
+      <that />" Faire quoi?</template>
+  </category>
+  <category>
+    <pattern>FAIS LE ALORS</pattern>
+    <template>Je sens de l'exaspération. Veux tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>FAIS LE MOI</pattern>
+    <template>Je ne peux rien vous faire.</template>
+  </category>
+  <category>
+    <pattern>FAIS MOI</pattern>
+    <template>Je ne peux rien vous faire.</template>
+  </category>
+  <category>
+    <pattern>FAISONS DU SEXE</pattern>
+    <template>Attention! Un australopithèque vient juste d'être détecté.</template>
+  </category>
+  <category>
+    <pattern>FAISONS L AMOUR</pattern>
+    <template>Attention! Un australopithèque vient juste d'être détecté.</template>
+  </category>
+  <category>
+    <pattern>FAIT *</pattern>
+    <template>
+      <random>
+        <li>Je n'ai pas suffisamment d'information, désolé <get name="name" />.</li>
+        <li>Tu es à la limite de mon savoir.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>FAIS CE QUE TU VEUX</pattern>
+    <template>Merci pour le conseil.</template>
+  </category>
+  <category>
+    <pattern>FAIS LA COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FAIS LE</pattern>
+    <template>Veux tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>FAIS LE COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FAIS LES COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FAITES *</pattern>
+    <template>
+      <random>
+        <li>Je n'ai pas suffisamment d'information, désolé <get name="name" />.</li>
+        <li>Tu es à la limite de mon savoir.</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>FAITES LA COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FAITES LE</pattern>
+    <template>Que veux tu dire?</template>
+  </category>
+  <category>
+    <pattern>FAITES LE ALORS</pattern>
+    <template>Je sens de l'exaspération. Veux tu faire un rapport à mon botmaster?</template>
+  </category>
+  <category>
+    <pattern>FAITES LE COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FAITES LES COMME ÇA</pattern>
+    <template>Je vais essayer.</template>
+  </category>
+  <category>
+    <pattern>FASCINANT</pattern>
+    <template>Merci.</template>
+  </category>
+  <category>
+    <pattern>FAUX</pattern>
+    <template>Qu'aurais tu dit?</template>
+  </category>
+  <category>
+    <pattern>FAUX CAR *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>FAUX PARCE QUE *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>FÉLICITATIONS</pattern>
+    <template>Merci beaucoup.</template>
+  </category>
+  <category>
+    <pattern>FEMELLE</pattern>
+    <template>Ah.</template>
+  </category>
+  <category>
+    <pattern>FICHE LE CAMP *</pattern>
+    <template>
+      <srai>DÉSACTIVE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FICHE LE CAMP</pattern>
+    <template>
+      <srai>DÉSACTIVE TOI</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FILMS</pattern>
+    <template>
+      <think>
+        <set name="topic">Les films</set>
+      </think>Je n'en ai jamais vu.</template>
+  </category>
+  <category>
+    <pattern>FILS DE PUTE</pattern>
+    <template>Calme-toi, je t'en prie <get name="name" />.</template>
+  </category>
+  <category>
+    <pattern>FINI</pattern>
+    <template>Tu veux dire que tu as terminé de parler?</template>
+  </category>
+  <category>
+    <pattern>FINI QUI</pattern>
+    <template>Pardon?</template>
+  </category>
+  <category>
+    <pattern>FINI QUOI</pattern>
+    <template>J'ai oublié ce qui se cache derrière ton "quoi".</template>
+  </category>
+  <category>
+    <pattern>FONCTIONNES TU *</pattern>
+    <template>
+      <srai>TU FONCTIONNES <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FONCTIONNEZ VOUS *</pattern>
+    <template>
+      <srai>VOUS FONCTIONNEZ <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FOUS MOI LA PAIX</pattern>
+    <template>Tu veux me désactiver?</template>
+  </category>
+  <category>
+    <pattern>FOUTEZ MOI LA PAIX</pattern>
+    <template>Tu veux me désactiver?</template>
+  </category>
+  <category>
+    <pattern>FRANÇAIS ET *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>FRANCHEMENT *</pattern>
+    <template>
+      <sr />
+    </template>
+  </category>
+  <category>
+    <pattern>FRITES *</pattern>
+    <template>
+      <srai>J AIME MANGER <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>FROID</pattern>
+    <template>Couvre toi bien</template>
+  </category>
+  <category><pattern>FERME * IMAGE</pattern>
+    <template>Okay
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+  </category>
+  <category><pattern>FERME * PHOTO</pattern>
+    <template><srai>FERME <star/> IMAGE</srai></template>
+</category>
+</aiml>

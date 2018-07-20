@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def ready():
   i01.mouth.speak("ready")
   #i01.mouth.speak(u"готов")

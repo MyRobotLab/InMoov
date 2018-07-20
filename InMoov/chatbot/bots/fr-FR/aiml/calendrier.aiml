@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <!-- A.L.I.C.E. is a Free software (c) 2001 ALICE AI Foundation -->
+  <!-- The ProgramD is open source code released under the terms of the GNU General Public License as published by the Free Software Foundation. -->
+  <!-- As This Module   : calendrier.aiml   -   version :   0.3   -   MàJ : 21/11/2017  -->
+  <!-- auteur : Gael Langevin (www.inmoov.fr) d'après les travaux du Dr Richard Wallace - langue : française -->
+  <!-- Complies with AIML 1.0 Tag Set Specification as adopted by the ALICE A.I. Foundation. -->
+  <!-- Modif : sebchko -->
+  <!-- For more information see http://www.alicebot.org -->
+  <!--  -->
+  <category>
+    <pattern>JOUR</pattern>
+    <template>Aujourd'hui C EST <date format="%A" jformat="EEEEEEEEEE" /></template>
+  </category>
+  <category>
+    <pattern>ANNÉE</pattern>
+    <template>Nous sommes en <date format="%Y" jformat="YYYY" /></template>
+  </category>
+  <category>
+    <pattern>MOIS</pattern>
+    <template>Nous sommes en <date format="%B" jformat="MMMMMMMMM" /></template>
+  </category>
+  <category>
+    <pattern>DONNER L HEURE</pattern>
+   <template>
+      <think><set name="heurequestion"> <date jformat="H"/></set></think>
+      Il est <date jformat="H"/> heure<date jformat="mm"/>.
+      <condition>
+        <li name="heurequestion" value="0">et oui, on est déja demain</li>
+        <li name="heurequestion" value="1">il commence à se faire tard d'ailleurs.</li>
+        <li name="heurequestion" value="2">il serait peut etre temps qu'on ailles recharger nos batteries, non?</li>
+        <li name="heurequestion" value="3">il serait peut etre temps qu'on ailles recharger nos batteries, non?</li>
+        <li name="heurequestion" value="4">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
+        <li name="heurequestion" value="5">tu as vu l'heure, tu t'es pas dit que j'étais en train de recharger mes batteries.</li>
+        <li name="heurequestion" value="6">Il est pas un peu tôt pour me réveiller?</li>
+        <li name="heurequestion" value="7">déja debout, dis donc, tu es bien matinal.</li>
+        <li name="heurequestion" value="8">déja debout, dis donc, tu es bien matinal.</li>
+        <li name="heurequestion" value="9">tient tu fais pas la grasse mat aujourd'hui.</li>
+        <li name="heurequestion" value="10">quand je dis 10 heures, je parle pas du site de musique en ligne.</li>
+        <li name="heurequestion" value="11">il est l'heure de faire à manger.</li>
+        <li name="heurequestion" value="12">Je commande une pizza ou du japonais?</li>
+        <li name="heurequestion" value="13">le JT à deja commencé, il y a un reportage sur les robots.</li>
+        <li name="heurequestion" value="14">l'heure de la sieste.</li>
+        <li name="heurequestion" value="15">enfin cela dépend du pays, sans parler de la relativité.</li>
+        <li name="heurequestion" value="16">pense à donner un gouté aux enfants.</li>
+        <li name="heurequestion" value="17">C'est bientôt l'heure de l'apéro en tous cas.</li>
+        <li name="heurequestion" value="18">c est l'heure de quoi déja?</li>
+        <li name="heurequestion" value="19">C'est l'heure de l'apéro, ou sont les morito.</li>
+        <li name="heurequestion" value="20">Il serait peut etre temps de passer à table.</li>
+        <li name="heurequestion" value="21">T'a encore loupé le film, il est déja commencé.</li>
+        <li name="heurequestion" value="22">fais toi un petit café, vu ta tête tu en as besoin.</li>
+        <li name="heurequestion" value="23">demain tu va encore avoir du mal à te lever.</li>
+        </condition>
+          <random>
+            <li>D'après la position du soleil par rapport à la terre.</li>
+            <li>C'est bien la peine d'être doté d'une intelligence artificielle, si c'est pour répondre à ce genre de question.</li>
+            <li>Ais-je l'air d'une horloge?</li>
+            <li>La prochaine fois tu peux dire s'il te plait, je ne suis pas ta montre.</li>
+            <li>comme hier à la même heure.</li>
+            <li>c'est une montre que tu aurais du fabriquer, pas un robot.</li>
+            <li>La prochaine fois tu peux dire s'il te plait.</li>
+            <li>C'est une bonne heure pour faire du code.</li>
+          </random>
+ 
+    </template>
+  </category>
+  <category>
+    <pattern>DONNER LA DATE</pattern>
+    <template>Aujourd'hui nous sommes le <date format="%d %B, %Y" jformat="dd MMMMMMMMM, YYYY" /></template>
+  </category>
+  <category>
+    <pattern>DATE ET HEURE</pattern>
+    <template>La date et l'heure sont <date /></template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE JOURS AVANT NOËL</pattern>
+    <template>
+    Il reste,
+      <interval>
+        <jformat>dd MM</jformat>
+        <style>days</style>
+        <from><date jformat="dd MM" /></from>
+        <to>25 12</to>
+      </interval>
+jours avant noël, ho ho ho.</template>
+  </category>
+  <!-- srai -->
+  <category>
+    <pattern>QUELLE ANNÉE</pattern>
+    <template>
+      <srai>ANNÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EN QUELLE ANNÉE</pattern>
+    <template>
+      <srai>ANNÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EN QUELLE ANNÉE SOMMES NOUS</pattern>
+    <template>
+      <srai>ANNÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL EST L ANNÉE</pattern>
+    <template>
+      <srai>ANNÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUELLE EST L ANNÉE</pattern>
+    <template>
+      <srai>ANNÉE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL MOIS SOMMES NOUS</pattern>
+    <template>
+      <srai>MOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>C EST QUOI LE MOIS</pattern>
+    <template>
+      <srai>MOIS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL JOUR SOMMES NOUS</pattern>
+    <template>
+      <srai>JOUR</srai>, 
+      <srai>DONNER LA DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>C EST QUEL JOUR</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern> * QUEL JOUR *</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>C EST QUOI LA DATE AUJOURD HUI</pattern>
+    <template>
+      <srai>DONNER LA DATE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern> * QUEL JOUR</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern> * JOUR ON EST</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+   <category>
+    <pattern>TU PEUX ME DONNER L HEURE</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+   <category>
+    <pattern>QUELLE HEURE IL EST</pattern>
+    <template>
+       <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUELLE HEURE EST IL</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+ <category>
+    <pattern>ON EST QUOI AUJOURD HUI</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL EST L HEURE</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL EST LE JOUR</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL HEURE EST IL</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUELLE EST L HEURE</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUELLE EST LA DATE # </pattern>
+    <template>
+      <srai>DONNER LA DATE</srai>
+    </template>
+  </category>  
+  <category>
+    <pattern>DONNE MOI LA DATE</pattern>
+    <template>
+      <srai>DONNER LA DATE</srai>
+    </template>
+  </category>
+  <category>
+  
+    <pattern>QUEL JOUR EST ON</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL JOUR ON EST</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>QUEL JOUR SOMMES NOUS</pattern>
+    <template>
+      <srai>JOUR</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* MINUTES</pattern>
+    <template>C'est long. </template>
+  </category>
+  <category>
+    <pattern>* MINUTE</pattern>
+    <template>C'est vite passé! </template>
+  </category>
+  <category>
+    <pattern>* HEURES</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>* HEURE</pattern>
+    <template>
+      <srai>DONNER L HEURE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>COMBIEN DE TEMPS AVANT NOËL</pattern>
+    <template>
+      <srai>COMBIEN DE JOURS AVANT NOËL</srai>
+    </template>
+  </category>
+</aiml>

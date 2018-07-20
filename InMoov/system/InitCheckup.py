@@ -7,7 +7,7 @@
 ################################
 #subconscious for diagnose
 subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("cmu-slt-hsmm")
+subconsciousMouth.setVoice("Mark")
 log = Runtime.createAndStart("log", "Log")
 runtime.setLogLevel("INFO")
 # libraries import
@@ -60,6 +60,8 @@ i01.halfSpeed()
 
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
+
+sleep(2) 
 
 if virtualInmoovActivated:
   talkEvent(lang_startingVirtual)

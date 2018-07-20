@@ -10,7 +10,7 @@ def errorSpokenFunc(errorType,param="0"):
   
   subconsciousMouth.speakBlocking(unicode(lang_alert,'utf-8'))
   RobotIsErrorMode=1
-  
+  errorSpokenAlert="error"
   if errorType=="BadLanguagePack":
     RobotIsErrorMode=0
     errorSpokenAlert=lang_BadLanguagePack
@@ -69,6 +69,3 @@ def errorSpokenFunc(errorType,param="0"):
    
   print errorSpokenAlert.decode('utf-8')
   subconsciousMouth.speakBlocking(unicode(errorSpokenAlert,'utf-8'))
-  
-  
-    

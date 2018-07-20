@@ -3,6 +3,11 @@
 #                 MOUTH SERVICE FILE
 # ##############################################################################
 
+# -- coding: utf-8 --
+# ##############################################################################
+#                 MOUTH SERVICE FILE
+# ##############################################################################
+
 
 # ##############################################################################
 #               PERSONNAL PARAMETERS
@@ -138,8 +143,8 @@ def onStartSpeaking(text):
       pass
   if i01.RobotIsStarted:
 
-    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="oui":Yes()
-    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="non":No()
+    if 'oui ' in text or 'yes ' in text or ' oui' in text or 'ja ' in text or text=="yes" or text=="kyllä":Yes()
+    if 'non ' in text or 'no ' in text or 'nicht ' in text or 'neen ' in text or text=="no" or text=="ei":No()
 
     #force random move while speaking, to avoid conflict with random life gesture
     if random.randint(0,1)==1:
@@ -154,73 +159,37 @@ def onStartSpeaking(text):
 # MOUTH RELATED FUNCTIONS
 # ##############################################################################
 
-#to know what is marytts version
-def getMaryttsVersion():
-  try:
-    versionMary="5.2"
-  except:
-    versionMary=0
-    pass
-  return versionMary
-  
-#to check if marytts voice exist
-def CheckMaryTTSVoice(voiceCheck):
-  return os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+voiceCheck+'-'+getMaryttsVersion()+'.jar', os.R_OK)
 
 #mouth functions
 def setRobotLanguage():
   global LanguageError
   LanguageError=False
-  tmplanguage=Language
-  if Speechengine=="VoiceRss" or Speechengine=="Polly":
-    if tmplanguage=="fr":tmplanguage="fr-fr"
-    if tmplanguage=="en":tmplanguage="en-us"
-    if tmplanguage=="es":tmplanguage="es-es"
-    if tmplanguage=="de":tmplanguage="de-de"
-    if tmplanguage=="nl":tmplanguage="nl-nl"
-    if tmplanguage=="ru":tmplanguage="ru-ru"
   
   try:
-    if Speechengine=="VoiceRss":i01.mouth.setKey(apiKey1)
+    if Speechengine=="VoiceRss":i01.mouth.setKey(i01.mouth.VOICERSS_API_KEY,apiKey1)
   except:
     pass
     
   try:  
-    if Speechengine=="Polly":i01.mouth.setKey(apiKey1,apiKey2)
+    if Speechengine=="Polly":i01.mouth.setKeys(apiKey1,apiKey2)
   except:
     pass
     
   try:  
-    if Speechengine=="IndianTts":
-      i01.mouth.api=apiKey1
-      i01.mouth.userid=apiKey2
+    if Speechengine=="IndianTts":i01.mouth.setKeys(apiKey2,apiKey1)
   except:
     pass
 
   
   try:
-    if EarEngine=="WebkitSpeechRecognition":i01.ear.setLanguage(Language)
-    mouth.setLanguage(tmplanguage)
+    if EarEngine=="WebkitSpeechRecognition":i01.ear.setcurrentWebkitLanguage(Language)
+    mouth.setLanguage(Language)
   except:
     errorSpokenFunc('Language')
     LanguageError=True
     pass
   
-      
-def checkAndDownloadVoice():        
-  if MyvoiceTTS=="MarySpeech":
-    if not CheckMaryTTSVoice(VoiceName):
-      try:
-        mouth.installComponentsAcceptLicense(VoiceName)
-      except:
-        pass
-      if os.access(os.getcwd().replace("\\", "/")+'/libraries/jar/voice-'+VoiceName+'-'+getMaryttsVersion()+'.jar', os.R_OK):
-        errorSpokenFunc('VoiceDownloaded')
-        sleep(4)
-        runtime.restart()
-      else:
-        errorSpokenFunc('I_cannot_download_this_mary_T_T_S_voice',VoiceName)
-        
+   
     
 def setCustomVoice():  
   global VoiceError
@@ -238,10 +207,6 @@ i01.startMouth()
 
 setRobotLanguage()
 
-#check and update marytts voices  
-#no worky on linux
-if not IuseLinux:
-  checkAndDownloadVoice()
 #set CustomVoice
 setCustomVoice()
 #set english subconsious mouth to user globalised mouth now ( only if we found a language pack )
@@ -255,9 +220,9 @@ except:
   mouth=subconsciousMouth
   pass
   
-credentialsError=False
-if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":credentialsError=mouth.credentialsError
-if credentialsError:
+isReady=True
+if Speechengine=="Polly" or Speechengine=="VoiceRss" or Speechengine=="IndianTts":isReady=mouth.isReady()
+if not isReady:
   errorSpokenFunc('lang_VoiceRssNoWorky')
   VoiceError=1
   mouth=subconsciousMouth
@@ -270,4 +235,3 @@ if not languagePackLoaded:
 
 talkEvent(lang_whatIsThisLanguage)
 talkEvent(lang_startingEar+", "+EarEngine)
-

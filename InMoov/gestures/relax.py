@@ -8,7 +8,7 @@ def relax():
     i01.setHandVelocity("right", 43, 43, 43, 43, 43, 43)
     i01.setArmVelocity("right", 31, 43, 23, 43)
     i01.setArmVelocity("left", 60, 23, 31, 31)
-    #i01.setHeadSpeed(43, 43)
+    #i01.setHeadVelocity(43, 43)
     i01.setTorsoVelocity(31, 16, -1)
     #i01.moveHead(79,100)
     i01.moveArm("left",5,84,25,12)

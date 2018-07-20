@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def systemcheck():
   fullspeed()
   i01.startedGesture()

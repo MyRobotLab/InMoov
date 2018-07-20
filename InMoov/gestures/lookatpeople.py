@@ -1,5 +1,4 @@
 # -- coding: utf-8 --
-
 def lookatpeople():
   i01.setHeadVelocity(40, 40, 40)
   x = (random.randint(1, 5))
