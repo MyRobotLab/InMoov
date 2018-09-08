@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: _inmoovWeather.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: juin 09, 2018 -->
+<!-- Last modified: July 07, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -169,16 +169,7 @@ period;
                 <li>About the temperature, </li>
                 <li>My thermometer shows , </li>
                 </random>
-                 <random>
-                <li>The mercury level indicates, </li>
-                </random>
-                <li>
-                <star index="1"/> degrees
-                </li>
-                 <random>
-                 <li>Exactly! </li>
-                 <li>Or maybe not. </li>
-                 </random></template>
+                <star index="1"/> degrees</template>
 </category>
 <category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
 <template>open weathermap a.p.i. error, or maybe this town is unrecognized.</template>
