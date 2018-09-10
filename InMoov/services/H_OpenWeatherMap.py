@@ -14,24 +14,18 @@ setUnits=ThisServicePartConfig.get('MAIN', 'setUnits')
 apikey=ThisServicePartConfig.get('MAIN', 'apikey')
 town=ThisServicePartConfig.get('MAIN', 'town').replace('"',"")
 
+openWeatherMap=Runtime.createAndStart("openWeatherMap", "OpenWeatherMap")
+openWeatherMap.setKey(apikey)
+openWeatherMap.setUnits(setUnits)
 
-OpenWeatherMap=Runtime.createAndStart("OpenWeatherMap", "OpenWeatherMap")
-OpenWeatherMap.setApiKey(apikey)
-
-
-# forecast index 1 is now to next 3 hours , so 24 hours is 8
-def isTheSunShiny(townParam="town",period=1):
-  OpenWeatherMap.setUnits(setUnits)
+# forecast index 1 is next 3 hours , so 24 hours is 8
+def isTheSunShiny(townParam="town",period=1):  
   if townParam=="town" or townParam=="":townParam=town
-  print period,townParam
-  weather=OpenWeatherMap.fetchForecast(townParam,period)
-  
-  if weather:
-    print weather[1]
-    forecast=weather[3].decode("utf-8")
-    
-    print "SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]).split(',')[0] + " COMMENTAIRE " + str(forecast)
-    chatBot.getResponse("SYSTEM METEO curtemperature " + str(int(round(float(weather[1])))) + " Town " + str(weather[2]).split(',')[0] + " COMMENTAIRE " + str(forecast))
+  openWeatherMap.setLocation(townParam)
+  openWeatherMap.setPeriod(period)
+  curtemperature=openWeatherMap.getDegrees()
+  rawCode=openWeatherMap.getWeatherCode()
+  if not rawCode==0:
+    chatBot.getResponse("SYSTEM METEO curtemperature " + str(curtemperature) + " Town " + str(townParam.split(',')[0] + " COMMENTAIRE " + str(rawCode)))
   else:
-    print "open weathermap error"
     chatBot.getResponse("SYSTEM openweathermapError")
