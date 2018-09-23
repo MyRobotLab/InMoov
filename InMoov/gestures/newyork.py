@@ -194,4 +194,5 @@ def newyork():
   sleep(2)
   i01.finishedGesture()
   mouthControlAudiofile=True
+  ear.setAutoListen(setAutoListen)
   rest()
