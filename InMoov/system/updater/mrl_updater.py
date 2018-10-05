@@ -42,5 +42,5 @@ if str(now.year)!=str(runtime.getVersion()[:4]) and str(runtime.getVersion()[:5]
     open("mrlNeedReinstall", 'a').close()
     errorSpokenFunc('lang_newMRL')
     sleep(4)
-    runtime.restart()
+    runtime.shutdown()
     #killRuntime()
