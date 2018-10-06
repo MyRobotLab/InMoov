@@ -37,13 +37,16 @@ def openNIInit():
     i01.openNiShouldersOffset=openNiShouldersOffset
     i01.openNiLeftShoulderInverted=openNiLeftShoulderInverted
     i01.openNiRightShoulderInverted=openNiRightShoulderInverted
-    openni.capture()
-    #worky open ni kinect detection
-    timeout=0
-    while not i01.RobotIsOpenNiCapturing:
-      sleep(1)
-      timeout+=1
-      if timeout>7:break
+    try:
+      openni.capture()
+      #worky open ni kinect detection
+      timeout=0
+      while not i01.RobotIsOpenNiCapturing:
+        sleep(1)
+        timeout+=1
+        if timeout>7:break
+    except:
+      pass
 
 if isKinectActivated:
   try:
@@ -59,5 +62,8 @@ if isKinectActivated:
     
   else:
     talkEvent(lang_startingOpenNi)
+    try:
     i01.startOpenNI()
     openni.stopCapture()
+    except:
+      pass
