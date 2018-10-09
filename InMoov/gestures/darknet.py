@@ -1,6 +1,6 @@
 def darknet():  
   imagedisplay.closeAll()
-  sleep(0.5)
+  sleep(4)
   if isNeopixelActivated==1:
         i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   if isOpenCvActivated==1:  
