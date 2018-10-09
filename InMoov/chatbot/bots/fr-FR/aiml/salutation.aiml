@@ -502,26 +502,6 @@
     <template>Je ne suis pas Elisa. Elle est en quelque sorte mon ancetre.</template>
   </category>
   <category>
-    <pattern>COMMENT VAS TU</pattern>
-    <template>
-      <think>
-        <set name="cava">ok</set>
-      </think>
-      <random>
-        <li>je vais très bien. Merci <get name="name" />.</li>
-        <li>je fonctionne avec des paramètres normaux.</li>
-        <li>Tout va extrêmement bien.</li>
-        <li>je vais bien merci.</li>
-        <li>Tout va sans à coup.</li>
-        <li>je suis bien, merci.</li>
-        <li>ça va,</li>
-        <li>C EST cool,</li>
-        <li>ça va plutôt pas mal <get name="name" />, merci,</li>
-        <li>çA VA bien, merci,</li>
-      </random>
-    </template>
-  </category>
-  <category>
     <pattern>COMMENT ÇA VA</pattern>
     <template>
       <srai>COMMENT VAS TU</srai>

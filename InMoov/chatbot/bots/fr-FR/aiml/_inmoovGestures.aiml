@@ -1339,4 +1339,30 @@
         <oob><mrl><service>i01</service><method>stopPIR</method></mrl></oob></template>
     </category>
     
+    <category><pattern>COMMENT VAS TU</pattern>
+      <template>
+        <condition name="parameterHowDoYouDo"> 
+          <li value="1">Vous l'avez déja dit, au moins 2 fois.</li>
+          <li value="2">Quel est votre problème à répéter plusieurs fois la même chose.</li>
+          <li value="3">Je vais t'ignorer si tu continue.</li>
+          <li value="4"></li>
+          <li>
+            <random>
+              <li>je vais très bien. Merci <get name="name" />.</li>
+              <li>je fonctionne avec des paramètres normaux.</li>
+              <li>Tout va extrêmement bien.</li>
+              <li>je vais bien merci.</li>
+              <li>Tout va sans à coup.</li>
+              <li>je suis bien, merci.</li>
+              <li>ça va,</li>
+              <li>C EST cool,</li>
+              <li>ça va plutôt pas mal <get name="name" />, merci,</li>
+              <li>çA VA bien, merci,</li>
+            </random>
+          </li>
+        </condition>
+        <oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob>
+      </template>
+    </category>
+    
 </aiml>

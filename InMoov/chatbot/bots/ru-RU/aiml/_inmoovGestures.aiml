@@ -917,4 +917,16 @@
     </random>
         <oob><mrl><service>python</service><method>exec</method><param>BareBonesBrowserLaunch.openURL("https://vk.com/")</param></mrl></oob></template>
 </category>
+<category><pattern>КАК ВЫ ДЕЛАЕТЕ</pattern>
+<template>
+<condition name="parameterHowDoYouDo"> 
+<li value="1">Вы уже сказали, это по крайней мере дважды</li>
+<li value="2">В чем ваша проблема перестает говорить, как дела</li>
+<li value="3">Я проигнорирую вас, если вы скажете еще раз, как дела </li>
+<li value="4"></li>
+<li>Я в порядке, спасибо</li>
+</condition>
+<oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob>
+</template>
+</category>
 </aiml>
