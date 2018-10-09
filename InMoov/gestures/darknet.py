@@ -6,7 +6,7 @@ def darknet():
   if isOpenCvActivated==1:  
     if i01.RobotIsOpenCvCapturing():
       i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)
-      i01.moveHeadBlocking(75,90,90,30,0,90)
+      i01.moveHead(75,90,90,30,0,90)
       sleep(1)
       takeFotoForYolo()
       statisticResult()
@@ -16,7 +16,7 @@ def darknet():
       i01.opencv.capture()
       sleep(1)
       i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)
-      i01.moveHeadBlocking(75,90,90,30,0,90)
+      i01.moveHead(75,90,90,30,0,90)
       sleep(1)
       takeFotoForYolo()
       statisticResult()
