@@ -4,6 +4,7 @@ def facerecognizer():
     if i01.headTracking:i01.stopHeadTracking()
     if i01.eyesTracking:i01.eyesTracking.stopTracking()
   i01.opencv.capture()
+  i01.opencv.removeFilters()
   i01.opencv.addFilter("PyramidDown")
   fr=i01.opencv.addFilter("FaceRecognizer")
   i01.opencv.setDisplayFilter("FaceRecognizer")

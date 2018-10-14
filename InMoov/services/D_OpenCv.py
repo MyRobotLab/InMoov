@@ -67,8 +67,8 @@ def openCvInit():
   if DisplayRender=="OpenCVFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.OpenCVFrameGrabber")
   
   opencv.setCameraIndex(CameraIndex)
-  opencv.removeFilters()
   opencv.capture()
+  opencv.removeFilters()
   #worky open cv camera detection
   timeout=0
   while not i01.RobotIsOpenCvCapturing():
