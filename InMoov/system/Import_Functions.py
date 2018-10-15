@@ -1,12 +1,40 @@
 # -*- coding: utf-8 -*- 
-def killRuntime():
+def is_number(x):
   try:
-    subprocess.call("taskkill /IM java.exe /F")
-    subprocess.call("taskkill /IM javaw.exe /F")
-    subprocess.call("killall java")
+    float(x)
+    return True
   except:
-    pass
-  runtime.shutdown()
+    return False
+    
+def is_number_for_aiml(x):
+  if is_number(x):
+    return "nb"
+  else:
+    return "alpha"
+    
+def mathX(x,y):
+  if is_number(x) and is_number(y):
+    return int(float(x)*float(y))
+  else:
+    return 0
+    
+def mathPlus(x,y):
+  if is_number(x) and is_number(y):
+    return int(float(x)+float(y))
+  else:
+    return 0
+    
+def mathMinus(x,y):
+  if is_number(x) and is_number(y):
+    return int(float(x)-float(y))
+  else:
+    return 0
+    
+def mathDivide(x,y):
+  if is_number(x) and is_number(y):
+    return float(x)/float(y)
+  else:
+    return 0
 
 def CheckIfRobotCanLaunchAPPS(Needs):
   for modules in Needs:

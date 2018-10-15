@@ -58,7 +58,9 @@ def onRecognized(text):
   if text!="":
     global lastRecognized
     lastRecognized=text
-    text=text.replace("'", " ").replace("-", " ")
+    text=text.replace("'", " ")
+    if "-" in text and not " - " in text:text=text.replace("-", " ")
+    
     if DEBUG==1:print "onRecognized : ",text,RobotneedUpdate
     if isChatbotActivated and i01.RobotIsStarted:
       if i01.RobotIsSleeping and unicode(text,'utf-8')==MagicCommandToWakeUp:sleepModeWakeUp()        
