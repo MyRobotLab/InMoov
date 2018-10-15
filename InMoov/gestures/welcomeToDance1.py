@@ -91,8 +91,11 @@ def danceYes():
       i01.mouth.speakBlocking("may I have your phone number")
     if w == 3:
       i01.mouth.speakBlocking("please don't step on my feet")
-    sleep(5)
+    sleep(1)
+    AudioPlayer.playFile(RuningFolder+'/system/sounds/Cant Get Enough CutVersion.mp3')  
+    sleep(45)
     MoveHeadTimer.stopClock()
+    ear.setAutoListen(setAutoListen)
   if x == 2:
     i01.moveArm("left",37,124,30,27)
     i01.moveArm("right",60,60,45,30)
@@ -110,8 +113,10 @@ def danceYes():
     sleep(2)
     i01.moveHead(20,90,30)
     MoveHeadTimer.startClock()
-    sleep(8)
+    AudioPlayer.playFile(RuningFolder+'/system/sounds/Just The Way CutVersion.mp3')
+    sleep(45)
     MoveHeadTimer.stopClock()
+    ear.setAutoListen(setAutoListen)
   if x == 3:
     i01.moveHead(20,60,120)
     i01.moveArm("left",60,60,40,30)
@@ -126,7 +131,9 @@ def danceYes():
     i01.mouth.speakBlocking("Carefull my arm is not strong")
     sleep(1)
     i01.moveHead(20,100,60)
-    sleep(8)  
+    AudioPlayer.playFile(RuningFolder+'/system/sounds/Ah le petit vin blanc.mp3')
+    sleep(45)
+    ear.setAutoListen(setAutoListen)  
   y = (random.randint(1, 6))
   if y == 1:
     i01.mouth.speakBlocking("Is it your first time?")

@@ -173,7 +173,7 @@
     <category>
       <pattern>CAPTURE LES GESTUELLES</pattern>
       <template>Je mémorise les positions de mes servo moteurs.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture()</param></mrl></oob></template>
     </category>
     <category>
       <pattern>DONNE</pattern>

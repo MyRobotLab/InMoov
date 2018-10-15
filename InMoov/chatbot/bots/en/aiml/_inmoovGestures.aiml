@@ -354,7 +354,7 @@
     <category>
       <pattern>CAPTURE GESTURE</pattern>
       <template>I am capturing this gesture.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture()</param></mrl></oob></template>
     </category>
 
 
@@ -1037,8 +1037,39 @@
 
     <category>
       <pattern>SHAKE HAND</pattern>
-      <template>Shall we shake hand.
+      <template><random>
+        <li>Shall we shake hand.</li>
+        <li>Lets shake hand.</li>
+        </random>
         <oob><mrl><service>python</service><method>exec</method><param>shakehand()</param></mrl></oob></template>
+    </category>
+    
+    <category><pattern>SHAKE HANDS</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN WE SHAKE HANDS</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN WE SHAKE HAND</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN YOU SHAKE HANDS</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN YOU SHAKE HAND</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN YOU SHAKE MY HANDS</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>CAN YOU SHAKE MY HAND</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>* SHAKE HANDS</pattern>
+    <template><srai>SHAKE HAND</srai></template>
+    </category>
+    <category><pattern>* SHAKE HAND</pattern>
+    <template><srai>SHAKE HAND</srai></template>
     </category>
     
     <category>
@@ -1418,15 +1449,9 @@
 
 
     <category>
-      <pattern>SHOW ME A PICTURE OF A *</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
-    </category>
-
-
-    <category>
-      <pattern>SHOW ME A PICTURE OF THE *</pattern>
+      <pattern>SHOW ME A PICTURE OF *</pattern>
       <template>
-        <srai>SHOW ME A PICTURE OF A * </srai>
+        <srai>PICTUREBLAB <star/></srai>
       </template>
     </category>
 

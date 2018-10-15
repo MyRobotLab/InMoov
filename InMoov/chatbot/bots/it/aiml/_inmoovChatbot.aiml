@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>SAY *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+		Ciao , questa è la mia prima inizializzazione. Mi occorrono delle informazioni : quale sarà il mio nome?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># QUALE SARÀ IL MIO NOME #</that>
+<template><set name="questionfirstinit">E' il mio nome <star/>, dimmi sì o no</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># POSSO SAPERE IL TUO NOME #</that>
+<template><set name="questionfirstinit">E' il tuo nome <star/>, dimmi sì o no</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># SI #</pattern><that># IL MIO NOME #</that>
+<template><random>
+			<li>
+			Questo nome mi piace,  <get name="tmpname"/>.
+			</li>
+			<li>
+			E' un nome molto carino <get name="tmpname"/>, è bellissimo.
+			</li>
+        </random>
+   Per favore, posso sapere il tuo nome ?     
+	<think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># SI #</pattern><that># IL TUO NOME #</that>
+<template><random>
+        <li>Felice di conoscerti, <get name="tmpname"/>.</li>
+        </random>
+		
+        <think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NO #</pattern><that># IL MIO NOME #</that>
+<template>Ricominciamo.
+	Ti ascolto .Quale sarà il mio nome?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NO #</pattern><that># IL TUO NOME #</that>
+<template>Ricominciamo.Ti ascolto. Posso sapere il tuo nome?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># DIMMI SÌ #</that>
+<template><random>
+          <li>Per favore,rispondimi, è importante</li>
+          <li>Ripeto.</li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template><random>
+          <li>Sono ai tuoi ordini: ti ascolto.</li>
+          <li>Cosa vuoi che faccia.</li>
+        </random></template>
+</category>
+<category><pattern>SYSTEM_NEW_VERSION</pattern>
+<template><think><set name="topic">updater</set></think>
+     Avviso nuovo sistema vuoi che io installi, dimmi sì o no</template>
+</category>
+<topic name="UPDATER">
+<category><pattern># SI #</pattern><that># DIMMI SÌ #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+      <li>
+      Iniziando a scaricare, per favore aspetta.
+      </li>
+  <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>updateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern># NO #</pattern><that># DIMMI SÌ #</that>
+<template><think>
+         <set name="topic">default</set>
+        </think>
+  Va bene forse un'altra volta.
+    <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>dontUpdateMe()</param>
+          </mrl>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern>#</pattern><that># DIMMI SÌ #</that>
+<template>Per favore rispondi alla mia domanda, è importante, dimmi sì o no</template>
+</category></topic>
+
+<category><pattern>* SYSTEM_PERCENT</pattern>
+<template><li>
+        <star/> procent.
+      </li></template>
+</category>
+<category><pattern>SYSTEM_DOWNLOAD_OK</pattern>
+<template><li>
+       Il download è terminato, per favore riavvialo.
+      </li></template>
+</category>
+<category><pattern>SVEGLIATI</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>
+<category><pattern>CHIUDI IL PROGRAMMA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>TERMINA IL PROGRAMMA</pattern>
+<template><srai>TERMINA IL PROGRAMMA</srai></template>
+</category>
+<category><pattern>VA' A DORMIRE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DISABILITA</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>QUAL'E' IL CODICE D'AZIONE</pattern>
+<template>Il codice d' azione è 
+      <get name="topic"/></template>
+</category>
+<category><pattern>MODALITA' DI AVVIO</pattern>
+<template>Sto entrando nel codice di avvio
+      <think><set name="topic"> AVVIO</set></think></template>
+</category>
+<category><pattern>GESTI</pattern>
+<template>Sto entrando nel codice dei gesti
+      <think><set name="topic">GESTI</set></think></template>
+</category>
+<category><pattern>GESTI *</pattern>
+<template><srai>GESTI</srai></template>
+</category>
+<category><pattern>SCOLLEGA TUTTO</pattern>
+<template>Sto scollego tutto
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ANNULLA TUTTE LE CONNESSIONI</pattern>
+<template><srai>SCOLLEGA TUTTO</srai></template>
+</category>
+<category><pattern>COLLEGA TUTTO</pattern>
+<template>Sto collego tutto
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>COLLEGA LA TUA MANO DESTRA</pattern>
+<template><srai>COLLEGA LA TUA MANO DESTRA</srai></template>
+</category>
+<category><pattern>SCOLLEGA LA MANO DESTRA</pattern>
+<template>Sto scollego la mano destra
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>COLLEGA LA TUA MANO SINISTRA</pattern>
+<template><srai>COLLEGA LA  MANO SINISTRA</srai></template>
+</category>
+<category><pattern>SCOLLEGA LA MANO SINISTRA</pattern>
+<template>Sto scollego la mano sinistra
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>SCOLLEGA LA TUA MANO SINISTRA</pattern>
+<template><srai>SCOLLEGA LA MANO SINISTRA</srai></template>
+</category>
+<category><pattern>SCOLLEGA LA TESTA</pattern>
+<template>Vado a scollegare la mia testa
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>COLLEGA IL TUO BRACCIO DESTRO</pattern>
+<template><srai>COLLEGA IL BRACCIO DESTRO</srai></template>
+</category>
+<category><pattern>SCOLLEGA IL BRACCIO DESTRO</pattern>
+<template>Vado a scollegare iil mio braccio destro
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>COLLEGA IL TUO BRACCIO SINISTRO</pattern>
+<template><srai>COLLEGA IL BRACCIO SINISTRO</srai></template>
+</category>
+<category><pattern>SCOLLEGA IL BRACCIO SINISTRO</pattern>
+<template>Vado a scollegare il mio braccio sinistro
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>COLLEGA IL TUO BUSTO</pattern>
+<template><srai>COLLEGA IL BUSTO</srai></template>
+</category>
+<category><pattern>SCOLLEGA IL BUSTO</pattern>
+<template>Vado a scollegare il mio busto
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+</aiml>

@@ -340,7 +340,7 @@
     <category>
       <pattern>CAPTURE GESTURE</pattern>
       <template>I am capturing this gesture.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture()</param></mrl></oob></oob></template>
     </category>
 
 

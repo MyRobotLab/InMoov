@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <!-- Файл: _inmoovWeather.aiml -->
+    <!-- автор: Gael Langevin, Anthony Gallot -->
+    <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+    <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+    <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+    <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+    <!-- -->
+    <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+    <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+    <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+    <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+    <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+    <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+    <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+    <!-- Перевод: AlexInMoov - ПРОЦАК АНДРЕЙ. -->
+    <!-- Последнее изменение: AlexInMoov 22/03/18. -->
+    
+<category>
+    <pattern># ПОГОДА</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny()</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern># КАКАЯ # <set>погода</set> #</pattern>
+    <template>
+        <srai>ПОГОДА</srai>
+    </template>
+</category>
+<category>
+    <pattern># КАКАЯ # <set>погода</set> $ЗАВТРА</pattern>
+    <template>
+        <srai>КАКАЯ ПОГОДА # ЗАВТРА</srai>
+    </template>
+</category>
+<category>
+    <pattern>^ БУДЕТ ^ <set>погода</set> ^</pattern>
+    <template>
+        <srai>ПОГОДА</srai>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА *</pattern>
+    <template>
+        <srai># ПОГОДА</srai>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА # ЗАВТРА</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny(town,1)</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА ^ НА * ЗАВТРА</pattern>
+    <template>
+        <think><set name="jours"><map name="name2number"><star index="2"/></map></set></think>
+        <condition>
+            <li name="jours" value="unknown"><think><set name="jours"><star index="2"/></set></think></li>
+        </condition>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny(town,<get name="jours"/>)</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА # И * НА * ЗАВТРА</pattern>
+    <template>
+        <think><set name="jours"><map name="name2number"><star index="3"/></map></set></think>
+        <condition>
+            <li name="jours" value="unknown"><think><set name="jours"><star index="3"/></set></think></li>
+        </condition>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny("<star index="2"/>",<get name="jours"/>)</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА ^ НА ЗАВТРА *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny("<star index="2"/>",1)</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА В *</pattern>
+    <template>
+        <srai># ПОГОДА В <star/></srai>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА НА САМОМ ДЕЛЕ *</pattern>
+    <template>
+        <srai># ПОГОДА В <star/></srai>
+    </template>
+</category>
+<category>
+    <pattern>КАКАЯ ПОГОДА</pattern>
+    <template>
+        <srai># ПОГОДА В </srai>
+    </template>
+</category>
+<category>
+    <pattern># ПОГОДА В *</pattern>
+    <template>
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>isTheSunShiny("<star index="2"/>")</param>
+            </mrl>
+        </oob>
+    </template>
+</category>
+<category>
+    <pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
+    <template>
+        Ошибка ключей a.p.i., или этот город неизвестен.
+    </template>
+</category>
+<category>
+    <pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+    <template>
+        <think><set name="meteo"><star index="3"/></set></think>
+        <random>
+            <li>В этот прекрасный день в <star index="2"/>, </li>
+            <li>Что касается погоды в <star index="2"/>, </li>
+            <li>В данный момент в <star index="2"/>, </li>
+            <li>Я почти никогда не ошибаюсь в погоде, но в <star index="2"/>, </li>
+            <li>Итак, в  <star index="2"/>, </li>
+		    <li>Сегодня в <star index="2"/>, </li>
+            <li>Я предсказываю, что в <star index="2"/>, </li>
+            <li>Я замечаю, что в <star index="2"/>, </li>
+            <li>Я вижу, что в <star index="2"/>, </li>
+            <li>Если вы высунете нос на улицу, вы обнаружите, что в <star index="2"/>, </li>
+		    <li>Я могу сказать, что в <star index="2"/>, </li>
+        </random>
+        <condition>
+            <li name="meteo" value="1000">Я не могу сказать вам погоду. Пожалуйста проверьте ключ A. P. I. </li>
+            <li name="meteo" value="200">Гроза с небольшим дождем</li>
+            <li name="meteo" value="201">Гроза с дождем</li>
+            <li name="meteo" value="202">Гроза с сильным дождем</li>
+            <li name="meteo" value="210">Легкая гроза</li>
+            <li name="meteo" value="211">Гроза</li>
+            <li name="meteo" value="212">Сильная гроза</li>
+            <li name="meteo" value="221">Грохот грозы</li>
+            <li name="meteo" value="230">Гроза с мелким дождём</li>
+            <li name="meteo" value="231">Гроза с дождем</li>
+            <li name="meteo" value="232">Гроза с сильным дождем</li>
+            <li name="meteo" value="300">Мелкий интенсивный дождь</li>
+            <li name="meteo" value="301">Моросит</li>
+            <li name="meteo" value="302">Сильно моросит</li>
+            <li name="meteo" value="310">Не сильный моросящий дождь</li>
+            <li name="meteo" value="311">Еле ощутимый дождь</li>
+            <li name="meteo" value="312">Сильная изморозь</li>
+            <li name="meteo" value="313">Моросящий дождь с сильными порывами ветра</li>
+            <li name="meteo" value="314">Чередование сильного дождя с ветром, и моросью</li>
+            <li name="meteo" value="321">Ливневый дождь</li>
+            <li name="meteo" value="500">Небольшой дождь</li>
+            <li name="meteo" value="501">Умеренный дождь</li>
+            <li name="meteo" value="502">Интенсивный дождь</li>
+            <li name="meteo" value="503">Сильный дождь</li>
+            <li name="meteo" value="504">Резкий дождь</li>
+            <li name="meteo" value="511">Ледяной дождь</li>
+            <li name="meteo" value="520">Кратковременный дождь с резкими порывами ветра</li>
+            <li name="meteo" value="521">Сильный дождь с ветром</li>
+            <li name="meteo" value="522">Сильный дождь с резкими порывами ветра</li>
+            <li name="meteo" value="531">Прерывистый сильный дождь</li>
+            <li name="meteo" value="600">Небольшие осадки в виде снега</li>
+            <li name="meteo" value="601">Идет снег</li>
+            <li name="meteo" value="602">Сильный снегопад</li>
+            <li name="meteo" value="611">Дождь со снегом</li>
+            <li name="meteo" value="612">Сильный дождь со снегом</li>
+            <li name="meteo" value="615">Не большие осадки в виде снега и дождя</li>
+            <li name="meteo" value="616">То дождь то снег</li>
+            <li name="meteo" value="620">Кратковременые осадки в виде сильного дождя со снегом</li>
+            <li name="meteo" value="621">Ливень с градом</li>
+            <li name="meteo" value="622">Сильный снегопад</li>
+            <li name="meteo" value="701">Дымка</li>
+            <li name="meteo" value="711">Туман</li>
+            <li name="meteo" value="721">Мгла</li>
+            <li name="meteo" value="731">Ветер с пылью</li>
+            <li name="meteo" value="741">Густой туман</li>
+            <li name="meteo" value="751">Песчаная буря</li>
+            <li name="meteo" value="761">Пыль</li>
+            <li name="meteo" value="762">Вулканическая пыль</li>
+            <li name="meteo" value="771">Шквально</li>
+            <li name="meteo" value="781">Торнадо</li>
+            <li name="meteo" value="800">
+                <random>
+		                  <li>Безоблачно</li>
+                          <li>Красивое ясное небо! </li>
+                          <li>На небе ни одного облака, </li>
+                          <li>Нет, ничего, кроме красивого голубого неба! </li>
+                          <li>солнечно, пахнет отпуском </li>
+                          <li>солнце, обратите внимание на p.l.a пластик, он разрушается, </li>
+                          <li>солнце, обратите внимание на a.b.s. пластик он пожелтел, </li>
+                </random>
+            </li>
+            <li name="meteo" value="801">Малооблачно</li>
+            <li name="meteo" value="802">Рассеянные облака</li>
+            <li name="meteo" value="803">Переменная  облачность</li>
+            <li name="meteo" value="804">Тучи</li>
+            <li name="meteo" value="900">Торнадо</li>
+            <li name="meteo" value="901">Тропический шторм</li>
+            <li name="meteo" value="902">Ураган</li>
+            <li name="meteo" value="903">Холодно</li>
+            <li name="meteo" value="904">Жара</li>
+            <li name="meteo" value="905">Ветренно</li>
+            <li name="meteo" value="906">Град</li>
+            <li name="meteo" value="951">Штиль</li>
+            <li name="meteo" value="952">Легкий ветерок</li>
+            <li name="meteo" value="953">Ласковый, нежный бриз</li>
+            <li name="meteo" value="954">Умеренный ветер</li>
+            <li name="meteo" value="955">Прохладный, освежающий ветер</li>
+            <li name="meteo" value="956">Сильный ветер</li>
+            <li name="meteo" value="957">Мощные порывы ветра</li>
+            <li name="meteo" value="958">Буря</li>
+            <li name="meteo" value="959">Сильная буря</li>
+            <li name="meteo" value="960">Шторм</li>
+            <li name="meteo" value="961">Сильный шторм</li>
+            <li name="meteo" value="962">Ураган, я не шучу останьтесь дома.</li>
+            <li>В настоящее время <star index="1"/> градусов в <star index="2"/> .. </li>
+        </condition>
+        <random>
+            <li>Что касается температуры, то она </li>
+            <li>Если взглянуть на мой термометр, ой, где же он - а вот он, температура </li>
+            <li>По градуснику можно определить, что температура </li>
+            <li>По данным температура </li>
+            <li>Я посмотрел, температура </li>
+            <li>Если вы хотите знать температуру, то она </li>
+		    <li>Если говорить о температуре, то она </li>
+		    <li>По моим расчётам температура </li>
+		    <li>Термометр показывает, что температура  </li>
+		    <li>наугад, я бы сказал, что температура  </li>
+        </random>
+            <li>около <star index="1"/> градусов. </li>
+    </template>
+</category>
+</aiml>

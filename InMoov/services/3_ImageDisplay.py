@@ -6,8 +6,8 @@
 # MRL SERVICE CALL
 # ##############################################################################
 
-ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")
+imagedisplay = Runtime.start("imagedisplay","ImageDisplay")
 
 def displayPic(pic):
-  if not virtualInmoovAlwaysActivated and not ScriptType=="Virtual":
-    r=ImageDisplay.displayFullScreen(pic)
+  imagedisplay.closeAll()
+  r=imagedisplay.displayFullScreen(pic)

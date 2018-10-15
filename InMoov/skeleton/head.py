@@ -124,7 +124,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       i01.startMouthControl(MyLeftPort)
       i01.mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       print "software mouthcontrol activation"
-      if MouthControlJawTweak:i01.mouthControl.setDelays(MouthControlJawdelaytime, MouthControlJawdelaytimestop, MouthControlJawdelaytimeletter)
+      if MouthControlJawTweak:i01.mouthControl.setdelays(MouthControlJawdelaytime, MouthControlJawdelaytimestop, MouthControlJawdelaytimeletter)
       talkEvent(lang_startingMouth)
 # ##############################################################################
 #                 mouth control based on audio signal processing

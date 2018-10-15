@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern># PREVISIONE</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny()</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>CHE PREVISIONI CI SONO</pattern>
+<template><srai># PREVISIONE</srai></template>
+</category>
+<category><pattern># PREVISIONI PER DOMANI #</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,8)</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern># PREVISIONI # PER * $GIORNI</pattern>
+<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
+        <condition>
+            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
+        </condition>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny(town,<javascript>
+period = eval( <get name="nbdays"/> * 8 );
+period;
+</javascript>)</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern># PREVISIONI $A * $IN * $GIORNI</pattern>
+<template><think><set name="nbdays"><map name="name2number"><star index="3"/></map></set></think>
+        <condition>
+            <li name="nbdays" value="unknown"><think><set name="nbdays"><star index="3"/></set></think></li>
+        </condition>
+       <oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2"/>",<javascript>
+period = eval( <get name="nbdays"/> * 8 );
+period;
+</javascript>)</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern># PREVISIONI $A *</pattern>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>isTheSunShiny("<star index="2"/>")</param>
+        </mrl>
+      </oob></template>
+</category>
+<category><pattern>SYSTEM METEO CURTEMPERATURE * TOWN * COMMENTAIRE *</pattern>
+<template><think><set name="meteo"> <star index="3"/></set></think>
+                <random>
+                <li>In <star index="2"/>, </li>
+                <li>Riguardo alle previsioni a<star index="2"/>, </li>
+                </random>
+                <random>
+                <li>penso che ci sarà</li>
+                </random>
+                
+                <condition>
+                <li name="meteo" value="200">temporali con pioggia leggera</li>
+                <li name="meteo" value="201">temporali con pioggia</li>
+                <li name="meteo" value="202">temporali con forti piogge</li>
+                <li name="meteo" value="210">leggeri temporali</li>
+                <li name="meteo" value="211">temporali </li>
+                <li name="meteo" value="212">forti temporali</li>
+                <li name="meteo" value="221">ragged --temporali sparsi</li>
+                <li name="meteo" value="230">temporali con  pioggerella leggera</li>
+                <li name="meteo" value="231">temporali con pioggerella</li>
+                <li name="meteo" value="232">temporali con  pioviggine intensa</li>
+                <li name="meteo" value="300">pioggerella di lieve intensità</li>
+                <li name="meteo" value="301">pioggerella</li>
+                <li name="meteo" value="302">pioviggine  di forte intensità</li>
+                <li name="meteo" value="310">pioggerella  molto leggera</li>
+                <li name="meteo" value="311">pioggia leggera</li>
+                <li name="meteo" value="312">pioviggine intensa</li>
+                <li name="meteo" value="313">rovesci e pioviggine</li>
+                <li name="meteo" value="314">forti rovesci e pioviggine</li>
+                <li name="meteo" value="321">aquazzoni</li>
+                <li name="meteo" value="500">pioggia leggera</li>
+                <li name="meteo" value="501">pioggia moderata</li>
+                <li name="meteo" value="502">pioggia intensa</li>
+                <li name="meteo" value="503">pioggia molto forte</li>
+                <li name="meteo" value="504">pioggia fortissima</li>
+                <li name="meteo" value="511">grandine</li>
+                <li name="meteo" value="520">lievi acquazzoni </li>
+                <li name="meteo" value="521">acquazzoni</li>
+                <li name="meteo" value="522">acquazzoni forti</li>
+                <li name="meteo" value="531">pioggia battente</li>
+                <li name="meteo" value="600">nevicata leggera</li>
+                <li name="meteo" value="601">nevicata</li>
+                <li name="meteo" value="602">forte nevicata</li>
+                <li name="meteo" value="612">moderato nevischio </li>
+                <li name="meteo" value="615">pioggia leggera e neve</li>
+                <li name="meteo" value="616">pioggia e neve</li>
+                <li name="meteo" value="621">nevicata intensa</li>
+                <li name="meteo" value="622">fortissima nevicata</li>
+                <li name="meteo" value="701">nebbia leggera </li>
+                <li name="meteo" value="711">fumo</li>
+                <li name="meteo" value="721">foschia</li>
+                <li name="meteo" value="731">sabbia, turbini di sabbia</li>
+                <li name="meteo" value="741">nebbia fitta</li>
+                <li name="meteo" value="751">sabbia</li>
+                <li name="meteo" value="761">polvere</li>
+                <li name="meteo" value="801">poco nuvoloso</li>
+                <li name="meteo" value="802">nubi sparse</li>
+                <li name="meteo" value="803">cumuli sparsi</li>
+                <li name="meteo" value="804">cielo coperto</li>
+                <li name="meteo" value="900">tornado,trombe d' aria</li>
+                <li name="meteo" value="901">tempeste tropicali</li>
+                <li name="meteo" value="902">uragani</li>
+                <li name="meteo" value="903">freddo</li>
+                <li name="meteo" value="904">caldo</li>
+                <li name="meteo" value="906">grandinare</li>
+                <li name="meteo" value="951">calma di vento </li>
+                <li name="meteo" value="952">bavetta</li>
+                <li name="meteo" value="953">brezza leggera</li>
+                <li name="meteo" value="954">brezza moderata</li>
+                <li name="meteo" value="955">brezza fresca </li>
+                <li name="meteo" value="956">brezza forte</li>
+                <li name="meteo" value="957">vento forte, quasi burrasca</li>
+                <li name="meteo" value="958">burrasca</li>
+                <li name="meteo" value="959">forte burrasca</li>
+                <li name="meteo" value="960">tempesta</li>
+                <li name="meteo" value="961">tempesta violenta</li>
+                </condition>
+                <random>
+                <li>Riguardo la temperatura, </li>
+                <li>Il mio termometro segna, </li>
+                <li>Il livello del mercurio indica, </li>
+                </random>
+                <star index="1"/> gradi</template>
+</category>
+<category><pattern>SYSTEM OPENWEATHERMAPERROR</pattern>
+<template>errore di apertura della mappa meteo oppure questa città non è segnata</template>
+</category>
+</aiml>

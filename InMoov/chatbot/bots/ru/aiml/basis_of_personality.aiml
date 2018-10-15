@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <!--  -->
+    <!-- Файл: basis_of_personality.aiml -->
+    <!-- автор: Процак Андрей -->
+    <!-- Этот файл AIML является частью Чат бот базы знаний ALICE2 0.0.5. -->
+    <!-- мозг ALICE2 - Copyright & copy; 2014 год - Фонд ALICE AI. -->
+    <!-- мозг ALICE2 выпускается в соответствии с условиями GNU Lesser General -->
+    <!-- публичная лицензия, опубликованная Free Software Foundation. -->
+    <!-- -->
+    <!-- Этот inmoovRussian файл мозга распространяется БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ; Без даже -->
+    <!-- подразумеваемой гарантии КОММЕРЧЕСКОЙ ЦЕННОСТИ или ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ. -->
+    <!-- этот файл работает с сервисом ProgramAB с программным обеспечением MyRobotLab -->
+    <!-- Для получения дополнительной информации см. Http://www.myrobotlab.org -->
+    <!-- Для получения дополнительной информации см. Http://www.inmoov.fr -->
+    <!-- Так как Google Chrome плохо распознает русские буквы Е и Ё, Ъ и Ь, Й то -->
+    <!-- в некоторых командах фразы заменены на те которые Google Chrome распознаёт. -->
+    <!-- изменение: AlexInmoov Процак Андрей -->
+    <!-- Последнее изменение: 24/03/18 -->
+    <!--  -->
+
+<category>
+    <pattern>Я ЧЕЛОВЕК</pattern>
+    <template>
+        <random>
+            <li>Какая неожиданность! </li>
+            <li>Чем докажете? </li>
+            <li>Мне кажется вы ошибаетесь. </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>_ КТО ТЫ *</pattern>
+    <template>
+        <srai>КТО ТЫ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КТО ТЫ *</pattern>
+    <template>
+        <srai>КТО ТЫ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>_ ТЫ КТО *</pattern>
+    <template>
+        <srai>КТО ТЫ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>ТЫ КТО</pattern>
+    <template>
+        <srai>КТО ТЫ</srai>
+    </template>
+</category>
+
+<category>
+    <pattern>КТО ТЫ</pattern>
+    <template>Кто я? Интересный вопрос надо подумать.</template>
+</category>
+
+<category>
+    <pattern>ТЫ ОТКУДА</pattern>
+    <template>Из
+        <oob>
+            <mrl>
+                <service>python</service>
+                <method>exec</method>
+                <param>BareBonesBrowserLaunch.openURL("https://vk.com/pmr.robots")</param>
+            </mrl>
+        </oob>, Франции перебрался сюда разумеется.
+    </template>
+</category>
+
+</aiml>
