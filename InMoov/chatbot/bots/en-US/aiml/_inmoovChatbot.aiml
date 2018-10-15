@@ -228,4 +228,13 @@
 <template>Detaching my torso
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
 </category>
+
+  <!-- fix for null topic -->
+
+  <topic name="">
+  <category><pattern>#</pattern>
+  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
+  
 </aiml>

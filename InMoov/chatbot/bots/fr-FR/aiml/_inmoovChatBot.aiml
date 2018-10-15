@@ -301,4 +301,12 @@
     <pattern>QUEL EST LE SUJET</pattern>
     <template>LE SUJET EST <get name="topic" /></template>
   </category>
+  
+  <!-- fix for null topic -->
+
+  <topic name="">
+  <category><pattern>#</pattern>
+  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
 </aiml>
