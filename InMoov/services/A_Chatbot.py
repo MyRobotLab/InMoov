@@ -49,10 +49,3 @@ if isChatbotActivated:
   
 else:
   errorSpokenFunc('lang_ChatbotError')
-
-def writeAIML():  
-  chatBot.writeAIMLIF()
-  
-# wikidata helper
-WikiFile="WIKIDATA_propEN.txt"
-if Language=="fr":WikiFile="WIKIDATA_propFR.txt"
