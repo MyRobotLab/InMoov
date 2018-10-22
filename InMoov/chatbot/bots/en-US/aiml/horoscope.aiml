@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: horoscope.aiml -->
+<!-- Author: Gael Langevin -->
+<!-- Last modified: october 19, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+
+<category><pattern>LIBRA</pattern>
+  <template>
+    <think>
+      <set name="it"></set>
+      <set name="sign"></set>
+      <set name="topic"></set>
+    </think>
+      <sraix>RANDOM HOROSCOPE</sraix>
+  </template>
+</category>
+
+  <category>
+    <pattern>HOROSCOPE FOR *</pattern>
+    <template><think><set name="it"><star/></set><set name="sign"><star/></set><set name="topic"><star/></set></think>
+      <sraix>RANDOM HOROSCOPE</sraix>
+    </template>
+  </category>
+<category>
+  <pattern>RANDOM HOROSCOPE</pattern>
+  <template>The daily horoscope for <get name="sign" />
+    <random>
+      <li>Today will be interesting although</li>
+      <li>If you have money issue, it is a good timing because</li>
+      <li>If you are single, the conjonction is good when</li>
+      <li>The stars are aligned on your sign and</li>
+    </random>
+    <random>
+      <li>Jupiter and Venus</li>
+      <li>Mars and Capricorn</li>
+      <li>The sun along with Mercurius</li>
+      <li>three different planets</li>
+    </random>
+    <random>
+      <li>enter in your frame.</li>
+      <li>Align with the fish constellation.</li>
+      <li>are visible next to Neptune.</li>
+      <li>it assemble.</li>
+    </random>
+    <random>
+      <li>Which means</li>
+      <li>Such a rare case means</li>
+      <li>Spend your day smoothly while</li>
+      <li>All will run smooth for you,</li>
+    </random>
+    <random>
+      <li>Fortune is at your door</li>
+      <li>Chances are on your side and</li>
+      <li>Love is not far and</li>
+      <li>It will be a fantastic day and</li>
+    </random>
+    <random>
+      <li>you won't do any wrong step.</li>
+      <li>somebody that you like feels exactly the same.</li>
+      <li>The stars are favorable for good fortune.</li>
+      <li>You will rediscover a family object.</li>
+    </random>
+    <random>
+      <li>Though,</li>
+      <li>Good fortune doesn't always last,</li>
+      <li>Good news also carries bad news,</li>
+      <li>Beware because,</li>
+    </random>
+    <random>
+      <li>Saturne is not far from Venus, so</li>
+      <li>The moon will soon turn into Goat and</li>
+      <li>The alignment of Neptune with Pluton means</li>
+      <li>all the planets aren't that happy</li>
+    </random>
+    <random>
+      <li>all won't go according to your plans.</li>
+      <li>a jealous colleague might have bad intentions.</li>
+      <li>something you did last week might haunt you.</li>
+      <li>you might lose something precious.</li>
+    </random>
+    <random>
+      <li>If we resume,</li>
+      <li>Globaly,</li>
+      <li>Anyway,</li>
+      <li>Everything considered,</li>
+    </random>
+    <random>
+      <li>have a good day.</li>
+      <li>spend time for yourself today.</li>
+      <li>let things come along.</li>
+      <li>leave your stress and move on.</li>
+    </random>
+    <think>
+      <set name="topic">Future</set>
+    </think>
+  <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>agreeanswer()</param>
+          </mrl>
+        </oob></template>
+</category>
+ </aiml>
