@@ -638,6 +638,8 @@
 <template>UNHAPPY
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
 </category>
+
+<!--  YOLO FILTER POC, MEMORY OVERFLOW IF EXECUDED MULTIPLE TIMES !! todo implement ultrasonic -->
 <category><pattern>WHAT DO YOU SEE</pattern>
 <template><think>
       <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
@@ -662,6 +664,7 @@
         <li>I see <get name="yoloReturn"/>.</li>
       </condition></template>
 </category>
+
 <category><pattern># THIS IS</pattern>
 <template>Let me see.
         <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
