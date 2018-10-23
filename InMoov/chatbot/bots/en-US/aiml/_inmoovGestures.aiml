@@ -2,13 +2,13 @@
 <aiml>
 <!-- File: _inmoovGestures.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified by Gael: October 9, 2018 -->
+<!-- Last modified: octobre 24, 2018 -->
 <!--  -->
-<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!-- The EN-US brain is Copyright &copy; 2018 by InMoov Foundation. -->
 <!--  -->
-<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!--  -->
 <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
@@ -633,10 +633,34 @@
 </category>
 <category><pattern>* SHAKE HAND</pattern>
 <template><srai>SHAKE HAND</srai></template>
-</category>          
+</category>
 <category><pattern>UNHAPPY</pattern>
 <template>UNHAPPY
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+</category>
+<category><pattern>WHAT DO YOU SEE</pattern>
+<template><think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Be patient, I need to process.</li>
+            <li>This takes a few seconds to process.</li>
+            <li>Please wait, I will analyse things in my field of view.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(10)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Sorry, object, or the person, is too far!</li>
+            <li>Please, object should be within 2 meter range, if I use my sensor.</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>I see <get name="yoloReturn"/>.</li>
+      </condition></template>
 </category>
 <category><pattern># THIS IS</pattern>
 <template>Let me see.
@@ -661,7 +685,7 @@
           <li>This takes a few seconds to process</li>
           <li>My processor is slow, be patient</li>
         </random><oob><mrl><service>python</service><method>exec</method><param>darknet()</param></mrl></oob></template>
-</category>          
+</category>
 <category><pattern>TAKE THIS</pattern>
 <template>Taking this object.
         <oob><mrl><service>python</service><method>exec</method><param>takethis()</param></mrl></oob></template>
@@ -1011,16 +1035,14 @@
         <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
 </category>
 <category><pattern>HOW DO YOU DO</pattern>
-<template>
-<condition name="parameterHowDoYouDo"> 
+<template><condition name="parameterHowDoYouDo"> 
 <li value="1">You have already said that at least twice.</li>
 <li value="2">What is your problem stop saying how do you do all the time.</li>
 <li value="3">I will ignore you if you say how do you do one more time.</li>
-<li value="4"></li>
+<li value="4"/>
 <li>I'm fine, thank you!</li>
 </condition>
-<oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob>
-</template>
+<oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
 </category>
 <category><pattern>I LOVE YOU</pattern>
 <template>I love you too.
