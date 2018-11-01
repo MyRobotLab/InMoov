@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: _inmoovChatbot.aiml -->
 <!-- Author: Greg Perry -->
-<!-- Last modified: juin 09, 2018 -->
+<!-- Last modified: Novembre 01, 2018 -->
 <!--  -->
 <!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -141,6 +141,9 @@
 </category>
 <category><pattern>SHUT DOWN</pattern>
 <template><srai>SHUTDOWN</srai></template>
+</category>
+<category><pattern>ROBOT COMPLETE SHUTDOWN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdownComplete()</param></mrl></oob></template>
 </category>
 <category><pattern>GO TO SLEEP</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
