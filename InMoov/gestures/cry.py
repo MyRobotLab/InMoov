@@ -3,7 +3,7 @@ def cry():
   x = (random.randint(1, 2))
   if x == 1:
     Yes()
-    AudioPlayer.playFile(RuningFolder+'/system/sounds/cryBaby2.mp3')  
+    AudioPlayer.playFile(RuningFolder+'/system/sounds/cryBaby.mp3')  
     sleep(2)
     ear.setAutoListen(setAutoListen)
   if x == 2:
