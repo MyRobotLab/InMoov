@@ -1,9 +1,6 @@
-import subprocess
+python.subscribe(runtime,"shutdown")
 
 def shutdownComplete():
-  subprocess.call([r'E:/Documents/Myrobotlab/myrobotlab.1.0.2693.7/InMoov/custom/SHUTDOWN_pc_inmoov.bat'])
-  sleep(1)
+  runtime.execute("cmd.exe","/c","shutdown.exe /s /t 30 /f")
   shutdown()
-  
-##TODO Change the call to automatic filepath positionning  
   
