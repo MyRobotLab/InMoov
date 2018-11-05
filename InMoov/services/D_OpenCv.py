@@ -30,6 +30,12 @@ try:
   faceRecognizerActivated=ThisServicePartConfig.getboolean('MAIN', 'faceRecognizerActivated')
 except:
   pass
+  
+flipPicture=False
+try:
+  flipPicture=ThisServicePartConfig.getboolean('MAIN', 'flipPicture')
+except:
+  pass
 
 streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
 eyeXPidKp=ThisServicePartConfig.getfloat('TRACKING', 'eyeXPidKp')
@@ -69,6 +75,8 @@ def openCvInit():
   opencv.setCameraIndex(CameraIndex)
   opencv.capture()
   opencv.removeFilters()
+  if flipPicture:i01.opencv.addFilter("Flip")
+  
   #worky open cv camera detection
   timeout=0
   while not i01.RobotIsOpenCvCapturing():

@@ -1,4 +1,5 @@
 ## Yolo filter / 2 samples
+## WARNING, memory overflow if yolo filter executed multiple times...
 # We classify objects per frame and get the maximum detected for 1 frame only
 # So we can list & count at one time, every available classified object in the field of view, in given time
 # "collection" is the dictionary for detected objects in given time
@@ -77,6 +78,7 @@ def startYolo(duration):
   #start opencv + yolo filter
   i01.opencv.capture()
   i01.opencv.removeFilters()
+  if flipPicture:i01.opencv.addFilter("Flip")
   i01.opencv.addFilter("PyramidDown")
   i01.opencv.addFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
