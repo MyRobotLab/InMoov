@@ -15,7 +15,7 @@ def startYoloInventory(duration):
   # interpret results ...
   collectionString=""
   for key, value in countYolo().iteritems():
-    collectionString=collectionString+str(value)+" "+str(key)+", "
+    collectionString=collectionString+str(value)+" "+key+", "
   #check if we have results, return key "none" if no ( aiml will understand the key )
   print collection
   if len(collectionString) == 0:collectionString="none"
@@ -46,7 +46,8 @@ def onYoloClassification(data):
   # iterate over the frame and clean up previous results based on actual detection ( update positions + count elements )
   # todo cleaner method to extract data...
   for x in data:
-    object=str(x).split(",")[3].replace("label=","").strip()
+    x=unicode(repr(x),'utf-8')
+    object=x.split(",")[3].replace("label=","").strip()
     for y in collection:
       if object in y:
         collection.remove(y)
@@ -54,8 +55,9 @@ def onYoloClassification(data):
 
   # iterate over the frame and extract classified objects ( TODO this inside java land to publish it ? )
   for x in data:
-    object=str(x).split(",")[3].replace("label=","").strip()
-    xPos=str(x).split(",")[0].replace("YoloDetectedObject [boundingBox=X:","") 
+    x=unicode(repr(x),'utf-8')
+    object=x.split(",")[3].replace("label=","").strip()
+    xPos=x.split(",")[0].replace("YoloDetectedObject [boundingBox=X:","") 
     collection.append([object,xPos])      
 
 #shared function to count classified elements
