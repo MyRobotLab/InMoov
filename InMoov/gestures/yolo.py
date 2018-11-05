@@ -6,9 +6,11 @@
 
 
 # Cumulative frames analysis :
+# Also get given element (label) position if set, from all others in the field off view, from left to right
+# todo add filter ( like "table" for elements onto )
 collection=[]
 def startYoloInventory(duration):
-  talk(chatBot.getPredicate(chatBot.getCurrentUserName(),"startupSentence"))
+  talk(chatBot.getPredicate("startupSentence"))
   startYolo(duration)
   # interpret results ...
   collectionString=""
@@ -17,19 +19,16 @@ def startYoloInventory(duration):
   #check if we have results, return key "none" if no ( aiml will understand the key )
   print collection
   if len(collectionString) == 0:collectionString="none"
+  # return results
+  chatBot.setPredicate("yoloTotalDetected",str(len(collection)))
   return collectionString
 
-  
-# function to get given element (label) position, from all others in the field off view, from left to right
-# todo add filter ( like "table" for elements onto )
-def getYoloPosition(duration,label):
-  talk(chatBot.getPredicate(chatBot.getCurrentUserName(),"startupSentence"))
-  startYolo(duration)
+def getYoloPosition(label):
   position=0
-  for x in sortLeftRightYolo():
-    if x[0]==label:position=sortLeftRightYolo().index(x)+1
-  return position
-  
+  for x in collection:
+    if x[0]==label:position=collection.index(x)+1
+  # return results
+  return position  
 
 ## OpenCV configuration for yolo publisher
   
@@ -82,9 +81,6 @@ def startYolo(duration):
   sleep(duration)
   i01.opencv.removeFilters()
   i01.opencv.stopCapture()
+  #sort results
+  collection = sorted(collection, key=lambda k: int(k[1]))
   print collection
-  
-#shared function to sort elements from left to right
-def sortLeftRightYolo():
-  sortedObject = sorted(collection, key=lambda k: int(k[1]))
-  return sortedObject
