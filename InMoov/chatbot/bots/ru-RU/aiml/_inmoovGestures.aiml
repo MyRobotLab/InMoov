@@ -27,6 +27,27 @@
     </random>
         <oob><mrl><service>python</service><method>exec</method><param>rest()</param></mrl></oob></template>
 </category>
+<category><pattern>что вы видите</pattern>
+    <template><think>
+      <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+        <set name="startupSentence">
+          <random>
+            <li>Пожалуйста, подождите.</li>
+          </random>
+        </set>
+      </think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(10)</param></mrl></oob></sraix></set></think>
+      <condition name="yoloReturn"> 
+        <!-- not detected ! -->
+        <li value="none">
+          <random>
+            <li>Извините, я ничего не вижу!</li>
+          </random>
+        </li>
+        <!--  detected ! -->
+        <li>Я вижу <get name="yoloTotalDetected"/> вещи, <get name="yoloReturn"/> в порядке, слева направо.</li>
+      </condition></template>
+   </category>
 <category><pattern>ПОДКЛЮЧИ ГОЛОВУ</pattern>
 <template>Я загрузил управление головы.
         <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>

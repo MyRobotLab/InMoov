@@ -175,6 +175,45 @@
       <template>Je mémorise les positions de mes servo moteurs.
         <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
     </category>
+  <category><pattern>QUE VOIS TU</pattern>
+  <template><think>
+        <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
+          <set name="startupSentence">
+            <random>
+              <li>Veuillez patienter.</li>
+              <li>ça va prendre quelques secondes pour l'analyse.</li>
+              <li>Je regarde dans mon champs de vision.</li>
+            </random>
+          </set>
+        </think>
+        <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(10)</param></mrl></oob></sraix></set></think>
+        <condition name="yoloReturn"> 
+          <!-- not detected ! -->
+          <li value="none">
+            <random>
+              <li>Désolé je ne vois rien du tout!</li>
+              <li>L'objet est peut-être trop loin.</li>
+            </random>
+          </li>
+          <!--  detected ! -->
+          <li>Je vois <get name="yoloTotalDetected"/> choses, <get name="yoloReturn"/> dans l'ordre, de gauche à droite.</li>
+        </condition></template>
+  </category>
+  <category><pattern>CHERCHE <set>articles</set> *</pattern>
+  <template><srai>QUE VOIS TU</srai>
+        <think><set name="yoloLabelPosition"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>getYoloPosition('<star index="2"/>')</param></mrl></oob></sraix></set></think>
+        <condition name="yoloLabelPosition"> 
+          <!-- not detected ! -->
+          <li value="0">
+            <random>
+              <li>Désolé, <star index="1"/> <star index="2"/> est invisible.</li>
+              <li>Je ne vois pas <star index="1"/> <star index="2"/> dans mon champs de vision.</li>
+            </random>
+          </li>
+          <!--  detected ! -->
+          <li><star index="1"/> <star index="2"/> se trouve à la position <get name="yoloLabelPosition"/>.</li>
+        </condition></template>
+  </category>
     <category>
       <pattern>DONNE</pattern>
       <template>Je donne.
