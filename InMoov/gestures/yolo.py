@@ -10,6 +10,8 @@
 # Also get given element (label) position if set, from all others in the field off view, from left to right
 # todo add filter ( like "table" for elements onto )
 collection=[]
+# maybe we don't want to inventory every objects, like the table
+filteredObjects=['sample1','sample2']
 def startYoloInventory(duration):
   talk(chatBot.getPredicate("startupSentence"))
   startYolo(duration)
@@ -28,7 +30,8 @@ def getYoloPosition(label):
   position=0
   for x in collection:
     if x[0]==label:position=collection.index(x)+1
-  # return results
+  # to launch gesture :
+  #showObject(position)
   return position  
 
 ## OpenCV configuration for yolo publisher
@@ -59,7 +62,7 @@ def onYoloClassification(data):
     x=unicode(repr(x),'utf-8')
     object=x.split(",")[3].replace("label=","").strip()
     xPos=x.split(",")[0].replace("YoloDetectedObject [boundingBox=X:","") 
-    collection.append([object,xPos])      
+    if not object in filteredObjects:collection.append([object,xPos])      
 
 #shared function to count classified elements
 def countYolo():
