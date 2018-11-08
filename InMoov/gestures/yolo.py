@@ -1,17 +1,16 @@
-## Yolo filter / 2 samples
+## Yolo filter / 2 samples : what do you see / LOOKING FOR THE *
 ## WARNING, memory overflow if yolo filter executed multiple times...
+## as a temporary workarround for the demo, yolo filter + camera capture is not disabled after inventory, so you can execute it multiple times
 # We classify objects per frame and get the maximum detected for 1 frame only
 # So we can list & count at one time, every available classified object in the field of view, in given time
+# Also get given element (label) position if set, from all others in the field off view, from left to right
+
 # "collection" is the dictionary for detected objects in given time
 # after aquisition, we will read collection content to play with it
-
-
-# Cumulative frames analysis :
-# Also get given element (label) position if set, from all others in the field off view, from left to right
-# todo add filter ( like "table" for elements onto )
 collection=[]
-# maybe we don't want to inventory every objects, like the table
+# filter, maybe we don't want to inventory every objects, like the table ['table','cow','chair'...]
 filteredObjects=['sample1','sample2']
+
 def startYoloInventory(duration):
   talk(chatBot.getPredicate("startupSentence"))
   startYolo(duration)
@@ -19,7 +18,7 @@ def startYoloInventory(duration):
   collectionString=""
   for key, value in countYolo().iteritems():
     collectionString=collectionString+str(value)+" "+key+", "
-  #check if we have results, return key "none" if no ( aiml will understand the key )
+  #check if we have results, return key "none" if no ( aiml will understand the key 'none' )
   print collection
   if len(collectionString) == 0:collectionString="none"
   # return results
@@ -30,7 +29,7 @@ def getYoloPosition(label):
   position=0
   for x in collection:
     if x[0]==label:position=collection.index(x)+1
-  # to launch gesture :
+  # to launch gesture uncomment it :
   #showObject(position)
   return position  
 
@@ -79,15 +78,18 @@ def startYolo(duration):
   global collection
   collection=[]
   #start opencv + yolo filter
-  i01.opencv.capture()
-  i01.opencv.removeFilters()
-  if flipPicture:i01.opencv.addFilter("Flip")
-  i01.opencv.addFilter("PyramidDown")
-  i01.opencv.addFilter("Yolo")
+  #temporary workarround https://github.com/MyRobotLab/myrobotlab/issues/294
+  if not i01.opencv.isCapturing():
+    i01.opencv.capture()
+    i01.opencv.removeFilters()
+    if flipPicture:i01.opencv.addFilter("Flip")
+    i01.opencv.addFilter("PyramidDown")
+    i01.opencv.addFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
   sleep(duration)
-  i01.opencv.removeFilters()
-  i01.opencv.stopCapture()
+  #temporary workarround
+  ##i01.opencv.removeFilters()
+  ##i01.opencv.stopCapture()
   #sort results
   collection = sorted(collection, key=lambda k: int(k[1]))
   print collection
