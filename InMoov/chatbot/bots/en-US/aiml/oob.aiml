@@ -272,8 +272,25 @@
     <template>Opening ESPN.  <oob><url>http://espn.go.com</url></oob></template>
   </category>
   <category>
+    <pattern>INMOOV ROBOT WEBSITE</pattern>
+      <template>Opening website.  
+	 <oob><mrl>
+    	    <service>python</service>
+    	    <method>exec</method>
+    	    <param>BareBonesBrowserLaunch.openURL("http://www.inmoov.fr")</param>
+        </mrl></oob></template>
+  </category>
+  <category>
+    <pattern>* ROBOT WEBSITE</pattern>
+    <template><srai>INMOOV ROBOT WEBSITE </srai></template>
+</category>
+  <category>
     <pattern>MAP</pattern>
-    <template>Opening your map.  <oob><map /></oob></template>
+    <template>Opening your map.  
+      <oob>
+	<map />
+      </oob>
+    </template>
   </category>
   <category>
     <pattern>MAP *</pattern>
