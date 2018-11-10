@@ -30,7 +30,7 @@ def getYoloPosition(label):
   for x in collection:
     if x[0]==label:position=collection.index(x)+1
   # to launch gesture uncomment it :
-  #showObject(position)
+  showObject(position)
   return position  
 
 ## OpenCV configuration for yolo publisher
