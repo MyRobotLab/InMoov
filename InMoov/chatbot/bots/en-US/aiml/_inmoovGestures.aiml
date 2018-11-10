@@ -667,7 +667,7 @@
 </category>
 
 <!-- extended function to get object position -->
-<category><pattern>LOOKING FOR THE *</pattern>
+<category><pattern>WHERE IS THE *</pattern>
 <template><srai>WHAT DO YOU SEE</srai>
       <think><set name="yoloLabelPosition"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>getYoloPosition('<star/>')</param></mrl></oob></sraix></set></think>
       <condition name="yoloLabelPosition"> 
