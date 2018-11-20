@@ -85,6 +85,10 @@ def startYolo(duration):
     if flipPicture:i01.opencv.addFilter("Flip")
     i01.opencv.addFilter("PyramidDown")
     i01.opencv.addFilter("Yolo")
+  if i01.opencv.isCapturing():
+    i01.opencv.removeFilters()
+    i01.opencv.addFilter("PyramidDown")
+    i01.opencv.addFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
   sleep(duration)
   #temporary workarround
