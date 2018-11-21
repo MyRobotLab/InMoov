@@ -34,6 +34,10 @@
 <template>Okay
       <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
 </category>
+<category><pattern>TAKE A PICTURE</pattern>
+<template>
+      <oob><mrl><service>python</service><method>exec</method><param>takePicture()</param></mrl></oob></template>
+</category>  
 <category><pattern>CLOSE * PICTURE</pattern>
 <template><srai>CLOSE <star/> IMAGE</srai></template>
 </category>
