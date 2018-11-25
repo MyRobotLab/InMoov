@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: math.aiml -->
+  <!-- This AIML file is part of the Myrobotlab/InMoov chatbot knowledge base. -->
+  <!-- Original project came from ALICE2 chatbot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright by ALICE AI Foundation. -->
+  <!-- This project is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- Last modified: moz4r November 25, 2018 -->
+  <!-- This InMoov brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+<category><pattern>HOW MUCH IS *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>* + *</pattern>
+<template><srai><star/> PLUS <star index="2"/></srai></template>
+</category>
+<category><pattern>* - *</pattern>
+<template><srai><star/> MINUS <star index="2"/></srai></template>
+</category>
+<category><pattern>* X *</pattern>
+<template><srai><star/> TIMES <star index="2"/></srai></template>
+</category>
+<category><pattern>* slash *</pattern>
+<template><srai><star/> DIVIDED BY <star index="2"/></srai></template></category>
+<category><pattern>* TIMES *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathX("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* PLUS *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathPlus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* MINUS *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathMinus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+<category><pattern>* DIVIDED BY *</pattern>
+<template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathDivide("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
+</category>
+</aiml>
