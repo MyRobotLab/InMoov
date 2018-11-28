@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def madeby():
   relax()
   i01.startedGesture()

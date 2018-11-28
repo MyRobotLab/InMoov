@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def dontworry():
   i01.startedGesture()
   i01.setHandVelocity("left", 50, 50, 50, 50, 50, 59)

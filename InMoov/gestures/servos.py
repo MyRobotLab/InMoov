@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def servos():
   i01.startedGesture()
   sleep(2)

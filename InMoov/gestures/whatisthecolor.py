@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def whatisthecolor():
   global coloring
   if coloring <= 2:

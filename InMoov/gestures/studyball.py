@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def studyball():
   i01.startedGesture()
   ##keepball():

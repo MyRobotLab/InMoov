@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def welcome():
   sleep(1)
   i01.setHandVelocity("left", 19, 19, 19, 19, 19, 19)

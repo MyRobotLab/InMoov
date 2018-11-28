@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def bookcat():
   sleep(3)
   chatBot.getResponse("SAY " + "Tell me read the book or stop reading")

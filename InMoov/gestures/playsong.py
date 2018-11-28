@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def playsong(data):
   i01.startedGesture()
   if (data == "can i have your attention"): # Могу ли я привлечь ваше внимание

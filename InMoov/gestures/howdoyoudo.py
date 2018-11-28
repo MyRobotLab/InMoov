@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def howdoyoudo():
   global helvar
   if helvar < 1:

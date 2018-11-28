@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def approach():
   i01.startedGesture()
   i01.setHandVelocity("left", 43.0, 43.0, 43.0, 43.0, 43.0, -1)

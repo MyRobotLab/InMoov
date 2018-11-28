@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def canyougivemethetime():
   i01.startedGesture()
   i01.mouth.speak("sure")

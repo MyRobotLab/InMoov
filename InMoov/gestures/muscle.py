@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def muscle():
   i01.startedGesture()
   i01.setHandVelocity("left", -1, -1, -1, -1, -1, -1)

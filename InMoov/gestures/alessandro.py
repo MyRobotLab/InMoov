@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def alessandro():
   fullspeed()
   i01.startedGesture()

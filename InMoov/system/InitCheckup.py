@@ -89,11 +89,7 @@ for root, subdirs, files in os.walk(RuningFolder+'minimal'):
 ################################
   
 #we launch Inmoov Gestures
-for root, subdirs, files in os.walk(RuningFolder+'gestures'):
-  for name in files:
-    if name.split(".")[-1] == "py":
-      execfile(os.path.join(root, name))
-      if DEBUG==1:print "debug inmoovGestures : ",os.path.join(root, name)
+i01.loadGestures("InMoov/gestures")
     
 #we launch Inmoov life
 for root, subdirs, files in os.walk(RuningFolder+'life'):

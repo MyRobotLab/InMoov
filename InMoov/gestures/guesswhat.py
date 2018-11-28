@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def guesswhat():
   i01.mouth.speak("I'm not really a human man")
   #i01.mouth.speak(u"Я на самом деле не человек")

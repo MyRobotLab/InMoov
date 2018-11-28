@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def cyclegesture3():
   ##for x in range(3):
   rest()

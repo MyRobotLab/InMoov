@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def givetheglass():
   i01.startedGesture()
   sleep(2)

@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def perfect():
   i01.startedGesture()
   i01.setHandVelocity("left", 36, 36, -1, -1, -1, -1)

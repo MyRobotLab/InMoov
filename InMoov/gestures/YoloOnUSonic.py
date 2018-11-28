@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 
 def YoloOnUSonic():
   i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)

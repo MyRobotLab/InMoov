@@ -1,4 +1,3 @@
-# -- coding: utf-8 --
 def about():
   i01.startedGesture()
   i01.setArmVelocity("right", 3, 3, 5.0, 5.0);
