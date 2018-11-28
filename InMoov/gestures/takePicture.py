@@ -14,5 +14,5 @@ def takePicture():
     print photoFileName
     AudioPlayer.playFile(RuningFolder+'/system/sounds/ShutterClik.mp3')
     imagedisplay.display(photoFileName)
-  sleep(10)
+  sleep(15)
   imagedisplay.closeAll()
