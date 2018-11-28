@@ -29,39 +29,41 @@ def getYoloPosition(label):
   position=0
   for x in collection:
     if x[0]==label:position=collection.index(x)+1
-  # to launch gesture uncomment it :
+  # to not launch gesture, comment showObject :
+  print "Position of : ",label,position
   showObject(position)
   return position  
 
 ## OpenCV configuration for yolo publisher
   
-python.subscribe("i01.opencv", "publishYoloClassification")  
+python.subscribe("i01.opencv", "publishClassification")  
 # TODO classify while head moves ! ( count )
 # TODO what do you see in front of you ( few centimeters -> use gael mods )
 # TODO tranlate coco
 # TODO ...
 
 #main function to read yolo filter output
-def onYoloClassification(data):
+def onClassification(classifications):
+  print classifications
   global collection
   label=[]
   
   # iterate over the frame and clean up previous results based on actual detection ( update positions + count elements )
   # todo cleaner method to extract data...
-  for x in data:
-    x=unicode(repr(x),'utf-8')
-    object=x.split(",")[3].replace("label=","").strip()
-    for y in collection:
-      if object in y:
-        collection.remove(y)
-        break
+  for id, documents in classifications.items():
+    for document in documents:
+      object=document.getLabel()
+      for y in collection:
+        if object in y:
+          collection.remove(y)
+          break
 
   # iterate over the frame and extract classified objects ( TODO this inside java land to publish it ? )
-  for x in data:
-    x=unicode(repr(x),'utf-8')
-    object=x.split(",")[3].replace("label=","").strip()
-    xPos=x.split(",")[0].replace("YoloDetectedObject [boundingBox=X:","") 
-    if not object in filteredObjects:collection.append([object,xPos])      
+  for id, documents in classifications.items():
+    for document in documents:
+      object=document.getLabel()
+      xPos=document.getBoundingBox().x
+      if not object in filteredObjects:collection.append([object,xPos])      
 
 #shared function to count classified elements
 def countYolo():
@@ -79,21 +81,14 @@ def startYolo(duration):
   collection=[]
   #start opencv + yolo filter
   #temporary workarround https://github.com/MyRobotLab/myrobotlab/issues/294
-  if not i01.opencv.isCapturing():
-    i01.opencv.capture()
-    i01.opencv.removeFilters()
-    if flipPicture:i01.opencv.addFilter("Flip")
-    i01.opencv.addFilter("PyramidDown")
-    i01.opencv.addFilter("Yolo")
-  if i01.opencv.isCapturing():
-    i01.opencv.removeFilters()
-    i01.opencv.addFilter("PyramidDown")
-    i01.opencv.addFilter("Yolo")
+  if not i01.opencv.isCapturing():i01.opencv.capture()
+  Yolo.enable()
+  i01.opencv.setDisplayFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
   sleep(duration)
-  #temporary workarround
-  ##i01.opencv.removeFilters()
-  ##i01.opencv.stopCapture()
+  Yolo.disable()
+  i01.opencv.stopCapture()
+  
   #sort results
   collection = sorted(collection, key=lambda k: int(k[1]))
   print collection

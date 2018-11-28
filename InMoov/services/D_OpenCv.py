@@ -68,14 +68,10 @@ i01.opencv = Runtime.start("i01.opencv", "OpenCV")
 
 def openCvInit():
   global isOpenCvActivated
-  if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv.SarxosFrameGrabber")
-  if DisplayRender=="VideoInputFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.VideoInputFrameGrabber")
-  if DisplayRender=="OpenCVFrameGrabber":opencv.setFrameGrabberType("org.bytedeco.javacv.OpenCVFrameGrabber")
+  opencv.setGrabberType(DisplayRender)
   
   opencv.setCameraIndex(CameraIndex)
   opencv.capture()
-  opencv.removeFilters()
-  if flipPicture:i01.opencv.addFilter("Flip")
   
   #worky open cv camera detection
   timeout=0
@@ -91,11 +87,13 @@ def openCvInit():
   else:
     talkEvent(lang_startingOpenCv)
     python.subscribe("i01.opencv", "publishRecognizedFace")
-  
-  opencv.removeFilters()
   opencv.stopCapture()
   
-if isOpenCvActivated:openCvInit()
+if isOpenCvActivated:
+  openCvInit()
+  if flipPicture:i01.opencv.addFilter("Flip")
+  Yolo=i01.opencv.addFilter("Yolo")
+  Yolo.disable()
 
 def onRecognizedFace(name):
   print name
