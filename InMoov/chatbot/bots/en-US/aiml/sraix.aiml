@@ -2365,17 +2365,11 @@
       <sraix>WHAT IS THE <star /><star index="2" /></sraix>
     </template>
   </category>
-  <category>
-    <pattern>WHAT IS THE TEMPERATURE</pattern>
-    <template>
-      <sraix>WHAT IS THE TEMPERATURE</sraix>
-    </template>
+  <category><pattern>WHAT IS THE TEMPERATURE</pattern>
+    <template><srai>WHAT IS THE WEATHER</srai></template>
   </category>
-  <category>
-    <pattern>WHAT IS THE TEMPERATURE IN *</pattern>
-    <template>
-      <sraix>WHAT IS THE TEMPERATURE IN <star /></sraix>
-    </template>
+  <category><pattern>WHAT IS THE TEMPERATURE IN *</pattern>
+    <template><srai>WHAT IS THE WEATHER IN <star/></srai></template>
   </category>
   <category>
     <pattern>WHAT IS ANDROID</pattern>
