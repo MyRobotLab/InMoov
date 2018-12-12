@@ -34,9 +34,8 @@ def getYoloPosition(label):
   showObject(position)
   return position  
 
-## OpenCV configuration for yolo publisher
+## i01.opencv configuration for yolo publisher
   
-python.subscribe("i01.opencv", "publishClassification")  
 # TODO classify while head moves ! ( count )
 # TODO what do you see in front of you ( few centimeters -> use gael mods )
 # TODO tranlate coco
@@ -79,15 +78,12 @@ def countYolo():
 def startYolo(duration):
   global collection
   collection=[]
-  #start opencv + yolo filter
-  #temporary workarround https://github.com/MyRobotLab/myrobotlab/issues/294
-  if not i01.opencv.isCapturing():i01.opencv.capture()
-  Yolo.enable()
-  i01.opencv.setDisplayFilter("Yolo")
+  #start i01.opencv + yolo filter
+  i01.cameraOn()
+  i01.vision.setActiveFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
   sleep(duration)
-  Yolo.disable()
-  i01.opencv.stopCapture()
+  i01.cameraOff()
   
   #sort results
   collection = sorted(collection, key=lambda k: int(k[1]))

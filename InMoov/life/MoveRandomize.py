@@ -27,7 +27,7 @@ def MoveRandom(timedata):
       
   #little pause
   if random.randint(0,4)==4:
-    if i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
+    if i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
       i01.RobotCanMoveHeadRandom=False
       i01.RobotCanMoveBodyRandom=False
       relax()

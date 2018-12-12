@@ -13,7 +13,7 @@ def darknet():
       sleep(0.1)
       analyseResult()
     else:
-      i01.opencv.capture()
+      i01.cameraOn()
       sleep(1)
       i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)
       i01.moveHead(75,90,90,30,0,90)

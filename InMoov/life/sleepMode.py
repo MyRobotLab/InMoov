@@ -104,7 +104,7 @@ def humanDetected():
   if isPirActivated:
     SleepTimer.restartClock(True)
     if (isOpenCvActivated and UsePirToActivateTracking):
-      if (not i01.RobotIsTrackingSomething() and WaitXsecondBeforeRelaunchTracking>=5):
+      if (not i01.vision.isTracking() and WaitXsecondBeforeRelaunchTracking>=5):
         WaitXsecondBeforeRelaunchTracking=0
         if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 255, 0, 255, 1)
         autoTrackingStarted=1
@@ -124,7 +124,7 @@ def TrackingTimerRoutine(timedata):
   global autoTrackingStarted
   global WaitXsecondBeforeRelaunchTracking
   print "TrackingTimer stopped"
-  if i01.RobotIsTrackingSomething():
+  if i01.vision.isTracking():
     WaitXsecondBeforeRelaunchTracking=-5
     if autoTrackingStarted:
       autoTrackingStarted=0
