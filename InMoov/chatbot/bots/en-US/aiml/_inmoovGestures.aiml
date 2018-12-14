@@ -327,6 +327,27 @@
 <template>Removing my left arm.
         <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
 </category>
+          <category><pattern># RAISE * LEFT ARM</pattern>
+<template>Raising my left arm.
+        <oob><mrl><service>python</service><method>exec</method><param>raiseleftarm()</param></mrl></oob></template>
+</category>
+<category><pattern>LIFT * LEFT ARM</pattern>
+<template><srai># RAISE <star/> LEFT ARM</srai></template>
+</category>
+<category><pattern># RAISE * RIGHT ARM</pattern>
+<template>Raising my right arm.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>LIFT * RIGHT ARM</pattern>
+<template><srai># RAISE <star/> RIGHT ARM</srai></template>
+</category>
+<category><pattern># RAISE YOUR ARM</pattern>
+<template>Raising my arm.
+        <oob><mrl><service>python</service><method>exec</method><param>raiserightarm()</param></mrl></oob></template>
+</category>
+<category><pattern>LIFT YOUR ARM</pattern>
+<template><srai># RAISE YOUR ARM</srai></template>
+</category>
 <category><pattern>RELAX</pattern>
 <template>Relax.
         <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
