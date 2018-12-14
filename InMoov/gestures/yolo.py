@@ -82,6 +82,10 @@ def startYolo(duration):
   i01.cameraOn()
   i01.vision.setActiveFilter("Yolo")
   # wait for X ( todo unlimited, until STOP vocal command ? )
+  photoFileName = i01.opencv.recordFrame()
+  print photoFileName
+  imagedisplay.display(photoFileName)
+  # todo remove the picture from opencv directory after x time?
   sleep(duration)
   i01.cameraOff()
   
