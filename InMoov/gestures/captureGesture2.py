@@ -1,5 +1,3 @@
 def captureGesture2():
-  RobotCanMoveHeadWhileSpeaking=False
-  i01.mouth.speakBlocking("I am capturing this gesture")
+  AudioPlayer.playFile(RuningFolder+'/system/sounds/ShutterCapture.mp3')
   i01.captureGesture()
-  RobotCanMoveHeadWhileSpeaking=True
