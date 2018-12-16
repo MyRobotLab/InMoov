@@ -196,8 +196,8 @@
 <template><srai>OFF CAMERA</srai></template>
 </category>
 <category><pattern>CAPTURE GESTURE</pattern>
-<template>I am capturing this gesture.
-        <oob><mrl><service>i01</service><method>captureGesture</method></mrl></oob></template>
+<template>
+        <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
 <category><pattern>GIVING</pattern>
 <template>Giving.
