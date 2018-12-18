@@ -8,19 +8,26 @@
 # ##############################################################################
 
 inMoov=i01
+#temporary speed simulation trick ( i2c can compute speed )
 if ScriptType=="Virtual":
-  varduinoright = Runtime.start("varduinoright","VirtualArduino")
-  varduinoright.connect(MyRightPort)
-  varduinoleft = Runtime.start("varduinoleft","VirtualArduino")
-  varduinoleft.connect(MyLeftPort)
+  virtualRaspi = Runtime.start("virtualRaspi","RasPi")
+  virtualRaspi.setWiringPi(False)
+  right = Runtime.createAndStart("i01.right", "Adafruit16CServoDriver")
+  left = Runtime.createAndStart("i01.left", "Adafruit16CServoDriver")
+  left.attach(virtualRaspi,"1","0x40")
+  right.attach(virtualRaspi,"1","0x41")
+  RightPortIsConnected=True
+  LeftPortIsConnected=True
+
 #Inmoov Left / right arduino connect
-if ScriptType=="RightSide" or ScriptType=="Full" or ScriptType=="Virtual":
+if ScriptType=="RightSide" or ScriptType=="Full":
   right = Runtime.createAndStart("i01.right", "Arduino")
   right.setBoard(BoardTypeMyRightPort)
   RightPortIsConnected=CheckArduinos(right,MyRightPort)
   if RightPortIsConnected:right.setAref(ArefRightArduino)
-  
-if ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual":
+
+
+if ScriptType=="LeftSide" or ScriptType=="Full":
   left = Runtime.createAndStart("i01.left", "Arduino")
   left.setBoard(BoardTypeMyLeftPort)
   LeftPortIsConnected=CheckArduinos(left,MyLeftPort)
