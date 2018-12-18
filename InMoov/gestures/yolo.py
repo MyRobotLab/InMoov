@@ -45,8 +45,8 @@ def enableYoloFor(duration):
   i01.cameraOn()
   # yolo filter in the pipeline ( add if no exist + enable + setActive )
   i01.vision.setActiveFilter("Yolo")
-  gui.setActiveTab("i01.opencv");
   try:
+    gui.setActiveTab("i01.opencv")
     os.remove(lastPhotoFileName)
   except:
     pass

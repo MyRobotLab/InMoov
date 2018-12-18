@@ -1,5 +1,8 @@
 def trackHumans(noFaceRecognizerOverride=True):
+  i01.cameraOn()
   i01.trackHumans()
+  try:gui.setActiveTab("i01.opencv")
+  except:pass
   i01.head.rollNeck.setOverrideAutoDisable(True)
   i01.head.rollNeck.moveToBlocking(90)
   i01.setHeadVelocity(-1,-1,-1,-1,-1)
