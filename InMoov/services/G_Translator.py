@@ -242,8 +242,7 @@ def translateText(text,language):
   needAdownloadTalk=1
   if translatorDegraded:
     translatorDegraded=0
-    talkBlocking(lang_MaryTranslator)
-
+    i01.speakBlocking(languagePack.get("MaryTranslator"))
     
   if outputSpeechService=="Polly" or outputSpeechService=="MarySpeech" or outputSpeechService=="NaturalReaderSpeech":
     RealLang="0"
@@ -251,15 +250,15 @@ def translateText(text,language):
     try:
       RealLang=en_languages[language]
     except:
-      chatBot.setPredicate(chatBot.currentUserName,"topic","default")
-      chatBot.getResponse("AZURE_ERROR_2 "+language)
+      i01.chatBot.setPredicate("topic","default")
+      i01.chatBot.getResponse("AZURE_ERROR_2 "+language)
     print RealLang
     
     try:
       AzureTranslator.detectLanguage(text)
     except:
-      chatBot.setPredicate(chatBot.currentUserName,"topic","default")
-      chatBot.getResponse("AZURE_ERROR_1")
+      i01.chatBot.setPredicate("topic","default")
+      i01.chatBot.getResponse("AZURE_ERROR_1")
       RealLang="0"
     
     if RealLang!="0":
@@ -278,8 +277,8 @@ def translateText(text,language):
       
       
       if 'Cannot find an active Azure Market Place' in t_text:
-        chatBot.setPredicate(chatBot.currentUserName,"topic","default")
-        chatBot.getResponse("AZURE_ERROR_3")
+        i01.chatBot.setPredicate("topic","default")
+        i01.chatBot.getResponse("AZURE_ERROR_3")
       else:
         AzureTranslatorMouth.setVoice(unicode(ttsVoiceGender[RealLang],'utf-8'))  
         print t_text
@@ -287,4 +286,4 @@ def translateText(text,language):
         #restore original VoiceName
         mouth.setVoice(VoiceName)        
   else:
-    talk(lang_PollyNeeded)
+    i01.speakBlocking(languagePack.get("PollyNeeded"))

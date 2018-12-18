@@ -919,7 +919,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
           </mrl>
         </oob>
     </template>
@@ -941,7 +941,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
           </mrl>
         </oob>
 	</template>
@@ -968,7 +968,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
           </mrl>
         </oob>
     </template>

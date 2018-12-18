@@ -54,8 +54,12 @@ RollNeckArduino=ThisSkeletonPartConfig.get('ROLLNECKSERVO', 'RollNeckArduino')
 if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
   isHeadActivated=1
   if LeftPortIsConnected:
-    talkEvent(lang_startingHead)
     head = Runtime.create("i01.head","InMoovHead")
+    #pffff :) we need to manualy load now to get last position to avoid breaking parts
+    head.neck.load()
+    head.rothead.load()
+    head.rollNeck.load()
+    #end pffff :)
     #map    
     head.jaw.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'jaw'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'jaw')) 
     head.eyeX.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'eyeX'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'eyeX')) 
@@ -121,11 +125,10 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     
     if MouthControlActivated and AudioSignalProcessing==False:
       #MouthControl = Runtime.createAndStart("i01.mouthControl","MouthControl")
-      i01.startMouthControl(MyLeftPort)
+      i01.startMouthControl(i01.head.jaw,i01.mouth)
       i01.mouthControl.setmouth(MouthControlJawMin,MouthControlJawMax)
       print "software mouthcontrol activation"
       if MouthControlJawTweak:i01.mouthControl.setDelays(MouthControlJawdelaytime, MouthControlJawdelaytimestop, MouthControlJawdelaytimeletter)
-      talkEvent(lang_startingMouth)
 # ##############################################################################
 #                 mouth control based on audio signal processing
 # ##############################################################################  
@@ -137,7 +140,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       MouthControlActivated=False
       AudioSignalProcessingCalibration=1
       left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-      talkBlocking(lang_MouthSyncronisation)
+      i01.speakBlocking(languagePack.get("MouthSyncronisation"))
       
       
       AudioSignalProcessingCalibration=0
@@ -151,18 +154,18 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       result=0
       #arduino dit not detect analog value
       if minAudioValue>50:
-        talkBlocking(lang_MouthSyncronisationBad+str(AnalogPinFromSoundCard))
+        i01.speakBlocking(languagePack.get("MouthSyncronisation")+str(AnalogPinFromSoundCard))
         result=1
       #arduino detect a poor value
       if result==0 and (maxAudioValue-minAudioValue<=255):
         head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
-        talkBlocking(lang_MouthSyncronisationNotPerfect)
+        i01.speakBlocking(languagePack.get("MouthSyncronisationNotPerfect"))
       #arduino detect a good value  
       if result==0 and (maxAudioValue-minAudioValue>255):
         head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
-        talkBlocking(lang_MouthSyncronisationOk)
+        i01.speakBlocking(languagePack.get("MouthSyncronisationOk"))
         
       print maxAudioValue,minAudioValue
       

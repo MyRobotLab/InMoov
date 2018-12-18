@@ -8,6 +8,7 @@
 ###############################################################################
 
 def sleepModeWakeUp():
+  i01.ear.clearLock()
   WaitXsecondBeforeRelaunchTracking=-10
   ear.setAutoListen(setAutoListen)
   if isPirActivated:
@@ -42,7 +43,6 @@ def sleepModeWakeUp():
       head.neck.setVelocity(50)
       head.neck.moveToBlocking(head.neck.getRest())
   else:
-    if talkToInmoovFrQueue("MRLALIVE")=="OK":talkEvent(lang_OsSynced)
     welcomeMessage()
   i01.RobotIsSleeping=False
   if isNeopixelActivated:i01.stopNeopixelAnimation()
@@ -51,6 +51,7 @@ def sleepModeWakeUp():
 
 def sleepModeSleep():
   if not ForceMicroOnIfSleeping:ear.setAutoListen(False)
+  i01.ear.lockOutAllGrammarExcept(lockPhrase)
   stopTracking()
   imagedisplay.exitFS()
   sleep(1)
@@ -83,13 +84,13 @@ def sleepModeSleep():
 def welcomeMessage():
   
   if isChatbotActivated:
-    if str(chatBot.getPredicate("default","firstinit"))=="unknown" or str(chatBot.getPredicate("default","firstinit"))=="started":
-      chatBot.setPredicate("default","topic","default")
-      chatBot.getResponse("FIRST_INIT")
+    if str(i01.chatBot.getPredicate("default","firstinit"))=="unknown" or str(i01.chatBot.getPredicate("default","firstinit"))=="started":
+      i01.chatBot.setPredicate("default","topic","default")
+      i01.chatBot.getResponse("FIRST_INIT")
     else:
-      chatBot.getResponse("WAKE_UP")
+      i01.chatBot.getResponse("WAKE_UP")
   else:
-    talk(lang_ready)
+    i01.speakBlocking(languagePack.get("ready"))
   i01.RobotIsStarted=True
 
 global WaitXsecondBeforeRelaunchTracking

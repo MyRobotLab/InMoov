@@ -1,5 +1,5 @@
 def PlayWithWords(word):
-  talkBlocking(word)
+  i01.speakBlocking(word)
   i01.stopVinMoov()   #vinmoov+imagedisplay=bug
   for i in word.decode( "utf8" ):
     if i.isalpha():
@@ -10,7 +10,7 @@ def PlayWithWords(word):
         r=ImageDisplay.displayFullScreen(folderLetterPic+i+".jpg")
       except:
         pass
-      talk(i)
+      i01.speak(i)
       sleep(2)
   sleep(1)
   ImageDisplay.exitFS()

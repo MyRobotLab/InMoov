@@ -61,14 +61,11 @@ i01.halfSpeed()
 for filename in os.listdir(RuningFolder+'skeleton'):    
   if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
 
-sleep(2) 
 
-if virtualInmoovActivated:
-  talkEvent(lang_startingVirtual)
-  i01.startVinMoov()
-  
 if ((not isEyeLidsActivated and not isHeadActivated and not isLeftArmActivated and not isLeftHandActivated and not isRightArmActivated and not isRightHandActivated and not isTorsoActivated) and (ScriptType!="Virtual" and ScriptType!="NoArduino")):
-  talkEvent(lang_noSkeleton)
+  i01.speakBlocking(i01.languagePack.get("noSkeleton"))
+
+if virtualInmoovActivated:i01.startVinMoov()
   
 ################################
 # INIT.5 - ear.addcmmands
@@ -100,6 +97,7 @@ for root, subdirs, files in os.walk(RuningFolder+'life'):
 
 #create the custom script, only if not exist
 if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(RuningFolder+'custom/InMoov_custom.py.default',RuningFolder+'custom/InMoov_custom.py')
+
 
       
 ################################

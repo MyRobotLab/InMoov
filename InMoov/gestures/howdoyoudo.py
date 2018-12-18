@@ -23,7 +23,4 @@ def howdoyoudo():
     unhappy()
     sleep(4)
     relax()    
-  chatBot.setPredicate(chatBot.getCurrentUserName(),"parameterHowDoYouDo",str(helvar))
-    
-# set to null at startup, because chatbot save it...
-chatBot.setPredicate(chatBot.getCurrentUserName(),"parameterHowDoYouDo","")
+  i01.chatBot.setPredicate("parameterHowDoYouDo",str(helvar))

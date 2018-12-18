@@ -30,7 +30,7 @@ def shakehand():
   i01.moveTorso(95,95,90)
   i01.moveHand("right",80,70,70,50,50,77)
   ##ask chatbot to say something
-  chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
+  i01.chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
    ##optional, detect if there is a human ( waiting finger sensor, we use ultrasonic distance as test )
   if ultraSonicSensorActivated:
     distance=200
@@ -42,13 +42,13 @@ def shakehand():
       distance=i01.getUltrasonicSensorDistance()
       print distance
       if timeout > 20:
-        chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
+        i01.chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
         sleep(2)
         shakehandFinish()
         break
       # ask GET CLOSER
       if timeoutGetCloser>6:
-        chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
+        i01.chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
         timeoutGetCloser=0
         sleep(2)
       sleep(0.5)
@@ -59,7 +59,7 @@ def shakehand():
     shakehandAnimation()
 
 def shakehandAnimation():
-  chatBot.getResponse("SYSTEM_SHAKE_HAND")
+  i01.chatBot.getResponse("SYSTEM_SHAKE_HAND")
   ##close the hand
   i01.moveHand("right",180,125,135,145,168,77)
   sleep(1)

@@ -61,7 +61,6 @@ if isKinectActivated:
     isKinectActivated=0
     
   else:
-    talkEvent(lang_startingOpenNi)
     try:
       i01.startOpenNI()
       openni.stopCapture()

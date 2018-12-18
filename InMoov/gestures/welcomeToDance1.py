@@ -30,7 +30,7 @@ def welcomeToDance1():
     i01.moveTorso(92,90,90)
     i01.moveHead(90,90,100)
     sleep(2)
-    chatBot.getResponse("SAY " + "Shall we dance")
+    i01.chatBot.getResponse("SAY " + "Shall we dance")
     sleep(2)
     i01.disable()
   if t == 2:
@@ -62,7 +62,7 @@ def welcomeToDance1():
     sleep(1)
     i01.moveTorso(92,90,90)
     sleep(2)
-    chatBot.getResponse("SAY " + "Shall we dance")
+    i01.chatBot.getResponse("SAY " + "Shall we dance")
     sleep(2)
     i01.disable()   
   i01.finishedGesture()  

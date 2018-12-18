@@ -4,7 +4,7 @@ def darknet():
   if isNeopixelActivated==1:
         i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   if isOpenCvActivated==1:  
-    if i01.RobotIsOpenCvCapturing():
+    if i01.isCameraOn():
       i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)
       i01.moveHead(75,90,90,30,0,90)
       sleep(1)

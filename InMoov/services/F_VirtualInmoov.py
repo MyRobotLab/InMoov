@@ -28,7 +28,7 @@ if (ScriptType=="Virtual" or virtualInmoovAlwaysActivated) and not ForceVinmoovD
     global virtualInmoovActivated
     virtualInmoovActivated=True
   else:
-    errorSpokenFunc("lang_VinmooovNoWorky")
+    errorSpokenFunc("VinmooovNoWorky")
 
 
 #virtual inmoov

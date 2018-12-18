@@ -26,9 +26,9 @@ if ScriptType=="LeftSide" or ScriptType=="Full" or ScriptType=="Virtual":
   LeftPortIsConnected=CheckArduinos(left,MyLeftPort)
   if LeftPortIsConnected:left.setAref(ArefLeftArduino)
   
-if ScriptType=="LeftSide":talkEvent(lang_startingLeftOnly)
-if ScriptType=="RightSide":talkEvent(lang_startingRightOnly)
-if ScriptType=="Full":talkEvent(lang_startingFull)
-if ScriptType=="NoArduino":talkEvent(lang_startingNoArduino)
+if ScriptType=="LeftSide":i01.speakBlocking(i01.languagePack.get("startingLeftOnly"))
+if ScriptType=="RightSide":i01.speakBlocking(i01.languagePack.get("startingRightOnly"))
+if ScriptType=="Full":i01.speakBlocking(i01.languagePack.get("startingFull"))
+if ScriptType=="NoArduino":i01.speakBlocking(i01.languagePack.get("startingNoArduino"))
 
 

@@ -6,7 +6,7 @@
 
 #script based on beetlejuice work and service
 #sorry I will translate comments soon
-#TODO : english chatbot integration
+#TODO : english i01.chatBot integration
 
 wdf=Runtime.createAndStart("wdf", "WikiDataFetcher")
 if Language=="fr-FR":
@@ -19,17 +19,17 @@ else:
    wdf.setWebSite("enwiki")
    
 # ##############################################################################
-#                 functions called by the chatbot
+#                 functions called by the i01.chatBot
 # ##############################################################################
 if isChatbotActivated:
-  chatBot.setPredicate(chatBot.currentUserName,"articles","")
-  chatBot.setPredicate(chatBot.currentUserName,"courant","")
+  i01.chatBot.setPredicate("articles","")
+  i01.chatBot.setPredicate("courant","")
 def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du sujet (query)
   #Light(1,0,0)
   if query!="":
     if articles=="unknown" or articles=="":
       articles=""
-      chatBot.setPredicate(chatBot.currentUserName,"articles","")
+      i01.chatBot.setPredicate("articles","")
     else:query=articles+" "+query
 
     query = unicode(query,'utf-8')# on force le format de police UTF-8 pour prendre en charge les accents
@@ -85,11 +85,11 @@ def askWiki(articles,query,ReturnOk,ReturnNok): # retourne la description du suj
     if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimédia"): 
       wikiAnswer = wdf.getDescription(wordSingular)
     if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimédia"): # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
-      chatBot.getResponse(ReturnNok+query)
+      i01.chatBot.getResponse(ReturnNok+query)
     else:
-      chatBot.getResponse(ReturnOk + answer)
+      i01.chatBot.getResponse(ReturnOk + answer)
   else:
-    chatBot.getResponse(ReturnNok+query)
+    i01.chatBot.getResponse(ReturnNok+query)
     
 def getProperty(queryPart, query, whatPart, what, ReturnOk, ReturnNok): # retourne la valeur contenue dans la propriete demandee (what)
   #Light(1,0,0)
@@ -119,6 +119,6 @@ def getProperty(queryPart, query, whatPart, what, ReturnOk, ReturnNok): # retour
   answer = ( whatPart + what + " " + queryPart + query + " est " + wikiAnswer)
   print ID,answer,what,query,wikiAnswer
   if (wikiAnswer == "Not Found !") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") or (unicode(wikiAnswer[-9:],'utf-8') == u"Wikimedia") : # bon on a toujours pas trouvé, prochaine etape a dev un dico de synonymes
-    chatBot.getResponse(ReturnNok) # on balance au service apprentissage
+    i01.chatBot.getResponse(ReturnNok) # on balance au service apprentissage
   else:
-    chatBot.getResponse(ReturnOk + answer)
+    i01.chatBot.getResponse(ReturnOk + answer)

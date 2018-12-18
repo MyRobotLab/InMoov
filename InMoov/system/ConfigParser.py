@@ -46,6 +46,11 @@ if Language=="ru":Language="ru-RU"
 if Language=="it":Language="it-IT"
 if Language=="fi":Language="fi-FI"
 
+languageError=False
+if not i01.setLanguage(Language):
+  languageError=True
+  i01.setLanguage("en-US")
+
 DEBUG=BasicConfig.getboolean('MAIN', 'debug')
 IsMute=BasicConfig.getboolean('VOCAL', 'IsMute')
 LoadingPicture=BasicConfig.getboolean('GENERAL', 'LoadingPicture')

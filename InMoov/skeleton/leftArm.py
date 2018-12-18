@@ -35,10 +35,14 @@ except:
 if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or ScriptType=="Virtual":
   isLeftArmActivated=1
   if LeftPortIsConnected==True:
-    talkEvent(lang_startingLeftArm)
-    
+
     leftArm = Runtime.create("i01.leftArm", "InMoovArm")
-    
+    #pffff :) we need to manualy load now to get last position to avoid breaking parts
+    leftArm.bicep.load()
+    leftArm.shoulder.load()
+    leftArm.rotate.load()
+    leftArm.omoplate.load()
+    #end pffff :)
     try:      
       leftArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
       leftArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'shoulder')) 

@@ -1,7 +1,7 @@
 def giving():
   i01.startedGesture()
   fullspeed()
-  if (i01.RobotIsOpenCvCapturing()):
+  if (i01.isCameraOn()):
     #i01.moveHead(44,82)
     i01.moveArm("left",15,55,68,10)
     i01.moveArm("right",13,40,74,13)

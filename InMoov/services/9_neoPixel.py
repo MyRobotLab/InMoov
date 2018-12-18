@@ -104,7 +104,7 @@ if isNeopixelActivated==1:
     neopixel.attach(neopixelArduino, pin, numberOfPixel)
     i01.neopixel=neopixel
     i01.neopixelArduino=neopixelArduino
-    talkEvent(lang_startingNeoPixel)
+    i01.speakBlocking(i01.languagePack.get("startingNeoPixel"))
   else:
     isNeopixelActivated=0
     

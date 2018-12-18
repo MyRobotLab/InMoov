@@ -59,8 +59,6 @@ def AudioPlay(file):
   AudioPlayer.playFile(file,False)
       
 
-
+if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
 python.subscribe(AudioPlayer.getName(),"publishAudioStart")
 python.subscribe(AudioPlayer.getName(),"publishAudioEnd")
-if StartupSound:AudioPlayer.playFile(RuningFolder+'/system/sounds/startupsound.mp3', False)
-sleep(2)

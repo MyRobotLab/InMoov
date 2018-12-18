@@ -1,6 +1,6 @@
 def bookcat():
   sleep(3)
-  chatBot.getResponse("SAY " + "Tell me read the book or stop reading")
+  i01.chatBot.getResponse("SAY " + "Tell me read the book or stop reading")
   #chatBot.getResponse("SAY " + "Скажите мне, прочитайте книгу или перестаньте читать")
   sleep(3)
   

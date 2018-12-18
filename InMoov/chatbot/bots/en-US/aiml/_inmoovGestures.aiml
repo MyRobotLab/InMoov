@@ -196,7 +196,7 @@
 <template><srai>OFF CAMERA</srai></template>
 </category>
 <category><pattern>CAPTURE GESTURE</pattern>
-<template>
+<template>I am capturing this gesture.
         <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
 <category><pattern>GIVING</pattern>
@@ -327,7 +327,7 @@
 <template>Removing my left arm.
         <oob><mrl><service>python</service><method>exec</method><param>removeleftarm()</param></mrl></oob></template>
 </category>
-          <category><pattern># RAISE * LEFT ARM</pattern>
+<category><pattern># RAISE * LEFT ARM</pattern>
 <template>Raising my left arm.
         <oob><mrl><service>python</service><method>exec</method><param>raiseleftarm()</param></mrl></oob></template>
 </category>
@@ -673,7 +673,7 @@
           </random>
         </set>
       </think>
-      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(10)</param></mrl></oob></sraix></set></think>
+      <think><set name="yoloReturn"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>startYoloInventory(5)</param></mrl></oob></sraix></set></think>
       <condition name="yoloReturn"> 
         <!-- not detected ! -->
         <li value="none">

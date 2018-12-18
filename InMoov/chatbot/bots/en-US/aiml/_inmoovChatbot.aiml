@@ -80,7 +80,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
+            <param>i01.chatBot.startSession(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai></template>
@@ -132,9 +132,6 @@
 </category>
 <category><pattern>SYSTEM_SAY_HELLO</pattern>
 <template><srai>HI</srai></template>
-</category>
-<category><pattern>WAKE UP</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
 </category>
 <category><pattern>SHUTDOWN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>

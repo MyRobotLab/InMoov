@@ -38,8 +38,6 @@ except:
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
   isLeftHandActivated=1
   if LeftPortIsConnected:
-    talkEvent(lang_startingLeftHand)
-    
     thumb = Runtime.createAndStart("i01.leftHand.thumb","Servo")
     index = Runtime.createAndStart("i01.leftHand.index","Servo")
     majeure = Runtime.createAndStart("i01.leftHand.majeure","Servo")

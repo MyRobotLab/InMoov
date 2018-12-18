@@ -1,7 +1,33 @@
-;Please use InMoov Vision GUI tab for opencv configuration ( camera / grabber etc ... )
-;System will remember changes
-;You can also set custom parameters from script as usual :
-;i01.vision.setOpenCVenabled(True)
-;i01.vision.addPreFilter("Flip")
-;i01.opencv.setCameraIndex(1)
-;i01.opencv.setGrabberType("Sarxos")
+;----------------------------- OPENCV CONFIGURATION ----------------------------------------
+[MAIN]
+isOpenCvActivated=False
+;Activate OpenCv service...
+faceRecognizerActivated=True
+;Activate faceRecognizer filter if tracking activated ...
+
+CameraIndex=0
+DisplayRender=OpenCVFrameGrabber
+;Available DisplayRender :
+;SarxosFrameGrabber
+;VideoInputFrameGrabber
+;OpenCVFrameGrabber
+
+streamerenabled=False
+
+[TRACKING]
+eyeXPidKp=20.0
+eyeXPidKi=5.0
+eyeXPidKd=0.1
+eyeYPidKp=20.0
+eyeYPidKi=5.0
+eyeYPidKd=0.1
+rotheadPidKp=12.0
+rotheadPidKi=5.0
+rotheadPidKd=0.1
+neckPidKp=12.0
+neckPidKi=5.0
+neckPidKd=0.1
+
+;----------------------------------- END --------------------------------------------------
+
+

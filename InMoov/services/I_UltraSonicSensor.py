@@ -22,7 +22,7 @@ if ultraSonicSensorActivated:
     ultraSonicSensorArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicSensorArduino'))
     ultrasonicSensor.attach(ultraSonicSensorArduino, trigPin, echoPin)
     i01.ultrasonicSensor=ultrasonicSensor
-    talkEvent(lang_startingUltraSonic)
+    i01.speakBlocking(i01.languagePack.get("startingUltraSonic"))
     # range can also be retreieved in a blocking call
     print "ultrasonicSensor test is ", i01.getUltrasonicSensorDistance()
   except:

@@ -11,19 +11,16 @@ myMath;
 
 </javascript></template>
 </category>
-<category><pattern>* / *</pattern>
-<template><srai><star index="1"/> DIVISÉ PAR <star index="2"/></srai></template>
-</category>
 <category><pattern>* X *</pattern>
 <template><srai><star index="1"/> MULTIPLIÉ PAR <star index="2"/></srai></template>
 </category>
 <category><pattern>* MULTIPLIÉ PAR *</pattern>
 <template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathX("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
 </category>
-<category><pattern>* + *</pattern>
+<category><pattern>* PLUS *</pattern>
 <template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathPlus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
 </category>
-<category><pattern>* - *</pattern>
+<category><pattern>* MOINS *</pattern>
 <template><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>mathMinus("<star index="1"/>","<star index="2"/>")</param></mrl></oob></sraix></template>
 </category>
 <category><pattern>* DIVISÉ PAR *</pattern>

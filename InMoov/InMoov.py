@@ -61,15 +61,15 @@ ear.addCommand("finger to the middle", "python", "fingermiddle")
 # functions called by the basic vocal commands engine
 def fingeropen():
   i01.moveHand("right",0,0,0,0,0)
-  talkBlocking("ok I open my finger")
+  i01.speakBlocking("ok I open my finger")
 
 def fingerclose():
   i01.moveHand("right",180,180,180,180,180)
-  talkBlocking("my finger is closed")
+  i01.speakBlocking("my finger is closed")
 
 def fingermiddle():
   i01.moveHand("right",90,90,90,90,90)
-  talkBlocking("ok you have my attention")  
+  i01.speakBlocking("ok you have my attention")  
   
 
 ##############

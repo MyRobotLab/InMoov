@@ -101,7 +101,7 @@ def getTheQueue():
 #function transformation
 #################### 
 def ROBOTSAY(what): 
-  talkBlocking(what)
+  i01.speakBlocking(what)
   
 def UPDATECONF(what):
   print "TODO : UPDATECONF called"

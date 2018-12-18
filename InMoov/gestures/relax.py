@@ -3,7 +3,7 @@ def relax():
   sleep(2)
   i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
   i01.startedGesture()
-  if (i01.RobotIsOpenCvCapturing()):
+  if (i01.isCameraOn()):
     i01.setHandVelocity("left", 43, 43, 43, 43, 43, 43)
     i01.setHandVelocity("right", 43, 43, 43, 43, 43, 43)
     i01.setArmVelocity("right", 31, 43, 23, 43)
@@ -16,7 +16,6 @@ def relax():
     i01.moveHand("left",92.00,33.00,37.00,71.00,66.00,25.00)
     i01.moveHand("right",81.00,66.00,82.00,60.00,23.00,160.00)
     i01.moveTorso(95.00,90.00,90.00)
-
   else:
     i01.setHandVelocity("left", 43, 43, 43, 43, 43, 43)
     i01.setHandVelocity("right", 43, 43, 43, 43, 43, 43)
@@ -30,5 +29,4 @@ def relax():
     i01.moveHand("left",92.00,33.00,37.00,71.00,66.00,25.00)
     i01.moveHand("right",81.00,66.00,82.00,60.00,23.00,160.00)
     i01.moveTorso(95.00,90.00,90.00)
-
   i01.finishedGesture()

@@ -7,8 +7,37 @@
 #               PERSONNAL PARAMETERS
 # ##############################################################################  
 
-##Please use InMoov Vision GUI tab for i01.opencv configuration ( camera / grabber etc ... )
-##You can also set custom parameters from script as usual :
+#read current service part config based on file name
+ThisServicePart=RuningFolder+'config/service_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
+
+###############################################################################
+#                 webgui sync
+getInmoovFrParameter('opencv',ThisServicePart+'.config')
+###############################################################################
+
+CheckFileExist(ThisServicePart)
+ThisServicePartConfig = ConfigParser.ConfigParser()
+ThisServicePartConfig.read(ThisServicePart+'.config')
+global isOpenCvActivated
+isOpenCvActivated=0
+i01.vision.setOpenCVenabled(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated'))
+CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
+DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
+
+faceRecognizerActivated=True
+try:
+  faceRecognizerActivated=ThisServicePartConfig.getboolean('MAIN', 'faceRecognizerActivated')
+except:
+  pass
+
+streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
+
+#for noworky
+log.info("D_OpenCv.config")
+log.info("isOpenCvActivated : "+str(isOpenCvActivated))
+log.info("DisplayRender : "+str(DisplayRender))
+log.info("streamerEnabled : "+str(streamerEnabled))
+
 #i01.vision.setOpenCVenabled(True)
 #i01.vision.addPreFilter("Flip")
 #i01.opencv.setCameraIndex(1)
@@ -18,19 +47,22 @@
 # ##############################################################################
 #                 SERVICE START
 # ##############################################################################
-i01.vision.setOpenCVenabled(True)
+
 if i01.vision.openCVenabled:
+  i01.opencv = Runtime.create("i01.opencv", "OpenCV")
+  i01.opencv.setCameraIndex(CameraIndex)
+  i01.opencv.setGrabberType(DisplayRender)
+  i01.opencv = Runtime.start("i01.opencv", "OpenCV")
   i01.vision.setOpenCVenabled(i01.startOpenCV())
   if not i01.vision.openCVenabled:
-    errorSpokenFunc('OpenCvNoWorky','camera '+i01.opencv.getCameraIndex())
+    errorSpokenFunc('OpenCvNoWorky','camera '+str(i01.opencv.getCameraIndex()))
   else:
     python.subscribe("i01.opencv", "publishRecognizedFace")
-    python.subscribe("i01.opencv", "publishClassification")
   
 
 def onRecognizedFace(name):
   print name
   # robot reaction if recognized face ( todo beter reaction... )
   if isChatbotActivated:
-    chatBot.setUsername(unicode(name,'utf-8'))
-    chatBot.getResponse("SYSTEM_SAY_HELLO")
+    i01.chatBot.setUsername(unicode(name,'utf-8'))
+    i01.chatBot.getResponse("SYSTEM_SAY_HELLO")

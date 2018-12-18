@@ -36,8 +36,6 @@ except:
 if isRightHandActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full") or ScriptType=="Virtual":
   isRightHandActivated=1
   if RightPortIsConnected:
-    talkEvent(lang_startingRightHand)
-    
     rightHand = Runtime.create("i01.rightHand", "InMoovHand")
         
     rightHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
