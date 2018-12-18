@@ -818,7 +818,7 @@
 </category>
 <category><pattern>ОСТАНОВИ РАСПОЗНАВАНИЕ ЛИЦА</pattern>
 <template>Я прекращаю распознавание лица.
-	    <oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+	    <oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
 </category>
 <category><pattern>ДАЙ АВТОГРАФ</pattern>
 <template>Хорошо, дайте бумагу - я сделаю это для вас.

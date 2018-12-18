@@ -729,7 +729,7 @@
 <template><srai>INIZIO RICONOSCIMENTO FACCIALE</srai></template>
 </category>
 <category><pattern>ARRESTO DEL RICONSCIMENTO FACCIALE</pattern>
-<template>Sto interrompendo il riconoscimento facciale<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+<template>Sto interrompendo il riconoscimento facciale<oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
 </category>
 <category><pattern>ARRESTO RICONOSCIMENTO FACCIALE</pattern>
 <template><srai>ARRESTO RICONOSCIMENTO FACCIALE</srai></template>

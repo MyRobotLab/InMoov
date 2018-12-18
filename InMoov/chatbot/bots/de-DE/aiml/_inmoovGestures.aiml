@@ -1286,7 +1286,7 @@
   <topic name="GESTURES">
     <category>
       <pattern>STOP FACE RECOGNIZER</pattern>
-      <template>I'm stopping face recognizer<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+      <template>I'm stopping face recognizer<oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
     </category>
   </topic>
   <topic name="GESTURES">
