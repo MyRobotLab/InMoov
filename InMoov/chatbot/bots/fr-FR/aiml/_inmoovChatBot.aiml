@@ -58,7 +58,7 @@
 
     <category>
       <pattern>#</pattern>
-      <that># PUIS-JE AVOIR TON PRÉNOM #</that>
+      <that># PUIS JE AVOIR TON PRÉNOM #</that>
       <template>
         <set name="questionfirstinit">Si ton prénom est <star />, répond par oui ou non</set>
         <think>
@@ -73,7 +73,7 @@
       <that># SI MON NOM EST #</that>
       <template>
         <random>
-          <li>j aime beaucoup ce nom, <get name="tmpname" />.</li>
+          <li>j'aime beaucoup ce nom, <get name="tmpname" />.</li>
           <li>On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.</li>
           <li><get name="tmpname" />? sérieusement, je vais le garder toute ma vie. tant pis.</li>
           <li><get name="tmpname" />? vraiment, je vais le garder toute ma vie, alors. Super.</li>

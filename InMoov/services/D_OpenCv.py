@@ -24,11 +24,12 @@ i01.vision.setOpenCVenabled(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvAc
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
+flipPicture=False
 faceRecognizerActivated=True
 try:
+  flipPicture=ThisServicePartConfig.getboolean('MAIN', 'flipPicture')
   faceRecognizerActivated=ThisServicePartConfig.getboolean('MAIN', 'faceRecognizerActivated')
-except:
-  pass
+except:pass
 
 streamerEnabled=ThisServicePartConfig.getboolean('MAIN', 'streamerEnabled')
 
@@ -42,6 +43,8 @@ log.info("streamerEnabled : "+str(streamerEnabled))
 #i01.vision.addPreFilter("Flip")
 #i01.opencv.setCameraIndex(1)
 #i01.opencv.setGrabberType("Sarxos")
+
+if flipPicture:i01.vision.addPreFilter("Flip")
 
 
 # ##############################################################################
