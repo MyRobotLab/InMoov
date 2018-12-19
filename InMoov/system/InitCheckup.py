@@ -39,6 +39,9 @@ execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
 execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
+# mute for starting action vocals
+if IsMute:i01.setMute(True)
+
 ################################
 # INIT.3 - services call
 ################################
@@ -105,7 +108,7 @@ if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(Runing
 ################################
 if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
-
+i01.setMute(False)
 #wip updater
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 

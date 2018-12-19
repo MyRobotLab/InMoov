@@ -48,9 +48,6 @@ if not i01.mouth:
   i01.mouth=subconsciousMouth
   errorSpokenFunc('MyvoiceType')
 
-#vocal startup globalized so :
-i01.setMute(IsMute)
-
 # ##############################################################################
 # MRL SERVICE TWEAKS
 # ##############################################################################
