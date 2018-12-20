@@ -1,4 +1,4 @@
-# InMooV2 - Service dependencies  
+# InMooV - Service dependencies  
   
 Develop branch wip  
   
