@@ -2,12 +2,6 @@
 #                 CONFIGPARSER FILE
 # ##############################################################################
 
-# ##############################################################################
-#                 webgui sync
-getInmoovFrParameter('config',RuningFolder+'config/' + '_Inmoov.config')
-# ##############################################################################
-
-
 #shared parse function
 def CheckFileExist(File):
   global RobotIsErrorMode

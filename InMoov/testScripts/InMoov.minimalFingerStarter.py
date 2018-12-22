@@ -1,5 +1,5 @@
 #file : InMoov.minimalFingerStarter.py
-# MRL version above 1.0.2620
+# MRL version >= Nixie
 # this script is provided as a basic guide
 # most parts can be run by uncommenting them
 # InMoov now can be started in modular pieces through the skeleton.config
@@ -11,7 +11,7 @@
 rightPort = "COM9"
 ##############
 #to tweak the default voice
-Voice="cmu-bdl-hsmm" #Male US voice 
+Voice="Mark" #Male US voice 
 #Voice="cmu-slt-hsmm" #Default female for MarySpeech
 mouth = Runtime.createAndStart("i01.mouth", "MarySpeech")
 #mouth.installComponentsAcceptLicense(Voice)

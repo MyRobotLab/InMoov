@@ -11,12 +11,6 @@
 #read current skeleton part config
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
-###############################################################################
-#                 webgui sync
-getInmoovFrParameter('torso',ThisSkeletonPart+'.config')
-###############################################################################
-
-
 isTorsoActivated=0
 try:
   CheckFileExist(ThisSkeletonPart)

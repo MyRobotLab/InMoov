@@ -12,12 +12,6 @@
 isRightHandActivated=0
 ThisSkeletonPart=RuningFolder+'config/skeleton_'+os.path.basename(inspect.stack()[0][1]).replace('.py','')
 
-###############################################################################
-#                 webgui sync
-getInmoovFrParameter('rightHand',ThisSkeletonPart+'.config')
-###############################################################################
-
-
 try:
   CheckFileExist(ThisSkeletonPart)
   ThisSkeletonPartConfig = ConfigParser.ConfigParser()

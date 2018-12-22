@@ -12,11 +12,6 @@
 #read current skeleton part config
 inmoovLifeConfigFile=RuningFolder+'config/InMoovLife'
 
-###############################################################################
-#                 webgui sync
-getInmoovFrParameter('inmoovlife',inmoovLifeConfigFile+'.config')
-###############################################################################
-
 CheckFileExist(inmoovLifeConfigFile)
 inmoovLifeConfig = ConfigParser.ConfigParser()
 inmoovLifeConfig.read(inmoovLifeConfigFile+'.config')

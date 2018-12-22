@@ -20,9 +20,6 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
-#inmoov.fr webgui
-execfile(RuningFolder+'/system/inmoovGui.py')
-
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
 
@@ -100,6 +97,14 @@ for root, subdirs, files in os.walk(RuningFolder+'life'):
 
 #create the custom script, only if not exist
 if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(RuningFolder+'custom/InMoov_custom.py.default',RuningFolder+'custom/InMoov_custom.py')
+  #clean up .default.config
+  
+#remove default config files
+for root, subdirs, files in os.walk(RuningFolder):
+  for name in files:
+    if name.split(".")[-1] == "default":
+      os.remove(os.path.join(root, name))
+      if DEBUG==1:print "removed .default : ",os.path.join(root, name)
 
 
       
@@ -109,9 +114,6 @@ if not os.path.isfile(RuningFolder+'custom/InMoov_custom.py'):shutil.move(Runing
 if DEBUG==1:runtime.setLogLevel("INFO")
 else:runtime.setLogLevel("ERROR")
 i01.setMute(False)
-#wip updater
-execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
-
 
 if boot_green and isNeopixelActivated:    
   i01.setNeopixelAnimation("Flash Random", 0, 255, 0, 1)

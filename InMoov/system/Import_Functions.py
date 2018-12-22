@@ -35,6 +35,12 @@ def mathDivide(x,y):
     return float(x)/float(y)
   else:
     return 0
+    
+def RemoveFile(file):
+  try:
+    os.remove(file)
+  except:
+    pass
 
 def CheckIfRobotCanLaunchAPPS(Needs):
   for modules in Needs:
