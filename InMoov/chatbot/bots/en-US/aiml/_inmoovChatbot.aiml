@@ -237,5 +237,12 @@
   <template><think><set name="topic">default</set></think><srai><star /></srai></template>
   </category>
   </topic>
+<category><pattern>STOP YOUR GESTURE</pattern>
+<template>You have my attention
+      <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
+</category>
+<category><pattern># YOUR ATTENTION</pattern>
+<template><srai>STOP YOUR GESTURE</srai></template>
+</category>	
   
 </aiml>
