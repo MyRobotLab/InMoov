@@ -90,7 +90,7 @@ def welcomeMessage():
     else:
       i01.chatBot.getResponse("WAKE_UP")
   else:
-    i01.speakBlocking(languagePack.get("ready"))
+    i01.speakBlocking(i01.languagePack.get("ready"))
   i01.RobotIsStarted=True
 
 global WaitXsecondBeforeRelaunchTracking

@@ -130,12 +130,13 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     
     #please set aref
     if AudioSignalProcessing:
+      i01.setMute(False)
       left.addListener("publishPinArray","python","publishMouthcontrolPinLeft")
       AudioSignalProcessing=False
       MouthControlActivated=False
       AudioSignalProcessingCalibration=1
       left.enablePin(AnalogPinFromSoundCard,HowManyPollsBySecond)
-      i01.speakBlocking(languagePack.get("MouthSyncronisation"))
+      i01.speakBlocking(i01.languagePack.get("MouthSyncronisation"))
       
       
       AudioSignalProcessingCalibration=0
@@ -149,18 +150,18 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
       result=0
       #arduino dit not detect analog value
       if minAudioValue>50:
-        i01.speakBlocking(languagePack.get("MouthSyncronisation")+str(AnalogPinFromSoundCard))
+        i01.speakBlocking(i01.languagePack.get("MouthSyncronisation")+str(AnalogPinFromSoundCard))
         result=1
       #arduino detect a poor value
       if result==0 and (maxAudioValue-minAudioValue<=255):
         head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
-        i01.speakBlocking(languagePack.get("MouthSyncronisationNotPerfect"))
+        i01.speakBlocking(i01.languagePack.get("MouthSyncronisationNotPerfect"))
       #arduino detect a good value  
       if result==0 and (maxAudioValue-minAudioValue>255):
         head.jaw.map(minAudioValue,maxAudioValue,jawMIN,jawMAX)
         AudioSignalProcessing=True
-        i01.speakBlocking(languagePack.get("MouthSyncronisationOk"))
+        i01.speakBlocking(i01.languagePack.get("MouthSyncronisationOk"))
         
       print maxAudioValue,minAudioValue
       
