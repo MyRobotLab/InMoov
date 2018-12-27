@@ -1,5 +1,6 @@
 def giving():
   fullspeed()
+  i01.startedGesture()
   if (i01.isCameraOn()):
     #i01.moveHead(44,82)
     i01.moveArm("left",15,55,68,10)
@@ -14,3 +15,4 @@ def giving():
     i01.moveHand("left",61,0,14,0,0,180)
     i01.moveHand("right",0,24,24,19,21,25)
     i01.moveTorso(90,90,90)
+  i01.finishedGesture()  
