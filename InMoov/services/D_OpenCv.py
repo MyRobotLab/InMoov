@@ -14,8 +14,8 @@ CheckFileExist(ThisServicePart)
 ThisServicePartConfig = ConfigParser.ConfigParser()
 ThisServicePartConfig.read(ThisServicePart+'.config')
 global isOpenCvActivated
-isOpenCvActivated=0
 i01.vision.setOpenCVenabled(ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated'))
+isOpenCvActivated=i01.vision.openCVenabled
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
 
@@ -40,7 +40,6 @@ log.info("streamerEnabled : "+str(streamerEnabled))
 #i01.opencv.setGrabberType("Sarxos")
 
 if flipPicture:i01.vision.addPreFilter("Flip")
-
 
 # ##############################################################################
 #                 SERVICE START
