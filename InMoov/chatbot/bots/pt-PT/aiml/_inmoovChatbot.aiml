@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: _inmoovChatbot.aiml -->
+<!-- Author: Greg Perry -->
+<!-- Last modified: Novembre 01, 2018 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The EN brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The EN brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
+<category><pattern>DIZER *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
+        <set name="firstinit">started</set>
+      </think>
+      <think>
+        <set name="topic">firstinit</set>
+      </think>
+        Olá, esta é minha primeira inicialização. Eu preciso de algumas informações, estou ouvindo, qual é o meu nome?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># QUAL É O MEU NOME #</that>
+<template><set name="questionfirstinit">se meu nome é <star/> , diga sim ou não</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># POSSO TER SEU NOME #</that>
+<template><set name="questionfirstinit">se seu nome é <star/> , diga sim ou não</set>
+        <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># SIM #</pattern><that># SE MEU NOME É #</that>
+<template><random>
+            <li>
+            Eu gosto desse nome , <get name="tmpname"/>.
+            </li>
+            <li>
+            Muito bom nome, <get name="tmpname"/> é ótimo.
+            </li>
+        </random>
+    Eu preciso te conhecer, estou ouvindo, posso ter seu nome?
+    <think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># SIM #</pattern><that># SE SEU NOME #</that>
+<template><random>
+        <li>Estou feliz em conhecê-lo, <get name="tmpname"/>.</li>
+        <li>Prazer em conhecê-lo, <get name="tmpname"/>.</li>
+        </random>
+       
+        <think>
+          <set name="name">
+            <get name="tmpname"/>
+          </set>
+          <set name="firstinit">ok</set>
+          <set name="topic">default</set>
+        </think>
+        <oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.chatBot.startSession(u"<get name="tmpname"/>")</param>
+          </mrl>
+        </oob>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NÃO #</pattern><that># SE MEU NOME É #</that>
+<template>We restart.
+    Eu estou ouvindo. qual é o meu nome ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NÃO #</pattern><that># SE SEU NOME #</that>
+<template>Nós recomeçamos.
+    Eu estou ouvindo. Posso ter seu nome ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># DIGA SIM OU NÃO #</that>
+<template><random>
+          <li>
+    Por favor, responda a minha pergunta, é importante
+    </li>
+          <li>
+    Eu repito.
+    </li>
+        </random>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>AUDIO TEST</pattern>
+<template><oob>
+         <mrl>
+          <service>AudioPlayer</service>
+          <method>play</method>
+          <param>InMoov\system\sounds\startupsound.mp3</param>
+         </mrl>
+       </oob></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template>
+        <srai>OI</srai>
+        <random>
+          <li>Eu estou pronto e ouvindo.</li>
+          <li>O que posso fazer para você.</li>
+          <li>Como posso ajudá-lo.</li>
+        </random>
+      </template>
+</category>
+<category><pattern>SYSTEM_SAY_HELLO</pattern>
+<template><srai>OI</srai></template>
+</category>
+<category><pattern>DESLIGAR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>SHUTDOWN COMPLETO DO ROBÔ</pattern>
+<template>Okay
+<oob><mrl><service>python</service><method>exec</method><param>shutdownComplete()</param></mrl></oob></template>
+</category>
+<category><pattern>VÁ DORMIR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
+</category>
+<category><pattern>DESATIVAR</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>disable()</param></mrl></oob></template>
+</category>
+<category><pattern>O QUE É O ASSUNTO</pattern>
+<template>O tópico é
+      <get name="topic"/></template>
+</category>
+<category><pattern>MODO DE BOOT UP</pattern>
+<template>Entrando no tópico de inicialização.
+      <think><set name="topic">BOOTUP</set></think></template>
+</category>
+<category><pattern>GESTOS</pattern>
+<template>Entrando no tópico de gestos.
+      <think><set name="topic">GESTURES</set></think></template>
+</category>
+<category><pattern>GESTOS *</pattern>
+<template><srai>GESTOS</srai></template>
+</category>
+<category><pattern>* GESTOS</pattern>
+<template><srai>GESTOS</srai></template>
+</category>
+<category><pattern>* GESTOS *</pattern>
+<template><srai>GESTOS</srai></template>
+</category>
+<category><pattern>RETIRE TODOS</pattern>
+<template>Desanexar tudo
+      <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ANEXAR TODOS</pattern>
+<template>Anexar Todos
+      <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
+</category>
+<category><pattern>ANEXA A SUA MÃO DIREITA</pattern>
+<template><srai>ENCAIXE A MÃO DIREITA</srai></template>
+</category>
+<category><pattern>DESCARTE A MÃO DIREITA</pattern>
+<template>Destacando minha mão direita
+      <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DESCONECTE A SUA MÃO DIREITA</pattern>
+<template><srai>DESCARTE A MÃO DIREITA</srai></template>
+</category>
+<category><pattern>ANEXAR SUA MÃO ESQUERDA</pattern>
+<template><srai>ANEXAR A MÃO ESQUERDA</srai></template>
+</category>
+<category><pattern>DETALHE A MÃO ESQUERDA</pattern>
+<template>Destacando minha mão esquerda
+      <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>DESCONECTE A SUA MÃO ESQUERDA</pattern>
+<template><srai>DETALHE A MÃO ESQUERDA</srai></template>
+</category>
+<category><pattern>DETALHE A CABEÇA</pattern>
+<template>Destacando minha cabeça
+      <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ANEXAR O SEU BRAÇO DIREITO</pattern>
+<template><srai>ANEXAR O BRAÇO DIREITO</srai></template>
+</category>
+<category><pattern>RETIRE O BRAÇO DIREITO</pattern>
+<template>Destacando meu braço direito
+      <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ANEXAR O SEU BRAÇO ESQUERDO</pattern>
+<template><srai>ANTES DE ARMAR ESQUERDA</srai></template>
+</category>
+<category><pattern>RETIRE O BRAÇO ESQUERDO</pattern>
+<template>Destacando meu braço esquerdo
+      <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
+</category>
+<category><pattern>ANTES DE SEU TORSO</pattern>
+<template><srai>ANEXAR TORSO</srai></template>
+</category>
+<category><pattern>RETIRE TORSO</pattern>
+<template>Destacando meu torso
+      <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
+</category>
+
+  <!-- fix for null topic -->
+
+  <topic name="">
+  <category><pattern>#</pattern>
+  <template><think><set name="topic">default</set></think><srai><star /></srai></template>
+  </category>
+  </topic>
+<category><pattern>PARE O SEU GESTO</pattern>
+<template>Você tem minha atenção
+      <oob><mrl><service>python</service><method>exec</method><param>stopingGesture()</param></mrl></oob></template>
+</category>
+<category><pattern># SUA ATENÇÃO</pattern>
+<template><srai>PARE O SEU GESTO</srai></template>
+</category>   
+ 
+</aiml>
