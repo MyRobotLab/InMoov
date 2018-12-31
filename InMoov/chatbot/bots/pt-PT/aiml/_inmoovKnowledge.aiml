@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: train.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: December 31, 2018 -->
+  <!-- This inmoovPortuguese brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!-- general learn -->
+  <category>
+    <pattern>* SIGNIFICA *</pattern>
+    <template>
+      <think>
+        <set name="equalto">
+          <srai>É <star /> IGUAL A <star index="2" /></srai>
+        </set>
+      </think>
+      <condition name="equalto">
+        <li value="false">
+	      Ok, quando você diz "<star />", Eu vou supor que você quer dizer "<star index="2" />".
+		  <learnf>
+			<category>
+				<pattern><eval><star /></eval></pattern>
+				<template><srai><eval><star index="2" /></eval></srai></template>
+			</category>
+			<category>
+				<pattern><eval><star /></eval> _</pattern>
+				<template><srai><eval><star index="2" /></eval> <star /></srai></template>
+			</category>
+			<category>
+				<pattern>_ <eval><star /></eval></pattern>
+				<template><srai><star /> <eval><star index="2" /></eval></srai></template>
+			</category>
+			<category>
+				<pattern>_ <eval><star /></eval> *</pattern>
+				<template><srai><star /><eval> <star index="2" /></eval> <star index="2" /></srai></template>
+			</category>
+		  </learnf>
+		</li>
+        <li>
+          <star /> já é o mesmo que <star index="2" />.</li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>UM * É UM *</pattern>
+    <template>
+    	Ok, eu vou lembrar de um <star/> é um <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É UMA <eval><star /></eval></pattern>
+				<template>UMA <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE É UMA <eval><star index="2" /></eval></pattern>
+				<template>UMA <eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É UM <eval><star /></eval> A <eval><star index="2" /></eval></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>* É UM *</pattern>
+    <template>
+    	Ok, eu vou lembrar <star/> é um <star index="2" />.
+		<think>
+			<set name="isaname"><srai>ISANAME <star /></srai></set>
+			<condition name="isaname">
+				<li value="true">
+					<set name="learnpattern">QUEM É UM</set>
+				</li>
+				<li>
+					<set name="learnpattern">O QUE É UMA</set>
+				</li>
+			</condition>
+		</think>
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template>UMA <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval><eval><star index="2" /></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É <eval><star /></eval> UM <eval><star index="2" /></eval>
+				</pattern><template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>* É O *</pattern>
+    <template>
+    	Ok, eu vou lembrar <star/> é o <star index="2" />.
+		<think>
+			<set name="isaname"><srai>ISANAME <star /></srai></set>
+			<condition name="isaname">
+				<li value="true">
+					<set name="learnpattern">QUEM É O</set></li><li><set name="learnpattern">O QUE É</set>
+				</li>
+			</condition>
+		</think>
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template>o <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval><eval><star index="2" /></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É O <eval><star /></eval> O <eval><star index="2" /></eval></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>UM * É UM *</pattern>
+    <template>
+    	Ok, eu vou lembrar que um <star/> é um <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É UMA <eval><star /></eval></pattern>
+				<template>UM <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE É UM <eval><star index="2" /></eval></pattern>
+				<template>UM <eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É UM <eval><star /></eval> UMA <eval><star index="2" /></eval></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>UM * É UM *</pattern>
+    <template>
+    	Ok, eu vou lembrar de um <star/> é um <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É UM <eval><star /></eval></pattern>
+				<template>UM <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE É UMA <eval><star index="2" /></eval></pattern>
+				<template>UMA <eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É UMA <eval><star /></eval> UMA <eval><star index="2" /></eval></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>UMA * É UMA *</pattern>
+    <template>
+    	Ok, eu vou lembrar de uma <star/> é uma <star index="2" />.	
+		<learnf>
+			<category>
+				<pattern>O QUE É UMA <eval><star /></eval></pattern>
+				<template>UMA <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE É UMA <eval><star index="2" /></eval></pattern>
+				<template>UMA <eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É UMA <eval><star /></eval> UMA <eval><star index="2" /></eval></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>* É UMA *</pattern>
+    <template>
+    	Ok, eu vou lembrar de uma <star/> é um <star index="2" />.
+		<think>
+			<set name="isaname"><srai>ISANAME <star /> </srai></set>
+			<condition name="isaname">
+				<li value="true">
+					<set name="learnpattern">QUEM É UM</set>
+				</li>
+				<li>
+					<set name="learnpattern">O QUE É UM</set>
+				</li>
+			</condition>
+		</think>
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template>Uma <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval><eval><star index="2" /></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É <eval><star /></eval> UMA <star index="2" /></pattern>
+				<template>Sim.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>UM * NÃO É *</pattern>
+    <template>
+    	Ok, eu vou lembrar de uma <star/> não é <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É UMA <eval><star /></eval></pattern>
+				<template>Não <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE NÃO É <eval><star index="2" /></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É UM <eval><star /></eval><eval><star index="2" /></eval></pattern>
+				<template>Não.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>O * NÃO É *</pattern>
+    <template>
+    	Ok, eu vou lembrar de uma <star/> não é <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template>Não <eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern>O QUE NÃO É <eval><star index="2" /></eval></pattern>
+				<template>O <eval><star /></eval>.</template>
+				</category>
+			<category>
+				<pattern>É O <eval><star /></eval><eval><star index="2" /></eval></pattern>
+				<template>Não.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>* NÃO É UM *</pattern>
+    <template>
+    	Ok, eu vou lembrar de uma <star/> não é <star index="2" />.
+		<think>
+			<set name="isaname"><srai>ISANAME <star /></srai></set>
+			<condition name="isaname">
+				<li value="true">
+					<set name="learnpattern">QUEM NÃO É</set>
+				</li>
+				<li>
+					<set name="learnpattern">O QUE NÃO É</set>
+				</li>
+			</condition>
+		</think>
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template><eval><star index="2" /></eval>.</template>
+			</category>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval><eval><star index="2" /></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+			<category>
+				<pattern>É <eval><star /></eval><eval><star index="2" /></eval></pattern>
+				<template>Não.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>VOCÊ _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Você <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>UM _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Um <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>UMA _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Uma <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>EU _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Eu <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ELE _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Ele <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ESSE _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Esse <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>O NOME DO MEU * É *</pattern>
+    <template>
+      <think>
+        <set name="isfamiliarname">
+          <srai>ISFAMILIARNAME <star /></srai>
+        </set>
+        <set name="familiarpredicate">
+          <srai>FAMILIARPREDICATE <star /></srai>
+        </set>
+      </think>
+      <condition name="isfamiliarname">
+        <li value="true">
+          <think>
+            <set name="contactname">
+              <star index="2" />
+            </set>
+          </think>
+          <srai>REMEMBERFAMILIARNAME</srai>
+        </li>
+        <li>Eu lembrarei que o nome do seu <star/> é <star index="2" />.
+	  	<learnf>
+	  		<category>
+	  			<pattern>O <eval><star /></eval> NOME DO MEU</pattern>
+	  			<template><eval><star index="2" /></eval></template>
+	  		</category>
+	  	</learnf>
+	  </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>A IDADE DO MEU * É *</pattern>
+    <template>
+    	Eu vou lembrar da sua idade de <star/>.
+		<learnf>
+			<category>
+				<pattern>A <eval><star /></eval> IDADE</pattern>
+				<template><eval><star index="2" /></eval></template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>MEU * É *</pattern>
+    <template>
+      <think>
+        <set name="isaname">
+          <srai>ISANAME <star index="2" /></srai>
+        </set>
+        <set name="isanumber">
+          <srai>ISANUMBER <star index="2" /></srai>
+        </set>
+        <set name="isafamiliarname">
+          <srai>ISAFAMILIARNAME <star /></srai>
+        </set>
+      </think>
+      <condition name="isaname">
+        <li value="true">
+          <srai>MEU <star /> NOME É <star index="2" /></srai>
+        </li>
+        <li>
+          <condition name="isanumber">
+            <li value="true">
+              <srai>MEU <star /> IDADE É <star index="2" /></srai>
+            </li>
+            <li>
+              <condition name="isafamiliarname">
+                <li value="true">
+                  <random>
+                    <li>OK, agora você pode me perguntar "O que é meu <star/>?" </li>
+                    <li>OK, agora você pode me perguntar "Quem é <star index="2" />?" </li>
+                    <li>Seu <star /> é?</li>
+                    <li>Bom saber.</li>
+                  </random>
+                  <learnf>
+                    <category>
+                      <pattern>O QUE É MINHA <eval><star /></eval></pattern>
+                      <template>
+                        <eval>
+                          <star index="2" />
+                        </eval>
+                      </template>
+                    </category>
+                    <category>
+                      <pattern>QUEM É <eval><star index="2" /></eval></pattern>
+                      <template>Seu <eval><star /></eval></template>
+                    </category>
+                  </learnf>
+                </li>
+                <li>
+                  <random>
+                    <li>OK, agora você pode me perguntar "O que é meu <star/>?" </li>
+                    <li>OK, agora você pode me perguntar "O que é <star index="2" />?" </li>
+                    <li>Seu <star /> é?</li>
+                    <li>Bom saber.</li>
+                    <li>Onde você conseguiu seu <star />?</li>
+                  </random>
+                  <learnf>
+                    <category>
+                      <pattern>O QUE E MEU <eval><star /></eval></pattern>
+                      <template>
+                      	 <eval>
+                          <star index="2" />
+                        </eval>
+                      </template>
+                    </category>
+                    <category>
+                      <pattern>O QUE É <eval><star index="2" /></eval></pattern>
+                      <template>Seu <eval><star /></eval></template>
+                    </category>
+                  </learnf>
+                </li>
+              </condition>
+            </li>
+          </condition>
+        </li>
+      </condition>
+    </template>
+  </category>
+  <category>
+    <pattern>A MINHA * FAVORITA É *</pattern>
+    <template>
+      <random>
+        <li>OK, agora você pode me perguntar "Qual é o meu favorito <star />?" </li>
+        <li>Você acha que eu gostaria <star index="2" /> too?</li>
+        <li>Bom saber.</li>
+        <li>O que você mais gosta sobre<star index="2" />?</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>O QUE É O MEU FAVORITO <eval><star /></eval></pattern>
+          <template>
+            <eval>
+              <star index="2" />
+            </eval>
+          </template>
+        </category>
+      </learnf>
+    </template>
+  </category>
+  <category>
+    <pattern>MINHA _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Minha <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>APRENDA NOVA RESPOSTA *</pattern>
+    <template>
+    	Está bem. Agora, sempre que você disser "<get name="newpattern" />", Eu responderei com "<star />".
+		<learnf>
+			<category>
+				<pattern><eval><normalize><get name="newpattern" /></normalize></eval></pattern>
+				<template><eval><star /></eval>.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>APRENDA * É *</pattern>
+    <template>Ok, eu vou lembrar <star/> é <star index="2" />.
+		<learnf>
+			<category>
+				<pattern>O QUE É <eval><star /></eval></pattern>
+				<template><eval><star index="2" /></eval>.</template>
+			</category>
+		</learnf>
+	</template>
+  </category>
+  <category>
+    <pattern>ISTO _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Isto <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÃO É BOA RESPOSTA</pattern>
+    <template>
+      <think>
+        <set name="newpattern">
+          <input index="2" />
+        </set>
+      </think>
+	  Está bem. Você disse "<input index="2" />" e eu respondi "<response />".
+	  O que devo dizer em vez?</template>
+  </category>
+  <category>
+    <pattern>ELA _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Ela <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DIZER _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Dizer <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NÓS _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Nós <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>A _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA A <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>ELES _</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>
+      <srai>APRENDA NOVA RESPOSTA Eles <star /></srai>
+    </template>
+  </category>
+  <category>
+    <pattern>DEIXA PRA LÁ</pattern>
+    <that>O QUE DEVO DIZER EM VEZ</that>
+    <template>Está bem. Nós vamos voltar a isso mais tarde.</template>
+  </category>
+  <category>
+    <pattern>QUESTIONWORD nome</pattern>
+    <template>Quem</template>
+  </category>
+  <category>
+    <pattern>QUESTIONWORD nome *</pattern>
+    <template>Quem</template>
+  </category>
+  <category>
+    <pattern>QUESTIONWORD *</pattern>
+    <template>O que</template>
+  </category>
+  <category>
+    <pattern>MINHA familiarnameverb2sp *</pattern>
+    <template>
+      <srai>
+        <star />
+        <star index="2" />
+        <star index="3" />
+      </srai>
+    </template>
+  </category>
+  <category>
+    <pattern>familiarnameverb2sp *</pattern>
+    <template>
+      <think>
+        <set name="learnpattern">Quem <star index="2" /><person><star index="3" /></person></set>?  
+		<set name="learntemplate">Seu <star /></set>.
+		<learnf>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval></pattern>
+				<template><eval><get name="learntemplate" /></eval></template>
+			</category>
+		</learnf>
+	  </think>
+	  Agora você pode me perguntar: "<get name="learnpattern" />"?
+	  <think>
+	  	<set name="learnpattern">O que meu <star /><map name="verb2sp2verb1sp"><star index="2" /></map></set>? 
+		<set name="learntemplate"><person><star index="3" /></person></set>.
+		<learnf>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval></pattern>
+				<template><eval><get name="learntemplate" /></eval></template>
+			</category>
+		</learnf>
+	  </think>
+	  e "<get name="learnpattern" />"?</template>
+  </category>
+  <category>
+    <pattern>* verb2sp *</pattern>
+    <template>
+      <think>
+        <set name="learnpattern"> <srai>QUESTIONWORD <star /></srai> <star index="2" /> <person> <star index="3" /> </person> </set>?  
+		<set name="learntemplate"><star /></set>.
+		<learnf>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval></pattern>
+				<template><eval><get name="learntemplate" /></eval></template>
+			</category>
+		</learnf>
+	  </think>
+	  Agora você pode me perguntar: "<get name="learnpattern" />"?
+	  <think>
+	  	<set name="learnpattern">O que <star /><map name="verb2sp2verb1sp"><star index="2" /></map></set>? 
+		<set name="learntemplate"><person><star index="3" /></person></set>.
+		<learnf>
+			<category>
+				<pattern><eval><get name="learnpattern" /></eval></pattern>
+				<template><eval><get name="learntemplate" /></eval></template>
+			</category>
+		</learnf>
+	  </think>
+e "<get name="learnpattern" />"?</template>
+  </category>
+  <category>
+    <pattern>* verb2st *</pattern>
+    <template>
+      <srai>QUESTIONWORD <star /></srai> <star index="2" /> <person> <star index="3" /> </person>? <star />.
+    </template>
+  </category>
+  
+ <!-- triple learn todo -->
+  
+</aiml>
