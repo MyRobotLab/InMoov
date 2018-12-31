@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: picture.aiml -->
+  <!-- Author: Dr. Richard S. Wallace -->
+  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
+  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
+  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- modified: Gael Langevin -->
+  <!-- Last modified: Decembre 31, 2018 -->
+  <!-- This inmoovPortuguese brain file is distributed WITHOUT ANY WARRANTY; without even the -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
+  <!-- This file works with ProgramAB service with the software MyRobotLab -->
+  <!-- For more information see http://www.myrobotlab.org -->
+  <!-- For more information see http://www.inmoov.fr -->
+  <!--  -->
+  <category><pattern>PICTUREBLAB *</pattern>
+<template><random>
+        <li>Olha Você aqui.</li>
+        <li>Eu espero que você goste dessa foto de <star/>.</li>
+        <li>Eu tenho essa foto de <star/>.</li>
+        <li>Ai está.</li>
+        <li>Olhe para isso <star/>.</li>
+        <li>Eu encontrei esta foto de <star/>.</li>
+        <li>Eu mostrei uma foto para você.</li>
+      </random>
+      <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+</category>
+<category><pattern>MOSTRE-ME *</pattern>
+<template><srai>PICTUREBLAB <star/></srai></template>
+</category>
+<category><pattern>FECHAR * IMAGEM</pattern>
+<template>Ok
+      <oob><mrl><service>python</service><method>exec</method><param>CloseImage()</param></mrl></oob></template>
+</category>
+<category><pattern>FECHAR * FOTO</pattern>
+<template><srai>FECHAR <star/> IMAGEM</srai></template>
+</category>
+<category><pattern>TIRAR UMA FOTO</pattern>
+<template>
+      <oob><mrl><service>python</service><method>exec</method><param>takePicture()</param></mrl></oob></template>
+</category>  
+</aiml>
