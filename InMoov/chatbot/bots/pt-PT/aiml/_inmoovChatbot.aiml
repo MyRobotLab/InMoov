@@ -140,6 +140,9 @@
 <template>Okay
 <oob><mrl><service>python</service><method>exec</method><param>shutdownComplete()</param></mrl></oob></template>
 </category>
+<category><pattern>ACORDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob></template>
+</category>        
 <category><pattern>VÁ DORMIR</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>sleepModeSleep()</param></mrl></oob></template>
 </category>
