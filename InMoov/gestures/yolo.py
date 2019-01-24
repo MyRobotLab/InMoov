@@ -14,6 +14,9 @@ i01.vision.filteredLabel.add("sample");
 
 def startYoloInventory(duration):
   i01.speak(i01.chatBot.getPredicate("startupSentence"))
+  sleep(5)
+  if isNeopixelActivated==1:
+    i01.setNeopixelAnimation("Color Wipe", 25, 5, 10, 15)
   enableYoloFor(duration)
   # interpret results ...
   collectionString=""
