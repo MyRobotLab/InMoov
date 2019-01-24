@@ -722,11 +722,7 @@
         </random></template>
 </category>
 <category><pattern>SYSTEM_SEE_OBJECT</pattern>
-<template><random>
-          <li>Be patient I need to process</li>
-          <li>This takes a few seconds to process</li>
-          <li>My processor is slow, be patient</li>
-        </random><oob><mrl><service>python</service><method>exec</method><param>darknet()</param></mrl></oob></template>
+<template><srai>WHAT DO YOU SEE</srai></template>
 </category>
 <category><pattern>TAKE THIS</pattern>
 <template>Taking this object.
