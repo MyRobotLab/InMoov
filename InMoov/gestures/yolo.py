@@ -50,7 +50,7 @@ def enableYoloFor(duration):
   i01.vision.setActiveFilter("Yolo")
   try:
     gui.setActiveTab("i01.opencv")
-    os.remove(lastPhotoFileName)
+    #os.remove(lastPhotoFileName)
     imagedisplay.closeAll()
   except:
     pass
@@ -59,7 +59,5 @@ def enableYoloFor(duration):
   lastPhotoFileName = i01.opencv.recordFrame()
   #print lastPhotoFileName
   imagedisplay.display(lastPhotoFileName)
-  Yolo = i01.opencv.getFilter("Yolo")
   Yolo.disable()
-  #i01.cameraOff()
   print i01.vision.collectionCount
