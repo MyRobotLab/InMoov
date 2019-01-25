@@ -59,5 +59,7 @@ def enableYoloFor(duration):
   lastPhotoFileName = i01.opencv.recordFrame()
   #print lastPhotoFileName
   imagedisplay.display(lastPhotoFileName)
+  Yolo = i01.opencv.getFilter("Yolo")
+  Yolo.disable()
   #i01.cameraOff()
   print i01.vision.collectionCount
