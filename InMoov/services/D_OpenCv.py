@@ -61,5 +61,6 @@ def onRecognizedFace(name):
   print name
   # robot reaction if recognized face ( todo beter reaction... )
   if isChatbotActivated:
-    i01.chatBot.setUsername(unicode(name,'utf-8'))
+    i01.chatBot.startSession(unicode(name,'utf-8'))
+    i01.opencv.disableFilter("FaceRecognizer")
     i01.chatBot.getResponse("SYSTEM_SAY_HELLO")
