@@ -1,7 +1,8 @@
 def relax():
-  i01.setNeopixelAnimation("Color Wipe", 0, 0, 20, 1)
-  sleep(2)
-  i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
+  if isNeopixelActivated:
+    i01.setNeopixelAnimation("Color Wipe", 0, 0, 20, 1)
+    sleep(2)
+    i01.setNeopixelAnimation("Ironman", 0, 0, 255, 1)
   i01.startedGesture()
   if (i01.isCameraOn()):
     i01.setHandVelocity("left", 43, 43, 43, 43, 43, 43)
