@@ -1,7 +1,8 @@
 def comehere():
   fullspeed()
   rest()
-  i01.setNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
+  if isNeopixelActivated:
+    i01.setNeopixelAnimation("Larson Scanner", 0, 200, 0, 1)
   i01.startedGesture()
 ##look around
   i01.setHeadVelocity(36, 36, 50, 50, -1)
