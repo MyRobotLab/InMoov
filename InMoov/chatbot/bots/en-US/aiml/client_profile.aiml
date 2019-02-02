@@ -1189,28 +1189,41 @@ I call you <get name="name" />.</template>
       </template>
   </category>
   <category>
+    <category>
     <pattern>WHAT IS MY WIFE S NAME</pattern>
-    <template>You said she was called <get name="wife" />.</template>
+    <template>You said she was called <get name="wife"/>.</template>
   </category>
   <category>
     <pattern>WHAT IS MY HUSBAND S NAME</pattern>
-    <template>You said he was <get name="husband" />.</template>
+    <template>You said he was <get name="husband"/>.</template>
   </category>
   <category>
     <pattern>WHAT IS MY DAUGHTER S NAME</pattern>
-    <template>You said she was <get name="daughter" />.</template>
+    <template>You said she was <get name="daughter"/>.</template>
+  <category>
+    <pattern>WHAT IS MY SON S NAME</pattern>
+    <template>You said he was <get name="son"/>.</template>
   </category>
   <category>
     <pattern>WHAT IS MY FAVORITE ICE CREAM FLAVOR</pattern>
-    <template>You said it was <get name="favoriteicecream" />.</template>
+    <template>You said it was <get name="favoriteicecream"/>.</template>
   </category>
   <category>
     <pattern>WHAT IS MY MOTHER S NAME</pattern>
-    <template>You said she was <get name="mother" />.</template>
+    <template>You said she was <get name="mother"/>.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS MY FATHER S NAME</pattern>
+    <template>You said he was <get name="father"/>.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS MY SISTER S NAME</pattern>
+    <template>You said she is <get name="sister"/>.</template>
   </category>
   <category>
     <pattern>WHAT IS MY BROTHER S NAME</pattern>
-    <template>You said he is <get name="brother" />.</template>
+    <template>You said he is <get name="brother"/>.
+    </template>
   </category>
   <category>
     <pattern>WHAT IS MY ADDRESS</pattern>
