@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: chatBot.aiml -->
-  <!-- Author: Gael Langevin -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified: Gael Langevin -->
-  <!-- Last modified: April 28, 2017 -->
-  <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  
-     <!-- initialisation  -->
-	 <!-- updater  -->
-	 <!-- gesture  -->
-  
-  
+  <!-- File: _inmoovChatbot.aiml -->
+<!-- Author: Gael Langevin -->
+<!-- Last modified: 11/02/2019 -->
+<!--  -->
+<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The DE brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!--  -->
+<!-- The DE brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.inmoov.fr -->
+<!--  -->
     <category>
-    <pattern>SAY *</pattern>
+    <pattern>SAGEN *</pattern>
     <template>
       <star />
     </template>
@@ -38,17 +34,17 @@
       <think>
         <set name="topic">firstinit</set>
       </think>
-		Hello, This is my first initialisation. I need some informations, I am listening, what is my name ?
-	</template>
+    Hallo, das ist meine erste Initialisierung. Ich brauche ein paar Informationen, ich höre zu, wie ist mein name ?
+  </template>
   </category>
   
   <topic name="firstinit">
   
     <category>
       <pattern>#</pattern>
-      <that># what is my name #</that>
+      <that># wie ist mein name #</that>
       <template>
-        <set name="questionfirstinit">if my name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">wenn mein name ist  <star /> , sag ja oder nein</set>
         <think>
           <set name="tmpname">
             <star />
@@ -56,12 +52,12 @@
         </think>
       </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
-      <that># may I have your name #</that>
+      <that># darf ich deinen Namen haben #</that>
       <template>
-        <set name="questionfirstinit">if your name is <star /> , say yes, or no</set>
+        <set name="questionfirstinit">wenn dein name ist <star /> , sag ja oder nein</set>
         <think>
           <set name="tmpname">
             <star />
@@ -69,33 +65,33 @@
         </think>
       </template>
     </category>
-	
+  
     <category>
-      <pattern># YES #</pattern>
-      <that># if my name is #</that>
+      <pattern># JA #</pattern>
+      <that># wenn dein name ist #</that>
       <template>
         <random>
-			<li>
-			I like this name , <get name="tmpname" />.
-			</li>
-			<li>
-			Very nice name, <get name="tmpname" /> is great.
-			</li>
+      <li>
+      Ich mag diesen namen , <get name="tmpname" />.
+      </li>
+      <li>
+      Sehr schöner Name , <get name="tmpname" /> ist großartig.
+      </li>
         </random>
-	I need to know you, I am listening, may I have your name ?
-	<think><set name="botname"><get name="tmpname" /></set></think></template>
+  Ich muss dich kennen, ich höre, darf ich deinen Namen haben ?
+  <think><set name="botname"><get name="tmpname" /></set></think></template>
     </category>
-	
+  
     <category>
-      <pattern># YES #</pattern>
-      <that># if your name #</that>
+      <pattern># JA #</pattern>
+      <that># wenn dein name #</that>
       <template>
         <random>
-		<li>
-			Now I know you, <get name="tmpname" />. I am glad.
-		</li>
+    <li>
+      Jetzt kenne ich dich, <get name="tmpname" />. Ich bin froh.
+    </li>
         </random>
-		
+    
         <think>
           <set name="name">
             <get name="tmpname" />
@@ -107,42 +103,42 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<get name="tmpname" />")</param>
+            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
           </mrl>
         </oob>
         <srai>WAKE_UP</srai>
       </template>
     </category>
-	
+  
     <category>
-      <pattern># NO #</pattern>
-      <that># if my name is #</that>
+      <pattern># NEIN #</pattern>
+      <that># wenn mein name ist #</that>
       <template>
-	We restart.
-	I am listening. what is my name ?
+  Wir starten neu.
+  ich höre zu. wie ist mein name ?
     </template>
     </category>
-	
+  
     <category>
-      <pattern># NO #</pattern>
-      <that># if your name #</that>
+      <pattern># NEIN #</pattern>
+      <that># wenn dein name #</that>
       <template>
-	We restart.
-	I am listening. may I have your name ?
+  Wir starten neu.
+  ich höre zu. darf ich deinen Namen haben ?
     </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
-      <that># say yes, or no #</that>
+      <that># sag ja oder nein #</that>
       <template>
         <random>
           <li>
-	Please, answer my question, it is important
-	</li>
+  Bitte beantworten Sie meine Frage, es ist wichtig
+  </li>
           <li>
-	I repeat.
-	</li>
+  Ich wiederhole.
+  </li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -156,64 +152,64 @@
     <pattern>SYSTEM_NEW_VERSION</pattern>
     <template>
        <think><set name="topic">updater</set></think>
-	   Alert, new Inmoov operating system version available, if you wish, I can update it , say yes, or no
-	   </template>
+     Achtung, neue Inmoov-Betriebssystemversion verfügbar. Wenn Sie möchten, kann ich sie aktualisieren , sag ja oder nein
+     </template>
   </category>
   
   <topic name="updater">
   
-	
+  
     <category>
-      <pattern># YES #</pattern>
-      <that># say yes #</that>
+      <pattern># JA #</pattern>
+      <that># sag ja #</that>
       <template>
        <think>
          <set name="topic">default</set>
         </think>
-			<li>
-			Starting the download, please wait.
-			</li>
-	<oob>
+      <li>
+      Starten Sie den Download, bitte warten Sie.
+      </li>
+  <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>updateMe()</param>
           </mrl>
-     </oob>		
-	</template>
+     </oob>   
+  </template>
     </category>
-	
+  
      <category>
-      <pattern># NO #</pattern>
-      <that># say yes #</that>
+      <pattern># NEIN #</pattern>
+      <that># sag ja #</that>
       <template>
-	  <think>
+    <think>
          <set name="topic">default</set>
         </think>
-	OK, as you want, next time maybe
-		<oob>
+  OK, wie Sie wollen, beim nächsten Mal vielleicht
+    <oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>dontUpdateMe()</param>
           </mrl>
-     </oob>	
+     </oob> 
     </template>
     </category>
-	
+  
     <category>
       <pattern>#</pattern>
-      <that># say yes #</that>
-      <template>Please, awnser my question, it is important, say yes, or no</template>
+      <that># sag ja #</that>
+      <template>Bitte beantworte meine Frage, es ist wichtig, sag ja oder nein</template>
     </category>
-		
+    
   </topic>
   
     <category>
     <pattern>* SYSTEM_PERCENT</pattern>
     <template>
       <li>
-        <star /> percent.
+        <star /> prozent.
       </li>
     </template>
   </category>
@@ -223,14 +219,14 @@
     <pattern>SYSTEM_DOWNLOAD_OK</pattern>
     <template>
       <li>
-       Download ok, I will shutdown. please restart me.
+       Download ok, ich werde herunterfahren. bitte starte mich neu
       </li>
     </template>
   </category>
   
     <!-- end updater  -->
   
-	<!-- gesture  -->
+  <!-- gesture  -->
   
   
   <category>
@@ -238,206 +234,122 @@
     <template>
       <li>
         <random>
-          <li>I am ready and listening.</li>
-          <li>What can I do for you.</li>
-          <li>How can I help you.</li>
+          <li>Ich bin bereit und höre zu.</li>
+          <li>Was kann ich für Dich tun.</li>
+          <li>Womit kann ich Ihnen behilflich sein.</li>
         </random>
       </li>
     </template>
   </category>
   
     <category>
-    <pattern>SHUTDOWN</pattern>
+    <pattern>AUSSCHALTEN</pattern>
     <template>
       <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
     </template>
   </category>
   
   <category>
-    <pattern>WHAT IS THE TOPIC</pattern>
-    <template>The topic is
+    <pattern>WAS IST DAS THEMA</pattern>
+    <template>Das Thema ist
       <get name="topic" /></template>
   </category>
   <category>
-    <pattern>BOOT UP MODE</pattern>
-    <template>Entering into the boot up topic.
+    <pattern>BOOT UP MODUS</pattern>
+    <template>Einstieg in das Boot-Thema.
       <think><set name="topic">BOOTUP</set></think></template>
   </category>
   <category>
-    <pattern>GESTURES</pattern>
-    <template>Entering into the gestures topic.
+    <pattern>GÄSTE</pattern>
+    <template>Einstieg in das Thema Gesten.
       <think><set name="topic">GESTURES</set></think></template>
   </category>
   <category>
-    <pattern>GESTURES *</pattern>
+    <pattern>GÄSTE *</pattern>
     <template>
-      <srai>GESTURES</srai>
+      <srai>GÄSTE</srai>
     </template>
   </category>
   <category>
-    <pattern>* GESTURES</pattern>
+    <pattern>* GÄSTE</pattern>
     <template>
-      <srai>GESTURES</srai>
+      <srai>GÄSTE</srai>
     </template>
   </category>
   <category>
-    <pattern>* GESTURES *</pattern>
+    <pattern>* GÄSTE *</pattern>
     <template>
-      <srai>GESTURES</srai>
+      <srai>GÄSTE</srai>
     </template>
   </category>
   <category>
-    <pattern>DETACH ALL</pattern>
-    <template>Detach All
+    <pattern>ALLES ENTFERNEN</pattern>
+    <template>Alles Entfernen
       <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DETACH EVERYTHING</pattern>
-    <template>
-      <srai>DETACH ALL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH ALL</pattern>
-    <template>Attaching all
+    <pattern>ALLES ANBRINGEN</pattern>
+    <template>Alles Anbringen
       <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH EVERYTHING</pattern>
-    <template>
-      <srai>ATTACH ALL</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH RIGHT HAND</pattern>
-    <template>Attaching my right hand
+    <pattern>HALTEN SIE IHRE HAND RECHTS</pattern>
+    <template>Meine rechte Hand befestigen
       <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR RIGHT HAND</pattern>
-    <template>
-      <srai>ATTACH RIGHT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH RIGHT HAND</pattern>
-    <template>Detaching my right hand
+    <pattern>TRENNEN SIE IHRE RECHTE HAND</pattern>
+    <template>Löse meine rechte Hand
       <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DISCONNECT YOUR RIGHT HAND</pattern>
-    <template>
-      <srai>DETACH RIGHT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH LEFT HAND</pattern>
-    <template>Attaching my left hand
+    <pattern>BEFESTIGEN SIE IHRE LINKE HAND</pattern>
+    <template>Meine linke Hand befestigen
       <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR LEFT HAND</pattern>
-    <template>
-      <srai>ATTACH LEFT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH LEFT HAND</pattern>
-    <template>Detaching my left hand
+    <pattern>TRENNEN SIE IHRE LINKE HAND</pattern>
+    <template>Meine linke Hand abnehmen
       <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DISCONNECT YOUR LEFT HAND</pattern>
-    <template>
-      <srai>DETACH LEFT HAND</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH HEAD</pattern>
-    <template>Attaching my head
+    <pattern>BEFESTIGEN SIE IHREN KOPF</pattern>
+    <template>Befestige meinen Kopf
       <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR HEAD</pattern>
-    <template>
-      <srai>ATTACH HEAD</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH HEAD</pattern>
-    <template>Detaching my head
+    <pattern>KOPF VERBINDEN</pattern>
+    <template>Löse meinen Kopf
       <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DISCONNECT HEAD</pattern>
-    <template>
-      <srai>DETACH HEAD</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH RIGHT ARM</pattern>
-    <template>Attaching my right arm
+    <pattern>BEFESTIGEN SIE IHREN RECHTSARM</pattern>
+    <template>Befestige meinen rechten Arm
       <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR RIGHT ARM</pattern>
-    <template>
-      <srai>ATTACH RIGHT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH RIGHT ARM</pattern>
-    <template>Detaching my right arm
+    <pattern>TRENNEN SIE IHREN RECHTEN ARM</pattern>
+    <template>Löse meinen rechten Arm
       <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DISCONNECT RIGHT ARM</pattern>
-    <template>
-      <srai>DETACH RIGHT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH LEFT ARM</pattern>
-    <template>Attaching my left arm
+    <pattern>BEFESTIGEN SIE IHREN LINKEN ARM</pattern>
+    <template>Befestige meinen linken Arm
       <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR LEFT ARM</pattern>
-    <template>
-      <srai>ATTACH LEFT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH LEFT ARM</pattern>
-    <template>Detaching my left arm
+    <pattern>TRENNEN SIE IHREN LINKEN ARM AUF</pattern>
+    <template>Ich entferne meinen linken Arm
       <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>DISCONNECT LEFT ARM</pattern>
-    <template>
-      <srai>DETACH LEFT ARM</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ATTACH TORSO</pattern>
-    <template>Attaching my torso
+    <pattern>BEFESTIGEN SIE IHRE BRUST</pattern>
+    <template>Meine Brust befestigen
       <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
   </category>
   <category>
-    <pattern>ATTACH YOUR TORSO</pattern>
-    <template>
-      <srai>ATTACH TORSO</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>DETACH TORSO</pattern>
-    <template>Detaching my torso
+    <pattern>TRENNEN SIE IHRE BRUST NICHT</pattern>
+    <template>Meine Brust abnehmen
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>DISCONNECT TORSO</pattern>
-    <template>
-      <srai>DETACH TORSO</srai>
-    </template>
   </category>
 </aiml>
