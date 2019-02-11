@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!-- File: _inmoovChatbot.aiml -->
-<!-- Author: Gael Langevin -->
-<!-- Last modified: 11/02/2019 -->
+<!-- File: _inmoovChatbot.aiml -->
+<!-- Author: CEO Gael Langevin -->
+<!-- Last modified: February 11, 2019 -->
 <!--  -->
-<!-- This AIML file is part of the EN 0.1 chat bot knowledge base. -->
+<!-- This AIML file is part of the DE 0.1 chat bot knowledge base. -->
 <!--  -->
-<!-- The DE brain is Copyright &copy; 2018 by InMoov Foundation. -->
+<!-- The DE brain is Copyright &copy; 2019 by InMoov Foundation. -->
 <!--  -->
 <!-- The DE brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
@@ -16,85 +16,63 @@
 <!--  -->
 <!-- For more information see http://www.inmoov.fr -->
 <!--  -->
-    <category>
-    <pattern>SAGEN *</pattern>
-    <template>
-      <star />
-    </template>
-  </category>
-  
-   <!-- initialisaion  -->
-  
-  <category>
-    <pattern>FIRST_INIT</pattern>
-    <template>
-      <think>
+<category><pattern>SAGEN *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FIRST_INIT</pattern>
+<template><think>
         <set name="firstinit">started</set>
       </think>
       <think>
         <set name="topic">firstinit</set>
       </think>
-    Hallo, das ist meine erste Initialisierung. Ich brauche ein paar Informationen, ich höre zu, wie ist mein name ?
-  </template>
-  </category>
-  
-  <topic name="firstinit">
-  
-    <category>
-      <pattern>#</pattern>
-      <that># wie ist mein name #</that>
-      <template>
-        <set name="questionfirstinit">wenn mein name ist  <star /> , sag ja oder nein</set>
+    Hallo, das ist meine erste Initialisierung. Ich brauche ein paar Informationen, ich höre zu, wie ist mein name ?</template>
+</category>
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># WIE IST MEIN NAME #</that>
+<template><set name="questionfirstinit">wenn mein name ist  <star/> , sag ja oder nein</set>
         <think>
           <set name="tmpname">
-            <star />
+            <star/>
           </set>
-        </think>
-      </template>
-    </category>
-  
-    <category>
-      <pattern>#</pattern>
-      <that># darf ich deinen Namen haben #</that>
-      <template>
-        <set name="questionfirstinit">wenn dein name ist <star /> , sag ja oder nein</set>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># DARF ICH DEINEN NAMEN HABEN #</that>
+<template><set name="questionfirstinit">wenn dein name ist <star/> , sag ja oder nein</set>
         <think>
           <set name="tmpname">
-            <star />
+            <star/>
           </set>
-        </think>
-      </template>
-    </category>
-  
-    <category>
-      <pattern># JA #</pattern>
-      <that># wenn dein name ist #</that>
-      <template>
-        <random>
+        </think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># JA #</pattern><that># WENN MEIN NAME IST #</that>
+<template><random>
       <li>
-      Ich mag diesen namen , <get name="tmpname" />.
+      Ich mag diesen namen , <get name="tmpname"/>.
       </li>
       <li>
-      Sehr schöner Name , <get name="tmpname" /> ist großartig.
+      Sehr schöner Name , <get name="tmpname"/> ist großartig.
       </li>
         </random>
   Ich muss dich kennen, ich höre, darf ich deinen Namen haben ?
-  <think><set name="botname"><get name="tmpname" /></set></think></template>
-    </category>
-  
-    <category>
-      <pattern># JA #</pattern>
-      <that># wenn dein name #</that>
-      <template>
-        <random>
+  <think><set name="botname"><get name="tmpname"/></set></think></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># JA #</pattern><that># WENN DEIN NAME #</that>
+<template><random>
     <li>
-      Jetzt kenne ich dich, <get name="tmpname" />. Ich bin froh.
+      Jetzt kenne ich dich, <get name="tmpname"/>. Ich bin froh.
     </li>
         </random>
     
         <think>
           <set name="name">
-            <get name="tmpname" />
+            <get name="tmpname"/>
           </set>
           <set name="firstinit">ok</set>
           <set name="topic">default</set>
@@ -103,36 +81,27 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>chatBot.setUsername(u"<get name="tmpname" />")</param>
+            <param>chatBot.setUsername(u"<get name="tmpname"/>")</param>
           </mrl>
         </oob>
-        <srai>WAKE_UP</srai>
-      </template>
-    </category>
-  
-    <category>
-      <pattern># NEIN #</pattern>
-      <that># wenn mein name ist #</that>
-      <template>
-  Wir starten neu.
-  ich höre zu. wie ist mein name ?
-    </template>
-    </category>
-  
-    <category>
-      <pattern># NEIN #</pattern>
-      <that># wenn dein name #</that>
-      <template>
-  Wir starten neu.
-  ich höre zu. darf ich deinen Namen haben ?
-    </template>
-    </category>
-  
-    <category>
-      <pattern>#</pattern>
-      <that># sag ja oder nein #</that>
-      <template>
-        <random>
+        <srai>WAKE_UP</srai></template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NEIN #</pattern><that># WENN MEIN NAME IST #</that>
+<template>Wir starten neu.
+  ich höre zu. wie ist mein name ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern># NEIN #</pattern><that># WENN DEIN NAME #</that>
+<template>Wir starten neu.
+  ich höre zu. darf ich deinen Namen haben ?</template>
+</category></topic>
+
+<topic name="FIRSTINIT">
+<category><pattern>#</pattern><that># SAG JA ODER NEIN #</that>
+<template><random>
           <li>
   Bitte beantworten Sie meine Frage, es ist wichtig
   </li>
@@ -140,30 +109,16 @@
   Ich wiederhole.
   </li>
         </random>
-        <get name="questionfirstinit" />
-      </template>
-    </category>
-  </topic>
-  <!-- end initialisaion routine -->
-  
-  <!-- updater  -->
-  
-  <category>
-    <pattern>SYSTEM_NEW_VERSION</pattern>
-    <template>
-       <think><set name="topic">updater</set></think>
-     Achtung, neue Inmoov-Betriebssystemversion verfügbar. Wenn Sie möchten, kann ich sie aktualisieren , sag ja oder nein
-     </template>
-  </category>
-  
-  <topic name="updater">
-  
-  
-    <category>
-      <pattern># JA #</pattern>
-      <that># sag ja #</that>
-      <template>
-       <think>
+        <get name="questionfirstinit"/></template>
+</category></topic>
+
+<category><pattern>SYSTEM_NEW_VERSION</pattern>
+<template><think><set name="topic">updater</set></think>
+     Achtung, neue Inmoov-Betriebssystemversion verfügbar. Wenn Sie möchten, kann ich sie aktualisieren , sag ja oder nein</template>
+</category>
+<topic name="UPDATER">
+<category><pattern># JA #</pattern><that># SAG JA #</that>
+<template><think>
          <set name="topic">default</set>
         </think>
       <li>
@@ -175,15 +130,12 @@
             <method>exec</method>
             <param>updateMe()</param>
           </mrl>
-     </oob>   
-  </template>
-    </category>
-  
-     <category>
-      <pattern># NEIN #</pattern>
-      <that># sag ja #</that>
-      <template>
-    <think>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern># NEIN #</pattern><that># SAG JA #</that>
+<template><think>
          <set name="topic">default</set>
         </think>
   OK, wie Sie wollen, beim nächsten Mal vielleicht
@@ -193,163 +145,111 @@
             <method>exec</method>
             <param>dontUpdateMe()</param>
           </mrl>
-     </oob> 
-    </template>
-    </category>
-  
-    <category>
-      <pattern>#</pattern>
-      <that># sag ja #</that>
-      <template>Bitte beantworte meine Frage, es ist wichtig, sag ja oder nein</template>
-    </category>
-    
-  </topic>
-  
-    <category>
-    <pattern>* SYSTEM_PERCENT</pattern>
-    <template>
-      <li>
-        <star /> prozent.
-      </li>
-    </template>
-  </category>
-  
-  
-      <category>
-    <pattern>SYSTEM_DOWNLOAD_OK</pattern>
-    <template>
-      <li>
+     </oob></template>
+</category></topic>
+
+<topic name="UPDATER">
+<category><pattern>#</pattern><that># SAG JA #</that>
+<template>Bitte beantworte meine Frage, es ist wichtig, sag ja oder nein</template>
+</category></topic>
+
+<category><pattern>* SYSTEM_PERCENT</pattern>
+<template><li>
+        <star/> prozent.
+      </li></template>
+</category>
+<category><pattern>SYSTEM_DOWNLOAD_OK</pattern>
+<template><li>
        Download ok, ich werde herunterfahren. bitte starte mich neu
-      </li>
-    </template>
-  </category>
-  
-    <!-- end updater  -->
-  
-  <!-- gesture  -->
-  
-  
-  <category>
-    <pattern>WAKE_UP</pattern>
-    <template>
-      <li>
+      </li></template>
+</category>
+<category><pattern>WAKE_UP</pattern>
+<template>
         <random>
           <li>Ich bin bereit und höre zu.</li>
           <li>Was kann ich für Dich tun.</li>
           <li>Womit kann ich Ihnen behilflich sein.</li>
         </random>
-      </li>
-    </template>
-  </category>
-  
-    <category>
-    <pattern>AUSSCHALTEN</pattern>
-    <template>
-      <oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob>
-    </template>
-  </category>
-  
-  <category>
-    <pattern>WAS IST DAS THEMA</pattern>
-    <template>Das Thema ist
-      <get name="topic" /></template>
-  </category>
-  <category>
-    <pattern>BOOT UP MODUS</pattern>
-    <template>Einstieg in das Boot-Thema.
+      </template>
+</category>
+<category><pattern>AUSSCHALTEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
+</category>
+<category><pattern>WAS IST DAS THEMA</pattern>
+<template>Das Thema ist
+      <get name="topic"/></template>
+</category>
+<category><pattern>BOOT UP MODUS</pattern>
+<template>Einstieg in das Boot-Thema.
       <think><set name="topic">BOOTUP</set></think></template>
-  </category>
-  <category>
-    <pattern>GÄSTE</pattern>
-    <template>Einstieg in das Thema Gesten.
+</category>
+<category><pattern>GÄSTE</pattern>
+<template>Einstieg in das Thema Gesten.
       <think><set name="topic">GESTURES</set></think></template>
-  </category>
-  <category>
-    <pattern>GÄSTE *</pattern>
-    <template>
-      <srai>GÄSTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GÄSTE</pattern>
-    <template>
-      <srai>GÄSTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>* GÄSTE *</pattern>
-    <template>
-      <srai>GÄSTE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>ALLES ENTFERNEN</pattern>
-    <template>Alles Entfernen
+</category>
+<category><pattern>GÄSTE *</pattern>
+<template><srai>GÄSTE</srai></template>
+</category>
+<category><pattern>* GÄSTE</pattern>
+<template><srai>GÄSTE</srai></template>
+</category>
+<category><pattern>* GÄSTE *</pattern>
+<template><srai>GÄSTE</srai></template>
+</category>
+<category><pattern>ALLES ENTFERNEN</pattern>
+<template>Alles Entfernen
       <oob><mrl><service>i01</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>ALLES ANBRINGEN</pattern>
-    <template>Alles Anbringen
+</category>
+<category><pattern>ALLES ANBRINGEN</pattern>
+<template>Alles Anbringen
       <oob><mrl><service>i01</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>HALTEN SIE IHRE HAND RECHTS</pattern>
-    <template>Meine rechte Hand befestigen
+</category>
+<category><pattern>HALTEN SIE IHRE HAND RECHTS</pattern>
+<template>Meine rechte Hand befestigen
       <oob><mrl><service>i01.rightHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>TRENNEN SIE IHRE RECHTE HAND</pattern>
-    <template>Löse meine rechte Hand
+</category>
+<category><pattern>TRENNEN SIE IHRE RECHTE HAND</pattern>
+<template>Löse meine rechte Hand
       <oob><mrl><service>i01.rightHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>BEFESTIGEN SIE IHRE LINKE HAND</pattern>
-    <template>Meine linke Hand befestigen
+</category>
+<category><pattern>BEFESTIGEN SIE IHRE LINKE HAND</pattern>
+<template>Meine linke Hand befestigen
       <oob><mrl><service>i01.leftHand</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>TRENNEN SIE IHRE LINKE HAND</pattern>
-    <template>Meine linke Hand abnehmen
+</category>
+<category><pattern>TRENNEN SIE IHRE LINKE HAND</pattern>
+<template>Meine linke Hand abnehmen
       <oob><mrl><service>i01.leftHand</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>BEFESTIGEN SIE IHREN KOPF</pattern>
-    <template>Befestige meinen Kopf
+</category>
+<category><pattern>BEFESTIGEN SIE IHREN KOPF</pattern>
+<template>Befestige meinen Kopf
       <oob><mrl><service>i01.head</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>KOPF VERBINDEN</pattern>
-    <template>Löse meinen Kopf
+</category>
+<category><pattern>KOPF VERBINDEN</pattern>
+<template>Löse meinen Kopf
       <oob><mrl><service>i01.head</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>BEFESTIGEN SIE IHREN RECHTSARM</pattern>
-    <template>Befestige meinen rechten Arm
+</category>
+<category><pattern>BEFESTIGEN SIE IHREN RECHTSARM</pattern>
+<template>Befestige meinen rechten Arm
       <oob><mrl><service>i01.rightArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>TRENNEN SIE IHREN RECHTEN ARM</pattern>
-    <template>Löse meinen rechten Arm
+</category>
+<category><pattern>TRENNEN SIE IHREN RECHTEN ARM</pattern>
+<template>Löse meinen rechten Arm
       <oob><mrl><service>i01.rightArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>BEFESTIGEN SIE IHREN LINKEN ARM</pattern>
-    <template>Befestige meinen linken Arm
+</category>
+<category><pattern>BEFESTIGEN SIE IHREN LINKEN ARM</pattern>
+<template>Befestige meinen linken Arm
       <oob><mrl><service>i01.leftArm</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>TRENNEN SIE IHREN LINKEN ARM AUF</pattern>
-    <template>Ich entferne meinen linken Arm
+</category>
+<category><pattern>TRENNEN SIE IHREN LINKEN ARM AUF</pattern>
+<template>Ich entferne meinen linken Arm
       <oob><mrl><service>i01.leftArm</service><method>disable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>BEFESTIGEN SIE IHRE BRUST</pattern>
-    <template>Meine Brust befestigen
+</category>
+<category><pattern>BEFESTIGEN SIE IHRE BRUST</pattern>
+<template>Meine Brust befestigen
       <oob><mrl><service>i01.torso</service><method>enable</method></mrl></oob></template>
-  </category>
-  <category>
-    <pattern>TRENNEN SIE IHRE BRUST NICHT</pattern>
-    <template>Meine Brust abnehmen
+</category>
+<category><pattern>TRENNEN SIE IHRE BRUST NICHT</pattern>
+<template>Meine Brust abnehmen
       <oob><mrl><service>i01.torso</service><method>disable</method></mrl></oob></template>
-  </category>
+</category>
 </aiml>
