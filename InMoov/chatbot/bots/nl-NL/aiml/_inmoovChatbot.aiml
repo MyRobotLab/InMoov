@@ -236,13 +236,18 @@
   <category>
     <pattern>WAKE_UP</pattern>
     <template>
-      <li>
         <random>
           <li>Ik ben klaar en luisterend.</li>
           <li>Wat kan ik voor je doen.</li>
           <li>Hoe kan ik u helpen.</li>
         </random>
-      </li>
+    </template>
+  </category>
+	
+  <category>
+    <pattern>WAKKER WORDEN</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
     </template>
   </category>
 
