@@ -172,6 +172,12 @@
         </random>
       </template>
 </category>
+<category>
+    <pattern>AUFWACHEN</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category>
 <category><pattern>AUSSCHALTEN</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>shutdown()</param></mrl></oob></template>
 </category>
