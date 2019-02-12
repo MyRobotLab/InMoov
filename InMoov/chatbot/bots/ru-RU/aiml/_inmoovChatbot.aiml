@@ -143,8 +143,6 @@
   <category>
     <pattern>WAKE_UP</pattern>
     <template>
-      <li>
-        <srai>ПРИВЕТ</srai>
         <random>
           <li>Я долго спал.</li> 
           <li>Наконец, вы меня разбудили что я могу сделать для вас.</li> 
@@ -159,7 +157,6 @@
           <li>Отлично! Я проснулся</li> 
           <li>Это была длинная ночь, я теперь проснулся. </li>
         </random>
-      </li>
     </template>
   </category>
   
@@ -170,6 +167,13 @@
     </template>
   </category>
   
+  <category>
+    <pattern>ПРОСЫПАЙСЯ</pattern>
+    <template>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
+    </template>
+  </category> 
+	
     <category>
     <pattern>ТЫ ПРОСНУЛСЯ</pattern>
     <template>
@@ -187,11 +191,11 @@
   <category>
     <pattern>ПЕРЕЙДИ В СПЯЩИЙ РЕЖИМ</pattern> 
     <template>
-      <srai>FAIS DODO</srai> 
+      <srai>ИДТИ СПАТЬ</srai> 
     </template>
   </category>
   <category>
-    <pattern>FAIS DODO</pattern> 
+    <pattern>ИДТИ СПАТЬ</pattern> 
     <template>
       <think>
         <set name="topic">SLEEPMODE</set>
@@ -219,7 +223,7 @@
       <pattern>#</pattern>
       <that># В РЕЖИМ СНА #</that>
       <template>
-        <srai>FAIS DODO</srai>
+        <srai>ИДТИ СПАТЬ</srai>
       </template>
     </category>
   </topic>
