@@ -419,7 +419,7 @@ Select:
             <tuple>
               <get var="head" />
             </tuple>
-          </get> --&gt; <get var="?y"><tuple><get var="head" /></tuple></get> --&gt; <get var="?z"><tuple><get var="head" /></tuple></get> --&gt; <get var="?w"><tuple><get var="head" /></tuple></get><loop /></li>
+          </get><get var="?y"><tuple><get var="head" /></tuple></get><get var="?z"><tuple><get var="head" /></tuple></get><get var="?w"><tuple><get var="head" /></tuple></get><loop /></li>
       </condition>
     </template>
   </category>
