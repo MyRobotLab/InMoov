@@ -138,7 +138,6 @@
   <category>
     <pattern>WAKE_UP</pattern>
     <template>
-        <srai>BONJOUR</srai>
         <random>
           <li>J'ai super bien dormi</li>
           <li>Enfin tu me réveilles</li>
@@ -162,16 +161,10 @@
         <srai>BONJOUR</srai>
     </template>
   </category>
-    <category>
+      <category>
     <pattern>RÉVEILLE TOI</pattern>
     <template>
-      <srai>WAKE_UP</srai>
-    </template>
-  </category>
-      <category>
-    <pattern>WAKE UP</pattern>
-    <template>
-      <srai>WAKE_UP</srai>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
     </template>
   </category>
   <category>
