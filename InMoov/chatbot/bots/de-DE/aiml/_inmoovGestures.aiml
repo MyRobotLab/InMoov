@@ -627,7 +627,7 @@
 <template><srai>STARTEN SIE DEN GESICHTSERKENNER</srai></template>
 </category>
 <category><pattern>STOP GESICHTSERKENNUNG</pattern>
-<template>Ich stoppe die Gesichtserkennung<oob><mrl><service>python</service><method>exec</method><param>stopfacerecognizer()</param></mrl></oob></template>
+<template>Ich stoppe die Gesichtserkennung<oob><mrl><service>i01.opencv</service><method>disableAll</method></mrl></oob></template>
 </category>
 <category><pattern>MACHEN SIE EINE SIGNATUR</pattern>
 <template>Okay, gib die Zeitung - das mache ich für dich <oob><mrl><service>python</service><method>exec</method><param>signature()</param></mrl></oob></template>
