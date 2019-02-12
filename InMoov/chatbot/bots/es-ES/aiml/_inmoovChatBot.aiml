@@ -137,15 +137,12 @@
   <!-- wakeup action ( WAKE_UP is globalized )-->
   <category>
     <pattern>WAKE_UP</pattern>
-    <template>
-    Buenos dias
-      <li>
+    <template>Buenos dias
          <random>
           <li>Dormí bien</li>
           <li>Finalmente me despiertas</li>
           <li>Estoy operacional</li>
         </random>
-      </li>
     </template>
   </category>
   
@@ -156,15 +153,15 @@
     </template>
   </category>
     <category>
-    <pattern>DESPIÉRTATE</pattern>
+    <pattern>WAKE UP</pattern>
     <template>
-      <srai>WAKE_UP</srai>
+      <srai>DESPIÉRTATE</srai>
     </template>
   </category>
       <category>
-    <pattern>WAKE UP</pattern>
+    <pattern>DESPIÉRTATE</pattern>
     <template>
-      <srai>WAKE_UP</srai>
+      <oob><mrl><service>python</service><method>exec</method><param>sleepModeWakeUp()</param></mrl></oob>
     </template>
   </category>
   <category>
