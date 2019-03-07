@@ -31,6 +31,11 @@ if [ -f ./mrlNeedReinstall ]; then
 	rm -r InMoov\chatbot\bots\hi\aimlif
 	rm -r InMoov\chatbot\bots\nl\aimlif
 	rm -r InMoov\chatbot\bots\ru\aimlif
+	rm -r InMoov\chatbot\bots\hi\aimlif
+	rm -r InMoov\chatbot\bots\it\aimlif
+	rm -r InMoov\chatbot\bots\fi\aimlif
+	rm -r InMoov\chatbot\bots\pt\aimlif
+	rm -r InMoov\chatbot\bots\cn\aimlif
 	rm ivychain.xml
 	rm myrobotlab.log
 	rm repo.json
