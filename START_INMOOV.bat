@@ -36,6 +36,11 @@ if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\fr\aimlif
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\hi\aimlif
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\nl\aimlif
 if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\ru\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\hi\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\it\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\fi\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\pt\aimlif
+if exist %cd%\mrlNeedReinstall RMDIR /S /Q InMoov\chatbot\bots\cn\aimlif
 if exist %cd%\mrlNeedReinstall del ivychain.xml
 if exist %cd%\mrlNeedReinstall del myrobotlab.log
 if exist %cd%\mrlNeedReinstall del repo.json
