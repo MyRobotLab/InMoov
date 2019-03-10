@@ -908,7 +908,7 @@ Ti chiamo  <get name="name" />.</template>
       </formal>
       <think>
         <srai>STABILISCI IL SESSO DAL NOME<star /></srai>
-        <set name="name">
+        <set name="tmpname">
           <formal>
             <star />
           </formal>
@@ -919,7 +919,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<star name="name" />")</param>
           </mrl>
         </oob>
     </template>
@@ -933,7 +933,7 @@ Ti chiamo  <get name="name" />.</template>
       </formal>.
 	  <think>
 	  	<srai>STABILISCI IL SESSO DAL NOME <star /></srai>
-	  	<set name="name"><formal><star /><star index="2" /></formal></set>.
+	  	<set name="tmpname"><formal><star /><star index="2" /></formal></set>.
 		<set name="firstname"><formal><star /></formal></set>
 		<set name="lastname"><formal><star index="2" /></formal></set>
 	  </think>
@@ -941,7 +941,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<star name="name" />")</param>
           </mrl>
         </oob>
 	</template>
@@ -953,7 +953,7 @@ Ti chiamo  <get name="name" />.</template>
       <star />
       <think>
         <srai>SET GENDER FROM NAME <star /></srai>
-        <set name="name">
+        <set name="tmpname">
           <formal>
             <star />
             <star index="2" />
@@ -968,7 +968,7 @@ Ti chiamo  <get name="name" />.</template>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<get name="name" />")</param>
+            <param>i01.chatBot.startSession(u"<star name="name" />")</param>
           </mrl>
         </oob>
     </template>
