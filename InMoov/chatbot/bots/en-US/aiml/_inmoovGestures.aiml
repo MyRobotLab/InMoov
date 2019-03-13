@@ -1284,17 +1284,14 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param># python code here.
-i01.chatBot.startSession(u&quot;<get name="memorizename"/>&quot;)
-YesName(u&quot;<get name="memorizename"/>&quot;)</param>
+            <param>i01.chatBot.startSession(u"<get name="memorizename"/>"),YesName(u"<get name="memorizename"/>")</param>                
             </mrl>
          </oob></template>
 </category></topic>
 
 <topic name="MEMORIZEINIT">
 <category><pattern># NO #</pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
-<template>Okay can you repeat the name.
-    </template>
+<template>Okay can you repeat the name.</template>
 </category></topic>
 
 <topic name="MEMORIZEINIT">
@@ -1311,6 +1308,10 @@ YesName(u&quot;<get name="memorizename"/>&quot;)</param>
 <category><pattern>#</pattern><that># SAY YES OR NO #</that>
 <template>Can you answer, it is necessary
         <get name="memorizenameinit"/></template>
-</category></topic>          
+</category></topic>
+<category><pattern>WHO IS THIS</pattern>
+<template>Let me see
+        <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+</category>          
           
 </aiml>
