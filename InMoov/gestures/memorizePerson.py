@@ -1,5 +1,6 @@
 def memorizePerson():
   i01.chatBot.getResponse("SAY " + "What name should I memorize for this person")
+  #this sends back to the inmoovGestures.AIML
 
 def YesName():
   print "name confirmed"
