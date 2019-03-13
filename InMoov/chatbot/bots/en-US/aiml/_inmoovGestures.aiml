@@ -1264,39 +1264,49 @@
         </oob></template>
 </category>
 <topic name="MEMORIZEINIT">
-           <category><pattern>#</pattern><that># WHAT NAME SHOULD I MEMORIZE #</that>
+<category><pattern>#</pattern><that># WHAT NAME SHOULD I MEMORIZE #</that>
 <template><set name="memorizenameinit">is <star/> the name you want to memorize , say yes or no</set>
        <think>
           <set name="tmpname">
             <star/>
           </set>
-        </think>
-        </template>
+        </think></template>
 </category></topic>
+
 <topic name="MEMORIZEINIT">
-            <category><pattern># YES #/pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
-<template>Okay I will set <get name="tmpname"> as name.
+<category><pattern># YES #</pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
+<template>Okay I will set <get name="tmpname"> as name.</get>
+    <think>
+        <set name="memorizename"><get name="tmpname"/>
+        </set>
+    </think>
         <oob>
-            <mrl>
-              <service>python</service>
-              <method>exec</method>
-              <param>YesName()</param>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>i01.chatBot.startSession(u"<get name="memorizename"/>"),YesName()</param>
             </mrl>
          </oob></template>
 </category></topic>
+
 <topic name="MEMORIZEINIT">
-            <category><pattern># NO #/pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
+<category><pattern># NO #</pattern><that># THE NAME YOU WANT TO MEMORIZE #</that>
 <template>Okay can you repeat the name.
-        <oob>
-            <mrl>
-              <service>python</service>
-              <method>exec</method>
-              <param>NoName()</param>
-            </mrl>
-         </oob></template>
+    </template>
 </category></topic>
+
 <topic name="MEMORIZEINIT">
-          <category><pattern>#</pattern><that># SAY YES OR NO #</that>
+<category><pattern>#</pattern><that># OKAY CAN YOU REPEAT THE NAME #</that>
+<template><set name="memorizenameinit">is <star/> the name you want to memorize , say yes or no</set>
+       <think>
+          <set name="tmpname">
+            <star/>
+          </set>
+        </think></template>
+</category></topic>
+
+<topic name="MEMORIZEINIT">
+<category><pattern>#</pattern><that># SAY YES OR NO #</that>
 <template>Can you answer, it is necessary
         <get name="memorizenameinit"/></template>
 </category></topic>          
