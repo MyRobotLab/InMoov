@@ -1,9 +1,6 @@
-# I'm not sure if you need this here or not.
 from org.myrobotlab.opencv import OpenCVFilterFaceRecognizer
-
 def memorizePerson():
   i01.chatBot.getResponse("SAY " + "What name should I memorize for this person")
-  #this sends back to the inmoovGestures.AIML
 
 def YesName(name):
   print "name confirmed"
@@ -17,9 +14,10 @@ def YesName(name):
     # set the filter to be in training mode (Where it learns new images)
     fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
     # wait 5 seconds for the example images to be taken.
-    sleep(5)
+    sleep(2)
     # now that we have new examples, let's re-train the face recognizer with all our examples.
     fr.train()
     # after we've retrained the model.. start recognizing again
-    fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE);
+    fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
     i01.opencv.disableFilter("FaceRecognizer")
+    i01.chatBot.getResponse("WAKE_UP")
