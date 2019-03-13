@@ -1284,7 +1284,9 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>i01.chatBot.startSession(u"<get name="memorizename"/>"),YesName()</param>
+            <param># python code here.
+i01.chatBot.startSession(u"<get name="memorizename"/>")
+YesName()</param>
             </mrl>
          </oob></template>
 </category></topic>
