@@ -13,7 +13,7 @@ def YesName(name):
     fr.trainName = name
     # set the filter to be in training mode (Where it learns new images)
     fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-    # wait 5 seconds for the example images to be taken.
+    # wait 2 seconds for the example images to be taken.
     sleep(2)
     # now that we have new examples, let's re-train the face recognizer with all our examples.
     fr.train()
