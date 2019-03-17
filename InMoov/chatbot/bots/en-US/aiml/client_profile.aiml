@@ -485,11 +485,12 @@ I call you <get name="name" />.</template>
     </template>
   </category>
   <category>
-    <pattern>MY EYES ARE GREEN</pattern>
-    <template>
-      <think>
-        <set name="eyecolor">green</set>
-      </think> Green is a pretty color.</template>
+    <pattern>MY EYES ARE *</pattern>
+      <template>
+        <think>
+         <set name="eyecolor"><star/></set>
+        </think> <star/> is a pretty color.
+      </template>
   </category>
   <category>
     <pattern>MY GRANDMOTHER</pattern>
