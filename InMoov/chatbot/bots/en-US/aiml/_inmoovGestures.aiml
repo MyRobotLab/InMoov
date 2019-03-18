@@ -1312,6 +1312,12 @@
 <category><pattern>WHO IS THIS</pattern>
 <template>Let me see
         <oob><mrl><service>python</service><method>exec</method><param>whoisthis(name)</param></mrl></oob></template>
-</category>          
+</category>
+<category>
+          <pattern>GET READY FOR TRAVEL</pattern>
+          <template>Okay I get ready for travelling
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob>
+          </template>
+</category>
           
 </aiml>
