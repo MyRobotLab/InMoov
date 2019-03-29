@@ -55,7 +55,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 3 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -install WebGui MarySpeech HtmlFilter RasPi InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator LocalSpeech IndianTts
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvm "-Xmx1024m -Xms1024m -Dfile.encoding=UTF-8" -install WebGui MarySpeech HtmlFilter RasPi InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator LocalSpeech IndianTts
 COLOR 0F
 cls
 echo ------------------------------------------------------
@@ -67,4 +67,4 @@ echo ERROR : %cd%\InMoov\InMoov.py is not available
 echo CHECK ABOUT SPACES INSIDE FOLDERS NAME or SPECIAL CHARACTERS 
 echo "c:\mrl" is a great place to start
 timeout 10 > NUL
-) else (java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvmargs="-Dfile.encoding=UTF-8" -invoke python execFile %cd%/InMoov/InMoov.py -service python Python)
+) else (java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -jvm "-Xmx1024m -Xms1024m -Dfile.encoding=UTF-8" -invoke python execFile %cd%/InMoov/InMoov.py -service python Python)
