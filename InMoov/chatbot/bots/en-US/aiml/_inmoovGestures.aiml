@@ -1319,5 +1319,11 @@
           <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob>
           </template>
 </category>
+<category>
+          <pattern>STOP TRAVELLING</pattern>
+          <template>Okay I will get into rest position
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob>
+          </template>
+</category>          
           
 </aiml>
