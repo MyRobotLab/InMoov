@@ -8,4 +8,35 @@
       <pattern>STOP JUKEBOX</pattern>
       <template>Ok, let's stop it. <oob><mrl><service>python</service><method>exec</method><param>PlayUtub("stop","0")</param></mrl></oob></template>
     </category>
+<category><pattern>PLAY MUSIC</pattern>
+<template><random>
+        <li>Sure thing!</li>
+        <li>Playing music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>play()</param></mrl></oob></template>
+</category>
+<category><pattern>STOP MUSIC</pattern>
+<template><random>
+        <li>As you please</li>
+        <li>Stopping music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>stop()</param></mrl></oob></template>
+</category>
+<category><pattern>PAUSE MUSIC</pattern>
+<template><random>
+        <li>Music in pause</li>
+        <li>Pausing music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>pause()</param></mrl></oob></template>
+</category>
+<category><pattern>RESUME MUSIC</pattern>
+<template><random>
+        <li>Resuming music now</li>
+        <li>Sure!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>resume()</param></mrl></oob></template>
+</category>    
 </aiml>
