@@ -101,7 +101,7 @@ def pause():
 
 # resume method 
 def resume():
-    if musiconoff == 0:
+    if musiconoff == 1:
       AudioPlayer.resume()
       print "resuming music"
         
