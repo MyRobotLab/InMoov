@@ -37,6 +37,7 @@ if isTorsoActivated or ScriptType=="Virtual":
   if LeftPortIsConnected or RightPortIsConnected  or ScriptType=="Virtual":
     isTorsoActivated=1
     torso = Runtime.create("i01.torso","InMoovTorso")
+    torso.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts
     torso.topStom.load()
     torso.midStom.load()

@@ -32,14 +32,8 @@ except:
 if isLeftHandActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or ScriptType=="Virtual":
   isLeftHandActivated=1
   if LeftPortIsConnected:
-    thumb = Runtime.createAndStart("i01.leftHand.thumb","Servo")
-    index = Runtime.createAndStart("i01.leftHand.index","Servo")
-    majeure = Runtime.createAndStart("i01.leftHand.majeure","Servo")
-    ringFinger = Runtime.createAndStart("i01.leftHand.ringFinger","Servo")
-    pinky = Runtime.createAndStart("i01.leftHand.pinky","Servo")
-    wrist = Runtime.createAndStart("i01.leftHand.wrist","Servo")
-    
     leftHand = Runtime.create("i01.leftHand", "InMoovHand")
+    leftHand.startPeers()
     leftHand.thumb.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'thumb'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'thumb')) 
     leftHand.index.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'index'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'index')) 
     leftHand.majeure.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'majeure'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'majeure'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'majeure')) 

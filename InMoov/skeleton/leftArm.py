@@ -32,6 +32,7 @@ if isLeftArmActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full" ) or 
   if LeftPortIsConnected==True:
 
     leftArm = Runtime.create("i01.leftArm", "InMoovArm")
+    leftArm.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts
     leftArm.bicep.load()
     leftArm.shoulder.load()

@@ -31,11 +31,13 @@ if isRightArmActivated==1 and (ScriptType=="RightSide" or ScriptType=="Full")  o
   isRightArmActivated=1
   if RightPortIsConnected:
     rightArm = Runtime.create("i01.rightArm", "InMoovArm")
+    rightArm.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts
     rightArm.bicep.load()
     rightArm.shoulder.load()
     rightArm.rotate.load()
     rightArm.omoplate.load()
+    rightArm.startPeers()
     #end pffff :)    
     rightArm.bicep.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'bicep'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'bicep')) 
     rightArm.shoulder.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'shoulder'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'shoulder')) 

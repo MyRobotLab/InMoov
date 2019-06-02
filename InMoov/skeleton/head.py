@@ -50,6 +50,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
   isHeadActivated=1
   if LeftPortIsConnected:
     head = Runtime.create("i01.head","InMoovHead")
+    head.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts
     head.neck.load()
     head.rothead.load()
