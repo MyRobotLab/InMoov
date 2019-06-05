@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: reminder.aiml -->
+
+<category><pattern>SET A REMINDER IN MY SCHEDULE</pattern>
+<template>Would you like to set a reminder?</template>
+</category>
+<category><pattern>YES</pattern><that>WOULD YOU LIKE TO SET A REMINDER</that>
+<template><srai>SET REMINDER</srai></template>
+</category>
+<category><pattern>NO</pattern><that>WOULD YOU LIKE TO SET A REMINDER</that>
+<template>Let me know if I can help you</template>
+</category>
+<category><pattern>SET REMINDER</pattern>
+<template>Sure, Please tell me the year for this reminder, so that we can get started.</template>
+</category>
+<category><pattern>*</pattern><that>* PLEASE TELL ME THE YEAR *</that>
+<template><set name="year1"><star/></set>, <!-- this stores the information for later -->
+        Great! I got the year, now what is the month?</template>
+</category>
+<category><pattern>*</pattern><that>* NOW WHAT IS THE *</that>
+<template><set name="month1"><star/></set>, <!-- this stores the information for later -->
+        Thanks now I just need the day.</template>
+</category>
+<category><pattern>*</pattern><that>* NOW I JUST NEED THE *</that>
+<template><set name="day1"><star/></set>, <!-- this stores the information for later -->
+        Last question, what is the object of the reminder?</template>
+</category>
+<category><pattern>*</pattern><that>* IS THE OBJECT OF THE *</that>
+<template><set name="reminder1"><star/></set>, <!-- this stores the information for later -->
+        Thank you for that. It is set in your calendar.</template>
+</category>
+<category><pattern>WHAT IS IN MY SCHEDULE</pattern>
+<template>You have <get name="reminder1"/> on <get name="day1"/>,<get name="month1"/>,<get name="year1"/>.</template>
+</category>
+</aiml>
