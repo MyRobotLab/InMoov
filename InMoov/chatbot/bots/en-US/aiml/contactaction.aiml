@@ -222,7 +222,7 @@ What is your message to <get name="displayname" />?</template>
         </set>
         <set name="contactlist">
           <srai>CONTACTLIST <get name="multipleids" /></srai>
-          <item>None of the above</item>
+          <!--<item>None of the above</item>-->
         </set>
         <set name="topic">GETTING SELECTEDCONTACT</set>
       </think>
@@ -1376,10 +1376,7 @@ topic: <get name="topic" />.
   </category>
   <category>
     <pattern>CONTACTLIST *</pattern>
-    <template>
-      <item>
-        <srai>DISPLAYNAME <star /></srai>
-      </item>
+    <template><srai>DISPLAYNAME <star /></srai>
     </template>
   </category>
   <category>
