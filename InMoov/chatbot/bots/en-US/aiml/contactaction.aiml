@@ -784,7 +784,7 @@ familiarcontactid = <get name="familiarcontactid"/>.
                   <get name="contactname" />
                 </set>
               </think>
-              <!--      <srai>LEARN CONTACTID <srai>NEWCONTACTID</srai> CONTACTNAME <get name="contactname"/></srai> -->
+              <srai>LEARN CONTACTID <srai>NEWCONTACTID</srai> CONTACTNAME <get name="contactname"/></srai>
               <srai>RESUMEACTION <get name="modecom" /></srai>
             </li>
           </condition>
@@ -1052,14 +1052,13 @@ You haven't yet added <condition name="contacttype"><li value="unknown">a phone<
           </condition>
         </li>
         <li>I'm not sure what you're asking.
-<!--
 displayname: <srai>DISPLAYNAME <get name="contactid"/></srai>
 dialnumber mobile: <srai>DIALNUMBER MOBILE <get name="contactid"/></srai>
 dialnumber home: <srai>DIALNUMBER HOME <get name="contactid"/></srai>
 emailaddress home: <srai>EMAILADDRESS HOME <get name="contactid"/></srai>
 emailaddress work: <srai>EMAILADDRESS WORK <get name="contactid"/></srai>
 birthday: <srai>CONTACTBIRTHDAY <get name="contactid"/></srai>
---></li>
+</li>
       </condition>
     </template>
   </category>
