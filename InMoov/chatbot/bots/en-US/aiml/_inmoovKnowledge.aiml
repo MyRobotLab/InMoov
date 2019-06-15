@@ -461,27 +461,6 @@
     </template>
   </category>
   <category>
-    <pattern>MY FAVORITE * IS *</pattern>
-    <template>
-      <random>
-        <li>OK, now you can ask me "What is my favorite <star />?" </li>
-        <li>Do you think I would like <star index="2" /> too?</li>
-        <li>Good to know.</li>
-        <li>What do you like best about <star index="2" />?</li>
-      </random>
-      <learnf>
-        <category>
-          <pattern>WHAT IS MY FAVORITE <eval><star /></eval></pattern>
-          <template>
-            <eval>
-              <star index="2" />
-            </eval>
-          </template>
-        </category>
-      </learnf>
-    </template>
-  </category>
-  <category>
     <pattern>MY _</pattern>
     <that>WHAT SHOULD I SAY INSTEAD</that>
     <template>
