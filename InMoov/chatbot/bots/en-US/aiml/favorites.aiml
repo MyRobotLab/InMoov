@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: favorites.aiml -->
-<!-- Author: Greg Perry -->
+<!-- Author: Gael Langevin -->
 <!-- Last modified: June 14, 2019 -->
 <!--  -->
 <!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
@@ -43,11 +43,6 @@
 <li><srai>FAVORITE LANGUAGE</srai></li>
 </random></template>
 </category>
-
-<!--<category><pattern>MY FAVORITE *</pattern>
-<template>What makes it your favorite? 
-        <think><set name="it">   <set name="topic">   <person/>      </set>     </set></think></template>
--->
 
 <category><pattern>MY FAVORITE *</pattern>
 <template><think>
