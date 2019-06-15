@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: favorites.aiml -->
-<!-- Author: Gael Langevin -->
+<!-- Author: Gael langevin -->
 <!-- Last modified: June 14, 2019 -->
 <!--  -->
 <!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
@@ -61,22 +61,89 @@
                 <li>I imagine that is very important to you.</li>
                 <li>I don't know that about you.</li>
                 <li>Tell me more about yourself.</li>
-                <li>How interesting.</li>
+                <li>I don't remember you telling me.</li>
                 <li>I have no idea.</li>
                 </random>
             </li>
         </condition></template>
 </category>
 <category><pattern>MY FAVORITE * IS *</pattern>
-<template><think>
-        <set name="favoritepredicate">
-          <srai>FAVORITEPREDICATE <star/></srai>
-        </set>
-        <set name="favoritename">
-          <star index="2"/>
-        </set>
+<template><think>   
+    <set name="favoritepredicate">
+        <condition name="favoritepredicate">
+        <li value="MOVIE">
+          <get name="favoritemovie"/>
+        </li>
+        <li value="CITY">
+          <get name="favoritecity"/>
+        </li>
+        <li value="SONG">
+          <get name="favoritesong"/>
+        </li>
+        <li value="BAND">
+          <get name="favoriteband"/>
+        </li>
+        <li value="BOOK">
+          <get name="favoritebook"/>
+        </li>
+        <li value="TEAM">
+          <get name="favoriteteam"/>
+        </li>
+        <li value="PLAY">
+          <get name="favoriteplay"/>
+        </li>
+        <li value="TV SHOW">
+          <get name="favoriteshow"/>
+        </li>
+        <li value="ACTOR">
+          <get name="favoriteactor"/>
+        </li>
+        <li value="ACTRESS">
+          <get name="favoriteactress"/>
+        </li>
+        <li value="CAR">
+          <get name="favoritecar"/>
+        </li>
+        <li value="SPORT">
+          <get name="favoritesport"/>
+        </li>
+        <li value="ICE CREAM">
+          <get name="favoriteicecream"/>
+        </li>
+        <li value="DRINK">
+          <get name="favoritedrink"/>
+        </li>
+        <li value="COLOR">
+          <get name="favoritecolor"/>
+        </li>
+        <li value="HOLLIDAY">
+          <get name="favoriteholliday"/>
+        </li>
+        <li value="ANIMAL">
+          <get name="favoriteanimal"/>
+        </li>
+        <li value="ARTIST">
+          <get name="favoriteartist"/>
+        </li>
+        <li value="FOOD">
+          <get name="favoritefood"/>
+        </li>
+        <li value="GAME">
+          <get name="favoritegame"/>
+        </li>
+        <li value="LANGUAGE">
+          <get name="favoritelanguage"/>
+        </li>
+        <li><star/></li>
+            <srai>FAVORITEPREDICATE <star/></srai>
+            </condition>
+          </set>
+          <set name="favoritename">
+              <star index="2"/>
+          </set>
       </think>
-      <srai>REMEMBERFAVORITENAME</srai></template>
+      <srai>REMEMBERFAVORITENAME</srai>
+  </template>
 </category>
 
 
@@ -318,7 +385,7 @@
                     <li value="FOOD"><set name="favoritefood"><get name="favoritename"/></set></li>
                     <li value="GAME"><set name="favoritegame"><get name="favoritename"/></set></li>
                     <li value="LANGUAGE"><set name="favoritelanguage"><get name="favoritename"/></set></li>
-                    <li>who</li>
+                    <li><get name="favoritename"/></li>
                 </condition>
             </set>.
         </li>
