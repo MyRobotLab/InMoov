@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: June 16, 2019 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -337,7 +337,7 @@
   <category>
     <pattern>*</pattern>
     <that>TELL ME WHAT IS YOUR FAVORITE * TEAM</that>
-    <template><think><set name="favoriteteam"><star/></set><set name="it"></think>
+    <template><think><set name="favoriteteam"><star/></set></think>
        Wow, what a coincidence, <get name="favoriteteam"/> is definitely my team.
     </template>
   </category>
@@ -356,42 +356,42 @@
   <category>
     <pattern>*</pattern>
     <that>WHO IS YOUR FAVORITE ACTOR</that>
-    <template><think><set name="favoriteactor"><star/></set><set name="he"></think>
+    <template><think><set name="favoriteactor"><star/></set></think>
        Oh, I like <get name="favoriteactor"/> too.
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHAT IS HE IN</that>
-    <template><think><set name="tmpname"><star/></set><set name="he"></think>
+    <template><think><set name="tmpname"><star/></set></think>
        Is it a good film <get name="tmpname"/> ?
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHO IS YOUR FAVORITE ACTRESS</that>
-    <template><think><set name="favoriteactress"><star/></set><set name="she"></think>
+    <template><think><set name="favoriteactress"><star/></set></think>
        Oh my, I love <get name="favoriteactress"/> too.
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHAT IS SHE IN</that>
-    <template><think><set name="tmpname"><star/></set><set name="she"></think>
+    <template><think><set name="tmpname"><star/></set></think>
        Is <get name="tmpname"/> a good film ?
     </template>
   </category>
   <category>
     <pattern>#</pattern>
     <that>WHAT IS YOUR FAVORITE CAR</that>
-    <template><think><set name="favoritecar"><star/></set><set name="it"></think>
+    <template><think><set name="favoritecar"><star/></set></think>
        I see, personally I think the <bot name="favoritecar"/> is the future compared to <get name="favoritecar"/>.
        But what do you like most about that car?
     </template>
   </category>
   <category><pattern>#</pattern>
     <that>BUT WHAT DO YOU LIKE MOST ABOUT THAT CAR</that>
-    <template><think><set name="tmpname"><star/></set><set name="it"></think>
+    <template><think><set name="tmpname"><star/></set></think>
        Aaah, <get name="tmpname"/>, interesting. 
        Why specifically <get name="tmpname"/>?
     </template>
@@ -412,7 +412,7 @@
   <category>
     <pattern>#</pattern>
     <that>WHAT IS YOUR FAVORITE FLAVOR</that>
-    <template><think><set name="favoriteicecream"><star/></set><set name="it"></think>
+    <template><think><set name="favoriteicecream"><star/></set></think>
        <get name="favoriteicecream"/> Good choice too.
        I scream, you scream, we all scream for ice cream.
     </template>
@@ -420,21 +420,21 @@
   <category>
     <pattern>*</pattern>
     <that>WHAT IS YOUR FAVORITE DRINK</that>
-    <template><think><set name="favoritedrink"><star/></set><set name="it"></think>
+    <template><think><set name="favoritedrink"><star/></set></think>
        <get name="favoritedrink"/>. Good choice!
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHAT IS YOUR FAVORITE COLOR</that>
-    <template><think><set name="favoritecolor"><star/></set><set name="it"></think>
+    <template><think><set name="favoritecolor"><star/></set></think>
        I like <get name="favoritecolor"/> too.
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHAT IS YOUR FAVORITE HOLIDAY</that>
-    <template><think><set name="favoriteholiday"><star/></set><set name="it"></think>
+    <template><think><set name="favoriteholiday"><star/></set></think>
        Nice, I also enjoy <get name="favoriteholiday"/>.
        Do you travel during holiday?
     </template>
@@ -442,27 +442,27 @@
   <category>
     <pattern>*</pattern>
     <that>WHAT IS YOUR FAVORITE ANIMAL</that>
-    <template><think><set name="favoriteanimal"><star/></set><set name="it"></think>
+    <template><think><set name="favoriteanimal"><star/></set></think>
        Oh, <get name="favoriteanimal"/> can be jealous sometimes.
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>WHAT IS YOUR FAVORITE ARTIST</that>
-    <template><think><set name="favoriteartist"><star/></set><set name="he"></think>
+    <template><think><set name="favoriteartist"><star/></set></think>
        Do you know how we classify <get name="favoriteartist"/>?
     </template>
   </category>
   <category><pattern>*</pattern>
     <that>DO YOU PLAY</that>
-    <template><think><set name="favoritegame"><star/></set><set name="it"></think>
+    <template><think><set name="favoritegame"><star/></set></think>
        <bot name="favoritegame"/> gets my mind off this world.
     </template>
   </category>
   <category>
     <pattern>*</pattern>
     <that>DO YOU HAVE A FAVORITE LANGUAGE</that>
-    <template><think><set name="favoritelanguage"><star/></set><set name="it"></think>
+    <template><think><set name="favoritelanguage"><star/></set></think>
        I should check my data, I may already know how to use <get name="favoritelanguage"/>.
     </template>
   </category>
