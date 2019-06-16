@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: June 16, 2019 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -504,6 +504,24 @@ I call you <get name="name" />.</template>
     </template>
   </category>
   <category>
+  <category>
+    <pattern>MY GRANDMOTHER S NAME IS *</pattern>
+    <template>Your grandmother has a nice name. 
+	    <set name="grandmother"><star/></set> 
+      <think><set name="she"><set name="topic"><star/></set>
+	      </set></think></template>
+   </category>
+   <category>
+     <pattern>MY GRANDFATHER</pattern>
+     <template><get name="grandfather"/></template>
+   </category>
+   <category>
+     <pattern>MY GRANDFATHER S NAME IS *</pattern>
+   <template>Nice to now your grandfather's name. 
+	   <set name="grandfather"><star/></set> 
+      <think><set name="he"><set name="topic"><star/></set></set>
+	   </think></template>
+   </category>
     <pattern>MY GIRLFRIEND</pattern>
     <template>
       <get name="girlfriend" />
