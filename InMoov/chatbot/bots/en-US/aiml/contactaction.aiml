@@ -672,8 +672,7 @@ I've saved <get name="contactname" /> to your contacts.
                           <get name="contactname" />
                         </set>
                       </think>
-                      <!--          <srai>LEARN CONTACTID <set name="contactid"><srai>NEWCONTACTID</srai></set> DISPLAYNAME <get name="contactname"/></srai> 
- -->
+                      <srai>LEARN CONTACTID <set name="contactid"><srai>NEWCONTACTID</srai></set> DISPLAYNAME <get name="contactname"/></srai>
                       <addinfo>
                         <displayname>
                           <get name="contactname" />
@@ -990,7 +989,7 @@ You haven't yet added <condition name="contacttype"><li value="unknown">a phone<
           <sraix>WHAT IS <get name="contactname" />'s PHONE NUMBER</sraix>
         </li>
         <li value="EMAILADDRESS">
-          <sraix>WHAT IS <get name="contactname" />'s EMAIL ADDREESS</sraix>
+          <sraix>WHAT IS <get name="contactname" />'s EMAIL ADDRESS</sraix>
         </li>
         <li>
           <sraix>WHO IS <get name="contactname" /></sraix>
