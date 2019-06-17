@@ -8,7 +8,7 @@
   <!-- Public License, as published by the Free Software Foundation. -->
   <!--  -->
   <!-- modified: Gael Langevin -->
-  <!-- Last modified: September 16, 2016 -->
+  <!-- Last modified: June 17, 2019 -->
   <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
   <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
   <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -179,7 +179,7 @@
           </li>
         </condition>
       </think>
-I'm remembering <get name="displayname" />'s <lowercase><get name="contacttype" /></lowercase><condition name="learnpattern"><li value="DIALNUMBER">phone number</li><li value="EMAILADDRESS">email address</li></condition> is <get name="contacturi" />.</template>
+I'm remembering <get name="contactname" />'s <lowercase><get name="contacttype" /></lowercase><condition name="learnpattern"><li value="DIALNUMBER">phone number</li><li value="EMAILADDRESS">email address</li></condition> is <get name="contacturi" />.</template>
   </category>
   <category>
     <pattern>ASK TO ADD NEW CONTACTNAME</pattern>
