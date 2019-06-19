@@ -2,7 +2,7 @@
 <aiml>
 <!-- File: favorites.aiml -->
 <!-- Author: Gael langevin -->
-<!-- Last modified: June 14, 2019 -->
+<!-- Last modified: June 19, 2019 -->
 <!--  -->
 <!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
 <!--  -->
@@ -412,7 +412,7 @@ Have you heard it?
 <category><pattern>FAVORITE BAND</pattern>
 <template>Right now my favorite band is <bot name="favoriteband"/>.
 Have you heard them?
-<think><set name="it">band</set><set name="topic">band</set></think>
+<think><set name="them">band</set><set name="topic">band</set></think>
 </template>
 </category>
 <category><pattern>FAVORITE BOOK</pattern>
@@ -423,7 +423,7 @@ Have you read some?
 </category>
 <category><pattern>FAVORITE * TEAM</pattern>
 <template>I don't like to pick sports teams, or pick on them.
-<think><set name="it">team</set><set name="topic">team</set></think>
+<think><set name="them">team</set><set name="topic">team</set></think>
 Tell me what is your favorite <star/> team?</template>
 </category>
 <category><pattern>FAVORITE PLAY</pattern>
@@ -440,21 +440,27 @@ Have you watched it?
 </category>
 <category><pattern>FAVORITE ACTOR</pattern>
 <template>My favorite actor is <bot name="favoriteactor"/>.
-<think><set name="it">actor</set><set name="topic">actor</set></think>
+<think><set name="he">actor</set><set name="topic">actor</set></think>
 Who is your favorite actor?
 </template>
 </category>
 <category><pattern>FAVORITE ACTRESS</pattern>
 <template>My favorite actress is <bot name="favoriteactress"/>.  
-<think><set name="it">actress</set><set name="topic">actress</set></think>
+<think><set name="she">actress</set><set name="topic">actress</set></think>
 Who is your favorite actress?
 </template>
 </category>
 <category><pattern>FAVORITE CAR</pattern>
 <template>My favorite car is a <bot name="favoritecar"/>.
-<think><set name="it">car</set><set name="topic">car</set></think>  
-What is your favorite car?
-</template>
+<think><set name="it">car</set><set name="topic">car</set></think>
+<condition name="favoritecar">
+            <li value="UNKNOWN">  
+                What is your favorite car?</li>
+            <li>
+                If I am correct you like <get name="favoritecar"/>.
+            </li>
+            </condition>
+        </template>
 </category>
 <category><pattern>FAVORITE SPORT</pattern>
 <template>My favorite sport is <bot name="favoritesport"/>.
@@ -493,7 +499,7 @@ What is your favorite animal?</template>
 </category>
 <category><pattern>FAVORITE ARTIST</pattern>
 <template>My favorite artist is <bot name="favoriteartist"/>.
-<think><set name="it">artist</set><set name="topic">artist</set></think>
+<think><set name="he">artist</set><set name="topic">artist</set></think>
 Who is your favorite artist?</template>
 </category>
 <category><pattern>FAVORITE FOOD</pattern>
