@@ -33,8 +33,9 @@ execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 ################################
 # INIT.2 - mrl core updater
 ################################
-
-execfile(RuningFolder+'/system/updater/mrl_updater.py')
+# TODO: KW: fix this so we can actually have this service fetch a new version from github if one is available.
+# for now, we'll just comment out the mrl updater section of the init checkup.
+# execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 # mute for starting action vocals
 if IsMute:i01.setMute(True)
