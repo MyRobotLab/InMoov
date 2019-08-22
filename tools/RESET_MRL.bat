@@ -15,7 +15,7 @@ del myrobotlab.log
 echo .
 echo ------------------------------------------------------
 echo INSTALL DEPENDENCIES AND MRL SERVICES because you need it
-echo PLEASE WAIT SOME MINUTES with a cofee is a good idea
+echo PLEASE WAIT SOME MINUTES with a coffee is a good idea
 echo ------------------------------------------------------
 echo .
 RMDIR /S /Q .myrobotlab
