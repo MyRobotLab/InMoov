@@ -10,6 +10,8 @@ echo KILL JAVA to clean reborn
 
 taskkill.exe /F /IM java.exe
 taskkill.exe /F /IM javaW.exe
+taskkill.exe /F /IM chrome.exe
+if exist %cd%\mrlNeedReinstall del mrlNeedReinstall
 
 echo ------------------------------------------------------
 echo Rotate log files for clean no worky
