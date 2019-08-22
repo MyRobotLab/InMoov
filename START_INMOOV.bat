@@ -28,6 +28,6 @@ echo ------------------------------------------------------
 REM This is the command to start up the agent jar, specify the memory and run the default InMoov script
 
 SET script=%cd%\InMoov\InMoov.py
-cd ..\..\
+timeout 2 > NUL
 echo Executing file %script%
 java -Dfile.encoding=UTF-8 -jar myrobotlab.jar -m 512m --service python Python --invoke python execFile %script%
