@@ -12,9 +12,9 @@ def No():
       sleep(0.3)
       i01.moveHead(80,90)
     else:
-      rollneck.moveTo(50)
+      i01.head.rollNeck.moveTo(50)
       sleep(0.4)
-      rollneck.moveTo(120)
+      i01.head.rollNeck.moveTo(120)
       sleep(0.4)
-      rollneck.moveTo(90)
+      i01.head.rollNeck.moveTo(90)
     i01.finishedGesture()
