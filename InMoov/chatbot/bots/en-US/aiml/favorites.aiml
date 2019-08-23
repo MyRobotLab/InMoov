@@ -454,7 +454,7 @@ Who is your favorite actress?
 <template>My favorite car is a <bot name="favoritecar"/>.
 <think><set name="it">car</set><set name="topic">car</set></think>
 <condition name="favoritecar">
-            <li value="UNKNOWN">  
+            <li value="WHAT">  
                 What is your favorite car?</li>
             <li>
                 If I am correct you like <get name="favoritecar"/>.
