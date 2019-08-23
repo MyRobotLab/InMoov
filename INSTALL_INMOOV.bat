@@ -26,7 +26,7 @@ echo          !!!       IT CAN TAKE LONG TIME     !!!
 echo          !!!            DO NOT CLOSE         !!!
 echo ------------------------------------------------------
 timeout 2 > NUL
-java -Dfile.encoding=UTF-8 -jar myrobotlab.jar --install WebGui MarySpeech HtmlFilter RasPi InMoov VoiceRss WikiDataFetcher Polly ProgramAB AzureTranslator LocalSpeech IndianTts
+java -Dfile.encoding=UTF-8 -jar myrobotlab.jar --install
 timeout 10 > NUL
 COLOR 3F
 cls
