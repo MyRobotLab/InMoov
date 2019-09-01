@@ -37,8 +37,10 @@ if Language=="es":Language="es-ES"
 if Language=="de":Language="de-DE"
 if Language=="nl":Language="nl-NL"
 if Language=="ru":Language="ru-RU"
+if Language=="in":Language="hi-IN"
 if Language=="it":Language="it-IT"
 if Language=="fi":Language="fi-FI"
+if Language=="pt":Language="pt-PT"
 
 languageError=False
 if not i01.setLanguage(Language):
