@@ -75,11 +75,11 @@ if leftHandSensorActivated:
     def publishLeftSensor(pins):
       for pin in range(0, len(pins)):
           print pins[pin].address, pins[pin].value  #these values are between 0-1024
-          if pins[pin].value<=(left_Psi_min):
+          if pins[pin].value<=(left_Psi_min)and pins[pin].value<(left_Psi_low):
             print "No left pressure"
-          if pins[pin].value>=(left_Psi_low)and pins[pin].value<=(left_Psi_mid):
+          if pins[pin].value>=(left_Psi_low)and pins[pin].value<(left_Psi_mid):
             print "Low left pressure"
-          if pins[pin].value>=(left_Psi_mid)and pins[pin].value<=(left_Psi_max):
+          if pins[pin].value>=(left_Psi_mid)and pins[pin].value<(left_Psi_max):
             print "Mid left pressure"
           if pins[pin].value>=(left_Psi_max):
             print "High left pressure"
