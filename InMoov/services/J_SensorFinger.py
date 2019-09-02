@@ -85,12 +85,12 @@ if leftHandSensorActivated:
             print "High left pressure"
     leftHandSensorArduino=eval(ThisServicePartConfig.get('MAIN', 'leftHandSensorArduino'))
     leftHandSensorArduino.addListener("publishPinArray","python","publishLeftSensor")
-    leftHandSensorArduino.enablePin(right_thumbPin,1)
-    leftHandSensorArduino.enablePin(right_indexPin,1)
-    leftHandSensorArduino.enablePin(right_majeurePin,1)
-    leftHandSensorArduino.enablePin(right_ringFingerPin,1)
-    leftHandSensorArduino.enablePin(right_pinkyPin,1)
-    leftHandSensorArduino.enablePin(right_extraPin,1)
+    leftHandSensorArduino.enablePin(left_thumbPin,1)
+    leftHandSensorArduino.enablePin(left_indexPin,1)
+    leftHandSensorArduino.enablePin(left_majeurePin,1)
+    leftHandSensorArduino.enablePin(left_ringFingerPin,1)
+    leftHandSensorArduino.enablePin(left_pinkyPin,1)
+    leftHandSensorArduino.enablePin(left_extraPin,1)
     talkEvent(lang_startingLeftHandSensor)
    
   except:
