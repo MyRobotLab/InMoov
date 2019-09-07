@@ -107,7 +107,7 @@
 	<template>
 		<condition name="articles2">
 			<li value="unknown"><think><set name="courant2"><star index="2"/></set></think></li>
-			<li><think><set name="courant2"><get name="articles2" /> <star index="2"/></set></think></li>
+			<think><set name="courant2"><get name="articles2" /> <star index="2"/></set></think>
 		</condition>  
 		<random>
 			<li>Désormais je saurais que <star index="1"/> est <get name="courant2"/>.</li>
