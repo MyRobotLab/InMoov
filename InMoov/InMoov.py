@@ -5,7 +5,7 @@
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
 ##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    
-version='1.1.10'
+version='1.1.11'
 
 # this will run with Nixie versions of MRL above :
 # THIS IS NOT FOR MANTICORE
