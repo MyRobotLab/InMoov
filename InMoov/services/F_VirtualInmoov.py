@@ -24,7 +24,7 @@ except:
 global virtualInmoovActivated
 virtualInmoovActivated=False
 if (ScriptType=="Virtual" or virtualInmoovAlwaysActivated) and not ForceVinmoovDisable:
-  if os.path.isdir(RuningFolder+'/jm3') and runtime.is64bit:
+  if os.path.isdir(RuningFolder+'/jm3') and runtime.is64bit():
     global virtualInmoovActivated
     virtualInmoovActivated=True
   else:
