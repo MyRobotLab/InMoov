@@ -91,7 +91,11 @@ def play():
     ear.startListening()
     ear.setAutoListen(True)
 
-
+def nextMusic():
+    if musiconoff == 1:
+        AudioPlayer.stop()
+        print "next music" 
+        play()
 
 # pause method 
 def pause():
