@@ -16,6 +16,14 @@
       </random>
     <oob><mrl><service>python</service><method>exec</method><param>play()</param></mrl></oob></template>
 </category>
+<category><pattern>PLAY NEXT MUSIC</pattern>
+<template><random>
+        <li>Why not</li>
+        <li>Playing next music now</li>
+        <li>OK!</li>
+      </random>
+    <oob><mrl><service>python</service><method>exec</method><param>nextMusic()</param></mrl></oob></template>
+</category>
 <category><pattern>STOP MUSIC</pattern>
 <template><random>
         <li>As you please</li>
