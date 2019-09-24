@@ -1,3 +1,4 @@
+<!-- use the same build tool and myrobotlab ie "maven" -->
 <project name="InMoov Script" default="dist" basedir=".">
   <description>
     simple build script for the InMoov repo
@@ -16,7 +17,19 @@
 
   <target name="dist" depends="init" description="generate the distribution">
     <!-- Create the distribution directory -->
-    <mkdir dir="${dist}"/>
+    <mkdir dir="${build}/InMoov/testScripts"/>
+
+    <!-- pull service scripts for local tests, packaging into a inmoov module-->
+    <get dest="${build}/InMoov/testScripts">
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoov.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovArm.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovEyelids.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovFingerStarter.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovGestureCreator.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovHand.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovHead.py"/>
+      <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovTorso.py"/>
+    </get>
 
     <!-- copy files to build/where ever then zip into dist/inmoov.zip -->
     <copy todir="${build}/InMoov">
@@ -28,12 +41,12 @@
     <copy file="start_inmoov.sh" todir="${build}" />
     <copy file="START_INMOOV.bat" todir="${build}" />
 
-    <zip destfile="${dist}/inmoov-1.1.11.zip" basedir="${build}" encoding="UTF-8"/>
-       
+    <zip destfile="${dist}/inmoov-${INMOOV_VERSION}.zip" basedir="${build}" encoding="UTF-8"/>
+
   </target>
 
   <target name="clean" description="clean up">
-        
+
     <!-- Delete the ${build} and ${dist} directory trees -->
     <delete dir="${build}"/>
     <delete dir="${dist}"/>

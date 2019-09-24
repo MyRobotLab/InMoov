@@ -10,12 +10,16 @@
 inMoov=i01
 #temporary speed simulation trick ( i2c can compute speed )
 if ScriptType=="Virtual":
-  virtualRaspi = Runtime.start("virtualRaspi","RasPi")
-  virtualRaspi.setWiringPi(False)
-  right = Runtime.createAndStart("i01.right", "Adafruit16CServoDriver")
-  left = Runtime.createAndStart("i01.left", "Adafruit16CServoDriver")
-  left.attach(virtualRaspi,"1","0x40")
-  right.attach(virtualRaspi,"1","0x41")
+  Platform.setVirtual(True)
+  # right = Runtime.createAndStart("i01.right", "Adafruit16CServoDriver")
+  # left = Runtime.createAndStart("i01.left", "Adafruit16CServoDriver")
+  # virtualRaspi = Runtime.start("virtualRaspi","RasPi")
+  # virtualRaspi.setWiringPi(False)
+  # left.attach(virtualRaspi,"1","0x40")
+  # right.attach(virtualRaspi,"1","0x41")
+  right = Runtime.start("i01.right", "Arduino")
+  left = Runtime.start("i01.left", "Arduino")
+
   RightPortIsConnected=True
   LeftPortIsConnected=True
 
