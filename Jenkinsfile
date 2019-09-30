@@ -59,13 +59,13 @@ node ('ubuntu') { // use any node
    
    	def server = Artifactory.server 'repo' 
    	def uploadSpec = """{
-								"files": [
-										    {
-										      "pattern": "dist/inmoov-1.1.12.zip",
-										      "target": "org/inmoov/"
-										    }
-										 ]
-										}"""
+                        "files": [
+                                    {
+                                        "pattern": "dist/inmoov-1.1.12.zip",
+                                        "target": "org/inmoov/"
+                                    }
+                                    ]
+                                }"""
 		server.upload(uploadSpec)
 
 	}
