@@ -45,27 +45,28 @@ node ('ubuntu') { // use any node
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
       }
    }
-   
+
    stage('extended-verify'){
      if (params.EXTENDED_VERIFY == 'true') {
        echo 'EXTENDED_VERIFY is true'
      } 	   
    }
    stage('archive') {
-         archiveArtifacts 'target/*.jar'      
+         // archiveArtifacts 'target/*.jar'      
+         
    } 
    stage('publish') {
    
-//    	def server = Artifactory.server 'artifactory01' 
-//    	def uploadSpec = """{
-// 								"files": [
-//										    {
-//										      "pattern": "target/inmoov.zip",
-//										      "target": "org/inmoov/"
-//										    }
-//										 ]
-//										}"""
-//		server.upload(uploadSpec)
+   	def server = Artifactory.server 'repo' 
+   	def uploadSpec = """{
+								"files": [
+										    {
+										      "pattern": "dist/inmoov-1.1.12.zip",
+										      "target": "org/inmoov/"
+										    }
+										 ]
+										}"""
+		server.upload(uploadSpec)
 
 	}
 }
