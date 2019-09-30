@@ -45,14 +45,7 @@ node ('ubuntu') { // use any node
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
       }
    }
-   stage('verify'){
-	   if (isUnix()) {
-             // -o == offline
-	     sh "'${mvnHome}/bin/mvn' verify"
-	   } else {
-	     bat(/"${mvnHome}\bin\mvn" verify/)
-	   }
-   }
+   
    stage('extended-verify'){
      if (params.EXTENDED_VERIFY == 'true') {
        echo 'EXTENDED_VERIFY is true'
