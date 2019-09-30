@@ -4,6 +4,7 @@
     simple build script for the InMoov repo
   </description>
   <!-- set global properties for this build -->
+  <loadproperties srcFile="build.properties"/>
   <property name="src" location="src"/>
   <property name="build" location="build"/>
   <property name="dist" location="dist"/>
@@ -13,6 +14,7 @@
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}/InMoov"/>
+    <mkdir dir="${build}/data"/>
   </target>
 
   <target name="dist" depends="init" description="generate the distribution">
@@ -31,6 +33,10 @@
       <url url="https://raw.githubusercontent.com/MyRobotLab/pyrobotlab/develop/service/InMoovTorso.py"/>
     </get>
 
+    <!-- where everything "should" go - in the data directory no the InMoov dir :P-->
+    <copy todir="${build}/data">
+      <fileset dir="data"/>
+    </copy>
     <!-- copy files to build/where ever then zip into dist/inmoov.zip -->
     <copy todir="${build}/InMoov">
       <fileset dir="InMoov"/>
@@ -41,7 +47,7 @@
     <copy file="start_inmoov.sh" todir="${build}" />
     <copy file="START_INMOOV.bat" todir="${build}" />
 
-    <zip destfile="${dist}/inmoov-${INMOOV_VERSION}.zip" basedir="${build}" encoding="UTF-8"/>
+    <zip destfile="${dist}/inmoov-${inmoov.version}.zip" basedir="${build}" encoding="UTF-8"/>
 
   </target>
 
