@@ -9,6 +9,8 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 
 node ('ubuntu') { // use any node
 
+def props = []
+
 // node ('ubuntu') {  // use labels to direct build
    // withEnv(javaEnv) {
    
@@ -25,9 +27,8 @@ node ('ubuntu') { // use any node
       checkout scm
       // git 'https://github.com/MyRobotLab/inmoov.git'
       // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
-      properties = readProperties file: 'build.properties'
-      echo properties
-      echo "inmoov.version ${inmoov.version}"
+      props = readProperties file: 'build.properties'
+      echo "props ${props}"
       
       sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
       git_branch = readFile('GIT_BRANCH').trim()
@@ -61,11 +62,12 @@ node ('ubuntu') { // use any node
    }
    stage('publish') {
    
+    def version= props['inmoov.version']
    	def server = Artifactory.server 'repo' 
    	def uploadSpec = """{
                         "files": [
                                     {
-                                        "pattern": "dist/inmoov-${inmoov.version}.zip",
+                                        "pattern": "dist/inmoov-${version}.zip",
                                         "target": "fr/inmoov/"
                                     }
                                     ]
