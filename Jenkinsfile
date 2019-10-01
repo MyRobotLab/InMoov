@@ -25,6 +25,8 @@ node ('ubuntu') { // use any node
       checkout scm
       // git 'https://github.com/MyRobotLab/inmoov.git'
       // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
+      properties = readProperties file: 'build.properties'
+      echo "Immediate one ${properties.repo}"
       
       sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
       git_branch = readFile('GIT_BRANCH').trim()
