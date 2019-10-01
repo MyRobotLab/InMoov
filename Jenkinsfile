@@ -43,6 +43,7 @@ node ('ubuntu') { // use any node
          sh "'ant'"
       } else {
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
+        bat(/"ant"/)
       }
    }
 
@@ -54,15 +55,15 @@ node ('ubuntu') { // use any node
    stage('archive') {
          // archiveArtifacts 'target/*.jar'      
          
-   } 
+   }
    stage('publish') {
    
    	def server = Artifactory.server 'repo' 
    	def uploadSpec = """{
                         "files": [
                                     {
-                                        "pattern": "dist/inmoov-1.1.12.zip",
-                                        "target": "org/inmoov/"
+                                        "pattern": "dist/inmoov-${inmoov.version}.zip",
+                                        "target": "fr/inmoov/"
                                     }
                                     ]
                                 }"""
