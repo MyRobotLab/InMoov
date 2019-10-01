@@ -68,7 +68,7 @@ def props = []
                         "files": [
                                     {
                                         "pattern": "dist/inmoov-${version}.zip",
-                                        "target": "inmoov/fr/inmoov/${version}"
+                                        "target": "inmoov/fr/inmoov/${version}/"
                                     }
                                     ]
                                 }"""
