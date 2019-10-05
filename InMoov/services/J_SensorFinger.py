@@ -64,7 +64,7 @@ if rightHandSensorActivated:
     talkEvent(lang_startingRightHandSensor)
     
   except:
-    errorSpokenFunc('BAdrduinoChoosen','right Hand Sensor')
+    errorSpokenFunc('ConfigParserProblem','right Hand Sensor')
     rightHandSensorActivated=False
     pass
 
@@ -94,6 +94,6 @@ if leftHandSensorActivated:
     talkEvent(lang_startingLeftHandSensor)
    
   except:
-    errorSpokenFunc('BAdrduinoChoosen','left Hand Sensor')
+    errorSpokenFunc('ConfigParserProblem','left Hand Sensor')
     leftHandSensorActivated=False
     pass
