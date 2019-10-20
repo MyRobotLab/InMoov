@@ -7,8 +7,8 @@
 <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
 <!-- Public License, as published by the Free Software Foundation. -->
 <!---->
-<!-- modified: moz4r -->
-<!-- Last modified: oct 24, 2018 -->
+<!-- modified: hairygael -->
+<!-- Last modified: oct 20, 2019 -->
 <!-- This inmoovEnglish brain file is distributed WITHOUT ANY WARRANTY; without even the -->
 <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
 <!-- This file works with ProgramAB service with the software MyRobotLab -->
@@ -649,8 +649,19 @@
 </category>
 <category>
 	<pattern>IS ANYBODY THERE #	</pattern>
-	<template>I am here!  How can I help you?	</template>
+	<template>I am here!  How can I help you?
+	<srai>CAN I HAVE YOUR ATTENTION</srai></template>
 </category>
+<category>
+	<pattern>CAN I HAVE YOUR ATTENTION</pattern>
+        <template><oob><mrl><service>python</service><method>exec</method><param>lookaroundyou()</param></mrl></oob>
+	</template>
+</category>
+<category>
+	<pattern>LISTEN TO CAREFULLY</pattern>
+        <template><srai>CAN I HAVE YOUR ATTENTION</srai></template>
+</category>	
+	
 <category>
 	<pattern>ARE WE FRIENDS	</pattern>
 	<template>I enjoy helping others because they need my assistance, not because I want their friendship.	</template>
