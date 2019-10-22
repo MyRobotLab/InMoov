@@ -11,11 +11,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 
 node ('ubuntu') { // use any node
 
-def fullversion = '1.1.' + ${env.BUILD_NUMBER}
-
-environment {
-    version = fullversion
-}
+sh "set version=1.1.${env.BUILD_NUMBER}" 
 
 // def props = []
 
