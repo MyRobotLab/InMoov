@@ -29,8 +29,8 @@ def props = []
       checkout scm
       // git 'https://github.com/MyRobotLab/inmoov.git'
       // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
-      props = readProperties file: 'build.properties'
-      echo "props ${props}"
+      // props = readProperties file: 'build.properties'
+      // echo "props ${props}"
       
       sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
       git_branch = readFile('GIT_BRANCH').trim()
@@ -46,10 +46,10 @@ def props = []
       if (isUnix()) {
       // -o == offline      
          // sh "'${mvnHome}/bin/mvn' -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile "
-         sh "'ant'"
+         sh "'ant' -Dbuild.number=${env.BUILD_NUMBER}"
       } else {
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
-        bat(/"ant"/)
+        bat(/"ant" -Dbuild.number=${env.BUILD_NUMBER}/)
       }
    }
 
