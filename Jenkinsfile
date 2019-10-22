@@ -45,7 +45,7 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
          sh "'ant' -Dversion=${env.version}"
       } else {
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
-        bat(/"ant" -Dbuild.number=${env.version}/)
+        bat(/"ant" -Dversion=${env.version}/)
       }
    }
 
