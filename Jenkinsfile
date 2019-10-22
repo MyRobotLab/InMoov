@@ -56,8 +56,8 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    	def uploadSpec = """{
                         "files": [
                                     {
-                                        "pattern": "dist/inmoov-${env.version}.zip",
-                                        "target": "inmoov/fr/inmoov/${env.version}/"
+                                        "pattern": "dist/inmoov-1.1.${env.BUILD_NUMBER}.zip",
+                                        "target": "inmoov/fr/inmoov/1.1.${env.BUILD_NUMBER}/"
                                     }
                                     ]
                                 }"""
