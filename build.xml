@@ -47,7 +47,7 @@
     <copy file="start_inmoov.sh" todir="${build}" />
     <copy file="START_INMOOV.bat" todir="${build}" />
 
-    <zip destfile="${dist}/inmoov-${INMOOV_VERSION}.zip" basedir="${build}" encoding="UTF-8"/>
+    <zip destfile="${dist}/inmoov-${inmoov.version}.zip" basedir="${build}" encoding="UTF-8"/>
 
   </target>
 

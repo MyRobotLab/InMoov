@@ -3,6 +3,8 @@
  *
  * for adjusting build number for specific branch build
  * Jenkins.instance.getItemByFullName("inmoov-multibranch/develop").updateNextBuildNumber(185)
+ *  
+ * CHANGE build.properties TO BUILD AND DEPLOY A NEW BUILD
  *
  ***********************************************************************************/
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/inmoov/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
@@ -62,7 +64,7 @@ def props = []
    }
    stage('publish') {
    
-    def version= props['inmoov.version']
+    def version= '1.1.' + ${env.BUILD_NUMBER} // props['inmoov.version']
    	def server = Artifactory.server 'repo' 
    	def uploadSpec = """{
                         "files": [
