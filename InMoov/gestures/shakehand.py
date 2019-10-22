@@ -80,17 +80,24 @@ def shakehandAnimation():
     i01.moveArm("right",6,73,60,16)
     i01.moveHand("left",50,50,40,20,20,90)
     i01.moveTorso(95,95,90)
-    
-    #sleep(1.5) # Very important
-    # ok we start a threaded loop ( I use a timer for that )
-    # because python "while" loop may stuck other threads like "pin publishers"
-    # thread will reajust fingers every Xms since the gesture is not finished ( we can change it )
-
-    sensorTimer.startClock(True)
-  
-    # TODO : create a sub function and launch this bottom from the timer thread
-    # IF a finger detect something ( if rightThumbSensorPin>1 or rightIndexSensorPin ... )
-    sleep(3)
+    rightHandSensorON()
+    sleep(1.5) # Very important
+    while rightThumbSensorPin == "No thumb right pressure":
+      print "No thumb right pressure"
+      i01.moveHand("right",180,125,135,145,168,77)
+    if rightThumbSensorPin >= 1:
+      i01.rightHand.thumb.disable()
+    if rightIndexSensorPin >= 1:
+      i01.rightHand.index.disable()
+    if rightMajeureSensorPin >= 1:
+      i01.rightHand.majeure.disable()
+    if rightRingFingerSensorPin >= 1:
+      i01.rightHand.ringFinger.disable()
+    if rightPinkySensorPin >= 1:
+      i01.rightHand.pinky.disable()      
+      print "Right hand pressure"
+      rightHandSensorOFF()
+    sleep(2)
     i01.setHandVelocity("left", -1, -1, -1, -1, -1, -1)
     i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
     i01.setArmVelocity("left", -1.0, -1.0, -1.0, -1.0)
@@ -173,10 +180,7 @@ def shakehandAnimation():
     i01.moveHand("left",50,50,40,20,20,90)
     i01.moveTorso(95,95,90)
     sleep(1)
-    ## release hand 
-
-    sensorTimer.stopClock()
-    
+    ## release hand  
     i01.setHandVelocity("left", 22.0, 22.0, 22.0, 22.0, 22.0, -1)
     i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
     i01.setArmVelocity("right", 59, 59, 59, 43.0)
