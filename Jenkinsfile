@@ -42,10 +42,10 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
       // -o == offline      
          
          sh('printenv | sort')
-         sh "'ant' -Dversion=${env.version}"
+         sh "'ant' -Dversion=1.1.${env.BUILD_NUMBER}"
       } else {
         //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
-        bat(/"ant" -Dversion=${env.version}/)
+        bat(/"ant" -Dversion=1.1.${env.BUILD_NUMBER}/)
       }
    }
 
