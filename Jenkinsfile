@@ -20,6 +20,8 @@ sh "set version=1.1.${env.BUILD_NUMBER}"
    
    // def mvnHome
    stage('preparation') { // for display purposes
+      echo 'clean the workspace'
+      cleanWs()
       // Get some code from a GitHub repository
       checkout scm
       // git 'https://github.com/MyRobotLab/inmoov.git'
