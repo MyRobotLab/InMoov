@@ -31,3 +31,32 @@ global MouthControlActivated
 MouthControlActivated=0
 global AudioSignalProcessing
 AudioSignalProcessing=0
+
+# Used by finger sensors
+# Right Hand
+global rightThumbPressure
+rightThumbPressure=0
+global rightIndexPressure
+rightIndexPressure=0
+global rightMajeurePressure
+rightMajeurePressure=0
+global rightRingFingerPressure
+rightRingFingerPressure=0
+global rightPinkyPressure
+rightPinkyPressure=0
+global rightExtraPressure
+rightExtraPressure=0
+
+# Left Hand
+global leftThumbPressure
+leftThumbPressure=0
+global leftIndexPressure
+leftIndexPressure=0
+global leftMajeurePressure
+leftMajeurePressure=0
+global leftRingFingerPressure
+leftRingFingerPressure=0
+global leftPinkyPressure
+leftPinkyPressure=0
+global leftExtraPressure
+leftExtraPressure=0
