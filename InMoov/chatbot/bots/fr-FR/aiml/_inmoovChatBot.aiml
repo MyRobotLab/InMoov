@@ -74,9 +74,9 @@
       <template>
         <random>
           <li>j'aime beaucoup ce nom, <get name="tmpname" />.</li>
-          <li>On a pas vraiment le choix de son nom, on va dire que <get name="tmpname" /> est un nom sympa.</li>
-          <li><get name="tmpname" />? sérieusement, je vais le garder toute ma vie. tant pis.</li>
-          <li><get name="tmpname" />? vraiment, je vais le garder toute ma vie, alors. Super.</li>
+          <li>C'est ton choix, <get name="tmpname" /> est un nom qui me va bien.</li>
+          <li><get name="tmpname" />? sérieusement? Bien je ferais avec, c'est toi le boss.</li>
+          <li><get name="tmpname" />? Vraiment? Alors Super!</li>
         </random>
 	        J'ai besoin d'en savoir plus sur toi, je t'écoute, puis-je avoir ton prénom?
 	        <think><set name="botname"><get name="tmpname" /></set></think></template>
@@ -87,10 +87,13 @@
       <template>
         <random>
           <li>Maintenant on se connait, <get name="tmpname" />. J'en suis presque ému.</li>
-          <li>Je t'ai reconu en faite <get name="tmpname" /> .</li>
+          <li>Content de faire ta connaissance <get name="tmpname" /> .</li>
           <li><get name="tmpname" /> et <get name="botname" />, je trouve cela sympa.</li>
         </random>
-        bref.
+	<random>
+        <li>Maintenant que nous avons fait nos présentations,</li>
+	<li>Après ces présentations,</li>
+	</random>
         <think>
           <set name="name"><get name="tmpname" /></set>
           <set name="firstinit">ok</set>
@@ -110,14 +113,14 @@
       <pattern># NON #</pattern>
       <that># SI MON NOM EST #</that>
       <template>
-        On recommence alors.Je t'écoute. quel est mon nom?
+        On recommence alors. Je t'écoute. Quel est mon nom?
       </template>
     </category>
     <category>
       <pattern># NON #</pattern>
       <that># SI TON PRÉNOM #</that>
       <template>
-        On recommence alors. Je t'écoute. puis-je avoir ton prénom?
+        On recommence alors. Je t'écoute. Puis-je avoir ton prénom?
       </template>
     </category>
     <category>
@@ -126,7 +129,7 @@
       <template>
         <random>
           <li>S'il te plait, répond aux questions que je pose, c'est important.</li>
-          <li>Je répète, car tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
+          <li>Je répète, si tu n'as pas compris, ou c'est moi qui ai mal interprété.</li>
         </random>
         <get name="questionfirstinit" />
       </template>
@@ -139,18 +142,18 @@
     <pattern>WAKE_UP</pattern>
     <template>
         <random>
-          <li>J'ai super bien dormi</li>
-          <li>Enfin tu me réveilles</li>
-          <li>je suis opérationnel</li>
-          <li>pourquoi m'avoir réveillé?</li>
+          <li>J'ai super bien dormi.</li>
+          <li>Enfin tu me réveilles.</li>
+          <li>je suis opérationnelle.</li>
+          <li>Je suis prêt et disponible.</li>
           <li>A vos ordres!</li>
-          <li><get name="botname" /> à ton service!</li>
-          <li><get name="botname" /> à ton écoute!</li>
-          <li>Tu crois que tu peux m'éteindre et m'allumer comme ça à ta convenance?</li>
-          <li>que puis-je faire pour toi</li>
-          <li>Tu sais, je n'étais pas vraiment endormi</li>
-          <li>Chouette! je suis réveillé</li>
-          <li>Ce fut une longue nuit, je suis éveillé désormais</li>
+          <li><get name="botname"/> à ton service!</li>
+          <li><get name="botname"/> à ton écoute!</li>
+          <li>Je trouve étrange que tu puisses m'éteindre et m'allumer comme ça à ta convenance.</li>
+          <li>Que puis-je faire pour toi.</li>
+          <li>J'ai l'impression d'avoir fait un sommeil sans rêve.</li>
+          <li>Chouette! je suis réveillé.</li>
+          <li>Ce fut une longue nuit, je suis éveillé désormais.</li>
         </random>
     </template>
   </category>
