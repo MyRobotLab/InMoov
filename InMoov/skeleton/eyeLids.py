@@ -20,7 +20,7 @@ try:
   EyeLidsLeftActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsLeftActivated') 
   EyeLidsRightActivated=ThisSkeletonPartConfig.getboolean('MAIN', 'EyeLidsRightActivated') 
   
-  if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LightSide" or ScriptType=="Full")) or ScriptType=="Virtual":
+  if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")) or ScriptType=="Virtual":
     EyeLidsConnectedToArduino=eval(ThisSkeletonPartConfig.get('MAIN', 'EyeLidsConnectedToArduino'))
 except:
   isEyeLidsActivated=0
@@ -32,7 +32,7 @@ except:
 #                 SERVO FUNCTIONS
 # ##############################################################################
 
-if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LightSide" or ScriptType=="Full")):
+if (isEyeLidsActivated and (ScriptType=="RightSide" or ScriptType=="LeftSide" or ScriptType=="Full")):
   if LeftPortIsConnected or RightPortIsConnected:
     eyelids = Runtime.create("i01.eyelids","InMoovEyelids")
     eyelids.startPeers()        
