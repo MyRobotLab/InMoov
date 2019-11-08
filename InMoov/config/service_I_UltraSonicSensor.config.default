@@ -1,9 +1,12 @@
 ;----------------------------- ultra Sonic Sensor CONFIGURATION ----------------------------------------
 [MAIN]
-ultraSonicSensorActivated=False
-ultraSonicSensorArduino=left
-trigPin=29
-echoPin=33
-;----------------------------------- END --------------------------------------------------
+ultraSonicRightActivated=False
+ultraSonicRightArduino=right
+trigRightPin=64
+echoRightPin=63
 
-
+ultraSonicLeftActivated=False
+ultraSonicLeftArduino=left
+trigLeftPin=64
+echoLeftPin=63
+;--------------------------------END-------------------------------------------
