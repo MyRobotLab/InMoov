@@ -1,5 +1,3 @@
-# -- coding: utf-8 --
-
 global noHumanLeft
 noHumanLeft=0
 global getCloserLeft
@@ -18,12 +16,12 @@ def shakehand():
   rest()
   i01.startedGesture()
   ##move arm and hand
-  i01.setHandSpeed("left", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
-  i01.setHandSpeed("right", 0.65, 0.65, 0.65, 0.65, 0.65, 1.0)
-  i01.setArmSpeed("right", 0.75, 0.85, 0.95, 0.85)
-  i01.setArmSpeed("left", 0.75, 0.85, 0.95, 0.85)
-  i01.setHeadSpeed(1.0, 1.0)
-  i01.setTorsoSpeed(0.75, 0.55, 1.0)
+  i01.setHandVelocity("left", 22.0, 22.0, 22.0, 22.0, 22.0, -1)
+  i01.setHandVelocity("right", 22.0, 22.0, 22.0, 22.0, 22.0, -1)
+  i01.setArmVelocity("right", 31.0, 43.0, 59, 43.0)
+  i01.setArmVelocity("left", 31.0, 43.0, 59, 43.0)
+  i01.setHeadVelocity(-1, -1)
+  i01.setTorsoVelocity(31.0, 13.0, -1)
   i01.moveHead(39,70)
   i01.moveArm("left",5,84,16,15)
   i01.moveArm("right",6,73,55,16)
