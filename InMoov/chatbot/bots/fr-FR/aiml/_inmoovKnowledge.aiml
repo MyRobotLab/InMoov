@@ -72,7 +72,7 @@
   <pattern>$C EST _</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai></li>
+    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
   </template>
 </category>
 
@@ -80,7 +80,7 @@
   <pattern>C ÉTAIT _</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai></li>
+    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
   </template>
 </category>
 
@@ -88,7 +88,7 @@
   <pattern>ÇA SIGNIFIE _</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai></li>
+    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
   </template>
 </category>
 
@@ -142,7 +142,7 @@
   <pattern>_</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai></li>
+    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
   </template>
 </category>
 
@@ -151,27 +151,27 @@
 <category>
   <pattern># NON #</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template><li>Oké, pas de soucis, je n'apprendrais rien cette fois ci.</li></template>
+  <template>Oké, pas de soucis, je n'apprendrais rien cette fois ci.</template>
 </category>
 <category>
   <pattern># JE NE #</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai># NON #</srai></li>
+    <srai># NON #</srai>
   </template>
 </category>
 <category>
   <pattern># JE N #</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai># NON #</srai></li>
+    <srai># NON #</srai>
   </template>
 </category>
 <category>
   <pattern># AUCUNE IDÉE #</pattern>
   <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
   <template>
-    <li><srai># NON #</srai></li>
+    <srai># NON #</srai>
   </template>
 </category>
 
