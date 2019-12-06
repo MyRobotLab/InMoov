@@ -5,15 +5,15 @@
 <category><pattern>QU EST CE QU ON MANGE #</pattern>
 <template><random>
 <li>
-j aime <bot name="favoritefood"/>
+J'aime <bot name="favoritefood"/>
 </li>
 <li>
-je ne suis pas un robot de cuisine
+Je ne suis pas un robot de cuisine.
 </li>
 <li>
-et si on commandait une pizza
+Et si on commandait une pizza.
 </li>
-</random></template>
+</random><think><set name="topic">nourriture</set></think></template>
 </category>
 <category><pattern>QU EST CE QUE ÉCHECS</pattern>
 <template><random>
@@ -6042,7 +6042,7 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <template><srai>TROUVER LE CONTEXTE</srai></template>
 </category>
 <category><pattern>QU EST CE QUE SUJET</pattern>
-<template><srai>TROUVER LE CONTEXTE</srai>nous parlions de <get name="topic"/>, plus précisement de <person2><that/></person2>.</template>
+<template><srai>TROUVER LE CONTEXTE</srai></template>
 </category>
 <category><pattern>QU EST CE QUE SUPERBOULE</pattern>
 <template>la Série du Monde de Football.</template>
