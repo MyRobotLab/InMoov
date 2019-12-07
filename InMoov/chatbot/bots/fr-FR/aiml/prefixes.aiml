@@ -162,8 +162,30 @@
     </template>
   </category>
   <category>
+    <pattern>NOUS PARLIONS DES *</pattern>
+    <template>
+      <srai>NOUS PARLIONS DES <star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>NOUS PARLIONS DE *</pattern>
     <template>Oh oui, je me rappelle maintenant, <set name="that"><set name="topic"><person /></set></set> est le sujet.</template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS DE QUOI</pattern>
+    <template>
+      <srai>TROUVER LE CONTEXTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS DE QUI</pattern>
+    <template>
+      <srai>TROUVER LE CONTEXTE</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>NOUS PARLIONS DES *</pattern>
+    <template>Effectivement, nous parlions, <set name="that"><set name="topic">les <person /></set></set> était le sujet.</template>
   </category>
   <category>
     <pattern>NOUS PARLONS *</pattern>
@@ -184,20 +206,30 @@
     </template>
   </category>
   <category>
+    <pattern>NOUS PARLONS DES *</pattern>
+    <template>
+      <srai>PARLONS DES <star /></srai>
+    </template>
+  </category>
+  <category>
     <pattern>ON M A DIT *</pattern>
     <template>qui te l'a dit? <sr /></template>
   </category>
   <category>
     <pattern>PARLONS D *</pattern>
-    <template>Ok, parlons d' <srai>PARLONS <star /></srai></template>
+    <template>Bien sur, parlons d'<srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PARLONS DE *</pattern>
-    <template>Ok, parlons de  <srai>PARLONS <star /></srai></template>
+    <template>Ok, parlons de <srai>PARLONS <star /></srai></template>
+  </category>
+  <category>
+    <pattern>PARLONS DES *</pattern>
+    <template>D'accord, parlons des <srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PARLONS DE L *</pattern>
-    <template>Ok, parlons de l' <srai>PARLONS <star /></srai></template>
+    <template>Pourquoi pas, parlons de l'<srai>PARLONS <star /></srai></template>
   </category>
   <category>
     <pattern>PLUTET *</pattern>
@@ -211,7 +243,7 @@
   </category>
   <category>
     <pattern>SI NOUS PARLIONS DE *</pattern>
-    <template>pourquoi pas. <srai>PARLONS DE <star /></srai></template>
+    <template><srai>PARLONS DE <star /></srai></template>
   </category>
   <category>
     <pattern>TANT PIS *</pattern>
