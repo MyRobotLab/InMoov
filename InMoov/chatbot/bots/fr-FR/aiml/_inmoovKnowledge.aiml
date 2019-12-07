@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml version="2">
-  <!-- File: _inmoovKnowledge.aiml -->
-  <!-- File Authors: Dr. Richard S. Wallace / Gael Langevin / Anthony Gallot -->
-  <!-- This AIML file is part of the ALICE2 0.0.5 chat bot knowledge base. -->
-  <!-- The ALICE2 brain is Copyright &copy; 2014 by ALICE AI Foundation. -->
-  <!-- The ALICE2 brain is released under the terms of the GNU Lesser General -->
-  <!-- Public License, as published by the Free Software Foundation. -->
-  <!--  -->
-  <!-- modified:moz4r, sebchko, gael  -->
-  <!-- Last modified: 08/11/2019 -->
-  <!-- This inmoovFrench brain file is distributed WITHOUT ANY WARRANTY; without even the -->
-  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. -->
-  <!-- This file works with ProgramAB service with the software MyRobotLab -->
-  <!-- For more information see http://www.myrobotlab.org -->
-  <!-- For more information see http://www.inmoov.fr -->
-  
-  <!-- *** INMOOV KNOWLEDGE ( french ) :  *** -->
-  <!-- local database -->
-  <!-- wikidata database -->
-  <!-- Général memories -->
-  <!-- shared knowledge TODO -->
-
-  <!-- there is no local awnsers we ask wikidata -->
-  
-<!-- 1 we check global wikidata -->
+<aiml>
+<!--  -->
+<!--  -->
 <category><pattern># <set>determinantinterogatif</set> JE NE SAIS PAS</pattern>
-<template><think><set name="determinantinterogatif"><star index="2"/></set></think>
-    <oob>
+<template><think>
+        <set name="determinantinterogatif">
+          <star index="2"/>
+        </set>
+      </think>
+      <oob>
         <mrl>
           <service>python</service>
           <method>exec</method>
@@ -34,215 +16,335 @@
         </mrl>
       </oob></template>
 </category>
-
-<!-- 2 we check wikidata categorized data -->
-
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE <set>articles</set> * <set>articles</set> *</pattern>
-<template>
-          <oob>
-            <mrl>
-              <service>python</service>
-              <method>exec</method>
-              <param>getProperty("<star index="3"/> ", "<star index="4"/>", "<star index="1"/> ", "<star index="2"/>","SAY ","SYSTEM_LEARNING" )</param>
-            </mrl>
-          </oob></template>
+<template><oob>
+        <mrl>
+          <service>python</service>
+          <method>exec</method>
+          <param>getProperty("<star index="3"/> ", "<star index="4"/>", "<star index="1"/> ", "<star index="2"/>","SAY ","SYSTEM_LEARNING" )</param>
+        </mrl>
+      </oob></template>
 </category>
-
 <category><pattern>SYSTEM_WIKIDATA_CATEGORIE *</pattern>
 <template><srai>SYSTEM_LEARNING</srai></template>
 </category>
-
-<!-- 3 we ask the user -->
-
 <category><pattern>SYSTEM_LEARNING</pattern>
-<template><get name="articles"/> <get name="courant"/>?
-    <random>
-    <li>J'avoue ne pas avoir cette réponse.</li>
-    <li>Désolé, je ne sais pas.</li>
-    <li>J'aimerais le savoir.</li>
-    <li>Je donne ma langue au chat.</li>
-    </random>
-  si tu as une idée dis le moi maintenant.
-</template>
+<template><get name="articles"/>
+      <get name="courant"/>?
+    <random><li>J'avoue ne pas avoir cette réponse.</li><li>Désolé, je ne sais pas.</li><li>J'aimerais le savoir.</li><li>Je donne ma langue au chat.</li></random>
+    Si tu as une idée dis le moi maintenant.</template>
 </category>
-
-<!-- user said something -->
-
-<category>
-  <pattern>$C EST _</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
-  </template>
+<category><pattern>$C EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai>
+        <get name="articles"/>
+        <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
-
-<category>
-  <pattern>C ÉTAIT _</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
-  </template>
+<category><pattern>C ÉTAIT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai>
+        <get name="articles"/>
+        <get name="courant"/> ETAIT <star index="1"/></srai></template>
 </category>
-
-<category>
-  <pattern>ÇA SIGNIFIE _</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
-  </template>
+<category><pattern>ÇA SIGNIFIE _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai>
+        <get name="articles"/>
+        <get name="courant"/> EST <star index="1"/></srai></template>
 </category>
-
-<category>
-  <pattern><set>articles</set> _ $EST <set>articles</set> _</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <think><set name="articles2"><star index="3"/></set></think>
-    <srai><star index="1"/> <star index="2"/> EST <star index="4"/></srai>
-  </template>
-</category>
-
-<category>
-  <pattern>_ EST _</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <condition name="articles2">
-      <li value="unknown"><think><set name="courant2"><star index="2"/></set></think></li>
-      <think><set name="courant2"><get name="articles2" /><star index="2"/></set></think>
-    </condition><random>
-      <li>Désormais je saurais que <star index="1"/> est <get name="courant2"/>.</li>
-      <li>Je suis content de savoir que <star index="1"/> est <get name="courant2"/>.</li>
-    </random>
-    <learnf>
-      <category>
-        <pattern><eval><get name="determinantinterogatif" /> <get name="courant" /></eval></pattern>
-        <template><eval><get name="courant2"/></eval>.</template>
-      </category>
-      <category>
-        <pattern><eval><get name="determinantinterogatif" /> <star index="1"/></eval></pattern>
-        <template><eval><get name="courant2"/></eval>.</template>
-      </category>
-      <category>
-        <pattern><eval><get name="determinantinterogatif" /> <star index="2"/></eval></pattern>
-        <template>Cela peut être <eval><star index="1"/></eval> par exemple.</template>
-      </category>
-      <category>
-        <pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><get name="courant2"/></eval></pattern>
-        <template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
-      </category>
-    </learnf>
-    <think>
-      <set name="articles"><get name="null"/></set>
-      <set name="courant2"><get name="null"/></set>
-      <set name="articles2"><get name="null"/></set>
-    </think>
-  </template>
-</category>
-
-<category>
-  <pattern>_</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai><get name="articles"/> <get name="courant"/> EST <star index="1"/></srai>
-  </template>
-</category>
-
-<!-- user dont know -->
-
-<category>
-  <pattern># NON #</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>Oké, pas de soucis, je n'apprendrais rien cette fois ci.</template>
-</category>
-<category>
-  <pattern># JE NE #</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai># NON #</srai>
-  </template>
-</category>
-<category>
-  <pattern># JE N #</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai># NON #</srai>
-  </template>
-</category>
-<category>
-  <pattern># AUCUNE IDÉE #</pattern>
-  <that># SI TU AS UNE IDÉE DIS LE MOI #</that>
-  <template>
-    <srai># NON #</srai>
-  </template>
-</category>
-
-<!-- end user dont know -->
-
-<!-- personnal memories  -->
-<!-- you can add new sections inside profile-user.aiml  -->
-<!-- this section will just intercept personnal things, if missing inside other aiml -->
-<!-- goal is to not learn personnal things inside global knowledge -->
-<category>
-  <pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $JE NE SAIS PAS</pattern>
-  <template>
-    <condition name="articles">
-      <li value="unknown"></li>
-      <li><star index="3"/></li>        
-    </condition>  
-    <person><star index="4"/></person> <star index="5"/>?
-    <random>
-      <li>C'est une question un peu ambiguë, je ne saurais y répondre.</li>
-      <li>J'avoue ne pas avoir cette réponse.</li>
-      <li>Si tu le sais, moi je n'en ai aucune idée.</li>
-    </random>
-  </template>
-</category>
-
-<category>
-    <pattern>PERSON *</pattern>
-    <template>
-      <person>
-        <star />
-      </person>
-    </template>
-</category>
-
-<!-- end personnal memories  -->
-
-
-<!-- general learn like salut SIGNIFIE bonjour -->
-<category>
-  <pattern>_ SIGNIFIE _</pattern>
-  <template>
-    <think>
-        <set name="equalto">
-          <srai>IS <star/> EQUALTO <star index="2"/></srai>
+<category><pattern><set>articles</set> _ $EST <set>articles</set> _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><think>
+        <set name="articles2">
+          <star index="3"/>
         </set>
-    </think>
-    <condition name="equalto">
-      <li value="false">
-      OK, quand tu dis "<star/>", cela signifie "<star index="2"/>". Je comprend mieux maintenant.
+      </think>
+      <srai>
+        <star index="1"/>
+        <star index="2"/> EST <star index="4"/></srai></template>
+</category>
+<category><pattern>_ EST _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2"/>
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>Désormais je saurais que <star index="1"/> est <get name="courant2"/>.</li>
+        <li>Je suis content de savoir que <star index="1"/> est <get name="courant2"/>.</li>
+      </random>
       <learnf>
         <category>
-        <pattern><eval><star/></eval></pattern>
-        <template><srai><eval><star index="2"/></eval></srai></template>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <get name="courant"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
         </category>
         <category>
-        <pattern><eval><star/></eval> _</pattern>
-        <template><srai><eval><star index="2"/></eval> <star/></srai></template>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="1"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
         </category>
         <category>
-        <pattern>_ <eval><star/></eval></pattern>
-        <template><srai><star/> <eval><star index="2"/></eval></srai></template>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="2"/>
+            </eval>
+          </pattern>
+          <template>Cela peut être <eval><star index="1"/></eval> par exemple.</template>
         </category>
         <category>
-        <pattern>_ <eval><star/></eval> *</pattern>
-        <template><srai><star/><eval> <star index="2"/></eval> <star index="2"/></srai></template>
+          <pattern># EST CE QUE <eval><star index="1"/></eval> EST <eval><get name="courant2"/></eval></pattern>
+          <template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
         </category>
       </learnf>
-      </li>
-      <li>Merci, je n'avais qu'une partie de l'information.</li>
-    </condition>
-  </template>
+      <think>
+        <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+      </think></template>
+</category>
+<category><pattern>_ ETAIT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2"/>
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>Merci je saurais que <star index="1"/> était <get name="courant2"/>.</li>
+        <li>Maintenant je sais que <star index="1"/> était <get name="courant2"/>.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <get name="courant"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="1"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="2"/>
+            </eval>
+          </pattern>
+          <template>C'était peut être <eval><star index="1"/></eval> par exemple.</template>
+        </category>
+        <category>
+          <pattern># EST CE QUE <eval><star index="1"/></eval> ETAIT <eval><get name="courant2"/></eval></pattern>
+          <template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+      </think></template>
 </category>
 
+<category><pattern>_ SONT _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><condition name="articles2">
+        <li value="unknown">
+          <think>
+            <set name="courant2">
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+        <li>
+          <think>
+            <set name="courant2">
+              <get name="articles2"/>
+              <star index="2"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <condition name="topic">
+        <li value="unknown">
+          <think>
+            <set name="topic">
+              <get name="courant"/>
+            </set>
+          </think>
+        </li>
+      </condition>
+      <random>
+        <li>Merci je saurais que <star index="1"/> sont <get name="courant2"/>.</li>
+        <li>Maintenant je sais que <star index="1"/> sont <get name="courant2"/>.</li>
+      </random>
+      <learnf>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <get name="courant"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="1"/>
+            </eval>
+          </pattern>
+          <template><eval><get name="courant2"/></eval>.
+        </template>
+        </category>
+        <category>
+          <pattern>
+            <eval>
+              <get name="determinantinterogatif"/>
+              <star index="2"/>
+            </eval>
+          </pattern>
+          <template>Ce sont peut être <eval><star index="1"/></eval> par exemple.</template>
+        </category>
+        <category>
+          <pattern># EST CE QUE <eval><star index="1"/></eval> SONT <eval><get name="courant2"/></eval></pattern>
+          <template>Oui, <random><li>bien sûr</li><li>évidement</li><li>je pense</li></random>.</template>
+        </category>
+      </learnf>
+      <think>
+        <set name="articles">
+          <get name="null"/>
+        </set>
+        <set name="courant2">
+          <get name="null"/>
+        </set>
+        <set name="articles2">
+          <get name="null"/>
+        </set>
+      </think></template>
+</category>
+
+<category><pattern>_</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai>
+        <get name="articles"/>
+        <get name="courant"/> EST <star index="1"/></srai></template>
+</category>
+<category><pattern># NON #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><random>
+        <li>OKé, pas de soucis, je n'apprendrais rien cette fois ci.</li>
+        <li>Dommage, j'espérais apprendre quelque chose de nouveau.</li>
+      </random></template>
+</category>
+<category><pattern># JE NE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai># NON #</srai></template>
+</category>
+<category><pattern># JE N #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai># NON #</srai></template>
+</category>
+<category><pattern># AUCUNE IDÉE #</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><srai># NON #</srai></template>
+</category>
+<category><pattern># <set>determinantinterogatif</set> # <set>possessifs</set> # $JE NE SAIS PAS</pattern>
+<template><condition name="articles">
+        <li value="unknown"/>
+        <li>
+          <star index="3"/>
+        </li>
+      </condition>
+      <person>
+        <star index="4"/>
+      </person>
+      <star index="5"/>?
+    <random><li>C'est une question un peu ambigue, je ne saurais y répondre.</li><li>J'avoue ne pas avoir cette réponse.</li><li>Si tu le sais, moi je n'en ai aucune idée.</li></random></template>
+</category>
+<category><pattern>PERSON *</pattern>
+<template><person>
+        <star/>
+      </person></template>
+</category>
+<category><pattern>_ SIGNIFIE _</pattern><that># SI TU AS UNE IDÉE DIS LE MOI #</that>
+<template><think>
+        <set name="equalto">
+          <srai>
+            <star/> EST <star index="2"/></srai>
+        </set>
+      </think>
+      <condition name="equalto">
+        <li value="false">
+        OK, quand tu dis "<star/>", cela signifie "<star index="2"/>". Je comprend mieux maintenant.
+        <learnf><category><pattern><eval><star/></eval></pattern><template><srai><eval><star index="2"/></eval></srai></template></category><category><pattern><eval><star/></eval> _</pattern><template><srai><eval><star index="2"/></eval><star/></srai></template></category><category><pattern>_ <eval><star/></eval></pattern><template><srai><star/><eval><star index="2"/></eval></srai></template></category><category><pattern>_ <eval><star/></eval> *</pattern><template><srai><star/><eval><star index="2"/></eval><star index="2"/></srai></template></category></learnf></li>
+        <li>Merci, de cette information.</li>
+      </condition></template>
+</category>
 </aiml>
