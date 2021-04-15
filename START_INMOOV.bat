@@ -17,7 +17,7 @@ echo ------------------------------------------------------
 echo Rotate log files for clean no worky
 
 del myrobotlab.log.1 > NUL
-mv myrobotlab.log myrobotlab.log.1
+move /y myrobotlab.log myrobotlab.log.1
 
 echo "Done."
 echo ------------------------------------------------------
