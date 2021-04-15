@@ -39,8 +39,8 @@ if isTorsoActivated or ScriptType=="Virtual":
     torso = Runtime.create("i01.torso","InMoovTorso")
     torso.startPeers()
     #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    torso.topStom.load()
-    torso.midStom.load()
+    #torso.topStom.load()
+    #torso.midStom.load()
     #end pffff :)      
     torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
     torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
