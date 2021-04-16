@@ -23,7 +23,8 @@ pipeline {
         // jdk 'openjdk-11-linux' // defined in global tools
         // git 
     }
-	
+
+stages {	
    def version = "2.0.${env.BUILD_NUMBER}" 
    def groupId = "fr.inmoov"
    def artifactId = "inmoov"
@@ -77,4 +78,5 @@ pipeline {
 
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
      }
+  }
 }
