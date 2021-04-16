@@ -6,17 +6,20 @@ TorsoConnectedToArduino=left
 
 [SERVO_MINIMUM_MAP_OUTPUT]
 ;your servo minimal limits
-topStom=0
-midStom=0
+topStom=60
+midStom=60
+lowStom=0
 
 [SERVO_MAXIMUM_MAP_OUTPUT]
 ;your servo maximal limits
-topStom=180
-midStom=180
+topStom=120
+midStom=120
+lowStom=100
 
 [SERVO_REST_POSITION]
 topStom=90
 midStom=90
+lowStom=90
 
 
 
@@ -26,26 +29,37 @@ midStom=90
 [SERVO_INVERTED]
 topStom=False
 midStom=False
+lowStom=False
+
 
 [MAX_VELOCITY]
 topStom=-1
 midStom=-1
+lowStom=-1
+
 
 [MINIMUM_MAP_INPUT]
 topStom=60
 midStom=60
+lowStom=0
+
 
 [MAXIMUM_MAP_INPUT]
 topStom=120
 midStom=120
+lowStom=100
 
 [SERVO_PIN]
 topStom=27
 midStom=28
+lowStom=29
+
 
 [SERVO_AUTO_DISABLE]
 topStom=True
 midStom=True
+lowStom=True
+
 
 ;----------------------------------- END --------------------------------------------------
 
