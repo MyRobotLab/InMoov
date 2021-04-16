@@ -9,12 +9,21 @@
  ***********************************************************************************/
 // [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
+pipeline {
 
-   
-// node ('ubuntu') { // use any node
-node ('master') { // use any node
+    // https://plugins.jenkins.io/agent-server-parameter/
+    // agent { label params['agent-name'] } 
+    agent any
 
+    // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
+
+    // echo params.agentName    
+    tools { 
+        maven 'M3' // defined in global tools - maven is one of the only installers that works well for global tool
+        // jdk 'openjdk-11-linux' // defined in global tools
+        // git 
+    }
+	
    def version = "2.0.${env.BUILD_NUMBER}" 
    def groupId = "fr.inmoov"
    def artifactId = "inmoov"
