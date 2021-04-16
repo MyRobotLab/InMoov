@@ -25,13 +25,6 @@ pipeline {
     }
 
 stages {	
-   def version = "2.0.${env.BUILD_NUMBER}" 
-   def groupId = "fr.inmoov"
-   def artifactId = "inmoov"
-
-   // deployment variables
-   def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
-   def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
    stage('clean') { 
       echo 'clean the workspace'
@@ -50,10 +43,19 @@ stages {
    }
 
    stage('zip') {
-   
+     script {
+	def version = "2.0.${env.BUILD_NUMBER}" 
+	def groupId = "fr.inmoov"
+	def artifactId = "inmoov"
+
+	// deployment variables
+	def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
+	def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
+
         sh "zip -r ${artifactId}-${version}.zip resource"
         // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
-	}
+     }
+   }
 
    /**
     * deployment locally by installing into maven like repo with nginx serving the repo directory
