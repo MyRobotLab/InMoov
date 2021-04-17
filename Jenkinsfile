@@ -46,11 +46,11 @@ pipeline {
 
       stage('build') { 
          steps {
-            def version = "2.0.${env.BUILD_NUMBER}" 
+            // def version = "2.0.${env.BUILD_NUMBER}" 
             echo "building ${env.JOB_NAME}..."
             mkdir 'resource'
             mkdir 'resource/InMoov'
-            echo version > 'resource/InMoov/version.txt'
+            echo '1.1.${env.BUILD_NUMBER}' > 'resource/InMoov/version.txt'
 /*
             script {
 
