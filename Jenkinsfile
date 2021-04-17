@@ -81,12 +81,12 @@ pipeline {
       stage('install') {
          steps {
             script {
-               if (isUnix()) {
+               // if (isUnix()) {
                   // sh "mkdir -p ${repo}${version}"
                   // sh "cp ${artifactId}-${version}.zip ${repo}${version}"
-               } else {
+               // } else {
                   // bat("tar.exe -r ${artifactId}-${version}.zip resource")
-               }
+               // }
 
                // ${artifactId}-{version}.pom
                def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
