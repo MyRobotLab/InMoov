@@ -27,9 +27,11 @@ pipeline {
    stages {    
 
       stage('clean') { 
-         echo 'clean the workspace'
-         // deleteDir()
-         cleanWs()
+         steps {
+            echo 'clean the workspace'
+            // deleteDir()
+            cleanWs()
+         }
       }
 
       // stage('check out') { 
@@ -39,23 +41,27 @@ pipeline {
       // }
 
       stage('build') { 
-         script {
-            sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+         steps {
+            script {
+               sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+            }
          }
       }
 
       stage('zip') {
-         script {
-            def version = "2.0.${env.BUILD_NUMBER}" 
-            def groupId = "fr.inmoov"
-            def artifactId = "inmoov"
+         steps {
+            script {
+               def version = "2.0.${env.BUILD_NUMBER}" 
+               def groupId = "fr.inmoov"
+               def artifactId = "inmoov"
 
-            // deployment variables
-            def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
-            def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
+               // deployment variables
+               def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
+               def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
-               sh "zip -r ${artifactId}-${version}.zip resource"
-               // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
+                  sh "zip -r ${artifactId}-${version}.zip resource"
+                  // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
+            }
          }
       }
 
@@ -63,25 +69,26 @@ pipeline {
       * deployment locally by installing into maven like repo with nginx serving the repo directory
       */
       stage('install') {
-         script {
-            sh "mkdir -p ${repo}${version}"
+         steps {
+            script {
+               sh "mkdir -p ${repo}${version}"
 
-            sh "cp ${artifactId}-${version}.zip ${repo}${version}"
+               sh "cp ${artifactId}-${version}.zip ${repo}${version}"
 
-            // ${artifactId}-{version}.pom
-            def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
-            echo "writing pom " + depFileName
-            File file = new File(depFileName)
-            file.write("<project>")
-            file.append("<modelVersion>4.0.0</modelVersion>")
-            file.append("<groupId>"+groupId+"</groupId>")
-            file.append("<artifactId>"+artifactId+"</artifactId>")
-            file.append("<version>"+version+"</version>")
-            file.append("<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>")
-            file.append("<url>http://myrobotlab.org</url>")
-            file.append("</project>")
+               // ${artifactId}-{version}.pom
+               def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
+               echo "writing pom " + depFileName
+               File file = new File(depFileName)
+               file.write("<project>")
+               file.append("<modelVersion>4.0.0</modelVersion>")
+               file.append("<groupId>"+groupId+"</groupId>")
+               file.append("<artifactId>"+artifactId+"</artifactId>")
+               file.append("<version>"+version+"</version>")
+               file.append("<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>")
+               file.append("<url>http://myrobotlab.org</url>")
+               file.append("</project>")
+            }
          }
-
          // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       }
    } // stages
