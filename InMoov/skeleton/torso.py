@@ -38,22 +38,23 @@ if isTorsoActivated or ScriptType=="Virtual":
     isTorsoActivated=1
     torso = Runtime.create("i01.torso","InMoovTorso")
     torso.startPeers()
-    #pffff :) we need to manualy load now to get last position to avoid breaking parts
-    #torso.topStom.load()
-    #torso.midStom.load()
-    #end pffff :)      
+        
     torso.topStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'topStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'topStom')) 
-    torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom')) 
+    torso.midStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'midStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'midStom'))
+    torso.lowStom.map(ThisSkeletonPartConfig.getint('MINIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('MAXIMUM_MAP_INPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MINIMUM_MAP_OUTPUT', 'lowStom'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM_MAP_OUTPUT', 'lowStom')) 
     
     torso.topStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'topStom'))
     torso.midStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'midStom'))
-    torso.lowStom.setMaxVelocity(-1)
+    torso.lowStom.setMaxVelocity(ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'lowStom'))
     
     torso.topStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'topStom'))
     torso.midStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'midStom'))
+    torso.lowStom.setRest(ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'lowStom'))
       
     torso.topStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'topStom'))
     torso.midStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'midStom'))
+    torso.lowStom.setInverted(ThisSkeletonPartConfig.getboolean('SERVO_INVERTED', 'lowStom'))
+
     
     i01.startTorso(TorsoConnectedToArduinoPort,TorsoConnectedToArduinoPortBoardType)
 
@@ -61,6 +62,8 @@ if isTorsoActivated or ScriptType=="Virtual":
     
     torso.topStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'topStom'))
     torso.midStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'midStom'))
+    torso.lowStom.setAutoDisable(ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'lowStom'))
+
        
   else:
     #we force parameter if arduino is off
