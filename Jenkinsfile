@@ -43,6 +43,7 @@ pipeline {
       stage('build') { 
          steps {
             script {
+               def version = "2.0.${env.BUILD_NUMBER}" 
                sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
             }
          }
