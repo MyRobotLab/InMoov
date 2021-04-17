@@ -23,7 +23,7 @@ pipeline {
         // jdk 'openjdk-11-linux' // defined in global tools
         // git 
     }
-
+   
    stages {    
 
       stage('clean') { 
@@ -44,7 +44,12 @@ pipeline {
          steps {
             script {
                def version = "2.0.${env.BUILD_NUMBER}" 
-               sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+
+               if (isUnix()) {
+                  sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+               } else {
+                  bat('type \"' + version + '\" > resource/InMoov/version.txt')
+               }               
             }
          }
       }
@@ -60,7 +65,11 @@ pipeline {
                def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
                def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
 
+               if (isUnix()) {
                   sh "zip -r ${artifactId}-${version}.zip resource"
+               } else {}
+                  bat("tar.exe -r ${artifactId}-${version}.zip resource")
+               }
                   // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
             }
          }
