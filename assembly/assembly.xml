@@ -4,7 +4,7 @@
   <id>bin</id>
   <includeBaseDirectory>false</includeBaseDirectory>
   <formats>
-    <format>tar.gz</format>
+    <!-- <format>tar.gz</format>  -->
     <format>zip</format>
   </formats>
   <fileSets>
@@ -21,4 +21,15 @@
       <outputDirectory>tools</outputDirectory>
     </fileSet>
   </fileSets>
+  <files>
+    <file>
+      <source>START_INMOOV.bat</source>
+      <outputDirectory>.</outputDirectory>
+    </file>
+    <file>
+      <source>start_inmoov.sh</source>
+      <outputDirectory>.</outputDirectory>
+      <fileMode>0755</fileMode>
+    </file>
+  </files>
 </assembly>
