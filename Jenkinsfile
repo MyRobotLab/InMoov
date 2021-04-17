@@ -23,14 +23,14 @@ pipeline {
         // jdk 'openjdk-11-linux' // defined in global tools
         // git 
     }
-   
-   stages {    
+
+   stages {
 
       stage('clean') { 
          steps {
             echo 'clean the workspace'
             // deleteDir()
-            cleanWs()
+            // cleanWs()
          }
       }
 
@@ -61,10 +61,6 @@ pipeline {
                def groupId = "fr.inmoov"
                def artifactId = "inmoov"
 
-               // deployment variables
-               def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
-               def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
-
                if (isUnix()) {
                   sh "zip -r ${artifactId}-${version}.zip resource"
                } else {
@@ -81,6 +77,11 @@ pipeline {
       stage('install') {
          steps {
             script {
+
+               // deployment variables
+               def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
+               def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
+
                // if (isUnix()) {
                   // sh "mkdir -p ${repo}${version}"
                   // sh "cp ${artifactId}-${version}.zip ${repo}${version}"
