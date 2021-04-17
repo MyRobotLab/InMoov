@@ -14,6 +14,10 @@ pipeline {
     // https://plugins.jenkins.io/agent-server-parameter/
     // agent { label params['agent-name'] } 
     agent any
+    options {
+        // This is required if you want to clean before build
+        skipDefaultCheckout(true)
+    }
 
     // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
 
@@ -30,20 +34,23 @@ pipeline {
          steps {
             echo 'clean the workspace'
             // deleteDir()
-            // cleanWs()
+            cleanWs()
          }
       }
 
-      // stage('check out') { 
-      //    // checkout scm - apparently below "polls" what is the rate?
-      //    // SHOULD BE -> git 'https://github.com/MyRobotLab/InMoov.git'
-      //    git 'https://github.com/MyRobotLab/inmoov.git'
-      // }
+      stage('check out') { 
+         steps {
+            checkout scm
+         }
+      }
 
       stage('build') { 
          steps {
+            def version = "2.0.${env.BUILD_NUMBER}" 
+            echo "building ${env.JOB_NAME}..."
+            echo version > 'resource/InMoov/version.txt'
+/*
             script {
-               def version = "2.0.${env.BUILD_NUMBER}" 
 
                if (isUnix()) {
                   sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
@@ -51,6 +58,7 @@ pipeline {
                   bat('type \"' + version + '\" > resource/InMoov/version.txt')
                }               
             }
+            */
          }
       }
 
