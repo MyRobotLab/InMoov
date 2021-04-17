@@ -67,7 +67,7 @@ pipeline {
 
                if (isUnix()) {
                   sh "zip -r ${artifactId}-${version}.zip resource"
-               } else {}
+               } else {
                   bat("tar.exe -r ${artifactId}-${version}.zip resource")
                }
                   // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
@@ -81,9 +81,12 @@ pipeline {
       stage('install') {
          steps {
             script {
-               sh "mkdir -p ${repo}${version}"
-
-               sh "cp ${artifactId}-${version}.zip ${repo}${version}"
+               if (isUnix()) {
+                  // sh "mkdir -p ${repo}${version}"
+                  // sh "cp ${artifactId}-${version}.zip ${repo}${version}"
+               } else {
+                  // bat("tar.exe -r ${artifactId}-${version}.zip resource")
+               }
 
                // ${artifactId}-{version}.pom
                def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
