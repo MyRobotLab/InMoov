@@ -46,12 +46,11 @@ pipeline {
          steps {
             script {
                if (isUnix()) {
-                  // sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
                   sh '''
                         echo "building ${env.JOB_NAME}..."
-                        mkdir 'resource'
-                        mkdir 'resource/InMoov'
-                        echo '1.1.${env.BUILD_NUMBER}' > 'resource/InMoov/version.txt'
+                        mkdir resource
+                        mkdir resource/InMoov
+                        echo "1.1.${env.BUILD_NUMBER}" > resource/InMoov/version.txt
                   '''
                } else {
                   bat('''
