@@ -3,34 +3,32 @@
  *
  * for adjusting build number for specific branch build
  * Jenkins.instance.getItemByFullName("InMoov2-multibranch/develop").updateNextBuildNumber(185)
- *  
+ *
  * CHANGE build.properties TO BUILD AND DEPLOY A NEW BUILD
  *
  ***********************************************************************************/
 // [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
 pipeline {
-
-    // https://plugins.jenkins.io/agent-server-parameter/
-    // agent { label params['agent-name'] } 
-    agent any
-    options {
-        // This is required if you want to clean before build
-        skipDefaultCheckout(true)
-    }
+   // https://plugins.jenkins.io/agent-server-parameter/
+   // agent { label params['agent-name'] }
+   agent any
+   options {
+      // This is required if you want to clean before build
+      skipDefaultCheckout(true)
+   }
 
     // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
 
-    // echo params.agentName    
-    tools { 
-        maven 'M3' // defined in global tools - maven is one of the only installers that works well for global tool
-        // jdk 'openjdk-11-linux' // defined in global tools
-        // git 
-    }
+   // echo params.agentName
+   tools {
+      maven 'M3' // defined in global tools - maven is one of the only installers that works well for global tool
+   // jdk 'openjdk-11-linux' // defined in global tools
+   // git
+   }
 
    stages {
-
-      stage('clean') { 
+      stage('clean') {
          steps {
             echo 'clean the workspace'
             // deleteDir()
@@ -38,45 +36,48 @@ pipeline {
          }
       }
 
-      stage('check out') { 
+      stage('check out') {
          steps {
             checkout scm
          }
       }
 
-      stage('build') { 
+      stage('build') {
          steps {
-            // def version = "2.0.${env.BUILD_NUMBER}" 
-            echo "building ${env.JOB_NAME}..."
-            mkdir 'resource'
-            mkdir 'resource/InMoov'
-            echo '1.1.${env.BUILD_NUMBER}' > 'resource/InMoov/version.txt'
-/*
             script {
-
                if (isUnix()) {
-                  sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+                  // sh 'echo \"' + version + '\" > resource/InMoov/version.txt'
+                  sh '''
+                        echo "building ${env.JOB_NAME}..."
+                        mkdir 'resource'
+                        mkdir 'resource/InMoov'
+                        echo '1.1.${env.BUILD_NUMBER}' > 'resource/InMoov/version.txt'
+                  '''
                } else {
-                  bat('type \"' + version + '\" > resource/InMoov/version.txt')
-               }               
-            }
-            */
-         }
-      }
+                  bat('''
+                        type "building ${env.JOB_NAME}..."
+                        mkdir 'resource'
+                        mkdir 'resource/InMoov'
+                        type '1.1.${env.BUILD_NUMBER}' > 'resource/InMoov/version.txt'
+                  ''')
+               } // isUnix
+            } // script
+         } // steps
+      } // stage
 
       stage('zip') {
          steps {
             script {
-               def version = "2.0.${env.BUILD_NUMBER}" 
-               def groupId = "fr.inmoov"
-               def artifactId = "inmoov"
+               def version = "2.0.${env.BUILD_NUMBER}"
+               def groupId = 'fr.inmoov'
+               def artifactId = 'inmoov'
 
                if (isUnix()) {
                   sh "zip -r ${artifactId}-${version}.zip resource"
                } else {
                   bat("tar.exe -r ${artifactId}-${version}.zip resource")
                }
-                  // archiveArtifacts artifacts: 'test.zip', fingerprint: true    
+            // archiveArtifacts artifacts: 'test.zip', fingerprint: true
             }
          }
       }
@@ -87,10 +88,9 @@ pipeline {
       stage('install') {
          steps {
             script {
-
                // deployment variables
-               def path = groupId.replace(".","/") + "/" + artifactId.replace(".","/")
-               def repo = "/repo/artifactory/myrobotlab/" + path + "/" 
+               def path = groupId.replace('.', '/') + '/' + artifactId.replace('.', '/')
+               def repo = '/repo/artifactory/myrobotlab/' + path + '/'
 
                // if (isUnix()) {
                   // sh "mkdir -p ${repo}${version}"
@@ -100,20 +100,20 @@ pipeline {
                // }
 
                // ${artifactId}-{version}.pom
-               def depFileName = repo + version + "/" + artifactId + "-" + version + ".pom"
-               echo "writing pom " + depFileName
+               def depFileName = repo + version + '/' + artifactId + '-' + version + '.pom'
+               echo 'writing pom ' + depFileName
                File file = new File(depFileName)
-               file.write("<project>")
-               file.append("<modelVersion>4.0.0</modelVersion>")
-               file.append("<groupId>"+groupId+"</groupId>")
-               file.append("<artifactId>"+artifactId+"</artifactId>")
-               file.append("<version>"+version+"</version>")
-               file.append("<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>")
-               file.append("<url>http://myrobotlab.org</url>")
-               file.append("</project>")
+               file.write('<project>')
+               file.append('<modelVersion>4.0.0</modelVersion>')
+               file.append('<groupId>' + groupId + '</groupId>')
+               file.append('<artifactId>' + artifactId + '</artifactId>')
+               file.append('<version>' + version + '</version>')
+               file.append('<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>')
+               file.append('<url>http://myrobotlab.org</url>')
+               file.append('</project>')
             }
          }
-         // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
+      // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       }
    } // stages
 } // pipeline
