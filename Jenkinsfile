@@ -9,6 +9,10 @@
  ***********************************************************************************/
 // [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
+def version = "2.0.${env.BUILD_NUMBER}"
+def groupId = 'fr.inmoov'
+def artifactId = 'inmoov'
+
 pipeline {
    // https://plugins.jenkins.io/agent-server-parameter/
    // agent { label params['agent-name'] }
