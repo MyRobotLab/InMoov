@@ -119,4 +119,25 @@ pipeline {
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       } */ // install stage
    } // stages
+
+   post {
+    success {
+         script {
+                if (isUnix()) {
+                  sh '''
+                        mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
+                                            -DgroupId=${GROUP_ID} \
+                                            -DartifactId=${ARTIFACT_ID} \
+                                            -Dversion=${VERSION} \
+                                            -Dpackaging=zip \
+                                            -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
+
+                  '''
+               } else {
+                  bat('''
+                ''')       
+               }         
+            }
+    }
+  }
 } // pipeline
