@@ -19,9 +19,9 @@ pipeline {
    agent any
 
     environment {
-        VERSION = version
-        GROUP_ID = groupId
-        ARTIFACT_ID = artifactId
+        VERSION = "${version}"
+        GROUP_ID = "${groupId}"
+        ARTIFACT_ID = "${artifactId}"
     }
 
    options {
