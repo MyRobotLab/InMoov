@@ -71,10 +71,6 @@ pipeline {
       stage('zip') {
          steps {
             script {
-               def version = "2.0.${env.BUILD_NUMBER}"
-               def groupId = 'fr.inmoov'
-               def artifactId = 'inmoov'
-
                if (isUnix()) {
                   sh "zip -r ${artifactId}-${version}.zip resource"
                } else {
