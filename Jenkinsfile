@@ -89,7 +89,7 @@ pipeline {
                                             -DartifactId=${ARTIFACT_ID} \
                                             -Dversion=${VERSION} \
                                             -Dpackaging=zip \
-                                            -DlocalRepositoryPath=test-repo
+                                            -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
 
                   '''
                } else {
