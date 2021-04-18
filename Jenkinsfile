@@ -1,69 +1,103 @@
 /**********************************************************************************
- * JenkinsFile for inmoov
+ * JenkinsFile for InMoov2
  *
  * for adjusting build number for specific branch build
- * Jenkins.instance.getItemByFullName("inmoov-multibranch/develop").updateNextBuildNumber(185)
- *  
+ * Jenkins.instance.getItemByFullName("InMoov2-multibranch/develop").updateNextBuildNumber(185)
+ *
  * CHANGE build.properties TO BUILD AND DEPLOY A NEW BUILD
  *
  ***********************************************************************************/
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/inmoov/'], pipelineTriggers([[$class: 'PeriodicFolderTrigger', interval: '2m']])])
+// [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
-node ('ubuntu') { // use any node
+def version = "2.0.${env.BUILD_NUMBER}"
+def groupId = 'fr.inmoov'
+def artifactId = 'inmoov'
 
-sh "set version=1.1.${env.BUILD_NUMBER}" 
+pipeline {
+   // https://plugins.jenkins.io/agent-server-parameter/
+   // agent { label params['agent-name'] }
+   agent any
 
-// def props = []
+    environment {
+        VERSION = version
+        GROUP_ID = groupId
+        ARTIFACT_ID = artifactId
+    }
 
-// node ('ubuntu') {  // use labels to direct build
-   // withEnv(javaEnv) {
-   
-   // def mvnHome
-   stage('preparation') { // for display purposes
-      echo 'clean the workspace'
-      cleanWs()
-      // Get some code from a GitHub repository
-      checkout scm
-      // git 'https://github.com/MyRobotLab/inmoov.git'
-      // git url: 'https://github.com/MyRobotLab/inmoov.git', branch: 'develop'
-      // props = readProperties file: 'build.properties'
-      // echo "props ${props}"
-      
-      sh 'git rev-parse --abbrev-ref HEAD > GIT_BRANCH'
-      git_branch = readFile('GIT_BRANCH').trim()
-      echo git_branch
-    
-      sh 'git rev-parse HEAD > GIT_COMMIT'
-      git_commit = readFile('GIT_COMMIT').trim()
-      echo git_commit
-    
-      echo git_commit
-      echo "git_commit=$git_commit"
-      // Run the maven build
-      if (isUnix()) {
-      // -o == offline      
-         
-         sh('printenv | sort')
-         sh "'ant' -Dversion=1.1.${env.BUILD_NUMBER}"
-      } else {
-        //  bat(/"${mvnHome}\bin\mvn" -Dbuild.number=${env.BUILD_NUMBER} -Dgit_commit=$git_commit -Dgit_branch=$git_branch -Dmaven.test.failure.ignore -q clean compile  /)
-        bat(/"ant" -Dversion=1.1.${env.BUILD_NUMBER}/)
-      }
+   options {
+      // This is required if you want to clean before build
+      skipDefaultCheckout(true)
    }
 
-   stage('publish') {
-   
-    
-   	def server = Artifactory.server 'repo' 
-   	def uploadSpec = """{
-                        "files": [
-                                    {
-                                        "pattern": "dist/inmoov-1.1.${env.BUILD_NUMBER}.zip",
-                                        "target": "inmoov/fr/inmoov/1.1.${env.BUILD_NUMBER}/"
-                                    }
-                                    ]
-                                }"""
-		server.upload(uploadSpec)
+    // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
 
-	}
-}
+   // echo params.agentName
+   tools {
+      maven 'M3' // defined in global tools - maven is one of the only installers that works well for global tool
+   // jdk 'openjdk-11-linux' // defined in global tools
+   // git
+   }
+
+   stages {
+      stage('clean') {
+         steps {
+            echo 'clean the workspace'
+            cleanWs()
+         }
+      }
+
+      stage('check out') {
+         steps {
+            checkout scm
+         }
+      }
+
+      stage('build') {
+         steps {
+            script {
+               if (isUnix()) {
+                  sh '''
+                        echo "building ${JOB_NAME}..."
+                        mkdir resource
+                        mkdir resource/InMoov
+                        echo "1.1.${BUILD_NUMBER}" > resource/InMoov/version.txt
+                        mvn package
+                  '''
+               } else {
+                  bat('''
+                        type "building ${JOB_NAME}..."
+                        mkdir 'resource'
+                        mkdir 'resource/InMoov'
+                        type '1.1.${BUILD_NUMBER}' > 'resource/InMoov/version.txt'
+                        mvn package
+                  ''')
+               } // isUnix
+            } // script
+         } // steps
+      } // stage
+
+      /**
+      * deployment locally by installing into maven like repo with nginx serving the repo directory
+      */
+      stage('install') {
+         steps {
+            script {
+                if (isUnix()) {
+                  sh '''
+                        mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
+                                            -DgroupId=${GROUP_ID} \
+                                            -DartifactId=${ARTIFACT_ID} \
+                                            -Dversion=${VERSION} \
+                                            -Dpackaging=zip \
+                                            -DlocalRepositoryPath=test-repo
+
+                  '''
+               } else {
+                  bat('''
+                ''')                
+            }
+         }
+      // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
+      }
+   } // stages
+} // pipeline
