@@ -122,6 +122,7 @@ pipeline {
 
    post {
     success {
+         echo "success running post process on ${env.NODE_NAME}"
          script {
                 if (isUnix()) {
                   sh '''
