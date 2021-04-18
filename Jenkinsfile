@@ -76,9 +76,17 @@ pipeline {
          } // steps
       } // stage
 
+     stage('archive') {
+         steps {
+            archiveArtifacts 'target/inmoov-${VERSION}.zip'
+         }
+      }
+
+
       /**
       * deployment locally by installing into maven like repo with nginx serving the repo directory
       */
+      /*
       stage('install') {
          steps {
             script {
@@ -98,6 +106,7 @@ pipeline {
                }         
             }
          }
+      */
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       }
    } // stages
