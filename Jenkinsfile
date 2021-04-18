@@ -100,8 +100,6 @@ pipeline {
 
                // ${artifactId}-{version}.pom
                def depFileName = repo + version + '/' + artifactId + '-' + version + '.pom'
-               echo 'writing pom ' + depFileName
-               File file = new File(depFileName)
 
                def pom = '<project>\n'
                pom += '<modelVersion>4.0.0</modelVersion>\n'
@@ -113,6 +111,7 @@ pipeline {
                pom += '<url>http://myrobotlab.org</url>\n'
                pom += '</project>\n'
 
+               echo 'writing pom ' + depFileName
                writeFile file: depFileName, text: pom
             }
          }
