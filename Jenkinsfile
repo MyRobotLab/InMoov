@@ -47,10 +47,10 @@ pipeline {
             script {
                if (isUnix()) {
                   sh '''
-                        echo "building ${env.JOB_NAME}..."
+                        echo "building ${JOB_NAME}..."
                         mkdir resource
                         mkdir resource/InMoov
-                        echo "1.1.${env.BUILD_NUMBER}" > resource/InMoov/version.txt
+                        echo "1.1.${BUILD_NUMBER}" > resource/InMoov/version.txt
                   '''
                } else {
                   bat('''
