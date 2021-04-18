@@ -42,9 +42,21 @@ pipeline {
       stage('clean') {
          steps {
             echo 'clean the workspace'
-            cleanWs()
+            // cleanWs()
+
+            script {
+               if (isUnix()) {
+                  sh '''
+                     mvn clean
+                  '''
+               } else {
+                  bat('''
+                     mvn clean
+                  ''')
+               }
+            }
          }
-      }
+      } 
 
       stage('check out') {
          steps {
@@ -78,7 +90,7 @@ pipeline {
 
      stage('archive') {
          steps {
-            archiveArtifacts 'target/inmoov-${VERSION}.zip'
+            archiveArtifacts 'target/inmoov-'+ version +'.zip'
          }
       }
 
