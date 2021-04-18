@@ -82,7 +82,7 @@ pipeline {
       stage('install') {
          steps {
             script {
-                if (isUnix())) {
+                if (isUnix()) {
                   sh '''
                         mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
                                             -DgroupId=${GROUP_ID} \
@@ -94,7 +94,8 @@ pipeline {
                   '''
                } else {
                   bat('''
-                ''')                
+                ''')       
+               }         
             }
          }
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
