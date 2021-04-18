@@ -106,8 +106,8 @@ pipeline {
                }         
             }
          }
-      */
+      
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
-      }
+      } */ // install stage
    } // stages
 } // pipeline
