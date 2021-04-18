@@ -64,23 +64,20 @@ pipeline {
          }
       }
 
+      // FIXME - InMoov/version file needs to be created
       stage('build') {
          steps {
             script {
                if (isUnix()) {
                   sh '''
                         echo "building ${JOB_NAME}..."
-                        mkdir resource
-                        mkdir resource/InMoov
-                        echo "1.1.${BUILD_NUMBER}" > resource/InMoov/version.txt
+                        # echo "1.1.${BUILD_NUMBER}" > resource/InMoov/version.txt
                         mvn package
                   '''
                } else {
                   bat('''
                         type "building ${JOB_NAME}..."
-                        mkdir 'resource'
-                        mkdir 'resource/InMoov'
-                        type '1.1.${BUILD_NUMBER}' > 'resource/InMoov/version.txt'
+                        # type '1.1.${BUILD_NUMBER}' > 'resource/InMoov/version.txt'
                         mvn package
                   ''')
                } // isUnix
