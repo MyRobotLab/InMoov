@@ -102,14 +102,18 @@ pipeline {
                def depFileName = repo + version + '/' + artifactId + '-' + version + '.pom'
                echo 'writing pom ' + depFileName
                File file = new File(depFileName)
-               file.write('<project>')
-               file.append('<modelVersion>4.0.0</modelVersion>')
-               file.append('<groupId>' + groupId + '</groupId>')
-               file.append('<artifactId>' + artifactId + '</artifactId>')
-               file.append('<version>' + version + '</version>')
-               file.append('<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>')
-               file.append('<url>http://myrobotlab.org</url>')
-               file.append('</project>')
+
+               def pom = '<project>\n'
+               pom += '<modelVersion>4.0.0</modelVersion>\n'
+               pom += '<modelVersion>4.0.0</modelVersion>\n'
+               pom += '<groupId>' + groupId + '</groupId>\n'
+               pom += '<artifactId>' + artifactId + '</artifactId>\n'
+               pom += '<version>' + version + '</version>\n'
+               pom += '<description>InMoov2 main service module for InMoov compatible with Nixie release of myrobotlab</description>\n'
+               pom += '<url>http://myrobotlab.org</url>\n'
+               pom += '</project>\n'
+
+               writeFile file: depFileName, text: pom
             }
          }
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
