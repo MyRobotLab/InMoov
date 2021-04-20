@@ -88,7 +88,7 @@ pipeline {
          }
       }
 */      
-      } // make install stage
+
    } // stages
 
    post {
