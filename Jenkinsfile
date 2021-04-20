@@ -12,7 +12,7 @@
 version = "2.0.${BUILD_NUMBER}"
 groupId = 'inmoov.fr'
 artifactId = 'inmoov'
-groupIdPath = groupId.replaceAll('\.','/')
+groupIdPath = groupId.replaceAll('\\.','/')
 
 pipeline {
 
@@ -37,9 +37,22 @@ pipeline {
    }
 
    stages {
+      stage('init') {
+         steps {
+            echo '====== init ======'
+            script {
+               if (isUnix()) {
+                  echo sh(script: 'env|sort', returnStdout: true)
+               } else {
+                  set
+               }
+            }
+         }
+      }
+
       stage('clean') {
          steps {
-            echo 'clean the workspace'
+            echo '====== clean ======'
             // cleanWs()
 
             script {
@@ -58,6 +71,7 @@ pipeline {
 
       stage('check out') {
          steps {
+            echo '====== check out ======'
             checkout scm
          }
       }
@@ -66,6 +80,7 @@ pipeline {
       stage('build') {
          steps {
             script {
+               echo '====== build ======'
                if (isUnix()) {
                   sh '''
                         echo "building ${JOB_NAME}..."
@@ -95,7 +110,7 @@ pipeline {
 
    post {
     success {
-         echo "installing into repo"
+         echo "====== installing into repo ======"
          
          sshagent(credentials : ['myrobotlab2.pem']) {
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
