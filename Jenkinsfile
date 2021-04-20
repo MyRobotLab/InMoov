@@ -99,12 +99,13 @@ pipeline {
             } // script
          } // steps
       } // stage
-
+/*
      stage('archive') {
          steps {
             archiveArtifacts 'target/inmoov-'+ version +'.zip'
          }
       }
+*/      
       /**
       * deployment locally by installing into maven like repo with nginx serving the repo directory
       */
@@ -121,12 +122,23 @@ pipeline {
                                             -Dpackaging=zip \
                                             -DlocalRepositoryPath=target/repo/artifactory/myrobotlab/
                   '''
-                     def remote = [name: 'test', host: 'test.test.com', user: 'rao', password: "password123", allowAnyHosts: true]
-                     sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
                } else {
                   bat('''
                 ''')       
                }         
+
+               
+               withCredentials([sshUserPrivateKey(credentialsId: 'myrobotlab2.pem', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ubuntu')]) {
+        
+               // def remote = [name: 'repo', identity = identity, host: 'repo.myrobotlab.org', user: 'ubuntu', password: "password123", allowAnyHosts: true]
+               def remote = [:]
+               remote.name = "node-1"
+               remote.host = "10.000.000.153"
+               remote.user = userName
+               remote.identityFile = identity
+               remote.allowAnyHosts = true
+               sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+
             }
          }
       
