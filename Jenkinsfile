@@ -117,7 +117,7 @@ pipeline {
             sshagent(credentials : ['myrobotlab2.pem']) {
                sh 'ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org uptime'
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
-               sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@hostname.com:/ubuntu'
+               sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/ubuntu'
                sh '''
                   mvn install:install-file  -Dfile=target/inmoov-0.0.1-SNAPSHOT.zip \
                         -DgroupId=${GROUP_ID} \
