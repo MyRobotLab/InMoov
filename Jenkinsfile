@@ -39,7 +39,7 @@ pipeline {
 
    options {
       // This is required if you want to clean before build
-      skipDefaultCheckout(true)
+//      skipDefaultCheckout(true)
    }
 
     // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
