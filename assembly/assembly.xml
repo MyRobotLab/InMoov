@@ -2,13 +2,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
   <id>bin</id>
-  <includeBaseDirectory>false</includeBaseDirectory>
-   
+  <includeBaseDirectory>false</includeBaseDirectory>   
   <formats>
     <!-- <format>tar.gz</format>  -->
     <format>zip</format>
   </formats>
-  <!-- TEMPORARY TO TEST OTHER PARTS OF BUILD
   <fileSets>
     <fileSet>
       <directory>${project.basedir}/data</directory>
@@ -23,7 +21,6 @@
       <outputDirectory>tools</outputDirectory>
     </fileSet>
   </fileSets>
-  -->
   <files>
     <file>
       <source>START_INMOOV.bat</source>
