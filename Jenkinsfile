@@ -52,7 +52,7 @@ pipeline {
                }
             }
          }
-      } 
+      }
 
       stage('check out') {
          steps {
