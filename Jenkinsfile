@@ -12,6 +12,7 @@
 version = "2.0.${BUILD_NUMBER}"
 groupId = 'inmoov.fr'
 artifactId = 'inmoov'
+groupIdPath = groupId.replaceAll('\.','/')
 
 pipeline {
 
@@ -20,6 +21,7 @@ pipeline {
     environment {
         VERSION = "${version}"
         GROUP_ID = "${groupId}"
+        GROUP_ID_PATH = "${groupIdPath}"
         ARTIFACT_ID = "${artifactId}"
     }
 
@@ -94,6 +96,7 @@ pipeline {
    post {
     success {
          echo "installing into repo"
+         
          sshagent(credentials : ['myrobotlab2.pem']) {
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
                sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
@@ -106,8 +109,8 @@ pipeline {
                         -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
                   
                   ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org sudo mv \
-                  /repo/artifactory/myrobotlab/${GROUP_ID}/${ARTIFACT_ID}/maven-metadata-local.xml \
-                         /repo/artifactory/myrobotlab/${GROUP_ID}/${ARTIFACT_ID}/maven-metadata.xml
+                  /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata-local.xml \
+                         /repo/artifactory/myrobotlab/${GROUP_ID_PATH}/${ARTIFACT_ID}/maven-metadata.xml
 
                '''
 
