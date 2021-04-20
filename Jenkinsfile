@@ -106,6 +106,7 @@ pipeline {
                         -Dpackaging=zip \
                         -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
                '''
-    }
-  }
+         } // sshagent
+    } // success
+  } // post
 } // pipeline
