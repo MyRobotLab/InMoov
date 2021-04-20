@@ -9,9 +9,9 @@
  ***********************************************************************************/
 // [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
-def version
-def groupId = 'fr.inmoov'
-def artifactId = 'inmoov'
+version = "2.0.${BUILD_NUMBER}"
+groupId = 'fr.inmoov'
+artifactId = 'inmoov'
 /*
 def remote = [:]
    remote.name = 'test'
