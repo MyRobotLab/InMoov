@@ -119,7 +119,7 @@ pipeline {
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
                sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
                sh '''
-                  ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org mvn install:install-file  -Dfile=target/inmoov-0.0.1-SNAPSHOT.zip \
+                  ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org mvn install:install-file  -Dfile=inmoov-0.0.1-SNAPSHOT.zip \
                         -DgroupId=${GROUP_ID} \
                         -DartifactId=${ARTIFACT_ID} \
                         -Dversion=${VERSION} \
@@ -128,8 +128,7 @@ pipeline {
 
                '''
             } // sshagent
-         } // steps
-      
+         } // steps      
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       } // make install stage
    } // stages
