@@ -114,6 +114,8 @@ pipeline {
          steps {
             script {
                 if (isUnix()) {
+                   sh ''' echo hello '''
+                   /*
                   sh '''
                         mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
                                             -DgroupId=${GROUP_ID} \
@@ -122,6 +124,7 @@ pipeline {
                                             -Dpackaging=zip \
                                             -DlocalRepositoryPath=target/repo/artifactory/myrobotlab/
                   '''
+                  */
                } else {
                   bat('''
                 ''')       
