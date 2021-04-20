@@ -9,7 +9,7 @@
  ***********************************************************************************/
 // [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/']
 
-def version = "2.0.${env.BUILD_NUMBER}"
+def version = "2.0.${BUILD_NUMBER}"
 def groupId = 'fr.inmoov'
 def artifactId = 'inmoov'
 /*
