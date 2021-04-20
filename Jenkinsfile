@@ -100,6 +100,7 @@ pipeline {
          } // steps
       } // stage
 /*
+     # not necessary to archive files - because the install step will copy the file up
      stage('archive') {
          steps {
             archiveArtifacts 'target/inmoov-'+ version +'.zip'
@@ -110,39 +111,24 @@ pipeline {
       * deployment locally by installing into maven like repo with nginx serving the repo directory
       */
       
-      stage('make install') {
+      stage('install into repo') {
          steps {
-            script {
-                if (isUnix()) {
-                   sh ''' echo hello '''
-                   /*
-                  sh '''
-                        mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
-                                            -DgroupId=${GROUP_ID} \
-                                            -DartifactId=${ARTIFACT_ID} \
-                                            -Dversion=${VERSION} \
-                                            -Dpackaging=zip \
-                                            -DlocalRepositoryPath=target/repo/artifactory/myrobotlab/
-                  '''
-                  */
-               } else {
-                  bat('''
-                ''')       
-               }         
-               withCredentials([sshUserPrivateKey(credentialsId: 'myrobotlab2.pem', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ubuntu')]) {
-        
-               // def remote = [name: 'repo', identity = identity, host: 'repo.myrobotlab.org', user: 'ubuntu', password: "password123", allowAnyHosts: true]
-               def remote = [:]
-               remote.name = "node-1"
-               remote.host = "10.000.000.153"
-               remote.user = userName
-               remote.identityFile = identity
-               remote.allowAnyHosts = true
-               sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
-              }
 
-            }
-         }
+            sshagent(credentials : ['myrobotlab2.pem']) {
+               sh 'ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org uptime'
+               sh 'ssh -v ubuntu@repo.myrobotlab.org'
+               sh 'scp ./source/filename user@hostname.com:/remotehost/target'
+               sh '''
+                  mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
+                        -DgroupId=${GROUP_ID} \
+                        -DartifactId=${ARTIFACT_ID} \
+                        -Dversion=${VERSION} \
+                        -Dpackaging=zip \
+                        -DlocalRepositoryPath=target/repo/artifactory/myrobotlab/
+
+               '''
+            } // sshagent
+         } // steps
       
       // sh "cp ${artifactId}-${version}.zip ${repo}latest.release/${artifactId}-latest.release.zip"
       } // make install stage
