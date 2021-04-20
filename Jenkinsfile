@@ -95,7 +95,6 @@ pipeline {
     success {
          echo "installing into repo"
          sshagent(credentials : ['myrobotlab2.pem']) {
-               sh 'ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org uptime'
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
                sh 'scp ./target/inmoov-0.0.1-SNAPSHOT.zip ubuntu@repo.myrobotlab.org:/home/ubuntu'
                sh '''
@@ -105,7 +104,13 @@ pipeline {
                         -Dversion=${VERSION} \
                         -Dpackaging=zip \
                         -DlocalRepositoryPath=/repo/artifactory/myrobotlab/
+                  
+                  ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org sudo mv \
+                  /repo/artifactory/myrobotlab/${GROUP_ID}/${ARTIFACT_ID}/maven-metadata-local.xml \
+                         /repo/artifactory/myrobotlab/${GROUP_ID}/${ARTIFACT_ID}/maven-metadata.xml
+
                '''
+
          } // sshagent
     } // success
   } // post
