@@ -126,8 +126,6 @@ pipeline {
                   bat('''
                 ''')       
                }         
-
-               
                withCredentials([sshUserPrivateKey(credentialsId: 'myrobotlab2.pem', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ubuntu')]) {
         
                // def remote = [name: 'repo', identity = identity, host: 'repo.myrobotlab.org', user: 'ubuntu', password: "password123", allowAnyHosts: true]
@@ -138,6 +136,7 @@ pipeline {
                remote.identityFile = identity
                remote.allowAnyHosts = true
                sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+              }
 
             }
          }
