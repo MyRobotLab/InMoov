@@ -36,12 +36,12 @@ pipeline {
         GROUP_ID = "${groupId}"
         ARTIFACT_ID = "${artifactId}"
     }
-/*
+
    options {
       // This is required if you want to clean before build
      skipDefaultCheckout(true)
    }
-*/
+
     // properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '3')), [$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/MyRobotLab/InMoov2/'], pipelineTriggers([pollSCM('* * * * *')])])
 
    // echo params.agentName
@@ -117,7 +117,7 @@ pipeline {
             sshagent(credentials : ['myrobotlab2.pem']) {
                sh 'ssh -o StrictHostKeyChecking=no ubuntu@repo.myrobotlab.org uptime'
                sh 'ssh -v ubuntu@repo.myrobotlab.org'
-               sh 'scp ./source/filename user@hostname.com:/remotehost/target'
+               sh 'scp ./target/inmoov-${VERSION}.zip user@hostname.com:/ubuntu'
                sh '''
                   mvn install:install-file  -Dfile=target/inmoov-${VERSION}.zip \
                         -DgroupId=${GROUP_ID} \
