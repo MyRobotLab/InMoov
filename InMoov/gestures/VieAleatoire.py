@@ -1,0 +1,6 @@
+def VieAleatoire():
+  MoveRandomTimer.startClock()
+  
+  
+
+  

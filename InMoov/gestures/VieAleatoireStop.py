@@ -1,0 +1,4 @@
+def VieAleatoireStop():
+  MoveRandomTimer.stopClock()
+
+  

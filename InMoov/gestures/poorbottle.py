@@ -1,0 +1,17 @@
+def poorbottle():
+  i01.startedGesture()
+  i01.setHandSpeed("left", 19, 19, 19, 19, 19, 19)
+  i01.setHandSpeed("right", 19, 36, 19, 19, 19, 19)
+  i01.setArmSpeed("left", 19, 19, 22.0, 19)
+  i01.setArmSpeed("right", 19, 19, 19, 19)
+  i01.setHeadSpeed(22.0, 22.0)
+  i01.moveHead(0,92)
+  i01.setTorsoSpeed(100.0,100.0,100.0)
+  i01.moveArm("left",55,40,94,55)
+  i01.moveArm("right",80,62,38,10)
+  i01.moveHand("left",180,140,150,164,180,0)
+  i01.moveHand("right",145,112,127,105,143,150)
+  i01.moveTorso(90,90,90)
+  sleep(1)
+  i01.finishedGesture()
+
