@@ -1,7 +1,7 @@
 def muscle():
   i01.startedGesture()
-  i01.setHandSpeed("left", 100.0.0, 100.0.0, 100.0.0, 100.0.0, 100.0.0, 100.0.0)
-  i01.setHandSpeed("right", 100.0.0, 100.0.0, 100.0.0, 100.0.0, 100.0.0, 100.0.0)
+  i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+  i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setArmSpeed("right", 31.0, 43.0, 59, 43.0)
   i01.setArmSpeed("left", 31.0, 43.0, 59, 43.0)
   i01.setHeadSpeed(22.0, 22.0)
@@ -18,8 +18,8 @@ def muscle():
   sleep(2)
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
-  i01.setArmSpeed("right", 100.0.0, 100.0.0, 100.0.0, 100.0.0)
-  i01.setArmSpeed("left", 100.0.0, 100.0.0, 100.0.0, 100.0.0)
+  i01.setArmSpeed("right", 100.0, 100.0, 100.0, 100.0)
+  i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)
   i01.setHeadSpeed(43.0, 43.0)
   i01.setTorsoSpeed(31.0, 13.0, 100.0)
   i01.moveHead(90,45)
@@ -35,4 +35,3 @@ def muscle():
   i01.finishedGesture()
   relax()
   sleep(1)
-
