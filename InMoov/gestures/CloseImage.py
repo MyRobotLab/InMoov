@@ -1,2 +1,0 @@
-def CloseImage():
-  imagedisplay.closeAll()
