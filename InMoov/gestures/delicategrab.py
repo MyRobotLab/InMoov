@@ -1,0 +1,15 @@
+def delicategrab():
+  i01.startedGesture()
+  i01.setHandSpeed("left", 26.00, 19, 100.0, 100.0, 100.0, 100.0)
+  i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+  i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)
+  i01.setArmSpeed("right", 100.0, 100.0, 100.0, 100.0)
+  i01.setHeadSpeed(100.0, 100.0)
+  i01.moveHead(21,98)
+  i01.moveArm("left",30,72,77,10)
+  i01.moveArm("right",0,91,28,17)
+  i01.moveHand("left",180,130,4,0,0,180)
+  i01.moveHand("right",86,51,133,162,153,180)
+  sleep(1)
+  i01.finishedGesture()
+
