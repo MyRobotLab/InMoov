@@ -114,7 +114,7 @@ def humanDetected():
     
 def SleepTimerRoutine(timedata):
   if not i01.RobotIsSleeping:
-    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
+    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 254, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
     SleepTimer.stopClock()  
