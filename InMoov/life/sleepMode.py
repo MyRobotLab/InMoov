@@ -84,11 +84,11 @@ def sleepModeSleep():
 def welcomeMessage():
   
   if isChatbotActivated:
-    if str(i01.chatBot.getPredicate("default","firstinit"))=="unknown" or str(i01.chatBot.getPredicate("default","firstinit"))=="started":
-      i01.chatBot.setPredicate("default","topic","default")
-      i01.chatBot.getResponse("FIRST_INIT")
+    if str(i01_chatBot.getPredicate("Friend","firstinit"))=="unknown" or str(i01_chatBot.getPredicate("Friend","firstinit"))=="started":
+      i01_chatBot.setPredicate("Friend","topic","default")
+      i01_chatBot.getResponse("FIRST_INIT")
     else:
-      i01.chatBot.getResponse("WAKE_UP")
+      i01_chatBot.getResponse("WAKE_UP")
   else:
     i01.speakBlocking(i01.languagePack.get("ready"))
   i01.RobotIsStarted=True
@@ -114,7 +114,7 @@ def humanDetected():
     
 def SleepTimerRoutine(timedata):
   if not i01.RobotIsSleeping:
-    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 255, 1)
+    if isNeopixelActivated:i01.setNeopixelAnimation("Larson Scanner", 0, 0, 254, 1)
     PirControlerArduino.disablePin(PirPin)
     #sleep function to call
     SleepTimer.stopClock()  
