@@ -8,7 +8,7 @@ def heard(data):
 
   if (data == "are you alright"):
     x = (random.randint(1, 2))
-    i01.setHeadVelocity(43.0,-1,43.0,43.0,-1)
+    i01.setHeadSpeed(43.0,100.0,43.0,43.0,100.0)
     i01.moveHead(90,60,90,180,65)
     sleep(1)
     i01.moveHead(90,120,90,180,65)
@@ -27,7 +27,7 @@ def heard(data):
       i01.moveHand("right",59,53,89,61,36,21)
       i01.moveTorso(90,90,90)
       sleep(0.2)
-      i01.setHeadVelocity(-1,-1,-1,-1,-1)
+      i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0)
       i01.moveHead(90,90,90,90,65)
       sleep(1)
       relax()
@@ -39,7 +39,7 @@ def heard(data):
       i01.moveHand("right",59,53,89,61,36,21)
       i01.moveTorso(90,90,90)
       sleep(0.2)
-      i01.setHeadVelocity(-1,-1,-1,-1,-1)
+      i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0)
       i01.moveHead(90,90,90,90,65)
       sleep(1)
       relax()
@@ -109,7 +109,7 @@ def heard(data):
     i01.mouth.speak("okay, good")
 
   if (data == "look at the people"):
-    i01.setHeadVelocity(36.0, 36.0)
+    i01.setHeadSpeed(36.0, 36.0)
     for y in range(0, 10):
       x = (random.randint(1, 5))
       if x == 1:
@@ -178,12 +178,12 @@ def heard(data):
 
   if (data =="do you like to eat indian food "):
     fullspeed()
-    i01.setHeadVelocity(43.0, 36, 50, 50, -1)
+    i01.setHeadSpeed(43.0, 36, 50, 50, 100.0)
     i01.moveHead(60,40,7,85,52)
     sleep(1)
     i01.moveHead(80,40,7,85,52)
     sleep(2)
-    i01.setHeadVelocity(0.92, 36, 50, 50, -1)
+    i01.setHeadSpeed(92, 36, 50, 50, 100.0)
     i01.moveHead(100,40,7,85,52)
     sleep(0.4)
     i01.moveArm("left",85,106,25,18)
@@ -282,11 +282,11 @@ def heard(data):
         relax()
         sleep(1)
         rest()
-      #i01.setHandVelocity("left", -1, -1, -1, -1, -1, -1)
-      #i01.setHandVelocity("right", -1, -1, -1, -1, -1, -1)
-      #i01.setArmVelocity("right", 59, 59, 59, 43.0)
-      #i01.setArmVelocity("left", 59, 59, 59, 43.0)
-      #i01.setHeadVelocity(31.0, 31.0)
+      #i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+      #i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
+      #i01.setArmSpeed("right", 59, 59, 59, 43.0)
+      #i01.setArmSpeed("left", 59, 59, 59, 43.0)
+      #i01.setHeadSpeed(31.0, 31.0)
       #i01.moveHead(70,79,85,85,65)
       #i01.moveArm("left",5,90,10,10)
       #i01.moveArm("right",15,90,40,10)
@@ -333,17 +333,17 @@ def heard(data):
 
   if (data == "to the left"):
       directionServo.moveTo(135)
-      i01.setHeadVelocity(31.0, 31.0)
+      i01.setHeadSpeed(31.0, 31.0)
       i01.moveHead(70,124)
 
   if (data == "to the right"):
       directionServo.moveTo(45)
-      i01.setHeadVelocity(31.0, 31.0)
+      i01.setHeadSpeed(31.0, 31.0)
       i01.moveHead(70,63)
 
   if (data == "go straight"):
       directionServo.moveTo(83)
-      i01.setHeadVelocity(31.0, 31.0)
+      i01.setHeadSpeed(31.0, 31.0)
       i01.moveHead(70,80)
 
   if (data == "disconnect wheel"):
@@ -422,19 +422,19 @@ def heard(data):
       relax()
       weathervar += 1
     elif weathervar == 5:
-      i01.setHeadVelocity(59, 59, 50, 50, -1)
+      i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,66)
       sleep(1)
-      i01.setHeadVelocity(59, 59, 50, 50, -1)
+      i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,110)
       sleep(1)
-      i01.setHeadVelocity(59, 59, 50, 50, -1)
+      i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,66)
       sleep(1)
-      i01.setHeadVelocity(59, 59, 50, 50, -1)
+      i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,110)
       sleep(1)
-      i01.setHeadVelocity(59, 59, 50, 50, -1)
+      i01.setHeadSpeed(59, 59, 50, 50, 100.0)
       i01.moveHead(80,66)
       sleep(1)
       i01.mouth.speak("Well, well, Humans are worst than robots, they never learn")

@@ -1,9 +1,9 @@
 def more():
   i01.startedGesture()
-  i01.setHandVelocity("right", 31.0, 31.0, 31.0, 31.0, 31.0, 22.0)
-  i01.setArmVelocity("left", 43.0, 36, 43.0, 59)
-  i01.setArmVelocity("right", 31.0, 22.0, 22.0, 22.0)
-  i01.setHeadVelocity(22.0, 22.0)
+  i01.setHandSpeed("right", 31.0, 31.0, 31.0, 31.0, 31.0, 22.0)
+  i01.setArmSpeed("left", 43.0, 36, 43.0, 59)
+  i01.setArmSpeed("right", 31.0, 22.0, 22.0, 22.0)
+  i01.setHeadSpeed(22.0, 22.0)
   i01.moveHead(13,80)
   i01.moveArm("left",64,52,59,23)
   i01.moveArm("right",75,60,50,16)

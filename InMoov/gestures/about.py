@@ -1,8 +1,8 @@
 def about():
   i01.startedGesture()
-  i01.setArmVelocity("right", 3, 3, 5.0, 5.0);
-  i01.setArmVelocity("left", 3, 3, 5.0, 5.0);
-  i01.setHeadVelocity(5.0,5.0)
+  i01.setArmSpeed("right", 3, 3, 5.0, 5.0);
+  i01.setArmSpeed("left", 3, 3, 5.0, 5.0);
+  i01.setHeadSpeed(5.0,5.0)
   i01.moveArm("right", 64, 94, 10, 10);
 
   i01.mouth.speakBlocking("I am the first life size humanoid robot you can 3D print and animate")

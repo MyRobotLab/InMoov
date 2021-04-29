@@ -1,5 +1,5 @@
 def lookatpeople():
-  i01.setHeadVelocity(40, 40, 40)
+  i01.setHeadSpeed(40, 40, 40)
   x = (random.randint(1, 5))
   if x == 1:
     fullspeed()

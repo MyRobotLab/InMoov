@@ -1,5 +1,5 @@
 def lookaroundyou():
-  i01.setHeadVelocity(80, 80, 50, 50, -1)
+  i01.setHeadSpeed(80, 80, 50, 50, 100.0)
   i01.mouth.speak("ok you have my attention")
   for x in range(0, 1):
     x = (random.randint(1, 6))

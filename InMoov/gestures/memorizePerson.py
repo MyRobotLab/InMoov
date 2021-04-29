@@ -15,7 +15,7 @@ def YesName(name):
       fr.trainName = name
       # set the filter to be in training mode (Where it learns new images)
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.TRAIN)
-      i01.setHeadVelocity(70, 70, 70)
+      i01.setHeadSpeed(70, 70, 70)
       i01.moveHead(90,90,20)
       sleep(1.3)
       i01.moveHead(90,90,170)

@@ -1,6 +1,6 @@
 
 def YoloOnUSonic():
-  i01.setHeadVelocity(-1,-1,-1,-1,-1,-1)
+  i01.setHeadSpeed(100.0,100.0,100.0,100.0,100.0,100.0)
   if ultraSonicSensorActivated:
     distance=200
     timeout=0

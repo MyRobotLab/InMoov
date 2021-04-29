@@ -10,7 +10,7 @@ def whoisthis():
       fr.train#Name = name
       fr.setMode(OpenCVFilterFaceRecognizer.Mode.RECOGNIZE)
       sleep(6)
-      i01.setHeadVelocity(70, 70, 70)
+      i01.setHeadSpeed(70, 70, 70)
       i01.moveHead(90,90,20)
       sleep(1.3)
       i01.moveHead(90,90,170)

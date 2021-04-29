@@ -1,11 +1,11 @@
 def signature():
   i01.startedGesture()
   ##approach
-  i01.setHeadVelocity(31.0,31.0,-1,-1,-1)
-  i01.setArmVelocity("left",31.0,31.0,31.0,31.0)
-  i01.setArmVelocity("right",31.0,31.0,31.0,31.0)
-  i01.setHandVelocity("left",31.0,31.0,31.0,31.0,31.0,31.0)
-  i01.setHandVelocity("right",31.0,31.0,31.0,31.0,31.0,31.0)
+  i01.setHeadSpeed(31.0,31.0,100.0,100.0,100.0)
+  i01.setArmSpeed("left",31.0,31.0,31.0,31.0)
+  i01.setArmSpeed("right",31.0,31.0,31.0,31.0)
+  i01.setHandSpeed("left",31.0,31.0,31.0,31.0,31.0,31.0)
+  i01.setHandSpeed("right",31.0,31.0,31.0,31.0,31.0,31.0)
   i01.moveHead(0,102,90,90,74)
   i01.moveArm("left",84,73,49,10)
   i01.moveArm("right",82,67,45,24)

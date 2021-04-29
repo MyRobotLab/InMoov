@@ -1,9 +1,9 @@
 def dontworry():
   i01.startedGesture()
-  i01.setHandVelocity("left", 50, 50, 50, 50, 50, 59)
-  i01.setHandVelocity("right", 50, 50, 50, 50, 50, 59)
-  i01.setArmVelocity("left", -1.0, -1.0, -1.0, -1.0)
-  i01.setArmVelocity("right", 50, -1, -1, -1)
+  i01.setHandSpeed("left", 50, 50, 50, 50, 50, 59)
+  i01.setHandSpeed("right", 50, 50, 50, 50, 50, 59)
+  i01.setArmSpeed("left", 100.0, 100.0, 100.0, 100.0)
+  i01.setArmSpeed("right", 50, 100.0, 100.0, 100.0)
   i01.moveHead(116,80)
   i01.moveArm("left",85,93,42,16)
   i01.moveArm("right",87,93,37,18)
@@ -15,4 +15,3 @@ def dontworry():
   sleep(2)
   i01.finishedGesture()
   relax()
-    
