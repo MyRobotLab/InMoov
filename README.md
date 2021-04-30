@@ -4,7 +4,7 @@ This is the full configurable internationnal launcher script for Inmoov service.
 Worky out of the box with standardized InMoov hardware configuration.  
 
 
-![virtual inmoov screenshot](http://www.myai.cloud/pic/main.png)
+![virtual inmoov screenshot](https://inmoov.fr/wp-content/uploads/2020/04/webgui49.png)
 
 ## Getting Started
 MORE informations here : http://myrobotlab.org/service/InMoov  
