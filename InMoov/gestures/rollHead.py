@@ -11,6 +11,4 @@ def rollHead():
   sleep(1)
   i01.moveHead(90,90,90)
   sleep(1)
-  i01.mouth.speakBlocking("thanks a lot, it feels great. doctor")
-  #i01.mouth.speakBlocking(u"Большое спасибо, он чувствует себя прекрасно. Доктор")
   i01.finishedGesture()
