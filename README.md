@@ -6,5 +6,4 @@ please use master branch for the stable release ( Manticore )
   
 https://github.com/MyRobotLab/inmoov  
   
-  
 MORE INFO : http://myrobotlab.org/service/InMoov  
