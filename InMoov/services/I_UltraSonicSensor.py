@@ -26,10 +26,10 @@ if ultraSonicRightActivated:
   try:
     ultraSonicRightArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicRightArduino'))
     ultrasonicRight.attach(ultraSonicRightArduino, trigRightPin, echoRightPin)
-    i01.ultrasonicSensor=ultrasonicRight
+    i01.ultrasonicRight=ultrasonicRight
     talkEvent(lang_startingUltraSonicRight)
     # range can also be retreieved in a blocking call
-    print "ultrasonicRight test is: ", i01.getUltrasonicSensorDistance()
+    print "ultrasonicRight test is: ", i01.getUltrasonicRightDistance()
   except:
     errorSpokenFunc('BAdrduinoChoosen','ultra Sonic Sensor Right')
     ultraSonicRightActivated=False
@@ -41,10 +41,10 @@ if ultraSonicLeftActivated:
   try:
     ultraSonicLeftArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicLeftArduino'))
     ultrasonicLeft.attach(ultraSonicLeftArduino, trigLeftPin, echoLeftPin)
-    i01.ultrasonicSensor=ultrasonicLeft
+    i01.ultrasonicLeft=ultrasonicLeft
     talkEvent(lang_startingUltraSonicLeft)
     # range can also be retreieved in a blocking call
-    print "ultrasonicLeft test is: ", i01.getUltrasonicSensorDistance()
+    print "ultrasonicLeft test is: ", i01.getUltrasonicLeftDistance()
   except:
     errorSpokenFunc('BAdrduinoChoosen','ultra Sonic Sensor Left')
     ultraSonicLeftActivated=False
