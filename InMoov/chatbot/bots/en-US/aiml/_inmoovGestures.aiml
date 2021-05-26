@@ -507,7 +507,13 @@
 <template><srai>OFF KINECT</srai></template>
 </category>
 <category><pattern>MEASURING THE DISTANCE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("in centimeters I measure ")</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("In centimeters, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEASURING THE DISTANCE ON THE LEFT SIDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("In centimeters, on my left side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEASURING THE DISTANCE ON THE RIGHT SIDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("In centimeters, on my right side, I measure ")</param></mrl></oob></template>
 </category>
 <category><pattern>MOVEMENT NUMBER 1</pattern>
 <template>CYCLE GESTURE ONE
