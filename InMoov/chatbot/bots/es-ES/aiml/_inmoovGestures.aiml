@@ -652,6 +652,21 @@
     </category>
 
     <category>
+      <pattern>MEDICIÓN DE LA DISTANCIA</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centímetros mido")</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>MEDICIÓN DE LA DISTANCIA DEL LADO IZQUIERDO</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("En centímetros, en mi lado izquierdo, mido")</param></mrl></oob></template>
+    </category>
+
+    <category>
+      <pattern>MEDICIÓN DE LA DISTANCIA DEL LADO DERECHO</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("En centímetros, en mi lado derecho, mido")</param></mrl></oob></template>
+    </category>    
+
+    <category>
       <pattern>FREEZE BODY CAPTURE</pattern>
       <template>
         <srai>OFF KINECT</srai>
