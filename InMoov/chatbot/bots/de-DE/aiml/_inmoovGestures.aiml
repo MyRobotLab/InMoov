@@ -352,6 +352,15 @@
 <template>Stoppen Sie Kinect
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
 </category>
+<category><pattern>ABSTAND MESSEN</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("In Zentimetern messe ich ")</param></mrl></oob></template>
+</category>
+<category><pattern>MESSEN DES ABSTANDES AUF DER LINKEN SEITE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("In Zentimetern messe ich auf meiner linken Seite ")</param></mrl></oob></template>
+</category>
+<category><pattern>MESSEN DES ABSTANDES AUF DER RECHTEN SEITE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("In Zentimetern auf meiner rechten Seite messe ich")</param></mrl></oob></template>
+</category>
 <category><pattern>BEWEGUNGSNUMMER 1</pattern>
 <template>Bewegungsnummer 1
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
@@ -642,7 +651,7 @@
 <template><srai>SPIELEN SIE YOUTUBE</srai></template>
 </category>
 <category><pattern>ZEIGEN SIE MIR EIN BILD VON EINEM *</pattern>
-<template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
+<template>Okay <oob><mrl><service>python</service><method>exec</method><param>find_image("<star/>")</param></mrl></oob></template>
 </category>
 <category><pattern>ZEIGEN SIE MIR EIN BILD DES *</pattern>
 <template><srai>ZEIGEN SIE MIR EIN BILD VON EINEM * </srai></template>
