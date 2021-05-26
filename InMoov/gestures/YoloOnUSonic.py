@@ -8,7 +8,7 @@ def YoloOnUSonic():
     while (not distance or distance > 100): 
       timeout+=1
       timeoutGetCloser+=1
-      distance=i01.getUltrasonicSensorDistance()
+      distance=i01.getUltrasonicRightDistance()
       print distance
       if timeout > 20:
         i01.chatBot.getResponse("SYSTEM_NO_OBJECT")
@@ -27,4 +27,4 @@ def YoloOnUSonic():
   else:
     sleep(1)
     No()
-    i01.mouth.speakBlocking("I think my Ultrasonic is not activated")
+    i01.speakBlocking("I think my Ultrasonic is not activated")
