@@ -454,6 +454,12 @@
 <category><pattern>MISURANDO LA DISTANZA</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("in centimeters I measure ")</param></mrl></oob></template>
 </category>
+<category><pattern>MISURAZIONE DELLA DISTANZA SUL LATO SINISTRO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("In centimetri, alla mia sinistra, misuro ")</param></mrl></oob></template>
+</category>
+<category><pattern>MISURAZIONE DELLA DISTANZA SUL LATO DESTRO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("In centimetri, alla mia destra, misuro ")</param></mrl></oob></template>
+</category>
 <category><pattern>MOVIMENTO NUMERO 1</pattern>
 <template>MOVIMENTO NUMERO 1
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
