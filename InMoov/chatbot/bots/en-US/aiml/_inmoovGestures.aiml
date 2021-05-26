@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <!-- File: _inmoovGestures.aiml -->
-<!-- Author: Greg Perry -->
-<!-- Last modified: octobre 24, 2018 -->
-<!--  -->
-<!-- This AIML file is part of the EN-US 0.1 chat bot knowledge base. -->
-<!--  -->
-<!-- The EN-US brain is Copyright &copy; 2018 by InMoov Foundation. -->
-<!--  -->
-<!-- The EN-US brain is released under the terms of the GNU Lesser General -->
-<!-- Public License, as published by the Free Software Foundation. -->
-<!--  -->
-<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
-<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
-<!--  -->
-<!-- For more information see http://www.inmoov.fr -->
 <!--  -->
 <category><pattern>REST</pattern>
 <template><random>
@@ -196,8 +182,7 @@
 <template><srai>OFF CAMERA</srai></template>
 </category>
 <category><pattern>CAPTURE GESTURE</pattern>
-<template>
-        <oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>captureGesture2()</param></mrl></oob></template>
 </category>
 <category><pattern>GIVING</pattern>
 <template>Giving.
@@ -263,6 +248,10 @@
 <template>Servos are set to full speed now.
         <oob><mrl><service>python</service><method>exec</method><param>fullspeed()</param></mrl></oob></template>
 </category>
+<category><pattern>HALF SPEED</pattern>
+<template>Servos are set to half speed now.
+        <oob><mrl><service>python</service><method>exec</method><param>halfspeed()</param></mrl></oob></template>
+</category>          
 <category><pattern>GRAB THE BOTTLE</pattern>
 <template>Let me take that bottle.
         <oob><mrl><service>python</service><method>exec</method><param>grabthebottle()</param></mrl></oob></template>
@@ -351,10 +340,6 @@
 <category><pattern>RELAX</pattern>
 <template>Relax.
         <oob><mrl><service>python</service><method>exec</method><param>relax()</param></mrl></oob></template>
-</category>
-<category><pattern>WHAT IS IT</pattern>
-<template>Let me check.
-        <oob><mrl><service>python</service><method>exec</method><param>studyball()</param></mrl></oob></template>
 </category>
 <category><pattern>PERFECT</pattern>
 <template>Perfect.
@@ -445,10 +430,6 @@
 <template>BEFORE HAPPY
         <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
 </category>
-<category><pattern>HAPPY BIRTHDAY</pattern>
-<template>Happy birthday.
-        <oob><mrl><service>python</service><method>exec</method><param>happy()</param></mrl></oob></template>
-</category>
 <category><pattern>PHOTO</pattern>
 <template>Photo.
         <oob><mrl><service>python</service><method>exec</method><param>photo()</param></mrl></oob></template>
@@ -507,7 +488,13 @@
 <template><srai>OFF KINECT</srai></template>
 </category>
 <category><pattern>MEASURING THE DISTANCE</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("in centimeters I measure ")</param></mrl></oob></template>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("In centimeters, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEASURING THE DISTANCE ON THE LEFT SIDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("In centimeters, on my left side, I measure ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEASURING THE DISTANCE ON THE RIGHT SIDE</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("In centimeters, on my right side, I measure ")</param></mrl></oob></template>
 </category>
 <category><pattern>MOVEMENT NUMBER 1</pattern>
 <template>CYCLE GESTURE ONE
@@ -659,9 +646,6 @@
 <template>UNHAPPY
         <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
 </category>
-
-<!--  YOLO FILTER SAMPLE, WARNING MEMORY OVERFLOW IF EXECUDED MULTIPLE TIMES !! todo implement ultrasonic -->
-<!-- function to inventory objects -->
 <category><pattern>WHAT DO YOU SEE</pattern>
 <template><think>
       <!--  initial sentence ( workarround, because sraix blocking action here, sentence pushed inside a set )-->
@@ -686,24 +670,6 @@
         <li>I see <get name="yoloTotalDetected"/> things, <get name="yoloReturn"/> in order, from left to right.</li>
       </condition></template>
 </category>
-
-<!-- extended function to get object position -->
-<category><pattern>WHERE IS THE *</pattern>
-<template><srai>WHAT DO YOU SEE</srai>
-      <think><set name="yoloLabelPosition"><sraix><oob><mrl><service>python</service><method>evalAndWait</method><param>getYoloPosition('<star/>')</param></mrl></oob></sraix></set></think>
-      <condition name="yoloLabelPosition"> 
-        <!-- not detected ! -->
-        <li value="0">
-          <random>
-            <li>Sorry, <star/> is invisible.</li>
-            <li>I can't see the <star/> among these objects.</li>
-          </random>
-        </li>
-        <!--  detected ! -->
-        <li>The <star/> is at position <get name="yoloLabelPosition"/>.</li>
-      </condition></template>
-</category>
-
 <category><pattern># THIS IS</pattern>
 <template>Let me see.
         <oob><mrl><service>python</service><method>exec</method><param>YoloOnUSonic()</param></mrl></oob></template>
@@ -735,15 +701,6 @@
 <category><pattern>THAT WAS FUN</pattern>
 <template>That was fun.
         <oob><mrl><service>python</service><method>exec</method><param>thatwasfun()</param></mrl></oob></template>
-</category>
-<category><pattern>GUESS WHAT</pattern>
-<template><oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>guesswhat()</param>
-          </mrl>
-        </oob></template>
 </category>
 <category><pattern>FINGER RIGHT</pattern>
 <template>Finger right.
@@ -778,28 +735,12 @@
 <template>Made by in french.
         <oob><mrl><service>python</service><method>exec</method><param>madebyfrench()</param></mrl></oob></template>
 </category>
-<category><pattern>TEST</pattern>
-<template>TEST
-        <oob><mrl><service>python</service><method>exec</method><param>test1()</param></mrl></oob></template>
-</category>
 <category><pattern>PHONE HOME</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
             <param>phonehome()</param>
-          </mrl>
-        </oob></template>
-</category>
-<category><pattern>WHERE ARE YOU FROM</pattern>
-<template><srai>PHONE HOME</srai></template>
-</category>
-<category><pattern>HOW DO YOU FEEL</pattern>
-<template><oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>newyork()</param>
           </mrl>
         </oob></template>
 </category>
@@ -864,19 +805,6 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>BATTERY LEVEL</pattern>
-<template><random>
-          <li>Battery level is</li>
-          <li>Currently the battery is</li>
-        </random>
-        <oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>batterylevel()</param>
-          </mrl>
-        </oob></template>
-</category>
 <category><pattern>START FACE RECOGNIZER</pattern>
 <template>I'm starting face recognizer<oob><mrl><service>python</service><method>exec</method><param>facerecognizer()</param></mrl></oob></template>
 </category>
@@ -910,28 +838,8 @@
 <category><pattern>PLAY YOU TUBE</pattern>
 <template><srai>PLAY UTUB</srai></template>
 </category>
-<category><pattern>SHOW ME A PICTURE OF A *</pattern>
-<template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star/>")</param></mrl></oob></template>
-</category>
-<category><pattern>SHOW ME A PICTURE OF THE *</pattern>
-<template><srai>SHOW ME A PICTURE OF A * </srai></template>
-</category>
 <category><pattern>FIX THE MICROPHONE</pattern>
 <template>Okay <oob><mrl><service>python</service><method>exec</method><param>WebkitSpeechRecognitionON()</param></mrl></oob></template>
-</category>
-<category><pattern>OPEN FACEBOOK</pattern>
-<template><random>
-          <li>Launching facebook </li>
-          <li>Getting facebook started </li>
-          <li>Right away, sir! </li>
-        </random>
-        <oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>BareBonesBrowserLaunch.openURL("http://www.facebook.com")</param>
-          </mrl>
-        </oob></template>
 </category>
 <category><pattern>ROBOT RESEARCH *</pattern>
 <template><random>
@@ -968,10 +876,6 @@
 </category>
 <category><pattern>STOP RANDOM LIFE</pattern>
 <template><srai>STOP RANDOM PAUSE</srai></template>
-</category>
-<category><pattern>HI THERE</pattern>
-<template>Hello
-        <oob><mrl><service>python</service><method>exec</method><param>lookaroundyou()</param></mrl></oob></template>
 </category>
 <category><pattern>ARE YOU ALRIGHT</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>areyoualright()</param></mrl></oob></template>
@@ -1013,78 +917,14 @@
 <category><pattern>VERY GOOD</pattern>
 <template>Thanks.</template>
 </category>
-<category><pattern>THANK YOU</pattern>
-<template><random>
-          <li>You are welcome </li>
-          <li>My pleasure </li>
-          <li>It's okay </li>
-        </random></template>
-</category>
-<category><pattern>THANKS</pattern>
-<template><random>
-          <li>It's okay </li>
-          <li>Sure </li>
-          <li>Anytime </li>
-        </random></template>
-</category>
 <category><pattern>LOOK AT PEOPLE</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>lookatpeople()</param></mrl></oob></template>
-</category>
-<category><pattern>GOOD MORNING</pattern>
-<template>Good morning.
-        <random>
-          <li>I hope you had a good night sleep </li>
-          <li>Nice to see you again </li>
-          <li>This is going to be a good day </li>
-        </random>
-        <oob><mrl><service>python</service><method>exec</method><param>agreeanswersmall()</param></mrl></oob></template>
 </category>
 <category><pattern>DO YOU LIKE TO EAT INDIAN FOOD</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>eatindianfood()</param></mrl></oob></template>
 </category>
 <category><pattern>DO YOU SPEAK INDI</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>speakhindi()</param></mrl></oob></template>
-</category>
-<category><pattern>I KNOW</pattern>
-<template><random>
-          <li>yes, me too </li>
-          <li>I do too </li>
-          <li>sorry about that </li>
-        </random>
-        <oob><mrl><service>python</service><method>exec</method><param>agreeanswer()</param></mrl></oob></template>
-</category>
-<category><pattern>SORRY</pattern>
-<template><random>
-          <li>No problems </li>
-          <li>It doesn't matter </li>
-          <li>It's okay </li>
-        </random>
-        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadAgree()</param></mrl></oob></template>
-</category>
-<category><pattern>BYE BYE</pattern>
-<template><random>
-          <li>I'm looking forward to see you again </li>
-          <li>Goodbye </li>
-          <li>See you soon</li>
-        </random></template>
-</category>
-<category><pattern>HELLO</pattern>
-<template><srai>HI</srai>
-        <oob><mrl><service>python</service><method>exec</method><param>hello()</param></mrl></oob></template>
-</category>
-<category><pattern>HOW DO YOU DO</pattern>
-<template><condition name="parameterHowDoYouDo"> 
-<li value="1">You have already said that at least twice.</li>
-<li value="2">What is your problem stop saying how do you do all the time.</li>
-<li value="3">I will ignore you if you say how do you do one more time.</li>
-<li value="4"/>
-<li>I'm fine, thank you!</li>
-</condition>
-<oob><mrl><service>python</service><method>exec</method><param>howdoyoudo()</param></mrl></oob></template>
-</category>
-<category><pattern>I LOVE YOU</pattern>
-<template>I love you too.
-        <oob><mrl><service>python</service><method>exec</method><param>iloveyou()</param></mrl></oob></template>
 </category>
 <category><pattern>WHAT DO YOU THINK ABOUT ARTIFICIAL INTELLIGENCE</pattern>
 <template>I will always love you.
@@ -1126,7 +966,8 @@
        </oob></template>
 </category>
 <category><pattern>PLEASE CHECK YOUR NECK</pattern>
-<template><oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
+<template>Thanks, it feels great. doctor.
+    <oob><mrl><service>python</service><method>exec</method><param>rollHead()</param></mrl></oob></template>
 </category>
 <category><pattern>CHECK YOUR NECK</pattern>
 <template><srai>PLEASE CHECK YOUR NECK</srai></template>
@@ -1231,15 +1072,14 @@
       </oob></template>
 </category>
 <category><pattern># CRY</pattern>
-<template>
-         <oob>
+<template><oob>
            <mrl>
              <service>python</service>
                 <method>exec</method><param>cry()</param>
           </mrl>
         </oob></template>
 </category>
-          <category><pattern># CHRISTMAS SONG</pattern>
+<category><pattern># CHRISTMAS SONG</pattern>
 <template>I can do this for exemple
           <oob>
            <mrl>
@@ -1248,7 +1088,7 @@
           </mrl>
         </oob></template>
 </category>
-          <category><pattern>MEMORIZE THIS PERSON</pattern>
+<category><pattern>MEMORIZE THIS PERSON</pattern>
 <template>Okay
     <think>
         <set name="memorizeinit">started</set>
@@ -1309,21 +1149,13 @@
 <template>Can you answer, it is necessary
         <get name="memorizenameinit"/></template>
 </category></topic>
-<category><pattern>WHO IS THIS</pattern>
-<template>Let me see
-        <oob><mrl><service>python</service><method>exec</method><param>whoisthis()</param></mrl></oob></template>
+
+<category><pattern># FOR TRAVELLING</pattern>
+<template>Okay I get ready for travelling
+          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob></template>
 </category>
-<category>
-          <pattern># FOR TRAVELLING</pattern>
-          <template>Okay I get ready for travelling
-          <oob><mrl><service>python</service><method>exec</method><param>travel()</param></mrl></oob>
-          </template>
+<category><pattern>STOP TRAVELLING</pattern>
+<template>Okay I will get into rest position
+          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob></template>
 </category>
-<category>
-          <pattern>STOP TRAVELLING</pattern>
-          <template>Okay I will get into rest position
-          <oob><mrl><service>python</service><method>exec</method><param>stopTravel()</param></mrl></oob>
-          </template>
-</category>          
-          
 </aiml>
