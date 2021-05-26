@@ -37,7 +37,7 @@ def shakehand():
     while (not distanceRight or distanceRight > 100):
       timeoutRight+=1
       timeoutRightGetCloser+=1
-      distanceRight=i01.getUltrasonicSensorDistance()
+      distanceRight=i01.getUltrasonicRightDistance()
       print "==Ultrasonic=distanceRight=Distance:", distanceRight
       if timeoutRight > 20:
         global noHumanRight
@@ -64,7 +64,7 @@ def shakehand():
     while (not distanceLeft or distanceLeft > 100): 
       timeoutLeft+=1
       timeoutLeftGetCloser+=1
-      distanceLeft=i01.getUltrasonicSensorDistance()
+      distanceLeft=i01.getUltrasonicLeftDistance()
       print "==Ultrasonic=distanceLeft=Distance:", distanceLeft
       if timeoutLeft > 20:
         global noHumanLeft
