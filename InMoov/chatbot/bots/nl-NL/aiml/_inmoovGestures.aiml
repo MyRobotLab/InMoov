@@ -784,7 +784,20 @@
         <oob><mrl><service>python</service><method>exec</method><param>offkinect()</param></mrl></oob></template>
     </category>
 
+    <category>
+      <pattern>DE AFSTAND METEN</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("In centimeters meet ik ")</param></mrl></oob></template>
+    </category>
 
+    <category>
+      <pattern>AFSTAND LINKS METEN</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("In centimeters, aan mijn linkerkant, meet ik ")</param></mrl></oob></template>
+    </category>
+    
+    <category>
+      <pattern>DE AFSTAND AAN DE RECHTERKANT METEN</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("In centimeters, aan mijn rechterkant, meet ik ")</param></mrl></oob></template>
+    </category>
 
 
   <!-- THE FOLLOWING STILL NEEDS TO BE TRANSLATED -->
@@ -1316,7 +1329,7 @@
 
     <category>
       <pattern>SHOW ME A PICTURE OF A *</pattern>
-      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>FindImage("<star />")</param></mrl></oob></template>
+      <template>Okay <oob><mrl><service>python</service><method>exec</method><param>find_image("<star />")</param></mrl></oob></template>
     </category>
 
 
