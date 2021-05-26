@@ -476,6 +476,12 @@
 <category><pattern>MEDINDO A DISTÂNCIA</pattern>
 <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonic("em centímetros eu meço ")</param></mrl></oob></template>
 </category>
+<category><pattern>MEDINDO A DISTÂNCIA DO LADO ESQUERDO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("Em centímetros, do meu lado esquerdo, eu meço ")</param></mrl></oob></template>
+</category>
+<category><pattern>MEDINDO A DISTÂNCIA DO LADO DIREITO</pattern>
+<template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("Em centímetros, do meu lado direito, eu meço ")</param></mrl></oob></template>
+</category>
 <category><pattern>MOVIMENTO NÚMERO 1</pattern>
 <template>MOVIMENTO NÚMERO 1
         <oob><mrl><service>python</service><method>exec</method><param>cyclegesture1()</param></mrl></oob></template>
