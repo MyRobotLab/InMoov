@@ -398,6 +398,14 @@
         <oob><mrl><service>python</service><method>exec</method><param>ultraSonic("En centimètres, je mesure une distance de ")</param></mrl></oob></template>
     </category>
     <category>
+      <pattern>MESURE LA DISTANCE À GAUCHE</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicLeft("En centimètres, à gauche, je mesure une distance de ")</param></mrl></oob></template>
+    </category>
+    <category>
+      <pattern>MESURE LA DISTANCE À DROITE</pattern>
+      <template><oob><mrl><service>python</service><method>exec</method><param>ultraSonicRight("En centimètres, à droite, je mesure une distance de ")</param></mrl></oob></template>
+    </category>
+    <category>
       <pattern>PARFAIT</pattern>
       <template>Perfect.
         <oob><mrl><service>python</service><method>exec</method><param>perfect()</param></mrl></oob></template>
