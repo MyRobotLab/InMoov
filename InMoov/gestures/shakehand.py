@@ -90,7 +90,7 @@ def shakehand():
 
 def noHuman():
   if noHumanLeft==1 or noHumanRight==1:
-    chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
+    i01.chatBot.getResponse("SYSTEM_SHAKE_HAND_NOHUMAN")
     timeoutRight=0
     timeoutLeft=0
     sleep(2)
@@ -98,7 +98,7 @@ def noHuman():
 
 def getCloser():
   if getCloserLeft==1 or getCloserRight==1:
-    chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
+    i01.chatBot.getResponse("SYSTEM_SHAKE_HAND_GET_CLOSER")
     timeoutLeftGetCloser=0
     timeoutRightGetCloser=0
     sleep(2)
@@ -177,7 +177,7 @@ def shakehandAnimation():
   i01.moveHand("left",50,50,40,20,20,90)
   i01.moveTorso(95,95,90)
   sleep(0.7)
-  chatBot.getResponse("SYSTEM_SHAKE_HAND")
+  i01.chatBot.getResponse("SYSTEM_SHAKE_HAND")
   ##shake hand down
   i01.setHandSpeed("left", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
   i01.setHandSpeed("right", 100.0, 100.0, 100.0, 100.0, 100.0, 100.0)
