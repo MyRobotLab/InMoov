@@ -27,7 +27,7 @@ if ultraSonicRightActivated:
     ultraSonicRightArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicRightArduino'))
     ultrasonicRight.attach(ultraSonicRightArduino, trigRightPin, echoRightPin)
     i01.ultrasonicRight=ultrasonicRight
-    talkEvent(lang_startingUltraSonicRight)
+    i01.speakBlocking(i01.languagePack.get("STARTINGULTRASONIC"))
     # range can also be retreieved in a blocking call
     print "ultrasonicRight test is: ", i01.getUltrasonicRightDistance()
   except:
@@ -42,7 +42,7 @@ if ultraSonicLeftActivated:
     ultraSonicLeftArduino=eval(ThisServicePartConfig.get('MAIN', 'ultraSonicLeftArduino'))
     ultrasonicLeft.attach(ultraSonicLeftArduino, trigLeftPin, echoLeftPin)
     i01.ultrasonicLeft=ultrasonicLeft
-    talkEvent(lang_startingUltraSonicLeft)
+    i01.speakBlocking(i01.languagePack.get("STARTINGULTRASONIC"))
     # range can also be retreieved in a blocking call
     print "ultrasonicLeft test is: ", i01.getUltrasonicLeftDistance()
   except:
