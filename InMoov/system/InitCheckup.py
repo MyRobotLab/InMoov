@@ -107,7 +107,8 @@ for root, subdirs, files in os.walk(RuningFolder):
       os.remove(os.path.join(root, name))
       if DEBUG==1:print "removed .default : ",os.path.join(root, name)
 
-
+# launch custom script
+execfile(RuningFolder+'/custom/InMoov_custom.py')
       
 ################################
 # INIT.8 - yes there is no 7 :) great, inmoov is alive
