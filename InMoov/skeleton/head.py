@@ -91,7 +91,7 @@ if isHeadActivated==1 and (ScriptType=="LeftSide" or ScriptType=="Full") or Scri
     
     if isRollNeckActivated:
       head.rollNeck.detach(left)
-      head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'),ThisSkeletonPartConfig.getint('MAX_VELOCITY', 'rollNeck'))
+      head.rollNeck.attach(RollNeckArduino,ThisSkeletonPartConfig.getint('SERVO_PIN', 'rollNeck'),ThisSkeletonPartConfig.getint('SERVO_REST_POSITION', 'rollNeck'))
      
     rotheadEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'rothead')
     neckEnableAutoDisable=ThisSkeletonPartConfig.getboolean('SERVO_AUTO_DISABLE', 'neck')
