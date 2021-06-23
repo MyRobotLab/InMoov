@@ -10,7 +10,7 @@ def MoveHead(timedata):
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
     
     if isHeadActivated:
-      i01.setHeadVelocity(random.randint(8,20),random.randint(8,20),random.randint(8,20))
+      i01.setHeadSpeed(random.randint(8,20),random.randint(8,20),random.randint(8,20))
       #wait servo last move
       if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(65,115))
       if not head.neck.isMoving():head.neck.moveTo(random.uniform(70,110))
@@ -29,10 +29,10 @@ def MoveHeadStop():
   
   if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsSleeping and not i01.vision.isTracking():
     if isHeadActivated:
-      i01.setHeadVelocity(25,25,25)
+      i01.setHeadSpeed(25,25,25)
       i01.head.rest()
-      i01.setHeadVelocity(40,40,40)
-      i01.head.jaw.setVelocity(-1.0)
+      i01.setHeadSpeed(40,40,40)
+      i01.head.jaw.setSpeed(500.0)
       
     
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
