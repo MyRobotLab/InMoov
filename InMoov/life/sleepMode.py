@@ -40,7 +40,7 @@ def sleepModeWakeUp():
       eyelids.autoBlink(True)
           #head up
     if isHeadActivated:
-      head.neck.setVelocity(50)
+      head.neck.setSpeed(50)
       head.neck.moveToBlocking(head.neck.getRest())
   else:
     welcomeMessage()
@@ -68,7 +68,7 @@ def sleepModeSleep():
     eyelids.eyelidleft.moveTo(180)
     eyelids.eyelidright.moveTo(180)
   if isHeadActivated:
-    head.neck.setVelocity(40)
+    head.neck.setSpeed(40)
     head.neck.moveTo(10)
   i01.waitTargetPos()
   i01.disable()

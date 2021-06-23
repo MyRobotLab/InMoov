@@ -13,7 +13,7 @@ def MoveBody(timedata):
       MoveBodyTimer.setInterval(random.randint(3000,8000))
    
       if isLeftHandActivated:
-        i01.setHandVelocity("left", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
+        i01.setHandSpeed("left", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
         if not leftHand.thumb.isMoving():leftHand.thumb.moveTo(random.uniform(10,160))
         if not leftHand.index.isMoving():leftHand.index.moveTo(random.uniform(10,60))
         if not leftHand.majeure.isMoving():leftHand.majeure.moveTo(random.uniform(10,60))
@@ -21,7 +21,7 @@ def MoveBody(timedata):
         if not leftHand.pinky.isMoving():leftHand.pinky.moveTo(random.uniform(10,60))
         if not leftHand.wrist.isMoving():leftHand.wrist.moveTo(random.uniform(5,40))
       if isRightHandActivated:
-        i01.setHandVelocity("right", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
+        i01.setHandSpeed("right", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
         if not rightHand.thumb.isMoving():rightHand.thumb.moveTo(random.uniform(10,160))
         if not rightHand.index.isMoving():rightHand.index.moveTo(random.uniform(10,60))
         if not rightHand.majeure.isMoving():rightHand.majeure.moveTo(random.uniform(10,90))
@@ -29,19 +29,19 @@ def MoveBody(timedata):
         if not rightHand.pinky.isMoving():rightHand.pinky.moveTo(random.uniform(10,60))
         if not rightHand.wrist.isMoving():rightHand.wrist.moveTo(random.uniform(130,175))
       if isLeftArmActivated:
-        i01.setArmVelocity("left", random.randint(2,5), random.randint(2,5), random.randint(2,5), random.randint(2,5))
+        i01.setArmSpeed("left", random.randint(2,5), random.randint(2,5), random.randint(2,5), random.randint(2,5))
         if not leftArm.bicep.isMoving():leftArm.bicep.moveTo(random.uniform(0,5))
         if not leftArm.shoulder.isMoving():leftArm.shoulder.moveTo(random.uniform(25,30))
         if not leftArm.rotate.isMoving():leftArm.rotate.moveTo(random.uniform(85,95))
         if not leftArm.omoplate.isMoving():leftArm.omoplate.moveTo(random.uniform(10,15))
       if isRightArmActivated:
-        i01.setArmVelocity("right", random.randint(2,5), random.randint(2,5), random.randint(2,5), random.randint(2,5))
+        i01.setArmSpeed("right", random.randint(2,5), random.randint(2,5), random.randint(2,5), random.randint(2,5))
         if not rightArm.bicep.isMoving():rightArm.bicep.moveTo(random.uniform(0,5))
         if not rightArm.shoulder.isMoving():rightArm.shoulder.moveTo(random.uniform(25,30))
         if not rightArm.rotate.isMoving():rightArm.rotate.moveTo(random.uniform(85,95))
         if not rightArm.omoplate.isMoving():rightArm.omoplate.moveTo(random.uniform(10,15))
       if isTorsoActivated:
-        i01.setTorsoVelocity(random.randint(2,5), random.randint(2,5), random.randint(2,5))
+        i01.setTorsoSpeed(random.randint(2,5), random.randint(2,5), random.randint(2,5))
         if not torso.topStom.isMoving():torso.topStom.moveTo(random.uniform(85,95))
         if not torso.midStom.isMoving():torso.midStom.moveTo(random.uniform(88,93))
 

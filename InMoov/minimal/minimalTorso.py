@@ -5,7 +5,7 @@
 def teststomach():
   sleep(1)
   i01.setNeopixelAnimation("Flash Random", 255, 255, 255, 1)
-  i01.setTorsoVelocity(20,20,20)
+  i01.setTorsoSpeed(20,20,20)
   i01.moveTorso(90,90,90)
   sleep(2)
   i01.moveTorso(45,90,90)
