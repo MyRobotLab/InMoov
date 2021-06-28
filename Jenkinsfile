@@ -34,9 +34,16 @@ pipeline {
                if (isUnix()) {
                   echo sh(script: 'env|sort', returnStdout: true)
                } else {
-                  set
+                  bat("set")
                }
             }
+         }
+      }
+
+      stage('check out') {
+         steps {
+            echo '====== check out ======'
+            checkout scm
          }
       }
 
@@ -56,13 +63,6 @@ pipeline {
                   ''')
                }
             }
-         }
-      }
-
-      stage('check out') {
-         steps {
-            echo '====== check out ======'
-            checkout scm
          }
       }
 
