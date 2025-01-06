@@ -33,15 +33,3 @@ http://myrobotlab.org/service/InMoov
   
 bugs report : https://github.com/MyRobotLab/inmoov/issues  
 
-### CONTRIBUTION  
-Is welcome :)  
-( On the develop branch )  
-  
-### CHANGELOG  
-   
-0.9.9  
-/ Testing...  
-0.7.0  
-/ Chatbots enhancements & fixes...  
-0.6.1  
-/ add AndroidSpeechRecognizer   
